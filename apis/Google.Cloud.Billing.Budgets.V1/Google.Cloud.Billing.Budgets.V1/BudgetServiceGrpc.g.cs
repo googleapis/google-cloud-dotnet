@@ -31,14 +31,44 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   {
     static readonly string __ServiceName = "google.cloud.billing.budgets.v1.BudgetService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_CreateBudgetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.Budget> __Marshaller_google_cloud_billing_budgets_v1_Budget = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.Budget.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_UpdateBudgetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_GetBudgetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_DeleteBudgetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_CreateBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.Budget> __Marshaller_google_cloud_billing_budgets_v1_Budget = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.Budget.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_UpdateBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_GetBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_DeleteBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget> __Method_CreateBudget = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget>(
         grpc::MethodType.Unary,

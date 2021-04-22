@@ -43,32 +43,62 @@ namespace Google.Cloud.AutoML.V1 {
   {
     static readonly string __ServiceName = "google.cloud.automl.v1.AutoMl";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateDatasetRequest> __Marshaller_google_cloud_automl_v1_CreateDatasetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.CreateDatasetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetDatasetRequest> __Marshaller_google_cloud_automl_v1_GetDatasetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetDatasetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Dataset> __Marshaller_google_cloud_automl_v1_Dataset = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.Dataset.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsRequest> __Marshaller_google_cloud_automl_v1_ListDatasetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListDatasetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> __Marshaller_google_cloud_automl_v1_ListDatasetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListDatasetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateDatasetRequest> __Marshaller_google_cloud_automl_v1_UpdateDatasetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.UpdateDatasetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest> __Marshaller_google_cloud_automl_v1_DeleteDatasetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeleteDatasetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ImportDataRequest> __Marshaller_google_cloud_automl_v1_ImportDataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ImportDataRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportDataRequest> __Marshaller_google_cloud_automl_v1_ExportDataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ExportDataRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest> __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.AnnotationSpec> __Marshaller_google_cloud_automl_v1_AnnotationSpec = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateModelRequest> __Marshaller_google_cloud_automl_v1_CreateModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.CreateModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelRequest> __Marshaller_google_cloud_automl_v1_GetModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Model> __Marshaller_google_cloud_automl_v1_Model = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.Model.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsRequest> __Marshaller_google_cloud_automl_v1_ListModelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsResponse> __Marshaller_google_cloud_automl_v1_ListModelsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteModelRequest> __Marshaller_google_cloud_automl_v1_DeleteModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeleteModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateModelRequest> __Marshaller_google_cloud_automl_v1_UpdateModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.UpdateModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeployModelRequest> __Marshaller_google_cloud_automl_v1_DeployModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.DeployModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UndeployModelRequest> __Marshaller_google_cloud_automl_v1_UndeployModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.UndeployModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportModelRequest> __Marshaller_google_cloud_automl_v1_ExportModelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ExportModelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest> __Marshaller_google_cloud_automl_v1_GetModelEvaluationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ModelEvaluation> __Marshaller_google_cloud_automl_v1_ModelEvaluation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateDatasetRequest> __Marshaller_google_cloud_automl_v1_CreateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.CreateDatasetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetDatasetRequest> __Marshaller_google_cloud_automl_v1_GetDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetDatasetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Dataset> __Marshaller_google_cloud_automl_v1_Dataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.Dataset.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsRequest> __Marshaller_google_cloud_automl_v1_ListDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListDatasetsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> __Marshaller_google_cloud_automl_v1_ListDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListDatasetsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateDatasetRequest> __Marshaller_google_cloud_automl_v1_UpdateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UpdateDatasetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest> __Marshaller_google_cloud_automl_v1_DeleteDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeleteDatasetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ImportDataRequest> __Marshaller_google_cloud_automl_v1_ImportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ImportDataRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportDataRequest> __Marshaller_google_cloud_automl_v1_ExportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ExportDataRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest> __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.AnnotationSpec> __Marshaller_google_cloud_automl_v1_AnnotationSpec = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateModelRequest> __Marshaller_google_cloud_automl_v1_CreateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.CreateModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelRequest> __Marshaller_google_cloud_automl_v1_GetModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Model> __Marshaller_google_cloud_automl_v1_Model = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.Model.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsRequest> __Marshaller_google_cloud_automl_v1_ListModelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsResponse> __Marshaller_google_cloud_automl_v1_ListModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteModelRequest> __Marshaller_google_cloud_automl_v1_DeleteModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeleteModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateModelRequest> __Marshaller_google_cloud_automl_v1_UpdateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UpdateModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeployModelRequest> __Marshaller_google_cloud_automl_v1_DeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeployModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UndeployModelRequest> __Marshaller_google_cloud_automl_v1_UndeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UndeployModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportModelRequest> __Marshaller_google_cloud_automl_v1_ExportModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ExportModelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest> __Marshaller_google_cloud_automl_v1_GetModelEvaluationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ModelEvaluation> __Marshaller_google_cloud_automl_v1_ModelEvaluation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.CreateDatasetRequest, global::Google.LongRunning.Operation> __Method_CreateDataset = new grpc::Method<global::Google.Cloud.AutoML.V1.CreateDatasetRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

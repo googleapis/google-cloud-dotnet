@@ -30,18 +30,48 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.Participants";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_CreateParticipantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Participant> __Marshaller_google_cloud_dialogflow_v2_Participant = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.Participant.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_GetParticipantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetParticipantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListParticipantsRequest> __Marshaller_google_cloud_dialogflow_v2_ListParticipantsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListParticipantsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListParticipantsResponse> __Marshaller_google_cloud_dialogflow_v2_ListParticipantsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListParticipantsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateParticipantRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateParticipantRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest> __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersRequest> __Marshaller_google_cloud_dialogflow_v2_SuggestFaqAnswersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersResponse> __Marshaller_google_cloud_dialogflow_v2_SuggestFaqAnswersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_CreateParticipantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Participant> __Marshaller_google_cloud_dialogflow_v2_Participant = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.Participant.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_GetParticipantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetParticipantRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListParticipantsRequest> __Marshaller_google_cloud_dialogflow_v2_ListParticipantsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListParticipantsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListParticipantsResponse> __Marshaller_google_cloud_dialogflow_v2_ListParticipantsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListParticipantsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateParticipantRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateParticipantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateParticipantRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest> __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.AnalyzeContentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2_AnalyzeContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.AnalyzeContentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestArticlesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse> __Marshaller_google_cloud_dialogflow_v2_SuggestArticlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestArticlesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersRequest> __Marshaller_google_cloud_dialogflow_v2_SuggestFaqAnswersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersResponse> __Marshaller_google_cloud_dialogflow_v2_SuggestFaqAnswersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SuggestFaqAnswersResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest, global::Google.Cloud.Dialogflow.V2.Participant> __Method_CreateParticipant = new grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateParticipantRequest, global::Google.Cloud.Dialogflow.V2.Participant>(
         grpc::MethodType.Unary,

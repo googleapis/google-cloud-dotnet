@@ -38,14 +38,44 @@ namespace Google.LongRunning {
   {
     static readonly string __ServiceName = "google.longrunning.Operations";
 
-    static readonly grpc::Marshaller<global::Google.LongRunning.ListOperationsRequest> __Marshaller_google_longrunning_ListOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.ListOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.ListOperationsResponse> __Marshaller_google_longrunning_ListOperationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.ListOperationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.GetOperationRequest> __Marshaller_google_longrunning_GetOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.GetOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.DeleteOperationRequest> __Marshaller_google_longrunning_DeleteOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.DeleteOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.CancelOperationRequest> __Marshaller_google_longrunning_CancelOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.CancelOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.WaitOperationRequest> __Marshaller_google_longrunning_WaitOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.WaitOperationRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.LongRunning.ListOperationsRequest> __Marshaller_google_longrunning_ListOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.ListOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.ListOperationsResponse> __Marshaller_google_longrunning_ListOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.ListOperationsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.GetOperationRequest> __Marshaller_google_longrunning_GetOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.GetOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.DeleteOperationRequest> __Marshaller_google_longrunning_DeleteOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.DeleteOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.CancelOperationRequest> __Marshaller_google_longrunning_CancelOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.CancelOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.WaitOperationRequest> __Marshaller_google_longrunning_WaitOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.WaitOperationRequest.Parser));
 
     static readonly grpc::Method<global::Google.LongRunning.ListOperationsRequest, global::Google.LongRunning.ListOperationsResponse> __Method_ListOperations = new grpc::Method<global::Google.LongRunning.ListOperationsRequest, global::Google.LongRunning.ListOperationsResponse>(
         grpc::MethodType.Unary,

@@ -30,28 +30,58 @@ namespace Google.Cloud.ApiGateway.V1 {
   {
     static readonly string __ServiceName = "google.cloud.apigateway.v1.ApiGatewayService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest> __Marshaller_google_cloud_apigateway_v1_ListGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> __Marshaller_google_cloud_apigateway_v1_ListGatewaysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetGatewayRequest> __Marshaller_google_cloud_apigateway_v1_GetGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.GetGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Gateway> __Marshaller_google_cloud_apigateway_v1_Gateway = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.Gateway.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_CreateGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_UpdateGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest> __Marshaller_google_cloud_apigateway_v1_DeleteGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisRequest> __Marshaller_google_cloud_apigateway_v1_ListApisRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListApisRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisResponse> __Marshaller_google_cloud_apigateway_v1_ListApisResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListApisResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiRequest> __Marshaller_google_cloud_apigateway_v1_GetApiRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.GetApiRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Api> __Marshaller_google_cloud_apigateway_v1_Api = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.Api.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.CreateApiRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.UpdateApiRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.DeleteApiRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_GetApiConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ApiConfig> __Marshaller_google_cloud_apigateway_v1_ApiConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.ApiConfig.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest> __Marshaller_google_cloud_apigateway_v1_ListGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> __Marshaller_google_cloud_apigateway_v1_ListGatewaysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetGatewayRequest> __Marshaller_google_cloud_apigateway_v1_GetGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Gateway> __Marshaller_google_cloud_apigateway_v1_Gateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.Gateway.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_CreateGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_UpdateGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest> __Marshaller_google_cloud_apigateway_v1_DeleteGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisRequest> __Marshaller_google_cloud_apigateway_v1_ListApisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApisRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisResponse> __Marshaller_google_cloud_apigateway_v1_ListApisResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApisResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiRequest> __Marshaller_google_cloud_apigateway_v1_GetApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetApiRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Api> __Marshaller_google_cloud_apigateway_v1_Api = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.Api.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateApiRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateApiRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteApiRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_GetApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ApiConfig> __Marshaller_google_cloud_apigateway_v1_ApiConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ApiConfig.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> __Method_ListGateways = new grpc::Method<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse>(
         grpc::MethodType.Unary,

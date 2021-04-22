@@ -41,16 +41,46 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.GroupService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsRequest> __Marshaller_google_monitoring_v3_ListGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> __Marshaller_google_monitoring_v3_ListGroupsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetGroupRequest> __Marshaller_google_monitoring_v3_GetGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.Group> __Marshaller_google_monitoring_v3_Group = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.Group.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateGroupRequest> __Marshaller_google_monitoring_v3_CreateGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateGroupRequest> __Marshaller_google_monitoring_v3_UpdateGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteGroupRequest> __Marshaller_google_monitoring_v3_DeleteGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest> __Marshaller_google_monitoring_v3_ListGroupMembersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> __Marshaller_google_monitoring_v3_ListGroupMembersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsRequest> __Marshaller_google_monitoring_v3_ListGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> __Marshaller_google_monitoring_v3_ListGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetGroupRequest> __Marshaller_google_monitoring_v3_GetGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.Group> __Marshaller_google_monitoring_v3_Group = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.Group.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateGroupRequest> __Marshaller_google_monitoring_v3_CreateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateGroupRequest> __Marshaller_google_monitoring_v3_UpdateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UpdateGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteGroupRequest> __Marshaller_google_monitoring_v3_DeleteGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest> __Marshaller_google_monitoring_v3_ListGroupMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> __Marshaller_google_monitoring_v3_ListGroupMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListGroupsRequest, global::Google.Cloud.Monitoring.V3.ListGroupsResponse> __Method_ListGroups = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListGroupsRequest, global::Google.Cloud.Monitoring.V3.ListGroupsResponse>(
         grpc::MethodType.Unary,

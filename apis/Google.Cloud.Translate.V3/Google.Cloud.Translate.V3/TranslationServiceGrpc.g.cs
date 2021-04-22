@@ -31,20 +31,50 @@ namespace Google.Cloud.Translate.V3 {
   {
     static readonly string __ServiceName = "google.cloud.translation.v3.TranslationService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateTextRequest> __Marshaller_google_cloud_translation_v3_TranslateTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.TranslateTextRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateTextResponse> __Marshaller_google_cloud_translation_v3_TranslateTextResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.TranslateTextResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageRequest> __Marshaller_google_cloud_translation_v3_DetectLanguageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.DetectLanguageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageResponse> __Marshaller_google_cloud_translation_v3_DetectLanguageResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.DetectLanguageResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest> __Marshaller_google_cloud_translation_v3_GetSupportedLanguagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.SupportedLanguages> __Marshaller_google_cloud_translation_v3_SupportedLanguages = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.SupportedLanguages.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest> __Marshaller_google_cloud_translation_v3_BatchTranslateTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.BatchTranslateTextRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateGlossaryRequest> __Marshaller_google_cloud_translation_v3_CreateGlossaryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.CreateGlossaryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesRequest> __Marshaller_google_cloud_translation_v3_ListGlossariesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.ListGlossariesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesResponse> __Marshaller_google_cloud_translation_v3_ListGlossariesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.ListGlossariesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetGlossaryRequest> __Marshaller_google_cloud_translation_v3_GetGlossaryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.GetGlossaryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.Glossary> __Marshaller_google_cloud_translation_v3_Glossary = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.Glossary.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest> __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Translate.V3.DeleteGlossaryRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateTextRequest> __Marshaller_google_cloud_translation_v3_TranslateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.TranslateTextRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateTextResponse> __Marshaller_google_cloud_translation_v3_TranslateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.TranslateTextResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageRequest> __Marshaller_google_cloud_translation_v3_DetectLanguageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DetectLanguageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageResponse> __Marshaller_google_cloud_translation_v3_DetectLanguageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DetectLanguageResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest> __Marshaller_google_cloud_translation_v3_GetSupportedLanguagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.SupportedLanguages> __Marshaller_google_cloud_translation_v3_SupportedLanguages = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.SupportedLanguages.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest> __Marshaller_google_cloud_translation_v3_BatchTranslateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.BatchTranslateTextRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateGlossaryRequest> __Marshaller_google_cloud_translation_v3_CreateGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateGlossaryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesRequest> __Marshaller_google_cloud_translation_v3_ListGlossariesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesResponse> __Marshaller_google_cloud_translation_v3_ListGlossariesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetGlossaryRequest> __Marshaller_google_cloud_translation_v3_GetGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetGlossaryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.Glossary> __Marshaller_google_cloud_translation_v3_Glossary = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.Glossary.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest> __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteGlossaryRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse> __Method_TranslateText = new grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse>(
         grpc::MethodType.Unary,

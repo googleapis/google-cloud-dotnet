@@ -38,14 +38,44 @@ namespace Google.Cloud.Iam.Credentials.V1 {
   {
     static readonly string __ServiceName = "google.iam.credentials.v1.IAMCredentials";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest> __Marshaller_google_iam_credentials_v1_GenerateAccessTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse> __Marshaller_google_iam_credentials_v1_GenerateAccessTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenRequest> __Marshaller_google_iam_credentials_v1_GenerateIdTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenResponse> __Marshaller_google_iam_credentials_v1_GenerateIdTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignBlobRequest> __Marshaller_google_iam_credentials_v1_SignBlobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.SignBlobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignBlobResponse> __Marshaller_google_iam_credentials_v1_SignBlobResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.SignBlobResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignJwtRequest> __Marshaller_google_iam_credentials_v1_SignJwtRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.SignJwtRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignJwtResponse> __Marshaller_google_iam_credentials_v1_SignJwtResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.Credentials.V1.SignJwtResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest> __Marshaller_google_iam_credentials_v1_GenerateAccessTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse> __Marshaller_google_iam_credentials_v1_GenerateAccessTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenRequest> __Marshaller_google_iam_credentials_v1_GenerateIdTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenResponse> __Marshaller_google_iam_credentials_v1_GenerateIdTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.GenerateIdTokenResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignBlobRequest> __Marshaller_google_iam_credentials_v1_SignBlobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.SignBlobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignBlobResponse> __Marshaller_google_iam_credentials_v1_SignBlobResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.SignBlobResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignJwtRequest> __Marshaller_google_iam_credentials_v1_SignJwtRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.SignJwtRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.Credentials.V1.SignJwtResponse> __Marshaller_google_iam_credentials_v1_SignJwtResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Credentials.V1.SignJwtResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest, global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse> __Method_GenerateAccessToken = new grpc::Method<global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenRequest, global::Google.Cloud.Iam.Credentials.V1.GenerateAccessTokenResponse>(
         grpc::MethodType.Unary,

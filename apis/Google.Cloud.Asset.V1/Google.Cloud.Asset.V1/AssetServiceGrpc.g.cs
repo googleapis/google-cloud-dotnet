@@ -30,25 +30,55 @@ namespace Google.Cloud.Asset.V1 {
   {
     static readonly string __ServiceName = "google.cloud.asset.v1.AssetService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ExportAssetsRequest> __Marshaller_google_cloud_asset_v1_ExportAssetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateFeedRequest> __Marshaller_google_cloud_asset_v1_CreateFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.Feed> __Marshaller_google_cloud_asset_v1_Feed = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.Feed.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.GetFeedRequest> __Marshaller_google_cloud_asset_v1_GetFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.GetFeedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsRequest> __Marshaller_google_cloud_asset_v1_ListFeedsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsResponse> __Marshaller_google_cloud_asset_v1_ListFeedsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.UpdateFeedRequest> __Marshaller_google_cloud_asset_v1_UpdateFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.DeleteFeedRequest> __Marshaller_google_cloud_asset_v1_DeleteFeedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesRequest> __Marshaller_google_cloud_asset_v1_SearchAllResourcesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.SearchAllResourcesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> __Marshaller_google_cloud_asset_v1_SearchAllResourcesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.SearchAllResourcesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ExportAssetsRequest> __Marshaller_google_cloud_asset_v1_ExportAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateFeedRequest> __Marshaller_google_cloud_asset_v1_CreateFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.Feed> __Marshaller_google_cloud_asset_v1_Feed = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.Feed.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.GetFeedRequest> __Marshaller_google_cloud_asset_v1_GetFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.GetFeedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsRequest> __Marshaller_google_cloud_asset_v1_ListFeedsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsResponse> __Marshaller_google_cloud_asset_v1_ListFeedsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.UpdateFeedRequest> __Marshaller_google_cloud_asset_v1_UpdateFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.DeleteFeedRequest> __Marshaller_google_cloud_asset_v1_DeleteFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesRequest> __Marshaller_google_cloud_asset_v1_SearchAllResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllResourcesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> __Marshaller_google_cloud_asset_v1_SearchAllResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllResourcesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

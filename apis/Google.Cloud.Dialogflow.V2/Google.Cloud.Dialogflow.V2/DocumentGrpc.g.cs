@@ -30,15 +30,45 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.Documents";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest> __Marshaller_google_cloud_dialogflow_v2_ListDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse> __Marshaller_google_cloud_dialogflow_v2_ListDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_GetDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Document> __Marshaller_google_cloud_dialogflow_v2_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.Document.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_CreateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_ReloadDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest> __Marshaller_google_cloud_dialogflow_v2_ListDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse> __Marshaller_google_cloud_dialogflow_v2_ListDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_GetDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Document> __Marshaller_google_cloud_dialogflow_v2_Document = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.Document.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_CreateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_ReloadDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse> __Method_ListDocuments = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse>(
         grpc::MethodType.Unary,

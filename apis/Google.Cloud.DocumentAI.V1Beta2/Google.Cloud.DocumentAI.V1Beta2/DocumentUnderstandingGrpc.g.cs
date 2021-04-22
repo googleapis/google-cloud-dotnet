@@ -32,10 +32,40 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
   {
     static readonly string __ServiceName = "google.cloud.documentai.v1beta2.DocumentUnderstandingService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta2_BatchProcessDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> __Marshaller_google_cloud_documentai_v1beta2_ProcessDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.Document> __Marshaller_google_cloud_documentai_v1beta2_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.Document.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta2_BatchProcessDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> __Marshaller_google_cloud_documentai_v1beta2_ProcessDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.Document> __Marshaller_google_cloud_documentai_v1beta2_Document = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta2.Document.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation> __Method_BatchProcessDocuments = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

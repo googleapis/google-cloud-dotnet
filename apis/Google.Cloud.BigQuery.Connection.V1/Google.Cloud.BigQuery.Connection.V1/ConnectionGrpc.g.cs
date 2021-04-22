@@ -30,19 +30,49 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
   {
     static readonly string __ServiceName = "google.cloud.bigquery.connection.v1.ConnectionService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_CreateConnectionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.Connection> __Marshaller_google_cloud_bigquery_connection_v1_Connection = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_GetConnectionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest> __Marshaller_google_cloud_bigquery_connection_v1_ListConnectionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse> __Marshaller_google_cloud_bigquery_connection_v1_ListConnectionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_UpdateConnectionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_DeleteConnectionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_CreateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.Connection> __Marshaller_google_cloud_bigquery_connection_v1_Connection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_GetConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest> __Marshaller_google_cloud_bigquery_connection_v1_ListConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse> __Marshaller_google_cloud_bigquery_connection_v1_ListConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_UpdateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest> __Marshaller_google_cloud_bigquery_connection_v1_DeleteConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest, global::Google.Cloud.BigQuery.Connection.V1.Connection> __Method_CreateConnection = new grpc::Method<global::Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest, global::Google.Cloud.BigQuery.Connection.V1.Connection>(
         grpc::MethodType.Unary,

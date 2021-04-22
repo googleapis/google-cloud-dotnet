@@ -30,16 +30,46 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recommendationengine.v1beta1.CatalogService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CreateCatalogItemRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_GetCatalogItemRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_UpdateCatalogItemRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_DeleteCatalogItemRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ImportCatalogItemsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CreateCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_GetCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_UpdateCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_DeleteCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ImportCatalogItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Method_CreateCatalogItem = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>(
         grpc::MethodType.Unary,

@@ -57,20 +57,50 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   {
     static readonly string __ServiceName = "google.cloud.gsuiteaddons.v1.GSuiteAddOns";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetAuthorizationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Marshaller_google_cloud_gsuiteaddons_v1_Authorization = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.Authorization.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_CreateDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Marshaller_google_cloud_gsuiteaddons_v1_Deployment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.Deployment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ReplaceDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_DeleteDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_InstallDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_UninstallDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetInstallStatusRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> __Marshaller_google_cloud_gsuiteaddons_v1_InstallStatus = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GSuiteAddOns.V1.InstallStatus.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetAuthorizationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Marshaller_google_cloud_gsuiteaddons_v1_Authorization = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.Authorization.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_CreateDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Marshaller_google_cloud_gsuiteaddons_v1_Deployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.Deployment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ReplaceDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_DeleteDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_InstallDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_UninstallDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetInstallStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> __Marshaller_google_cloud_gsuiteaddons_v1_InstallStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Method_GetAuthorization = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization>(
         grpc::MethodType.Unary,

@@ -30,14 +30,44 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.MetricsServiceV2";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsRequest> __Marshaller_google_logging_v2_ListLogMetricsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Marshaller_google_logging_v2_ListLogMetricsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetLogMetricRequest> __Marshaller_google_logging_v2_GetLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogMetric> __Marshaller_google_logging_v2_LogMetric = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogMetric.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateLogMetricRequest> __Marshaller_google_logging_v2_CreateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest> __Marshaller_google_logging_v2_UpdateLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest> __Marshaller_google_logging_v2_DeleteLogMetricRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsRequest> __Marshaller_google_logging_v2_ListLogMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogMetricsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Marshaller_google_logging_v2_ListLogMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogMetricsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetLogMetricRequest> __Marshaller_google_logging_v2_GetLogMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.GetLogMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogMetric> __Marshaller_google_logging_v2_LogMetric = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.LogMetric.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateLogMetricRequest> __Marshaller_google_logging_v2_CreateLogMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.CreateLogMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateLogMetricRequest> __Marshaller_google_logging_v2_UpdateLogMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.UpdateLogMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogMetricRequest> __Marshaller_google_logging_v2_DeleteLogMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.DeleteLogMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogMetricsRequest, global::Google.Cloud.Logging.V2.ListLogMetricsResponse> __Method_ListLogMetrics = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogMetricsRequest, global::Google.Cloud.Logging.V2.ListLogMetricsResponse>(
         grpc::MethodType.Unary,

@@ -30,8 +30,38 @@ namespace Google.Cloud.Talent.V4 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4.EventService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.CreateClientEventRequest> __Marshaller_google_cloud_talent_v4_CreateClientEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.CreateClientEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ClientEvent> __Marshaller_google_cloud_talent_v4_ClientEvent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.ClientEvent.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.CreateClientEventRequest> __Marshaller_google_cloud_talent_v4_CreateClientEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.CreateClientEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ClientEvent> __Marshaller_google_cloud_talent_v4_ClientEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ClientEvent.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.CreateClientEventRequest, global::Google.Cloud.Talent.V4.ClientEvent> __Method_CreateClientEvent = new grpc::Method<global::Google.Cloud.Talent.V4.CreateClientEventRequest, global::Google.Cloud.Talent.V4.ClientEvent>(
         grpc::MethodType.Unary,

@@ -30,14 +30,44 @@ namespace Google.Cloud.Retail.V2 {
   {
     static readonly string __ServiceName = "google.cloud.retail.v2.UserEventService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.WriteUserEventRequest> __Marshaller_google_cloud_retail_v2_WriteUserEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.WriteUserEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UserEvent> __Marshaller_google_cloud_retail_v2_UserEvent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.UserEvent.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.CollectUserEventRequest> __Marshaller_google_cloud_retail_v2_CollectUserEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.CollectUserEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.HttpBody.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.PurgeUserEventsRequest> __Marshaller_google_cloud_retail_v2_PurgeUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.PurgeUserEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ImportUserEventsRequest> __Marshaller_google_cloud_retail_v2_ImportUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.ImportUserEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.RejoinUserEventsRequest> __Marshaller_google_cloud_retail_v2_RejoinUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.RejoinUserEventsRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.WriteUserEventRequest> __Marshaller_google_cloud_retail_v2_WriteUserEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.WriteUserEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UserEvent> __Marshaller_google_cloud_retail_v2_UserEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UserEvent.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.CollectUserEventRequest> __Marshaller_google_cloud_retail_v2_CollectUserEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.CollectUserEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.PurgeUserEventsRequest> __Marshaller_google_cloud_retail_v2_PurgeUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.PurgeUserEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ImportUserEventsRequest> __Marshaller_google_cloud_retail_v2_ImportUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ImportUserEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.RejoinUserEventsRequest> __Marshaller_google_cloud_retail_v2_RejoinUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.RejoinUserEventsRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.WriteUserEventRequest, global::Google.Cloud.Retail.V2.UserEvent> __Method_WriteUserEvent = new grpc::Method<global::Google.Cloud.Retail.V2.WriteUserEventRequest, global::Google.Cloud.Retail.V2.UserEvent>(
         grpc::MethodType.Unary,

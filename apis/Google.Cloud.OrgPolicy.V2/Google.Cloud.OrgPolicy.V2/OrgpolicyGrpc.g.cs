@@ -49,17 +49,47 @@ namespace Google.Cloud.OrgPolicy.V2 {
   {
     static readonly string __ServiceName = "google.cloud.orgpolicy.v2.OrgPolicy";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest> __Marshaller_google_cloud_orgpolicy_v2_ListConstraintsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse> __Marshaller_google_cloud_orgpolicy_v2_ListConstraintsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListPoliciesRequest> __Marshaller_google_cloud_orgpolicy_v2_ListPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.ListPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListPoliciesResponse> __Marshaller_google_cloud_orgpolicy_v2_ListPoliciesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.ListPoliciesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.GetPolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_GetPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.GetPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.Policy> __Marshaller_google_cloud_orgpolicy_v2_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.GetEffectivePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_GetEffectivePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.GetEffectivePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.CreatePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_CreatePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.CreatePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.UpdatePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_UpdatePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.UpdatePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_DeletePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest> __Marshaller_google_cloud_orgpolicy_v2_ListConstraintsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse> __Marshaller_google_cloud_orgpolicy_v2_ListConstraintsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListPoliciesRequest> __Marshaller_google_cloud_orgpolicy_v2_ListPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListPoliciesResponse> __Marshaller_google_cloud_orgpolicy_v2_ListPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListPoliciesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.GetPolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_GetPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.GetPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.Policy> __Marshaller_google_cloud_orgpolicy_v2_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.GetEffectivePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_GetEffectivePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.GetEffectivePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.CreatePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_CreatePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.CreatePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.UpdatePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_UpdatePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.UpdatePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_DeletePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse> __Method_ListConstraints = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse>(
         grpc::MethodType.Unary,

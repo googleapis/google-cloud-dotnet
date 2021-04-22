@@ -39,12 +39,42 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.AcceleratorTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAcceleratorTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList> __Marshaller_google_cloud_compute_v1_AcceleratorTypeAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAcceleratorTypeRequest> __Marshaller_google_cloud_compute_v1_GetAcceleratorTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetAcceleratorTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorType> __Marshaller_google_cloud_compute_v1_AcceleratorType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AcceleratorType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAcceleratorTypesRequest> __Marshaller_google_cloud_compute_v1_ListAcceleratorTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListAcceleratorTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorTypeList> __Marshaller_google_cloud_compute_v1_AcceleratorTypeList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AcceleratorTypeList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAcceleratorTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList> __Marshaller_google_cloud_compute_v1_AcceleratorTypeAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAcceleratorTypeRequest> __Marshaller_google_cloud_compute_v1_GetAcceleratorTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetAcceleratorTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorType> __Marshaller_google_cloud_compute_v1_AcceleratorType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AcceleratorType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAcceleratorTypesRequest> __Marshaller_google_cloud_compute_v1_ListAcceleratorTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListAcceleratorTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AcceleratorTypeList> __Marshaller_google_cloud_compute_v1_AcceleratorTypeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AcceleratorTypeList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest, global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAcceleratorTypesRequest, global::Google.Cloud.Compute.V1.AcceleratorTypeAggregatedList>(
         grpc::MethodType.Unary,
@@ -303,15 +333,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Addresses";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAddressesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressAggregatedList> __Marshaller_google_cloud_compute_v1_AddressAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddressAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAddressRequest> __Marshaller_google_cloud_compute_v1_DeleteAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAddressRequest> __Marshaller_google_cloud_compute_v1_GetAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Address> __Marshaller_google_cloud_compute_v1_Address = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Address.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertAddressRequest> __Marshaller_google_cloud_compute_v1_InsertAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAddressesRequest> __Marshaller_google_cloud_compute_v1_ListAddressesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListAddressesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressList> __Marshaller_google_cloud_compute_v1_AddressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddressList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAddressesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressAggregatedList> __Marshaller_google_cloud_compute_v1_AddressAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddressAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAddressRequest> __Marshaller_google_cloud_compute_v1_DeleteAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAddressRequest> __Marshaller_google_cloud_compute_v1_GetAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Address> __Marshaller_google_cloud_compute_v1_Address = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Address.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertAddressRequest> __Marshaller_google_cloud_compute_v1_InsertAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAddressesRequest> __Marshaller_google_cloud_compute_v1_ListAddressesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListAddressesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressList> __Marshaller_google_cloud_compute_v1_AddressList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddressList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest, global::Google.Cloud.Compute.V1.AddressAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAddressesRequest, global::Google.Cloud.Compute.V1.AddressAggregatedList>(
         grpc::MethodType.Unary,
@@ -698,17 +758,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Autoscalers";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAutoscalersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AutoscalerAggregatedList> __Marshaller_google_cloud_compute_v1_AutoscalerAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AutoscalerAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAutoscalerRequest> __Marshaller_google_cloud_compute_v1_DeleteAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAutoscalerRequest> __Marshaller_google_cloud_compute_v1_GetAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Autoscaler> __Marshaller_google_cloud_compute_v1_Autoscaler = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Autoscaler.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertAutoscalerRequest> __Marshaller_google_cloud_compute_v1_InsertAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAutoscalersRequest> __Marshaller_google_cloud_compute_v1_ListAutoscalersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListAutoscalersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AutoscalerList> __Marshaller_google_cloud_compute_v1_AutoscalerList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AutoscalerList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchAutoscalerRequest> __Marshaller_google_cloud_compute_v1_PatchAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateAutoscalerRequest> __Marshaller_google_cloud_compute_v1_UpdateAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateAutoscalerRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListAutoscalersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AutoscalerAggregatedList> __Marshaller_google_cloud_compute_v1_AutoscalerAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AutoscalerAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAutoscalerRequest> __Marshaller_google_cloud_compute_v1_DeleteAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetAutoscalerRequest> __Marshaller_google_cloud_compute_v1_GetAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Autoscaler> __Marshaller_google_cloud_compute_v1_Autoscaler = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Autoscaler.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertAutoscalerRequest> __Marshaller_google_cloud_compute_v1_InsertAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAutoscalersRequest> __Marshaller_google_cloud_compute_v1_ListAutoscalersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListAutoscalersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AutoscalerList> __Marshaller_google_cloud_compute_v1_AutoscalerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AutoscalerList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchAutoscalerRequest> __Marshaller_google_cloud_compute_v1_PatchAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateAutoscalerRequest> __Marshaller_google_cloud_compute_v1_UpdateAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateAutoscalerRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest, global::Google.Cloud.Compute.V1.AutoscalerAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListAutoscalersRequest, global::Google.Cloud.Compute.V1.AutoscalerAggregatedList>(
         grpc::MethodType.Unary,
@@ -1223,17 +1313,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.BackendBuckets";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest> __Marshaller_google_cloud_compute_v1_AddSignedUrlKeyBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteBackendBucketRequest> __Marshaller_google_cloud_compute_v1_DeleteBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendBucketRequest> __Marshaller_google_cloud_compute_v1_DeleteSignedUrlKeyBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetBackendBucketRequest> __Marshaller_google_cloud_compute_v1_GetBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendBucket> __Marshaller_google_cloud_compute_v1_BackendBucket = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendBucket.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertBackendBucketRequest> __Marshaller_google_cloud_compute_v1_InsertBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListBackendBucketsRequest> __Marshaller_google_cloud_compute_v1_ListBackendBucketsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListBackendBucketsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendBucketList> __Marshaller_google_cloud_compute_v1_BackendBucketList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendBucketList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchBackendBucketRequest> __Marshaller_google_cloud_compute_v1_PatchBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchBackendBucketRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateBackendBucketRequest> __Marshaller_google_cloud_compute_v1_UpdateBackendBucketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateBackendBucketRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest> __Marshaller_google_cloud_compute_v1_AddSignedUrlKeyBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteBackendBucketRequest> __Marshaller_google_cloud_compute_v1_DeleteBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendBucketRequest> __Marshaller_google_cloud_compute_v1_DeleteSignedUrlKeyBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetBackendBucketRequest> __Marshaller_google_cloud_compute_v1_GetBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendBucket> __Marshaller_google_cloud_compute_v1_BackendBucket = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendBucket.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertBackendBucketRequest> __Marshaller_google_cloud_compute_v1_InsertBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListBackendBucketsRequest> __Marshaller_google_cloud_compute_v1_ListBackendBucketsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListBackendBucketsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendBucketList> __Marshaller_google_cloud_compute_v1_BackendBucketList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendBucketList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchBackendBucketRequest> __Marshaller_google_cloud_compute_v1_PatchBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchBackendBucketRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateBackendBucketRequest> __Marshaller_google_cloud_compute_v1_UpdateBackendBucketRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateBackendBucketRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddSignedUrlKey = new grpc::Method<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendBucketRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -1812,22 +1932,52 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.BackendServices";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_AddSignedUrlKeyBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListBackendServicesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListBackendServicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListBackendServicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceAggregatedList> __Marshaller_google_cloud_compute_v1_BackendServiceAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendServiceAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteSignedUrlKeyBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendService> __Marshaller_google_cloud_compute_v1_BackendService = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendService.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetHealthBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetHealthBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceGroupHealth> __Marshaller_google_cloud_compute_v1_BackendServiceGroupHealth = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendServiceGroupHealth.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertBackendServiceRequest> __Marshaller_google_cloud_compute_v1_InsertBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListBackendServicesRequest> __Marshaller_google_cloud_compute_v1_ListBackendServicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListBackendServicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceList> __Marshaller_google_cloud_compute_v1_BackendServiceList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendServiceList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchBackendServiceRequest> __Marshaller_google_cloud_compute_v1_PatchBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSecurityPolicyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_SetSecurityPolicyBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSecurityPolicyBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateBackendServiceRequest> __Marshaller_google_cloud_compute_v1_UpdateBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateBackendServiceRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_AddSignedUrlKeyBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListBackendServicesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListBackendServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListBackendServicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceAggregatedList> __Marshaller_google_cloud_compute_v1_BackendServiceAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendServiceAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteSignedUrlKeyBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSignedUrlKeyBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendService> __Marshaller_google_cloud_compute_v1_BackendService = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendService.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetHealthBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetHealthBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceGroupHealth> __Marshaller_google_cloud_compute_v1_BackendServiceGroupHealth = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendServiceGroupHealth.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertBackendServiceRequest> __Marshaller_google_cloud_compute_v1_InsertBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListBackendServicesRequest> __Marshaller_google_cloud_compute_v1_ListBackendServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListBackendServicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceList> __Marshaller_google_cloud_compute_v1_BackendServiceList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendServiceList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchBackendServiceRequest> __Marshaller_google_cloud_compute_v1_PatchBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSecurityPolicyBackendServiceRequest> __Marshaller_google_cloud_compute_v1_SetSecurityPolicyBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSecurityPolicyBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateBackendServiceRequest> __Marshaller_google_cloud_compute_v1_UpdateBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateBackendServiceRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddSignedUrlKey = new grpc::Method<global::Google.Cloud.Compute.V1.AddSignedUrlKeyBackendServiceRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -2618,12 +2768,42 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.DiskTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListDiskTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskTypeAggregatedList> __Marshaller_google_cloud_compute_v1_DiskTypeAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskTypeAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiskTypeRequest> __Marshaller_google_cloud_compute_v1_GetDiskTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetDiskTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskType> __Marshaller_google_cloud_compute_v1_DiskType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListDiskTypesRequest> __Marshaller_google_cloud_compute_v1_ListDiskTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListDiskTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskTypeList> __Marshaller_google_cloud_compute_v1_DiskTypeList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskTypeList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListDiskTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskTypeAggregatedList> __Marshaller_google_cloud_compute_v1_DiskTypeAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskTypeAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiskTypeRequest> __Marshaller_google_cloud_compute_v1_GetDiskTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetDiskTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskType> __Marshaller_google_cloud_compute_v1_DiskType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListDiskTypesRequest> __Marshaller_google_cloud_compute_v1_ListDiskTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListDiskTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskTypeList> __Marshaller_google_cloud_compute_v1_DiskTypeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskTypeList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest, global::Google.Cloud.Compute.V1.DiskTypeAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListDiskTypesRequest, global::Google.Cloud.Compute.V1.DiskTypeAggregatedList>(
         grpc::MethodType.Unary,
@@ -2882,25 +3062,55 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Disks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListDisksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListDisksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListDisksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskAggregatedList> __Marshaller_google_cloud_compute_v1_DiskAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateSnapshotDiskRequest> __Marshaller_google_cloud_compute_v1_CreateSnapshotDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CreateSnapshotDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteDiskRequest> __Marshaller_google_cloud_compute_v1_DeleteDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiskRequest> __Marshaller_google_cloud_compute_v1_GetDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Disk> __Marshaller_google_cloud_compute_v1_Disk = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Disk.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyDiskRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertDiskRequest> __Marshaller_google_cloud_compute_v1_InsertDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListDisksRequest> __Marshaller_google_cloud_compute_v1_ListDisksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListDisksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskList> __Marshaller_google_cloud_compute_v1_DiskList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesDiskRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveResourcePoliciesDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeDiskRequest> __Marshaller_google_cloud_compute_v1_ResizeDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResizeDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyDiskRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsDiskRequest> __Marshaller_google_cloud_compute_v1_SetLabelsDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsDiskRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListDisksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListDisksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListDisksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskAggregatedList> __Marshaller_google_cloud_compute_v1_DiskAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateSnapshotDiskRequest> __Marshaller_google_cloud_compute_v1_CreateSnapshotDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CreateSnapshotDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteDiskRequest> __Marshaller_google_cloud_compute_v1_DeleteDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiskRequest> __Marshaller_google_cloud_compute_v1_GetDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Disk> __Marshaller_google_cloud_compute_v1_Disk = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Disk.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyDiskRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertDiskRequest> __Marshaller_google_cloud_compute_v1_InsertDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListDisksRequest> __Marshaller_google_cloud_compute_v1_ListDisksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListDisksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskList> __Marshaller_google_cloud_compute_v1_DiskList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesDiskRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveResourcePoliciesDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeDiskRequest> __Marshaller_google_cloud_compute_v1_ResizeDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResizeDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyDiskRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsDiskRequest> __Marshaller_google_cloud_compute_v1_SetLabelsDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsDiskRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddResourcePolicies = new grpc::Method<global::Google.Cloud.Compute.V1.AddResourcePoliciesDiskRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -3799,16 +4009,46 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.ExternalVpnGateways";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteExternalVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetExternalVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetExternalVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExternalVpnGateway> __Marshaller_google_cloud_compute_v1_ExternalVpnGateway = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ExternalVpnGateway.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertExternalVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertExternalVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListExternalVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListExternalVpnGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListExternalVpnGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExternalVpnGatewayList> __Marshaller_google_cloud_compute_v1_ExternalVpnGatewayList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ExternalVpnGatewayList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_SetLabelsExternalVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsExternalVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsExternalVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsExternalVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteExternalVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetExternalVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetExternalVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExternalVpnGateway> __Marshaller_google_cloud_compute_v1_ExternalVpnGateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ExternalVpnGateway.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertExternalVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertExternalVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListExternalVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListExternalVpnGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListExternalVpnGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExternalVpnGatewayList> __Marshaller_google_cloud_compute_v1_ExternalVpnGatewayList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ExternalVpnGatewayList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_SetLabelsExternalVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsExternalVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsExternalVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsExternalVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsExternalVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteExternalVpnGatewayRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -4259,15 +4499,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Firewalls";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteFirewallRequest> __Marshaller_google_cloud_compute_v1_DeleteFirewallRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteFirewallRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetFirewallRequest> __Marshaller_google_cloud_compute_v1_GetFirewallRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetFirewallRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Firewall> __Marshaller_google_cloud_compute_v1_Firewall = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Firewall.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertFirewallRequest> __Marshaller_google_cloud_compute_v1_InsertFirewallRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertFirewallRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListFirewallsRequest> __Marshaller_google_cloud_compute_v1_ListFirewallsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListFirewallsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.FirewallList> __Marshaller_google_cloud_compute_v1_FirewallList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.FirewallList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchFirewallRequest> __Marshaller_google_cloud_compute_v1_PatchFirewallRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchFirewallRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateFirewallRequest> __Marshaller_google_cloud_compute_v1_UpdateFirewallRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateFirewallRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteFirewallRequest> __Marshaller_google_cloud_compute_v1_DeleteFirewallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteFirewallRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetFirewallRequest> __Marshaller_google_cloud_compute_v1_GetFirewallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetFirewallRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Firewall> __Marshaller_google_cloud_compute_v1_Firewall = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Firewall.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertFirewallRequest> __Marshaller_google_cloud_compute_v1_InsertFirewallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertFirewallRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListFirewallsRequest> __Marshaller_google_cloud_compute_v1_ListFirewallsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListFirewallsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.FirewallList> __Marshaller_google_cloud_compute_v1_FirewallList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.FirewallList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchFirewallRequest> __Marshaller_google_cloud_compute_v1_PatchFirewallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchFirewallRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateFirewallRequest> __Marshaller_google_cloud_compute_v1_UpdateFirewallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateFirewallRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteFirewallRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteFirewallRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -4718,17 +4988,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.ForwardingRules";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListForwardingRulesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList> __Marshaller_google_cloud_compute_v1_ForwardingRuleAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_DeleteForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_GetForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRule> __Marshaller_google_cloud_compute_v1_ForwardingRule = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ForwardingRule.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_InsertForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_ListForwardingRulesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListForwardingRulesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleList> __Marshaller_google_cloud_compute_v1_ForwardingRuleList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ForwardingRuleList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_PatchForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_SetTargetForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetTargetForwardingRuleRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListForwardingRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList> __Marshaller_google_cloud_compute_v1_ForwardingRuleAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_DeleteForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_GetForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRule> __Marshaller_google_cloud_compute_v1_ForwardingRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ForwardingRule.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_InsertForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_ListForwardingRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListForwardingRulesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleList> __Marshaller_google_cloud_compute_v1_ForwardingRuleList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ForwardingRuleList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_PatchForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_SetTargetForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetTargetForwardingRuleRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest, global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListForwardingRulesRequest, global::Google.Cloud.Compute.V1.ForwardingRuleAggregatedList>(
         grpc::MethodType.Unary,
@@ -5243,13 +5543,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.GlobalAddresses";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_GetGlobalAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGlobalAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Address> __Marshaller_google_cloud_compute_v1_Address = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Address.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalAddressRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertGlobalAddressRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalAddressesRequest> __Marshaller_google_cloud_compute_v1_ListGlobalAddressesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListGlobalAddressesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressList> __Marshaller_google_cloud_compute_v1_AddressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddressList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_GetGlobalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGlobalAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Address> __Marshaller_google_cloud_compute_v1_Address = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Address.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalAddressRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertGlobalAddressRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalAddressesRequest> __Marshaller_google_cloud_compute_v1_ListGlobalAddressesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListGlobalAddressesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddressList> __Marshaller_google_cloud_compute_v1_AddressList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddressList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalAddressRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -5572,15 +5902,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.GlobalForwardingRules";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_GetGlobalForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGlobalForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRule> __Marshaller_google_cloud_compute_v1_ForwardingRule = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ForwardingRule.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertGlobalForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_ListGlobalForwardingRulesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListGlobalForwardingRulesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleList> __Marshaller_google_cloud_compute_v1_ForwardingRuleList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ForwardingRuleList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_PatchGlobalForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchGlobalForwardingRuleRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_SetTargetGlobalForwardingRuleRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetTargetGlobalForwardingRuleRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_GetGlobalForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGlobalForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRule> __Marshaller_google_cloud_compute_v1_ForwardingRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ForwardingRule.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertGlobalForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalForwardingRulesRequest> __Marshaller_google_cloud_compute_v1_ListGlobalForwardingRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListGlobalForwardingRulesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ForwardingRuleList> __Marshaller_google_cloud_compute_v1_ForwardingRuleList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ForwardingRuleList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_PatchGlobalForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchGlobalForwardingRuleRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetGlobalForwardingRuleRequest> __Marshaller_google_cloud_compute_v1_SetTargetGlobalForwardingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetTargetGlobalForwardingRuleRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalForwardingRuleRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -6031,17 +6391,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.GlobalNetworkEndpointGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGlobalNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertGlobalNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListGlobalNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupsListNetworkEndpoints = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGlobalNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertGlobalNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertGlobalNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertGlobalNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListGlobalNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupsListNetworkEndpoints = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AttachNetworkEndpoints = new grpc::Method<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -6556,15 +6946,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.GlobalOperations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListGlobalOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationAggregatedList> __Marshaller_google_cloud_compute_v1_OperationAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.OperationAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteGlobalOperationResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalOperationResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_GetGlobalOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGlobalOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalOperationsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListGlobalOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.OperationList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_WaitGlobalOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.WaitGlobalOperationRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListGlobalOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationAggregatedList> __Marshaller_google_cloud_compute_v1_OperationAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.OperationAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteGlobalOperationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalOperationResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_GetGlobalOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGlobalOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalOperationsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListGlobalOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.OperationList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitGlobalOperationRequest> __Marshaller_google_cloud_compute_v1_WaitGlobalOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.WaitGlobalOperationRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest, global::Google.Cloud.Compute.V1.OperationAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListGlobalOperationsRequest, global::Google.Cloud.Compute.V1.OperationAggregatedList>(
         grpc::MethodType.Unary,
@@ -6971,12 +7391,42 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.GlobalOrganizationOperations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalOrganizationOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteGlobalOrganizationOperationResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalOrganizationOperationRequest> __Marshaller_google_cloud_compute_v1_GetGlobalOrganizationOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGlobalOrganizationOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalOrganizationOperationsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalOrganizationOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListGlobalOrganizationOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.OperationList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteGlobalOrganizationOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteGlobalOrganizationOperationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGlobalOrganizationOperationRequest> __Marshaller_google_cloud_compute_v1_GetGlobalOrganizationOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGlobalOrganizationOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListGlobalOrganizationOperationsRequest> __Marshaller_google_cloud_compute_v1_ListGlobalOrganizationOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListGlobalOrganizationOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.OperationList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest, global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationRequest, global::Google.Cloud.Compute.V1.DeleteGlobalOrganizationOperationResponse>(
         grpc::MethodType.Unary,
@@ -7235,17 +7685,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.HealthChecks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListHealthChecksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthChecksAggregatedList> __Marshaller_google_cloud_compute_v1_HealthChecksAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthChecksAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteHealthCheckRequest> __Marshaller_google_cloud_compute_v1_DeleteHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthCheckRequest> __Marshaller_google_cloud_compute_v1_GetHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheck> __Marshaller_google_cloud_compute_v1_HealthCheck = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheck.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertHealthCheckRequest> __Marshaller_google_cloud_compute_v1_InsertHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListHealthChecksRequest> __Marshaller_google_cloud_compute_v1_ListHealthChecksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListHealthChecksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckList> __Marshaller_google_cloud_compute_v1_HealthCheckList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheckList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchHealthCheckRequest> __Marshaller_google_cloud_compute_v1_PatchHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateHealthCheckRequest> __Marshaller_google_cloud_compute_v1_UpdateHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateHealthCheckRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListHealthChecksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthChecksAggregatedList> __Marshaller_google_cloud_compute_v1_HealthChecksAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthChecksAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteHealthCheckRequest> __Marshaller_google_cloud_compute_v1_DeleteHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthCheckRequest> __Marshaller_google_cloud_compute_v1_GetHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheck> __Marshaller_google_cloud_compute_v1_HealthCheck = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheck.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertHealthCheckRequest> __Marshaller_google_cloud_compute_v1_InsertHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListHealthChecksRequest> __Marshaller_google_cloud_compute_v1_ListHealthChecksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListHealthChecksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckList> __Marshaller_google_cloud_compute_v1_HealthCheckList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheckList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchHealthCheckRequest> __Marshaller_google_cloud_compute_v1_PatchHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateHealthCheckRequest> __Marshaller_google_cloud_compute_v1_UpdateHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateHealthCheckRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest, global::Google.Cloud.Compute.V1.HealthChecksAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListHealthChecksRequest, global::Google.Cloud.Compute.V1.HealthChecksAggregatedList>(
         grpc::MethodType.Unary,
@@ -7760,22 +8240,52 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Images";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteImageRequest> __Marshaller_google_cloud_compute_v1_DeleteImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeprecateImageRequest> __Marshaller_google_cloud_compute_v1_DeprecateImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeprecateImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetImageRequest> __Marshaller_google_cloud_compute_v1_GetImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Image> __Marshaller_google_cloud_compute_v1_Image = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Image.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetFromFamilyImageRequest> __Marshaller_google_cloud_compute_v1_GetFromFamilyImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetFromFamilyImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyImageRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertImageRequest> __Marshaller_google_cloud_compute_v1_InsertImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListImagesRequest> __Marshaller_google_cloud_compute_v1_ListImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListImagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ImageList> __Marshaller_google_cloud_compute_v1_ImageList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ImageList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchImageRequest> __Marshaller_google_cloud_compute_v1_PatchImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyImageRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsImageRequest> __Marshaller_google_cloud_compute_v1_SetLabelsImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsImageRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsImageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteImageRequest> __Marshaller_google_cloud_compute_v1_DeleteImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeprecateImageRequest> __Marshaller_google_cloud_compute_v1_DeprecateImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeprecateImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetImageRequest> __Marshaller_google_cloud_compute_v1_GetImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Image> __Marshaller_google_cloud_compute_v1_Image = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Image.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetFromFamilyImageRequest> __Marshaller_google_cloud_compute_v1_GetFromFamilyImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetFromFamilyImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyImageRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertImageRequest> __Marshaller_google_cloud_compute_v1_InsertImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListImagesRequest> __Marshaller_google_cloud_compute_v1_ListImagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListImagesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ImageList> __Marshaller_google_cloud_compute_v1_ImageList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ImageList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchImageRequest> __Marshaller_google_cloud_compute_v1_PatchImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyImageRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsImageRequest> __Marshaller_google_cloud_compute_v1_SetLabelsImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsImageRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsImageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteImageRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteImageRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -8556,33 +9066,63 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.InstanceGroupManagers";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_AbandonInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagerAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceGroupManagerAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManagerAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ApplyUpdatesToInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_CreateInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CreateInstancesInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstancesInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeletePerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_GetInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManager> __Marshaller_google_cloud_compute_v1_InstanceGroupManager = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManager.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagerList> __Marshaller_google_cloud_compute_v1_InstanceGroupManagerList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManagerList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListErrorsInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListErrorsInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListErrorsInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListErrorsResponse> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListErrorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManagersListErrorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListManagedInstancesInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListManagedInstancesInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListManagedInstancesInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListManagedInstancesResponse> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListManagedInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManagersListManagedInstancesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPerInstanceConfigsInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListPerInstanceConfigsInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListPerInstanceConfigsInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListPerInstanceConfigsResp> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListPerInstanceConfigsResp = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManagersListPerInstanceConfigsResp.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchPerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RecreateInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_RecreateInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RecreateInstancesInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ResizeInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResizeInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetInstanceTemplateInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetInstanceTemplateInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetInstanceTemplateInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetPoolsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetTargetPoolsInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetTargetPoolsInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_UpdatePerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsInstanceGroupManagerRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_AbandonInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagerAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceGroupManagerAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManagerAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ApplyUpdatesToInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_CreateInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CreateInstancesInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstancesInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeletePerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_GetInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManager> __Marshaller_google_cloud_compute_v1_InstanceGroupManager = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManager.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagerList> __Marshaller_google_cloud_compute_v1_InstanceGroupManagerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManagerList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListErrorsInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListErrorsInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListErrorsInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListErrorsResponse> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListErrorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManagersListErrorsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListManagedInstancesInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListManagedInstancesInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListManagedInstancesInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListManagedInstancesResponse> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListManagedInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManagersListManagedInstancesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPerInstanceConfigsInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListPerInstanceConfigsInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListPerInstanceConfigsInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManagersListPerInstanceConfigsResp> __Marshaller_google_cloud_compute_v1_InstanceGroupManagersListPerInstanceConfigsResp = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManagersListPerInstanceConfigsResp.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchPerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RecreateInstancesInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_RecreateInstancesInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RecreateInstancesInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ResizeInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResizeInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetInstanceTemplateInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetInstanceTemplateInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetInstanceTemplateInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetPoolsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetTargetPoolsInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetTargetPoolsInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_UpdatePerInstanceConfigsInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsInstanceGroupManagerRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AbandonInstances = new grpc::Method<global::Google.Cloud.Compute.V1.AbandonInstancesInstanceGroupManagerRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -10039,20 +10579,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.InstanceGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_AddInstancesInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstanceGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceGroupAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_GetInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroup> __Marshaller_google_cloud_compute_v1_InstanceGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstanceGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstanceGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupList> __Marshaller_google_cloud_compute_v1_InstanceGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstancesInstanceGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstancesInstanceGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupsListInstances> __Marshaller_google_cloud_compute_v1_InstanceGroupsListInstances = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupsListInstances.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveInstancesInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_RemoveInstancesInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveInstancesInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNamedPortsInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_SetNamedPortsInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetNamedPortsInstanceGroupRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_AddInstancesInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstanceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListInstanceGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceGroupAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_GetInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroup> __Marshaller_google_cloud_compute_v1_InstanceGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstanceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstanceGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupList> __Marshaller_google_cloud_compute_v1_InstanceGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstancesInstanceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstancesInstanceGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupsListInstances> __Marshaller_google_cloud_compute_v1_InstanceGroupsListInstances = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupsListInstances.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveInstancesInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_RemoveInstancesInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveInstancesInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNamedPortsInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_SetNamedPortsInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetNamedPortsInstanceGroupRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddInstances = new grpc::Method<global::Google.Cloud.Compute.V1.AddInstancesInstanceGroupRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -10725,18 +11295,48 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.InstanceTemplates";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_GetInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceTemplate> __Marshaller_google_cloud_compute_v1_InstanceTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceTemplatesRequest> __Marshaller_google_cloud_compute_v1_ListInstanceTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstanceTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceTemplateList> __Marshaller_google_cloud_compute_v1_InstanceTemplateList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceTemplateList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsInstanceTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_GetInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceTemplate> __Marshaller_google_cloud_compute_v1_InstanceTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceTemplate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstanceTemplatesRequest> __Marshaller_google_cloud_compute_v1_ListInstanceTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstanceTemplatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceTemplateList> __Marshaller_google_cloud_compute_v1_InstanceTemplateList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceTemplateList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceTemplateRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsInstanceTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteInstanceTemplateRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -11251,57 +11851,87 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Instances";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_AddAccessConfigInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesInstanceRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddResourcePoliciesInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstancesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachDiskInstanceRequest> __Marshaller_google_cloud_compute_v1_AttachDiskInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AttachDiskInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteAccessConfigInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteAccessConfigInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachDiskInstanceRequest> __Marshaller_google_cloud_compute_v1_DetachDiskInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DetachDiskInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceRequest> __Marshaller_google_cloud_compute_v1_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Instance> __Marshaller_google_cloud_compute_v1_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Instance.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGuestAttributesInstanceRequest> __Marshaller_google_cloud_compute_v1_GetGuestAttributesInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetGuestAttributesInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GuestAttributes> __Marshaller_google_cloud_compute_v1_GuestAttributes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GuestAttributes.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetScreenshotInstanceRequest> __Marshaller_google_cloud_compute_v1_GetScreenshotInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetScreenshotInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Screenshot> __Marshaller_google_cloud_compute_v1_Screenshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Screenshot.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSerialPortOutputInstanceRequest> __Marshaller_google_cloud_compute_v1_GetSerialPortOutputInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSerialPortOutputInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SerialPortOutput> __Marshaller_google_cloud_compute_v1_SerialPortOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SerialPortOutput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetShieldedInstanceIdentityInstanceRequest> __Marshaller_google_cloud_compute_v1_GetShieldedInstanceIdentityInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetShieldedInstanceIdentityInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ShieldedInstanceIdentity> __Marshaller_google_cloud_compute_v1_ShieldedInstanceIdentity = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ShieldedInstanceIdentity.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesRequest> __Marshaller_google_cloud_compute_v1_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceList> __Marshaller_google_cloud_compute_v1_InstanceList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListReferrersInstancesRequest> __Marshaller_google_cloud_compute_v1_ListReferrersInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListReferrersInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceListReferrers> __Marshaller_google_cloud_compute_v1_InstanceListReferrers = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceListReferrers.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesInstanceRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveResourcePoliciesInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResetInstanceRequest> __Marshaller_google_cloud_compute_v1_ResetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDeletionProtectionInstanceRequest> __Marshaller_google_cloud_compute_v1_SetDeletionProtectionInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetDeletionProtectionInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDiskAutoDeleteInstanceRequest> __Marshaller_google_cloud_compute_v1_SetDiskAutoDeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetDiskAutoDeleteInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsInstanceRequest> __Marshaller_google_cloud_compute_v1_SetLabelsInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMachineResourcesInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMachineResourcesInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetMachineResourcesInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMachineTypeInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMachineTypeInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetMachineTypeInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMetadataInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMetadataInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetMetadataInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMinCpuPlatformInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMinCpuPlatformInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetMinCpuPlatformInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSchedulingInstanceRequest> __Marshaller_google_cloud_compute_v1_SetSchedulingInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSchedulingInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetServiceAccountInstanceRequest> __Marshaller_google_cloud_compute_v1_SetServiceAccountInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetServiceAccountInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetShieldedInstanceIntegrityPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_SetShieldedInstanceIntegrityPolicyInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetShieldedInstanceIntegrityPolicyInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTagsInstanceRequest> __Marshaller_google_cloud_compute_v1_SetTagsInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetTagsInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SimulateMaintenanceEventInstanceRequest> __Marshaller_google_cloud_compute_v1_SimulateMaintenanceEventInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SimulateMaintenanceEventInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StartInstanceRequest> __Marshaller_google_cloud_compute_v1_StartInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.StartInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StartWithEncryptionKeyInstanceRequest> __Marshaller_google_cloud_compute_v1_StartWithEncryptionKeyInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.StartWithEncryptionKeyInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StopInstanceRequest> __Marshaller_google_cloud_compute_v1_StopInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.StopInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateAccessConfigInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateAccessConfigInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateDisplayDeviceInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateDisplayDeviceInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateDisplayDeviceInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateNetworkInterfaceInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateNetworkInterfaceInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateNetworkInterfaceInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateShieldedInstanceConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateShieldedInstanceConfigInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateShieldedInstanceConfigInstanceRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_AddAccessConfigInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesInstanceRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddResourcePoliciesInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInstancesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListInstancesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceAggregatedList> __Marshaller_google_cloud_compute_v1_InstanceAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachDiskInstanceRequest> __Marshaller_google_cloud_compute_v1_AttachDiskInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AttachDiskInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteAccessConfigInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteAccessConfigInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachDiskInstanceRequest> __Marshaller_google_cloud_compute_v1_DetachDiskInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DetachDiskInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInstanceRequest> __Marshaller_google_cloud_compute_v1_GetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Instance> __Marshaller_google_cloud_compute_v1_Instance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Instance.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetGuestAttributesInstanceRequest> __Marshaller_google_cloud_compute_v1_GetGuestAttributesInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetGuestAttributesInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GuestAttributes> __Marshaller_google_cloud_compute_v1_GuestAttributes = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GuestAttributes.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetScreenshotInstanceRequest> __Marshaller_google_cloud_compute_v1_GetScreenshotInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetScreenshotInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Screenshot> __Marshaller_google_cloud_compute_v1_Screenshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Screenshot.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSerialPortOutputInstanceRequest> __Marshaller_google_cloud_compute_v1_GetSerialPortOutputInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSerialPortOutputInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SerialPortOutput> __Marshaller_google_cloud_compute_v1_SerialPortOutput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SerialPortOutput.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetShieldedInstanceIdentityInstanceRequest> __Marshaller_google_cloud_compute_v1_GetShieldedInstanceIdentityInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetShieldedInstanceIdentityInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ShieldedInstanceIdentity> __Marshaller_google_cloud_compute_v1_ShieldedInstanceIdentity = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ShieldedInstanceIdentity.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInstanceRequest> __Marshaller_google_cloud_compute_v1_InsertInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesRequest> __Marshaller_google_cloud_compute_v1_ListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstancesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceList> __Marshaller_google_cloud_compute_v1_InstanceList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListReferrersInstancesRequest> __Marshaller_google_cloud_compute_v1_ListReferrersInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListReferrersInstancesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceListReferrers> __Marshaller_google_cloud_compute_v1_InstanceListReferrers = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceListReferrers.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesInstanceRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveResourcePoliciesInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResetInstanceRequest> __Marshaller_google_cloud_compute_v1_ResetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResetInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDeletionProtectionInstanceRequest> __Marshaller_google_cloud_compute_v1_SetDeletionProtectionInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetDeletionProtectionInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDiskAutoDeleteInstanceRequest> __Marshaller_google_cloud_compute_v1_SetDiskAutoDeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetDiskAutoDeleteInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsInstanceRequest> __Marshaller_google_cloud_compute_v1_SetLabelsInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMachineResourcesInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMachineResourcesInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetMachineResourcesInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMachineTypeInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMachineTypeInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetMachineTypeInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMetadataInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMetadataInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetMetadataInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetMinCpuPlatformInstanceRequest> __Marshaller_google_cloud_compute_v1_SetMinCpuPlatformInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetMinCpuPlatformInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSchedulingInstanceRequest> __Marshaller_google_cloud_compute_v1_SetSchedulingInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSchedulingInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetServiceAccountInstanceRequest> __Marshaller_google_cloud_compute_v1_SetServiceAccountInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetServiceAccountInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetShieldedInstanceIntegrityPolicyInstanceRequest> __Marshaller_google_cloud_compute_v1_SetShieldedInstanceIntegrityPolicyInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetShieldedInstanceIntegrityPolicyInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTagsInstanceRequest> __Marshaller_google_cloud_compute_v1_SetTagsInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetTagsInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SimulateMaintenanceEventInstanceRequest> __Marshaller_google_cloud_compute_v1_SimulateMaintenanceEventInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SimulateMaintenanceEventInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StartInstanceRequest> __Marshaller_google_cloud_compute_v1_StartInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.StartInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StartWithEncryptionKeyInstanceRequest> __Marshaller_google_cloud_compute_v1_StartWithEncryptionKeyInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.StartWithEncryptionKeyInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.StopInstanceRequest> __Marshaller_google_cloud_compute_v1_StopInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.StopInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateAccessConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateAccessConfigInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateAccessConfigInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateDisplayDeviceInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateDisplayDeviceInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateDisplayDeviceInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateNetworkInterfaceInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateNetworkInterfaceInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateNetworkInterfaceInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateShieldedInstanceConfigInstanceRequest> __Marshaller_google_cloud_compute_v1_UpdateShieldedInstanceConfigInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateShieldedInstanceConfigInstanceRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddAccessConfig = new grpc::Method<global::Google.Cloud.Compute.V1.AddAccessConfigInstanceRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -13928,16 +14558,46 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.InterconnectAttachments";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInterconnectAttachmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList> __Marshaller_google_cloud_compute_v1_InterconnectAttachmentAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_DeleteInterconnectAttachmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInterconnectAttachmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectAttachmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInterconnectAttachmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachment> __Marshaller_google_cloud_compute_v1_InterconnectAttachment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectAttachment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_InsertInterconnectAttachmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInterconnectAttachmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectAttachmentsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectAttachmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInterconnectAttachmentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachmentList> __Marshaller_google_cloud_compute_v1_InterconnectAttachmentList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectAttachmentList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_PatchInterconnectAttachmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchInterconnectAttachmentRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListInterconnectAttachmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList> __Marshaller_google_cloud_compute_v1_InterconnectAttachmentAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_DeleteInterconnectAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInterconnectAttachmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInterconnectAttachmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachment> __Marshaller_google_cloud_compute_v1_InterconnectAttachment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectAttachment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_InsertInterconnectAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInterconnectAttachmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectAttachmentsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectAttachmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInterconnectAttachmentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectAttachmentList> __Marshaller_google_cloud_compute_v1_InterconnectAttachmentList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectAttachmentList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInterconnectAttachmentRequest> __Marshaller_google_cloud_compute_v1_PatchInterconnectAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchInterconnectAttachmentRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest, global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListInterconnectAttachmentsRequest, global::Google.Cloud.Compute.V1.InterconnectAttachmentAggregatedList>(
         grpc::MethodType.Unary,
@@ -14388,10 +15048,40 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.InterconnectLocations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectLocationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectLocation> __Marshaller_google_cloud_compute_v1_InterconnectLocation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectLocation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectLocationsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectLocationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInterconnectLocationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectLocationList> __Marshaller_google_cloud_compute_v1_InterconnectLocationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectLocationList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectLocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectLocation> __Marshaller_google_cloud_compute_v1_InterconnectLocation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectLocation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectLocationsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectLocationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInterconnectLocationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectLocationList> __Marshaller_google_cloud_compute_v1_InterconnectLocationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectLocationList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest, global::Google.Cloud.Compute.V1.InterconnectLocation> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetInterconnectLocationRequest, global::Google.Cloud.Compute.V1.InterconnectLocation>(
         grpc::MethodType.Unary,
@@ -14586,16 +15276,46 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Interconnects";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInterconnectRequest> __Marshaller_google_cloud_compute_v1_DeleteInterconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInterconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetInterconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Interconnect> __Marshaller_google_cloud_compute_v1_Interconnect = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Interconnect.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiagnosticsInterconnectRequest> __Marshaller_google_cloud_compute_v1_GetDiagnosticsInterconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetDiagnosticsInterconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectsGetDiagnosticsResponse> __Marshaller_google_cloud_compute_v1_InterconnectsGetDiagnosticsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectsGetDiagnosticsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInterconnectRequest> __Marshaller_google_cloud_compute_v1_InsertInterconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertInterconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInterconnectsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectList> __Marshaller_google_cloud_compute_v1_InterconnectList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InterconnectList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInterconnectRequest> __Marshaller_google_cloud_compute_v1_PatchInterconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchInterconnectRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInterconnectRequest> __Marshaller_google_cloud_compute_v1_DeleteInterconnectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInterconnectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetInterconnectRequest> __Marshaller_google_cloud_compute_v1_GetInterconnectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetInterconnectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Interconnect> __Marshaller_google_cloud_compute_v1_Interconnect = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Interconnect.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetDiagnosticsInterconnectRequest> __Marshaller_google_cloud_compute_v1_GetDiagnosticsInterconnectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetDiagnosticsInterconnectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectsGetDiagnosticsResponse> __Marshaller_google_cloud_compute_v1_InterconnectsGetDiagnosticsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectsGetDiagnosticsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertInterconnectRequest> __Marshaller_google_cloud_compute_v1_InsertInterconnectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertInterconnectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInterconnectsRequest> __Marshaller_google_cloud_compute_v1_ListInterconnectsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInterconnectsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InterconnectList> __Marshaller_google_cloud_compute_v1_InterconnectList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InterconnectList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchInterconnectRequest> __Marshaller_google_cloud_compute_v1_PatchInterconnectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchInterconnectRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteInterconnectRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteInterconnectRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -15046,10 +15766,40 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.LicenseCodes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetLicenseCodeRequest> __Marshaller_google_cloud_compute_v1_GetLicenseCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetLicenseCodeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.LicenseCode> __Marshaller_google_cloud_compute_v1_LicenseCode = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.LicenseCode.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseCodeRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsLicenseCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseCodeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetLicenseCodeRequest> __Marshaller_google_cloud_compute_v1_GetLicenseCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetLicenseCodeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.LicenseCode> __Marshaller_google_cloud_compute_v1_LicenseCode = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.LicenseCode.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseCodeRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsLicenseCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseCodeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetLicenseCodeRequest, global::Google.Cloud.Compute.V1.LicenseCode> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetLicenseCodeRequest, global::Google.Cloud.Compute.V1.LicenseCode>(
         grpc::MethodType.Unary,
@@ -15244,18 +15994,48 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Licenses";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteLicenseRequest> __Marshaller_google_cloud_compute_v1_DeleteLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetLicenseRequest> __Marshaller_google_cloud_compute_v1_GetLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.License> __Marshaller_google_cloud_compute_v1_License = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.License.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyLicenseRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertLicenseRequest> __Marshaller_google_cloud_compute_v1_InsertLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListLicensesRequest> __Marshaller_google_cloud_compute_v1_ListLicensesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListLicensesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.LicensesListResponse> __Marshaller_google_cloud_compute_v1_LicensesListResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.LicensesListResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyLicenseRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsLicenseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteLicenseRequest> __Marshaller_google_cloud_compute_v1_DeleteLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetLicenseRequest> __Marshaller_google_cloud_compute_v1_GetLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.License> __Marshaller_google_cloud_compute_v1_License = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.License.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyLicenseRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertLicenseRequest> __Marshaller_google_cloud_compute_v1_InsertLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListLicensesRequest> __Marshaller_google_cloud_compute_v1_ListLicensesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListLicensesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.LicensesListResponse> __Marshaller_google_cloud_compute_v1_LicensesListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.LicensesListResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyLicenseRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsLicenseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsLicenseRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteLicenseRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteLicenseRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -15770,12 +16550,42 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.MachineTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListMachineTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineTypeAggregatedList> __Marshaller_google_cloud_compute_v1_MachineTypeAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.MachineTypeAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetMachineTypeRequest> __Marshaller_google_cloud_compute_v1_GetMachineTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetMachineTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineType> __Marshaller_google_cloud_compute_v1_MachineType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.MachineType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListMachineTypesRequest> __Marshaller_google_cloud_compute_v1_ListMachineTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListMachineTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineTypeList> __Marshaller_google_cloud_compute_v1_MachineTypeList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.MachineTypeList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListMachineTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineTypeAggregatedList> __Marshaller_google_cloud_compute_v1_MachineTypeAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.MachineTypeAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetMachineTypeRequest> __Marshaller_google_cloud_compute_v1_GetMachineTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetMachineTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineType> __Marshaller_google_cloud_compute_v1_MachineType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.MachineType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListMachineTypesRequest> __Marshaller_google_cloud_compute_v1_ListMachineTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListMachineTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MachineTypeList> __Marshaller_google_cloud_compute_v1_MachineTypeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.MachineTypeList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest, global::Google.Cloud.Compute.V1.MachineTypeAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListMachineTypesRequest, global::Google.Cloud.Compute.V1.MachineTypeAggregatedList>(
         grpc::MethodType.Unary,
@@ -16034,21 +16844,51 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.NetworkEndpointGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_AttachNetworkEndpointsNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AttachNetworkEndpointsNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachNetworkEndpointsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DetachNetworkEndpointsNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DetachNetworkEndpointsNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointsNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointsNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNetworkEndpointsNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupsListNetworkEndpoints = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AttachNetworkEndpointsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_AttachNetworkEndpointsNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AttachNetworkEndpointsNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DetachNetworkEndpointsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DetachNetworkEndpointsNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DetachNetworkEndpointsNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworkEndpointsNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNetworkEndpointsNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNetworkEndpointsNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupsListNetworkEndpoints = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupsListNetworkEndpoints.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest, global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNetworkEndpointGroupsRequest, global::Google.Cloud.Compute.V1.NetworkEndpointGroupAggregatedList>(
         grpc::MethodType.Unary,
@@ -16691,20 +17531,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Networks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_AddPeeringNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNetworkRequest> __Marshaller_google_cloud_compute_v1_DeleteNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNetworkRequest> __Marshaller_google_cloud_compute_v1_GetNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Network> __Marshaller_google_cloud_compute_v1_Network = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Network.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNetworkRequest> __Marshaller_google_cloud_compute_v1_InsertNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworksRequest> __Marshaller_google_cloud_compute_v1_ListNetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNetworksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkList> __Marshaller_google_cloud_compute_v1_NetworkList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPeeringRoutesNetworksRequest> __Marshaller_google_cloud_compute_v1_ListPeeringRoutesNetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListPeeringRoutesNetworksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExchangedPeeringRoutesList> __Marshaller_google_cloud_compute_v1_ExchangedPeeringRoutesList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ExchangedPeeringRoutesList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchNetworkRequest> __Marshaller_google_cloud_compute_v1_PatchNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemovePeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_RemovePeeringNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemovePeeringNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SwitchToCustomModeNetworkRequest> __Marshaller_google_cloud_compute_v1_SwitchToCustomModeNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SwitchToCustomModeNetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_UpdatePeeringNetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdatePeeringNetworkRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_AddPeeringNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNetworkRequest> __Marshaller_google_cloud_compute_v1_DeleteNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNetworkRequest> __Marshaller_google_cloud_compute_v1_GetNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Network> __Marshaller_google_cloud_compute_v1_Network = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Network.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNetworkRequest> __Marshaller_google_cloud_compute_v1_InsertNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNetworksRequest> __Marshaller_google_cloud_compute_v1_ListNetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNetworksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkList> __Marshaller_google_cloud_compute_v1_NetworkList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPeeringRoutesNetworksRequest> __Marshaller_google_cloud_compute_v1_ListPeeringRoutesNetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListPeeringRoutesNetworksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExchangedPeeringRoutesList> __Marshaller_google_cloud_compute_v1_ExchangedPeeringRoutesList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ExchangedPeeringRoutesList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchNetworkRequest> __Marshaller_google_cloud_compute_v1_PatchNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemovePeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_RemovePeeringNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemovePeeringNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SwitchToCustomModeNetworkRequest> __Marshaller_google_cloud_compute_v1_SwitchToCustomModeNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SwitchToCustomModeNetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePeeringNetworkRequest> __Marshaller_google_cloud_compute_v1_UpdatePeeringNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdatePeeringNetworkRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddPeering = new grpc::Method<global::Google.Cloud.Compute.V1.AddPeeringNetworkRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -17411,26 +18281,56 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.NodeGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest> __Marshaller_google_cloud_compute_v1_AddNodesNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListNodeGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupAggregatedList> __Marshaller_google_cloud_compute_v1_NodeGroupAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeGroupAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodeGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodesNodeGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNodesNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteNodesNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeGroupRequest> __Marshaller_google_cloud_compute_v1_GetNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroup> __Marshaller_google_cloud_compute_v1_NodeGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyNodeGroupRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNodeGroupRequest> __Marshaller_google_cloud_compute_v1_InsertNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNodeGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNodeGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupList> __Marshaller_google_cloud_compute_v1_NodeGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeGroupList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodesNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNodesNodeGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNodesNodeGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupsListNodes> __Marshaller_google_cloud_compute_v1_NodeGroupsListNodes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeGroupsListNodes.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchNodeGroupRequest> __Marshaller_google_cloud_compute_v1_PatchNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyNodeGroupRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNodeTemplateNodeGroupRequest> __Marshaller_google_cloud_compute_v1_SetNodeTemplateNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetNodeTemplateNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNodeGroupRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNodeGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsNodeGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest> __Marshaller_google_cloud_compute_v1_AddNodesNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListNodeGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupAggregatedList> __Marshaller_google_cloud_compute_v1_NodeGroupAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeGroupAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodeGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodesNodeGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteNodesNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteNodesNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeGroupRequest> __Marshaller_google_cloud_compute_v1_GetNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroup> __Marshaller_google_cloud_compute_v1_NodeGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyNodeGroupRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNodeGroupRequest> __Marshaller_google_cloud_compute_v1_InsertNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNodeGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNodeGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupList> __Marshaller_google_cloud_compute_v1_NodeGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeGroupList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodesNodeGroupsRequest> __Marshaller_google_cloud_compute_v1_ListNodesNodeGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNodesNodeGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeGroupsListNodes> __Marshaller_google_cloud_compute_v1_NodeGroupsListNodes = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeGroupsListNodes.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchNodeGroupRequest> __Marshaller_google_cloud_compute_v1_PatchNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyNodeGroupRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNodeTemplateNodeGroupRequest> __Marshaller_google_cloud_compute_v1_SetNodeTemplateNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetNodeTemplateNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNodeGroupRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNodeGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsNodeGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddNodes = new grpc::Method<global::Google.Cloud.Compute.V1.AddNodesNodeGroupRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -18329,20 +19229,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.NodeTemplates";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList> __Marshaller_google_cloud_compute_v1_NodeTemplateAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_DeleteNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_GetNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplate> __Marshaller_google_cloud_compute_v1_NodeTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_InsertNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeTemplatesRequest> __Marshaller_google_cloud_compute_v1_ListNodeTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNodeTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplateList> __Marshaller_google_cloud_compute_v1_NodeTemplateList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeTemplateList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNodeTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsNodeTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList> __Marshaller_google_cloud_compute_v1_NodeTemplateAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_DeleteNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_GetNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplate> __Marshaller_google_cloud_compute_v1_NodeTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeTemplate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_InsertNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeTemplatesRequest> __Marshaller_google_cloud_compute_v1_ListNodeTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNodeTemplatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTemplateList> __Marshaller_google_cloud_compute_v1_NodeTemplateList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeTemplateList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsNodeTemplateRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsNodeTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsNodeTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest, global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNodeTemplatesRequest, global::Google.Cloud.Compute.V1.NodeTemplateAggregatedList>(
         grpc::MethodType.Unary,
@@ -18921,12 +19851,42 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.NodeTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTypeAggregatedList> __Marshaller_google_cloud_compute_v1_NodeTypeAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeTypeAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeTypeRequest> __Marshaller_google_cloud_compute_v1_GetNodeTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNodeTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeType> __Marshaller_google_cloud_compute_v1_NodeType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeTypesRequest> __Marshaller_google_cloud_compute_v1_ListNodeTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListNodeTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTypeList> __Marshaller_google_cloud_compute_v1_NodeTypeList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NodeTypeList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListNodeTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTypeAggregatedList> __Marshaller_google_cloud_compute_v1_NodeTypeAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeTypeAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNodeTypeRequest> __Marshaller_google_cloud_compute_v1_GetNodeTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNodeTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeType> __Marshaller_google_cloud_compute_v1_NodeType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListNodeTypesRequest> __Marshaller_google_cloud_compute_v1_ListNodeTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListNodeTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NodeTypeList> __Marshaller_google_cloud_compute_v1_NodeTypeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NodeTypeList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest, global::Google.Cloud.Compute.V1.NodeTypeAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListNodeTypesRequest, global::Google.Cloud.Compute.V1.NodeTypeAggregatedList>(
         grpc::MethodType.Unary,
@@ -19185,18 +20145,48 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.PacketMirrorings";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListPacketMirroringsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList> __Marshaller_google_cloud_compute_v1_PacketMirroringAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePacketMirroringRequest> __Marshaller_google_cloud_compute_v1_DeletePacketMirroringRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeletePacketMirroringRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_GetPacketMirroringRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetPacketMirroringRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroring> __Marshaller_google_cloud_compute_v1_PacketMirroring = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PacketMirroring.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_InsertPacketMirroringRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertPacketMirroringRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPacketMirroringsRequest> __Marshaller_google_cloud_compute_v1_ListPacketMirroringsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListPacketMirroringsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroringList> __Marshaller_google_cloud_compute_v1_PacketMirroringList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PacketMirroringList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_PatchPacketMirroringRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchPacketMirroringRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsPacketMirroringRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsPacketMirroringRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListPacketMirroringsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList> __Marshaller_google_cloud_compute_v1_PacketMirroringAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePacketMirroringRequest> __Marshaller_google_cloud_compute_v1_DeletePacketMirroringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeletePacketMirroringRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_GetPacketMirroringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetPacketMirroringRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroring> __Marshaller_google_cloud_compute_v1_PacketMirroring = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PacketMirroring.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_InsertPacketMirroringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertPacketMirroringRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPacketMirroringsRequest> __Marshaller_google_cloud_compute_v1_ListPacketMirroringsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListPacketMirroringsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PacketMirroringList> __Marshaller_google_cloud_compute_v1_PacketMirroringList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PacketMirroringList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_PatchPacketMirroringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchPacketMirroringRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsPacketMirroringRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsPacketMirroringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsPacketMirroringRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest, global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListPacketMirroringsRequest, global::Google.Cloud.Compute.V1.PacketMirroringAggregatedList>(
         grpc::MethodType.Unary,
@@ -19711,23 +20701,53 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Projects";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_DisableXpnHostProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DisableXpnResourceProjectRequest> __Marshaller_google_cloud_compute_v1_DisableXpnResourceProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DisableXpnResourceProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.EnableXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_EnableXpnHostProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.EnableXpnHostProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.EnableXpnResourceProjectRequest> __Marshaller_google_cloud_compute_v1_EnableXpnResourceProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.EnableXpnResourceProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetProjectRequest> __Marshaller_google_cloud_compute_v1_GetProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Project> __Marshaller_google_cloud_compute_v1_Project = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Project.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_GetXpnHostProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetXpnHostProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetXpnResourcesProjectsRequest> __Marshaller_google_cloud_compute_v1_GetXpnResourcesProjectsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetXpnResourcesProjectsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ProjectsGetXpnResources> __Marshaller_google_cloud_compute_v1_ProjectsGetXpnResources = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ProjectsGetXpnResources.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListXpnHostsProjectsRequest> __Marshaller_google_cloud_compute_v1_ListXpnHostsProjectsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListXpnHostsProjectsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.XpnHostList> __Marshaller_google_cloud_compute_v1_XpnHostList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.XpnHostList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MoveDiskProjectRequest> __Marshaller_google_cloud_compute_v1_MoveDiskProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.MoveDiskProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MoveInstanceProjectRequest> __Marshaller_google_cloud_compute_v1_MoveInstanceProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.MoveInstanceProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetCommonInstanceMetadataProjectRequest> __Marshaller_google_cloud_compute_v1_SetCommonInstanceMetadataProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetCommonInstanceMetadataProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDefaultNetworkTierProjectRequest> __Marshaller_google_cloud_compute_v1_SetDefaultNetworkTierProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetDefaultNetworkTierProjectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUsageExportBucketProjectRequest> __Marshaller_google_cloud_compute_v1_SetUsageExportBucketProjectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetUsageExportBucketProjectRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_DisableXpnHostProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DisableXpnResourceProjectRequest> __Marshaller_google_cloud_compute_v1_DisableXpnResourceProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DisableXpnResourceProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.EnableXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_EnableXpnHostProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.EnableXpnHostProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.EnableXpnResourceProjectRequest> __Marshaller_google_cloud_compute_v1_EnableXpnResourceProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.EnableXpnResourceProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetProjectRequest> __Marshaller_google_cloud_compute_v1_GetProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Project> __Marshaller_google_cloud_compute_v1_Project = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Project.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetXpnHostProjectRequest> __Marshaller_google_cloud_compute_v1_GetXpnHostProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetXpnHostProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetXpnResourcesProjectsRequest> __Marshaller_google_cloud_compute_v1_GetXpnResourcesProjectsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetXpnResourcesProjectsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ProjectsGetXpnResources> __Marshaller_google_cloud_compute_v1_ProjectsGetXpnResources = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ProjectsGetXpnResources.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListXpnHostsProjectsRequest> __Marshaller_google_cloud_compute_v1_ListXpnHostsProjectsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListXpnHostsProjectsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.XpnHostList> __Marshaller_google_cloud_compute_v1_XpnHostList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.XpnHostList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MoveDiskProjectRequest> __Marshaller_google_cloud_compute_v1_MoveDiskProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.MoveDiskProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.MoveInstanceProjectRequest> __Marshaller_google_cloud_compute_v1_MoveInstanceProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.MoveInstanceProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetCommonInstanceMetadataProjectRequest> __Marshaller_google_cloud_compute_v1_SetCommonInstanceMetadataProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetCommonInstanceMetadataProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetDefaultNetworkTierProjectRequest> __Marshaller_google_cloud_compute_v1_SetDefaultNetworkTierProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetDefaultNetworkTierProjectRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUsageExportBucketProjectRequest> __Marshaller_google_cloud_compute_v1_SetUsageExportBucketProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetUsageExportBucketProjectRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest, global::Google.Cloud.Compute.V1.Operation> __Method_DisableXpnHost = new grpc::Method<global::Google.Cloud.Compute.V1.DisableXpnHostProjectRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -20626,15 +21646,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionAutoscalers";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_GetRegionAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Autoscaler> __Marshaller_google_cloud_compute_v1_Autoscaler = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Autoscaler.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_InsertRegionAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionAutoscalersRequest> __Marshaller_google_cloud_compute_v1_ListRegionAutoscalersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionAutoscalersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionAutoscalerList> __Marshaller_google_cloud_compute_v1_RegionAutoscalerList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionAutoscalerList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_PatchRegionAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionAutoscalerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionAutoscalerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateRegionAutoscalerRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_GetRegionAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Autoscaler> __Marshaller_google_cloud_compute_v1_Autoscaler = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Autoscaler.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_InsertRegionAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionAutoscalersRequest> __Marshaller_google_cloud_compute_v1_ListRegionAutoscalersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionAutoscalersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionAutoscalerList> __Marshaller_google_cloud_compute_v1_RegionAutoscalerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionAutoscalerList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_PatchRegionAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionAutoscalerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionAutoscalerRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionAutoscalerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateRegionAutoscalerRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionAutoscalerRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -21085,17 +22135,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionBackendServices";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendService> __Marshaller_google_cloud_compute_v1_BackendService = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendService.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetHealthRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetHealthRegionBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceGroupHealth> __Marshaller_google_cloud_compute_v1_BackendServiceGroupHealth = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendServiceGroupHealth.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_InsertRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionBackendServicesRequest> __Marshaller_google_cloud_compute_v1_ListRegionBackendServicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionBackendServicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceList> __Marshaller_google_cloud_compute_v1_BackendServiceList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.BackendServiceList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_PatchRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionBackendServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionBackendServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateRegionBackendServiceRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendService> __Marshaller_google_cloud_compute_v1_BackendService = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendService.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_GetHealthRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetHealthRegionBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceGroupHealth> __Marshaller_google_cloud_compute_v1_BackendServiceGroupHealth = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendServiceGroupHealth.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_InsertRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionBackendServicesRequest> __Marshaller_google_cloud_compute_v1_ListRegionBackendServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionBackendServicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.BackendServiceList> __Marshaller_google_cloud_compute_v1_BackendServiceList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.BackendServiceList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_PatchRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionBackendServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionBackendServiceRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionBackendServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateRegionBackendServiceRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionBackendServiceRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -21610,14 +22690,44 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionCommitments";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListRegionCommitmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CommitmentAggregatedList> __Marshaller_google_cloud_compute_v1_CommitmentAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CommitmentAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionCommitmentRequest> __Marshaller_google_cloud_compute_v1_GetRegionCommitmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionCommitmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Commitment> __Marshaller_google_cloud_compute_v1_Commitment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Commitment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionCommitmentRequest> __Marshaller_google_cloud_compute_v1_InsertRegionCommitmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionCommitmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionCommitmentsRequest> __Marshaller_google_cloud_compute_v1_ListRegionCommitmentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionCommitmentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CommitmentList> __Marshaller_google_cloud_compute_v1_CommitmentList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CommitmentList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListRegionCommitmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CommitmentAggregatedList> __Marshaller_google_cloud_compute_v1_CommitmentAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CommitmentAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionCommitmentRequest> __Marshaller_google_cloud_compute_v1_GetRegionCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionCommitmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Commitment> __Marshaller_google_cloud_compute_v1_Commitment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Commitment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionCommitmentRequest> __Marshaller_google_cloud_compute_v1_InsertRegionCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionCommitmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionCommitmentsRequest> __Marshaller_google_cloud_compute_v1_ListRegionCommitmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionCommitmentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CommitmentList> __Marshaller_google_cloud_compute_v1_CommitmentList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CommitmentList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest, global::Google.Cloud.Compute.V1.CommitmentAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListRegionCommitmentsRequest, global::Google.Cloud.Compute.V1.CommitmentAggregatedList>(
         grpc::MethodType.Unary,
@@ -21940,10 +23050,40 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionDiskTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest> __Marshaller_google_cloud_compute_v1_GetRegionDiskTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskType> __Marshaller_google_cloud_compute_v1_DiskType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionDiskTypesRequest> __Marshaller_google_cloud_compute_v1_ListRegionDiskTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionDiskTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionDiskTypeList> __Marshaller_google_cloud_compute_v1_RegionDiskTypeList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionDiskTypeList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest> __Marshaller_google_cloud_compute_v1_GetRegionDiskTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskType> __Marshaller_google_cloud_compute_v1_DiskType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionDiskTypesRequest> __Marshaller_google_cloud_compute_v1_ListRegionDiskTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionDiskTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionDiskTypeList> __Marshaller_google_cloud_compute_v1_RegionDiskTypeList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionDiskTypeList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest, global::Google.Cloud.Compute.V1.DiskType> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetRegionDiskTypeRequest, global::Google.Cloud.Compute.V1.DiskType>(
         grpc::MethodType.Unary,
@@ -22138,23 +23278,53 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionDisks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateSnapshotRegionDiskRequest> __Marshaller_google_cloud_compute_v1_CreateSnapshotRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CreateSnapshotRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionDiskRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionDiskRequest> __Marshaller_google_cloud_compute_v1_GetRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Disk> __Marshaller_google_cloud_compute_v1_Disk = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Disk.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyRegionDiskRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionDiskRequest> __Marshaller_google_cloud_compute_v1_InsertRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionDisksRequest> __Marshaller_google_cloud_compute_v1_ListRegionDisksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionDisksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskList> __Marshaller_google_cloud_compute_v1_DiskList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DiskList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesRegionDiskRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveResourcePoliciesRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeRegionDiskRequest> __Marshaller_google_cloud_compute_v1_ResizeRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResizeRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyRegionDiskRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsRegionDiskRequest> __Marshaller_google_cloud_compute_v1_SetLabelsRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsRegionDiskRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsRegionDiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsRegionDiskRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest> __Marshaller_google_cloud_compute_v1_AddResourcePoliciesRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateSnapshotRegionDiskRequest> __Marshaller_google_cloud_compute_v1_CreateSnapshotRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CreateSnapshotRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionDiskRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionDiskRequest> __Marshaller_google_cloud_compute_v1_GetRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Disk> __Marshaller_google_cloud_compute_v1_Disk = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Disk.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyRegionDiskRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionDiskRequest> __Marshaller_google_cloud_compute_v1_InsertRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionDisksRequest> __Marshaller_google_cloud_compute_v1_ListRegionDisksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionDisksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DiskList> __Marshaller_google_cloud_compute_v1_DiskList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DiskList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveResourcePoliciesRegionDiskRequest> __Marshaller_google_cloud_compute_v1_RemoveResourcePoliciesRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveResourcePoliciesRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeRegionDiskRequest> __Marshaller_google_cloud_compute_v1_ResizeRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResizeRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyRegionDiskRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsRegionDiskRequest> __Marshaller_google_cloud_compute_v1_SetLabelsRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsRegionDiskRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsRegionDiskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsRegionDiskRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddResourcePolicies = new grpc::Method<global::Google.Cloud.Compute.V1.AddResourcePoliciesRegionDiskRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -22989,14 +24159,44 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionHealthCheckServices";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionHealthCheckServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_GetRegionHealthCheckServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionHealthCheckServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckService> __Marshaller_google_cloud_compute_v1_HealthCheckService = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheckService.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_InsertRegionHealthCheckServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionHealthCheckServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionHealthCheckServicesRequest> __Marshaller_google_cloud_compute_v1_ListRegionHealthCheckServicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionHealthCheckServicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckServicesList> __Marshaller_google_cloud_compute_v1_HealthCheckServicesList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheckServicesList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_PatchRegionHealthCheckServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionHealthCheckServiceRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionHealthCheckServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_GetRegionHealthCheckServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionHealthCheckServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckService> __Marshaller_google_cloud_compute_v1_HealthCheckService = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheckService.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_InsertRegionHealthCheckServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionHealthCheckServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionHealthCheckServicesRequest> __Marshaller_google_cloud_compute_v1_ListRegionHealthCheckServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionHealthCheckServicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckServicesList> __Marshaller_google_cloud_compute_v1_HealthCheckServicesList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheckServicesList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionHealthCheckServiceRequest> __Marshaller_google_cloud_compute_v1_PatchRegionHealthCheckServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionHealthCheckServiceRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckServiceRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -23383,15 +24583,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionHealthChecks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_GetRegionHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheck> __Marshaller_google_cloud_compute_v1_HealthCheck = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheck.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_InsertRegionHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionHealthChecksRequest> __Marshaller_google_cloud_compute_v1_ListRegionHealthChecksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionHealthChecksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckList> __Marshaller_google_cloud_compute_v1_HealthCheckList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.HealthCheckList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_PatchRegionHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionHealthCheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionHealthCheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateRegionHealthCheckRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_GetRegionHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheck> __Marshaller_google_cloud_compute_v1_HealthCheck = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheck.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_InsertRegionHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionHealthChecksRequest> __Marshaller_google_cloud_compute_v1_ListRegionHealthChecksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionHealthChecksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.HealthCheckList> __Marshaller_google_cloud_compute_v1_HealthCheckList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.HealthCheckList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_PatchRegionHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionHealthCheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionHealthCheckRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionHealthCheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateRegionHealthCheckRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionHealthCheckRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -23842,31 +25072,61 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionInstanceGroupManagers";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_AbandonInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_CreateInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.CreateInstancesRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteInstancesRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeletePerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_GetRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManager> __Marshaller_google_cloud_compute_v1_InstanceGroupManager = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroupManager.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_InsertRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListRegionInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagerList> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagerList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupManagerList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListErrorsRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListErrorsRegionInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListErrorsRegionInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListErrorsResponse> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListErrorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListErrorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListManagedInstancesRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListManagedInstancesRegionInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListManagedInstancesRegionInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstancesResponse> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstancesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPerInstanceConfigsRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListPerInstanceConfigsRegionInstanceGroupManagersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListPerInstanceConfigsRegionInstanceGroupManagersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstanceConfigsResp> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListInstanceConfigsResp = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstanceConfigsResp.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchPerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RecreateInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_RecreateInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RecreateInstancesRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ResizeRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResizeRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetInstanceTemplateRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetInstanceTemplateRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetInstanceTemplateRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetPoolsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetTargetPoolsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetTargetPoolsRegionInstanceGroupManagerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_AbandonInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ApplyUpdatesToInstancesRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.CreateInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_CreateInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.CreateInstancesRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeleteInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteInstancesRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_DeletePerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeletePerInstanceConfigsRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_GetRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroupManager> __Marshaller_google_cloud_compute_v1_InstanceGroupManager = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroupManager.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_InsertRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListRegionInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagerList> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagerList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupManagerList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListErrorsRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListErrorsRegionInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListErrorsRegionInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListErrorsResponse> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListErrorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListErrorsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListManagedInstancesRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListManagedInstancesRegionInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListManagedInstancesRegionInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstancesResponse> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstancesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPerInstanceConfigsRegionInstanceGroupManagersRequest> __Marshaller_google_cloud_compute_v1_ListPerInstanceConfigsRegionInstanceGroupManagersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListPerInstanceConfigsRegionInstanceGroupManagersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstanceConfigsResp> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupManagersListInstanceConfigsResp = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupManagersListInstanceConfigsResp.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_PatchPerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchPerInstanceConfigsRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RecreateInstancesRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_RecreateInstancesRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RecreateInstancesRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_ResizeRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResizeRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetInstanceTemplateRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetInstanceTemplateRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetInstanceTemplateRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetTargetPoolsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_SetTargetPoolsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetTargetPoolsRegionInstanceGroupManagerRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest> __Marshaller_google_cloud_compute_v1_UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdatePerInstanceConfigsRegionInstanceGroupManagerRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AbandonInstances = new grpc::Method<global::Google.Cloud.Compute.V1.AbandonInstancesRegionInstanceGroupManagerRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -25239,14 +26499,44 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionInstanceGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_GetRegionInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroup> __Marshaller_google_cloud_compute_v1_InstanceGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InstanceGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListRegionInstanceGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionInstanceGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupList> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesRegionInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstancesRegionInstanceGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListInstancesRegionInstanceGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupsListInstances> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupsListInstances = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionInstanceGroupsListInstances.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNamedPortsRegionInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_SetNamedPortsRegionInstanceGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetNamedPortsRegionInstanceGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_GetRegionInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InstanceGroup> __Marshaller_google_cloud_compute_v1_InstanceGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InstanceGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListRegionInstanceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionInstanceGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupList> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListInstancesRegionInstanceGroupsRequest> __Marshaller_google_cloud_compute_v1_ListInstancesRegionInstanceGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListInstancesRegionInstanceGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionInstanceGroupsListInstances> __Marshaller_google_cloud_compute_v1_RegionInstanceGroupsListInstances = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionInstanceGroupsListInstances.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetNamedPortsRegionInstanceGroupRequest> __Marshaller_google_cloud_compute_v1_SetNamedPortsRegionInstanceGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetNamedPortsRegionInstanceGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest, global::Google.Cloud.Compute.V1.InstanceGroup> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetRegionInstanceGroupRequest, global::Google.Cloud.Compute.V1.InstanceGroup>(
         grpc::MethodType.Unary,
@@ -25569,13 +26859,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionNetworkEndpointGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionNetworkEndpointGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListRegionNetworkEndpointGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionNetworkEndpointGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_GetRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroup> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionNetworkEndpointGroupRequest> __Marshaller_google_cloud_compute_v1_InsertRegionNetworkEndpointGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionNetworkEndpointGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionNetworkEndpointGroupsRequest> __Marshaller_google_cloud_compute_v1_ListRegionNetworkEndpointGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionNetworkEndpointGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NetworkEndpointGroupList> __Marshaller_google_cloud_compute_v1_NetworkEndpointGroupList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NetworkEndpointGroupList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionNetworkEndpointGroupRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -25898,13 +27218,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionNotificationEndpoints";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionNotificationEndpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_GetRegionNotificationEndpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionNotificationEndpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NotificationEndpoint> __Marshaller_google_cloud_compute_v1_NotificationEndpoint = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NotificationEndpoint.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_InsertRegionNotificationEndpointRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionNotificationEndpointRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionNotificationEndpointsRequest> __Marshaller_google_cloud_compute_v1_ListRegionNotificationEndpointsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionNotificationEndpointsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NotificationEndpointList> __Marshaller_google_cloud_compute_v1_NotificationEndpointList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.NotificationEndpointList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionNotificationEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_GetRegionNotificationEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionNotificationEndpointRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NotificationEndpoint> __Marshaller_google_cloud_compute_v1_NotificationEndpoint = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NotificationEndpoint.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionNotificationEndpointRequest> __Marshaller_google_cloud_compute_v1_InsertRegionNotificationEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionNotificationEndpointRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionNotificationEndpointsRequest> __Marshaller_google_cloud_compute_v1_ListRegionNotificationEndpointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionNotificationEndpointsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.NotificationEndpointList> __Marshaller_google_cloud_compute_v1_NotificationEndpointList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.NotificationEndpointList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionNotificationEndpointRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -26227,13 +27577,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionOperations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteRegionOperationResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionOperationRequest> __Marshaller_google_cloud_compute_v1_GetRegionOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionOperationsRequest> __Marshaller_google_cloud_compute_v1_ListRegionOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.OperationList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitRegionOperationRequest> __Marshaller_google_cloud_compute_v1_WaitRegionOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.WaitRegionOperationRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteRegionOperationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionOperationRequest> __Marshaller_google_cloud_compute_v1_GetRegionOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionOperationsRequest> __Marshaller_google_cloud_compute_v1_ListRegionOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.OperationList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitRegionOperationRequest> __Marshaller_google_cloud_compute_v1_WaitRegionOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.WaitRegionOperationRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest, global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionOperationRequest, global::Google.Cloud.Compute.V1.DeleteRegionOperationResponse>(
         grpc::MethodType.Unary,
@@ -26576,13 +27956,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionSslCertificates";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_GetRegionSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificate> __Marshaller_google_cloud_compute_v1_SslCertificate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslCertificate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_InsertRegionSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_ListRegionSslCertificatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionSslCertificatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateList> __Marshaller_google_cloud_compute_v1_SslCertificateList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslCertificateList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_GetRegionSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificate> __Marshaller_google_cloud_compute_v1_SslCertificate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslCertificate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionSslCertificateRequest> __Marshaller_google_cloud_compute_v1_InsertRegionSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_ListRegionSslCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionSslCertificatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateList> __Marshaller_google_cloud_compute_v1_SslCertificateList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslCertificateList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionSslCertificateRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -26905,14 +28315,44 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionTargetHttpProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_GetRegionTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxy> __Marshaller_google_cloud_compute_v1_TargetHttpProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertRegionTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListRegionTargetHttpProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionTargetHttpProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapRegionTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_GetRegionTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxy> __Marshaller_google_cloud_compute_v1_TargetHttpProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertRegionTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListRegionTargetHttpProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionTargetHttpProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapRegionTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpProxyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -27299,15 +28739,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionTargetHttpsProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_GetRegionTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxy> __Marshaller_google_cloud_compute_v1_TargetHttpsProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpsProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_InsertRegionTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_ListRegionTargetHttpsProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionTargetHttpsProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpsProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesRegionTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSslCertificatesRegionTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapRegionTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpsProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_GetRegionTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxy> __Marshaller_google_cloud_compute_v1_TargetHttpsProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpsProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_InsertRegionTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_ListRegionTargetHttpsProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionTargetHttpsProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpsProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesRegionTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSslCertificatesRegionTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapRegionTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetUrlMapRegionTargetHttpsProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionTargetHttpsProxyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -27758,17 +29228,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.RegionUrlMaps";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_GetRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMap> __Marshaller_google_cloud_compute_v1_UrlMap = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMap.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_InsertRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionUrlMapsRequest> __Marshaller_google_cloud_compute_v1_ListRegionUrlMapsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionUrlMapsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapList> __Marshaller_google_cloud_compute_v1_UrlMapList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMapList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_PatchRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ValidateRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_ValidateRegionUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ValidateRegionUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsValidateResponse> __Marshaller_google_cloud_compute_v1_UrlMapsValidateResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMapsValidateResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_DeleteRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_GetRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMap> __Marshaller_google_cloud_compute_v1_UrlMap = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMap.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_InsertRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionUrlMapsRequest> __Marshaller_google_cloud_compute_v1_ListRegionUrlMapsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionUrlMapsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapList> __Marshaller_google_cloud_compute_v1_UrlMapList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMapList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_PatchRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_UpdateRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ValidateRegionUrlMapRequest> __Marshaller_google_cloud_compute_v1_ValidateRegionUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ValidateRegionUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsValidateResponse> __Marshaller_google_cloud_compute_v1_UrlMapsValidateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMapsValidateResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRegionUrlMapRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -28283,10 +29783,40 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Regions";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionRequest> __Marshaller_google_cloud_compute_v1_GetRegionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRegionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Region> __Marshaller_google_cloud_compute_v1_Region = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Region.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionsRequest> __Marshaller_google_cloud_compute_v1_ListRegionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRegionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionList> __Marshaller_google_cloud_compute_v1_RegionList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RegionList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRegionRequest> __Marshaller_google_cloud_compute_v1_GetRegionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRegionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Region> __Marshaller_google_cloud_compute_v1_Region = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Region.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRegionsRequest> __Marshaller_google_cloud_compute_v1_ListRegionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRegionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RegionList> __Marshaller_google_cloud_compute_v1_RegionList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RegionList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetRegionRequest, global::Google.Cloud.Compute.V1.Region> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetRegionRequest, global::Google.Cloud.Compute.V1.Region>(
         grpc::MethodType.Unary,
@@ -28481,21 +30011,51 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Reservations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListReservationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ReservationAggregatedList> __Marshaller_google_cloud_compute_v1_ReservationAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ReservationAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteReservationRequest> __Marshaller_google_cloud_compute_v1_DeleteReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetReservationRequest> __Marshaller_google_cloud_compute_v1_GetReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Reservation> __Marshaller_google_cloud_compute_v1_Reservation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Reservation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyReservationRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertReservationRequest> __Marshaller_google_cloud_compute_v1_InsertReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListReservationsRequest> __Marshaller_google_cloud_compute_v1_ListReservationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListReservationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ReservationList> __Marshaller_google_cloud_compute_v1_ReservationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ReservationList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeReservationRequest> __Marshaller_google_cloud_compute_v1_ResizeReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResizeReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyReservationRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsReservationRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsReservationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsReservationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListReservationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ReservationAggregatedList> __Marshaller_google_cloud_compute_v1_ReservationAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ReservationAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteReservationRequest> __Marshaller_google_cloud_compute_v1_DeleteReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetReservationRequest> __Marshaller_google_cloud_compute_v1_GetReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Reservation> __Marshaller_google_cloud_compute_v1_Reservation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Reservation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyReservationRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertReservationRequest> __Marshaller_google_cloud_compute_v1_InsertReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListReservationsRequest> __Marshaller_google_cloud_compute_v1_ListReservationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListReservationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ReservationList> __Marshaller_google_cloud_compute_v1_ReservationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ReservationList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResizeReservationRequest> __Marshaller_google_cloud_compute_v1_ResizeReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResizeReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyReservationRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsReservationRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsReservationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest, global::Google.Cloud.Compute.V1.ReservationAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListReservationsRequest, global::Google.Cloud.Compute.V1.ReservationAggregatedList>(
         grpc::MethodType.Unary,
@@ -29138,20 +30698,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.ResourcePolicies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListResourcePoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList> __Marshaller_google_cloud_compute_v1_ResourcePolicyAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_GetResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicy> __Marshaller_google_cloud_compute_v1_ResourcePolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResourcePolicy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicyResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_InsertResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListResourcePoliciesRequest> __Marshaller_google_cloud_compute_v1_ListResourcePoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListResourcePoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicyList> __Marshaller_google_cloud_compute_v1_ResourcePolicyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ResourcePolicyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicyResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsResourcePolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsResourcePolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListResourcePoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList> __Marshaller_google_cloud_compute_v1_ResourcePolicyAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_GetResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicy> __Marshaller_google_cloud_compute_v1_ResourcePolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResourcePolicy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicyResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicyResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicyResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_InsertResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListResourcePoliciesRequest> __Marshaller_google_cloud_compute_v1_ListResourcePoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListResourcePoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ResourcePolicyList> __Marshaller_google_cloud_compute_v1_ResourcePolicyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ResourcePolicyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicyResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicyResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicyResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsResourcePolicyRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsResourcePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsResourcePolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest, global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListResourcePoliciesRequest, global::Google.Cloud.Compute.V1.ResourcePolicyAggregatedList>(
         grpc::MethodType.Unary,
@@ -29730,23 +31320,53 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Routers";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListRoutersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterAggregatedList> __Marshaller_google_cloud_compute_v1_RouterAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RouterAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRouterRequest> __Marshaller_google_cloud_compute_v1_DeleteRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouterRequest> __Marshaller_google_cloud_compute_v1_GetRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Router> __Marshaller_google_cloud_compute_v1_Router = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Router.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNatMappingInfoRoutersRequest> __Marshaller_google_cloud_compute_v1_GetNatMappingInfoRoutersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetNatMappingInfoRoutersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VmEndpointNatMappingsList> __Marshaller_google_cloud_compute_v1_VmEndpointNatMappingsList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VmEndpointNatMappingsList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouterStatusRouterRequest> __Marshaller_google_cloud_compute_v1_GetRouterStatusRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRouterStatusRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterStatusResponse> __Marshaller_google_cloud_compute_v1_RouterStatusResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RouterStatusResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRouterRequest> __Marshaller_google_cloud_compute_v1_InsertRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRoutersRequest> __Marshaller_google_cloud_compute_v1_ListRoutersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRoutersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterList> __Marshaller_google_cloud_compute_v1_RouterList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RouterList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRouterRequest> __Marshaller_google_cloud_compute_v1_PatchRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PreviewRouterRequest> __Marshaller_google_cloud_compute_v1_PreviewRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PreviewRouterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RoutersPreviewResponse> __Marshaller_google_cloud_compute_v1_RoutersPreviewResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RoutersPreviewResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRouterRequest> __Marshaller_google_cloud_compute_v1_UpdateRouterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateRouterRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest> __Marshaller_google_cloud_compute_v1_AggregatedListRoutersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterAggregatedList> __Marshaller_google_cloud_compute_v1_RouterAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RouterAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRouterRequest> __Marshaller_google_cloud_compute_v1_DeleteRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouterRequest> __Marshaller_google_cloud_compute_v1_GetRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Router> __Marshaller_google_cloud_compute_v1_Router = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Router.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetNatMappingInfoRoutersRequest> __Marshaller_google_cloud_compute_v1_GetNatMappingInfoRoutersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetNatMappingInfoRoutersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VmEndpointNatMappingsList> __Marshaller_google_cloud_compute_v1_VmEndpointNatMappingsList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VmEndpointNatMappingsList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouterStatusRouterRequest> __Marshaller_google_cloud_compute_v1_GetRouterStatusRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRouterStatusRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterStatusResponse> __Marshaller_google_cloud_compute_v1_RouterStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RouterStatusResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRouterRequest> __Marshaller_google_cloud_compute_v1_InsertRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRoutersRequest> __Marshaller_google_cloud_compute_v1_ListRoutersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRoutersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouterList> __Marshaller_google_cloud_compute_v1_RouterList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RouterList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRouterRequest> __Marshaller_google_cloud_compute_v1_PatchRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PreviewRouterRequest> __Marshaller_google_cloud_compute_v1_PreviewRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PreviewRouterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RoutersPreviewResponse> __Marshaller_google_cloud_compute_v1_RoutersPreviewResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RoutersPreviewResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateRouterRequest> __Marshaller_google_cloud_compute_v1_UpdateRouterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateRouterRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest, global::Google.Cloud.Compute.V1.RouterAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListRoutersRequest, global::Google.Cloud.Compute.V1.RouterAggregatedList>(
         grpc::MethodType.Unary,
@@ -30453,13 +32073,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Routes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRouteRequest> __Marshaller_google_cloud_compute_v1_DeleteRouteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteRouteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouteRequest> __Marshaller_google_cloud_compute_v1_GetRouteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRouteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Route> __Marshaller_google_cloud_compute_v1_Route = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Route.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRouteRequest> __Marshaller_google_cloud_compute_v1_InsertRouteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertRouteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRoutesRequest> __Marshaller_google_cloud_compute_v1_ListRoutesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListRoutesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouteList> __Marshaller_google_cloud_compute_v1_RouteList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RouteList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteRouteRequest> __Marshaller_google_cloud_compute_v1_DeleteRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteRouteRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRouteRequest> __Marshaller_google_cloud_compute_v1_GetRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRouteRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Route> __Marshaller_google_cloud_compute_v1_Route = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Route.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertRouteRequest> __Marshaller_google_cloud_compute_v1_InsertRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertRouteRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListRoutesRequest> __Marshaller_google_cloud_compute_v1_ListRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListRoutesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RouteList> __Marshaller_google_cloud_compute_v1_RouteList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RouteList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteRouteRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteRouteRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -30782,21 +32432,51 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.SecurityPolicies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_AddRuleSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_GetSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicy> __Marshaller_google_cloud_compute_v1_SecurityPolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SecurityPolicy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_GetRuleSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetRuleSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicyRule> __Marshaller_google_cloud_compute_v1_SecurityPolicyRule = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SecurityPolicyRule.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_InsertSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSecurityPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListSecurityPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListSecurityPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicyList> __Marshaller_google_cloud_compute_v1_SecurityPolicyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SecurityPolicyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPreconfiguredExpressionSetsSecurityPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListPreconfiguredExpressionSetsSecurityPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListPreconfiguredExpressionSetsSecurityPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPoliciesListPreconfiguredExpressionSetsResponse> __Marshaller_google_cloud_compute_v1_SecurityPoliciesListPreconfiguredExpressionSetsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SecurityPoliciesListPreconfiguredExpressionSetsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchRuleSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchRuleSecurityPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_RemoveRuleSecurityPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveRuleSecurityPolicyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_AddRuleSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_GetSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicy> __Marshaller_google_cloud_compute_v1_SecurityPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SecurityPolicy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_GetRuleSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetRuleSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicyRule> __Marshaller_google_cloud_compute_v1_SecurityPolicyRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SecurityPolicyRule.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_InsertSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSecurityPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListSecurityPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListSecurityPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPolicyList> __Marshaller_google_cloud_compute_v1_SecurityPolicyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SecurityPolicyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListPreconfiguredExpressionSetsSecurityPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListPreconfiguredExpressionSetsSecurityPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListPreconfiguredExpressionSetsSecurityPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SecurityPoliciesListPreconfiguredExpressionSetsResponse> __Marshaller_google_cloud_compute_v1_SecurityPoliciesListPreconfiguredExpressionSetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SecurityPoliciesListPreconfiguredExpressionSetsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchRuleSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchRuleSecurityPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveRuleSecurityPolicyRequest> __Marshaller_google_cloud_compute_v1_RemoveRuleSecurityPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveRuleSecurityPolicyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddRule = new grpc::Method<global::Google.Cloud.Compute.V1.AddRuleSecurityPolicyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -31503,18 +33183,48 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Snapshots";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSnapshotRequest> __Marshaller_google_cloud_compute_v1_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSnapshotRequest> __Marshaller_google_cloud_compute_v1_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Snapshot> __Marshaller_google_cloud_compute_v1_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Snapshot.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicySnapshotRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicySnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicySnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSnapshotsRequest> __Marshaller_google_cloud_compute_v1_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListSnapshotsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SnapshotList> __Marshaller_google_cloud_compute_v1_SnapshotList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SnapshotList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicySnapshotRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicySnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicySnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsSnapshotRequest> __Marshaller_google_cloud_compute_v1_SetLabelsSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsSnapshotRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSnapshotRequest> __Marshaller_google_cloud_compute_v1_DeleteSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSnapshotRequest> __Marshaller_google_cloud_compute_v1_GetSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Snapshot> __Marshaller_google_cloud_compute_v1_Snapshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Snapshot.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicySnapshotRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicySnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicySnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSnapshotsRequest> __Marshaller_google_cloud_compute_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListSnapshotsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SnapshotList> __Marshaller_google_cloud_compute_v1_SnapshotList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SnapshotList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicySnapshotRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicySnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicySnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsSnapshotRequest> __Marshaller_google_cloud_compute_v1_SetLabelsSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsSnapshotRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteSnapshotRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteSnapshotRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -32039,15 +33749,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.SslCertificates";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListSslCertificatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateAggregatedList> __Marshaller_google_cloud_compute_v1_SslCertificateAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslCertificateAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSslCertificateRequest> __Marshaller_google_cloud_compute_v1_DeleteSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSslCertificateRequest> __Marshaller_google_cloud_compute_v1_GetSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificate> __Marshaller_google_cloud_compute_v1_SslCertificate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslCertificate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSslCertificateRequest> __Marshaller_google_cloud_compute_v1_InsertSslCertificateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertSslCertificateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_ListSslCertificatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListSslCertificatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateList> __Marshaller_google_cloud_compute_v1_SslCertificateList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslCertificateList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListSslCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateAggregatedList> __Marshaller_google_cloud_compute_v1_SslCertificateAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslCertificateAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSslCertificateRequest> __Marshaller_google_cloud_compute_v1_DeleteSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSslCertificateRequest> __Marshaller_google_cloud_compute_v1_GetSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificate> __Marshaller_google_cloud_compute_v1_SslCertificate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslCertificate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSslCertificateRequest> __Marshaller_google_cloud_compute_v1_InsertSslCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertSslCertificateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSslCertificatesRequest> __Marshaller_google_cloud_compute_v1_ListSslCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListSslCertificatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslCertificateList> __Marshaller_google_cloud_compute_v1_SslCertificateList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslCertificateList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest, global::Google.Cloud.Compute.V1.SslCertificateAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListSslCertificatesRequest, global::Google.Cloud.Compute.V1.SslCertificateAggregatedList>(
         grpc::MethodType.Unary,
@@ -32434,16 +34174,46 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.SslPolicies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteSslPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSslPolicyRequest> __Marshaller_google_cloud_compute_v1_GetSslPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSslPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPolicy> __Marshaller_google_cloud_compute_v1_SslPolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslPolicy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSslPolicyRequest> __Marshaller_google_cloud_compute_v1_InsertSslPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertSslPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSslPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListSslPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListSslPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPoliciesList> __Marshaller_google_cloud_compute_v1_SslPoliciesList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslPoliciesList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAvailableFeaturesSslPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListAvailableFeaturesSslPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListAvailableFeaturesSslPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse> __Marshaller_google_cloud_compute_v1_SslPoliciesListAvailableFeaturesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSslPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchSslPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchSslPolicyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest> __Marshaller_google_cloud_compute_v1_DeleteSslPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSslPolicyRequest> __Marshaller_google_cloud_compute_v1_GetSslPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSslPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPolicy> __Marshaller_google_cloud_compute_v1_SslPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslPolicy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSslPolicyRequest> __Marshaller_google_cloud_compute_v1_InsertSslPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertSslPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSslPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListSslPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListSslPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPoliciesList> __Marshaller_google_cloud_compute_v1_SslPoliciesList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslPoliciesList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListAvailableFeaturesSslPoliciesRequest> __Marshaller_google_cloud_compute_v1_ListAvailableFeaturesSslPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListAvailableFeaturesSslPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse> __Marshaller_google_cloud_compute_v1_SslPoliciesListAvailableFeaturesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SslPoliciesListAvailableFeaturesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSslPolicyRequest> __Marshaller_google_cloud_compute_v1_PatchSslPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchSslPolicyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteSslPolicyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -32894,25 +34664,55 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Subnetworks";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListSubnetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SubnetworkAggregatedList> __Marshaller_google_cloud_compute_v1_SubnetworkAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SubnetworkAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSubnetworkRequest> __Marshaller_google_cloud_compute_v1_DeleteSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExpandIpCidrRangeSubnetworkRequest> __Marshaller_google_cloud_compute_v1_ExpandIpCidrRangeSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ExpandIpCidrRangeSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSubnetworkRequest> __Marshaller_google_cloud_compute_v1_GetSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Subnetwork> __Marshaller_google_cloud_compute_v1_Subnetwork = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Subnetwork.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicySubnetworkRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicySubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetIamPolicySubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSubnetworkRequest> __Marshaller_google_cloud_compute_v1_InsertSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSubnetworksRequest> __Marshaller_google_cloud_compute_v1_ListSubnetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SubnetworkList> __Marshaller_google_cloud_compute_v1_SubnetworkList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SubnetworkList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListUsableSubnetworksRequest> __Marshaller_google_cloud_compute_v1_ListUsableSubnetworksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListUsableSubnetworksRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UsableSubnetworksAggregatedList> __Marshaller_google_cloud_compute_v1_UsableSubnetworksAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UsableSubnetworksAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSubnetworkRequest> __Marshaller_google_cloud_compute_v1_PatchSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicySubnetworkRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicySubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetIamPolicySubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetPrivateIpGoogleAccessSubnetworkRequest> __Marshaller_google_cloud_compute_v1_SetPrivateIpGoogleAccessSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetPrivateIpGoogleAccessSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsSubnetworkRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsSubnetworkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsSubnetworkRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest> __Marshaller_google_cloud_compute_v1_AggregatedListSubnetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SubnetworkAggregatedList> __Marshaller_google_cloud_compute_v1_SubnetworkAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SubnetworkAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteSubnetworkRequest> __Marshaller_google_cloud_compute_v1_DeleteSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ExpandIpCidrRangeSubnetworkRequest> __Marshaller_google_cloud_compute_v1_ExpandIpCidrRangeSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ExpandIpCidrRangeSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetSubnetworkRequest> __Marshaller_google_cloud_compute_v1_GetSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Subnetwork> __Marshaller_google_cloud_compute_v1_Subnetwork = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Subnetwork.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetIamPolicySubnetworkRequest> __Marshaller_google_cloud_compute_v1_GetIamPolicySubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetIamPolicySubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Policy> __Marshaller_google_cloud_compute_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertSubnetworkRequest> __Marshaller_google_cloud_compute_v1_InsertSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListSubnetworksRequest> __Marshaller_google_cloud_compute_v1_ListSubnetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SubnetworkList> __Marshaller_google_cloud_compute_v1_SubnetworkList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SubnetworkList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListUsableSubnetworksRequest> __Marshaller_google_cloud_compute_v1_ListUsableSubnetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListUsableSubnetworksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UsableSubnetworksAggregatedList> __Marshaller_google_cloud_compute_v1_UsableSubnetworksAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UsableSubnetworksAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchSubnetworkRequest> __Marshaller_google_cloud_compute_v1_PatchSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetIamPolicySubnetworkRequest> __Marshaller_google_cloud_compute_v1_SetIamPolicySubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetIamPolicySubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetPrivateIpGoogleAccessSubnetworkRequest> __Marshaller_google_cloud_compute_v1_SetPrivateIpGoogleAccessSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetPrivateIpGoogleAccessSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsSubnetworkRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsSubnetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsSubnetworkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest, global::Google.Cloud.Compute.V1.SubnetworkAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListSubnetworksRequest, global::Google.Cloud.Compute.V1.SubnetworkAggregatedList>(
         grpc::MethodType.Unary,
@@ -33747,14 +35547,44 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetGrpcProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetGrpcProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetGrpcProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetGrpcProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetGrpcProxy> __Marshaller_google_cloud_compute_v1_TargetGrpcProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetGrpcProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetGrpcProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetGrpcProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetGrpcProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetGrpcProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetGrpcProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetGrpcProxyList> __Marshaller_google_cloud_compute_v1_TargetGrpcProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetGrpcProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_PatchTargetGrpcProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchTargetGrpcProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetGrpcProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetGrpcProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetGrpcProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetGrpcProxy> __Marshaller_google_cloud_compute_v1_TargetGrpcProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetGrpcProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetGrpcProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetGrpcProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetGrpcProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetGrpcProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetGrpcProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetGrpcProxyList> __Marshaller_google_cloud_compute_v1_TargetGrpcProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetGrpcProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchTargetGrpcProxyRequest> __Marshaller_google_cloud_compute_v1_PatchTargetGrpcProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchTargetGrpcProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetGrpcProxyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -34141,17 +35971,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetHttpProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetHttpProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxy> __Marshaller_google_cloud_compute_v1_TargetHttpProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetHttpProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetHttpProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_PatchTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchTargetHttpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapTargetHttpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetHttpProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxy> __Marshaller_google_cloud_compute_v1_TargetHttpProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetHttpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetHttpProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetHttpProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_PatchTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchTargetHttpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapTargetHttpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest, global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpProxiesRequest, global::Google.Cloud.Compute.V1.TargetHttpProxyAggregatedList>(
         grpc::MethodType.Unary,
@@ -34666,19 +36526,49 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetHttpsProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetHttpsProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxy> __Marshaller_google_cloud_compute_v1_TargetHttpsProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpsProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetHttpsProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetHttpsProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetHttpsProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetQuicOverrideTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetQuicOverrideTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetQuicOverrideTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSslCertificatesTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslPolicyTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslPolicyTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSslPolicyTargetHttpsProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapTargetHttpsProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpsProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetHttpsProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxy> __Marshaller_google_cloud_compute_v1_TargetHttpsProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpsProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetHttpsProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetHttpsProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetHttpsProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetHttpsProxyList> __Marshaller_google_cloud_compute_v1_TargetHttpsProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetHttpsProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetQuicOverrideTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetQuicOverrideTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetQuicOverrideTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSslCertificatesTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslPolicyTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslPolicyTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSslPolicyTargetHttpsProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpsProxyRequest> __Marshaller_google_cloud_compute_v1_SetUrlMapTargetHttpsProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetUrlMapTargetHttpsProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest, global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetHttpsProxiesRequest, global::Google.Cloud.Compute.V1.TargetHttpsProxyAggregatedList>(
         grpc::MethodType.Unary,
@@ -35321,15 +37211,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetInstances";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList> __Marshaller_google_cloud_compute_v1_TargetInstanceAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_GetTargetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstance> __Marshaller_google_cloud_compute_v1_TargetInstance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetInstance.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_InsertTargetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetInstanceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetInstancesRequest> __Marshaller_google_cloud_compute_v1_ListTargetInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetInstancesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstanceList> __Marshaller_google_cloud_compute_v1_TargetInstanceList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetInstanceList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList> __Marshaller_google_cloud_compute_v1_TargetInstanceAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_GetTargetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstance> __Marshaller_google_cloud_compute_v1_TargetInstance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetInstance.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetInstanceRequest> __Marshaller_google_cloud_compute_v1_InsertTargetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetInstanceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetInstancesRequest> __Marshaller_google_cloud_compute_v1_ListTargetInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetInstancesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetInstanceList> __Marshaller_google_cloud_compute_v1_TargetInstanceList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetInstanceList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest, global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetInstancesRequest, global::Google.Cloud.Compute.V1.TargetInstanceAggregatedList>(
         grpc::MethodType.Unary,
@@ -35716,22 +37636,52 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetPools";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest> __Marshaller_google_cloud_compute_v1_AddHealthCheckTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddInstanceTargetPoolRequest> __Marshaller_google_cloud_compute_v1_AddInstanceTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AddInstanceTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetPoolsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetPoolsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListTargetPoolsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolAggregatedList> __Marshaller_google_cloud_compute_v1_TargetPoolAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetPoolAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetPoolRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetPoolRequest> __Marshaller_google_cloud_compute_v1_GetTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPool> __Marshaller_google_cloud_compute_v1_TargetPool = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetPool.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthTargetPoolRequest> __Marshaller_google_cloud_compute_v1_GetHealthTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetHealthTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolInstanceHealth> __Marshaller_google_cloud_compute_v1_TargetPoolInstanceHealth = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetPoolInstanceHealth.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetPoolRequest> __Marshaller_google_cloud_compute_v1_InsertTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetPoolsRequest> __Marshaller_google_cloud_compute_v1_ListTargetPoolsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetPoolsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolList> __Marshaller_google_cloud_compute_v1_TargetPoolList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetPoolList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveHealthCheckTargetPoolRequest> __Marshaller_google_cloud_compute_v1_RemoveHealthCheckTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveHealthCheckTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveInstanceTargetPoolRequest> __Marshaller_google_cloud_compute_v1_RemoveInstanceTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.RemoveInstanceTargetPoolRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackupTargetPoolRequest> __Marshaller_google_cloud_compute_v1_SetBackupTargetPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetBackupTargetPoolRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest> __Marshaller_google_cloud_compute_v1_AddHealthCheckTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AddInstanceTargetPoolRequest> __Marshaller_google_cloud_compute_v1_AddInstanceTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AddInstanceTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetPoolsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListTargetPoolsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolAggregatedList> __Marshaller_google_cloud_compute_v1_TargetPoolAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetPoolAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetPoolRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetPoolRequest> __Marshaller_google_cloud_compute_v1_GetTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPool> __Marshaller_google_cloud_compute_v1_TargetPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetPool.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetHealthTargetPoolRequest> __Marshaller_google_cloud_compute_v1_GetHealthTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetHealthTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolInstanceHealth> __Marshaller_google_cloud_compute_v1_TargetPoolInstanceHealth = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetPoolInstanceHealth.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetPoolRequest> __Marshaller_google_cloud_compute_v1_InsertTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetPoolsRequest> __Marshaller_google_cloud_compute_v1_ListTargetPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetPoolsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetPoolList> __Marshaller_google_cloud_compute_v1_TargetPoolList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetPoolList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveHealthCheckTargetPoolRequest> __Marshaller_google_cloud_compute_v1_RemoveHealthCheckTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveHealthCheckTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.RemoveInstanceTargetPoolRequest> __Marshaller_google_cloud_compute_v1_RemoveInstanceTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.RemoveInstanceTargetPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackupTargetPoolRequest> __Marshaller_google_cloud_compute_v1_SetBackupTargetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetBackupTargetPoolRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest, global::Google.Cloud.Compute.V1.Operation> __Method_AddHealthCheck = new grpc::Method<global::Google.Cloud.Compute.V1.AddHealthCheckTargetPoolRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -36502,17 +38452,47 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetSslProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetSslProxy> __Marshaller_google_cloud_compute_v1_TargetSslProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetSslProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetSslProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetSslProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetSslProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetSslProxyList> __Marshaller_google_cloud_compute_v1_TargetSslProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetSslProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackendServiceTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetBackendServiceTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetBackendServiceTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetProxyHeaderTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetProxyHeaderTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetProxyHeaderTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSslCertificatesTargetSslProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslPolicyTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslPolicyTargetSslProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetSslPolicyTargetSslProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetSslProxy> __Marshaller_google_cloud_compute_v1_TargetSslProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetSslProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetSslProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetSslProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetSslProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetSslProxyList> __Marshaller_google_cloud_compute_v1_TargetSslProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetSslProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackendServiceTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetBackendServiceTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetBackendServiceTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetProxyHeaderTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetProxyHeaderTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetProxyHeaderTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslCertificatesTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslCertificatesTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSslCertificatesTargetSslProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetSslPolicyTargetSslProxyRequest> __Marshaller_google_cloud_compute_v1_SetSslPolicyTargetSslProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetSslPolicyTargetSslProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetSslProxyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -37091,15 +39071,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetTcpProxies";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetTcpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetTcpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetTcpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetTcpProxy> __Marshaller_google_cloud_compute_v1_TargetTcpProxy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetTcpProxy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetTcpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetTcpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetTcpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetTcpProxiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetTcpProxiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetTcpProxyList> __Marshaller_google_cloud_compute_v1_TargetTcpProxyList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetTcpProxyList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackendServiceTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_SetBackendServiceTargetTcpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetBackendServiceTargetTcpProxyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetProxyHeaderTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_SetProxyHeaderTargetTcpProxyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetProxyHeaderTargetTcpProxyRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetTcpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_GetTargetTcpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetTcpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetTcpProxy> __Marshaller_google_cloud_compute_v1_TargetTcpProxy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetTcpProxy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_InsertTargetTcpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetTcpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetTcpProxiesRequest> __Marshaller_google_cloud_compute_v1_ListTargetTcpProxiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetTcpProxiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetTcpProxyList> __Marshaller_google_cloud_compute_v1_TargetTcpProxyList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetTcpProxyList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetBackendServiceTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_SetBackendServiceTargetTcpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetBackendServiceTargetTcpProxyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetProxyHeaderTargetTcpProxyRequest> __Marshaller_google_cloud_compute_v1_SetProxyHeaderTargetTcpProxyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetProxyHeaderTargetTcpProxyRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest, global::Google.Cloud.Compute.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteTargetTcpProxyRequest, global::Google.Cloud.Compute.V1.Operation>(
         grpc::MethodType.Unary,
@@ -37550,15 +39560,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.TargetVpnGateways";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetVpnGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList> __Marshaller_google_cloud_compute_v1_TargetVpnGatewayAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteTargetVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetTargetVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetTargetVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGateway> __Marshaller_google_cloud_compute_v1_TargetVpnGateway = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetVpnGateway.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertTargetVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertTargetVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListTargetVpnGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListTargetVpnGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGatewayList> __Marshaller_google_cloud_compute_v1_TargetVpnGatewayList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TargetVpnGatewayList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_AggregatedListTargetVpnGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList> __Marshaller_google_cloud_compute_v1_TargetVpnGatewayAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteTargetVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteTargetVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetTargetVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetTargetVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGateway> __Marshaller_google_cloud_compute_v1_TargetVpnGateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetVpnGateway.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertTargetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertTargetVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertTargetVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListTargetVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListTargetVpnGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListTargetVpnGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TargetVpnGatewayList> __Marshaller_google_cloud_compute_v1_TargetVpnGatewayList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TargetVpnGatewayList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest, global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListTargetVpnGatewaysRequest, global::Google.Cloud.Compute.V1.TargetVpnGatewayAggregatedList>(
         grpc::MethodType.Unary,
@@ -37945,20 +39985,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.UrlMaps";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListUrlMapsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsAggregatedList> __Marshaller_google_cloud_compute_v1_UrlMapsAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMapsAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteUrlMapRequest> __Marshaller_google_cloud_compute_v1_DeleteUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetUrlMapRequest> __Marshaller_google_cloud_compute_v1_GetUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMap> __Marshaller_google_cloud_compute_v1_UrlMap = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMap.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertUrlMapRequest> __Marshaller_google_cloud_compute_v1_InsertUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InvalidateCacheUrlMapRequest> __Marshaller_google_cloud_compute_v1_InvalidateCacheUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InvalidateCacheUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListUrlMapsRequest> __Marshaller_google_cloud_compute_v1_ListUrlMapsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListUrlMapsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapList> __Marshaller_google_cloud_compute_v1_UrlMapList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMapList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchUrlMapRequest> __Marshaller_google_cloud_compute_v1_PatchUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.PatchUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateUrlMapRequest> __Marshaller_google_cloud_compute_v1_UpdateUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UpdateUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ValidateUrlMapRequest> __Marshaller_google_cloud_compute_v1_ValidateUrlMapRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ValidateUrlMapRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsValidateResponse> __Marshaller_google_cloud_compute_v1_UrlMapsValidateResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.UrlMapsValidateResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListUrlMapsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsAggregatedList> __Marshaller_google_cloud_compute_v1_UrlMapsAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMapsAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteUrlMapRequest> __Marshaller_google_cloud_compute_v1_DeleteUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetUrlMapRequest> __Marshaller_google_cloud_compute_v1_GetUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMap> __Marshaller_google_cloud_compute_v1_UrlMap = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMap.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertUrlMapRequest> __Marshaller_google_cloud_compute_v1_InsertUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InvalidateCacheUrlMapRequest> __Marshaller_google_cloud_compute_v1_InvalidateCacheUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InvalidateCacheUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListUrlMapsRequest> __Marshaller_google_cloud_compute_v1_ListUrlMapsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListUrlMapsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapList> __Marshaller_google_cloud_compute_v1_UrlMapList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMapList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.PatchUrlMapRequest> __Marshaller_google_cloud_compute_v1_PatchUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.PatchUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UpdateUrlMapRequest> __Marshaller_google_cloud_compute_v1_UpdateUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UpdateUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ValidateUrlMapRequest> __Marshaller_google_cloud_compute_v1_ValidateUrlMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ValidateUrlMapRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.UrlMapsValidateResponse> __Marshaller_google_cloud_compute_v1_UrlMapsValidateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.UrlMapsValidateResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest, global::Google.Cloud.Compute.V1.UrlMapsAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListUrlMapsRequest, global::Google.Cloud.Compute.V1.UrlMapsAggregatedList>(
         grpc::MethodType.Unary,
@@ -38611,20 +40681,50 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.VpnGateways";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_AggregatedListVpnGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList> __Marshaller_google_cloud_compute_v1_VpnGatewayAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGateway> __Marshaller_google_cloud_compute_v1_VpnGateway = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnGateway.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetStatusVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetStatusVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetStatusVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewaysGetStatusResponse> __Marshaller_google_cloud_compute_v1_VpnGatewaysGetStatusResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnGatewaysGetStatusResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListVpnGatewaysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListVpnGatewaysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewayList> __Marshaller_google_cloud_compute_v1_VpnGatewayList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnGatewayList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_SetLabelsVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.SetLabelsVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsVpnGatewayRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestIamPermissionsVpnGatewayRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_AggregatedListVpnGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList> __Marshaller_google_cloud_compute_v1_VpnGatewayAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_DeleteVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGateway> __Marshaller_google_cloud_compute_v1_VpnGateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnGateway.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetStatusVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_GetStatusVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetStatusVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewaysGetStatusResponse> __Marshaller_google_cloud_compute_v1_VpnGatewaysGetStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnGatewaysGetStatusResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_InsertVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListVpnGatewaysRequest> __Marshaller_google_cloud_compute_v1_ListVpnGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListVpnGatewaysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnGatewayList> __Marshaller_google_cloud_compute_v1_VpnGatewayList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnGatewayList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.SetLabelsVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_SetLabelsVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.SetLabelsVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestIamPermissionsVpnGatewayRequest> __Marshaller_google_cloud_compute_v1_TestIamPermissionsVpnGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestIamPermissionsVpnGatewayRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.TestPermissionsResponse> __Marshaller_google_cloud_compute_v1_TestPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.TestPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest, global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListVpnGatewaysRequest, global::Google.Cloud.Compute.V1.VpnGatewayAggregatedList>(
         grpc::MethodType.Unary,
@@ -39203,15 +41303,45 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.VpnTunnels";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListVpnTunnelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList> __Marshaller_google_cloud_compute_v1_VpnTunnelAggregatedList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_DeleteVpnTunnelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteVpnTunnelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_GetVpnTunnelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetVpnTunnelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnel> __Marshaller_google_cloud_compute_v1_VpnTunnel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnTunnel.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_InsertVpnTunnelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.InsertVpnTunnelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListVpnTunnelsRequest> __Marshaller_google_cloud_compute_v1_ListVpnTunnelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListVpnTunnelsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnelList> __Marshaller_google_cloud_compute_v1_VpnTunnelList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.VpnTunnelList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest> __Marshaller_google_cloud_compute_v1_AggregatedListVpnTunnelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList> __Marshaller_google_cloud_compute_v1_VpnTunnelAggregatedList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_DeleteVpnTunnelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteVpnTunnelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_GetVpnTunnelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetVpnTunnelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnel> __Marshaller_google_cloud_compute_v1_VpnTunnel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnTunnel.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.InsertVpnTunnelRequest> __Marshaller_google_cloud_compute_v1_InsertVpnTunnelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.InsertVpnTunnelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListVpnTunnelsRequest> __Marshaller_google_cloud_compute_v1_ListVpnTunnelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListVpnTunnelsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.VpnTunnelList> __Marshaller_google_cloud_compute_v1_VpnTunnelList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.VpnTunnelList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest, global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList> __Method_AggregatedList = new grpc::Method<global::Google.Cloud.Compute.V1.AggregatedListVpnTunnelsRequest, global::Google.Cloud.Compute.V1.VpnTunnelAggregatedList>(
         grpc::MethodType.Unary,
@@ -39598,13 +41728,43 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.ZoneOperations";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteZoneOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteZoneOperationResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetZoneOperationRequest> __Marshaller_google_cloud_compute_v1_GetZoneOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetZoneOperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListZoneOperationsRequest> __Marshaller_google_cloud_compute_v1_ListZoneOperationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListZoneOperationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.OperationList.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitZoneOperationRequest> __Marshaller_google_cloud_compute_v1_WaitZoneOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.WaitZoneOperationRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest> __Marshaller_google_cloud_compute_v1_DeleteZoneOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse> __Marshaller_google_cloud_compute_v1_DeleteZoneOperationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetZoneOperationRequest> __Marshaller_google_cloud_compute_v1_GetZoneOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetZoneOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Operation> __Marshaller_google_cloud_compute_v1_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListZoneOperationsRequest> __Marshaller_google_cloud_compute_v1_ListZoneOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListZoneOperationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.OperationList> __Marshaller_google_cloud_compute_v1_OperationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.OperationList.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.WaitZoneOperationRequest> __Marshaller_google_cloud_compute_v1_WaitZoneOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.WaitZoneOperationRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest, global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse> __Method_Delete = new grpc::Method<global::Google.Cloud.Compute.V1.DeleteZoneOperationRequest, global::Google.Cloud.Compute.V1.DeleteZoneOperationResponse>(
         grpc::MethodType.Unary,
@@ -39947,10 +42107,40 @@ namespace Google.Cloud.Compute.V1 {
   {
     static readonly string __ServiceName = "google.cloud.compute.v1.Zones";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetZoneRequest> __Marshaller_google_cloud_compute_v1_GetZoneRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.GetZoneRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Zone> __Marshaller_google_cloud_compute_v1_Zone = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.Zone.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListZonesRequest> __Marshaller_google_cloud_compute_v1_ListZonesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ListZonesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ZoneList> __Marshaller_google_cloud_compute_v1_ZoneList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Compute.V1.ZoneList.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.GetZoneRequest> __Marshaller_google_cloud_compute_v1_GetZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.GetZoneRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.Zone> __Marshaller_google_cloud_compute_v1_Zone = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.Zone.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ListZonesRequest> __Marshaller_google_cloud_compute_v1_ListZonesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ListZonesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Compute.V1.ZoneList> __Marshaller_google_cloud_compute_v1_ZoneList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Compute.V1.ZoneList.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Compute.V1.GetZoneRequest, global::Google.Cloud.Compute.V1.Zone> __Method_Get = new grpc::Method<global::Google.Cloud.Compute.V1.GetZoneRequest, global::Google.Cloud.Compute.V1.Zone>(
         grpc::MethodType.Unary,

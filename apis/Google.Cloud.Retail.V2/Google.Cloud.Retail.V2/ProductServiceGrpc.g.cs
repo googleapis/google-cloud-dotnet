@@ -31,14 +31,44 @@ namespace Google.Cloud.Retail.V2 {
   {
     static readonly string __ServiceName = "google.cloud.retail.v2.ProductService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.CreateProductRequest> __Marshaller_google_cloud_retail_v2_CreateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.CreateProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Product> __Marshaller_google_cloud_retail_v2_Product = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.Product.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetProductRequest> __Marshaller_google_cloud_retail_v2_GetProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.GetProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateProductRequest> __Marshaller_google_cloud_retail_v2_UpdateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.UpdateProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.DeleteProductRequest> __Marshaller_google_cloud_retail_v2_DeleteProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.DeleteProductRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ImportProductsRequest> __Marshaller_google_cloud_retail_v2_ImportProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.ImportProductsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.CreateProductRequest> __Marshaller_google_cloud_retail_v2_CreateProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.CreateProductRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Product> __Marshaller_google_cloud_retail_v2_Product = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.Product.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetProductRequest> __Marshaller_google_cloud_retail_v2_GetProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetProductRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateProductRequest> __Marshaller_google_cloud_retail_v2_UpdateProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateProductRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.DeleteProductRequest> __Marshaller_google_cloud_retail_v2_DeleteProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.DeleteProductRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ImportProductsRequest> __Marshaller_google_cloud_retail_v2_ImportProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ImportProductsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product> __Method_CreateProduct = new grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product>(
         grpc::MethodType.Unary,

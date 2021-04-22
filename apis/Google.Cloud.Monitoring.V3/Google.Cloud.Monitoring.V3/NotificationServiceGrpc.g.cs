@@ -31,22 +31,52 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.NotificationChannelService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelDescriptorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> __Marshaller_google_monitoring_v3_NotificationChannelDescriptor = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannel> __Marshaller_google_monitoring_v3_NotificationChannel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest> __Marshaller_google_monitoring_v3_CreateNotificationChannelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest> __Marshaller_google_monitoring_v3_UpdateNotificationChannelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest> __Marshaller_google_monitoring_v3_DeleteNotificationChannelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_SendNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest> __Marshaller_google_monitoring_v3_VerifyNotificationChannelRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> __Marshaller_google_monitoring_v3_NotificationChannelDescriptor = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannel> __Marshaller_google_monitoring_v3_NotificationChannel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest> __Marshaller_google_monitoring_v3_CreateNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest> __Marshaller_google_monitoring_v3_UpdateNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest> __Marshaller_google_monitoring_v3_DeleteNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_SendNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest> __Marshaller_google_monitoring_v3_VerifyNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> __Method_ListNotificationChannelDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse>(
         grpc::MethodType.Unary,

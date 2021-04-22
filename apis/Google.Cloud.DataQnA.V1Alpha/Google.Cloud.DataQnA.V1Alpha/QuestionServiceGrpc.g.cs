@@ -44,13 +44,43 @@ namespace Google.Cloud.DataQnA.V1Alpha {
   {
     static readonly string __ServiceName = "google.cloud.dataqna.v1alpha.QuestionService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetQuestionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.Question> __Marshaller_google_cloud_dataqna_v1alpha_Question = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.Question.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_CreateQuestionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_ExecuteQuestionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetUserFeedbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> __Marshaller_google_cloud_dataqna_v1alpha_UserFeedback = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.UserFeedback.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_UpdateUserFeedbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.Question> __Marshaller_google_cloud_dataqna_v1alpha_Question = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.Question.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_CreateQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_ExecuteQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetUserFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> __Marshaller_google_cloud_dataqna_v1alpha_UserFeedback = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_UpdateUserFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question> __Method_GetQuestion = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question>(
         grpc::MethodType.Unary,

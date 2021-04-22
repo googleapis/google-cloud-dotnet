@@ -31,22 +31,52 @@ namespace Google.Cloud.Billing.V1 {
   {
     static readonly string __ServiceName = "google.cloud.billing.v1.CloudBilling";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetBillingAccountRequest> __Marshaller_google_cloud_billing_v1_GetBillingAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.BillingAccount> __Marshaller_google_cloud_billing_v1_BillingAccount = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.BillingAccount.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsRequest> __Marshaller_google_cloud_billing_v1_ListBillingAccountsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> __Marshaller_google_cloud_billing_v1_ListBillingAccountsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_UpdateBillingAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.CreateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_CreateBillingAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_GetProjectBillingInfoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ProjectBillingInfo> __Marshaller_google_cloud_billing_v1_ProjectBillingInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_UpdateProjectBillingInfoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetBillingAccountRequest> __Marshaller_google_cloud_billing_v1_GetBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.BillingAccount> __Marshaller_google_cloud_billing_v1_BillingAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.BillingAccount.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsRequest> __Marshaller_google_cloud_billing_v1_ListBillingAccountsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> __Marshaller_google_cloud_billing_v1_ListBillingAccountsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_UpdateBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.CreateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_CreateBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_GetProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ProjectBillingInfo> __Marshaller_google_cloud_billing_v1_ProjectBillingInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_UpdateProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_GetBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
         grpc::MethodType.Unary,

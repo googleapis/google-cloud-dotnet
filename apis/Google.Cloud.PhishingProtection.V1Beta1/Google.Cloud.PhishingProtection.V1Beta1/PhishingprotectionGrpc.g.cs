@@ -31,8 +31,38 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.phishingprotection.v1beta1.PhishingProtectionServiceV1Beta1";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Marshaller_google_cloud_phishingprotection_v1beta1_ReportPhishingResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse> __Method_ReportPhishing = new grpc::Method<global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest, global::Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>(
         grpc::MethodType.Unary,

@@ -30,19 +30,49 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.Flows";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.Flow> __Marshaller_google_cloud_dialogflow_cx_v3_Flow = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.Flow.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListFlowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListFlowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.GetFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_TrainFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ValidateFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.Flow> __Marshaller_google_cloud_dialogflow_cx_v3_Flow = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.Flow.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListFlowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListFlowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListFlowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_TrainFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ValidateFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow> __Method_CreateFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow>(
         grpc::MethodType.Unary,

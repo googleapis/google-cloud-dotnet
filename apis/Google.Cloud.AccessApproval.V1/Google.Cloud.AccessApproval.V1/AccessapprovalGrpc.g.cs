@@ -62,17 +62,47 @@ namespace Google.Cloud.AccessApproval.V1 {
   {
     static readonly string __ServiceName = "google.cloud.accessapproval.v1.AccessApproval";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_GetApprovalRequestMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ApprovalRequest> __Marshaller_google_cloud_accessapproval_v1_ApprovalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ApprovalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_ApproveApprovalRequestMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_DismissApprovalRequestMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_GetAccessApprovalSettingsMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings> __Marshaller_google_cloud_accessapproval_v1_AccessApprovalSettings = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_UpdateAccessApprovalSettingsMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_DeleteAccessApprovalSettingsMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_GetApprovalRequestMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ApprovalRequest> __Marshaller_google_cloud_accessapproval_v1_ApprovalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.ApprovalRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_ApproveApprovalRequestMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.ApproveApprovalRequestMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage> __Marshaller_google_cloud_accessapproval_v1_DismissApprovalRequestMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.DismissApprovalRequestMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_GetAccessApprovalSettingsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.GetAccessApprovalSettingsMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings> __Marshaller_google_cloud_accessapproval_v1_AccessApprovalSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.AccessApprovalSettings.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_UpdateAccessApprovalSettingsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.UpdateAccessApprovalSettingsMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage> __Marshaller_google_cloud_accessapproval_v1_DeleteAccessApprovalSettingsMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AccessApproval.V1.DeleteAccessApprovalSettingsMessage.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse> __Method_ListApprovalRequests = new grpc::Method<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse>(
         grpc::MethodType.Unary,

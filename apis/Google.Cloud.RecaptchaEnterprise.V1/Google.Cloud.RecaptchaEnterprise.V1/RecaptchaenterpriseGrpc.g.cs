@@ -30,18 +30,48 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
   {
     static readonly string __ServiceName = "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_CreateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Assessment> __Marshaller_google_cloud_recaptchaenterprise_v1_Assessment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.Assessment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_AnnotateAssessmentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_AnnotateAssessmentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_CreateKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Key> __Marshaller_google_cloud_recaptchaenterprise_v1_Key = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.Key.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_UpdateKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_CreateAssessmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Assessment> __Marshaller_google_cloud_recaptchaenterprise_v1_Assessment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_AnnotateAssessmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_AnnotateAssessmentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_CreateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Key> __Marshaller_google_cloud_recaptchaenterprise_v1_Key = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Key.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_UpdateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment> __Method_CreateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment>(
         grpc::MethodType.Unary,

@@ -31,20 +31,50 @@ namespace Google.Cloud.Gaming.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.gaming.v1beta.GameServerClustersService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest> __Marshaller_google_cloud_gaming_v1beta_ListGameServerClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse> __Marshaller_google_cloud_gaming_v1beta_ListGameServerClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerCluster> __Marshaller_google_cloud_gaming_v1beta_GameServerCluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GameServerCluster.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_CreateGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewCreateGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewCreateGameServerClusterResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewDeleteGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewDeleteGameServerClusterResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewUpdateGameServerClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewUpdateGameServerClusterResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest> __Marshaller_google_cloud_gaming_v1beta_ListGameServerClustersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse> __Marshaller_google_cloud_gaming_v1beta_ListGameServerClustersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerCluster> __Marshaller_google_cloud_gaming_v1beta_GameServerCluster = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GameServerCluster.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_CreateGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewCreateGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewCreateGameServerClusterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewDeleteGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewDeleteGameServerClusterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewUpdateGameServerClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewUpdateGameServerClusterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest, global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse> __Method_ListGameServerClusters = new grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest, global::Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse>(
         grpc::MethodType.Unary,

@@ -30,20 +30,50 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.Agents";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetAgentRequest> __Marshaller_google_cloud_dialogflow_v2_GetAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Agent> __Marshaller_google_cloud_dialogflow_v2_Agent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.Agent.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SetAgentRequest> __Marshaller_google_cloud_dialogflow_v2_SetAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SetAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest> __Marshaller_google_cloud_dialogflow_v2_SearchAgentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> __Marshaller_google_cloud_dialogflow_v2_SearchAgentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.TrainAgentRequest> __Marshaller_google_cloud_dialogflow_v2_TrainAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.TrainAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ExportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ExportAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ExportAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ImportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ImportAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ImportAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest> __Marshaller_google_cloud_dialogflow_v2_RestoreAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest> __Marshaller_google_cloud_dialogflow_v2_GetValidationResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ValidationResult> __Marshaller_google_cloud_dialogflow_v2_ValidationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ValidationResult.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetAgentRequest> __Marshaller_google_cloud_dialogflow_v2_GetAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Agent> __Marshaller_google_cloud_dialogflow_v2_Agent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.Agent.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SetAgentRequest> __Marshaller_google_cloud_dialogflow_v2_SetAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SetAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest> __Marshaller_google_cloud_dialogflow_v2_SearchAgentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> __Marshaller_google_cloud_dialogflow_v2_SearchAgentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.TrainAgentRequest> __Marshaller_google_cloud_dialogflow_v2_TrainAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.TrainAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ExportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ExportAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ExportAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ImportAgentRequest> __Marshaller_google_cloud_dialogflow_v2_ImportAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ImportAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest> __Marshaller_google_cloud_dialogflow_v2_RestoreAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.RestoreAgentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest> __Marshaller_google_cloud_dialogflow_v2_GetValidationResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetValidationResultRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ValidationResult> __Marshaller_google_cloud_dialogflow_v2_ValidationResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ValidationResult.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent> __Method_GetAgent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent>(
         grpc::MethodType.Unary,

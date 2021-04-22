@@ -30,18 +30,48 @@ namespace Google.Cloud.Bigtable.V2 {
   {
     static readonly string __ServiceName = "google.bigtable.v2.Bigtable";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsRequest> __Marshaller_google_bigtable_v2_ReadRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Marshaller_google_bigtable_v2_ReadRowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest> __Marshaller_google_bigtable_v2_SampleRowKeysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> __Marshaller_google_bigtable_v2_SampleRowKeysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowRequest> __Marshaller_google_bigtable_v2_MutateRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowResponse> __Marshaller_google_bigtable_v2_MutateRowResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.MutateRowResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsRequest> __Marshaller_google_bigtable_v2_MutateRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> __Marshaller_google_bigtable_v2_MutateRowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest> __Marshaller_google_bigtable_v2_CheckAndMutateRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsRequest> __Marshaller_google_bigtable_v2_ReadRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Marshaller_google_bigtable_v2_ReadRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest> __Marshaller_google_bigtable_v2_SampleRowKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> __Marshaller_google_bigtable_v2_SampleRowKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowRequest> __Marshaller_google_bigtable_v2_MutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowResponse> __Marshaller_google_bigtable_v2_MutateRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsRequest> __Marshaller_google_bigtable_v2_MutateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> __Marshaller_google_bigtable_v2_MutateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest> __Marshaller_google_bigtable_v2_CheckAndMutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Method_ReadRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse>(
         grpc::MethodType.ServerStreaming,

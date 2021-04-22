@@ -30,17 +30,47 @@ namespace Google.Cloud.PubSub.V1 {
   {
     static readonly string __ServiceName = "google.pubsub.v1.SchemaService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSchemaRequest> __Marshaller_google_pubsub_v1_CreateSchemaRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.CreateSchemaRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Schema> __Marshaller_google_pubsub_v1_Schema = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Schema.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSchemaRequest> __Marshaller_google_pubsub_v1_GetSchemaRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetSchemaRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasRequest> __Marshaller_google_pubsub_v1_ListSchemasRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSchemasRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasResponse> __Marshaller_google_pubsub_v1_ListSchemasResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSchemasResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSchemaRequest> __Marshaller_google_pubsub_v1_DeleteSchemaRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteSchemaRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaRequest> __Marshaller_google_pubsub_v1_ValidateSchemaRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ValidateSchemaRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> __Marshaller_google_pubsub_v1_ValidateSchemaResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ValidateSchemaResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageRequest> __Marshaller_google_pubsub_v1_ValidateMessageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ValidateMessageRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> __Marshaller_google_pubsub_v1_ValidateMessageResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ValidateMessageResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSchemaRequest> __Marshaller_google_pubsub_v1_CreateSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.CreateSchemaRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Schema> __Marshaller_google_pubsub_v1_Schema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.Schema.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSchemaRequest> __Marshaller_google_pubsub_v1_GetSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.GetSchemaRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasRequest> __Marshaller_google_pubsub_v1_ListSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSchemasRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasResponse> __Marshaller_google_pubsub_v1_ListSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSchemasResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSchemaRequest> __Marshaller_google_pubsub_v1_DeleteSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DeleteSchemaRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaRequest> __Marshaller_google_pubsub_v1_ValidateSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateSchemaRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> __Marshaller_google_pubsub_v1_ValidateSchemaResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateSchemaResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageRequest> __Marshaller_google_pubsub_v1_ValidateMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateMessageRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> __Marshaller_google_pubsub_v1_ValidateMessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateMessageResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.CreateSchemaRequest, global::Google.Cloud.PubSub.V1.Schema> __Method_CreateSchema = new grpc::Method<global::Google.Cloud.PubSub.V1.CreateSchemaRequest, global::Google.Cloud.PubSub.V1.Schema>(
         grpc::MethodType.Unary,

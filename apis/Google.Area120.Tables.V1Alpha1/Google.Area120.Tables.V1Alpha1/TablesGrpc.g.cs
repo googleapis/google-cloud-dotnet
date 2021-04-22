@@ -41,27 +41,57 @@ namespace Google.Area120.Tables.V1Alpha1 {
   {
     static readonly string __ServiceName = "google.area120.tables.v1alpha1.TablesService";
 
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetTableRequest> __Marshaller_google_area120_tables_v1alpha1_GetTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.GetTableRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Table> __Marshaller_google_area120_tables_v1alpha1_Table = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.Table.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesRequest> __Marshaller_google_area120_tables_v1alpha1_ListTablesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListTablesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> __Marshaller_google_area120_tables_v1alpha1_ListTablesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListTablesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest> __Marshaller_google_area120_tables_v1alpha1_GetWorkspaceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Workspace> __Marshaller_google_area120_tables_v1alpha1_Workspace = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.Workspace.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetRowRequest> __Marshaller_google_area120_tables_v1alpha1_GetRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.GetRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Row> __Marshaller_google_area120_tables_v1alpha1_Row = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.Row.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsRequest> __Marshaller_google_area120_tables_v1alpha1_ListRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListRowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> __Marshaller_google_area120_tables_v1alpha1_ListRowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.ListRowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.CreateRowRequest> __Marshaller_google_area120_tables_v1alpha1_CreateRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.CreateRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest> __Marshaller_google_area120_tables_v1alpha1_UpdateRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest> __Marshaller_google_area120_tables_v1alpha1_DeleteRowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchDeleteRowsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetTableRequest> __Marshaller_google_area120_tables_v1alpha1_GetTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetTableRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Table> __Marshaller_google_area120_tables_v1alpha1_Table = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Table.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesRequest> __Marshaller_google_area120_tables_v1alpha1_ListTablesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListTablesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> __Marshaller_google_area120_tables_v1alpha1_ListTablesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListTablesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest> __Marshaller_google_area120_tables_v1alpha1_GetWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Workspace> __Marshaller_google_area120_tables_v1alpha1_Workspace = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Workspace.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetRowRequest> __Marshaller_google_area120_tables_v1alpha1_GetRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Row> __Marshaller_google_area120_tables_v1alpha1_Row = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Row.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsRequest> __Marshaller_google_area120_tables_v1alpha1_ListRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> __Marshaller_google_area120_tables_v1alpha1_ListRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListRowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.CreateRowRequest> __Marshaller_google_area120_tables_v1alpha1_CreateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.CreateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest> __Marshaller_google_area120_tables_v1alpha1_UpdateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest> __Marshaller_google_area120_tables_v1alpha1_DeleteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchDeleteRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest.Parser));
 
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetTableRequest, global::Google.Area120.Tables.V1Alpha1.Table> __Method_GetTable = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetTableRequest, global::Google.Area120.Tables.V1Alpha1.Table>(
         grpc::MethodType.Unary,

@@ -30,25 +30,55 @@ namespace Google.Cloud.Domains.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.domains.v1beta1.Domains";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest> __Marshaller_google_cloud_domains_v1beta1_RegisterDomainRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_GetRegistrationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.Registration> __Marshaller_google_cloud_domains_v1beta1_Registration = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.Registration.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_UpdateRegistrationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureManagementSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureDnsSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureContactSettingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_ExportRegistrationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_DeleteRegistrationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveAuthorizationCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> __Marshaller_google_cloud_domains_v1beta1_AuthorizationCode = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.AuthorizationCode.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_ResetAuthorizationCodeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest> __Marshaller_google_cloud_domains_v1beta1_RegisterDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_GetRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.Registration> __Marshaller_google_cloud_domains_v1beta1_Registration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.Registration.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_UpdateRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureManagementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureDnsSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureContactSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_ExportRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_DeleteRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveAuthorizationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> __Marshaller_google_cloud_domains_v1beta1_AuthorizationCode = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_ResetAuthorizationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> __Method_SearchDomains = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>(
         grpc::MethodType.Unary,

@@ -31,12 +31,42 @@ namespace Google.Cloud.Speech.V1 {
   {
     static readonly string __ServiceName = "google.cloud.speech.v1.Speech";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeRequest> __Marshaller_google_cloud_speech_v1_RecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeResponse> __Marshaller_google_cloud_speech_v1_RecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest> __Marshaller_google_cloud_speech_v1_LongRunningRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest> __Marshaller_google_cloud_speech_v1_StreamingRecognizeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> __Marshaller_google_cloud_speech_v1_StreamingRecognizeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeRequest> __Marshaller_google_cloud_speech_v1_RecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1.RecognizeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.RecognizeResponse> __Marshaller_google_cloud_speech_v1_RecognizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1.RecognizeResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest> __Marshaller_google_cloud_speech_v1_LongRunningRecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeRequest> __Marshaller_google_cloud_speech_v1_StreamingRecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1.StreamingRecognizeResponse> __Marshaller_google_cloud_speech_v1_StreamingRecognizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Speech.V1.RecognizeRequest, global::Google.Cloud.Speech.V1.RecognizeResponse> __Method_Recognize = new grpc::Method<global::Google.Cloud.Speech.V1.RecognizeRequest, global::Google.Cloud.Speech.V1.RecognizeResponse>(
         grpc::MethodType.Unary,

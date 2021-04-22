@@ -30,20 +30,50 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.EntityTypes";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_ListEntityTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse> __Marshaller_google_cloud_dialogflow_v2_ListEntityTypesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_GetEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.EntityType> __Marshaller_google_cloud_dialogflow_v2_EntityType = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.EntityType.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_CreateEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteEntityTypeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchUpdateEntityTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchDeleteEntityTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchCreateEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchUpdateEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchDeleteEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_ListEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse> __Marshaller_google_cloud_dialogflow_v2_ListEntityTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_GetEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetEntityTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.EntityType> __Marshaller_google_cloud_dialogflow_v2_EntityType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.EntityType.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_CreateEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.CreateEntityTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateEntityTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteEntityTypeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchUpdateEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.BatchUpdateEntityTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchDeleteEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.BatchDeleteEntityTypesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchCreateEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.BatchCreateEntitiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchUpdateEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.BatchUpdateEntitiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest> __Marshaller_google_cloud_dialogflow_v2_BatchDeleteEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.BatchDeleteEntitiesRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse> __Method_ListEntityTypes = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.V2.ListEntityTypesResponse>(
         grpc::MethodType.Unary,

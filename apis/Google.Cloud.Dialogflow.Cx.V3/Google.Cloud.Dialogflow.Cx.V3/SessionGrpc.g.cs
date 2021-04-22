@@ -32,14 +32,44 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.Sessions";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Method_DetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(
         grpc::MethodType.Unary,

@@ -35,20 +35,50 @@ namespace Google.Cloud.Datastore.V1 {
   {
     static readonly string __ServiceName = "google.datastore.v1.Datastore";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupRequest> __Marshaller_google_datastore_v1_LookupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.LookupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupResponse> __Marshaller_google_datastore_v1_LookupResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.LookupResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryRequest> __Marshaller_google_datastore_v1_RunQueryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryResponse> __Marshaller_google_datastore_v1_RunQueryResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionRequest> __Marshaller_google_datastore_v1_BeginTransactionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Marshaller_google_datastore_v1_BeginTransactionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitRequest> __Marshaller_google_datastore_v1_CommitRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.CommitRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitResponse> __Marshaller_google_datastore_v1_CommitResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.CommitResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackRequest> __Marshaller_google_datastore_v1_RollbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackResponse> __Marshaller_google_datastore_v1_RollbackResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsRequest> __Marshaller_google_datastore_v1_AllocateIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> __Marshaller_google_datastore_v1_AllocateIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsRequest> __Marshaller_google_datastore_v1_ReserveIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Marshaller_google_datastore_v1_ReserveIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupRequest> __Marshaller_google_datastore_v1_LookupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.LookupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupResponse> __Marshaller_google_datastore_v1_LookupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.LookupResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryRequest> __Marshaller_google_datastore_v1_RunQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryResponse> __Marshaller_google_datastore_v1_RunQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionRequest> __Marshaller_google_datastore_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Marshaller_google_datastore_v1_BeginTransactionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitRequest> __Marshaller_google_datastore_v1_CommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.CommitRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitResponse> __Marshaller_google_datastore_v1_CommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.CommitResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackRequest> __Marshaller_google_datastore_v1_RollbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RollbackRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackResponse> __Marshaller_google_datastore_v1_RollbackResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RollbackResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsRequest> __Marshaller_google_datastore_v1_AllocateIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> __Marshaller_google_datastore_v1_AllocateIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsRequest> __Marshaller_google_datastore_v1_ReserveIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Marshaller_google_datastore_v1_ReserveIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse> __Method_Lookup = new grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse>(
         grpc::MethodType.Unary,

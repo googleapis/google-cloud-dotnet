@@ -30,21 +30,51 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.speech.v1p1beta1.Adaptation";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreatePhraseSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetPhraseSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdatePhraseSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeletePhraseSetRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreateCustomClassRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Marshaller_google_cloud_speech_v1p1beta1_CustomClass = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetCustomClassRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdateCustomClassRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeleteCustomClassRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreatePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetPhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdatePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeletePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreateCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Marshaller_google_cloud_speech_v1p1beta1_CustomClass = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdateCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeleteCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Method_CreatePhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet>(
         grpc::MethodType.Unary,

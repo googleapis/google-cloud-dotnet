@@ -31,10 +31,40 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.v2.AnswerRecords";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest> __Marshaller_google_cloud_dialogflow_v2_ListAnswerRecordsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse> __Marshaller_google_cloud_dialogflow_v2_ListAnswerRecordsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateAnswerRecordRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateAnswerRecordRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.UpdateAnswerRecordRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnswerRecord> __Marshaller_google_cloud_dialogflow_v2_AnswerRecord = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.AnswerRecord.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest> __Marshaller_google_cloud_dialogflow_v2_ListAnswerRecordsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse> __Marshaller_google_cloud_dialogflow_v2_ListAnswerRecordsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateAnswerRecordRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateAnswerRecordRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateAnswerRecordRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.AnswerRecord> __Marshaller_google_cloud_dialogflow_v2_AnswerRecord = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.AnswerRecord.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest, global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse> __Method_ListAnswerRecords = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsRequest, global::Google.Cloud.Dialogflow.V2.ListAnswerRecordsResponse>(
         grpc::MethodType.Unary,

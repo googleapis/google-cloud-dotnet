@@ -33,18 +33,48 @@ namespace Google.Cloud.Recommender.V1 {
   {
     static readonly string __ServiceName = "google.cloud.recommender.v1.Recommender";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsRequest> __Marshaller_google_cloud_recommender_v1_ListInsightsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListInsightsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Marshaller_google_cloud_recommender_v1_ListInsightsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListInsightsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetInsightRequest> __Marshaller_google_cloud_recommender_v1_GetInsightRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.GetInsightRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Insight> __Marshaller_google_cloud_recommender_v1_Insight = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.Insight.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest> __Marshaller_google_cloud_recommender_v1_MarkInsightAcceptedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest> __Marshaller_google_cloud_recommender_v1_ListRecommendationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListRecommendationsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsResponse> __Marshaller_google_cloud_recommender_v1_ListRecommendationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListRecommendationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetRecommendationRequest> __Marshaller_google_cloud_recommender_v1_GetRecommendationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.GetRecommendationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Recommendation> __Marshaller_google_cloud_recommender_v1_Recommendation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.Recommendation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationClaimedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationSucceededRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationFailedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsRequest> __Marshaller_google_cloud_recommender_v1_ListInsightsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListInsightsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Marshaller_google_cloud_recommender_v1_ListInsightsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListInsightsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetInsightRequest> __Marshaller_google_cloud_recommender_v1_GetInsightRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.GetInsightRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Insight> __Marshaller_google_cloud_recommender_v1_Insight = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.Insight.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest> __Marshaller_google_cloud_recommender_v1_MarkInsightAcceptedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest> __Marshaller_google_cloud_recommender_v1_ListRecommendationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListRecommendationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsResponse> __Marshaller_google_cloud_recommender_v1_ListRecommendationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListRecommendationsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetRecommendationRequest> __Marshaller_google_cloud_recommender_v1_GetRecommendationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.GetRecommendationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Recommendation> __Marshaller_google_cloud_recommender_v1_Recommendation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.Recommendation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationClaimedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationSucceededRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationFailedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Method_ListInsights = new grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse>(
         grpc::MethodType.Unary,

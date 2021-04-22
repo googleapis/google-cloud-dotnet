@@ -34,12 +34,42 @@ namespace Google.Cloud.Trace.V1 {
   {
     static readonly string __ServiceName = "google.devtools.cloudtrace.v1.TraceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_ListTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_google_devtools_cloudtrace_v1_ListTracesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_google_devtools_cloudtrace_v1_GetTraceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_google_devtools_cloudtrace_v1_Trace = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_PatchTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_ListTracesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Trace.V1.ListTracesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_google_devtools_cloudtrace_v1_ListTracesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Trace.V1.ListTracesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_google_devtools_cloudtrace_v1_GetTraceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Trace.V1.GetTraceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_google_devtools_cloudtrace_v1_Trace = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Trace.V1.Trace.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_google_devtools_cloudtrace_v1_PatchTracesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse> __Method_ListTraces = new grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(
         grpc::MethodType.Unary,

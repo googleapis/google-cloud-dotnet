@@ -32,13 +32,43 @@ namespace Google.Cloud.Vision.V1 {
   {
     static readonly string __ServiceName = "google.cloud.vision.v1.ImageAnnotator";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest> __Marshaller_google_cloud_vision_v1_BatchAnnotateImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> __Marshaller_google_cloud_vision_v1_BatchAnnotateImagesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest> __Marshaller_google_cloud_vision_v1_BatchAnnotateFilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse> __Marshaller_google_cloud_vision_v1_BatchAnnotateFilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest> __Marshaller_google_cloud_vision_v1_AsyncBatchAnnotateImagesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest> __Marshaller_google_cloud_vision_v1_AsyncBatchAnnotateFilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest> __Marshaller_google_cloud_vision_v1_BatchAnnotateImagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> __Marshaller_google_cloud_vision_v1_BatchAnnotateImagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest> __Marshaller_google_cloud_vision_v1_BatchAnnotateFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse> __Marshaller_google_cloud_vision_v1_BatchAnnotateFilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest> __Marshaller_google_cloud_vision_v1_AsyncBatchAnnotateImagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest> __Marshaller_google_cloud_vision_v1_AsyncBatchAnnotateFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest, global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse> __Method_BatchAnnotateImages = new grpc::Method<global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest, global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>(
         grpc::MethodType.Unary,

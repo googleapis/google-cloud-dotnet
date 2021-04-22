@@ -33,21 +33,51 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   {
     static readonly string __ServiceName = "google.cloud.networkconnectivity.v1alpha1.HubService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListHubsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListHubsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_GetHubRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetHubRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.Hub> __Marshaller_google_cloud_networkconnectivity_v1alpha1_Hub = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.Hub.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_CreateHubRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateHubRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_UpdateHubRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateHubRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_DeleteHubRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteHubRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListSpokesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesResponse> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListSpokesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_GetSpokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetSpokeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.Spoke> __Marshaller_google_cloud_networkconnectivity_v1alpha1_Spoke = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.Spoke.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_CreateSpokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateSpokeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_UpdateSpokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateSpokeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_DeleteSpokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteSpokeRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListHubsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListHubsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_GetHubRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetHubRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.Hub> __Marshaller_google_cloud_networkconnectivity_v1alpha1_Hub = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.Hub.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_CreateHubRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateHubRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_UpdateHubRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateHubRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteHubRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_DeleteHubRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteHubRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListSpokesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesResponse> __Marshaller_google_cloud_networkconnectivity_v1alpha1_ListSpokesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListSpokesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_GetSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.GetSpokeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.Spoke> __Marshaller_google_cloud_networkconnectivity_v1alpha1_Spoke = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.Spoke.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_CreateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.CreateSpokeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_UpdateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.UpdateSpokeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1alpha1_DeleteSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Alpha1.DeleteSpokeRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse> __Method_ListHubs = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1Alpha1.ListHubsResponse>(
         grpc::MethodType.Unary,

@@ -31,16 +31,46 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.ProfileService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest> __Marshaller_google_cloud_talent_v4beta1_ListProfilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse> __Marshaller_google_cloud_talent_v4beta1_ListProfilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest> __Marshaller_google_cloud_talent_v4beta1_CreateProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Profile> __Marshaller_google_cloud_talent_v4beta1_Profile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Profile.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetProfileRequest> __Marshaller_google_cloud_talent_v4beta1_GetProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest> __Marshaller_google_cloud_talent_v4beta1_SearchProfilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse> __Marshaller_google_cloud_talent_v4beta1_SearchProfilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest> __Marshaller_google_cloud_talent_v4beta1_ListProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse> __Marshaller_google_cloud_talent_v4beta1_ListProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest> __Marshaller_google_cloud_talent_v4beta1_CreateProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Profile> __Marshaller_google_cloud_talent_v4beta1_Profile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.Profile.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetProfileRequest> __Marshaller_google_cloud_talent_v4beta1_GetProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.GetProfileRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest> __Marshaller_google_cloud_talent_v4beta1_SearchProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse> __Marshaller_google_cloud_talent_v4beta1_SearchProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest, global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse> __Method_ListProfiles = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest, global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse>(
         grpc::MethodType.Unary,

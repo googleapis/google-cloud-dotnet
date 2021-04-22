@@ -31,12 +31,42 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.workflows.executions.v1beta.Executions";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CreateExecutionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Marshaller_google_cloud_workflows_executions_v1beta_Execution = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.Execution.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_GetExecutionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CancelExecutionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CreateExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Marshaller_google_cloud_workflows_executions_v1beta_Execution = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.Execution.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_GetExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CancelExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> __Method_ListExecutions = new grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse>(
         grpc::MethodType.Unary,

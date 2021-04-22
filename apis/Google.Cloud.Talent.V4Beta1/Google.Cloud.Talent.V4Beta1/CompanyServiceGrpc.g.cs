@@ -30,14 +30,44 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.CompanyService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Company> __Marshaller_google_cloud_talent_v4beta1_Company = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.Company.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Company> __Marshaller_google_cloud_talent_v4beta1_Company = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.Company.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_CreateCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
