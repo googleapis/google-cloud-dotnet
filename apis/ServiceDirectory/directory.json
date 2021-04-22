@@ -1673,6 +1673,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.PolicyTroubleshooter.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/privatecatalog/v1beta1",
+      "Name": "cloudprivatecatalog.googleapis.com",
+      "Title": "Cloud Private Catalog API",
+      "Description": "Enable cloud users to discover private catalogs and products in their organizations.",
+      "ServiceConfigFile": "google/cloud/privatecatalog/v1beta1/cloudprivatecatalog_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.privatecatalog.v1beta1",
+      "PackageFromProtos": "google.cloud.privatecatalog.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Privatecatalog.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/pubsublite/v1",
       "Name": "pubsublite.googleapis.com",
       "Title": "Pub/Sub Lite API",
