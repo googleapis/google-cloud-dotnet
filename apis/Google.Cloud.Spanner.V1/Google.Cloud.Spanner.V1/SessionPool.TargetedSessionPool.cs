@@ -447,7 +447,7 @@ namespace Google.Cloud.Spanner.V1
                         .WithExpiration(Expiration.FromTimeout(Options.Timeout))
                         .WithCancellationToken(cancellationToken);
                     var transaction = await session.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
-                    return session.WithTransaction(transaction.Id, options.ModeCase);
+                    return session.WithTransaction(transaction.Id, options.ModeCase, transaction.ReadTimestamp);
                 }
                 finally
                 {

@@ -29,7 +29,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             TimestampBound.OfExactStaleness(TimeSpan.FromHours(1)),
             TimestampBound.OfMinReadTimestamp(new DateTime(1999, 12, 31, 3, 33, 33, DateTimeKind.Utc)),
             TimestampBound.OfReadTimestamp(new DateTime(1999, 12, 31, 3, 33, 33, DateTimeKind.Utc)),
-            TimestampBound.Strong
+            TimestampBound.Strong,
+            TimestampBound.Strong.WithReturnReadTimestamp(true)
         };
 
         [Theory]
@@ -71,6 +72,20 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var bound = TimestampBound.OfReadTimestamp(new DateTime(1970, 1, 1, 0, 0, 10, DateTimeKind.Utc));
             AssertProtoConversion(new ReadOnly { ReadTimestamp = new Timestamp { Seconds = 10 } }, bound);
+        }
+
+        [Fact]
+        public void ToTransactionOptions_WithReturnReadTimestamp()
+        {
+            var bound = TimestampBound.OfReadTimestamp(new DateTime(1970, 1, 1, 0, 0, 10, DateTimeKind.Utc)).WithReturnReadTimestamp(true);
+            AssertProtoConversion(new ReadOnly { ReadTimestamp = new Timestamp { Seconds = 10 }, ReturnReadTimestamp = true }, bound);
+        }
+
+        [Fact]
+        public void ToTransactionOptions_WithoutReturnReadTimestamp()
+        {
+            var bound = TimestampBound.OfReadTimestamp(new DateTime(1970, 1, 1, 0, 0, 10, DateTimeKind.Utc));
+            AssertProtoConversion(new ReadOnly { ReadTimestamp = new Timestamp { Seconds = 10 }, ReturnReadTimestamp = false }, bound);
         }
 
         [Theory]
@@ -123,6 +138,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var read = TimestampBound.OfReadTimestamp(timestamp1);
             var exactStaleness = TimestampBound.OfExactStaleness(staleness1);
             var maxStaleness = TimestampBound.OfMaxStaleness(staleness1);
+            var returnReadTimestamp = TimestampBound.Strong.WithReturnReadTimestamp(true);
 
             EqualityTester.AssertEqual(strong,
                 new[] { strong },
@@ -142,6 +158,10 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             EqualityTester.AssertEqual(maxStaleness,
                 new[] { TimestampBound.OfMaxStaleness(staleness1) },
+                new[] { strong, minRead, read, exactStaleness, TimestampBound.OfMaxStaleness(staleness2) });
+
+            EqualityTester.AssertEqual(returnReadTimestamp,
+                new[] { returnReadTimestamp },
                 new[] { strong, minRead, read, exactStaleness, TimestampBound.OfMaxStaleness(staleness2) });
         }
 

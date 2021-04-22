@@ -417,6 +417,12 @@ namespace Google.Cloud.Spanner.Data
             _session.TransactionId.ToBase64(),
             TimestampBound);
 
+        /// <summary>
+        /// The read timestamp of the read-only transaction if
+        /// <see cref="TimestampBound.ReturnReadTimestamp" /> is true, else <c>null</c>.
+        /// </summary>
+        public Timestamp ReadTimestamp => _session.ReadTimestamp;
+
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
