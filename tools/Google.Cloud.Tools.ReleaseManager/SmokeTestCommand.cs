@@ -29,16 +29,21 @@ namespace Google.Cloud.Tools.ReleaseManager
     public class SmokeTestCommand : CommandBase
     {
         private const string TestTargetFramework = "netcoreapp2.1";
+        private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
 
         public SmokeTestCommand()
-            : base("smoke-test", "Runs smoke tests for a package", "id", "project-id")
+            : base("smoke-test", "Runs smoke tests for a package", "id")
         {
         }
 
         protected override void ExecuteImpl(string[] args)
         {
             string id = args[0];
-            string projectId = args[1];
+            string projectId = Environment.GetEnvironmentVariable(TestProjectEnvironmentVariable);
+            if (string.IsNullOrEmpty(projectId))
+            {
+                throw new UserErrorException($"Environment variable {TestProjectEnvironmentVariable} must be set before running smoke tests");
+            }
 
             var smokeTests = LoadSmokeTests(id);
             if (smokeTests.Count == 0)

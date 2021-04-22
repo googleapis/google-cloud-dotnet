@@ -240,15 +240,18 @@ Once you've reviewed the smoke tests, enable the API in the
 [Cloud Console API
 dashboard](https://console.cloud.google.com/apis/dashboard) and then
 run them with release manager. To run the smoke tests, use the
-`smoke-test` command, specifying the package ID and the name of your
-project:
+`smoke-test` command, specifying the package ID. This uses the
+`TEST_PROJECT` environment variable, in the same way as the other
+integration tests, so set that environment variable first if it's
+not already set.
 
 ```sh
-./prepare-release.sh smoke-test Google.Cloud.Dialogflow.Cx.V3 my-project-id
+$ export TEST_PROJECT=your-project-id
+$ ./prepare-release.sh smoke-test Google.Cloud.Dialogflow.Cx.V3
 ```
 
 Note that this assumes you have application default credentials
-configured for the specified project.
+configured for the test project.
 
 If the smoke test fails first time, it's worth looking into. In
 particular, if it's an RPC with a *location* path segment, we
