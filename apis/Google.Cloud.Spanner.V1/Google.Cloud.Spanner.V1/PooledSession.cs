@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -59,6 +60,12 @@ namespace Google.Cloud.Spanner.V1
         internal ModeOneofCase TransactionMode { get; }
 
         /// <summary>
+        /// The read timestamp of the transaction. (Always <c>null</c> if
+        /// ReturnReadTimestamp = false or if TransactionMode != ReadOnly.)
+        /// </summary>
+        public Timestamp ReadTimestamp { get; }
+
+        /// <summary>
         /// Indicates whether the server has told us that the session has expired.
         /// </summary>
         internal bool ServerExpired => _session.Expired;
@@ -84,7 +91,7 @@ namespace Google.Cloud.Spanner.V1
         private int _disposed;
         private int _committedOrRolledBack;
 
-        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, DateTime evictionTime, long refreshTicks)
+        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
         {
             GaxPreconditions.CheckArgument(
                 (transactionId == null) == (transactionMode == ModeOneofCase.None),
@@ -94,6 +101,7 @@ namespace Google.Cloud.Spanner.V1
             SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             TransactionId = transactionId;
             TransactionMode = transactionMode;
+            ReadTimestamp = readTimestamp;
             _session = new Session { SessionName = SessionName };
             _evictionTime = evictionTime;
             _refreshTicks = refreshTicks;
@@ -108,7 +116,7 @@ namespace Google.Cloud.Spanner.V1
             var now = pool.Clock.GetCurrentDateTimeUtc();
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             var evictionDelay = options.SessionEvictionJitter.GetDelay(options.PoolEvictionDelay);
-            return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
+            return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
         }
 
         /// <summary>
@@ -118,13 +126,13 @@ namespace Google.Cloud.Spanner.V1
         private PooledSession AfterReset()
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, _evictionTime, RefreshTicks);
+            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, null, _evictionTime, RefreshTicks);
         }
 
-        internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode)
+        internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp = null)
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, transactionId, transactionMode, _evictionTime, _refreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId, transactionMode, readTimestamp, _evictionTime, _refreshTicks);
         }
 
         /// <summary>
@@ -345,7 +353,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <remarks>
         /// This method does not affect <see cref="TransactionId"/> of this object. Instead, typical usage will be to call this method followed
-        /// by <see cref="WithTransaction(ByteString, ModeOneofCase)"/> to create a new <see cref="PooledSession"/> using the transaction.
+        /// by <see cref="WithTransaction(ByteString, ModeOneofCase, Timestamp)"/> to create a new <see cref="PooledSession"/> using the transaction.
         /// </remarks>
         /// <param name="request">The begin-transaction request. Must not be null. The request will be modified with session details
         /// from this object.</param>

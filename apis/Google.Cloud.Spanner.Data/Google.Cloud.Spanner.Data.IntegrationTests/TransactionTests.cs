@@ -19,6 +19,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
 using Xunit;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -446,6 +447,98 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     if (await reader.ReadAsync())
                     {
                         Assert.Equal(_newestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ExactReadSinglueUseWithoutReturnReadTimestamp()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var cmd = CreateSelectAllCommandForKey(connection);
+                var bound = TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp);
+                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync(bound)))
+                {
+                    Assert.Null(reader.GetReadTimestamp());
+                    if (await reader.ReadAsync())
+                    {
+                        Assert.Equal(_oldestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ExactReadSinglueUseWithReturnReadTimestamp()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var cmd = CreateSelectAllCommandForKey(connection);
+                var bound = TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp).WithReturnReadTimestamp(true);
+                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync(bound)))
+                {
+                    Assert.Equal(wkt::Timestamp.FromDateTime(_oldestEntry.Timestamp), reader.GetReadTimestamp());
+                    if (await reader.ReadAsync())
+                    {
+                        Assert.Equal(_oldestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ExactReadMultiUseWithoutReturnReadTimestamp()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var targetReadTimestamp = _fixture.TimestampBeforeEntries;
+                var bound = TimestampBound.OfReadTimestamp(targetReadTimestamp);
+                using (var tx = await connection.BeginReadOnlyTransactionAsync(bound))
+                {
+                    Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
+                    Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
+                    Assert.False(tx.TimestampBound.ReturnReadTimestamp);
+
+                    var cmd = CreateSelectAllCommandForKey(connection);
+                    cmd.Transaction = tx;
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        Assert.Null(reader.GetReadTimestamp());
+                        Assert.False(
+                            await reader.ReadAsync(),
+                            "no data should be here from yesterday!");
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ExactReadMultiUseWithReturnReadTimestamp()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var targetReadTimestamp = _fixture.TimestampBeforeEntries;
+                var bound = TimestampBound.OfReadTimestamp(targetReadTimestamp).WithReturnReadTimestamp(true);
+                using (var tx = await connection.BeginReadOnlyTransactionAsync(bound))
+                {
+                    Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
+                    Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
+                    Assert.True(tx.TimestampBound.ReturnReadTimestamp);
+
+                    var cmd = CreateSelectAllCommandForKey(connection);
+                    cmd.Transaction = tx;
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        Assert.Equal(wkt::Timestamp.FromDateTime(targetReadTimestamp), reader.GetReadTimestamp());
+                        Assert.False(
+                            await reader.ReadAsync(),
+                            "no data should be here from yesterday!");
                     }
                 }
             }

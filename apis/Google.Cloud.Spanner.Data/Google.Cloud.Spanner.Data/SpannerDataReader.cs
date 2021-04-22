@@ -45,6 +45,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly ReliableStreamReader _resultSet;
         private ConcurrentDictionary<string, int> _fieldIndex;
         private ResultSetMetadata _metadata;
+        private Timestamp _readTimestamp;
         private readonly IDisposable _resourceToClose;
         private readonly SpannerConversionOptions _conversionOptions;
         private readonly bool _provideSchemaTable;
@@ -57,6 +58,7 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerDataReader(
             Logger logger,
             ReliableStreamReader resultSet,
+            Timestamp readTimestamp,
             IDisposable resourceToClose,
             SpannerConversionOptions conversionOptions,
             bool provideSchemaTable,
@@ -68,6 +70,7 @@ namespace Google.Cloud.Spanner.Data
                 "SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
             _resultSet = resultSet;
+            _readTimestamp = readTimestamp;
             _resourceToClose = resourceToClose;
             _conversionOptions = conversionOptions;
             _provideSchemaTable = provideSchemaTable;
@@ -252,6 +255,49 @@ namespace Google.Cloud.Spanner.Data
                 InitializeFieldIndexFromMetadata();
             }
             return _fieldIndex[name];
+        }
+
+        /// <summary>
+        /// Gets the read timestamp if <see cref="TimestampBound.ReturnReadTimestamp" /> was true
+        /// else returns <c>null</c>.
+        /// </summary>
+        /// <remarks>
+        /// The read timestamp can be read before <see cref="SpannerDataReader.Read"/> or
+        /// <see cref="SpannerDataReader.ReadAsync"/> is called.
+        /// </remarks>
+        /// <remarks>
+        /// The read timestamp is available even if no data is returned.
+        /// </remarks>
+        /// <returns>The value converted to a <see cref="Timestamp"/>, or <c>null</c> if
+        /// <see cref="TimestampBound.ReturnReadTimestamp" /> was false.</returns>
+        public Timestamp GetReadTimestamp()
+        {
+            if (_readTimestamp != null)
+            {
+                return _readTimestamp;
+            }
+            return Task.Run(() => GetReadTimestampAsync(CancellationToken.None)).ResultWithUnwrappedExceptions();
+        }
+
+        /// <summary>
+        /// Gets the read timestamp if <see cref="TimestampBound.ReturnReadTimestamp" /> was true
+        /// else returns <c>null</c>.
+        /// </summary>
+        /// <returns>The value converted to a <see cref="Timestamp"/>, or <c>null</c> if
+        /// <see cref="TimestampBound.ReturnReadTimestamp" /> was false.</returns>
+        public Task<Timestamp> GetReadTimestampAsync(CancellationToken cancellationToken)
+        {
+            if (_readTimestamp != null)
+            {
+                return Task.FromResult(_readTimestamp);
+            }
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    var metadata = await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
+                    _readTimestamp = metadata.Transaction?.ReadTimestamp;
+		    return _readTimestamp;
+                }, "SpannerDataReader.GetReadTimestamp", Logger);
         }
 
         // Initializes _fieldIndex, but should only be called after PopulateMetadata or PopulateMetadataAsync

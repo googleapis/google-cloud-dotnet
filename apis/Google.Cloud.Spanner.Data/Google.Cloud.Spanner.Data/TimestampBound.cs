@@ -28,26 +28,22 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class TimestampBound : IEquatable<TimestampBound>
     {
-        private TimestampBound(TimestampBoundMode mode)
-        {
-            Mode = mode;
-        }
+        private static readonly DateTime s_utcMinValue = new DateTime(1, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        private TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
+        private TimestampBound(TimestampBoundMode mode, TimeSpan staleness,
+                               DateTime timestamp, bool returnReadTimestamp = false)
         {
             if (staleness.Ticks < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(staleness), "Staleness must not be negative");
             }
+
+            GaxPreconditions.CheckArgument(timestamp.Kind == DateTimeKind.Utc, nameof(timestamp), "Timestamps must be expressed in UTC");
+
             Mode = mode;
             Staleness = staleness;
-        }
-
-        private TimestampBound(TimestampBoundMode mode, DateTime timestamp)
-        {
-            GaxPreconditions.CheckArgument(timestamp.Kind == DateTimeKind.Utc, nameof(timestamp), "Timestamps must be expressed in UTC");
-            Mode = mode;
             Timestamp = timestamp;
+            ReturnReadTimestamp = returnReadTimestamp;
         }
 
         /// <summary>
@@ -75,10 +71,22 @@ namespace Google.Cloud.Spanner.Data
         public DateTime Timestamp { get; }
 
         /// <summary>
+        /// If true, the read timestamp is included in the
+        /// <see cref="Transaction" /> message that describes the transaction.
+        /// <remarks>
+        /// The read timestamp is Cloud Spanner-selected unless it's an exact
+        /// read, in which case it will be set to the exact read timestamp set
+        /// in the request.
+        /// </remarks>
+        /// </summary>
+        public bool ReturnReadTimestamp { get; }
+
+        /// <summary>
         /// Read at a timestamp where all previously committed transactions
         /// are visible.
         /// </summary>
-        public static TimestampBound Strong { get; } = new TimestampBound(TimestampBoundMode.Strong);
+        public static TimestampBound Strong { get; } =
+            new TimestampBound(TimestampBoundMode.Strong, TimeSpan.Zero, s_utcMinValue);
 
         /// <summary>
         /// Executes all reads at a timestamp that is <paramref name="duration"/>
@@ -96,7 +104,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="duration">The exact staleness to use. Must not be negative.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
         public static TimestampBound OfExactStaleness(TimeSpan duration) =>
-            new TimestampBound(TimestampBoundMode.ExactStaleness, duration);
+            new TimestampBound(TimestampBoundMode.ExactStaleness, duration, s_utcMinValue);
 
         /// <summary>
         /// Read data at a timestamp >= `NOW - <paramref name="duration"/>`. Guarantees that all
@@ -116,7 +124,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="duration">The maximum duration of staleness to use. Must not be negative.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
         public static TimestampBound OfMaxStaleness(TimeSpan duration) =>
-            new TimestampBound(TimestampBoundMode.MaxStaleness, duration);
+            new TimestampBound(TimestampBoundMode.MaxStaleness, duration, s_utcMinValue);
 
         /// <summary>
         /// Executes all reads at a timestamp >= <paramref name="minReadTimestamp"/>.
@@ -130,7 +138,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="minReadTimestamp">The earliest timestamp to read from. Must be in UTC.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
         public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) =>
-            new TimestampBound(TimestampBoundMode.MinReadTimestamp, minReadTimestamp);
+            new TimestampBound(TimestampBoundMode.MinReadTimestamp, TimeSpan.Zero, minReadTimestamp);
 
         /// <summary>
         /// Executes all reads at the given timestamp. Unlike other modes,
@@ -146,7 +154,22 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="timestamp">The timestamp to read from. Must be in UTC.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
         public static TimestampBound OfReadTimestamp(DateTime timestamp) =>
-            new TimestampBound(TimestampBoundMode.ReadTimestamp, timestamp);
+            new TimestampBound(TimestampBoundMode.ReadTimestamp, TimeSpan.Zero, timestamp);
+
+        /// <summary>
+        /// Creates a <see cref="TimestampBound"/> with the given value on
+        /// whether to return a read timestamp.
+        /// </summary>
+        /// <param name="returnReadTimestamp">Whether to return a read timestamp.</param>
+        /// <returns>A created <see cref="TimestampBound"/>.</returns>
+        public TimestampBound WithReturnReadTimestamp(bool returnReadTimestamp)
+        {
+            if (this.ReturnReadTimestamp == returnReadTimestamp)
+            {
+                return this;
+            }
+            return new TimestampBound(Mode, Staleness, Timestamp, returnReadTimestamp);
+        }
 
         /// <inheritdoc />
         public bool Equals(TimestampBound other)
@@ -159,7 +182,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return true;
             }
-            return Mode == other.Mode && Staleness.Equals(other.Staleness) && Timestamp.Equals(other.Timestamp);
+            return Mode == other.Mode && Staleness.Equals(other.Staleness) && Timestamp.Equals(other.Timestamp) && ReturnReadTimestamp == other.ReturnReadTimestamp;
         }
 
         /// <inheritdoc />
@@ -173,6 +196,7 @@ namespace Google.Cloud.Spanner.Data
                 var hashCode = (int) Mode;
                 hashCode = (hashCode * 397) ^ Staleness.GetHashCode();
                 hashCode = (hashCode * 397) ^ Timestamp.GetHashCode();
+                hashCode = (hashCode * 397) ^ ReturnReadTimestamp.GetHashCode();
                 return hashCode;
             }
         }
@@ -190,7 +214,8 @@ namespace Google.Cloud.Spanner.Data
                 {
                     [nameof(Mode)] = Value.ForString(Mode.ToString()),
                     [nameof(Timestamp)] = Value.ForString(Timestamp.ToString("O")),
-                    [nameof(Staleness)] = Value.ForString(Staleness.Ticks.ToString(CultureInfo.InvariantCulture))
+                    [nameof(Staleness)] = Value.ForString(Staleness.Ticks.ToString(CultureInfo.InvariantCulture)),
+                    [nameof(ReturnReadTimestamp)] = Value.ForBool(ReturnReadTimestamp)
                 }
             };
             return structValue.ToByteString().ToBase64();
@@ -207,6 +232,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBoundMode? mode = null;
             DateTime? timestamp = null;
             TimeSpan? staleness = null;
+            bool returnReadTimestamp = false;
 
             if (structValue.Fields.TryGetValue(nameof(Mode), out Value timestampBoundModeValue))
             {
@@ -224,19 +250,22 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Mode)}");
             }
+            if (structValue.Fields.TryGetValue(nameof(ReturnReadTimestamp), out Value returnReadTimestampValue))
+            {
+                returnReadTimestamp = returnReadTimestampValue.BoolValue;
+            }
             switch (mode.Value)
             {
                 case TimestampBoundMode.ExactStaleness:
                 case TimestampBoundMode.MaxStaleness:
                     GaxPreconditions.CheckArgument(staleness.HasValue, nameof(base64String), "Unable to properly deserialize {0}.{1}", nameof(TimestampBound), nameof(Staleness));
-                    return new TimestampBound(mode.Value, staleness.Value);
+                    return new TimestampBound(mode.Value, staleness.Value, s_utcMinValue, returnReadTimestamp);
                 case TimestampBoundMode.MinReadTimestamp:
                 case TimestampBoundMode.ReadTimestamp:
                     GaxPreconditions.CheckArgument(timestamp.HasValue, nameof(base64String), "Unable to properly deserialize {0}.{1}", nameof(TimestampBound), nameof(Timestamp));
-                    return new TimestampBound(mode.Value, timestamp.Value);
+                    return new TimestampBound(mode.Value, TimeSpan.Zero, timestamp.Value, returnReadTimestamp);
                 case TimestampBoundMode.Strong:
-                    // No need to create a new instance
-                    return Strong;
+                    return Strong.WithReturnReadTimestamp(returnReadTimestamp);
                 default:
                     throw new ArgumentException($"Invalid mode for timestamp bound: {mode.Value}");
             }
@@ -266,6 +295,7 @@ namespace Google.Cloud.Spanner.Data
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            innerOptions.ReturnReadTimestamp = ReturnReadTimestamp;
             return new TransactionOptions { ReadOnly = innerOptions };
         }
     }

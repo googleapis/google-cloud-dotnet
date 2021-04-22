@@ -140,7 +140,7 @@ namespace Google.Cloud.Spanner.Data
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
-                return new SpannerDataReader(Connection.Logger, resultSet, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
+                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
