@@ -137,7 +137,7 @@ do
     # run it via ReleaseManager
     echo "Running $testdir"
     dotnet run -p ../tools/Google.Cloud.Tools.ReleaseManager -- \
-    smoke-test $(dirname $testdir) $TEST_PROJECT \
+      smoke-test $(dirname $testdir) \
       || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$testdir" =~ SmokeTests ]]
   then
