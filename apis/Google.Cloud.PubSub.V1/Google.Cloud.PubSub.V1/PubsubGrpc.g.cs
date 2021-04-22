@@ -31,21 +31,51 @@ namespace Google.Cloud.PubSub.V1 {
   {
     static readonly string __ServiceName = "google.pubsub.v1.Publisher";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Topic> __Marshaller_google_pubsub_v1_Topic = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Topic.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateTopicRequest> __Marshaller_google_pubsub_v1_UpdateTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishRequest> __Marshaller_google_pubsub_v1_PublishRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishResponse> __Marshaller_google_pubsub_v1_PublishResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetTopicRequest> __Marshaller_google_pubsub_v1_GetTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsRequest> __Marshaller_google_pubsub_v1_ListTopicsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Marshaller_google_pubsub_v1_ListTopicsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest> __Marshaller_google_pubsub_v1_ListTopicSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Marshaller_google_pubsub_v1_ListTopicSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest> __Marshaller_google_pubsub_v1_ListTopicSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> __Marshaller_google_pubsub_v1_ListTopicSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteTopicRequest> __Marshaller_google_pubsub_v1_DeleteTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest> __Marshaller_google_pubsub_v1_DetachSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> __Marshaller_google_pubsub_v1_DetachSubscriptionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Topic> __Marshaller_google_pubsub_v1_Topic = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.Topic.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateTopicRequest> __Marshaller_google_pubsub_v1_UpdateTopicRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishRequest> __Marshaller_google_pubsub_v1_PublishRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.PublishRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishResponse> __Marshaller_google_pubsub_v1_PublishResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.PublishResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetTopicRequest> __Marshaller_google_pubsub_v1_GetTopicRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsRequest> __Marshaller_google_pubsub_v1_ListTopicsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicsResponse> __Marshaller_google_pubsub_v1_ListTopicsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest> __Marshaller_google_pubsub_v1_ListTopicSubscriptionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse> __Marshaller_google_pubsub_v1_ListTopicSubscriptionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest> __Marshaller_google_pubsub_v1_ListTopicSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> __Marshaller_google_pubsub_v1_ListTopicSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteTopicRequest> __Marshaller_google_pubsub_v1_DeleteTopicRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest> __Marshaller_google_pubsub_v1_DetachSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> __Marshaller_google_pubsub_v1_DetachSubscriptionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic> __Method_CreateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic>(
         grpc::MethodType.Unary,
@@ -760,29 +790,59 @@ namespace Google.Cloud.PubSub.V1 {
   {
     static readonly string __ServiceName = "google.pubsub.v1.Subscriber";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Subscription> __Marshaller_google_pubsub_v1_Subscription = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Subscription.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSubscriptionRequest> __Marshaller_google_pubsub_v1_GetSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest> __Marshaller_google_pubsub_v1_UpdateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest> __Marshaller_google_pubsub_v1_ListSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse> __Marshaller_google_pubsub_v1_ListSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest> __Marshaller_google_pubsub_v1_DeleteSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest> __Marshaller_google_pubsub_v1_ModifyAckDeadlineRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.AcknowledgeRequest> __Marshaller_google_pubsub_v1_AcknowledgeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PullRequest> __Marshaller_google_pubsub_v1_PullRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PullRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PullResponse> __Marshaller_google_pubsub_v1_PullResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PullResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullRequest> __Marshaller_google_pubsub_v1_StreamingPullRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullResponse> __Marshaller_google_pubsub_v1_StreamingPullResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest> __Marshaller_google_pubsub_v1_ModifyPushConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSnapshotRequest> __Marshaller_google_pubsub_v1_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Snapshot> __Marshaller_google_pubsub_v1_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Snapshot.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsRequest> __Marshaller_google_pubsub_v1_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSnapshotsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsResponse> __Marshaller_google_pubsub_v1_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSnapshotRequest> __Marshaller_google_pubsub_v1_CreateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest> __Marshaller_google_pubsub_v1_UpdateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest> __Marshaller_google_pubsub_v1_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekRequest> __Marshaller_google_pubsub_v1_SeekRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.SeekRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekResponse> __Marshaller_google_pubsub_v1_SeekResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.SeekResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Subscription> __Marshaller_google_pubsub_v1_Subscription = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.Subscription.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSubscriptionRequest> __Marshaller_google_pubsub_v1_GetSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.GetSubscriptionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest> __Marshaller_google_pubsub_v1_UpdateSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest> __Marshaller_google_pubsub_v1_ListSubscriptionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse> __Marshaller_google_pubsub_v1_ListSubscriptionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest> __Marshaller_google_pubsub_v1_DeleteSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest> __Marshaller_google_pubsub_v1_ModifyAckDeadlineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.AcknowledgeRequest> __Marshaller_google_pubsub_v1_AcknowledgeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PullRequest> __Marshaller_google_pubsub_v1_PullRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.PullRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PullResponse> __Marshaller_google_pubsub_v1_PullResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.PullResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullRequest> __Marshaller_google_pubsub_v1_StreamingPullRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullResponse> __Marshaller_google_pubsub_v1_StreamingPullResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest> __Marshaller_google_pubsub_v1_ModifyPushConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSnapshotRequest> __Marshaller_google_pubsub_v1_GetSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.GetSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Snapshot> __Marshaller_google_pubsub_v1_Snapshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.Snapshot.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsRequest> __Marshaller_google_pubsub_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSnapshotsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsResponse> __Marshaller_google_pubsub_v1_ListSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSnapshotRequest> __Marshaller_google_pubsub_v1_CreateSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest> __Marshaller_google_pubsub_v1_UpdateSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest> __Marshaller_google_pubsub_v1_DeleteSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekRequest> __Marshaller_google_pubsub_v1_SeekRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.SeekRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekResponse> __Marshaller_google_pubsub_v1_SeekResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.SeekResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.Subscription, global::Google.Cloud.PubSub.V1.Subscription> __Method_CreateSubscription = new grpc::Method<global::Google.Cloud.PubSub.V1.Subscription, global::Google.Cloud.PubSub.V1.Subscription>(
         grpc::MethodType.Unary,

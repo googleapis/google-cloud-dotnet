@@ -31,17 +31,47 @@ namespace Google.Cloud.Dataproc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.dataproc.v1.ClusterController";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateClusterRequest> __Marshaller_google_cloud_dataproc_v1_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateClusterRequest> __Marshaller_google_cloud_dataproc_v1_UpdateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StopClusterRequest> __Marshaller_google_cloud_dataproc_v1_StopClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.StopClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StartClusterRequest> __Marshaller_google_cloud_dataproc_v1_StartClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.StartClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest> __Marshaller_google_cloud_dataproc_v1_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetClusterRequest> __Marshaller_google_cloud_dataproc_v1_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetClusterRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.Cluster> __Marshaller_google_cloud_dataproc_v1_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.Cluster.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListClustersRequest> __Marshaller_google_cloud_dataproc_v1_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListClustersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListClustersResponse> __Marshaller_google_cloud_dataproc_v1_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListClustersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest> __Marshaller_google_cloud_dataproc_v1_DiagnoseClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateClusterRequest> __Marshaller_google_cloud_dataproc_v1_CreateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateClusterRequest> __Marshaller_google_cloud_dataproc_v1_UpdateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StopClusterRequest> __Marshaller_google_cloud_dataproc_v1_StopClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.StopClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StartClusterRequest> __Marshaller_google_cloud_dataproc_v1_StartClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.StartClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest> __Marshaller_google_cloud_dataproc_v1_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.DeleteClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetClusterRequest> __Marshaller_google_cloud_dataproc_v1_GetClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.GetClusterRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.Cluster> __Marshaller_google_cloud_dataproc_v1_Cluster = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.Cluster.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListClustersRequest> __Marshaller_google_cloud_dataproc_v1_ListClustersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListClustersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListClustersResponse> __Marshaller_google_cloud_dataproc_v1_ListClustersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListClustersResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest> __Marshaller_google_cloud_dataproc_v1_DiagnoseClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.DiagnoseClusterRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.CreateClusterRequest, global::Google.LongRunning.Operation> __Method_CreateCluster = new grpc::Method<global::Google.Cloud.Dataproc.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

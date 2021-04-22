@@ -33,21 +33,51 @@ namespace Google.Cloud.OsConfig.V1 {
   {
     static readonly string __ServiceName = "google.cloud.osconfig.v1.OsConfigService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest> __Marshaller_google_cloud_osconfig_v1_ExecutePatchJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.PatchJob> __Marshaller_google_cloud_osconfig_v1_PatchJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.PatchJob.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.GetPatchJobRequest> __Marshaller_google_cloud_osconfig_v1_GetPatchJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.GetPatchJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest> __Marshaller_google_cloud_osconfig_v1_CancelPatchJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchJobInstanceDetailsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchJobInstanceDetailsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.CreatePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_CreatePatchDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.CreatePatchDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.PatchDeployment> __Marshaller_google_cloud_osconfig_v1_PatchDeployment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.PatchDeployment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.GetPatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_GetPatchDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.GetPatchDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchDeploymentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchDeploymentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_DeletePatchDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest> __Marshaller_google_cloud_osconfig_v1_ExecutePatchJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.PatchJob> __Marshaller_google_cloud_osconfig_v1_PatchJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.PatchJob.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.GetPatchJobRequest> __Marshaller_google_cloud_osconfig_v1_GetPatchJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.GetPatchJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest> __Marshaller_google_cloud_osconfig_v1_CancelPatchJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchJobInstanceDetailsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchJobInstanceDetailsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.CreatePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_CreatePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.CreatePatchDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.PatchDeployment> __Marshaller_google_cloud_osconfig_v1_PatchDeployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.PatchDeployment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.GetPatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_GetPatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.GetPatchDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsRequest> __Marshaller_google_cloud_osconfig_v1_ListPatchDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsResponse> __Marshaller_google_cloud_osconfig_v1_ListPatchDeploymentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_DeletePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest, global::Google.Cloud.OsConfig.V1.PatchJob> __Method_ExecutePatchJob = new grpc::Method<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest, global::Google.Cloud.OsConfig.V1.PatchJob>(
         grpc::MethodType.Unary,

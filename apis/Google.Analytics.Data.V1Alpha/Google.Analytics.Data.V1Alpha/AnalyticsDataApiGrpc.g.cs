@@ -30,18 +30,48 @@ namespace Google.Analytics.Data.V1Alpha {
   {
     static readonly string __ServiceName = "google.analytics.data.v1alpha.AlphaAnalyticsData";
 
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportRequest> __Marshaller_google_analytics_data_v1alpha_RunReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunReportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Marshaller_google_analytics_data_v1alpha_RunReportResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunReportResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest> __Marshaller_google_analytics_data_v1alpha_RunPivotReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> __Marshaller_google_analytics_data_v1alpha_RunPivotReportResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.Metadata.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportRequest> __Marshaller_google_analytics_data_v1alpha_RunReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunReportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Marshaller_google_analytics_data_v1alpha_RunReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunReportResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest> __Marshaller_google_analytics_data_v1alpha_RunPivotReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> __Marshaller_google_analytics_data_v1alpha_RunPivotReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.Metadata.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse.Parser));
 
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Method_RunReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse>(
         grpc::MethodType.Unary,

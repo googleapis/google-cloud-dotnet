@@ -31,10 +31,40 @@ namespace Google.Cloud.TextToSpeech.V1 {
   {
     static readonly string __ServiceName = "google.cloud.texttospeech.v1.TextToSpeech";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest> __Marshaller_google_cloud_texttospeech_v1_ListVoicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse> __Marshaller_google_cloud_texttospeech_v1_ListVoicesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest> __Marshaller_google_cloud_texttospeech_v1_SynthesizeSpeechRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse> __Marshaller_google_cloud_texttospeech_v1_SynthesizeSpeechResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest> __Marshaller_google_cloud_texttospeech_v1_ListVoicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse> __Marshaller_google_cloud_texttospeech_v1_ListVoicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest> __Marshaller_google_cloud_texttospeech_v1_SynthesizeSpeechRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse> __Marshaller_google_cloud_texttospeech_v1_SynthesizeSpeechResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest, global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse> __Method_ListVoices = new grpc::Method<global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest, global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse>(
         grpc::MethodType.Unary,

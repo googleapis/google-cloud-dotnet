@@ -31,21 +31,51 @@ namespace Google.Cloud.Gaming.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.gaming.v1beta.GameServerDeploymentsService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest> __Marshaller_google_cloud_gaming_v1beta_ListGameServerDeploymentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse> __Marshaller_google_cloud_gaming_v1beta_ListGameServerDeploymentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment> __Marshaller_google_cloud_gaming_v1beta_GameServerDeployment = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GameServerDeployment.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_CreateGameServerDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteGameServerDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerDeploymentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerDeploymentRolloutRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout> __Marshaller_google_cloud_gaming_v1beta_GameServerDeploymentRollout = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerDeploymentRolloutRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewGameServerDeploymentRolloutRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewGameServerDeploymentRolloutResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest> __Marshaller_google_cloud_gaming_v1beta_FetchDeploymentStateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse> __Marshaller_google_cloud_gaming_v1beta_FetchDeploymentStateResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest> __Marshaller_google_cloud_gaming_v1beta_ListGameServerDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse> __Marshaller_google_cloud_gaming_v1beta_ListGameServerDeploymentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment> __Marshaller_google_cloud_gaming_v1beta_GameServerDeployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GameServerDeployment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_CreateGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_GetGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout> __Marshaller_google_cloud_gaming_v1beta_GameServerDeploymentRollout = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewGameServerDeploymentRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest> __Marshaller_google_cloud_gaming_v1beta_FetchDeploymentStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse> __Marshaller_google_cloud_gaming_v1beta_FetchDeploymentStateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest, global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse> __Method_ListGameServerDeployments = new grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest, global::Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse>(
         grpc::MethodType.Unary,

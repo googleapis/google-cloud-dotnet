@@ -31,14 +31,44 @@ namespace Google.Cloud.Dataproc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.dataproc.v1.AutoscalingPolicyService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_CreateAutoscalingPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.AutoscalingPolicy> __Marshaller_google_cloud_dataproc_v1_AutoscalingPolicy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_UpdateAutoscalingPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateAutoscalingPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_GetAutoscalingPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetAutoscalingPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesRequest> __Marshaller_google_cloud_dataproc_v1_ListAutoscalingPoliciesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesResponse> __Marshaller_google_cloud_dataproc_v1_ListAutoscalingPoliciesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_DeleteAutoscalingPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteAutoscalingPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_CreateAutoscalingPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.AutoscalingPolicy> __Marshaller_google_cloud_dataproc_v1_AutoscalingPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.AutoscalingPolicy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_UpdateAutoscalingPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.UpdateAutoscalingPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_GetAutoscalingPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.GetAutoscalingPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesRequest> __Marshaller_google_cloud_dataproc_v1_ListAutoscalingPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesResponse> __Marshaller_google_cloud_dataproc_v1_ListAutoscalingPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListAutoscalingPoliciesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteAutoscalingPolicyRequest> __Marshaller_google_cloud_dataproc_v1_DeleteAutoscalingPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.DeleteAutoscalingPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest, global::Google.Cloud.Dataproc.V1.AutoscalingPolicy> __Method_CreateAutoscalingPolicy = new grpc::Method<global::Google.Cloud.Dataproc.V1.CreateAutoscalingPolicyRequest, global::Google.Cloud.Dataproc.V1.AutoscalingPolicy>(
         grpc::MethodType.Unary,

@@ -46,21 +46,51 @@ namespace Google.Cloud.Metastore.V1 {
   {
     static readonly string __ServiceName = "google.cloud.metastore.v1.DataprocMetastore";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListServicesRequest> __Marshaller_google_cloud_metastore_v1_ListServicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.ListServicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListServicesResponse> __Marshaller_google_cloud_metastore_v1_ListServicesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.ListServicesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.GetServiceRequest> __Marshaller_google_cloud_metastore_v1_GetServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.GetServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.Service> __Marshaller_google_cloud_metastore_v1_Service = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.Service.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateServiceRequest> __Marshaller_google_cloud_metastore_v1_CreateServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.CreateServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.UpdateServiceRequest> __Marshaller_google_cloud_metastore_v1_UpdateServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.UpdateServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.DeleteServiceRequest> __Marshaller_google_cloud_metastore_v1_DeleteServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.DeleteServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListMetadataImportsRequest> __Marshaller_google_cloud_metastore_v1_ListMetadataImportsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.ListMetadataImportsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListMetadataImportsResponse> __Marshaller_google_cloud_metastore_v1_ListMetadataImportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.ListMetadataImportsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.GetMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_GetMetadataImportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.GetMetadataImportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.MetadataImport> __Marshaller_google_cloud_metastore_v1_MetadataImport = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.MetadataImport.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_CreateMetadataImportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_UpdateMetadataImportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ExportMetadataRequest> __Marshaller_google_cloud_metastore_v1_ExportMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Metastore.V1.ExportMetadataRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListServicesRequest> __Marshaller_google_cloud_metastore_v1_ListServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListServicesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListServicesResponse> __Marshaller_google_cloud_metastore_v1_ListServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListServicesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.GetServiceRequest> __Marshaller_google_cloud_metastore_v1_GetServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.GetServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.Service> __Marshaller_google_cloud_metastore_v1_Service = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.Service.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateServiceRequest> __Marshaller_google_cloud_metastore_v1_CreateServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.CreateServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.UpdateServiceRequest> __Marshaller_google_cloud_metastore_v1_UpdateServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.UpdateServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.DeleteServiceRequest> __Marshaller_google_cloud_metastore_v1_DeleteServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.DeleteServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListMetadataImportsRequest> __Marshaller_google_cloud_metastore_v1_ListMetadataImportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListMetadataImportsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListMetadataImportsResponse> __Marshaller_google_cloud_metastore_v1_ListMetadataImportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListMetadataImportsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.GetMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_GetMetadataImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.GetMetadataImportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.MetadataImport> __Marshaller_google_cloud_metastore_v1_MetadataImport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.MetadataImport.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_CreateMetadataImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_UpdateMetadataImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ExportMetadataRequest> __Marshaller_google_cloud_metastore_v1_ExportMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ExportMetadataRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Metastore.V1.ListServicesRequest, global::Google.Cloud.Metastore.V1.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.Metastore.V1.ListServicesRequest, global::Google.Cloud.Metastore.V1.ListServicesResponse>(
         grpc::MethodType.Unary,

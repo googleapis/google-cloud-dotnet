@@ -31,16 +31,46 @@ namespace Google.Cloud.Gaming.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.gaming.v1beta.RealmsService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest> __Marshaller_google_cloud_gaming_v1beta_ListRealmsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse> __Marshaller_google_cloud_gaming_v1beta_ListRealmsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetRealmRequest> __Marshaller_google_cloud_gaming_v1beta_GetRealmRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.GetRealmRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.Realm> __Marshaller_google_cloud_gaming_v1beta_Realm = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.Realm.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateRealmRequest> __Marshaller_google_cloud_gaming_v1beta_CreateRealmRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.CreateRealmRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteRealmRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteRealmRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.DeleteRealmRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateRealmRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateRealmRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.UpdateRealmRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewRealmUpdateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewRealmUpdateResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest> __Marshaller_google_cloud_gaming_v1beta_ListRealmsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse> __Marshaller_google_cloud_gaming_v1beta_ListRealmsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.GetRealmRequest> __Marshaller_google_cloud_gaming_v1beta_GetRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.GetRealmRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.Realm> __Marshaller_google_cloud_gaming_v1beta_Realm = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.Realm.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.CreateRealmRequest> __Marshaller_google_cloud_gaming_v1beta_CreateRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.CreateRealmRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.DeleteRealmRequest> __Marshaller_google_cloud_gaming_v1beta_DeleteRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.DeleteRealmRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.UpdateRealmRequest> __Marshaller_google_cloud_gaming_v1beta_UpdateRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.UpdateRealmRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest> __Marshaller_google_cloud_gaming_v1beta_PreviewRealmUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse> __Marshaller_google_cloud_gaming_v1beta_PreviewRealmUpdateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest, global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse> __Method_ListRealms = new grpc::Method<global::Google.Cloud.Gaming.V1Beta.ListRealmsRequest, global::Google.Cloud.Gaming.V1Beta.ListRealmsResponse>(
         grpc::MethodType.Unary,

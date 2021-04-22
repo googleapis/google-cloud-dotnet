@@ -31,20 +31,50 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.gkehub.v1beta1.GkeHubMembershipService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_GetMembershipRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.Membership> __Marshaller_google_cloud_gkehub_v1beta1_Membership = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.Membership.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_CreateMembershipRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_DeleteMembershipRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_UpdateMembershipRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_GetMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.Membership> __Marshaller_google_cloud_gkehub_v1beta1_Membership = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.Membership.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_CreateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_DeleteMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_UpdateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> __Method_ListMemberships = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse>(
         grpc::MethodType.Unary,

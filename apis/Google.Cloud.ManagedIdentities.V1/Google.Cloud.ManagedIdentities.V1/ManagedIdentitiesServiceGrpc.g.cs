@@ -62,20 +62,50 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   {
     static readonly string __ServiceName = "google.cloud.managedidentities.v1.ManagedIdentitiesService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest> __Marshaller_google_cloud_managedidentities_v1_CreateMicrosoftAdDomainRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest> __Marshaller_google_cloud_managedidentities_v1_ListDomainsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> __Marshaller_google_cloud_managedidentities_v1_ListDomainsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest> __Marshaller_google_cloud_managedidentities_v1_GetDomainRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.Domain> __Marshaller_google_cloud_managedidentities_v1_Domain = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.Domain.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest> __Marshaller_google_cloud_managedidentities_v1_UpdateDomainRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest> __Marshaller_google_cloud_managedidentities_v1_DeleteDomainRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_AttachTrustRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ReconfigureTrustRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_DetachTrustRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ValidateTrustRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest> __Marshaller_google_cloud_managedidentities_v1_CreateMicrosoftAdDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest> __Marshaller_google_cloud_managedidentities_v1_ListDomainsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> __Marshaller_google_cloud_managedidentities_v1_ListDomainsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest> __Marshaller_google_cloud_managedidentities_v1_GetDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.Domain> __Marshaller_google_cloud_managedidentities_v1_Domain = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.Domain.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest> __Marshaller_google_cloud_managedidentities_v1_UpdateDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest> __Marshaller_google_cloud_managedidentities_v1_DeleteDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_AttachTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ReconfigureTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_DetachTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ValidateTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest, global::Google.LongRunning.Operation> __Method_CreateMicrosoftAdDomain = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

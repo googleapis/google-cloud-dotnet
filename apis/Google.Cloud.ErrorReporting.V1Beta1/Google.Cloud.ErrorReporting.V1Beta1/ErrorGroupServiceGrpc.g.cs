@@ -30,9 +30,39 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_GetGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ErrorGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_UpdateGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_GetGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Marshaller_google_devtools_clouderrorreporting_v1beta1_ErrorGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest> __Marshaller_google_devtools_clouderrorreporting_v1beta1_UpdateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Method_GetGroup = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(
         grpc::MethodType.Unary,

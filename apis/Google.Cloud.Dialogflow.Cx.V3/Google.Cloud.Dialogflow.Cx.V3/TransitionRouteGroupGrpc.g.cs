@@ -30,14 +30,44 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.TransitionRouteGroups";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListTransitionRouteGroupsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListTransitionRouteGroupsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetTransitionRouteGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.GetTransitionRouteGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup> __Marshaller_google_cloud_dialogflow_cx_v3_TransitionRouteGroup = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateTransitionRouteGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.CreateTransitionRouteGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateTransitionRouteGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.UpdateTransitionRouteGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteTransitionRouteGroupRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.DeleteTransitionRouteGroupRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListTransitionRouteGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListTransitionRouteGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetTransitionRouteGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetTransitionRouteGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup> __Marshaller_google_cloud_dialogflow_cx_v3_TransitionRouteGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateTransitionRouteGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CreateTransitionRouteGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateTransitionRouteGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateTransitionRouteGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteTransitionRouteGroupRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteTransitionRouteGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteTransitionRouteGroupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse> __Method_ListTransitionRouteGroups = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse>(
         grpc::MethodType.Unary,

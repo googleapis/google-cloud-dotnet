@@ -35,19 +35,49 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.video.transcoder.v1beta1.TranscoderService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_CreateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.Job> __Marshaller_google_cloud_video_transcoder_v1beta1_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsResponse> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_CreateJobTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate> __Marshaller_google_cloud_video_transcoder_v1beta1_JobTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesResponse> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_GetJobTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_DeleteJobTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobTemplateRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_CreateJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.Job> __Marshaller_google_cloud_video_transcoder_v1beta1_Job = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsResponse> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_GetJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_DeleteJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_CreateJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate> __Marshaller_google_cloud_video_transcoder_v1beta1_JobTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesResponse> __Marshaller_google_cloud_video_transcoder_v1beta1_ListJobTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.ListJobTemplatesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_GetJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.GetJobTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1beta1_DeleteJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1Beta1.DeleteJobTemplateRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest, global::Google.Cloud.Video.Transcoder.V1Beta1.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1Beta1.CreateJobRequest, global::Google.Cloud.Video.Transcoder.V1Beta1.Job>(
         grpc::MethodType.Unary,

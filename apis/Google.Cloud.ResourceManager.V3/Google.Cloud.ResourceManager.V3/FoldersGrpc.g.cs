@@ -32,23 +32,53 @@ namespace Google.Cloud.ResourceManager.V3 {
   {
     static readonly string __ServiceName = "google.cloud.resourcemanager.v3.Folders";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.GetFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_GetFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.GetFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.Folder> __Marshaller_google_cloud_resourcemanager_v3_Folder = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.Folder.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListFoldersRequest> __Marshaller_google_cloud_resourcemanager_v3_ListFoldersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.ListFoldersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListFoldersResponse> __Marshaller_google_cloud_resourcemanager_v3_ListFoldersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.ListFoldersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.SearchFoldersRequest> __Marshaller_google_cloud_resourcemanager_v3_SearchFoldersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.SearchFoldersRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.SearchFoldersResponse> __Marshaller_google_cloud_resourcemanager_v3_SearchFoldersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.SearchFoldersResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.CreateFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_CreateFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.CreateFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.UpdateFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_UpdateFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.UpdateFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.MoveFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_MoveFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.MoveFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.DeleteFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_DeleteFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.DeleteFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.UndeleteFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_UndeleteFolderRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ResourceManager.V3.UndeleteFolderRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.GetFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_GetFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.GetFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.Folder> __Marshaller_google_cloud_resourcemanager_v3_Folder = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.Folder.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListFoldersRequest> __Marshaller_google_cloud_resourcemanager_v3_ListFoldersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.ListFoldersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListFoldersResponse> __Marshaller_google_cloud_resourcemanager_v3_ListFoldersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.ListFoldersResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.SearchFoldersRequest> __Marshaller_google_cloud_resourcemanager_v3_SearchFoldersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.SearchFoldersRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.SearchFoldersResponse> __Marshaller_google_cloud_resourcemanager_v3_SearchFoldersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.SearchFoldersResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.CreateFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_CreateFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.CreateFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.UpdateFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_UpdateFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.UpdateFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.MoveFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_MoveFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.MoveFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.DeleteFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_DeleteFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.DeleteFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.UndeleteFolderRequest> __Marshaller_google_cloud_resourcemanager_v3_UndeleteFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.UndeleteFolderRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.ResourceManager.V3.GetFolderRequest, global::Google.Cloud.ResourceManager.V3.Folder> __Method_GetFolder = new grpc::Method<global::Google.Cloud.ResourceManager.V3.GetFolderRequest, global::Google.Cloud.ResourceManager.V3.Folder>(
         grpc::MethodType.Unary,

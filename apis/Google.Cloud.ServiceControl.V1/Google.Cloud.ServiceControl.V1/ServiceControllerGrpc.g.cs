@@ -33,10 +33,40 @@ namespace Google.Cloud.ServiceControl.V1 {
   {
     static readonly string __ServiceName = "google.api.servicecontrol.v1.ServiceController";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.CheckRequest> __Marshaller_google_api_servicecontrol_v1_CheckRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ServiceControl.V1.CheckRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.CheckResponse> __Marshaller_google_api_servicecontrol_v1_CheckResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ServiceControl.V1.CheckResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.ReportRequest> __Marshaller_google_api_servicecontrol_v1_ReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ServiceControl.V1.ReportRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.ReportResponse> __Marshaller_google_api_servicecontrol_v1_ReportResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ServiceControl.V1.ReportResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.CheckRequest> __Marshaller_google_api_servicecontrol_v1_CheckRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceControl.V1.CheckRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.CheckResponse> __Marshaller_google_api_servicecontrol_v1_CheckResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceControl.V1.CheckResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.ReportRequest> __Marshaller_google_api_servicecontrol_v1_ReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceControl.V1.ReportRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ServiceControl.V1.ReportResponse> __Marshaller_google_api_servicecontrol_v1_ReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceControl.V1.ReportResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.ServiceControl.V1.CheckRequest, global::Google.Cloud.ServiceControl.V1.CheckResponse> __Method_Check = new grpc::Method<global::Google.Cloud.ServiceControl.V1.CheckRequest, global::Google.Cloud.ServiceControl.V1.CheckResponse>(
         grpc::MethodType.Unary,

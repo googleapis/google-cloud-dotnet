@@ -35,26 +35,56 @@ namespace Google.Cloud.DataCatalog.V1 {
   {
     static readonly string __ServiceName = "google.cloud.datacatalog.v1.PolicyTagManager";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_CreateTaxonomyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.Taxonomy> __Marshaller_google_cloud_datacatalog_v1_Taxonomy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.Taxonomy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_DeleteTaxonomyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_UpdateTaxonomyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest> __Marshaller_google_cloud_datacatalog_v1_ListTaxonomiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse> __Marshaller_google_cloud_datacatalog_v1_ListTaxonomiesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.GetTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_GetTaxonomyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.GetTaxonomyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_CreatePolicyTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.PolicyTag> __Marshaller_google_cloud_datacatalog_v1_PolicyTag = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.PolicyTag.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_DeletePolicyTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_UpdatePolicyTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest> __Marshaller_google_cloud_datacatalog_v1_ListPolicyTagsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse> __Marshaller_google_cloud_datacatalog_v1_ListPolicyTagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.GetPolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_GetPolicyTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.GetPolicyTagRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_CreateTaxonomyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.Taxonomy> __Marshaller_google_cloud_datacatalog_v1_Taxonomy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.Taxonomy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_DeleteTaxonomyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_UpdateTaxonomyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest> __Marshaller_google_cloud_datacatalog_v1_ListTaxonomiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse> __Marshaller_google_cloud_datacatalog_v1_ListTaxonomiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.GetTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_GetTaxonomyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.GetTaxonomyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_CreatePolicyTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.PolicyTag> __Marshaller_google_cloud_datacatalog_v1_PolicyTag = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.PolicyTag.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_DeletePolicyTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_UpdatePolicyTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest> __Marshaller_google_cloud_datacatalog_v1_ListPolicyTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse> __Marshaller_google_cloud_datacatalog_v1_ListPolicyTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.GetPolicyTagRequest> __Marshaller_google_cloud_datacatalog_v1_GetPolicyTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.GetPolicyTagRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest, global::Google.Cloud.DataCatalog.V1.Taxonomy> __Method_CreateTaxonomy = new grpc::Method<global::Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest, global::Google.Cloud.DataCatalog.V1.Taxonomy>(
         grpc::MethodType.Unary,

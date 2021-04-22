@@ -31,17 +31,47 @@ namespace Google.Cloud.Dataproc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.dataproc.v1.WorkflowTemplateService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_CreateWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.WorkflowTemplate.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_GetWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateInlineWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_UpdateWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_DeleteWorkflowTemplateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_CreateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.WorkflowTemplate.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_GetWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateInlineWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_UpdateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_DeleteWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Method_CreateWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate>(
         grpc::MethodType.Unary,

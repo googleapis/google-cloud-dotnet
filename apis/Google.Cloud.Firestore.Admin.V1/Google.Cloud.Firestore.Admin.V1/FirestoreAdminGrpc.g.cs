@@ -32,21 +32,51 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   {
     static readonly string __ServiceName = "google.firestore.admin.v1.FirestoreAdmin";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest> __Marshaller_google_firestore_admin_v1_CreateIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest> __Marshaller_google_firestore_admin_v1_ListIndexesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse> __Marshaller_google_firestore_admin_v1_ListIndexesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest> __Marshaller_google_firestore_admin_v1_GetIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Index> __Marshaller_google_firestore_admin_v1_Index = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Index.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest> __Marshaller_google_firestore_admin_v1_DeleteIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest> __Marshaller_google_firestore_admin_v1_GetFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Field> __Marshaller_google_firestore_admin_v1_Field = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.Field.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest> __Marshaller_google_firestore_admin_v1_UpdateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest> __Marshaller_google_firestore_admin_v1_ListFieldsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse> __Marshaller_google_firestore_admin_v1_ListFieldsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ExportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest> __Marshaller_google_firestore_admin_v1_CreateIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest> __Marshaller_google_firestore_admin_v1_ListIndexesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListIndexesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse> __Marshaller_google_firestore_admin_v1_ListIndexesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListIndexesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest> __Marshaller_google_firestore_admin_v1_GetIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetIndexRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Index> __Marshaller_google_firestore_admin_v1_Index = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Index.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest> __Marshaller_google_firestore_admin_v1_DeleteIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest> __Marshaller_google_firestore_admin_v1_GetFieldRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetFieldRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Field> __Marshaller_google_firestore_admin_v1_Field = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Field.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest> __Marshaller_google_firestore_admin_v1_UpdateFieldRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest> __Marshaller_google_firestore_admin_v1_ListFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse> __Marshaller_google_firestore_admin_v1_ListFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ExportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,

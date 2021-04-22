@@ -30,20 +30,50 @@ namespace Google.Cloud.Talent.V4 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4.JobService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.CreateJobRequest> __Marshaller_google_cloud_talent_v4_CreateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.CreateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.Job> __Marshaller_google_cloud_talent_v4_Job = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.Job.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchCreateJobsRequest> __Marshaller_google_cloud_talent_v4_BatchCreateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.BatchCreateJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.GetJobRequest> __Marshaller_google_cloud_talent_v4_GetJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.GetJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.UpdateJobRequest> __Marshaller_google_cloud_talent_v4_UpdateJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.UpdateJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchUpdateJobsRequest> __Marshaller_google_cloud_talent_v4_BatchUpdateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.BatchUpdateJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.DeleteJobRequest> __Marshaller_google_cloud_talent_v4_DeleteJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.DeleteJobRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest> __Marshaller_google_cloud_talent_v4_BatchDeleteJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsRequest> __Marshaller_google_cloud_talent_v4_ListJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.ListJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsResponse> __Marshaller_google_cloud_talent_v4_ListJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.ListJobsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.SearchJobsRequest> __Marshaller_google_cloud_talent_v4_SearchJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.SearchJobsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.SearchJobsResponse> __Marshaller_google_cloud_talent_v4_SearchJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4.SearchJobsResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.CreateJobRequest> __Marshaller_google_cloud_talent_v4_CreateJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.CreateJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.Job> __Marshaller_google_cloud_talent_v4_Job = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.Job.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchCreateJobsRequest> __Marshaller_google_cloud_talent_v4_BatchCreateJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.BatchCreateJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.GetJobRequest> __Marshaller_google_cloud_talent_v4_GetJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.GetJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.UpdateJobRequest> __Marshaller_google_cloud_talent_v4_UpdateJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.UpdateJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchUpdateJobsRequest> __Marshaller_google_cloud_talent_v4_BatchUpdateJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.BatchUpdateJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.DeleteJobRequest> __Marshaller_google_cloud_talent_v4_DeleteJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.DeleteJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest> __Marshaller_google_cloud_talent_v4_BatchDeleteJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.BatchDeleteJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsRequest> __Marshaller_google_cloud_talent_v4_ListJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListJobsResponse> __Marshaller_google_cloud_talent_v4_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListJobsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.SearchJobsRequest> __Marshaller_google_cloud_talent_v4_SearchJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.SearchJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.SearchJobsResponse> __Marshaller_google_cloud_talent_v4_SearchJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.SearchJobsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.CreateJobRequest, global::Google.Cloud.Talent.V4.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Talent.V4.CreateJobRequest, global::Google.Cloud.Talent.V4.Job>(
         grpc::MethodType.Unary,

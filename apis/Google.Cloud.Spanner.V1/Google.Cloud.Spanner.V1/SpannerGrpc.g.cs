@@ -33,29 +33,59 @@ namespace Google.Cloud.Spanner.V1 {
   {
     static readonly string __ServiceName = "google.spanner.v1.Spanner";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CreateSessionRequest> __Marshaller_google_spanner_v1_CreateSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Session> __Marshaller_google_spanner_v1_Session = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.Session.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest> __Marshaller_google_spanner_v1_BatchCreateSessionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Marshaller_google_spanner_v1_BatchCreateSessionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.GetSessionRequest> __Marshaller_google_spanner_v1_GetSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsRequest> __Marshaller_google_spanner_v1_ListSessionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Marshaller_google_spanner_v1_ListSessionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.DeleteSessionRequest> __Marshaller_google_spanner_v1_DeleteSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest> __Marshaller_google_spanner_v1_ExecuteSqlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ResultSet> __Marshaller_google_spanner_v1_ResultSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ResultSet.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartialResultSet> __Marshaller_google_spanner_v1_PartialResultSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest> __Marshaller_google_spanner_v1_ExecuteBatchDmlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Marshaller_google_spanner_v1_ExecuteBatchDmlResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ReadRequest> __Marshaller_google_spanner_v1_ReadRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ReadRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BeginTransactionRequest> __Marshaller_google_spanner_v1_BeginTransactionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BeginTransactionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Transaction> __Marshaller_google_spanner_v1_Transaction = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.Transaction.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitRequest> __Marshaller_google_spanner_v1_CommitRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.CommitRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitResponse> __Marshaller_google_spanner_v1_CommitResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.CommitResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.RollbackRequest> __Marshaller_google_spanner_v1_RollbackRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.RollbackRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionQueryRequest> __Marshaller_google_spanner_v1_PartitionQueryRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.PartitionQueryRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionResponse> __Marshaller_google_spanner_v1_PartitionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.PartitionResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionReadRequest> __Marshaller_google_spanner_v1_PartitionReadRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CreateSessionRequest> __Marshaller_google_spanner_v1_CreateSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Session> __Marshaller_google_spanner_v1_Session = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.Session.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest> __Marshaller_google_spanner_v1_BatchCreateSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Marshaller_google_spanner_v1_BatchCreateSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.GetSessionRequest> __Marshaller_google_spanner_v1_GetSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsRequest> __Marshaller_google_spanner_v1_ListSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Marshaller_google_spanner_v1_ListSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.DeleteSessionRequest> __Marshaller_google_spanner_v1_DeleteSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest> __Marshaller_google_spanner_v1_ExecuteSqlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ResultSet> __Marshaller_google_spanner_v1_ResultSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ResultSet.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartialResultSet> __Marshaller_google_spanner_v1_PartialResultSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartialResultSet.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest> __Marshaller_google_spanner_v1_ExecuteBatchDmlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Marshaller_google_spanner_v1_ExecuteBatchDmlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ReadRequest> __Marshaller_google_spanner_v1_ReadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ReadRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BeginTransactionRequest> __Marshaller_google_spanner_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BeginTransactionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Transaction> __Marshaller_google_spanner_v1_Transaction = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.Transaction.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitRequest> __Marshaller_google_spanner_v1_CommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CommitRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitResponse> __Marshaller_google_spanner_v1_CommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CommitResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.RollbackRequest> __Marshaller_google_spanner_v1_RollbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.RollbackRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionQueryRequest> __Marshaller_google_spanner_v1_PartitionQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionQueryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionResponse> __Marshaller_google_spanner_v1_PartitionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionReadRequest> __Marshaller_google_spanner_v1_PartitionReadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_CreateSession = new grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
         grpc::MethodType.Unary,

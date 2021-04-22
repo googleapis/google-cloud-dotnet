@@ -32,18 +32,48 @@ namespace Google.Cloud.Language.V1 {
   {
     static readonly string __ServiceName = "google.cloud.language.v1.LanguageService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeSentimentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeSentimentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextRequest> __Marshaller_google_cloud_language_v1_ClassifyTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextResponse> __Marshaller_google_cloud_language_v1_ClassifyTextResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextRequest> __Marshaller_google_cloud_language_v1_AnnotateTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextResponse> __Marshaller_google_cloud_language_v1_AnnotateTextResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeSentimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeSentimentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextRequest> __Marshaller_google_cloud_language_v1_ClassifyTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextResponse> __Marshaller_google_cloud_language_v1_ClassifyTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextRequest> __Marshaller_google_cloud_language_v1_AnnotateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextResponse> __Marshaller_google_cloud_language_v1_AnnotateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> __Method_AnalyzeSentiment = new grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse>(
         grpc::MethodType.Unary,

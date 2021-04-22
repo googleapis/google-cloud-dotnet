@@ -30,10 +30,40 @@ namespace Google.Cloud.Retail.V2 {
   {
     static readonly string __ServiceName = "google.cloud.retail.v2.CatalogService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsRequest> __Marshaller_google_cloud_retail_v2_ListCatalogsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.ListCatalogsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Marshaller_google_cloud_retail_v2_ListCatalogsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.ListCatalogsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateCatalogRequest> __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.UpdateCatalogRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Catalog> __Marshaller_google_cloud_retail_v2_Catalog = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.Catalog.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsRequest> __Marshaller_google_cloud_retail_v2_ListCatalogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ListCatalogsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Marshaller_google_cloud_retail_v2_ListCatalogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ListCatalogsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateCatalogRequest> __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateCatalogRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Catalog> __Marshaller_google_cloud_retail_v2_Catalog = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.Catalog.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Method_ListCatalogs = new grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(
         grpc::MethodType.Unary,

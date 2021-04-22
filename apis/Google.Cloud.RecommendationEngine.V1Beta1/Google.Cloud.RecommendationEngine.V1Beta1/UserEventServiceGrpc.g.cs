@@ -30,15 +30,45 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recommendationengine.v1beta1.UserEventService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_WriteUserEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent> __Marshaller_google_cloud_recommendationengine_v1beta1_UserEvent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CollectUserEventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Api.HttpBody.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListUserEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_PurgeUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ImportUserEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest.Parser.ParseFrom);
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_WriteUserEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent> __Marshaller_google_cloud_recommendationengine_v1beta1_UserEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CollectUserEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListUserEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_PurgeUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ImportUserEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent> __Method_WriteUserEvent = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>(
         grpc::MethodType.Unary,
