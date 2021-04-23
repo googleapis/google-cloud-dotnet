@@ -46,6 +46,7 @@ namespace Google.Cloud.Tools.Common
         {
             ApiType.None => "OTHER",
             ApiType.Grpc => "GAPIC_AUTO",
+            ApiType.Regapic => "GAPIC_AUTO",
             ApiType.Rest => "GAPIC_MANUAL", // These aren't the REST generated clients, they're the augmented wrappers.
             ApiType.Analyzers => "OTHER",
             ApiType.Other => "OTHER",
