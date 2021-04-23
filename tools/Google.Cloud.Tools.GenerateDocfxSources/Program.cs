@@ -359,7 +359,7 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
         // TODO: Find a more robust way of detecting the clients.
         private static List<string> GetClientClasses(ApiMetadata api)
         {
-            if (api.Type != ApiType.Grpc)
+            if (api.Type != ApiType.Grpc && api.Type != ApiType.Regapic)
             {
                 return new List<string>();
             }
