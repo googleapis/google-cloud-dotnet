@@ -1906,8 +1906,7 @@
       "PackageFromDirectory": "google.cloud.resourcesettings.v1",
       "PackageFromProtos": "google.cloud.resourcesettings.v1",
       "ImportDirectories": [
-        "google/api",
-        "google/protobuf"
+        "google/api"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Resourcesettings.V1"
