@@ -78,13 +78,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public async Task LogsMultipleExceptions()
         {
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_0"));
             await Assert.ThrowsAsync<ArgumentException>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{_testId}"));
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_1"));
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_2"));
 
             var errorEvents = ErrorEventEntryVerifiers.VerifyMany(s_polling, _testId, 4);
 
