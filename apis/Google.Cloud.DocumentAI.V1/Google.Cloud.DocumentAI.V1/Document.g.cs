@@ -32,7 +32,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             "cHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8aGmdvb2dsZS90eXBlL2Rh",
             "dGV0aW1lLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90bxogZ29vZ2xl",
             "L3R5cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8ijTgKCERvY3VtZW50EhIKA3VyaRgBIAEoCUID4EEBSAAS",
+            "dGlvbnMucHJvdG8ipjgKCERvY3VtZW50EhIKA3VyaRgBIAEoCUID4EEBSAAS",
             "FgoHY29udGVudBgCIAEoDEID4EEBSAASEQoJbWltZV90eXBlGAMgASgJEhEK",
             "BHRleHQYBCABKAlCA+BBARI/Cgt0ZXh0X3N0eWxlcxgFIAMoCzIqLmdvb2ds",
             "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlN0eWxlEjgKBXBhZ2Vz",
@@ -163,40 +163,41 @@ namespace Google.Cloud.DocumentAI.V1 {
             "ZXh0X3NlZ21lbnRzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
             "djEuRG9jdW1lbnQuVGV4dEFuY2hvci5UZXh0U2VnbWVudBIPCgdjb250ZW50",
             "GAIgASgJGjUKC1RleHRTZWdtZW50EhMKC3N0YXJ0X2luZGV4GAEgASgDEhEK",
-            "CWVuZF9pbmRleBgCIAEoAxq/AwoKUGFnZUFuY2hvchJKCglwYWdlX3JlZnMY",
+            "CWVuZF9pbmRleBgCIAEoAxrYAwoKUGFnZUFuY2hvchJKCglwYWdlX3JlZnMY",
             "ASADKAsyNy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Q",
-            "YWdlQW5jaG9yLlBhZ2VSZWYa5AIKB1BhZ2VSZWYSEQoEcGFnZRgBIAEoA0ID",
+            "YWdlQW5jaG9yLlBhZ2VSZWYa/QIKB1BhZ2VSZWYSEQoEcGFnZRgBIAEoA0ID",
             "4EECElwKC2xheW91dF90eXBlGAIgASgOMkIuZ29vZ2xlLmNsb3VkLmRvY3Vt",
             "ZW50YWkudjEuRG9jdW1lbnQuUGFnZUFuY2hvci5QYWdlUmVmLkxheW91dFR5",
             "cGVCA+BBARIYCglsYXlvdXRfaWQYAyABKAlCBRgB4EEBEkQKDWJvdW5kaW5n",
             "X3BvbHkYBCABKAsyKC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Cb3Vu",
-            "ZGluZ1BvbHlCA+BBASKHAQoKTGF5b3V0VHlwZRIbChdMQVlPVVRfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgkKBUJMT0NLEAESDQoJUEFSQUdSQVBIEAISCAoETElO",
-            "RRADEgkKBVRPS0VOEAQSEgoOVklTVUFMX0VMRU1FTlQQBRIJCgVUQUJMRRAG",
-            "Eg4KCkZPUk1fRklFTEQQBxr1AgoKUHJvdmVuYW5jZRIQCghyZXZpc2lvbhgB",
-            "IAEoBRIKCgJpZBgCIAEoBRJHCgdwYXJlbnRzGAMgAygLMjYuZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUHJvdmVuYW5jZS5QYXJlbnQS",
-            "SwoEdHlwZRgEIAEoDjI9Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
-            "Y3VtZW50LlByb3ZlbmFuY2UuT3BlcmF0aW9uVHlwZRomCgZQYXJlbnQSEAoI",
-            "cmV2aXNpb24YASABKAUSCgoCaWQYAiABKAUiigEKDU9wZXJhdGlvblR5cGUS",
-            "HgoaT1BFUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZS",
-            "RU1PVkUQAhILCgdSRVBMQUNFEAMSEgoORVZBTF9SRVFVRVNURUQQBBIRCg1F",
-            "VkFMX0FQUFJPVkVEEAUSEAoMRVZBTF9TS0lQUEVEEAYajQIKCFJldmlzaW9u",
-            "Eg8KBWFnZW50GAQgASgJSAASEwoJcHJvY2Vzc29yGAUgASgJSAASCgoCaWQY",
-            "ASABKAkSDgoGcGFyZW50GAIgAygFEi8KC2NyZWF0ZV90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJPCgxodW1hbl9yZXZpZXcYBiAB",
-            "KAsyOS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5SZXZp",
-            "c2lvbi5IdW1hblJldmlldxozCgtIdW1hblJldmlldxINCgVzdGF0ZRgBIAEo",
-            "CRIVCg1zdGF0ZV9tZXNzYWdlGAIgASgJQggKBnNvdXJjZRqtAQoKVGV4dENo",
-            "YW5nZRJECgt0ZXh0X2FuY2hvchgBIAEoCzIvLmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxLkRvY3VtZW50LlRleHRBbmNob3ISFAoMY2hhbmdlZF90ZXh0",
-            "GAIgASgJEkMKCnByb3ZlbmFuY2UYAyADKAsyLy5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MS5Eb2N1bWVudC5Qcm92ZW5hbmNlQggKBnNvdXJjZULRAQoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxQg1Eb2N1bWVudFByb3Rv",
-            "UAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvZG9jdW1lbnRhaS92MTtkb2N1bWVudGFpqgIaR29vZ2xlLkNsb3VkLkRv",
-            "Y3VtZW50QUkuVjHKAhpHb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMeoCHUdv",
-            "b2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYgZwcm90bzM="));
+            "ZGluZ1BvbHlCA+BBARIXCgpjb25maWRlbmNlGAUgASgCQgPgQQEihwEKCkxh",
+            "eW91dFR5cGUSGwoXTEFZT1VUX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVCTE9D",
+            "SxABEg0KCVBBUkFHUkFQSBACEggKBExJTkUQAxIJCgVUT0tFThAEEhIKDlZJ",
+            "U1VBTF9FTEVNRU5UEAUSCQoFVEFCTEUQBhIOCgpGT1JNX0ZJRUxEEAca9QIK",
+            "ClByb3ZlbmFuY2USEAoIcmV2aXNpb24YASABKAUSCgoCaWQYAiABKAUSRwoH",
+            "cGFyZW50cxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
+            "Y3VtZW50LlByb3ZlbmFuY2UuUGFyZW50EksKBHR5cGUYBCABKA4yPS5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Qcm92ZW5hbmNlLk9w",
+            "ZXJhdGlvblR5cGUaJgoGUGFyZW50EhAKCHJldmlzaW9uGAEgASgFEgoKAmlk",
+            "GAIgASgFIooBCg1PcGVyYXRpb25UeXBlEh4KGk9QRVJBVElPTl9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAISCwoHUkVQTEFDRRAD",
+            "EhIKDkVWQUxfUkVRVUVTVEVEEAQSEQoNRVZBTF9BUFBST1ZFRBAFEhAKDEVW",
+            "QUxfU0tJUFBFRBAGGo0CCghSZXZpc2lvbhIPCgVhZ2VudBgEIAEoCUgAEhMK",
+            "CXByb2Nlc3NvchgFIAEoCUgAEgoKAmlkGAEgASgJEg4KBnBhcmVudBgCIAMo",
+            "BRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASTwoMaHVtYW5fcmV2aWV3GAYgASgLMjkuZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjEuRG9jdW1lbnQuUmV2aXNpb24uSHVtYW5SZXZpZXcaMwoL",
+            "SHVtYW5SZXZpZXcSDQoFc3RhdGUYASABKAkSFQoNc3RhdGVfbWVzc2FnZRgC",
+            "IAEoCUIICgZzb3VyY2UarQEKClRleHRDaGFuZ2USRAoLdGV4dF9hbmNob3IY",
+            "ASABKAsyLy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5U",
+            "ZXh0QW5jaG9yEhQKDGNoYW5nZWRfdGV4dBgCIAEoCRJDCgpwcm92ZW5hbmNl",
+            "GAMgAygLMi8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQu",
+            "UHJvdmVuYW5jZUIICgZzb3VyY2VC0QEKHmNvbS5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MUINRG9jdW1lbnRQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RvY3VtZW50YWkvdjE7ZG9j",
+            "dW1lbnRhaaoCGkdvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xl",
+            "XENsb3VkXERvY3VtZW50QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1bWVu",
+            "dEFJOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -218,7 +219,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Entity), global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Parser, new[]{ "TextAnchor", "Type", "MentionText", "MentionId", "Confidence", "PageAnchor", "Id", "NormalizedValue", "Properties", "Provenance", "Redacted" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Types.NormalizedValue), global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Types.NormalizedValue.Parser, new[]{ "MoneyValue", "DateValue", "DatetimeValue", "AddressValue", "BooleanValue", "Text" }, new[]{ "StructuredValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.EntityRelation), global::Google.Cloud.DocumentAI.V1.Document.Types.EntityRelation.Parser, new[]{ "SubjectId", "ObjectId", "Relation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor), global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Parser, new[]{ "TextSegments", "Content" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Types.TextSegment), global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Types.TextSegment.Parser, new[]{ "StartIndex", "EndIndex" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId", "BoundingPoly" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId", "BoundingPoly", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance), global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance.Parser, new[]{ "Revision", "Id", "Parents", "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance.Types.OperationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance.Types.Parent), global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance.Types.Parent.Parser, new[]{ "Revision", "Id" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Revision), global::Google.Cloud.DocumentAI.V1.Document.Types.Revision.Parser, new[]{ "Agent", "Processor", "Id", "Parent", "CreateTime", "HumanReview" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Revision.Types.HumanReview), global::Google.Cloud.DocumentAI.V1.Document.Types.Revision.Types.HumanReview.Parser, new[]{ "State", "StateMessage" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)})
@@ -8408,6 +8409,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               layoutType_ = other.layoutType_;
               layoutId_ = other.layoutId_;
               boundingPoly_ = other.boundingPoly_ != null ? other.boundingPoly_.Clone() : null;
+              confidence_ = other.confidence_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -8474,6 +8476,20 @@ namespace Google.Cloud.DocumentAI.V1 {
               }
             }
 
+            /// <summary>Field number for the "confidence" field.</summary>
+            public const int ConfidenceFieldNumber = 5;
+            private float confidence_;
+            /// <summary>
+            /// Optional. Confidence of detected page element, if applicable. Range [0, 1].
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public float Confidence {
+              get { return confidence_; }
+              set {
+                confidence_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as PageRef);
@@ -8491,6 +8507,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (LayoutType != other.LayoutType) return false;
               if (LayoutId != other.LayoutId) return false;
               if (!object.Equals(BoundingPoly, other.BoundingPoly)) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -8501,6 +8518,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (LayoutType != global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) hash ^= LayoutType.GetHashCode();
               if (LayoutId.Length != 0) hash ^= LayoutId.GetHashCode();
               if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
+              if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -8533,6 +8551,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(34);
                 output.WriteMessage(BoundingPoly);
               }
+              if (Confidence != 0F) {
+                output.WriteRawTag(45);
+                output.WriteFloat(Confidence);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -8558,6 +8580,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(34);
                 output.WriteMessage(BoundingPoly);
               }
+              if (Confidence != 0F) {
+                output.WriteRawTag(45);
+                output.WriteFloat(Confidence);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -8578,6 +8604,9 @@ namespace Google.Cloud.DocumentAI.V1 {
               }
               if (boundingPoly_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
+              }
+              if (Confidence != 0F) {
+                size += 1 + 4;
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -8604,6 +8633,9 @@ namespace Google.Cloud.DocumentAI.V1 {
                   BoundingPoly = new global::Google.Cloud.DocumentAI.V1.BoundingPoly();
                 }
                 BoundingPoly.MergeFrom(other.BoundingPoly);
+              }
+              if (other.Confidence != 0F) {
+                Confidence = other.Confidence;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -8638,6 +8670,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                     input.ReadMessage(BoundingPoly);
                     break;
                   }
+                  case 45: {
+                    Confidence = input.ReadFloat();
+                    break;
+                  }
                 }
               }
             #endif
@@ -8669,6 +8705,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                       BoundingPoly = new global::Google.Cloud.DocumentAI.V1.BoundingPoly();
                     }
                     input.ReadMessage(BoundingPoly);
+                    break;
+                  }
+                  case 45: {
+                    Confidence = input.ReadFloat();
                     break;
                   }
                 }
