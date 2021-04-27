@@ -34,13 +34,13 @@ namespace Google.Identity.AccessContextManager.Type {
             "TkRPV1MQAhIRCg1ERVNLVE9QX0xJTlVYEAMSFQoRREVTS1RPUF9DSFJPTUVf",
             "T1MQBhILCgdBTkRST0lEEAQSBwoDSU9TEAUqVgoVRGV2aWNlTWFuYWdlbWVu",
             "dExldmVsEhoKFk1BTkFHRU1FTlRfVU5TUEVDSUZJRUQQABIICgROT05FEAES",
-            "CQoFQkFTSUMQAhIMCghDT01QTEVURRADQpICCi1jb20uZ29vZ2xlLmlkZW50",
-            "aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnR5cGVCCVR5cGVQcm90b1ABWk1n",
+            "CQoFQkFTSUMQAhIMCghDT01QTEVURRADQo0CCi1jb20uZ29vZ2xlLmlkZW50",
+            "aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnR5cGVCCVR5cGVQcm90b1ABWkhn",
             "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lkZW50aXR5",
-            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3R5cGU7dHlwZaoCKUdvb2dsZS5JZGVu",
-            "dGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdlci5UeXBlygIpR29vZ2xlXElkZW50",
-            "aXR5XEFjY2Vzc0NvbnRleHRNYW5hZ2VyXFR5cGXqAixHb29nbGU6OklkZW50",
-            "aXR5OjpBY2Nlc3NDb250ZXh0TWFuYWdlcjo6VHlwZWIGcHJvdG8z"));
+            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3R5cGWqAilHb29nbGUuSWRlbnRpdHku",
+            "QWNjZXNzQ29udGV4dE1hbmFnZXIuVHlwZcoCKUdvb2dsZVxJZGVudGl0eVxB",
+            "Y2Nlc3NDb250ZXh0TWFuYWdlclxUeXBl6gIsR29vZ2xlOjpJZGVudGl0eTo6",
+            "QWNjZXNzQ29udGV4dE1hbmFnZXI6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Identity.AccessContextManager.Type.DeviceEncryptionStatus), typeof(global::Google.Identity.AccessContextManager.Type.OsType), typeof(global::Google.Identity.AccessContextManager.Type.DeviceManagementLevel), }, null, null));
