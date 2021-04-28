@@ -95,14 +95,16 @@ namespace Google.Cloud.Datastore.V1
             {
                 // Note: this is a recursive call, but because EmulatorDetection defaults to None,
                 // it will only recurse once.
-                return new DatastoreDbBuilder
+                var builder = new DatastoreDbBuilder
                 {
                     Endpoint = environment[s_emulatorHostVariable],
                     Settings = Settings,
                     ProjectId = ProjectId ?? environment[s_emulatorProjectVariable],
                     NamespaceId = NamespaceId,
                     ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
-                }.PrepareBuilder();
+                };
+                builder.CopySettingsForEmulator(this);
+                return builder.PrepareBuilder();
             }
             GaxPreconditions.CheckState(!string.IsNullOrEmpty(ProjectId), "The project ID must be configured");
 
