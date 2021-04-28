@@ -34,118 +34,153 @@ namespace Google.Analytics.Admin.V1Alpha {
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMZGlzcGxheV9uYW1l",
             "GAQgASgJQgPgQQISEwoLcmVnaW9uX2NvZGUYBSABKAkSFAoHZGVsZXRlZBgG",
             "IAEoCEID4EEDOj7qQTsKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
-            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSKKAwoIUHJvcGVydHkSEQoE",
+            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSLlAwoIUHJvcGVydHkSEQoE",
             "bmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKBnBhcmVudBgC",
             "IAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EECEksKEWluZHVz",
             "dHJ5X2NhdGVnb3J5GAYgASgOMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhLkluZHVzdHJ5Q2F0ZWdvcnkSEQoJdGltZV96b25lGAcgASgJEhUK",
-            "DWN1cnJlbmN5X2NvZGUYCCABKAkSFAoHZGVsZXRlZBgJIAEoCEID4EEDOkLq",
-            "QT8KJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1Byb3BlcnR5EhVw",
-            "cm9wZXJ0aWVzL3twcm9wZXJ0eX0i5AIKFEFuZHJvaWRBcHBEYXRhU3RyZWFt",
-            "EhEKBG5hbWUYASABKAlCA+BBAxIcCg9maXJlYmFzZV9hcHBfaWQYAiABKAlC",
-            "A+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxwYWNrYWdlX25hbWUYBSABKAlC",
-            "A+BBBRIUCgxkaXNwbGF5X25hbWUYBiABKAk6fupBewoyYW5hbHl0aWNzYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vQW5kcm9pZEFwcERhdGFTdHJlYW0SRXByb3Bl",
-            "cnRpZXMve3Byb3BlcnR5fS9hbmRyb2lkQXBwRGF0YVN0cmVhbXMve2FuZHJv",
-            "aWRfYXBwX2RhdGFfc3RyZWFtfSLUAgoQSW9zQXBwRGF0YVN0cmVhbRIRCgRu",
-            "YW1lGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSGQoJYnVuZGxlX2lkGAUgASgJQgbgQQXgQQIS",
-            "FAoMZGlzcGxheV9uYW1lGAYgASgJOnLqQW8KLmFuYWx5dGljc2FkbWluLmdv",
-            "b2dsZWFwaXMuY29tL0lvc0FwcERhdGFTdHJlYW0SPXByb3BlcnRpZXMve3By",
-            "b3BlcnR5fS9pb3NBcHBEYXRhU3RyZWFtcy97aW9zX2FwcF9kYXRhX3N0cmVh",
-            "bX0i6AIKDVdlYkRhdGFTdHJlYW0SEQoEbmFtZRgBIAEoCUID4EEDEhsKDm1l",
-            "YXN1cmVtZW50X2lkGAIgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAMg",
-            "ASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVmYXVsdF91cmkYBiAB",
-            "KAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYByABKAlCA+BBAjpo6kFlCithbmFs",
-            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9XZWJEYXRhU3RyZWFtEjZwcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vd2ViRGF0YVN0cmVhbXMve3dlYl9kYXRhX3N0",
-            "cmVhbX0iygEKCFVzZXJMaW5rEgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRk",
-            "cmVzcxgCIAEoCRIUCgxkaXJlY3Rfcm9sZXMYAyADKAk6ggHqQX8KJmFuYWx5",
-            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1VzZXJMaW5rEihhY2NvdW50cy97",
-            "YWNjb3VudH0vdXNlckxpbmtzL3t1c2VyX2xpbmt9Eitwcm9wZXJ0aWVzL3tw",
-            "cm9wZXJ0eX0vdXNlckxpbmtzL3t1c2VyX2xpbmt9ImMKDUF1ZGl0VXNlckxp",
-            "bmsSDAoEbmFtZRgBIAEoCRIVCg1lbWFpbF9hZGRyZXNzGAIgASgJEhQKDGRp",
-            "cmVjdF9yb2xlcxgDIAMoCRIXCg9lZmZlY3RpdmVfcm9sZXMYBCADKAkimQQK",
-            "G0VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSFgoOc3RyZWFtX2VuYWJsZWQYAiABKAgSHwoScGFnZV92aWV3c19lbmFi",
-            "bGVkGAMgASgIQgPgQQMSFwoPc2Nyb2xsc19lbmFibGVkGAQgASgIEh8KF291",
-            "dGJvdW5kX2NsaWNrc19lbmFibGVkGAUgASgIEhsKE3NpdGVfc2VhcmNoX2Vu",
-            "YWJsZWQYByABKAgSIAoYdmlkZW9fZW5nYWdlbWVudF9lbmFibGVkGAkgASgI",
-            "Eh4KFmZpbGVfZG93bmxvYWRzX2VuYWJsZWQYCiABKAgSHwoScGFnZV9sb2Fk",
-            "c19lbmFibGVkGAwgASgIQgPgQQMSHAoUcGFnZV9jaGFuZ2VzX2VuYWJsZWQY",
-            "DSABKAgSIwoWc2VhcmNoX3F1ZXJ5X3BhcmFtZXRlchgQIAEoCUID4EECEhsK",
-            "E3VyaV9xdWVyeV9wYXJhbWV0ZXIYESABKAk6kwHqQY8BCjlhbmFseXRpY3Nh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9FbmhhbmNlZE1lYXN1cmVtZW50U2V0dGlu",
-            "Z3MSUnByb3BlcnRpZXMve3Byb3BlcnR5fS93ZWJEYXRhU3RyZWFtcy97d2Vi",
-            "X2RhdGFfc3RyZWFtfS9lbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MiowIK",
-            "DEZpcmViYXNlTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoHcHJvamVjdBgC",
-            "IAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEk4KE21heGltdW1fdXNlcl9hY2Nlc3MYBCAB",
-            "KA4yMS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTWF4aW11bVVz",
-            "ZXJBY2Nlc3M6ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "RmlyZWJhc2VMaW5rEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZmlyZWJhc2VM",
-            "aW5rcy97ZmlyZWJhc2VfbGlua30ijwEKDUdsb2JhbFNpdGVUYWcSEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEhQKB3NuaXBwZXQYAiABKAlCA+BBBTpV6kFSCithbmFs",
-            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9HbG9iYWxTaXRlVGFnEiNwcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vZ2xvYmFsU2l0ZVRhZyKQAwoNR29vZ2xlQWRz",
-            "TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGAoLY3VzdG9tZXJfaWQYAyABKAlC",
-            "A+BBBRIfChJjYW5fbWFuYWdlX2NsaWVudHMYBCABKAhCA+BBAxI/ChthZHNf",
-            "cGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBSABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuQm9vbFZhbHVlEhoKDWVtYWlsX2FkZHJlc3MYBiABKAlCA+BBAxI0Cgtj",
-            "cmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAzpo6kFlCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
-            "LmNvbS9Hb29nbGVBZHNMaW5rEjZwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZ29v",
-            "Z2xlQWRzTGlua3Mve2dvb2dsZV9hZHNfbGlua30i6wIKE0RhdGFTaGFyaW5n",
-            "U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEisKI3NoYXJpbmdfd2l0aF9n",
-            "b29nbGVfc3VwcG9ydF9lbmFibGVkGAIgASgIEjIKKnNoYXJpbmdfd2l0aF9n",
-            "b29nbGVfYXNzaWduZWRfc2FsZXNfZW5hYmxlZBgDIAEoCBItCiVzaGFyaW5n",
-            "X3dpdGhfZ29vZ2xlX2FueV9zYWxlc19lbmFibGVkGAQgASgIEiwKJHNoYXJp",
-            "bmdfd2l0aF9nb29nbGVfcHJvZHVjdHNfZW5hYmxlZBgFIAEoCBIjChtzaGFy",
-            "aW5nX3dpdGhfb3RoZXJzX2VuYWJsZWQYBiABKAg6XupBWwoxYW5hbHl0aWNz",
-            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVNoYXJpbmdTZXR0aW5ncxImYWNj",
-            "b3VudHMve2FjY291bnR9L2RhdGFTaGFyaW5nU2V0dGluZ3MilQIKDkFjY291",
-            "bnRTdW1tYXJ5EgwKBG5hbWUYASABKAkSOwoHYWNjb3VudBgCIAEoCUIq+kEn",
-            "CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhQKDGRp",
-            "c3BsYXlfbmFtZRgDIAEoCRJLChJwcm9wZXJ0eV9zdW1tYXJpZXMYBCADKAsy",
-            "Ly5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlTdW1t",
-            "YXJ5OlXqQVIKLGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291",
-            "bnRTdW1tYXJ5EiJhY2NvdW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9",
-            "ImYKD1Byb3BlcnR5U3VtbWFyeRI9Cghwcm9wZXJ0eRgBIAEoCUIr+kEoCiZh",
-            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eRIUCgxkaXNw",
-            "bGF5X25hbWUYAiABKAkqpwEKEU1heGltdW1Vc2VyQWNjZXNzEiMKH01BWElN",
-            "VU1fVVNFUl9BQ0NFU1NfVU5TUEVDSUZJRUQQABINCglOT19BQ0NFU1MQARIU",
-            "ChBSRUFEX0FORF9BTkFMWVpFEAISIgoeRURJVE9SX1dJVEhPVVRfTElOS19N",
-            "QU5BR0VNRU5UEAMSJAogRURJVE9SX0lOQ0xVRElOR19MSU5LX01BTkFHRU1F",
-            "TlQQBCqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09S",
-            "WV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19B",
-            "TkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxU",
-            "SENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQ",
-            "BxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9G",
-            "SVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FO",
-            "RF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRAN",
-            "EhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09N",
-            "EA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElO",
-            "RV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBF",
-            "VFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5D",
-            "RRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVD",
-            "QVRJT04QGRIMCghTSE9QUElORxAaQnsKImNvbS5nb29nbGUuYW5hbHl0aWNz",
-            "LmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaQ2dvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2FkbWluL3Yx",
-            "YWxwaGE7YWRtaW5iBnByb3RvMw=="));
+            "MWFscGhhLkluZHVzdHJ5Q2F0ZWdvcnkSFgoJdGltZV96b25lGAcgASgJQgPg",
+            "QQISFQoNY3VycmVuY3lfY29kZRgIIAEoCRI0CgtkZWxldGVfdGltZRgLIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVf",
+            "dGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzpC",
+            "6kE/CiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eRIV",
+            "cHJvcGVydGllcy97cHJvcGVydHl9IuQCChRBbmRyb2lkQXBwRGF0YVN0cmVh",
+            "bRIRCgRuYW1lGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJ",
+            "QgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMcGFja2FnZV9uYW1lGAUgASgJ",
+            "QgPgQQUSFAoMZGlzcGxheV9uYW1lGAYgASgJOn7qQXsKMmFuYWx5dGljc2Fk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0FuZHJvaWRBcHBEYXRhU3RyZWFtEkVwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vYW5kcm9pZEFwcERhdGFTdHJlYW1zL3thbmRy",
+            "b2lkX2FwcF9kYXRhX3N0cmVhbX0i1AIKEElvc0FwcERhdGFTdHJlYW0SEQoE",
+            "bmFtZRgBIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9pZBgCIAEoCUID4EED",
+            "EjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEhkKCWJ1bmRsZV9pZBgFIAEoCUIG4EEF4EEC",
+            "EhQKDGRpc3BsYXlfbmFtZRgGIAEoCTpy6kFvCi5hbmFseXRpY3NhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9Jb3NBcHBEYXRhU3RyZWFtEj1wcm9wZXJ0aWVzL3tw",
+            "cm9wZXJ0eX0vaW9zQXBwRGF0YVN0cmVhbXMve2lvc19hcHBfZGF0YV9zdHJl",
+            "YW19IugCCg1XZWJEYXRhU3RyZWFtEhEKBG5hbWUYASABKAlCA+BBAxIbCg5t",
+            "ZWFzdXJlbWVudF9pZBgCIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9pZBgD",
+            "IAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2RlZmF1bHRfdXJpGAYg",
+            "ASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAcgASgJQgPgQQI6aOpBZQorYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vV2ViRGF0YVN0cmVhbRI2cHJv",
+            "cGVydGllcy97cHJvcGVydHl9L3dlYkRhdGFTdHJlYW1zL3t3ZWJfZGF0YV9z",
+            "dHJlYW19IsoBCghVc2VyTGluaxIMCgRuYW1lGAEgASgJEhUKDWVtYWlsX2Fk",
+            "ZHJlc3MYAiABKAkSFAoMZGlyZWN0X3JvbGVzGAMgAygJOoIB6kF/CiZhbmFs",
+            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Vc2VyTGluaxIoYWNjb3VudHMv",
+            "e2FjY291bnR9L3VzZXJMaW5rcy97dXNlcl9saW5rfRIrcHJvcGVydGllcy97",
+            "cHJvcGVydHl9L3VzZXJMaW5rcy97dXNlcl9saW5rfSJjCg1BdWRpdFVzZXJM",
+            "aW5rEgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRkcmVzcxgCIAEoCRIUCgxk",
+            "aXJlY3Rfcm9sZXMYAyADKAkSFwoPZWZmZWN0aXZlX3JvbGVzGAQgAygJIpkE",
+            "ChtFbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID",
+            "4EEDEhYKDnN0cmVhbV9lbmFibGVkGAIgASgIEh8KEnBhZ2Vfdmlld3NfZW5h",
+            "YmxlZBgDIAEoCEID4EEDEhcKD3Njcm9sbHNfZW5hYmxlZBgEIAEoCBIfChdv",
+            "dXRib3VuZF9jbGlja3NfZW5hYmxlZBgFIAEoCBIbChNzaXRlX3NlYXJjaF9l",
+            "bmFibGVkGAcgASgIEiAKGHZpZGVvX2VuZ2FnZW1lbnRfZW5hYmxlZBgJIAEo",
+            "CBIeChZmaWxlX2Rvd25sb2Fkc19lbmFibGVkGAogASgIEh8KEnBhZ2VfbG9h",
+            "ZHNfZW5hYmxlZBgMIAEoCEID4EEDEhwKFHBhZ2VfY2hhbmdlc19lbmFibGVk",
+            "GA0gASgIEiMKFnNlYXJjaF9xdWVyeV9wYXJhbWV0ZXIYECABKAlCA+BBAhIb",
+            "ChN1cmlfcXVlcnlfcGFyYW1ldGVyGBEgASgJOpMB6kGPAQo5YW5hbHl0aWNz",
+            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vRW5oYW5jZWRNZWFzdXJlbWVudFNldHRp",
+            "bmdzElJwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vd2ViRGF0YVN0cmVhbXMve3dl",
+            "Yl9kYXRhX3N0cmVhbX0vZW5oYW5jZWRNZWFzdXJlbWVudFNldHRpbmdzIqMC",
+            "CgxGaXJlYmFzZUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3Byb2plY3QY",
+            "AiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJOChNtYXhpbXVtX3VzZXJfYWNjZXNzGAQg",
+            "ASgOMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLk1heGltdW1V",
+            "c2VyQWNjZXNzOmTqQWEKKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
+            "L0ZpcmViYXNlTGluaxIzcHJvcGVydGllcy97cHJvcGVydHl9L2ZpcmViYXNl",
+            "TGlua3Mve2ZpcmViYXNlX2xpbmt9Io8BCg1HbG9iYWxTaXRlVGFnEhEKBG5h",
+            "bWUYASABKAlCA+BBAxIUCgdzbmlwcGV0GAIgASgJQgPgQQU6VepBUgorYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vR2xvYmFsU2l0ZVRhZxIjcHJv",
+            "cGVydGllcy97cHJvcGVydHl9L2dsb2JhbFNpdGVUYWcikAMKDUdvb2dsZUFk",
+            "c0xpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhgKC2N1c3RvbWVyX2lkGAMgASgJ",
+            "QgPgQQUSHwoSY2FuX21hbmFnZV9jbGllbnRzGAQgASgIQgPgQQMSPwobYWRz",
+            "X3BlcnNvbmFsaXphdGlvbl9lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkJvb2xWYWx1ZRIaCg1lbWFpbF9hZGRyZXNzGAYgASgJQgPgQQMSNAoL",
+            "Y3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQM6aOpBZQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb20vR29vZ2xlQWRzTGluaxI2cHJvcGVydGllcy97cHJvcGVydHl9L2dv",
+            "b2dsZUFkc0xpbmtzL3tnb29nbGVfYWRzX2xpbmt9IusCChNEYXRhU2hhcmlu",
+            "Z1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxIrCiNzaGFyaW5nX3dpdGhf",
+            "Z29vZ2xlX3N1cHBvcnRfZW5hYmxlZBgCIAEoCBIyCipzaGFyaW5nX3dpdGhf",
+            "Z29vZ2xlX2Fzc2lnbmVkX3NhbGVzX2VuYWJsZWQYAyABKAgSLQolc2hhcmlu",
+            "Z193aXRoX2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgEIAEoCBIsCiRzaGFy",
+            "aW5nX3dpdGhfZ29vZ2xlX3Byb2R1Y3RzX2VuYWJsZWQYBSABKAgSIwobc2hh",
+            "cmluZ193aXRoX290aGVyc19lbmFibGVkGAYgASgIOl7qQVsKMWFuYWx5dGlj",
+            "c2FkbWluLmdvb2dsZWFwaXMuY29tL0RhdGFTaGFyaW5nU2V0dGluZ3MSJmFj",
+            "Y291bnRzL3thY2NvdW50fS9kYXRhU2hhcmluZ1NldHRpbmdzIpUCCg5BY2Nv",
+            "dW50U3VtbWFyeRIMCgRuYW1lGAEgASgJEjsKB2FjY291bnQYAiABKAlCKvpB",
+            "JwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudBIUCgxk",
+            "aXNwbGF5X25hbWUYAyABKAkSSwoScHJvcGVydHlfc3VtbWFyaWVzGAQgAygL",
+            "Mi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlByb3BlcnR5U3Vt",
+            "bWFyeTpV6kFSCixhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2Nv",
+            "dW50U3VtbWFyeRIiYWNjb3VudFN1bW1hcmllcy97YWNjb3VudF9zdW1tYXJ5",
+            "fSJmCg9Qcm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkYASABKAlCK/pBKAom",
+            "YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFAoMZGlz",
+            "cGxheV9uYW1lGAIgASgJIooCChJDaGFuZ2VIaXN0b3J5RXZlbnQSCgoCaWQY",
+            "ASABKAkSLwoLY2hhbmdlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEj0KCmFjdG9yX3R5cGUYAyABKA4yKS5nb29nbGUuYW5hbHl0",
+            "aWNzLmFkbWluLnYxYWxwaGEuQWN0b3JUeXBlEhgKEHVzZXJfYWN0b3JfZW1h",
+            "aWwYBCABKAkSGAoQY2hhbmdlc19maWx0ZXJlZBgFIAEoCBJECgdjaGFuZ2Vz",
+            "GAYgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5n",
+            "ZUhpc3RvcnlDaGFuZ2Ui3QYKE0NoYW5nZUhpc3RvcnlDaGFuZ2USEAoIcmVz",
+            "b3VyY2UYASABKAkSOgoGYWN0aW9uGAIgASgOMiouZ29vZ2xlLmFuYWx5dGlj",
+            "cy5hZG1pbi52MWFscGhhLkFjdGlvblR5cGUSaQoWcmVzb3VyY2VfYmVmb3Jl",
+            "X2NoYW5nZRgDIAEoCzJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNvdXJjZRJo",
+            "ChVyZXNvdXJjZV9hZnRlcl9jaGFuZ2UYBCABKAsySS5nb29nbGUuYW5hbHl0",
+            "aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZS5DaGFuZ2VI",
+            "aXN0b3J5UmVzb3VyY2UaogQKFUNoYW5nZUhpc3RvcnlSZXNvdXJjZRI6Cgdh",
+            "Y2NvdW50GAEgASgLMicuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkFjY291bnRIABI8Cghwcm9wZXJ0eRgCIAEoCzIoLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eUgAEkgKD3dlYl9kYXRhX3N0cmVh",
+            "bRgDIAEoCzItLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5XZWJE",
+            "YXRhU3RyZWFtSAASVwoXYW5kcm9pZF9hcHBfZGF0YV9zdHJlYW0YBCABKAsy",
+            "NC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQW5kcm9pZEFwcERh",
+            "dGFTdHJlYW1IABJPChNpb3NfYXBwX2RhdGFfc3RyZWFtGAUgASgLMjAuZ29v",
+            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLklvc0FwcERhdGFTdHJlYW1I",
+            "ABJFCg1maXJlYmFzZV9saW5rGAYgASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkZpcmViYXNlTGlua0gAEkgKD2dvb2dsZV9hZHNfbGlu",
+            "axgHIAEoCzItLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29n",
+            "bGVBZHNMaW5rSABCCgoIcmVzb3VyY2UqpwEKEU1heGltdW1Vc2VyQWNjZXNz",
+            "EiMKH01BWElNVU1fVVNFUl9BQ0NFU1NfVU5TUEVDSUZJRUQQABINCglOT19B",
+            "Q0NFU1MQARIUChBSRUFEX0FORF9BTkFMWVpFEAISIgoeRURJVE9SX1dJVEhP",
+            "VVRfTElOS19NQU5BR0VNRU5UEAMSJAogRURJVE9SX0lOQ0xVRElOR19MSU5L",
+            "X01BTkFHRU1FTlQQBCqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RS",
+            "WV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9C",
+            "VVNJTkVTU19BTkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRAD",
+            "Eg4KCkhFQUxUSENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYS",
+            "CQoFT1RIRVIQBxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVB",
+            "VVRZX0FORF9GSVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChIS",
+            "Cg5GT09EX0FORF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRf",
+            "TEVJU1VSRRANEhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FO",
+            "RF9URUxFQ09NEA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAR",
+            "EhYKEk9OTElORV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVU",
+            "WRATEhQKEFBFVFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0K",
+            "CVJFRkVSRU5DRRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JT",
+            "X0FORF9FRFVDQVRJT04QGRIMCghTSE9QUElORxAaKkoKCUFjdG9yVHlwZRIa",
+            "ChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEgoKBlNZU1RF",
+            "TRACEgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsKF0FDVElPTl9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQREFURUQQAhILCgdE",
+            "RUxFVEVEEAMq1wEKGUNoYW5nZUhpc3RvcnlSZXNvdXJjZVR5cGUSLAooQ0hB",
+            "TkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgsKB0FD",
+            "Q09VTlQQARIMCghQUk9QRVJUWRACEhMKD1dFQl9EQVRBX1NUUkVBTRADEhsK",
+            "F0FORFJPSURfQVBQX0RBVEFfU1RSRUFNEAQSFwoTSU9TX0FQUF9EQVRBX1NU",
+            "UkVBTRAFEhEKDUZJUkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQ",
+            "B0J7CiJjb20uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhQg5SZXNv",
+            "dXJjZXNQcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2FuYWx5dGljcy9hZG1pbi92MWFscGhhO2FkbWluYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "Deleted" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "DeleteTime", "ExpireTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream), global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "PackageName", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.IosAppDataStream), global::Google.Analytics.Admin.V1Alpha.IosAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "BundleId", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.WebDataStream), global::Google.Analytics.Admin.V1Alpha.WebDataStream.Parser, new[]{ "Name", "MeasurementId", "FirebaseAppId", "CreateTime", "UpdateTime", "DefaultUri", "DisplayName" }, null, null, null, null),
@@ -157,7 +192,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "EmailAddress", "CreateTime", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataSharingSettings), global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser, new[]{ "Name", "SharingWithGoogleSupportEnabled", "SharingWithGoogleAssignedSalesEnabled", "SharingWithGoogleAnySalesEnabled", "SharingWithGoogleProductsEnabled", "SharingWithOthersEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccountSummary), global::Google.Analytics.Admin.V1Alpha.AccountSummary.Parser, new[]{ "Name", "Account", "DisplayName", "PropertySummaries" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "WebDataStream", "AndroidAppDataStream", "IosAppDataStream", "FirebaseLink", "GoogleAdsLink" }, new[]{ "Resource" }, null, null, null)})
           }));
     }
     #endregion
@@ -305,6 +342,89 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Shopping
     /// </summary>
     [pbr::OriginalName("SHOPPING")] Shopping = 26,
+  }
+
+  /// <summary>
+  /// Different kinds of actors that can make changes to Google Analytics
+  /// resources.
+  /// </summary>
+  public enum ActorType {
+    /// <summary>
+    /// Unknown or unspecified actor type.
+    /// </summary>
+    [pbr::OriginalName("ACTOR_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Changes made by the user specified in actor_email.
+    /// </summary>
+    [pbr::OriginalName("USER")] User = 1,
+    /// <summary>
+    /// Changes made by the Google Analytics system.
+    /// </summary>
+    [pbr::OriginalName("SYSTEM")] System = 2,
+    /// <summary>
+    /// Changes made by Google Analytics support team staff.
+    /// </summary>
+    [pbr::OriginalName("SUPPORT")] Support = 3,
+  }
+
+  /// <summary>
+  /// Types of actions that may change a resource.
+  /// </summary>
+  public enum ActionType {
+    /// <summary>
+    /// Action type unknown or not specified.
+    /// </summary>
+    [pbr::OriginalName("ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Resource was created in this change.
+    /// </summary>
+    [pbr::OriginalName("CREATED")] Created = 1,
+    /// <summary>
+    /// Resource was updated in this change.
+    /// </summary>
+    [pbr::OriginalName("UPDATED")] Updated = 2,
+    /// <summary>
+    /// Resource was deleted in this change.
+    /// </summary>
+    [pbr::OriginalName("DELETED")] Deleted = 3,
+  }
+
+  /// <summary>
+  /// Types of resources whose changes may be returned from change history.
+  /// </summary>
+  public enum ChangeHistoryResourceType {
+    /// <summary>
+    /// Resource type unknown or not specified.
+    /// </summary>
+    [pbr::OriginalName("CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Account resource
+    /// </summary>
+    [pbr::OriginalName("ACCOUNT")] Account = 1,
+    /// <summary>
+    /// Property resource
+    /// </summary>
+    [pbr::OriginalName("PROPERTY")] Property = 2,
+    /// <summary>
+    /// WebDataStream resource
+    /// </summary>
+    [pbr::OriginalName("WEB_DATA_STREAM")] WebDataStream = 3,
+    /// <summary>
+    /// AndroidAppDataStream resource
+    /// </summary>
+    [pbr::OriginalName("ANDROID_APP_DATA_STREAM")] AndroidAppDataStream = 4,
+    /// <summary>
+    /// IosAppDataStream resource
+    /// </summary>
+    [pbr::OriginalName("IOS_APP_DATA_STREAM")] IosAppDataStream = 5,
+    /// <summary>
+    /// FirebaseLink resource
+    /// </summary>
+    [pbr::OriginalName("FIREBASE_LINK")] FirebaseLink = 6,
+    /// <summary>
+    /// GoogleAdsLink resource
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_ADS_LINK")] GoogleAdsLink = 7,
   }
 
   #endregion
@@ -744,7 +864,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       industryCategory_ = other.industryCategory_;
       timeZone_ = other.timeZone_;
       currencyCode_ = other.currencyCode_;
-      deleted_ = other.deleted_;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -850,7 +971,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int TimeZoneFieldNumber = 7;
     private string timeZone_ = "";
     /// <summary>
-    /// Reporting Time Zone, used as the day boundary for reports, regardless of
+    /// Required. Reporting Time Zone, used as the day boundary for reports, regardless of
     /// where the data originates. If the time zone honors DST, Analytics will
     /// automatically adjust for the changes.
     ///
@@ -885,18 +1006,34 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "deleted" field.</summary>
-    public const int DeletedFieldNumber = 9;
-    private bool deleted_;
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. Indicates whether this Property is soft-deleted or not. Deleted properties
-    /// are excluded from List results unless specifically requested.
+    /// Output only. If set, the time at which this property was trashed. If not set, then this
+    /// property is not currently in the trash can.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Deleted {
-      get { return deleted_; }
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
       set {
-        deleted_ = value;
+        deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. If set, the time at which this trashed property will be permanently
+    /// deleted. If not set, then this property is not currently in the trash can
+    /// and is not slated to be deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
       }
     }
 
@@ -921,7 +1058,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (IndustryCategory != other.IndustryCategory) return false;
       if (TimeZone != other.TimeZone) return false;
       if (CurrencyCode != other.CurrencyCode) return false;
-      if (Deleted != other.Deleted) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -936,7 +1074,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (IndustryCategory != global::Google.Analytics.Admin.V1Alpha.IndustryCategory.Unspecified) hash ^= IndustryCategory.GetHashCode();
       if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
       if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
-      if (Deleted != false) hash ^= Deleted.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -985,9 +1124,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(66);
         output.WriteString(CurrencyCode);
       }
-      if (Deleted != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(Deleted);
+      if (deleteTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1030,9 +1173,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(66);
         output.WriteString(CurrencyCode);
       }
-      if (Deleted != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(Deleted);
+      if (deleteTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1067,8 +1214,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (CurrencyCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
       }
-      if (Deleted != false) {
-        size += 1 + 1;
+      if (deleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1111,8 +1261,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.CurrencyCode.Length != 0) {
         CurrencyCode = other.CurrencyCode;
       }
-      if (other.Deleted != false) {
-        Deleted = other.Deleted;
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1166,8 +1325,18 @@ namespace Google.Analytics.Admin.V1Alpha {
             CurrencyCode = input.ReadString();
             break;
           }
-          case 72: {
-            Deleted = input.ReadBool();
+          case 90: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 98: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
             break;
           }
         }
@@ -1222,8 +1391,18 @@ namespace Google.Analytics.Admin.V1Alpha {
             CurrencyCode = input.ReadString();
             break;
           }
-          case 72: {
-            Deleted = input.ReadBool();
+          case 90: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 98: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
             break;
           }
         }
@@ -5487,6 +5666,1256 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// A set of changes within a Google Analytics account or its child properties
+  /// that resulted from the same cause. Common causes would be updates made in the
+  /// Google Analytics UI, changes from customer support, or automatic Google
+  /// Analytics system changes.
+  /// </summary>
+  public sealed partial class ChangeHistoryEvent : pb::IMessage<ChangeHistoryEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChangeHistoryEvent> _parser = new pb::MessageParser<ChangeHistoryEvent>(() => new ChangeHistoryEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ChangeHistoryEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryEvent(ChangeHistoryEvent other) : this() {
+      id_ = other.id_;
+      changeTime_ = other.changeTime_ != null ? other.changeTime_.Clone() : null;
+      actorType_ = other.actorType_;
+      userActorEmail_ = other.userActorEmail_;
+      changesFiltered_ = other.changesFiltered_;
+      changes_ = other.changes_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryEvent Clone() {
+      return new ChangeHistoryEvent(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// ID of this change history event. This ID is unique across Google Analytics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "change_time" field.</summary>
+    public const int ChangeTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp changeTime_;
+    /// <summary>
+    /// Time when change was made.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ChangeTime {
+      get { return changeTime_; }
+      set {
+        changeTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "actor_type" field.</summary>
+    public const int ActorTypeFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.ActorType actorType_ = global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified;
+    /// <summary>
+    /// The type of actor that made this change.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Admin.V1Alpha.ActorType ActorType {
+      get { return actorType_; }
+      set {
+        actorType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_actor_email" field.</summary>
+    public const int UserActorEmailFieldNumber = 4;
+    private string userActorEmail_ = "";
+    /// <summary>
+    /// Email address of the Google account that made the change. This will be a
+    /// valid email address if the actor field is set to USER, and empty otherwise.
+    /// Google accounts that have been deleted will cause an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserActorEmail {
+      get { return userActorEmail_; }
+      set {
+        userActorEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "changes_filtered" field.</summary>
+    public const int ChangesFilteredFieldNumber = 5;
+    private bool changesFiltered_;
+    /// <summary>
+    /// If true, then the list of changes returned was filtered, and does not
+    /// represent all changes that occurred in this event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ChangesFiltered {
+      get { return changesFiltered_; }
+      set {
+        changesFiltered_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "changes" field.</summary>
+    public const int ChangesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange> _repeated_changes_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange> changes_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange>();
+    /// <summary>
+    /// A list of changes made in this change history event that fit the filters
+    /// specified in SearchChangeHistoryEventsRequest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange> Changes {
+      get { return changes_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ChangeHistoryEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ChangeHistoryEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (!object.Equals(ChangeTime, other.ChangeTime)) return false;
+      if (ActorType != other.ActorType) return false;
+      if (UserActorEmail != other.UserActorEmail) return false;
+      if (ChangesFiltered != other.ChangesFiltered) return false;
+      if(!changes_.Equals(other.changes_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (changeTime_ != null) hash ^= ChangeTime.GetHashCode();
+      if (ActorType != global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified) hash ^= ActorType.GetHashCode();
+      if (UserActorEmail.Length != 0) hash ^= UserActorEmail.GetHashCode();
+      if (ChangesFiltered != false) hash ^= ChangesFiltered.GetHashCode();
+      hash ^= changes_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (changeTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ChangeTime);
+      }
+      if (ActorType != global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ActorType);
+      }
+      if (UserActorEmail.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(UserActorEmail);
+      }
+      if (ChangesFiltered != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ChangesFiltered);
+      }
+      changes_.WriteTo(output, _repeated_changes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (changeTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ChangeTime);
+      }
+      if (ActorType != global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ActorType);
+      }
+      if (UserActorEmail.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(UserActorEmail);
+      }
+      if (ChangesFiltered != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ChangesFiltered);
+      }
+      changes_.WriteTo(ref output, _repeated_changes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (changeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChangeTime);
+      }
+      if (ActorType != global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActorType);
+      }
+      if (UserActorEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserActorEmail);
+      }
+      if (ChangesFiltered != false) {
+        size += 1 + 1;
+      }
+      size += changes_.CalculateSize(_repeated_changes_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ChangeHistoryEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.changeTime_ != null) {
+        if (changeTime_ == null) {
+          ChangeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ChangeTime.MergeFrom(other.ChangeTime);
+      }
+      if (other.ActorType != global::Google.Analytics.Admin.V1Alpha.ActorType.Unspecified) {
+        ActorType = other.ActorType;
+      }
+      if (other.UserActorEmail.Length != 0) {
+        UserActorEmail = other.UserActorEmail;
+      }
+      if (other.ChangesFiltered != false) {
+        ChangesFiltered = other.ChangesFiltered;
+      }
+      changes_.Add(other.changes_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (changeTime_ == null) {
+              ChangeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ChangeTime);
+            break;
+          }
+          case 24: {
+            ActorType = (global::Google.Analytics.Admin.V1Alpha.ActorType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            UserActorEmail = input.ReadString();
+            break;
+          }
+          case 40: {
+            ChangesFiltered = input.ReadBool();
+            break;
+          }
+          case 50: {
+            changes_.AddEntriesFrom(input, _repeated_changes_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (changeTime_ == null) {
+              ChangeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ChangeTime);
+            break;
+          }
+          case 24: {
+            ActorType = (global::Google.Analytics.Admin.V1Alpha.ActorType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            UserActorEmail = input.ReadString();
+            break;
+          }
+          case 40: {
+            ChangesFiltered = input.ReadBool();
+            break;
+          }
+          case 50: {
+            changes_.AddEntriesFrom(ref input, _repeated_changes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A description of a change to a single Google Analytics resource.
+  /// </summary>
+  public sealed partial class ChangeHistoryChange : pb::IMessage<ChangeHistoryChange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChangeHistoryChange> _parser = new pb::MessageParser<ChangeHistoryChange>(() => new ChangeHistoryChange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ChangeHistoryChange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryChange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryChange(ChangeHistoryChange other) : this() {
+      resource_ = other.resource_;
+      action_ = other.action_;
+      resourceBeforeChange_ = other.resourceBeforeChange_ != null ? other.resourceBeforeChange_.Clone() : null;
+      resourceAfterChange_ = other.resourceAfterChange_ != null ? other.resourceAfterChange_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeHistoryChange Clone() {
+      return new ChangeHistoryChange(this);
+    }
+
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 1;
+    private string resource_ = "";
+    /// <summary>
+    /// Resource name of the resource whose changes are described by this entry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Resource {
+      get { return resource_; }
+      set {
+        resource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "action" field.</summary>
+    public const int ActionFieldNumber = 2;
+    private global::Google.Analytics.Admin.V1Alpha.ActionType action_ = global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified;
+    /// <summary>
+    /// The type of action that changed this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Admin.V1Alpha.ActionType Action {
+      get { return action_; }
+      set {
+        action_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "resource_before_change" field.</summary>
+    public const int ResourceBeforeChangeFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource resourceBeforeChange_;
+    /// <summary>
+    /// Resource contents from before the change was made. If this resource was
+    /// created in this change, this field will be missing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource ResourceBeforeChange {
+      get { return resourceBeforeChange_; }
+      set {
+        resourceBeforeChange_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "resource_after_change" field.</summary>
+    public const int ResourceAfterChangeFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource resourceAfterChange_;
+    /// <summary>
+    /// Resource contents from after the change was made. If this resource was
+    /// deleted in this change, this field will be missing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource ResourceAfterChange {
+      get { return resourceAfterChange_; }
+      set {
+        resourceAfterChange_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ChangeHistoryChange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ChangeHistoryChange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Resource != other.Resource) return false;
+      if (Action != other.Action) return false;
+      if (!object.Equals(ResourceBeforeChange, other.ResourceBeforeChange)) return false;
+      if (!object.Equals(ResourceAfterChange, other.ResourceAfterChange)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Resource.Length != 0) hash ^= Resource.GetHashCode();
+      if (Action != global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified) hash ^= Action.GetHashCode();
+      if (resourceBeforeChange_ != null) hash ^= ResourceBeforeChange.GetHashCode();
+      if (resourceAfterChange_ != null) hash ^= ResourceAfterChange.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Resource.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Resource);
+      }
+      if (Action != global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Action);
+      }
+      if (resourceBeforeChange_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ResourceBeforeChange);
+      }
+      if (resourceAfterChange_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResourceAfterChange);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Resource.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Resource);
+      }
+      if (Action != global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Action);
+      }
+      if (resourceBeforeChange_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ResourceBeforeChange);
+      }
+      if (resourceAfterChange_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResourceAfterChange);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Resource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
+      }
+      if (Action != global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
+      }
+      if (resourceBeforeChange_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceBeforeChange);
+      }
+      if (resourceAfterChange_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceAfterChange);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ChangeHistoryChange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Resource.Length != 0) {
+        Resource = other.Resource;
+      }
+      if (other.Action != global::Google.Analytics.Admin.V1Alpha.ActionType.Unspecified) {
+        Action = other.Action;
+      }
+      if (other.resourceBeforeChange_ != null) {
+        if (resourceBeforeChange_ == null) {
+          ResourceBeforeChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+        }
+        ResourceBeforeChange.MergeFrom(other.ResourceBeforeChange);
+      }
+      if (other.resourceAfterChange_ != null) {
+        if (resourceAfterChange_ == null) {
+          ResourceAfterChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+        }
+        ResourceAfterChange.MergeFrom(other.ResourceAfterChange);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Resource = input.ReadString();
+            break;
+          }
+          case 16: {
+            Action = (global::Google.Analytics.Admin.V1Alpha.ActionType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (resourceBeforeChange_ == null) {
+              ResourceBeforeChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+            }
+            input.ReadMessage(ResourceBeforeChange);
+            break;
+          }
+          case 34: {
+            if (resourceAfterChange_ == null) {
+              ResourceAfterChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+            }
+            input.ReadMessage(ResourceAfterChange);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Resource = input.ReadString();
+            break;
+          }
+          case 16: {
+            Action = (global::Google.Analytics.Admin.V1Alpha.ActionType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (resourceBeforeChange_ == null) {
+              ResourceBeforeChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+            }
+            input.ReadMessage(ResourceBeforeChange);
+            break;
+          }
+          case 34: {
+            if (resourceAfterChange_ == null) {
+              ResourceAfterChange = new global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource();
+            }
+            input.ReadMessage(ResourceAfterChange);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ChangeHistoryChange message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A snapshot of a resource as before or after the result of a change in
+      /// change history.
+      /// </summary>
+      public sealed partial class ChangeHistoryResource : pb::IMessage<ChangeHistoryResource>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ChangeHistoryResource> _parser = new pb::MessageParser<ChangeHistoryResource>(() => new ChangeHistoryResource());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ChangeHistoryResource> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ChangeHistoryResource() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ChangeHistoryResource(ChangeHistoryResource other) : this() {
+          switch (other.ResourceCase) {
+            case ResourceOneofCase.Account:
+              Account = other.Account.Clone();
+              break;
+            case ResourceOneofCase.Property:
+              Property = other.Property.Clone();
+              break;
+            case ResourceOneofCase.WebDataStream:
+              WebDataStream = other.WebDataStream.Clone();
+              break;
+            case ResourceOneofCase.AndroidAppDataStream:
+              AndroidAppDataStream = other.AndroidAppDataStream.Clone();
+              break;
+            case ResourceOneofCase.IosAppDataStream:
+              IosAppDataStream = other.IosAppDataStream.Clone();
+              break;
+            case ResourceOneofCase.FirebaseLink:
+              FirebaseLink = other.FirebaseLink.Clone();
+              break;
+            case ResourceOneofCase.GoogleAdsLink:
+              GoogleAdsLink = other.GoogleAdsLink.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ChangeHistoryResource Clone() {
+          return new ChangeHistoryResource(this);
+        }
+
+        /// <summary>Field number for the "account" field.</summary>
+        public const int AccountFieldNumber = 1;
+        /// <summary>
+        /// A snapshot of an Account resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.Account Account {
+          get { return resourceCase_ == ResourceOneofCase.Account ? (global::Google.Analytics.Admin.V1Alpha.Account) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.Account;
+          }
+        }
+
+        /// <summary>Field number for the "property" field.</summary>
+        public const int PropertyFieldNumber = 2;
+        /// <summary>
+        /// A snapshot of a Property resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.Property Property {
+          get { return resourceCase_ == ResourceOneofCase.Property ? (global::Google.Analytics.Admin.V1Alpha.Property) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.Property;
+          }
+        }
+
+        /// <summary>Field number for the "web_data_stream" field.</summary>
+        public const int WebDataStreamFieldNumber = 3;
+        /// <summary>
+        /// A snapshot of a WebDataStream resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.WebDataStream WebDataStream {
+          get { return resourceCase_ == ResourceOneofCase.WebDataStream ? (global::Google.Analytics.Admin.V1Alpha.WebDataStream) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.WebDataStream;
+          }
+        }
+
+        /// <summary>Field number for the "android_app_data_stream" field.</summary>
+        public const int AndroidAppDataStreamFieldNumber = 4;
+        /// <summary>
+        /// A snapshot of an AndroidAppDataStream resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream AndroidAppDataStream {
+          get { return resourceCase_ == ResourceOneofCase.AndroidAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.AndroidAppDataStream;
+          }
+        }
+
+        /// <summary>Field number for the "ios_app_data_stream" field.</summary>
+        public const int IosAppDataStreamFieldNumber = 5;
+        /// <summary>
+        /// A snapshot of an IosAppDataStream resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.IosAppDataStream IosAppDataStream {
+          get { return resourceCase_ == ResourceOneofCase.IosAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.IosAppDataStream) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.IosAppDataStream;
+          }
+        }
+
+        /// <summary>Field number for the "firebase_link" field.</summary>
+        public const int FirebaseLinkFieldNumber = 6;
+        /// <summary>
+        /// A snapshot of a FirebaseLink resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.FirebaseLink FirebaseLink {
+          get { return resourceCase_ == ResourceOneofCase.FirebaseLink ? (global::Google.Analytics.Admin.V1Alpha.FirebaseLink) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.FirebaseLink;
+          }
+        }
+
+        /// <summary>Field number for the "google_ads_link" field.</summary>
+        public const int GoogleAdsLinkFieldNumber = 7;
+        /// <summary>
+        /// A snapshot of a GoogleAdsLink resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink GoogleAdsLink {
+          get { return resourceCase_ == ResourceOneofCase.GoogleAdsLink ? (global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.GoogleAdsLink;
+          }
+        }
+
+        private object resource_;
+        /// <summary>Enum of possible cases for the "resource" oneof.</summary>
+        public enum ResourceOneofCase {
+          None = 0,
+          Account = 1,
+          Property = 2,
+          WebDataStream = 3,
+          AndroidAppDataStream = 4,
+          IosAppDataStream = 5,
+          FirebaseLink = 6,
+          GoogleAdsLink = 7,
+        }
+        private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceOneofCase ResourceCase {
+          get { return resourceCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearResource() {
+          resourceCase_ = ResourceOneofCase.None;
+          resource_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ChangeHistoryResource);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ChangeHistoryResource other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Account, other.Account)) return false;
+          if (!object.Equals(Property, other.Property)) return false;
+          if (!object.Equals(WebDataStream, other.WebDataStream)) return false;
+          if (!object.Equals(AndroidAppDataStream, other.AndroidAppDataStream)) return false;
+          if (!object.Equals(IosAppDataStream, other.IosAppDataStream)) return false;
+          if (!object.Equals(FirebaseLink, other.FirebaseLink)) return false;
+          if (!object.Equals(GoogleAdsLink, other.GoogleAdsLink)) return false;
+          if (ResourceCase != other.ResourceCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (resourceCase_ == ResourceOneofCase.Account) hash ^= Account.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.Property) hash ^= Property.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.WebDataStream) hash ^= WebDataStream.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) hash ^= AndroidAppDataStream.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) hash ^= IosAppDataStream.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.FirebaseLink) hash ^= FirebaseLink.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) hash ^= GoogleAdsLink.GetHashCode();
+          hash ^= (int) resourceCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (resourceCase_ == ResourceOneofCase.Account) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Account);
+          }
+          if (resourceCase_ == ResourceOneofCase.Property) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Property);
+          }
+          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
+            output.WriteRawTag(26);
+            output.WriteMessage(WebDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
+            output.WriteRawTag(34);
+            output.WriteMessage(AndroidAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
+            output.WriteRawTag(42);
+            output.WriteMessage(IosAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
+            output.WriteRawTag(50);
+            output.WriteMessage(FirebaseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleAdsLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (resourceCase_ == ResourceOneofCase.Account) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Account);
+          }
+          if (resourceCase_ == ResourceOneofCase.Property) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Property);
+          }
+          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
+            output.WriteRawTag(26);
+            output.WriteMessage(WebDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
+            output.WriteRawTag(34);
+            output.WriteMessage(AndroidAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
+            output.WriteRawTag(42);
+            output.WriteMessage(IosAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
+            output.WriteRawTag(50);
+            output.WriteMessage(FirebaseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleAdsLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (resourceCase_ == ResourceOneofCase.Account) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Account);
+          }
+          if (resourceCase_ == ResourceOneofCase.Property) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Property);
+          }
+          if (resourceCase_ == ResourceOneofCase.WebDataStream) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AndroidAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IosAppDataStream);
+          }
+          if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirebaseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleAdsLink);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ChangeHistoryResource other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.ResourceCase) {
+            case ResourceOneofCase.Account:
+              if (Account == null) {
+                Account = new global::Google.Analytics.Admin.V1Alpha.Account();
+              }
+              Account.MergeFrom(other.Account);
+              break;
+            case ResourceOneofCase.Property:
+              if (Property == null) {
+                Property = new global::Google.Analytics.Admin.V1Alpha.Property();
+              }
+              Property.MergeFrom(other.Property);
+              break;
+            case ResourceOneofCase.WebDataStream:
+              if (WebDataStream == null) {
+                WebDataStream = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
+              }
+              WebDataStream.MergeFrom(other.WebDataStream);
+              break;
+            case ResourceOneofCase.AndroidAppDataStream:
+              if (AndroidAppDataStream == null) {
+                AndroidAppDataStream = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
+              }
+              AndroidAppDataStream.MergeFrom(other.AndroidAppDataStream);
+              break;
+            case ResourceOneofCase.IosAppDataStream:
+              if (IosAppDataStream == null) {
+                IosAppDataStream = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
+              }
+              IosAppDataStream.MergeFrom(other.IosAppDataStream);
+              break;
+            case ResourceOneofCase.FirebaseLink:
+              if (FirebaseLink == null) {
+                FirebaseLink = new global::Google.Analytics.Admin.V1Alpha.FirebaseLink();
+              }
+              FirebaseLink.MergeFrom(other.FirebaseLink);
+              break;
+            case ResourceOneofCase.GoogleAdsLink:
+              if (GoogleAdsLink == null) {
+                GoogleAdsLink = new global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink();
+              }
+              GoogleAdsLink.MergeFrom(other.GoogleAdsLink);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Analytics.Admin.V1Alpha.Account subBuilder = new global::Google.Analytics.Admin.V1Alpha.Account();
+                if (resourceCase_ == ResourceOneofCase.Account) {
+                  subBuilder.MergeFrom(Account);
+                }
+                input.ReadMessage(subBuilder);
+                Account = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Analytics.Admin.V1Alpha.Property subBuilder = new global::Google.Analytics.Admin.V1Alpha.Property();
+                if (resourceCase_ == ResourceOneofCase.Property) {
+                  subBuilder.MergeFrom(Property);
+                }
+                input.ReadMessage(subBuilder);
+                Property = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Analytics.Admin.V1Alpha.WebDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
+                if (resourceCase_ == ResourceOneofCase.WebDataStream) {
+                  subBuilder.MergeFrom(WebDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                WebDataStream = subBuilder;
+                break;
+              }
+              case 34: {
+                global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
+                if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
+                  subBuilder.MergeFrom(AndroidAppDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                AndroidAppDataStream = subBuilder;
+                break;
+              }
+              case 42: {
+                global::Google.Analytics.Admin.V1Alpha.IosAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
+                if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
+                  subBuilder.MergeFrom(IosAppDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                IosAppDataStream = subBuilder;
+                break;
+              }
+              case 50: {
+                global::Google.Analytics.Admin.V1Alpha.FirebaseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.FirebaseLink();
+                if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
+                  subBuilder.MergeFrom(FirebaseLink);
+                }
+                input.ReadMessage(subBuilder);
+                FirebaseLink = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink();
+                if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) {
+                  subBuilder.MergeFrom(GoogleAdsLink);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleAdsLink = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Analytics.Admin.V1Alpha.Account subBuilder = new global::Google.Analytics.Admin.V1Alpha.Account();
+                if (resourceCase_ == ResourceOneofCase.Account) {
+                  subBuilder.MergeFrom(Account);
+                }
+                input.ReadMessage(subBuilder);
+                Account = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Analytics.Admin.V1Alpha.Property subBuilder = new global::Google.Analytics.Admin.V1Alpha.Property();
+                if (resourceCase_ == ResourceOneofCase.Property) {
+                  subBuilder.MergeFrom(Property);
+                }
+                input.ReadMessage(subBuilder);
+                Property = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Analytics.Admin.V1Alpha.WebDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.WebDataStream();
+                if (resourceCase_ == ResourceOneofCase.WebDataStream) {
+                  subBuilder.MergeFrom(WebDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                WebDataStream = subBuilder;
+                break;
+              }
+              case 34: {
+                global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream();
+                if (resourceCase_ == ResourceOneofCase.AndroidAppDataStream) {
+                  subBuilder.MergeFrom(AndroidAppDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                AndroidAppDataStream = subBuilder;
+                break;
+              }
+              case 42: {
+                global::Google.Analytics.Admin.V1Alpha.IosAppDataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.IosAppDataStream();
+                if (resourceCase_ == ResourceOneofCase.IosAppDataStream) {
+                  subBuilder.MergeFrom(IosAppDataStream);
+                }
+                input.ReadMessage(subBuilder);
+                IosAppDataStream = subBuilder;
+                break;
+              }
+              case 50: {
+                global::Google.Analytics.Admin.V1Alpha.FirebaseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.FirebaseLink();
+                if (resourceCase_ == ResourceOneofCase.FirebaseLink) {
+                  subBuilder.MergeFrom(FirebaseLink);
+                }
+                input.ReadMessage(subBuilder);
+                FirebaseLink = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink();
+                if (resourceCase_ == ResourceOneofCase.GoogleAdsLink) {
+                  subBuilder.MergeFrom(GoogleAdsLink);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleAdsLink = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

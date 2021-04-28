@@ -486,18 +486,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
-    public partial class CreateIosAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
     public partial class ListIosAppDataStreamsRequest
     {
         /// <summary>
@@ -531,18 +519,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::AndroidAppDataStreamName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class CreateAndroidAppDataStreamRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public PropertyName ParentAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
         }
     }
 
@@ -664,6 +640,27 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::DataSharingSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchChangeHistoryEventsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Account"/> resource name property.
+        /// </summary>
+        public AccountName AccountAsAccountName
+        {
+            get => string.IsNullOrEmpty(Account) ? null : AccountName.Parse(Account, allowUnparsed: true);
+            set => Account = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
+        /// </summary>
+        public PropertyName PropertyAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
+            set => Property = value?.ToString() ?? "";
         }
     }
 }

@@ -434,7 +434,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -461,7 +462,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -490,7 +492,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -517,7 +520,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -546,7 +550,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -573,7 +578,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetPropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -602,7 +608,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -629,7 +636,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -658,7 +666,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -685,7 +694,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -704,10 +714,23 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            client.DeleteProperty(request);
+            Property response = client.DeleteProperty(request);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
@@ -719,11 +742,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeletePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeletePropertyAsync(request, st::CancellationToken.None);
+            Property responseCallSettings = await client.DeletePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Property responseCancellationToken = await client.DeletePropertyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
@@ -735,10 +772,23 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            client.DeleteProperty(request.Name);
+            Property response = client.DeleteProperty(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
@@ -750,11 +800,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeletePropertyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeletePropertyAsync(request.Name, st::CancellationToken.None);
+            Property responseCallSettings = await client.DeletePropertyAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Property responseCancellationToken = await client.DeletePropertyAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
@@ -766,10 +830,23 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
             mockGrpcClient.Setup(x => x.DeleteProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            client.DeleteProperty(request.PropertyName);
+            Property response = client.DeleteProperty(request.PropertyName);
+            xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
@@ -781,11 +858,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            Property expectedResponse = new Property
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Parent = "parent7858e4d0",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                IndustryCategory = IndustryCategory.Reference,
+                TimeZone = "time_zone73f23b20",
+                CurrencyCode = "currency_code7f81e352",
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.DeletePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            await client.DeletePropertyAsync(request.PropertyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeletePropertyAsync(request.PropertyName, st::CancellationToken.None);
+            Property responseCallSettings = await client.DeletePropertyAsync(request.PropertyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Property responseCancellationToken = await client.DeletePropertyAsync(request.PropertyName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
@@ -808,7 +899,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -836,7 +928,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -866,7 +959,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateProperty(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -894,7 +988,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
-                Deleted = true,
+                DeleteTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdatePropertyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Property>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -2510,162 +2605,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateIosAppDataStreamRequestObject()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream response = client.CreateIosAppDataStream(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateIosAppDataStreamRequestObjectAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IosAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream responseCallSettings = await client.CreateIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            IosAppDataStream responseCancellationToken = await client.CreateIosAppDataStreamAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateIosAppDataStream()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream response = client.CreateIosAppDataStream(request.Parent, request.IosAppDataStream);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateIosAppDataStreamAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IosAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream responseCallSettings = await client.CreateIosAppDataStreamAsync(request.Parent, request.IosAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            IosAppDataStream responseCancellationToken = await client.CreateIosAppDataStreamAsync(request.Parent, request.IosAppDataStream, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateIosAppDataStreamResourceNames()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream response = client.CreateIosAppDataStream(request.ParentAsPropertyName, request.IosAppDataStream);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateIosAppDataStreamResourceNamesAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = new IosAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            IosAppDataStream expectedResponse = new IosAppDataStream
-            {
-                IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                BundleId = "bundle_id58a23305",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateIosAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IosAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            IosAppDataStream responseCallSettings = await client.CreateIosAppDataStreamAsync(request.ParentAsPropertyName, request.IosAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            IosAppDataStream responseCancellationToken = await client.CreateIosAppDataStreamAsync(request.ParentAsPropertyName, request.IosAppDataStream, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetAndroidAppDataStreamRequestObject()
         {
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
@@ -3008,162 +2947,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             AndroidAppDataStream responseCallSettings = await client.UpdateAndroidAppDataStreamAsync(request.AndroidAppDataStream, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             AndroidAppDataStream responseCancellationToken = await client.UpdateAndroidAppDataStreamAsync(request.AndroidAppDataStream, request.UpdateMask, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateAndroidAppDataStreamRequestObject()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream response = client.CreateAndroidAppDataStream(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateAndroidAppDataStreamRequestObjectAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AndroidAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream responseCallSettings = await client.CreateAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            AndroidAppDataStream responseCancellationToken = await client.CreateAndroidAppDataStreamAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateAndroidAppDataStream()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream response = client.CreateAndroidAppDataStream(request.Parent, request.AndroidAppDataStream);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateAndroidAppDataStreamAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AndroidAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream responseCallSettings = await client.CreateAndroidAppDataStreamAsync(request.Parent, request.AndroidAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            AndroidAppDataStream responseCancellationToken = await client.CreateAndroidAppDataStreamAsync(request.Parent, request.AndroidAppDataStream, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateAndroidAppDataStreamResourceNames()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream response = client.CreateAndroidAppDataStream(request.ParentAsPropertyName, request.AndroidAppDataStream);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateAndroidAppDataStreamResourceNamesAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            AndroidAppDataStream expectedResponse = new AndroidAppDataStream
-            {
-                AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
-                FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                PackageName = "package_name9942c4d2",
-                DisplayName = "display_name137f65c2",
-            };
-            mockGrpcClient.Setup(x => x.CreateAndroidAppDataStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AndroidAppDataStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            AndroidAppDataStream responseCallSettings = await client.CreateAndroidAppDataStreamAsync(request.ParentAsPropertyName, request.AndroidAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            AndroidAppDataStream responseCancellationToken = await client.CreateAndroidAppDataStreamAsync(request.ParentAsPropertyName, request.AndroidAppDataStream, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

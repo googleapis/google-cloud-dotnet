@@ -76,12 +76,10 @@ namespace Google.Analytics.Admin.V1Alpha
             GetIosAppDataStreamSettings = existing.GetIosAppDataStreamSettings;
             DeleteIosAppDataStreamSettings = existing.DeleteIosAppDataStreamSettings;
             UpdateIosAppDataStreamSettings = existing.UpdateIosAppDataStreamSettings;
-            CreateIosAppDataStreamSettings = existing.CreateIosAppDataStreamSettings;
             ListIosAppDataStreamsSettings = existing.ListIosAppDataStreamsSettings;
             GetAndroidAppDataStreamSettings = existing.GetAndroidAppDataStreamSettings;
             DeleteAndroidAppDataStreamSettings = existing.DeleteAndroidAppDataStreamSettings;
             UpdateAndroidAppDataStreamSettings = existing.UpdateAndroidAppDataStreamSettings;
-            CreateAndroidAppDataStreamSettings = existing.CreateAndroidAppDataStreamSettings;
             ListAndroidAppDataStreamsSettings = existing.ListAndroidAppDataStreamsSettings;
             GetEnhancedMeasurementSettingsSettings = existing.GetEnhancedMeasurementSettingsSettings;
             UpdateEnhancedMeasurementSettingsSettings = existing.UpdateEnhancedMeasurementSettingsSettings;
@@ -95,6 +93,7 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteGoogleAdsLinkSettings = existing.DeleteGoogleAdsLinkSettings;
             ListGoogleAdsLinksSettings = existing.ListGoogleAdsLinksSettings;
             GetDataSharingSettingsSettings = existing.GetDataSharingSettingsSettings;
+            SearchChangeHistoryEventsSettings = existing.SearchChangeHistoryEventsSettings;
             OnCopy(existing);
         }
 
@@ -478,19 +477,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateIosAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.CreateIosAppDataStreamAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateIosAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.ListIosAppDataStreams</c> and
         /// <c>AnalyticsAdminServiceClient.ListIosAppDataStreamsAsync</c>.
         /// </summary>
@@ -540,19 +526,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateAndroidAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateAndroidAppDataStream</c> and
-        /// <c>AnalyticsAdminServiceClient.CreateAndroidAppDataStreamAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateAndroidAppDataStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -725,6 +698,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDataSharingSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.SearchChangeHistoryEvents</c> and
+        /// <c>AnalyticsAdminServiceClient.SearchChangeHistoryEventsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchChangeHistoryEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -1589,7 +1578,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteProperty(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Property DeleteProperty(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1608,7 +1597,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1627,7 +1616,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(DeletePropertyRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(DeletePropertyRequest request, st::CancellationToken cancellationToken) =>
             DeletePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1650,7 +1639,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteProperty(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Property DeleteProperty(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteProperty(new DeletePropertyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -1676,7 +1665,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeletePropertyAsync(new DeletePropertyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -1702,7 +1691,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(string name, st::CancellationToken cancellationToken) =>
             DeletePropertyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1725,7 +1714,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteProperty(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Property DeleteProperty(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteProperty(new DeletePropertyRequest
             {
                 PropertyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1751,7 +1740,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
             DeletePropertyAsync(new DeletePropertyRequest
             {
                 PropertyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1777,7 +1766,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeletePropertyAsync(PropertyName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Property> DeletePropertyAsync(PropertyName name, st::CancellationToken cancellationToken) =>
             DeletePropertyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3597,211 +3586,6 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateIosAppDataStreamAsync(iosAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream CreateIosAppDataStream(CreateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(CreateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(CreateIosAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            CreateIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream CreateIosAppDataStream(string parent, IosAppDataStream iosAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateIosAppDataStream(new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(string parent, IosAppDataStream iosAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateIosAppDataStreamAsync(new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(string parent, IosAppDataStream iosAppDataStream, st::CancellationToken cancellationToken) =>
-            CreateIosAppDataStreamAsync(parent, iosAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IosAppDataStream CreateIosAppDataStream(PropertyName parent, IosAppDataStream iosAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateIosAppDataStream(new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(PropertyName parent, IosAppDataStream iosAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateIosAppDataStreamAsync(new CreateIosAppDataStreamRequest
-            {
-                IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this ios app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="iosAppDataStream">
-        /// Required. The iOS app data stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(PropertyName parent, IosAppDataStream iosAppDataStream, st::CancellationToken cancellationToken) =>
-            CreateIosAppDataStreamAsync(parent, iosAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Returns child iOS app data streams under the specified parent property.
         /// 
         /// iOS app data streams will be excluded if the caller does not have access.
@@ -4260,211 +4044,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(AndroidAppDataStream androidAppDataStream, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateAndroidAppDataStreamAsync(androidAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream CreateAndroidAppDataStream(CreateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(CreateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(CreateAndroidAppDataStreamRequest request, st::CancellationToken cancellationToken) =>
-            CreateAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream CreateAndroidAppDataStream(string parent, AndroidAppDataStream androidAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateAndroidAppDataStream(new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(string parent, AndroidAppDataStream androidAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateAndroidAppDataStreamAsync(new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(string parent, AndroidAppDataStream androidAppDataStream, st::CancellationToken cancellationToken) =>
-            CreateAndroidAppDataStreamAsync(parent, androidAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AndroidAppDataStream CreateAndroidAppDataStream(PropertyName parent, AndroidAppDataStream androidAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateAndroidAppDataStream(new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(PropertyName parent, AndroidAppDataStream androidAppDataStream, gaxgrpc::CallSettings callSettings = null) =>
-            CreateAndroidAppDataStreamAsync(new CreateAndroidAppDataStreamRequest
-            {
-                AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource where this android app data stream will be created.
-        /// Format: properties/123
-        /// </param>
-        /// <param name="androidAppDataStream">
-        /// Required. The android app stream to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(PropertyName parent, AndroidAppDataStream androidAppDataStream, st::CancellationToken cancellationToken) =>
-            CreateAndroidAppDataStreamAsync(parent, androidAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns child android app streams under the specified parent property.
@@ -6000,6 +5579,26 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DataSharingSettings> GetDataSharingSettingsAsync(DataSharingSettingsName name, st::CancellationToken cancellationToken) =>
             GetDataSharingSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches through all changes to an account or its children given the
+        /// specified set of filters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChangeHistoryEvent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchChangeHistoryEventsResponse, ChangeHistoryEvent> SearchChangeHistoryEvents(SearchChangeHistoryEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches through all changes to an account or its children given the
+        /// specified set of filters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChangeHistoryEvent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchChangeHistoryEventsResponse, ChangeHistoryEvent> SearchChangeHistoryEventsAsync(SearchChangeHistoryEventsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -6026,7 +5625,7 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<CreatePropertyRequest, Property> _callCreateProperty;
 
-        private readonly gaxgrpc::ApiCall<DeletePropertyRequest, wkt::Empty> _callDeleteProperty;
+        private readonly gaxgrpc::ApiCall<DeletePropertyRequest, Property> _callDeleteProperty;
 
         private readonly gaxgrpc::ApiCall<UpdatePropertyRequest, Property> _callUpdateProperty;
 
@@ -6066,8 +5665,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream> _callUpdateIosAppDataStream;
 
-        private readonly gaxgrpc::ApiCall<CreateIosAppDataStreamRequest, IosAppDataStream> _callCreateIosAppDataStream;
-
         private readonly gaxgrpc::ApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse> _callListIosAppDataStreams;
 
         private readonly gaxgrpc::ApiCall<GetAndroidAppDataStreamRequest, AndroidAppDataStream> _callGetAndroidAppDataStream;
@@ -6075,8 +5672,6 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<DeleteAndroidAppDataStreamRequest, wkt::Empty> _callDeleteAndroidAppDataStream;
 
         private readonly gaxgrpc::ApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream> _callUpdateAndroidAppDataStream;
-
-        private readonly gaxgrpc::ApiCall<CreateAndroidAppDataStreamRequest, AndroidAppDataStream> _callCreateAndroidAppDataStream;
 
         private readonly gaxgrpc::ApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse> _callListAndroidAppDataStreams;
 
@@ -6103,6 +5698,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<ListGoogleAdsLinksRequest, ListGoogleAdsLinksResponse> _callListGoogleAdsLinks;
 
         private readonly gaxgrpc::ApiCall<GetDataSharingSettingsRequest, DataSharingSettings> _callGetDataSharingSettings;
+
+        private readonly gaxgrpc::ApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse> _callSearchChangeHistoryEvents;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -6142,7 +5739,7 @@ namespace Google.Analytics.Admin.V1Alpha
             _callCreateProperty = clientHelper.BuildApiCall<CreatePropertyRequest, Property>(grpcClient.CreatePropertyAsync, grpcClient.CreateProperty, effectiveSettings.CreatePropertySettings);
             Modify_ApiCall(ref _callCreateProperty);
             Modify_CreatePropertyApiCall(ref _callCreateProperty);
-            _callDeleteProperty = clientHelper.BuildApiCall<DeletePropertyRequest, wkt::Empty>(grpcClient.DeletePropertyAsync, grpcClient.DeleteProperty, effectiveSettings.DeletePropertySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteProperty = clientHelper.BuildApiCall<DeletePropertyRequest, Property>(grpcClient.DeletePropertyAsync, grpcClient.DeleteProperty, effectiveSettings.DeletePropertySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProperty);
             Modify_DeletePropertyApiCall(ref _callDeleteProperty);
             _callUpdateProperty = clientHelper.BuildApiCall<UpdatePropertyRequest, Property>(grpcClient.UpdatePropertyAsync, grpcClient.UpdateProperty, effectiveSettings.UpdatePropertySettings).WithGoogleRequestParam("property.name", request => request.Property?.Name);
@@ -6202,9 +5799,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callUpdateIosAppDataStream = clientHelper.BuildApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream>(grpcClient.UpdateIosAppDataStreamAsync, grpcClient.UpdateIosAppDataStream, effectiveSettings.UpdateIosAppDataStreamSettings).WithGoogleRequestParam("ios_app_data_stream.name", request => request.IosAppDataStream?.Name);
             Modify_ApiCall(ref _callUpdateIosAppDataStream);
             Modify_UpdateIosAppDataStreamApiCall(ref _callUpdateIosAppDataStream);
-            _callCreateIosAppDataStream = clientHelper.BuildApiCall<CreateIosAppDataStreamRequest, IosAppDataStream>(grpcClient.CreateIosAppDataStreamAsync, grpcClient.CreateIosAppDataStream, effectiveSettings.CreateIosAppDataStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateIosAppDataStream);
-            Modify_CreateIosAppDataStreamApiCall(ref _callCreateIosAppDataStream);
             _callListIosAppDataStreams = clientHelper.BuildApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse>(grpcClient.ListIosAppDataStreamsAsync, grpcClient.ListIosAppDataStreams, effectiveSettings.ListIosAppDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIosAppDataStreams);
             Modify_ListIosAppDataStreamsApiCall(ref _callListIosAppDataStreams);
@@ -6217,9 +5811,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callUpdateAndroidAppDataStream = clientHelper.BuildApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream>(grpcClient.UpdateAndroidAppDataStreamAsync, grpcClient.UpdateAndroidAppDataStream, effectiveSettings.UpdateAndroidAppDataStreamSettings).WithGoogleRequestParam("android_app_data_stream.name", request => request.AndroidAppDataStream?.Name);
             Modify_ApiCall(ref _callUpdateAndroidAppDataStream);
             Modify_UpdateAndroidAppDataStreamApiCall(ref _callUpdateAndroidAppDataStream);
-            _callCreateAndroidAppDataStream = clientHelper.BuildApiCall<CreateAndroidAppDataStreamRequest, AndroidAppDataStream>(grpcClient.CreateAndroidAppDataStreamAsync, grpcClient.CreateAndroidAppDataStream, effectiveSettings.CreateAndroidAppDataStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateAndroidAppDataStream);
-            Modify_CreateAndroidAppDataStreamApiCall(ref _callCreateAndroidAppDataStream);
             _callListAndroidAppDataStreams = clientHelper.BuildApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse>(grpcClient.ListAndroidAppDataStreamsAsync, grpcClient.ListAndroidAppDataStreams, effectiveSettings.ListAndroidAppDataStreamsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAndroidAppDataStreams);
             Modify_ListAndroidAppDataStreamsApiCall(ref _callListAndroidAppDataStreams);
@@ -6259,6 +5850,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetDataSharingSettings = clientHelper.BuildApiCall<GetDataSharingSettingsRequest, DataSharingSettings>(grpcClient.GetDataSharingSettingsAsync, grpcClient.GetDataSharingSettings, effectiveSettings.GetDataSharingSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSharingSettings);
             Modify_GetDataSharingSettingsApiCall(ref _callGetDataSharingSettings);
+            _callSearchChangeHistoryEvents = clientHelper.BuildApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse>(grpcClient.SearchChangeHistoryEventsAsync, grpcClient.SearchChangeHistoryEvents, effectiveSettings.SearchChangeHistoryEventsSettings).WithGoogleRequestParam("account", request => request.Account);
+            Modify_ApiCall(ref _callSearchChangeHistoryEvents);
+            Modify_SearchChangeHistoryEventsApiCall(ref _callSearchChangeHistoryEvents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6282,7 +5876,7 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_CreatePropertyApiCall(ref gaxgrpc::ApiCall<CreatePropertyRequest, Property> call);
 
-        partial void Modify_DeletePropertyApiCall(ref gaxgrpc::ApiCall<DeletePropertyRequest, wkt::Empty> call);
+        partial void Modify_DeletePropertyApiCall(ref gaxgrpc::ApiCall<DeletePropertyRequest, Property> call);
 
         partial void Modify_UpdatePropertyApiCall(ref gaxgrpc::ApiCall<UpdatePropertyRequest, Property> call);
 
@@ -6322,8 +5916,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_UpdateIosAppDataStreamApiCall(ref gaxgrpc::ApiCall<UpdateIosAppDataStreamRequest, IosAppDataStream> call);
 
-        partial void Modify_CreateIosAppDataStreamApiCall(ref gaxgrpc::ApiCall<CreateIosAppDataStreamRequest, IosAppDataStream> call);
-
         partial void Modify_ListIosAppDataStreamsApiCall(ref gaxgrpc::ApiCall<ListIosAppDataStreamsRequest, ListIosAppDataStreamsResponse> call);
 
         partial void Modify_GetAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<GetAndroidAppDataStreamRequest, AndroidAppDataStream> call);
@@ -6331,8 +5923,6 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<DeleteAndroidAppDataStreamRequest, wkt::Empty> call);
 
         partial void Modify_UpdateAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<UpdateAndroidAppDataStreamRequest, AndroidAppDataStream> call);
-
-        partial void Modify_CreateAndroidAppDataStreamApiCall(ref gaxgrpc::ApiCall<CreateAndroidAppDataStreamRequest, AndroidAppDataStream> call);
 
         partial void Modify_ListAndroidAppDataStreamsApiCall(ref gaxgrpc::ApiCall<ListAndroidAppDataStreamsRequest, ListAndroidAppDataStreamsResponse> call);
 
@@ -6359,6 +5949,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_ListGoogleAdsLinksApiCall(ref gaxgrpc::ApiCall<ListGoogleAdsLinksRequest, ListGoogleAdsLinksResponse> call);
 
         partial void Modify_GetDataSharingSettingsApiCall(ref gaxgrpc::ApiCall<GetDataSharingSettingsRequest, DataSharingSettings> call);
+
+        partial void Modify_SearchChangeHistoryEventsApiCall(ref gaxgrpc::ApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -6423,8 +6015,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_UpdateIosAppDataStreamRequest(ref UpdateIosAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_CreateIosAppDataStreamRequest(ref CreateIosAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_ListIosAppDataStreamsRequest(ref ListIosAppDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAndroidAppDataStreamRequest(ref GetAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
@@ -6432,8 +6022,6 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteAndroidAppDataStreamRequest(ref DeleteAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAndroidAppDataStreamRequest(ref UpdateAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateAndroidAppDataStreamRequest(ref CreateAndroidAppDataStreamRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAndroidAppDataStreamsRequest(ref ListAndroidAppDataStreamsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6460,6 +6048,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_ListGoogleAdsLinksRequest(ref ListGoogleAdsLinksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDataSharingSettingsRequest(ref GetDataSharingSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchChangeHistoryEventsRequest(ref SearchChangeHistoryEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -6731,10 +6321,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void DeleteProperty(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override Property DeleteProperty(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeletePropertyRequest(ref request, ref callSettings);
-            _callDeleteProperty.Sync(request, callSettings);
+            return _callDeleteProperty.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -6753,7 +6343,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeletePropertyAsync(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<Property> DeletePropertyAsync(DeletePropertyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeletePropertyRequest(ref request, ref callSettings);
             return _callDeleteProperty.Async(request, callSettings);
@@ -7252,46 +6842,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override IosAppDataStream CreateIosAppDataStream(CreateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callCreateIosAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates an iOS app stream with the specified location and attributes.
-        /// 
-        /// Note that an iOS app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<IosAppDataStream> CreateIosAppDataStreamAsync(CreateIosAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateIosAppDataStreamRequest(ref request, ref callSettings);
-            return _callCreateIosAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
         /// Returns child iOS app data streams under the specified parent property.
         /// 
         /// iOS app data streams will be excluded if the caller does not have access.
@@ -7391,46 +6941,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_UpdateAndroidAppDataStreamRequest(ref request, ref callSettings);
             return _callUpdateAndroidAppDataStream.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override AndroidAppDataStream CreateAndroidAppDataStream(CreateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callCreateAndroidAppDataStream.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates an Android app stream with the specified location and attributes.
-        /// 
-        /// Note that an Android app stream must be linked to a Firebase app to receive
-        /// traffic.
-        /// 
-        /// To create a working app stream, make sure your property is linked to a
-        /// Firebase project. Then, use the Firebase API to create a Firebase app,
-        /// which will also create an appropriate data stream in Analytics (may take up
-        /// to 24 hours).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<AndroidAppDataStream> CreateAndroidAppDataStreamAsync(CreateAndroidAppDataStreamRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateAndroidAppDataStreamRequest(ref request, ref callSettings);
-            return _callCreateAndroidAppDataStream.Async(request, callSettings);
         }
 
         /// <summary>
@@ -7768,6 +7278,32 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_GetDataSharingSettingsRequest(ref request, ref callSettings);
             return _callGetDataSharingSettings.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Searches through all changes to an account or its children given the
+        /// specified set of filters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChangeHistoryEvent"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchChangeHistoryEventsResponse, ChangeHistoryEvent> SearchChangeHistoryEvents(SearchChangeHistoryEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchChangeHistoryEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse, ChangeHistoryEvent>(_callSearchChangeHistoryEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches through all changes to an account or its children given the
+        /// specified set of filters.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChangeHistoryEvent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchChangeHistoryEventsResponse, ChangeHistoryEvent> SearchChangeHistoryEventsAsync(SearchChangeHistoryEventsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchChangeHistoryEventsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse, ChangeHistoryEvent>(_callSearchChangeHistoryEvents, request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -7807,6 +7343,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListGoogleAdsLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchChangeHistoryEventsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7886,6 +7426,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<GoogleAdsLink> GetEnumerator() => GoogleAdsLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchChangeHistoryEventsResponse : gaxgrpc::IPageResponse<ChangeHistoryEvent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ChangeHistoryEvent> GetEnumerator() => ChangeHistoryEvents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
