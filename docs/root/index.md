@@ -38,7 +38,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html) | 2.3.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](Google.Cloud.Bigtable.Common.V2/index.html) | 2.0.0 | Common code used by Bigtable V2 APIs |
 | [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html) | 2.1.1 | [Google Bigtable](https://cloud.google.com/bigtable/) |
-| [Google.Cloud.Billing.Budgets.V1](Google.Cloud.Billing.Budgets.V1/index.html) | 1.0.0 | [Cloud Billing Budget (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
+| [Google.Cloud.Billing.Budgets.V1](Google.Cloud.Billing.Budgets.V1/index.html) | 1.1.0 | [Cloud Billing Budget (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta02 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](Google.Cloud.BinaryAuthorization.V1Beta1/index.html) | 1.0.0-beta01 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
