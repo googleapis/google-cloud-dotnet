@@ -642,4 +642,36 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ImportFlowRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportFlowResponse
+    {
+        /// <summary><see cref="FlowName"/>-typed view over the <see cref="Flow"/> resource name property.</summary>
+        public FlowName FlowAsFlowName
+        {
+            get => string.IsNullOrEmpty(Flow) ? null : FlowName.Parse(Flow, allowUnparsed: true);
+            set => Flow = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExportFlowRequest
+    {
+        /// <summary>
+        /// <see cref="gcdcv::FlowName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdcv::FlowName FlowName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdcv::FlowName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

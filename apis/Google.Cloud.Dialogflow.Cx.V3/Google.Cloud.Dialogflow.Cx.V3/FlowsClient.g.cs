@@ -55,6 +55,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             TrainFlowOperationsSettings = existing.TrainFlowOperationsSettings.Clone();
             ValidateFlowSettings = existing.ValidateFlowSettings;
             GetFlowValidationResultSettings = existing.GetFlowValidationResultSettings;
+            ImportFlowSettings = existing.ImportFlowSettings;
+            ImportFlowOperationsSettings = existing.ImportFlowOperationsSettings.Clone();
+            ExportFlowSettings = existing.ExportFlowSettings;
+            ExportFlowOperationsSettings = existing.ExportFlowOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -197,6 +201,72 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetFlowValidationResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>FlowsClient.ImportFlow</c>
+        /// and <c>FlowsClient.ImportFlowAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportFlowSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FlowsClient.ImportFlow</c> and
+        /// <c>FlowsClient.ImportFlowAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportFlowOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>FlowsClient.ExportFlow</c>
+        /// and <c>FlowsClient.ExportFlowAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportFlowSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FlowsClient.ExportFlow</c> and
+        /// <c>FlowsClient.ExportFlowAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportFlowOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FlowsSettings"/> object.</returns>
@@ -1217,6 +1287,121 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(FlowValidationResultName name, st::CancellationToken cancellationToken) =>
             GetFlowValidationResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports the specified flow to the specified agent from a binary file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportFlowResponse, wkt::Struct> ImportFlow(ImportFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified flow to the specified agent from a binary file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportFlowResponse, wkt::Struct>> ImportFlowAsync(ImportFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified flow to the specified agent from a binary file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportFlowResponse, wkt::Struct>> ImportFlowAsync(ImportFlowRequest request, st::CancellationToken cancellationToken) =>
+            ImportFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportFlow</c>.</summary>
+        public virtual lro::OperationsClient ImportFlowOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportFlow</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportFlowResponse, wkt::Struct> PollOnceImportFlow(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportFlowResponse, wkt::Struct>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportFlowOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportFlow</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportFlowResponse, wkt::Struct>> PollOnceImportFlowAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportFlowResponse, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportFlowOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports the specified flow to a binary file.
+        /// 
+        /// Note that resources (e.g. intents, entities, webhooks) that the flow
+        /// references will also be exported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportFlowResponse, wkt::Struct> ExportFlow(ExportFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the specified flow to a binary file.
+        /// 
+        /// Note that resources (e.g. intents, entities, webhooks) that the flow
+        /// references will also be exported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportFlowResponse, wkt::Struct>> ExportFlowAsync(ExportFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the specified flow to a binary file.
+        /// 
+        /// Note that resources (e.g. intents, entities, webhooks) that the flow
+        /// references will also be exported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportFlowResponse, wkt::Struct>> ExportFlowAsync(ExportFlowRequest request, st::CancellationToken cancellationToken) =>
+            ExportFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportFlow</c>.</summary>
+        public virtual lro::OperationsClient ExportFlowOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportFlow</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportFlowResponse, wkt::Struct> PollOnceExportFlow(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportFlowResponse, wkt::Struct>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportFlowOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportFlow</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportFlowResponse, wkt::Struct>> PollOnceExportFlowAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportFlowResponse, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportFlowOperationsClient, callSettings);
     }
 
     /// <summary>Flows client wrapper implementation, for convenient use.</summary>
@@ -1241,6 +1426,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         private readonly gaxgrpc::ApiCall<GetFlowValidationResultRequest, FlowValidationResult> _callGetFlowValidationResult;
 
+        private readonly gaxgrpc::ApiCall<ImportFlowRequest, lro::Operation> _callImportFlow;
+
+        private readonly gaxgrpc::ApiCall<ExportFlowRequest, lro::Operation> _callExportFlow;
+
         /// <summary>
         /// Constructs a client wrapper for the Flows service, with the specified gRPC client and settings.
         /// </summary>
@@ -1252,6 +1441,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             FlowsSettings effectiveSettings = settings ?? FlowsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             TrainFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainFlowOperationsSettings);
+            ImportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFlowOperationsSettings);
+            ExportFlowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFlowOperationsSettings);
             _callCreateFlow = clientHelper.BuildApiCall<CreateFlowRequest, Flow>(grpcClient.CreateFlowAsync, grpcClient.CreateFlow, effectiveSettings.CreateFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFlow);
             Modify_CreateFlowApiCall(ref _callCreateFlow);
@@ -1276,6 +1467,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callGetFlowValidationResult = clientHelper.BuildApiCall<GetFlowValidationResultRequest, FlowValidationResult>(grpcClient.GetFlowValidationResultAsync, grpcClient.GetFlowValidationResult, effectiveSettings.GetFlowValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFlowValidationResult);
             Modify_GetFlowValidationResultApiCall(ref _callGetFlowValidationResult);
+            _callImportFlow = clientHelper.BuildApiCall<ImportFlowRequest, lro::Operation>(grpcClient.ImportFlowAsync, grpcClient.ImportFlow, effectiveSettings.ImportFlowSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportFlow);
+            Modify_ImportFlowApiCall(ref _callImportFlow);
+            _callExportFlow = clientHelper.BuildApiCall<ExportFlowRequest, lro::Operation>(grpcClient.ExportFlowAsync, grpcClient.ExportFlow, effectiveSettings.ExportFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportFlow);
+            Modify_ExportFlowApiCall(ref _callExportFlow);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1297,6 +1494,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_GetFlowValidationResultApiCall(ref gaxgrpc::ApiCall<GetFlowValidationResultRequest, FlowValidationResult> call);
 
+        partial void Modify_ImportFlowApiCall(ref gaxgrpc::ApiCall<ImportFlowRequest, lro::Operation> call);
+
+        partial void Modify_ExportFlowApiCall(ref gaxgrpc::ApiCall<ExportFlowRequest, lro::Operation> call);
+
         partial void OnConstruction(Flows.FlowsClient grpcClient, FlowsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Flows client</summary>
@@ -1317,6 +1518,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_ValidateFlowRequest(ref ValidateFlowRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetFlowValidationResultRequest(ref GetFlowValidationResultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportFlowRequest(ref ImportFlowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportFlowRequest(ref ExportFlowRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a flow in the specified agent.
@@ -1519,6 +1724,66 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_GetFlowValidationResultRequest(ref request, ref callSettings);
             return _callGetFlowValidationResult.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportFlow</c>.</summary>
+        public override lro::OperationsClient ImportFlowOperationsClient { get; }
+
+        /// <summary>
+        /// Imports the specified flow to the specified agent from a binary file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportFlowResponse, wkt::Struct> ImportFlow(ImportFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportFlowRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportFlowResponse, wkt::Struct>(_callImportFlow.Sync(request, callSettings), ImportFlowOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports the specified flow to the specified agent from a binary file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportFlowResponse, wkt::Struct>> ImportFlowAsync(ImportFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportFlowRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportFlowResponse, wkt::Struct>(await _callImportFlow.Async(request, callSettings).ConfigureAwait(false), ImportFlowOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportFlow</c>.</summary>
+        public override lro::OperationsClient ExportFlowOperationsClient { get; }
+
+        /// <summary>
+        /// Exports the specified flow to a binary file.
+        /// 
+        /// Note that resources (e.g. intents, entities, webhooks) that the flow
+        /// references will also be exported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportFlowResponse, wkt::Struct> ExportFlow(ExportFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportFlowRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportFlowResponse, wkt::Struct>(_callExportFlow.Sync(request, callSettings), ExportFlowOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports the specified flow to a binary file.
+        /// 
+        /// Note that resources (e.g. intents, entities, webhooks) that the flow
+        /// references will also be exported.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportFlowResponse, wkt::Struct>> ExportFlowAsync(ExportFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportFlowRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportFlowResponse, wkt::Struct>(await _callExportFlow.Async(request, callSettings).ConfigureAwait(false), ExportFlowOperationsClient);
         }
     }
 

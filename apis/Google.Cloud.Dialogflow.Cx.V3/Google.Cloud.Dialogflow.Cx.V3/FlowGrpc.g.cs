@@ -73,6 +73,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ValidateFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ImportFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ExportFlowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow> __Method_CreateFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow>(
         grpc::MethodType.Unary,
@@ -129,6 +131,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "GetFlowValidationResult",
         __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest, global::Google.LongRunning.Operation> __Method_ImportFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportFlow",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ImportFlowRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest, global::Google.LongRunning.Operation> __Method_ExportFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportFlow",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ExportFlowRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -228,6 +244,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> GetFlowValidationResult(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports the specified flow to the specified agent from a binary file.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports the specified flow to a binary file.
+      ///
+      /// Note that resources (e.g. intents, entities, webhooks) that the flow
+      /// references will also be exported.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -625,6 +666,106 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFlowValidationResult, null, options, request);
       }
+      /// <summary>
+      /// Imports the specified flow to the specified agent from a binary file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ImportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportFlow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified flow to the specified agent from a binary file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ImportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportFlow, null, options, request);
+      }
+      /// <summary>
+      /// Imports the specified flow to the specified agent from a binary file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportFlowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified flow to the specified agent from a binary file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportFlow, null, options, request);
+      }
+      /// <summary>
+      /// Exports the specified flow to a binary file.
+      ///
+      /// Note that resources (e.g. intents, entities, webhooks) that the flow
+      /// references will also be exported.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportFlow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the specified flow to a binary file.
+      ///
+      /// Note that resources (e.g. intents, entities, webhooks) that the flow
+      /// references will also be exported.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportFlow(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportFlow, null, options, request);
+      }
+      /// <summary>
+      /// Exports the specified flow to a binary file.
+      ///
+      /// Note that resources (e.g. intents, entities, webhooks) that the flow
+      /// references will also be exported.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportFlowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the specified flow to a binary file.
+      ///
+      /// Note that resources (e.g. intents, entities, webhooks) that the flow
+      /// references will also be exported.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportFlow, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override FlowsClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -644,7 +785,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_UpdateFlow, serviceImpl.UpdateFlow)
           .AddMethod(__Method_TrainFlow, serviceImpl.TrainFlow)
           .AddMethod(__Method_ValidateFlow, serviceImpl.ValidateFlow)
-          .AddMethod(__Method_GetFlowValidationResult, serviceImpl.GetFlowValidationResult).Build();
+          .AddMethod(__Method_GetFlowValidationResult, serviceImpl.GetFlowValidationResult)
+          .AddMethod(__Method_ImportFlow, serviceImpl.ImportFlow)
+          .AddMethod(__Method_ExportFlow, serviceImpl.ExportFlow).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -661,6 +804,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_TrainFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest, global::Google.LongRunning.Operation>(serviceImpl.TrainFlow));
       serviceBinder.AddMethod(__Method_ValidateFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(serviceImpl.ValidateFlow));
       serviceBinder.AddMethod(__Method_GetFlowValidationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(serviceImpl.GetFlowValidationResult));
+      serviceBinder.AddMethod(__Method_ImportFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportFlow));
+      serviceBinder.AddMethod(__Method_ExportFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportFlow));
     }
 
   }

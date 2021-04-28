@@ -220,6 +220,12 @@
                 "DeleteFlowAsync"
               ]
             },
+            "ExportFlow": {
+              "methods": [
+                "ExportFlow",
+                "ExportFlowAsync"
+              ]
+            },
             "GetFlow": {
               "methods": [
                 "GetFlow",
@@ -230,6 +236,12 @@
               "methods": [
                 "GetFlowValidationResult",
                 "GetFlowValidationResultAsync"
+              ]
+            },
+            "ImportFlow": {
+              "methods": [
+                "ImportFlow",
+                "ImportFlowAsync"
               ]
             },
             "ListFlows": {

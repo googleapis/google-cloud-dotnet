@@ -2058,7 +2058,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+    /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
     /// </summary>
@@ -2074,10 +2074,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int AllowOverrideAgentResourcesFieldNumber = 2;
     private bool allowOverrideAgentResources_;
     /// <summary>
-    /// This field is used to prevent accidental overwrite of other agent resources
-    /// in the draft version, which can potentially impact other flow's behavior.
-    /// If `allow_override_agent_resources` is false, conflicted agent-level
-    /// resources will not be overridden (i.e. intents, entities, webhooks).
+    /// This field is used to prevent accidental overwrite of other agent
+    /// resources, which can potentially impact other flow's behavior. If
+    /// `allow_override_agent_resources` is false, conflicted agent-level resources
+    /// will not be overridden (i.e. intents, entities, webhooks).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowOverrideAgentResources {
