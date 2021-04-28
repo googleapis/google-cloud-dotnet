@@ -15,7 +15,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha05) | 1.0.0-alpha05 | [Analytics Admin](https://developers.google.com/analytics) |
+| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha06) | 1.0.0-alpha06 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha04) | 1.0.0-alpha04 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta02) | 1.0.0-beta02 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Apps.Script.Type](https://googleapis.dev/dotnet/Google.Apps.Script.Type/1.0.0-beta01) | 1.0.0-beta01 | Version-agnostic types for Apps Script APIs |

@@ -1,5 +1,16 @@
 # Version history
 
+# Version 1.0.0-alpha06, released 2021-04-28
+
+- [Commit b01d59c](https://github.com/googleapis/google-cloud-dotnet/commit/b01d59c):
+  - fix!: remove `CreateIosAppDataStream`, `CreateAndroidAppDataStream` methods from the API
+  - feat: add `SearchChangeHistoryEvents` method to the API
+  - fix!: update `DeleteProperty` method to return the deleted property data as `Property` type instead of returning an empty response
+  - feat: add `ActorType`, `ActionType`, `ChangeHistoryResourceType`, `ChangeHistoryEvent`, `ChangeHistoryChange` types used by `SearchChangeHistoryEvents` method
+  - fix!: update `time_zone` field of `Property` type to be required
+  - feat: add `delete_time`, `expire_time` output only fields to `Property` type
+  - fix!: remove `deleted` field from `Property` type
+
 # Version 1.0.0-alpha05, released 2021-04-14
 
 - [Commit 6904fb8](https://github.com/googleapis/google-cloud-dotnet/commit/6904fb8): fix: add `https://www.googleapis.com/auth/analytics.edit` OAuth2 scope to the list of acceptable scopes for all read only methods of the Admin API docs: update the documentation of the `update_mask` field used by Update() methods
