@@ -949,5 +949,143 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             FlowValidationResult response = await flowsClient.GetFlowValidationResultAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for ImportFlow</summary>
+        public void ImportFlowRequestObject()
+        {
+            // Snippet: ImportFlow(ImportFlowRequest, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            ImportFlowRequest request = new ImportFlowRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowUri = "",
+                ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+            };
+            // Make the request
+            Operation<ImportFlowResponse, Struct> response = flowsClient.ImportFlow(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportFlowResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportFlowResponse, Struct> retrievedResponse = flowsClient.PollOnceImportFlow(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportFlowAsync</summary>
+        public async Task ImportFlowRequestObjectAsync()
+        {
+            // Snippet: ImportFlowAsync(ImportFlowRequest, CallSettings)
+            // Additional: ImportFlowAsync(ImportFlowRequest, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportFlowRequest request = new ImportFlowRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowUri = "",
+                ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+            };
+            // Make the request
+            Operation<ImportFlowResponse, Struct> response = await flowsClient.ImportFlowAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportFlowResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportFlowResponse, Struct> retrievedResponse = await flowsClient.PollOnceImportFlowAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportFlow</summary>
+        public void ExportFlowRequestObject()
+        {
+            // Snippet: ExportFlow(ExportFlowRequest, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            ExportFlowRequest request = new ExportFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                FlowUri = "",
+                IncludeReferencedFlows = false,
+            };
+            // Make the request
+            Operation<ExportFlowResponse, Struct> response = flowsClient.ExportFlow(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportFlowResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportFlowResponse, Struct> retrievedResponse = flowsClient.PollOnceExportFlow(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportFlowAsync</summary>
+        public async Task ExportFlowRequestObjectAsync()
+        {
+            // Snippet: ExportFlowAsync(ExportFlowRequest, CallSettings)
+            // Additional: ExportFlowAsync(ExportFlowRequest, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportFlowRequest request = new ExportFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                FlowUri = "",
+                IncludeReferencedFlows = false,
+            };
+            // Make the request
+            Operation<ExportFlowResponse, Struct> response = await flowsClient.ExportFlowAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportFlowResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportFlowResponse, Struct> retrievedResponse = await flowsClient.PollOnceExportFlowAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

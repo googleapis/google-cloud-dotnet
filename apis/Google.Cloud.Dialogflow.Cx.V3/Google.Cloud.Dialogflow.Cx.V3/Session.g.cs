@@ -26,18 +26,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9zZXNzaW9uLnByb3Rv",
             "Eh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3Vk",
-            "L2RpYWxvZ2Zsb3cvY3gvdjMvYXVkaW9fY29uZmlnLnByb3RvGihnb29nbGUv",
-            "Y2xvdWQvZGlhbG9nZmxvdy9jeC92My9mbG93LnByb3RvGipnb29nbGUvY2xv",
-            "dWQvZGlhbG9nZmxvdy9jeC92My9pbnRlbnQucHJvdG8aKGdvb2dsZS9jbG91",
-            "ZC9kaWFsb2dmbG93L2N4L3YzL3BhZ2UucHJvdG8aNGdvb2dsZS9jbG91ZC9k",
-            "aWFsb2dmbG93L2N4L3YzL3Jlc3BvbnNlX21lc3NhZ2UucHJvdG8aN2dvb2ds",
-            "ZS9jbG91ZC9kaWFsb2dmbG93L2N4L3YzL3Nlc3Npb25fZW50aXR5X3R5cGUu",
-            "cHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xl",
-            "L3Byb3RvYnVmL3N0cnVjdC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90bxoXZ29vZ2xlL2FwaS9jbGll",
-            "bnQucHJvdG8iqwIKE0RldGVjdEludGVudFJlcXVlc3QSOgoHc2Vzc2lvbhgB",
+            "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8aMGdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4L3YzL2F1",
+            "ZGlvX2NvbmZpZy5wcm90bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gv",
+            "djMvZmxvdy5wcm90bxoqZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjMv",
+            "aW50ZW50LnByb3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9w",
+            "YWdlLnByb3RvGjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNw",
+            "b25zZV9tZXNzYWdlLnByb3RvGjdnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9j",
+            "eC92My9zZXNzaW9uX2VudGl0eV90eXBlLnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJv",
+            "dG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhhnb29nbGUvdHlwZS9sYXRs",
+            "bmcucHJvdG8iqwIKE0RldGVjdEludGVudFJlcXVlc3QSOgoHc2Vzc2lvbhgB",
             "IAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Nlc3Np",
             "b24SRAoMcXVlcnlfcGFyYW1zGAIgASgLMi4uZ29vZ2xlLmNsb3VkLmRpYWxv",
             "Z2Zsb3cuY3gudjMuUXVlcnlQYXJhbWV0ZXJzEkMKC3F1ZXJ5X2lucHV0GAMg",
@@ -180,7 +180,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZW50fS9lbnZpcm9ubWVudHMve2Vudmlyb25tZW50fS9zZXNzaW9ucy97c2Vz",
             "c2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser, new[]{ "ResponseId", "QueryResult", "OutputAudio", "OutputAudioConfig" }, null, null, null, null),
@@ -624,9 +624,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The audio data bytes encoded as specified in the request.
     /// Note: The output audio is generated based on the values of default platform
     /// text responses found in the
-    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages] field. If
-    /// multiple default text responses exist, they will be concatenated when
-    /// generating audio. If no default platform text responses exist, the
+    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages]
+    /// field. If multiple default text responses exist, they will be concatenated
+    /// when generating audio. If no default platform text responses exist, the
     /// generated audio content will be empty.
     ///
     /// In some scenarios, multiple output audio fields may be present in the
@@ -870,24 +870,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
   /// <summary>
   /// The top-level message sent by the client to the
-  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent] method.
+  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent]
+  /// method.
   ///
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain
   /// [session][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.session],
-  ///     [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input] plus optionally
-  ///     [query_params][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_params]. If the client
-  ///     wants to receive an audio response, it should also contain
+  ///     [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input]
+  ///     plus optionally
+  ///     [query_params][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_params].
+  ///     If the client wants to receive an audio response, it should also contain
   ///     [output_audio_config][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.output_audio_config].
   ///
-  /// 2.  If [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input] was set to
-  ///     [query_input.audio.config][google.cloud.dialogflow.cx.v3.AudioInput.config], all subsequent messages
-  ///     must contain [query_input.audio.audio][google.cloud.dialogflow.cx.v3.AudioInput.audio] to continue with
-  ///     Speech recognition.
-  ///     If you decide to rather detect an intent from text
-  ///     input after you already started Speech recognition, please send a message
-  ///     with [query_input.text][google.cloud.dialogflow.cx.v3.QueryInput.text].
+  /// 2.  If
+  /// [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input]
+  /// was set to
+  ///     [query_input.audio.config][google.cloud.dialogflow.cx.v3.AudioInput.config],
+  ///     all subsequent messages must contain
+  ///     [query_input.audio.audio][google.cloud.dialogflow.cx.v3.AudioInput.audio]
+  ///     to continue with Speech recognition. If you decide to rather detect an
+  ///     intent from text input after you already started Speech recognition,
+  ///     please send a message with
+  ///     [query_input.text][google.cloud.dialogflow.cx.v3.QueryInput.text].
   ///
   ///     However, note that:
   ///
@@ -1243,7 +1248,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   ///     complete transcript of what the user said. The last `recognition_result`
   ///     has `is_final` set to `true`.
   ///
-  /// 2.  The last message contains `detect_intent_response`.
+  /// 2.  If `enable_partial_response` is true, the following N messages
+  ///     (currently 1 &lt;= N &lt;= 4) contain `detect_intent_response`. The first (N-1)
+  ///     `detect_intent_response`s will have `response_type` set to `PARTIAL`.
+  ///     The last `detect_intent_response` has `response_type` set to `FINAL`.
+  ///     If `response_type` is false, response stream only contains
+  ///     the final `detect_intent_response`.
   /// </summary>
   public sealed partial class StreamingDetectIntentResponse : pb::IMessage<StreamingDetectIntentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1688,7 +1698,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SpeechWordInfo> speechWordInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SpeechWordInfo>();
     /// <summary>
     /// Word-specific information for the words recognized by Speech in
-    /// [transcript][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult.transcript]. Populated if and only if `message_type` = `TRANSCRIPT` and
+    /// [transcript][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult.transcript].
+    /// Populated if and only if `message_type` = `TRANSCRIPT` and
     /// [InputAudioConfig.enable_word_info] is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1999,8 +2010,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// additional results). The client should stop sending additional audio
         /// data, half-close the gRPC connection, and wait for any additional results
         /// until the server closes the gRPC connection. This message is only sent if
-        /// [`single_utterance`][google.cloud.dialogflow.cx.v3.InputAudioConfig.single_utterance] was set to
-        /// `true`, and is not used otherwise.
+        /// [`single_utterance`][google.cloud.dialogflow.cx.v3.InputAudioConfig.single_utterance]
+        /// was set to `true`, and is not used otherwise.
         /// </summary>
         [pbr::OriginalName("END_OF_SINGLE_UTTERANCE")] EndOfSingleUtterance = 2,
       }
@@ -2111,6 +2122,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// This field can be used to pass custom data into the webhook associated with
     /// the agent. Arbitrary JSON objects are supported.
+    /// Some integrations that query a Dialogflow agent may provide additional
+    /// information in the payload.
+    /// In particular, for the Dialogflow Phone Gateway integration, this field has
+    /// the form:
+    /// ```
+    /// {
+    ///  "telephony": {
+    ///    "caller_id": "+18558363987"
+    ///  }
+    /// }
+    /// ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct Payload {
@@ -2156,17 +2178,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 6;
     private string currentPage_ = "";
     /// <summary>
-    /// The unique identifier of the [page][google.cloud.dialogflow.cx.v3.Page] to override the [current
-    /// page][QueryResult.current_page] in the session. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/pages/&lt;page ID>`.
+    /// The unique identifier of the [page][google.cloud.dialogflow.cx.v3.Page] to
+    /// override the [current page][QueryResult.current_page] in the session.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/pages/&lt;page ID>`.
     ///
     /// If `current_page` is specified, the previous state of the session will be
     /// ignored by Dialogflow, including the [previous
     /// page][QueryResult.current_page] and the [previous session
     /// parameters][QueryResult.parameters].
-    /// In most cases, [current_page][google.cloud.dialogflow.cx.v3.QueryParameters.current_page] and
-    /// [parameters][google.cloud.dialogflow.cx.v3.QueryParameters.parameters] should be configured together to
-    /// direct a session to a specific state.
+    /// In most cases,
+    /// [current_page][google.cloud.dialogflow.cx.v3.QueryParameters.current_page]
+    /// and [parameters][google.cloud.dialogflow.cx.v3.QueryParameters.parameters]
+    /// should be configured together to direct a session to a specific state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CurrentPage {
@@ -3105,8 +3129,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 1;
     /// <summary>
-    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was provided as input, this field
-    /// will contain a copy of the text.
+    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was
+    /// provided as input, this field will contain a copy of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -3120,9 +3144,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_intent" field.</summary>
     public const int TriggerIntentFieldNumber = 11;
     /// <summary>
-    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as input, this field will
-    /// contain a copy of the intent identifier.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
+    /// input, this field will contain a copy of the intent identifier. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3137,7 +3161,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "transcript" field.</summary>
     public const int TranscriptFieldNumber = 12;
     /// <summary>
-    /// If [natural language speech audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
+    /// If [natural language speech
+    /// audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
     /// this field will contain the transcript for the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3152,8 +3177,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_event" field.</summary>
     public const int TriggerEventFieldNumber = 14;
     /// <summary>
-    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as input, this field will contain
-    /// the name of the event.
+    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as
+    /// input, this field will contain the name of the event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TriggerEvent {
@@ -3185,7 +3210,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParametersFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Struct parameters_;
     /// <summary>
-    /// The collected [session parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+    /// The collected [session
+    /// parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
     ///
     /// Depending on your protocol or client library language, this is a
     /// map, associative array, symbol table, dictionary, or JSON object
@@ -3244,8 +3270,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForMessage(50, global::Google.Protobuf.WellKnownTypes.Struct.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct> webhookPayloads_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct>();
     /// <summary>
-    /// The list of webhook payload in [WebhookResponse.payload][google.cloud.dialogflow.cx.v3.WebhookResponse.payload], in
-    /// the order of call sequence. If some webhook call fails or doesn't return
+    /// The list of webhook payload in
+    /// [WebhookResponse.payload][google.cloud.dialogflow.cx.v3.WebhookResponse.payload],
+    /// in the order of call sequence. If some webhook call fails or doesn't return
     /// any payload, an empty `Struct` would be used instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3257,8 +3284,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 7;
     private global::Google.Cloud.Dialogflow.Cx.V3.Page currentPage_;
     /// <summary>
-    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all fields are filled in this message,
-    /// including but not limited to `name` and `display_name`.
+    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all
+    /// fields are filled in this message, including but not limited to `name` and
+    /// `display_name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.Page CurrentPage {
@@ -3272,10 +3300,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int IntentFieldNumber = 8;
     private global::Google.Cloud.Dialogflow.Cx.V3.Intent intent_;
     /// <summary>
-    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the conversational query. Some, not all fields
-    /// are filled in this message, including but not limited to: `name` and
-    /// `display_name`.
-    /// This field is deprecated, please use [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match] instead.
+    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the
+    /// conversational query. Some, not all fields are filled in this message,
+    /// including but not limited to: `name` and `display_name`. This field is
+    /// deprecated, please use
+    /// [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3296,7 +3326,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// help match the best intent within the classification threshold.
     /// This value may change for the same end-user expression at any time due to a
     /// model retraining or change in implementation.
-    /// This field is deprecated, please use [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match] instead.
+    /// This field is deprecated, please use
+    /// [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3343,7 +3375,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The sentiment analyss result, which depends on
     /// [`analyze_query_text_sentiment`]
-    /// [google.cloud.dialogflow.cx.v3.QueryParameters.analyze_query_text_sentiment], specified in the request.
+    /// [google.cloud.dialogflow.cx.v3.QueryParameters.analyze_query_text_sentiment],
+    /// specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.SentimentAnalysisResult SentimentAnalysisResult {
@@ -3907,8 +3940,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Required. The UTF-8 encoded natural language text to be processed. Text length must
-    /// not exceed 256 characters.
+    /// Required. The UTF-8 encoded natural language text to be processed. Text
+    /// length must not exceed 256 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -4284,8 +4317,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The natural language speech audio to be processed.
     /// A single request can contain up to 1 minute of speech audio data.
-    /// The [transcribed text][google.cloud.dialogflow.cx.v3.QueryResult.transcript] cannot contain more than 256
-    /// bytes.
+    /// The [transcribed
+    /// text][google.cloud.dialogflow.cx.v3.QueryResult.transcript] cannot contain
+    /// more than 256 bytes.
     ///
     /// For non-streaming audio detect intent, both `config` and `audio` must be
     /// provided.
@@ -4901,9 +4935,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int IntentFieldNumber = 1;
     private global::Google.Cloud.Dialogflow.Cx.V3.Intent intent_;
     /// <summary>
-    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the query. Some, not all fields are filled in
-    /// this message, including but not limited to: `name` and `display_name`. Only
-    /// filled for [`INTENT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match type.
+    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the query.
+    /// Some, not all fields are filled in this message, including but not limited
+    /// to: `name` and `display_name`. Only filled for
+    /// [`INTENT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.Intent Intent {
@@ -5653,8 +5688,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 1;
     /// <summary>
-    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was provided as input, this field
-    /// will contain a copy of the text.
+    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was
+    /// provided as input, this field will contain a copy of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -5668,9 +5703,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_intent" field.</summary>
     public const int TriggerIntentFieldNumber = 2;
     /// <summary>
-    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as input, this field will
-    /// contain a copy of the intent identifier.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
+    /// input, this field will contain a copy of the intent identifier. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5685,7 +5720,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "transcript" field.</summary>
     public const int TranscriptFieldNumber = 3;
     /// <summary>
-    /// If [natural language speech audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
+    /// If [natural language speech
+    /// audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
     /// this field will contain the transcript for the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5700,8 +5736,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_event" field.</summary>
     public const int TriggerEventFieldNumber = 6;
     /// <summary>
-    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as input, this field will
-    /// contain a copy of the event name.
+    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as
+    /// input, this field will contain a copy of the event name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TriggerEvent {
@@ -5730,8 +5766,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 5;
     private global::Google.Cloud.Dialogflow.Cx.V3.Page currentPage_;
     /// <summary>
-    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all fields are filled in this message,
-    /// including but not limited to `name` and `display_name`.
+    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all
+    /// fields are filled in this message, including but not limited to `name` and
+    /// `display_name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.Page CurrentPage {
@@ -6373,9 +6410,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The audio data bytes encoded as specified in the request.
     /// Note: The output audio is generated based on the values of default platform
     /// text responses found in the
-    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages] field. If
-    /// multiple default text responses exist, they will be concatenated when
-    /// generating audio. If no default platform text responses exist, the
+    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages]
+    /// field. If multiple default text responses exist, they will be concatenated
+    /// when generating audio. If no default platform text responses exist, the
     /// generated audio content will be empty.
     ///
     /// In some scenarios, multiple output audio fields may be present in the

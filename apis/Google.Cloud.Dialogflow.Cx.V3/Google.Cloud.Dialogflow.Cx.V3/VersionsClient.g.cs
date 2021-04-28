@@ -931,7 +931,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -940,7 +940,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -949,7 +949,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -984,10 +984,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<wkt::Empty, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LoadVersionOperationsClient, callSettings);
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1000,10 +1000,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1016,10 +1016,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1029,10 +1029,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             LoadVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1045,10 +1045,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1061,10 +1061,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft version.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
         /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
         /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
         /// </param>
@@ -1283,7 +1283,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient LoadVersionOperationsClient { get; }
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1295,7 +1295,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Loads a specified version to draft version.
+        /// Loads resources in the specified version to the draft flow.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

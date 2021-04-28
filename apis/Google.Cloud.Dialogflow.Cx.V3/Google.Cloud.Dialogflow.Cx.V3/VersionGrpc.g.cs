@@ -179,7 +179,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Loads a specified version to draft version.
+      /// Loads resources in the specified version to the draft flow.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteVersion, null, options, request);
       }
       /// <summary>
-      /// Loads a specified version to draft version.
+      /// Loads resources in the specified version to the draft flow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -447,7 +447,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return LoadVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Loads a specified version to draft version.
+      /// Loads resources in the specified version to the draft flow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -457,7 +457,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_LoadVersion, null, options, request);
       }
       /// <summary>
-      /// Loads a specified version to draft version.
+      /// Loads resources in the specified version to the draft flow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -469,7 +469,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return LoadVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Loads a specified version to draft version.
+      /// Loads resources in the specified version to the draft flow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

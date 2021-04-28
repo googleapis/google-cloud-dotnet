@@ -43,6 +43,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -73,6 +77,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -105,6 +113,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -135,6 +147,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -167,6 +183,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -197,6 +217,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -230,6 +254,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -261,6 +289,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -294,6 +326,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -325,6 +361,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -358,6 +398,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -389,6 +433,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -422,6 +470,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -453,6 +505,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -486,6 +542,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
@@ -517,6 +577,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 DisplayName = "display_name137f65c2",
                 DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
                 TimeZone = "time_zone73f23b20",
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",

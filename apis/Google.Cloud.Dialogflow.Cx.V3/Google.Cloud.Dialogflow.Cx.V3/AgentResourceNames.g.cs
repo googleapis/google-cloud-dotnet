@@ -586,6 +586,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::AgentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Environment"/> resource name property.
+        /// </summary>
+        public EnvironmentName EnvironmentAsEnvironmentName
+        {
+            get => string.IsNullOrEmpty(Environment) ? null : EnvironmentName.Parse(Environment, allowUnparsed: true);
+            set => Environment = value?.ToString() ?? "";
+        }
     }
 
     public partial class RestoreAgentRequest

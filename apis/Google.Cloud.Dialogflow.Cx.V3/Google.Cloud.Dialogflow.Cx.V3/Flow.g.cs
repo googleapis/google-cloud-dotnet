@@ -83,47 +83,69 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "c3RhbXA6igHqQYYBCi5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3dW",
             "YWxpZGF0aW9uUmVzdWx0ElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
             "L3tsb2NhdGlvbn0vYWdlbnRzL3thZ2VudH0vZmxvd3Mve2Zsb3d9L3ZhbGlk",
-            "YXRpb25SZXN1bHQy7gwKBUZsb3dzErMBCgpDcmVhdGVGbG93EjAuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQ3JlYXRlRmxvd1JlcXVlc3QaIy5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93Ik6C0+STAjoiMi92",
-            "My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyp9L2Zs",
-            "b3dzOgRmbG932kELcGFyZW50LGZsb3cSmQEKCkRlbGV0ZUZsb3cSMC5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5EZWxldGVGbG93UmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJBgtPkkwI0KjIvdjMve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qfdpBBG5hbWUS",
-            "swEKCUxpc3RGbG93cxIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "Lkxpc3RGbG93c1JlcXVlc3QaMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5MaXN0Rmxvd3NSZXNwb25zZSJDgtPkkwI0EjIvdjMve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qfS9mbG93c9pBBnBhcmVu",
-            "dBKgAQoHR2V0RmxvdxItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "LkdldEZsb3dSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djMuRmxvdyJBgtPkkwI0EjIvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9hZ2VudHMvKi9mbG93cy8qfdpBBG5hbWUSvQEKClVwZGF0ZUZsb3cS",
-            "MC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5VcGRhdGVGbG93UmVx",
-            "dWVzdBojLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZsb3ciWILT",
-            "5JMCPzI3L3YzL3tmbG93Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudHMvKi9mbG93cy8qfToEZmxvd9pBEGZsb3csdXBkYXRlX21hc2sS2QEK",
-            "CVRyYWluRmxvdxIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlRy",
-            "YWluRmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "InyC0+STAj0iOC92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Fn",
-            "ZW50cy8qL2Zsb3dzLyp9OnRyYWluOgEq2kEEbmFtZcpBLwoVZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5EhZnb29nbGUucHJvdG9idWYuU3RydWN0Er8BCgxWYWxp",
-            "ZGF0ZUZsb3cSMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5WYWxp",
-            "ZGF0ZUZsb3dSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djMuRmxvd1ZhbGlkYXRpb25SZXN1bHQiRoLT5JMCQCI7L3YzL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKn06dmFsaWRh",
-            "dGU6ASoS4QEKF0dldEZsb3dWYWxpZGF0aW9uUmVzdWx0Ej0uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuR2V0Rmxvd1ZhbGlkYXRpb25SZXN1bHRS",
-            "ZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvd1Zh",
-            "bGlkYXRpb25SZXN1bHQiUoLT5JMCRRJDL3YzL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3MvKi92YWxpZGF0aW9uUmVzdWx0",
-            "fdpBBG5hbWUaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlodHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0KZAQoh",
-            "Y29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQglGbG93UHJvdG9Q",
-            "AVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQu",
-            "RGlhbG9nZmxvdy5DeC5WM2IGcHJvdG8z"));
+            "YXRpb25SZXN1bHQinAIKEUltcG9ydEZsb3dSZXF1ZXN0EjYKBnBhcmVudBgB",
+            "IAEoCUIm4EEC+kEgEh5kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Zsb3cS",
+            "EgoIZmxvd191cmkYAiABKAlIABIWCgxmbG93X2NvbnRlbnQYAyABKAxIABJU",
+            "Cg1pbXBvcnRfb3B0aW9uGAQgASgOMj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuSW1wb3J0Rmxvd1JlcXVlc3QuSW1wb3J0T3B0aW9uIkUKDElt",
+            "cG9ydE9wdGlvbhIdChlJTVBPUlRfT1BUSU9OX1VOU1BFQ0lGSUVEEAASCAoE",
+            "S0VFUBABEgwKCEZBTExCQUNLEAJCBgoEZmxvdyJHChJJbXBvcnRGbG93UmVz",
+            "cG9uc2USMQoEZmxvdxgBIAEoCUIj+kEgCh5kaWFsb2dmbG93Lmdvb2dsZWFw",
+            "aXMuY29tL0Zsb3cihwEKEUV4cG9ydEZsb3dSZXF1ZXN0EjQKBG5hbWUYASAB",
+            "KAlCJuBBAvpBIAoeZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9GbG93EhUK",
+            "CGZsb3dfdXJpGAIgASgJQgPgQQESJQoYaW5jbHVkZV9yZWZlcmVuY2VkX2Zs",
+            "b3dzGAQgASgIQgPgQQEiSAoSRXhwb3J0Rmxvd1Jlc3BvbnNlEhIKCGZsb3df",
+            "dXJpGAEgASgJSAASFgoMZmxvd19jb250ZW50GAIgASgMSABCBgoEZmxvdzKY",
+            "EAoFRmxvd3MSswEKCkNyZWF0ZUZsb3cSMC5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy5jeC52My5DcmVhdGVGbG93UmVxdWVzdBojLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLkZsb3ciToLT5JMCOiIyL3YzL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKn0vZmxvd3M6BGZsb3faQQtw",
+            "YXJlbnQsZmxvdxKZAQoKRGVsZXRlRmxvdxIwLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLkRlbGV0ZUZsb3dSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5IkGC0+STAjQqMi92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2FnZW50cy8qL2Zsb3dzLyp92kEEbmFtZRKzAQoJTGlzdEZsb3dz",
+            "Ei8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTGlzdEZsb3dzUmVx",
+            "dWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RGbG93",
+            "c1Jlc3BvbnNlIkOC0+STAjQSMi92My97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovYWdlbnRzLyp9L2Zsb3dz2kEGcGFyZW50EqABCgdHZXRGbG93",
+            "Ei0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuR2V0Rmxvd1JlcXVl",
+            "c3QaIy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93IkGC0+ST",
+            "AjQSMi92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8q",
+            "L2Zsb3dzLyp92kEEbmFtZRK9AQoKVXBkYXRlRmxvdxIwLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0ZUZsb3dSZXF1ZXN0GiMuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvdyJYgtPkkwI/MjcvdjMve2Zs",
+            "b3cubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Zsb3dz",
+            "Lyp9OgRmbG932kEQZmxvdyx1cGRhdGVfbWFzaxLZAQoJVHJhaW5GbG93Ei8u",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVHJhaW5GbG93UmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ifILT5JMCPSI4L3Yz",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZmxvd3Mv",
+            "Kn06dHJhaW46ASraQQRuYW1lykEvChVnb29nbGUucHJvdG9idWYuRW1wdHkS",
+            "Fmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSvwEKDFZhbGlkYXRlRmxvdxIyLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlZhbGlkYXRlRmxvd1JlcXVl",
+            "c3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93VmFsaWRh",
+            "dGlvblJlc3VsdCJGgtPkkwJAIjsvdjMve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9hZ2VudHMvKi9mbG93cy8qfTp2YWxpZGF0ZToBKhLhAQoXR2V0",
+            "Rmxvd1ZhbGlkYXRpb25SZXN1bHQSPS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5HZXRGbG93VmFsaWRhdGlvblJlc3VsdFJlcXVlc3QaMy5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93VmFsaWRhdGlvblJlc3Vs",
+            "dCJSgtPkkwJFEkMvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
+            "Z2VudHMvKi9mbG93cy8qL3ZhbGlkYXRpb25SZXN1bHR92kEEbmFtZRLSAQoK",
+            "SW1wb3J0RmxvdxIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLklt",
+            "cG9ydEZsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biJzgtPkkwI+IjkvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2FnZW50cy8qfS9mbG93czppbXBvcnQ6ASrKQSwKEkltcG9ydEZsb3dSZXNw",
+            "b25zZRIWZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBLSAQoKRXhwb3J0RmxvdxIw",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cG9ydEZsb3dSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJzgtPkkwI+Ijkv",
+            "djMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9mbG93",
+            "cy8qfTpleHBvcnQ6ASrKQSwKEkV4cG9ydEZsb3dSZXNwb25zZRIWZ29vZ2xl",
+            "LnByb3RvYnVmLlN0cnVjdBp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
+            "bdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dm",
+            "bG93QpkBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCCUZs",
+            "b3dQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2ds",
+            "ZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessageReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,7 +160,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult), global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser, new[]{ "Name", "ValidationMessages", "UpdateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult), global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser, new[]{ "Name", "ValidationMessages", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Parser, new[]{ "Parent", "FlowUri", "FlowContent", "ImportOption" }, new[]{ "Flow" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowResponse), global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowResponse.Parser, new[]{ "Flow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest), global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowRequest.Parser, new[]{ "Name", "FlowUri", "IncludeReferencedFlows" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowResponse), global::Google.Cloud.Dialogflow.Cx.V3.ExportFlowResponse.Parser, new[]{ "FlowUri", "FlowContent" }, new[]{ "Flow" }, null, null, null)
           }));
     }
     #endregion
@@ -969,7 +995,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The language of the following fields in `flow`:
     ///
     /// *  `Flow.event_handlers.trigger_fulfillment.messages`
+    /// *  `Flow.event_handlers.trigger_fulfillment.conditional_cases`
     /// *  `Flow.transition_routes.trigger_fulfillment.messages`
+    /// *  `Flow.transition_routes.trigger_fulfillment.conditional_cases`
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
@@ -1489,7 +1517,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// dependent:
     ///
     /// *  `Flow.event_handlers.trigger_fulfillment.messages`
+    /// *  `Flow.event_handlers.trigger_fulfillment.conditional_cases`
     /// *  `Flow.transition_routes.trigger_fulfillment.messages`
+    /// *  `Flow.transition_routes.trigger_fulfillment.conditional_cases`
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
@@ -1974,7 +2004,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// dependent:
     ///
     /// *  `Flow.event_handlers.trigger_fulfillment.messages`
+    /// *  `Flow.event_handlers.trigger_fulfillment.conditional_cases`
     /// *  `Flow.transition_routes.trigger_fulfillment.messages`
+    /// *  `Flow.transition_routes.trigger_fulfillment.conditional_cases`
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
@@ -2216,7 +2248,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The language of the following fields in `flow`:
     ///
     /// *  `Flow.event_handlers.trigger_fulfillment.messages`
+    /// *  `Flow.event_handlers.trigger_fulfillment.conditional_cases`
     /// *  `Flow.transition_routes.trigger_fulfillment.messages`
+    /// *  `Flow.transition_routes.trigger_fulfillment.conditional_cases`
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
@@ -3286,6 +3320,1054 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
+  /// </summary>
+  public sealed partial class ImportFlowRequest : pb::IMessage<ImportFlowRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportFlowRequest> _parser = new pb::MessageParser<ImportFlowRequest>(() => new ImportFlowRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportFlowRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowRequest(ImportFlowRequest other) : this() {
+      parent_ = other.parent_;
+      importOption_ = other.importOption_;
+      switch (other.FlowCase) {
+        case FlowOneofCase.FlowUri:
+          FlowUri = other.FlowUri;
+          break;
+        case FlowOneofCase.FlowContent:
+          FlowContent = other.FlowContent;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowRequest Clone() {
+      return new ImportFlowRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The agent to import the flow into.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "flow_uri" field.</summary>
+    public const int FlowUriFieldNumber = 2;
+    /// <summary>
+    /// The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI
+    /// to import flow from. The format of this URI must be
+    /// `gs://&lt;bucket-name>/&lt;object-name>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FlowUri {
+      get { return flowCase_ == FlowOneofCase.FlowUri ? (string) flow_ : ""; }
+      set {
+        flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        flowCase_ = FlowOneofCase.FlowUri;
+      }
+    }
+
+    /// <summary>Field number for the "flow_content" field.</summary>
+    public const int FlowContentFieldNumber = 3;
+    /// <summary>
+    /// Uncompressed raw byte content for flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString FlowContent {
+      get { return flowCase_ == FlowOneofCase.FlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
+      set {
+        flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        flowCase_ = FlowOneofCase.FlowContent;
+      }
+    }
+
+    /// <summary>Field number for the "import_option" field.</summary>
+    public const int ImportOptionFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption importOption_ = global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified;
+    /// <summary>
+    /// Flow import mode. If not specified, `KEEP` is assumed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption ImportOption {
+      get { return importOption_; }
+      set {
+        importOption_ = value;
+      }
+    }
+
+    private object flow_;
+    /// <summary>Enum of possible cases for the "flow" oneof.</summary>
+    public enum FlowOneofCase {
+      None = 0,
+      FlowUri = 2,
+      FlowContent = 3,
+    }
+    private FlowOneofCase flowCase_ = FlowOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FlowOneofCase FlowCase {
+      get { return flowCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearFlow() {
+      flowCase_ = FlowOneofCase.None;
+      flow_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportFlowRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportFlowRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (FlowUri != other.FlowUri) return false;
+      if (FlowContent != other.FlowContent) return false;
+      if (ImportOption != other.ImportOption) return false;
+      if (FlowCase != other.FlowCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (flowCase_ == FlowOneofCase.FlowUri) hash ^= FlowUri.GetHashCode();
+      if (flowCase_ == FlowOneofCase.FlowContent) hash ^= FlowContent.GetHashCode();
+      if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) hash ^= ImportOption.GetHashCode();
+      hash ^= (int) flowCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        output.WriteRawTag(18);
+        output.WriteString(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        output.WriteRawTag(26);
+        output.WriteBytes(FlowContent);
+      }
+      if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ImportOption);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        output.WriteRawTag(18);
+        output.WriteString(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        output.WriteRawTag(26);
+        output.WriteBytes(FlowContent);
+      }
+      if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ImportOption);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(FlowContent);
+      }
+      if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ImportOption);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportFlowRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) {
+        ImportOption = other.ImportOption;
+      }
+      switch (other.FlowCase) {
+        case FlowOneofCase.FlowUri:
+          FlowUri = other.FlowUri;
+          break;
+        case FlowOneofCase.FlowContent:
+          FlowContent = other.FlowContent;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            FlowContent = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            ImportOption = (global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            FlowContent = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            ImportOption = (global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImportFlowRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Import option.
+      /// </summary>
+      public enum ImportOption {
+        /// <summary>
+        /// Unspecified. Treated as `KEEP`.
+        /// </summary>
+        [pbr::OriginalName("IMPORT_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Always respect settings in exported flow content. It may cause a
+        /// import failure if some settings (e.g. custom NLU) are not supported in
+        /// the agent to import into.
+        /// </summary>
+        [pbr::OriginalName("KEEP")] Keep = 1,
+        /// <summary>
+        /// Fallback to default settings if some settings are not supported in the
+        /// agent to import into. E.g. Standard NLU will be used if custom NLU is
+        /// not available.
+        /// </summary>
+        [pbr::OriginalName("FALLBACK")] Fallback = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The response message for [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
+  /// </summary>
+  public sealed partial class ImportFlowResponse : pb::IMessage<ImportFlowResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportFlowResponse> _parser = new pb::MessageParser<ImportFlowResponse>(() => new ImportFlowResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportFlowResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowResponse(ImportFlowResponse other) : this() {
+      flow_ = other.flow_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportFlowResponse Clone() {
+      return new ImportFlowResponse(this);
+    }
+
+    /// <summary>Field number for the "flow" field.</summary>
+    public const int FlowFieldNumber = 1;
+    private string flow_ = "";
+    /// <summary>
+    /// The unique identifier of the new flow.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/flows/&lt;Flow ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Flow {
+      get { return flow_; }
+      set {
+        flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportFlowResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportFlowResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Flow != other.Flow) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Flow.Length != 0) hash ^= Flow.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Flow.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Flow);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Flow.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Flow);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Flow.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Flow);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportFlowResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Flow.Length != 0) {
+        Flow = other.Flow;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Flow = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Flow = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
+  /// </summary>
+  public sealed partial class ExportFlowRequest : pb::IMessage<ExportFlowRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportFlowRequest> _parser = new pb::MessageParser<ExportFlowRequest>(() => new ExportFlowRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExportFlowRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowRequest(ExportFlowRequest other) : this() {
+      name_ = other.name_;
+      flowUri_ = other.flowUri_;
+      includeReferencedFlows_ = other.includeReferencedFlows_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowRequest Clone() {
+      return new ExportFlowRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the flow to export.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/flows/&lt;Flow ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "flow_uri" field.</summary>
+    public const int FlowUriFieldNumber = 2;
+    private string flowUri_ = "";
+    /// <summary>
+    /// Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to
+    /// export the flow to. The format of this URI must be
+    /// `gs://&lt;bucket-name>/&lt;object-name>`.
+    /// If left unspecified, the serialized flow is returned inline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FlowUri {
+      get { return flowUri_; }
+      set {
+        flowUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "include_referenced_flows" field.</summary>
+    public const int IncludeReferencedFlowsFieldNumber = 4;
+    private bool includeReferencedFlows_;
+    /// <summary>
+    /// Optional. Whether to export flows referenced by the specified flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeReferencedFlows {
+      get { return includeReferencedFlows_; }
+      set {
+        includeReferencedFlows_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExportFlowRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExportFlowRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (FlowUri != other.FlowUri) return false;
+      if (IncludeReferencedFlows != other.IncludeReferencedFlows) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (FlowUri.Length != 0) hash ^= FlowUri.GetHashCode();
+      if (IncludeReferencedFlows != false) hash ^= IncludeReferencedFlows.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (FlowUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FlowUri);
+      }
+      if (IncludeReferencedFlows != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeReferencedFlows);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (FlowUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FlowUri);
+      }
+      if (IncludeReferencedFlows != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeReferencedFlows);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (FlowUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FlowUri);
+      }
+      if (IncludeReferencedFlows != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExportFlowRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.FlowUri.Length != 0) {
+        FlowUri = other.FlowUri;
+      }
+      if (other.IncludeReferencedFlows != false) {
+        IncludeReferencedFlows = other.IncludeReferencedFlows;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 32: {
+            IncludeReferencedFlows = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 32: {
+            IncludeReferencedFlows = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
+  /// </summary>
+  public sealed partial class ExportFlowResponse : pb::IMessage<ExportFlowResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportFlowResponse> _parser = new pb::MessageParser<ExportFlowResponse>(() => new ExportFlowResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExportFlowResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowResponse(ExportFlowResponse other) : this() {
+      switch (other.FlowCase) {
+        case FlowOneofCase.FlowUri:
+          FlowUri = other.FlowUri;
+          break;
+        case FlowOneofCase.FlowContent:
+          FlowContent = other.FlowContent;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportFlowResponse Clone() {
+      return new ExportFlowResponse(this);
+    }
+
+    /// <summary>Field number for the "flow_uri" field.</summary>
+    public const int FlowUriFieldNumber = 1;
+    /// <summary>
+    /// The URI to a file containing the exported flow. This field is populated
+    /// only if `flow_uri` is specified in [ExportFlowRequest][google.cloud.dialogflow.cx.v3.ExportFlowRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FlowUri {
+      get { return flowCase_ == FlowOneofCase.FlowUri ? (string) flow_ : ""; }
+      set {
+        flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        flowCase_ = FlowOneofCase.FlowUri;
+      }
+    }
+
+    /// <summary>Field number for the "flow_content" field.</summary>
+    public const int FlowContentFieldNumber = 2;
+    /// <summary>
+    /// Uncompressed raw byte content for flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString FlowContent {
+      get { return flowCase_ == FlowOneofCase.FlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
+      set {
+        flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        flowCase_ = FlowOneofCase.FlowContent;
+      }
+    }
+
+    private object flow_;
+    /// <summary>Enum of possible cases for the "flow" oneof.</summary>
+    public enum FlowOneofCase {
+      None = 0,
+      FlowUri = 1,
+      FlowContent = 2,
+    }
+    private FlowOneofCase flowCase_ = FlowOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FlowOneofCase FlowCase {
+      get { return flowCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearFlow() {
+      flowCase_ = FlowOneofCase.None;
+      flow_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExportFlowResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExportFlowResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FlowUri != other.FlowUri) return false;
+      if (FlowContent != other.FlowContent) return false;
+      if (FlowCase != other.FlowCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (flowCase_ == FlowOneofCase.FlowUri) hash ^= FlowUri.GetHashCode();
+      if (flowCase_ == FlowOneofCase.FlowContent) hash ^= FlowContent.GetHashCode();
+      hash ^= (int) flowCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        output.WriteRawTag(10);
+        output.WriteString(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        output.WriteRawTag(18);
+        output.WriteBytes(FlowContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        output.WriteRawTag(10);
+        output.WriteString(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        output.WriteRawTag(18);
+        output.WriteBytes(FlowContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (flowCase_ == FlowOneofCase.FlowUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FlowUri);
+      }
+      if (flowCase_ == FlowOneofCase.FlowContent) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(FlowContent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExportFlowResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.FlowCase) {
+        case FlowOneofCase.FlowUri:
+          FlowUri = other.FlowUri;
+          break;
+        case FlowOneofCase.FlowContent:
+          FlowContent = other.FlowContent;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowContent = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FlowUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            FlowContent = input.ReadBytes();
             break;
           }
         }
