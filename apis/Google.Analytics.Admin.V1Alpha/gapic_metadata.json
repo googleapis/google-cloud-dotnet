@@ -40,12 +40,6 @@
                 "BatchUpdateUserLinksAsync"
               ]
             },
-            "CreateAndroidAppDataStream": {
-              "methods": [
-                "CreateAndroidAppDataStream",
-                "CreateAndroidAppDataStreamAsync"
-              ]
-            },
             "CreateFirebaseLink": {
               "methods": [
                 "CreateFirebaseLink",
@@ -56,12 +50,6 @@
               "methods": [
                 "CreateGoogleAdsLink",
                 "CreateGoogleAdsLinkAsync"
-              ]
-            },
-            "CreateIosAppDataStream": {
-              "methods": [
-                "CreateIosAppDataStream",
-                "CreateIosAppDataStreamAsync"
               ]
             },
             "CreateProperty": {
@@ -242,6 +230,12 @@
               "methods": [
                 "ProvisionAccountTicket",
                 "ProvisionAccountTicketAsync"
+              ]
+            },
+            "SearchChangeHistoryEvents": {
+              "methods": [
+                "SearchChangeHistoryEvents",
+                "SearchChangeHistoryEventsAsync"
               ]
             },
             "UpdateAccount": {

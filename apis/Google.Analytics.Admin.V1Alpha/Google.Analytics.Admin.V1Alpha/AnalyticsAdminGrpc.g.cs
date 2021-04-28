@@ -105,14 +105,12 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.IosAppDataStream> __Marshaller_google_analytics_admin_v1alpha_IosAppDataStream = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteIosAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteIosAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteIosAppDataStreamRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateIosAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateIosAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateIosAppDataStreamRequest.Parser));
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_CreateIosAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsRequest> __Marshaller_google_analytics_admin_v1alpha_ListIosAppDataStreamsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsResponse> __Marshaller_google_analytics_admin_v1alpha_ListIosAppDataStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetAndroidAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_GetAndroidAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetAndroidAppDataStreamRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> __Marshaller_google_analytics_admin_v1alpha_AndroidAppDataStream = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteAndroidAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteAndroidAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteAndroidAppDataStreamRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateAndroidAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest.Parser));
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_CreateAndroidAppDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest> __Marshaller_google_analytics_admin_v1alpha_ListAndroidAppDataStreamsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse> __Marshaller_google_analytics_admin_v1alpha_ListAndroidAppDataStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest.Parser));
@@ -134,6 +132,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListGoogleAdsLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataSharingSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataSharingSettings> __Marshaller_google_analytics_admin_v1alpha_DataSharingSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
         grpc::MethodType.Unary,
@@ -198,12 +198,12 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_CreatePropertyRequest,
         __Marshaller_google_analytics_admin_v1alpha_Property);
 
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property> __Method_DeleteProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteProperty",
         __Marshaller_google_analytics_admin_v1alpha_DeletePropertyRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_analytics_admin_v1alpha_Property);
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property> __Method_UpdateProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(
         grpc::MethodType.Unary,
@@ -338,13 +338,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_UpdateIosAppDataStreamRequest,
         __Marshaller_google_analytics_admin_v1alpha_IosAppDataStream);
 
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream> __Method_CreateIosAppDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateIosAppDataStream",
-        __Marshaller_google_analytics_admin_v1alpha_CreateIosAppDataStreamRequest,
-        __Marshaller_google_analytics_admin_v1alpha_IosAppDataStream);
-
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsResponse> __Method_ListIosAppDataStreams = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -371,13 +364,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         __ServiceName,
         "UpdateAndroidAppDataStream",
         __Marshaller_google_analytics_admin_v1alpha_UpdateAndroidAppDataStreamRequest,
-        __Marshaller_google_analytics_admin_v1alpha_AndroidAppDataStream);
-
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> __Method_CreateAndroidAppDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateAndroidAppDataStream",
-        __Marshaller_google_analytics_admin_v1alpha_CreateAndroidAppDataStreamRequest,
         __Marshaller_google_analytics_admin_v1alpha_AndroidAppDataStream);
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse> __Method_ListAndroidAppDataStreams = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse>(
@@ -470,6 +456,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         "GetDataSharingSettings",
         __Marshaller_google_analytics_admin_v1alpha_GetDataSharingSettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_DataSharingSettings);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Method_SearchChangeHistoryEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchChangeHistoryEvents",
+        __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -615,7 +608,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.Property> DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -848,25 +841,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Creates an iOS app stream with the specified location and attributes.
-      ///
-      /// Note that an iOS app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.IosAppDataStream> CreateIosAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Returns child iOS app data streams under the specified parent property.
       ///
       /// iOS app data streams will be excluded if the caller does not have access.
@@ -909,25 +883,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> UpdateAndroidAppDataStream(global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates an Android app stream with the specified location and attributes.
-      ///
-      /// Note that an Android app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> CreateAndroidAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1083,6 +1038,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataSharingSettings> GetDataSharingSettings(global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches through all changes to an account or its children given the
+      /// specified set of filters.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> SearchChangeHistoryEvents(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1602,7 +1569,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Analytics.Admin.V1Alpha.Property DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1622,7 +1589,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::CallOptions options)
+      public virtual global::Google.Analytics.Admin.V1Alpha.Property DeleteProperty(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteProperty, null, options, request);
       }
@@ -1644,7 +1611,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePropertyAsync(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.Property> DeletePropertyAsync(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1664,7 +1631,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePropertyAsync(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.Property> DeletePropertyAsync(global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteProperty, null, options, request);
       }
@@ -2577,82 +2544,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIosAppDataStream, null, options, request);
       }
       /// <summary>
-      /// Creates an iOS app stream with the specified location and attributes.
-      ///
-      /// Note that an iOS app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.IosAppDataStream CreateIosAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateIosAppDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates an iOS app stream with the specified location and attributes.
-      ///
-      /// Note that an iOS app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.IosAppDataStream CreateIosAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateIosAppDataStream, null, options, request);
-      }
-      /// <summary>
-      /// Creates an iOS app stream with the specified location and attributes.
-      ///
-      /// Note that an iOS app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.IosAppDataStream> CreateIosAppDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateIosAppDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates an iOS app stream with the specified location and attributes.
-      ///
-      /// Note that an iOS app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.IosAppDataStream> CreateIosAppDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateIosAppDataStream, null, options, request);
-      }
-      /// <summary>
       /// Returns child iOS app data streams under the specified parent property.
       ///
       /// iOS app data streams will be excluded if the caller does not have access.
@@ -2839,82 +2730,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> UpdateAndroidAppDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAndroidAppDataStream, null, options, request);
-      }
-      /// <summary>
-      /// Creates an Android app stream with the specified location and attributes.
-      ///
-      /// Note that an Android app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream CreateAndroidAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateAndroidAppDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates an Android app stream with the specified location and attributes.
-      ///
-      /// Note that an Android app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream CreateAndroidAppDataStream(global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateAndroidAppDataStream, null, options, request);
-      }
-      /// <summary>
-      /// Creates an Android app stream with the specified location and attributes.
-      ///
-      /// Note that an Android app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> CreateAndroidAppDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateAndroidAppDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates an Android app stream with the specified location and attributes.
-      ///
-      /// Note that an Android app stream must be linked to a Firebase app to receive
-      /// traffic.
-      ///
-      /// To create a working app stream, make sure your property is linked to a
-      /// Firebase project. Then, use the Firebase API to create a Firebase app,
-      /// which will also create an appropriate data stream in Analytics (may take up
-      /// to 24 hours).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream> CreateAndroidAppDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateAndroidAppDataStream, null, options, request);
       }
       /// <summary>
       /// Returns child android app streams under the specified parent property.
@@ -3536,6 +3351,54 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSharingSettings, null, options, request);
       }
+      /// <summary>
+      /// Searches through all changes to an account or its children given the
+      /// specified set of filters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse SearchChangeHistoryEvents(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchChangeHistoryEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches through all changes to an account or its children given the
+      /// specified set of filters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse SearchChangeHistoryEvents(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchChangeHistoryEvents, null, options, request);
+      }
+      /// <summary>
+      /// Searches through all changes to an account or its children given the
+      /// specified set of filters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> SearchChangeHistoryEventsAsync(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchChangeHistoryEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches through all changes to an account or its children given the
+      /// specified set of filters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> SearchChangeHistoryEventsAsync(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchChangeHistoryEvents, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -3577,12 +3440,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetIosAppDataStream, serviceImpl.GetIosAppDataStream)
           .AddMethod(__Method_DeleteIosAppDataStream, serviceImpl.DeleteIosAppDataStream)
           .AddMethod(__Method_UpdateIosAppDataStream, serviceImpl.UpdateIosAppDataStream)
-          .AddMethod(__Method_CreateIosAppDataStream, serviceImpl.CreateIosAppDataStream)
           .AddMethod(__Method_ListIosAppDataStreams, serviceImpl.ListIosAppDataStreams)
           .AddMethod(__Method_GetAndroidAppDataStream, serviceImpl.GetAndroidAppDataStream)
           .AddMethod(__Method_DeleteAndroidAppDataStream, serviceImpl.DeleteAndroidAppDataStream)
           .AddMethod(__Method_UpdateAndroidAppDataStream, serviceImpl.UpdateAndroidAppDataStream)
-          .AddMethod(__Method_CreateAndroidAppDataStream, serviceImpl.CreateAndroidAppDataStream)
           .AddMethod(__Method_ListAndroidAppDataStreams, serviceImpl.ListAndroidAppDataStreams)
           .AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl.GetEnhancedMeasurementSettings)
           .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
@@ -3595,7 +3456,8 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_UpdateGoogleAdsLink, serviceImpl.UpdateGoogleAdsLink)
           .AddMethod(__Method_DeleteGoogleAdsLink, serviceImpl.DeleteGoogleAdsLink)
           .AddMethod(__Method_ListGoogleAdsLinks, serviceImpl.ListGoogleAdsLinks)
-          .AddMethod(__Method_GetDataSharingSettings, serviceImpl.GetDataSharingSettings).Build();
+          .AddMethod(__Method_GetDataSharingSettings, serviceImpl.GetDataSharingSettings)
+          .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -3613,7 +3475,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.GetProperty));
       serviceBinder.AddMethod(__Method_ListProperties, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListPropertiesRequest, global::Google.Analytics.Admin.V1Alpha.ListPropertiesResponse>(serviceImpl.ListProperties));
       serviceBinder.AddMethod(__Method_CreateProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.CreateProperty));
-      serviceBinder.AddMethod(__Method_DeleteProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteProperty));
+      serviceBinder.AddMethod(__Method_DeleteProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.DeleteProperty));
       serviceBinder.AddMethod(__Method_UpdateProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.UpdateProperty));
       serviceBinder.AddMethod(__Method_GetUserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(serviceImpl.GetUserLink));
       serviceBinder.AddMethod(__Method_BatchGetUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse>(serviceImpl.BatchGetUserLinks));
@@ -3633,12 +3495,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetIosAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetIosAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream>(serviceImpl.GetIosAppDataStream));
       serviceBinder.AddMethod(__Method_DeleteIosAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteIosAppDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteIosAppDataStream));
       serviceBinder.AddMethod(__Method_UpdateIosAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateIosAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream>(serviceImpl.UpdateIosAppDataStream));
-      serviceBinder.AddMethod(__Method_CreateIosAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateIosAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.IosAppDataStream>(serviceImpl.CreateIosAppDataStream));
       serviceBinder.AddMethod(__Method_ListIosAppDataStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListIosAppDataStreamsResponse>(serviceImpl.ListIosAppDataStreams));
       serviceBinder.AddMethod(__Method_GetAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream>(serviceImpl.GetAndroidAppDataStream));
       serviceBinder.AddMethod(__Method_DeleteAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteAndroidAppDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAndroidAppDataStream));
       serviceBinder.AddMethod(__Method_UpdateAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream>(serviceImpl.UpdateAndroidAppDataStream));
-      serviceBinder.AddMethod(__Method_CreateAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream>(serviceImpl.CreateAndroidAppDataStream));
       serviceBinder.AddMethod(__Method_ListAndroidAppDataStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse>(serviceImpl.ListAndroidAppDataStreams));
       serviceBinder.AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.GetEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.UpdateEnhancedMeasurementSettings));
@@ -3652,6 +3512,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteGoogleAdsLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteGoogleAdsLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteGoogleAdsLink));
       serviceBinder.AddMethod(__Method_ListGoogleAdsLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse>(serviceImpl.ListGoogleAdsLinks));
       serviceBinder.AddMethod(__Method_GetDataSharingSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataSharingSettings>(serviceImpl.GetDataSharingSettings));
+      serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
     }
 
   }
