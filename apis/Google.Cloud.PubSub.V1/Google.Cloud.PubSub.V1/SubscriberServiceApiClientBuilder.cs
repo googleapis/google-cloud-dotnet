@@ -56,16 +56,21 @@ namespace Google.Cloud.PubSub.V1
         private SubscriberServiceApiClientBuilder MaybeCreateEmulatorClientBuilder()
         {
             var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
-            return emulatorEnvironment is null ? null :
-                // We don't set the EmulatorDetection property here to avoid recursively calling
-                // MaybeCreateEmulatorClientBuilder().
-                new SubscriberServiceApiClientBuilder
-                {
-                    Settings = Settings,
-                    Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
-                    ChannelCredentials = ChannelCredentials.Insecure,
-                    ChannelOptions = ChannelOptions
-                };
+            if (emulatorEnvironment is null)
+            {
+                return null;
+            }
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new SubscriberServiceApiClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = ChannelCredentials.Insecure,
+                ChannelOptions = ChannelOptions
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
         }
 
         /// <summary>
