@@ -11,9 +11,16 @@
   "5c05159": "skip", // Update copyright year
   "dfc101f": "skip", // Rename generated files to .g.cs
   "16bc5a6": "skip", // Regenerate using newer gRPC version
+  "4543613": "skip", // Remove legacy empty resource name files
+  "530c648": "skip", // Insignificant copyright change (a period and year)
   // Various commits for Ruby/PHP namespace changes, or a C# namespace
   // change in the proto that was previously patched in (so no real change)
   "f6976a5": "skip",
   "ab270b3": "skip",
-  "9e8daa8": "skip"
+  "9e8daa8": "skip",
+  "d1a7354": "skip",
+  "d8d8eb7": "skip",
+  "a78cbb2": "skip",
+  "209588c": "skip",
+  "7b76d4e": "skip"
 }
