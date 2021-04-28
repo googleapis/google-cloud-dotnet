@@ -45,15 +45,20 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         private InstanceAdminClientBuilder MaybeCreateEmulatorClientBuilder()
         {
             var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
-            return emulatorEnvironment is null ? null :
-                // We don't set the EmulatorDetection property here to avoid recursively calling
-                // MaybeCreateEmulatorClientBuilder().
-                new InstanceAdminClientBuilder
-                {
-                    Settings = Settings,
-                    Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
-                    ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
-                };
+            if (emulatorEnvironment is null)
+            {
+                return null;
+            }
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new InstanceAdminClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
         }
     }
 }

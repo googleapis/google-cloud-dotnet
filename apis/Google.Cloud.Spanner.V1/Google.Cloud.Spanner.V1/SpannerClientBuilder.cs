@@ -62,16 +62,20 @@ namespace Google.Cloud.Spanner.V1
         public SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
         {
             var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables, EnvironmentVariableProvider);
-            return emulatorEnvironment is null ? null :
-                // We don't set the EmulatorDetection property here to avoid recursively calling
-                // MaybeCreateEmulatorClientBuilder().
-                new SpannerClientBuilder
-                {
-                    Settings = Settings,
-                    Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
-                    ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
-                };
+            if (emulatorEnvironment is null)
+            {
+                return null;
+            }
+            // We don't set the EmulatorDetection property here to avoid recursively calling
+            // MaybeCreateEmulatorClientBuilder().
+            var builder = new SpannerClientBuilder
+            {
+                Settings = Settings,
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
+                ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+            };
+            builder.CopySettingsForEmulator(this);
+            return builder;
         }
-
     }
 }
