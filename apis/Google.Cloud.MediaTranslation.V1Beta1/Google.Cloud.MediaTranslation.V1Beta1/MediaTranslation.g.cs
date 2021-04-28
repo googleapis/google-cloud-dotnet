@@ -28,55 +28,52 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             "X3RyYW5zbGF0aW9uLnByb3RvEiVnb29nbGUuY2xvdWQubWVkaWF0cmFuc2xh",
             "dGlvbi52MWJldGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
-            "cHJvdG8i3gEKFVRyYW5zbGF0ZVNwZWVjaENvbmZpZxIbCg5hdWRpb19lbmNv",
+            "cHJvdG8irgEKFVRyYW5zbGF0ZVNwZWVjaENvbmZpZxIbCg5hdWRpb19lbmNv",
             "ZGluZxgBIAEoCUID4EECEiEKFHNvdXJjZV9sYW5ndWFnZV9jb2RlGAIgASgJ",
-            "QgPgQQISLgohYWx0ZXJuYXRpdmVfc291cmNlX2xhbmd1YWdlX2NvZGVzGAYg",
-            "AygJQgPgQQESIQoUdGFyZ2V0X2xhbmd1YWdlX2NvZGUYAyABKAlCA+BBAhIe",
-            "ChFzYW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBUID4EEBEhIKBW1vZGVsGAUgASgJ",
-            "QgPgQQEimAEKHlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaENvbmZpZxJXCgxh",
-            "dWRpb19jb25maWcYASABKAsyPC5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xh",
-            "dGlvbi52MWJldGExLlRyYW5zbGF0ZVNwZWVjaENvbmZpZ0ID4EECEh0KEHNp",
-            "bmdsZV91dHRlcmFuY2UYAiABKAhCA+BBASKyAQofU3RyZWFtaW5nVHJhbnNs",
-            "YXRlU3BlZWNoUmVxdWVzdBJhChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMkUu",
-            "Z29vZ2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMS5TdHJlYW1p",
-            "bmdUcmFuc2xhdGVTcGVlY2hDb25maWdIABIXCg1hdWRpb19jb250ZW50GAIg",
-            "ASgMSABCEwoRc3RyZWFtaW5nX3JlcXVlc3QiwQIKHlN0cmVhbWluZ1RyYW5z",
-            "bGF0ZVNwZWVjaFJlc3VsdBJ+Chd0ZXh0X3RyYW5zbGF0aW9uX3Jlc3VsdBgB",
-            "IAEoCzJbLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTEu",
-            "U3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzdWx0LlRleHRUcmFuc2xhdGlv",
-            "blJlc3VsdEgAEh8KEnJlY29nbml0aW9uX3Jlc3VsdBgDIAEoCUID4EEDGnQK",
-            "FVRleHRUcmFuc2xhdGlvblJlc3VsdBIYCgt0cmFuc2xhdGlvbhgBIAEoCUID",
-            "4EEDEhUKCGlzX2ZpbmFsGAIgASgIQgPgQQMSKgodZGV0ZWN0ZWRfc291cmNl",
-            "X2xhbmd1YWdlX2NvZGUYAyABKAlCA+BBA0IICgZyZXN1bHQi8gIKIFN0cmVh",
-            "bWluZ1RyYW5zbGF0ZVNwZWVjaFJlc3BvbnNlEiYKBWVycm9yGAEgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJaCgZyZXN1bHQYAiABKAsyRS5nb29n",
-            "bGUuY2xvdWQubWVkaWF0cmFuc2xhdGlvbi52MWJldGExLlN0cmVhbWluZ1Ry",
-            "YW5zbGF0ZVNwZWVjaFJlc3VsdEID4EEDEncKEXNwZWVjaF9ldmVudF90eXBl",
-            "GAMgASgOMlcuZ29vZ2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRh",
-            "MS5TdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXNwb25zZS5TcGVlY2hFdmVu",
-            "dFR5cGVCA+BBAyJRCg9TcGVlY2hFdmVudFR5cGUSIQodU1BFRUNIX0VWRU5U",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIbChdFTkRfT0ZfU0lOR0xFX1VUVEVSQU5D",
-            "RRABMqMCChhTcGVlY2hUcmFuc2xhdGlvblNlcnZpY2USsQEKGFN0cmVhbWlu",
-            "Z1RyYW5zbGF0ZVNwZWVjaBJGLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0",
-            "aW9uLnYxYmV0YTEuU3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVxdWVzdBpH",
-            "Lmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTEuU3RyZWFt",
-            "aW5nVHJhbnNsYXRlU3BlZWNoUmVzcG9uc2UiACgBMAEaU8pBH21lZGlhdHJh",
-            "bnNsYXRpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpkCCiljb20uZ29vZ2xlLmNs",
-            "b3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMUIVTWVkaWFUcmFuc2xhdGlv",
-            "blByb3RvUAFaVWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvbWVkaWF0cmFuc2xhdGlvbi92MWJldGExO21lZGlhdHJhbnNs",
-            "YXRpb274AQGqAiVHb29nbGUuQ2xvdWQuTWVkaWFUcmFuc2xhdGlvbi5WMUJl",
-            "dGExygIlR29vZ2xlXENsb3VkXE1lZGlhVHJhbnNsYXRpb25cVjFiZXRhMeoC",
-            "KEdvb2dsZTo6Q2xvdWQ6Ok1lZGlhVHJhbnNsYXRpb246OlYxYmV0YTFiBnBy",
-            "b3RvMw=="));
+            "QgPgQQISIQoUdGFyZ2V0X2xhbmd1YWdlX2NvZGUYAyABKAlCA+BBAhIeChFz",
+            "YW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBUID4EEBEhIKBW1vZGVsGAUgASgJQgPg",
+            "QQEimAEKHlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaENvbmZpZxJXCgxhdWRp",
+            "b19jb25maWcYASABKAsyPC5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xhdGlv",
+            "bi52MWJldGExLlRyYW5zbGF0ZVNwZWVjaENvbmZpZ0ID4EECEh0KEHNpbmds",
+            "ZV91dHRlcmFuY2UYAiABKAhCA+BBASKyAQofU3RyZWFtaW5nVHJhbnNsYXRl",
+            "U3BlZWNoUmVxdWVzdBJhChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMkUuZ29v",
+            "Z2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMS5TdHJlYW1pbmdU",
+            "cmFuc2xhdGVTcGVlY2hDb25maWdIABIXCg1hdWRpb19jb250ZW50GAIgASgM",
+            "SABCEwoRc3RyZWFtaW5nX3JlcXVlc3Qi9AEKHlN0cmVhbWluZ1RyYW5zbGF0",
+            "ZVNwZWVjaFJlc3VsdBJ+Chd0ZXh0X3RyYW5zbGF0aW9uX3Jlc3VsdBgBIAEo",
+            "CzJbLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTEuU3Ry",
+            "ZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzdWx0LlRleHRUcmFuc2xhdGlvblJl",
+            "c3VsdEgAGkgKFVRleHRUcmFuc2xhdGlvblJlc3VsdBIYCgt0cmFuc2xhdGlv",
+            "bhgBIAEoCUID4EEDEhUKCGlzX2ZpbmFsGAIgASgIQgPgQQNCCAoGcmVzdWx0",
+            "IvICCiBTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXNwb25zZRImCgVlcnJv",
+            "chgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSWgoGcmVzdWx0GAIg",
+            "ASgLMkUuZ29vZ2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMS5T",
+            "dHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXN1bHRCA+BBAxJ3ChFzcGVlY2hf",
+            "ZXZlbnRfdHlwZRgDIAEoDjJXLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0",
+            "aW9uLnYxYmV0YTEuU3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzcG9uc2Uu",
+            "U3BlZWNoRXZlbnRUeXBlQgPgQQMiUQoPU3BlZWNoRXZlbnRUeXBlEiEKHVNQ",
+            "RUVDSF9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASGwoXRU5EX09GX1NJTkdM",
+            "RV9VVFRFUkFOQ0UQATKjAgoYU3BlZWNoVHJhbnNsYXRpb25TZXJ2aWNlErEB",
+            "ChhTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2gSRi5nb29nbGUuY2xvdWQubWVk",
+            "aWF0cmFuc2xhdGlvbi52MWJldGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVj",
+            "aFJlcXVlc3QaRy5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xhdGlvbi52MWJl",
+            "dGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaFJlc3BvbnNlIgAoATABGlPK",
+            "QR9tZWRpYXRyYW5zbGF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKZAgopY29t",
+            "Lmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTFCFU1lZGlh",
+            "VHJhbnNsYXRpb25Qcm90b1ABWlVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL21lZGlhdHJhbnNsYXRpb24vdjFiZXRhMTtt",
+            "ZWRpYXRyYW5zbGF0aW9u+AEBqgIlR29vZ2xlLkNsb3VkLk1lZGlhVHJhbnNs",
+            "YXRpb24uVjFCZXRhMcoCJUdvb2dsZVxDbG91ZFxNZWRpYVRyYW5zbGF0aW9u",
+            "XFYxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpNZWRpYVRyYW5zbGF0aW9uOjpW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.TranslateSpeechConfig), global::Google.Cloud.MediaTranslation.V1Beta1.TranslateSpeechConfig.Parser, new[]{ "AudioEncoding", "SourceLanguageCode", "AlternativeSourceLanguageCodes", "TargetLanguageCode", "SampleRateHertz", "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.TranslateSpeechConfig), global::Google.Cloud.MediaTranslation.V1Beta1.TranslateSpeechConfig.Parser, new[]{ "AudioEncoding", "SourceLanguageCode", "TargetLanguageCode", "SampleRateHertz", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechConfig), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechConfig.Parser, new[]{ "AudioConfig", "SingleUtterance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Parser, new[]{ "TextTranslationResult", "RecognitionResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult.Parser, new[]{ "Translation", "IsFinal", "DetectedSourceLanguageCode" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Parser, new[]{ "TextTranslationResult" }, new[]{ "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult.Parser, new[]{ "Translation", "IsFinal" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse), global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse.Parser, new[]{ "Error", "Result", "SpeechEventType" }, null, new[]{ typeof(global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse.Types.SpeechEventType) }, null, null)
           }));
     }
@@ -119,7 +116,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     public TranslateSpeechConfig(TranslateSpeechConfig other) : this() {
       audioEncoding_ = other.audioEncoding_;
       sourceLanguageCode_ = other.sourceLanguageCode_;
-      alternativeSourceLanguageCodes_ = other.alternativeSourceLanguageCodes_.Clone();
       targetLanguageCode_ = other.targetLanguageCode_;
       sampleRateHertz_ = other.sampleRateHertz_;
       model_ = other.model_;
@@ -141,6 +137,36 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// - `linear16`
     ///
     ///   Uncompressed 16-bit signed little-endian samples (Linear PCM).
+    ///
+    /// - `flac`
+    ///
+    ///   `flac` (Free Lossless Audio Codec) is the recommended encoding
+    ///   because it is lossless--therefore recognition is not compromised--and
+    ///   requires only about half the bandwidth of `linear16`.
+    ///
+    /// - `mulaw`
+    ///
+    ///   8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+    ///
+    /// - `amr`
+    ///
+    ///   Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.
+    ///
+    /// - `amr-wb`
+    ///
+    ///   Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.
+    ///
+    /// - `ogg-opus`
+    ///
+    ///   Opus encoded audio frames in [Ogg](https://wikipedia.org/wiki/Ogg)
+    ///   container. `sample_rate_hertz` must be one of 8000, 12000, 16000, 24000,
+    ///   or 48000.
+    ///
+    /// - `mp3`
+    ///
+    ///   MP3 audio. Support all standard MP3 bitrates (which range from 32-320
+    ///   kbps). When using this encoding, `sample_rate_hertz` has to match the
+    ///   sample rate of the file being used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AudioEncoding {
@@ -164,24 +190,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       }
     }
 
-    /// <summary>Field number for the "alternative_source_language_codes" field.</summary>
-    public const int AlternativeSourceLanguageCodesFieldNumber = 6;
-    private static readonly pb::FieldCodec<string> _repeated_alternativeSourceLanguageCodes_codec
-        = pb::FieldCodec.ForString(50);
-    private readonly pbc::RepeatedField<string> alternativeSourceLanguageCodes_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Optional. A list of up to 3 additional language codes (BCP-47), listing possible
-    /// alternative languages of the supplied audio. If alternative source
-    /// languages are listed, speech translation result will translate in the most
-    /// likely language detected including the main source_language_code. The
-    /// translated result will include the language code of the language detected
-    /// in the audio.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> AlternativeSourceLanguageCodes {
-      get { return alternativeSourceLanguageCodes_; }
-    }
-
     /// <summary>Field number for the "target_language_code" field.</summary>
     public const int TargetLanguageCodeFieldNumber = 3;
     private string targetLanguageCode_ = "";
@@ -203,8 +211,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Optional. Sample rate in Hertz of the audio data. Valid values are:
     /// 8000-48000. 16000 is optimal. For best results, set the sampling rate of
     /// the audio source to 16000 Hz. If that's not possible, use the native sample
-    /// rate of the audio source (instead of re-sampling). This field can only be
-    /// omitted for `FLAC` and `WAV` audio files.
+    /// rate of the audio source (instead of re-sampling).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SampleRateHertz {
@@ -218,7 +225,9 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     public const int ModelFieldNumber = 5;
     private string model_ = "";
     /// <summary>
-    /// Optional.
+    /// Optional. `google-provided-model/video` and
+    /// `google-provided-model/enhanced-phone-call` are premium models.
+    /// `google-provided-model/phone-call` is not premium model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model {
@@ -243,7 +252,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       }
       if (AudioEncoding != other.AudioEncoding) return false;
       if (SourceLanguageCode != other.SourceLanguageCode) return false;
-      if(!alternativeSourceLanguageCodes_.Equals(other.alternativeSourceLanguageCodes_)) return false;
       if (TargetLanguageCode != other.TargetLanguageCode) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
       if (Model != other.Model) return false;
@@ -255,7 +263,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       int hash = 1;
       if (AudioEncoding.Length != 0) hash ^= AudioEncoding.GetHashCode();
       if (SourceLanguageCode.Length != 0) hash ^= SourceLanguageCode.GetHashCode();
-      hash ^= alternativeSourceLanguageCodes_.GetHashCode();
       if (TargetLanguageCode.Length != 0) hash ^= TargetLanguageCode.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -295,7 +302,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(Model);
       }
-      alternativeSourceLanguageCodes_.WriteTo(output, _repeated_alternativeSourceLanguageCodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -325,7 +331,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(Model);
       }
-      alternativeSourceLanguageCodes_.WriteTo(ref output, _repeated_alternativeSourceLanguageCodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -341,7 +346,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       if (SourceLanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceLanguageCode);
       }
-      size += alternativeSourceLanguageCodes_.CalculateSize(_repeated_alternativeSourceLanguageCodes_codec);
       if (TargetLanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetLanguageCode);
       }
@@ -368,7 +372,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       if (other.SourceLanguageCode.Length != 0) {
         SourceLanguageCode = other.SourceLanguageCode;
       }
-      alternativeSourceLanguageCodes_.Add(other.alternativeSourceLanguageCodes_);
       if (other.TargetLanguageCode.Length != 0) {
         TargetLanguageCode = other.TargetLanguageCode;
       }
@@ -412,10 +415,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             Model = input.ReadString();
             break;
           }
-          case 50: {
-            alternativeSourceLanguageCodes_.AddEntriesFrom(input, _repeated_alternativeSourceLanguageCodes_codec);
-            break;
-          }
         }
       }
     #endif
@@ -448,10 +447,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           }
           case 42: {
             Model = input.ReadString();
-            break;
-          }
-          case 50: {
-            alternativeSourceLanguageCodes_.AddEntriesFrom(ref input, _repeated_alternativeSourceLanguageCodes_codec);
             break;
           }
         }
@@ -1007,7 +1002,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StreamingTranslateSpeechResult(StreamingTranslateSpeechResult other) : this() {
-      recognitionResult_ = other.recognitionResult_;
       switch (other.ResultCase) {
         case ResultOneofCase.TextTranslationResult:
           TextTranslationResult = other.TextTranslationResult.Clone();
@@ -1033,24 +1027,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       set {
         result_ = value;
         resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.TextTranslationResult;
-      }
-    }
-
-    /// <summary>Field number for the "recognition_result" field.</summary>
-    public const int RecognitionResultFieldNumber = 3;
-    private string recognitionResult_ = "";
-    /// <summary>
-    /// Output only. The debug only recognition result in original language. This field is debug
-    /// only and will be set to empty string if not available.
-    /// This is implementation detail and will not be backward compatible.
-    ///
-    /// Still need to decide whether to expose this field by default.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RecognitionResult {
-      get { return recognitionResult_; }
-      set {
-        recognitionResult_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1086,7 +1062,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         return true;
       }
       if (!object.Equals(TextTranslationResult, other.TextTranslationResult)) return false;
-      if (RecognitionResult != other.RecognitionResult) return false;
       if (ResultCase != other.ResultCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1095,7 +1070,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (resultCase_ == ResultOneofCase.TextTranslationResult) hash ^= TextTranslationResult.GetHashCode();
-      if (RecognitionResult.Length != 0) hash ^= RecognitionResult.GetHashCode();
       hash ^= (int) resultCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1117,10 +1091,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(TextTranslationResult);
       }
-      if (RecognitionResult.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RecognitionResult);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1134,10 +1104,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(TextTranslationResult);
       }
-      if (RecognitionResult.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RecognitionResult);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1150,9 +1116,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       if (resultCase_ == ResultOneofCase.TextTranslationResult) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextTranslationResult);
       }
-      if (RecognitionResult.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RecognitionResult);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1163,9 +1126,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     public void MergeFrom(StreamingTranslateSpeechResult other) {
       if (other == null) {
         return;
-      }
-      if (other.RecognitionResult.Length != 0) {
-        RecognitionResult = other.RecognitionResult;
       }
       switch (other.ResultCase) {
         case ResultOneofCase.TextTranslationResult:
@@ -1199,10 +1159,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             TextTranslationResult = subBuilder;
             break;
           }
-          case 26: {
-            RecognitionResult = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -1224,10 +1180,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             TextTranslationResult = subBuilder;
-            break;
-          }
-          case 26: {
-            RecognitionResult = input.ReadString();
             break;
           }
         }
@@ -1273,7 +1225,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         public TextTranslationResult(TextTranslationResult other) : this() {
           translation_ = other.translation_;
           isFinal_ = other.isFinal_;
-          detectedSourceLanguageCode_ = other.detectedSourceLanguageCode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1315,22 +1266,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           }
         }
 
-        /// <summary>Field number for the "detected_source_language_code" field.</summary>
-        public const int DetectedSourceLanguageCodeFieldNumber = 3;
-        private string detectedSourceLanguageCode_ = "";
-        /// <summary>
-        /// Output only. The source language code (BCP-47) detected in the audio. Speech
-        /// translation result will translate in the most likely language detected
-        /// including the alternative source languages and main source_language_code.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DetectedSourceLanguageCode {
-          get { return detectedSourceLanguageCode_; }
-          set {
-            detectedSourceLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as TextTranslationResult);
@@ -1346,7 +1281,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           }
           if (Translation != other.Translation) return false;
           if (IsFinal != other.IsFinal) return false;
-          if (DetectedSourceLanguageCode != other.DetectedSourceLanguageCode) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1355,7 +1289,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           int hash = 1;
           if (Translation.Length != 0) hash ^= Translation.GetHashCode();
           if (IsFinal != false) hash ^= IsFinal.GetHashCode();
-          if (DetectedSourceLanguageCode.Length != 0) hash ^= DetectedSourceLanguageCode.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1380,10 +1313,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             output.WriteRawTag(16);
             output.WriteBool(IsFinal);
           }
-          if (DetectedSourceLanguageCode.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteString(DetectedSourceLanguageCode);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1401,10 +1330,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             output.WriteRawTag(16);
             output.WriteBool(IsFinal);
           }
-          if (DetectedSourceLanguageCode.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteString(DetectedSourceLanguageCode);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1419,9 +1344,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           }
           if (IsFinal != false) {
             size += 1 + 1;
-          }
-          if (DetectedSourceLanguageCode.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DetectedSourceLanguageCode);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1439,9 +1361,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
           }
           if (other.IsFinal != false) {
             IsFinal = other.IsFinal;
-          }
-          if (other.DetectedSourceLanguageCode.Length != 0) {
-            DetectedSourceLanguageCode = other.DetectedSourceLanguageCode;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1465,10 +1384,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
                 IsFinal = input.ReadBool();
                 break;
               }
-              case 26: {
-                DetectedSourceLanguageCode = input.ReadString();
-                break;
-              }
             }
           }
         #endif
@@ -1489,10 +1404,6 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
               }
               case 16: {
                 IsFinal = input.ReadBool();
-                break;
-              }
-              case 26: {
-                DetectedSourceLanguageCode = input.ReadString();
                 break;
               }
             }
