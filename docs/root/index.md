@@ -21,6 +21,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha05 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](Google.Analytics.Data.V1Alpha/index.html) | 1.0.0-alpha04 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](Google.Analytics.Data.V1Beta/index.html) | 1.0.0-beta02 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
+| [Google.Apps.Script.Type](Google.Apps.Script.Type/index.html) | 1.0.0-beta01 | Version-agnostic types for Apps Script APIs |
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](Google.Cloud.AccessApproval.V1/index.html) | 1.0.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](Google.Cloud.ApiGateway.V1/index.html) | 1.0.0-beta01 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
@@ -67,6 +68,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.3.1 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.2.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](Google.Cloud.Functions.V1/index.html) | 1.0.0 | [Cloud Functions](https://cloud.google.com/functions) |
+| [Google.Cloud.GSuiteAddOns.V1](Google.Cloud.GSuiteAddOns.V1/index.html) | 1.0.0-beta01 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](Google.Cloud.Gaming.V1/index.html) | 1.0.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta06 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.GkeHub.V1Beta1](Google.Cloud.GkeHub.V1Beta1/index.html) | 1.0.0-beta01 | [GKE Hub](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster) |
