@@ -602,12 +602,12 @@
         "Datastore"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Grpc.Core": "2.31.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Grpc.Core": "2.36.4",
         "System.Linq.Async": "4.0.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "3.2.0"
+        "Google.Api.Gax.Grpc.Testing": "3.3.0"
       }
     },
     {
@@ -930,14 +930,14 @@
         "firebase"
       ],
       "dependencies": {
-        "Google.Cloud.Firestore.V1": "2.2.0",
-        "Grpc.Core": "2.31.0",
+        "Google.Cloud.Firestore.V1": "project",
+        "Grpc.Core": "2.36.4",
         "System.Collections.Immutable": "1.4.0",
         "System.Linq.Async": "4.0.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "3.2.0",
-        "Google.Api.Gax.Testing": "3.2.0",
+        "Google.Api.Gax.Grpc.Testing": "3.3.0",
+        "Google.Api.Gax.Testing": "3.3.0",
         "Grpc.Core.Testing": "2.31.0",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.2.7"
@@ -960,9 +960,9 @@
         "firebase"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       }
     },
     {
@@ -1604,9 +1604,9 @@
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Iam.V1": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "testDependencies": {
         "Google.Apis.CloudResourceManager.v1": "1.43.0.1847",
@@ -1995,11 +1995,11 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Iam.V1": "2.1.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "noVersionHistory": true
     },
@@ -2019,11 +2019,11 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Iam.V1": "2.1.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "noVersionHistory": true
     },
@@ -2040,17 +2040,17 @@
         "ADO"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Spanner.Admin.Database.V1": "project",
         "Google.Cloud.Spanner.Admin.Instance.V1": "project",
         "Google.Cloud.Spanner.V1": "project",
-        "Grpc.Core": "2.31.0",
+        "Grpc.Core": "2.36.4",
         "Grpc.Gcp": "2.0.0"
       },
       "testDependencies": {
         "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-        "Google.Api.Gax.Grpc.Testing": "3.2.0",
-        "Google.Api.Gax.Testing": "3.2.0"
+        "Google.Api.Gax.Grpc.Testing": "3.3.0",
+        "Google.Api.Gax.Testing": "3.3.0"
       }
     },
     {
@@ -2063,7 +2063,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax": "3.2.0"
+        "Google.Api.Gax": "3.3.0"
       },
       "noVersionHistory": true
     },
@@ -2084,9 +2084,9 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Spanner.Common.V1": "project",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "noVersionHistory": true
     },
