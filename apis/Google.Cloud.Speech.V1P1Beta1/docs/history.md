@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2021-04-29
+
+- [Commit e9b8f84](https://github.com/googleapis/google-cloud-dotnet/commit/e9b8f84): feat: add webm opus support.
+- [Commit 582d15d](https://github.com/googleapis/google-cloud-dotnet/commit/582d15d): feat: Support for spoken punctuation and spoken emojis.
+- [Commit d8fd61b](https://github.com/googleapis/google-cloud-dotnet/commit/d8fd61b): feat: Support output transcript to GCS for LongRunningRecognize.
+- [Commit 20f02d4](https://github.com/googleapis/google-cloud-dotnet/commit/20f02d4): feat: Support output transcript to GCS for LongRunningRecognize.
+- [Commit 872b52e](https://github.com/googleapis/google-cloud-dotnet/commit/872b52e): feat: Support Model Adaptation.
+
 # Version 2.0.0-beta03, released 2020-11-18
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
