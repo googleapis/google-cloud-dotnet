@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.2.0, released 2021-04-29
+
+Dependency changes only.
+
 # Version 2.1.0, released 2020-10-21
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
