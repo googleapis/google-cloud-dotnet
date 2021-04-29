@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.2.0, released 2021-04-29
+
+- [Commit dc219ec](https://github.com/googleapis/google-cloud-dotnet/commit/dc219ec): feat: Introduce tracks and thumbnails fields for FaceDetectionAnnotations proto.
+
 # Version 2.1.0, released 2020-10-05
 
 - [Commit dfb141a](https://github.com/googleapis/google-cloud-dotnet/commit/dfb141a): feat: GA launch for PersonDetection and FaceDetection features.
