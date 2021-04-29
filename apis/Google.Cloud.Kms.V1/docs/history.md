@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.2.0, released 2021-04-29
+
+- [Commit e89b7c2](https://github.com/googleapis/google-cloud-dotnet/commit/e89b7c2):
+  - feat: Add maxAttempts to retry policy for KMS gRPC service config
+  - feat: Add Bazel exports_files entry for KMS gRPC service config
+- [Commit aeb69c3](https://github.com/googleapis/google-cloud-dotnet/commit/aeb69c3): fix: do not retry on 13 INTERNAL
+
 # Version 2.1.0, released 2020-10-20
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
