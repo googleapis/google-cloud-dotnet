@@ -22,7 +22,7 @@ Each package name links to the documentation for that package.
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha03) | 1.0.0-alpha03 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.0.0) | 1.0.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](https://googleapis.dev/dotnet/Google.Cloud.ApiGateway.V1/1.0.0-beta01) | 1.0.0-beta01 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
-| [Google.Cloud.AppEngine.V1](https://googleapis.dev/dotnet/Google.Cloud.AppEngine.V1/1.0.0) | 1.0.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
+| [Google.Cloud.AppEngine.V1](https://googleapis.dev/dotnet/Google.Cloud.AppEngine.V1/1.1.0) | 1.1.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.ArtifactRegistry.V1Beta2/1.0.0-beta01) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.7.0) | 2.7.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta04) | 1.0.0-beta04 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
