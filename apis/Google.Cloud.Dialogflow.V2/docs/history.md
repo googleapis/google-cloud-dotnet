@@ -1,5 +1,20 @@
 # Version history
 
+# Version 3.2.0, released 2021-04-29
+
+- [Commit ae565e2](https://github.com/googleapis/google-cloud-dotnet/commit/ae565e2): feat: expose MP3_64_KBPS and MULAW for output audio encodings.
+- [Commit a6aa034](https://github.com/googleapis/google-cloud-dotnet/commit/a6aa034):
+  - docs: fix link for version and environment in participant doc.
+  - fix: Add all missing regional HTTP bindings in DF API.
+- [Commit 79f24ea](https://github.com/googleapis/google-cloud-dotnet/commit/79f24ea): feat: Add CCAI API
+- [Commit 14e6a6c](https://github.com/googleapis/google-cloud-dotnet/commit/14e6a6c):
+  - feat: add additional_bindings to Dialogflow v2 ListIntents API
+  - docs: update copyrights and session docs
+- [Commit 6e5f4f6](https://github.com/googleapis/google-cloud-dotnet/commit/6e5f4f6): docs: update comments on parameters and validation result.
+- [Commit 9900407](https://github.com/googleapis/google-cloud-dotnet/commit/9900407):
+  - feat: allowed custom to specify webhook headers through query parameters
+  - docs: suggested to always use version for production traffic when calling DetectIntent, mark match_mode in Agent message as deprecated
+
 # Version 3.1.0, released 2020-10-16
 
 - [Commit 079e919](https://github.com/googleapis/google-cloud-dotnet/commit/079e919): docs: fixed link from SentimentAnalysisResult
