@@ -76,20 +76,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void CreateManagedTracer()
-        {
-            var mockProvider = new Mock<IServiceProvider>();
-            var mockTracer = new Mock<IManagedTracer>();
-            string traceId = Guid.NewGuid().ToString("N");
-            mockTracer.Setup(p => p.GetCurrentTraceId()).Returns(traceId);
-            ContextTracerManager.SetCurrentTracer(mockTracer.Object);
-            var tracer = ManagedTracer.CreateDelegatingTracer(() => ContextTracerManager.GetCurrentTracer());
-            Assert.IsType<DelegatingTracer>(tracer);
-            Assert.Equal(traceId, tracer.GetCurrentTraceId());
-            mockTracer.Verify();
-        }
-
-        [Fact]
         public void GetServiceCheckNotNull()
         {
             var accessor = new HttpContextAccessor();
