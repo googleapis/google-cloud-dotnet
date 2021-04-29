@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.5.0, released 2021-04-29
+
+- [Commit 0599569](https://github.com/googleapis/google-cloud-dotnet/commit/0599569): feat: add bindings for folder/org type resources for protos in recommendations, insights and recommender_service to enable v1 api for folder/org
+- [Commit 86f8a9e](https://github.com/googleapis/google-cloud-dotnet/commit/86f8a9e): feat: Add support for "billingAccounts" as another parent resource name for recommendations and insights APIs.
+
 # Version 2.4.0, released 2020-12-16
 
 - [Commit a13645c](https://github.com/googleapis/google-cloud-dotnet/commit/a13645c): feat: Add support for "billingAccounts" as another parent resource name for recommendations and insights APIs.

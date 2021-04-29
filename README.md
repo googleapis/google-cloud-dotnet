@@ -101,7 +101,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecommendationEngine.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecommendationEngine.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Recommendations AI](https://cloud.google.com/recommendations) |
-| [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.4.0) | 2.4.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
+| [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.5.0) | 2.5.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1/2.1.0) | 2.1.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Redis.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Retail.V2](https://googleapis.dev/dotnet/Google.Cloud.Retail.V2/1.0.0) | 1.0.0 | [Retail](https://cloud.google.com/retail/docs) |
