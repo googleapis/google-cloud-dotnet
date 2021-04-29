@@ -48,7 +48,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
 | [Google.Cloud.DataQnA.V1Alpha](Google.Cloud.DataQnA.V1Alpha/index.html) | 1.0.0-alpha01 | [Data QnA](https://cloud.google.com/bigquery/docs/dataqna) |
-| [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html) | 3.0.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
+| [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html) | 3.1.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
 | [Google.Cloud.Datastore.Admin.V1](Google.Cloud.Datastore.Admin.V1/index.html) | 1.0.0 | Cloud Datastore |
 | [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.1.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html) | 2.1.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
