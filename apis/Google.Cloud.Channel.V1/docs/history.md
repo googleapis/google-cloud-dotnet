@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.1.0, released 2021-04-29
+
+- [Commit 8f5a62b](https://github.com/googleapis/google-cloud-dotnet/commit/8f5a62b):
+  - docs: Update documentation comments to match tone and style with the rest of Cloud documentation.
+  - feat: Adding customer level pubsub events for primary domain verification and primary domain change.
+  - feat: Enabled support for boolean as an allowed parameter value.
+  - feat: Added legacy_sku field to TransferableSku.
+
 # Version 1.0.0, released 2021-03-03
 
 - [Commit 1620a3a](https://github.com/googleapis/google-cloud-dotnet/commit/1620a3a):
