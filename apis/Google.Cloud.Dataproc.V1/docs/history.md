@@ -1,5 +1,19 @@
 # Version history
 
+# Version 3.1.0, released 2021-04-29
+
+- [Commit d429843](https://github.com/googleapis/google-cloud-dotnet/commit/d429843):
+  - feat: The new start and stop cluster methods.
+  - feat: The ability to specify a metastore config in a cluster.
+  - feat: The ability to specify a (BETA) GKE cluster when creating a Dataproc cluster.
+  - feat: The ability to configure the behavior for private IPv6 cluster networking.
+  - feat: The ability to specify node affinity groups for clusters.
+  - feat: The ability to specify shielded VM configurations for clusters.
+  - feat: Support for service-account based secure multi-tenancy.
+  - feat: The ability to specify cluster labels for picking which cluster should run a job.
+  - feat: Components for DOCKER, DRUID, FLINK, HBASE, RANGER, and SOLR
+  - feat: The ability to specify a DAG timeout for workflows.
+
 # Version 3.0.0, released 2020-11-17
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
