@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2021-04-29
+
+- [Commit a31e0d5](https://github.com/googleapis/google-cloud-dotnet/commit/a31e0d5): fix: Remove dependency on AppEngine's proto definitions. This also removes the source_references field.
+- [Commit bf7351b](https://github.com/googleapis/google-cloud-dotnet/commit/bf7351b):
+  - feat: Make resolution status field available for error groups. Now callers can set the status of an error group by passing this to UpdateGroup. When not specified, it's treated like OPEN.
+  - feat: Make source location available for error groups created from GAE.
+
 # Version 2.0.0-beta03, released 2020-11-12
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
