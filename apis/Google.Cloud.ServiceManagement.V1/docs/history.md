@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.1.0, released 2021-04-29
+
+No API surface changes; minor update due to dependencies
+
 # Version 1.0.0, released 2020-11-18
 
 First GA release.
