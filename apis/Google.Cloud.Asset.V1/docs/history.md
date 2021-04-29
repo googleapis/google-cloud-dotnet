@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.7.0, released 2021-04-29
+
+- [Commit cb59fb9](https://github.com/googleapis/google-cloud-dotnet/commit/cb59fb9): chore: fix typo 'partion_key' in comments
+
+Note: even though there are no API surface changes, this is a minor
+version bump due to dependency changes
+
 # Version 2.6.0, released 2020-11-17
 
 - [Commit 3733849](https://github.com/googleapis/google-cloud-dotnet/commit/3733849): feat: added support OSInventory in Assets. docs: updated existing docs.
