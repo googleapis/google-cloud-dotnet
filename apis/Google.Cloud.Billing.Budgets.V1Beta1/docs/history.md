@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-beta03, released 2021-04-29
+
+- [Commit 4f20acd](https://github.com/googleapis/google-cloud-dotnet/commit/4f20acd):
+  - feat: Added support for configurable budget time period.
+  - fix: Updated some documentation links.
+- [Commit ab48b2b](https://github.com/googleapis/google-cloud-dotnet/commit/ab48b2b): docs: Update rules for currency_code in budget_amount.
+
 # Version 1.0.0-beta02, released 2020-11-17
 
 - [Commit d3c8166](https://github.com/googleapis/google-cloud-dotnet/commit/d3c8166): docs: Reworded comments for the new credit types filter
