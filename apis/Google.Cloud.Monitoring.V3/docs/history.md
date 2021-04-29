@@ -1,5 +1,17 @@
 # Version history
 
+# Version 2.3.0, released 2021-04-29
+
+- [Commit 770bd47](https://github.com/googleapis/google-cloud-dotnet/commit/770bd47):
+  - feat: Added support for Monitoring Query Language: https://cloud.google.com/monitoring/mql
+  - feat: Added support for units in the MetricService feat: Added total_size to the response of ListAlertPolicies.
+  - fix: Un-deprecated cluster_istio for service monitoring.
+  - feat: Added IstioCanonicalService for service monitoring.
+  - feat: Added creation and mutation records to notification channels.
+  - feat: Added support for querying metrics for folders and organizations.
+  - fix: Extended the default deadline for UpdateGroup to 180s.
+  - feat: Added support for secondary aggregation when querying metrics.
+
 # Version 2.2.0, released 2020-10-22
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
