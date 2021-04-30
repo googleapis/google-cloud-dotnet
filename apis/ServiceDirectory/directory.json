@@ -1191,7 +1191,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Essentialcontacts.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.EssentialContacts.V1"
     },
     {
       "ServiceDirectory": "google/cloud/functions/v1",
