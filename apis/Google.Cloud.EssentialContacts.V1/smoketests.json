@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListContacts",
+    "client": "EssentialContactsServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
