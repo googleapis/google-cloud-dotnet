@@ -80,6 +80,11 @@ namespace Google.Cloud.Spanner.Data
                 {
                     case ErrorCode.Aborted:
                         return true;
+                    case ErrorCode.Unknown:
+                        // This specific error is returned by the backend if it cannot guarantee
+                        // the correctness of a transaction. The entire transaction should be
+                        // retried.
+                        return (InnerException?.Message ?? Message).Contains("Transaction outcome unknown");
                     default:
                         return false;
                 }

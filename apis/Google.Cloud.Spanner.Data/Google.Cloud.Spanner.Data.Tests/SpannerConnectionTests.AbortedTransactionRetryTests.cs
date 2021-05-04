@@ -188,7 +188,34 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
 
             [Fact]
-            public async Task CommitFailsOtherThanAborted()
+            public async Task CommitReturnsTransactionOutcomeUnknown()
+            {
+                var spannerClientMock = SpannerClientHelpers
+                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                    .SetupBatchCreateSessionsAsync()
+                    .SetupBeginTransactionAsync()
+                    .SetupExecuteBatchDmlAsync()
+                    .SetupCommitAsync_Fails(failures: 1, statusCode: StatusCode.Unknown, exceptionMessage: "Transaction outcome unknown.")
+                    .SetupRollbackAsync();
+
+                SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
+                var callee = new Callee(scheduler);
+
+                await scheduler.RunAsync(async () =>
+                {
+                    var result = await connection.RunWithRetriableTransactionAsync(transaction => callee.DatabaseWorkAsync(connection, transaction));
+                    Assert.Equal(2, result);
+                });
+
+                callee.AssertBackoffTimesInRange(time0);
+                callee.AssertLastCallTime(scheduler.Clock.GetCurrentDateTimeUtc());
+            }
+
+            [Fact]
+            public async Task CommitFailsOtherThanAbortedAndTransactionOutcomeUnknown()
             {
                 var spannerClientMock = SpannerClientHelpers
                     .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
