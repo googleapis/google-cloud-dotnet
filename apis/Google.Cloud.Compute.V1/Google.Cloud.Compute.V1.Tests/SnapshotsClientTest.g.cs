@@ -32,9 +32,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Operation expectedResponse = new Operation
             {
@@ -43,24 +43,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -75,9 +75,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Operation expectedResponse = new Operation
             {
@@ -86,24 +86,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Operation expectedResponse = new Operation
             {
@@ -130,24 +130,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -162,8 +162,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Operation expectedResponse = new Operation
             {
@@ -172,24 +172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -206,8 +206,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Snapshot expectedResponse = new Snapshot
             {
@@ -220,12 +220,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "license_codesdd63b74e",
                 },
+                ChainName = "chain_name66f3d828",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Snapshot.Types.Status.Deleting,
                 DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
                 },
-                ChainName = "chain_name66f3d828",
                 Licenses =
                 {
                     "licensesd1cc2f9d",
@@ -233,8 +235,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -262,8 +262,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Snapshot expectedResponse = new Snapshot
             {
@@ -276,12 +276,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "license_codesdd63b74e",
                 },
+                ChainName = "chain_name66f3d828",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Snapshot.Types.Status.Deleting,
                 DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
                 },
-                ChainName = "chain_name66f3d828",
                 Licenses =
                 {
                     "licensesd1cc2f9d",
@@ -289,8 +291,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -320,8 +320,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Snapshot expectedResponse = new Snapshot
             {
@@ -334,12 +334,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "license_codesdd63b74e",
                 },
+                ChainName = "chain_name66f3d828",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Snapshot.Types.Status.Deleting,
                 DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
                 },
-                ChainName = "chain_name66f3d828",
                 Licenses =
                 {
                     "licensesd1cc2f9d",
@@ -347,8 +349,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -376,8 +376,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "snapshotded322c3",
                 Project = "projectaa6ff846",
+                Snapshot = "snapshotded322c3",
             };
             Snapshot expectedResponse = new Snapshot
             {
@@ -390,12 +390,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "license_codesdd63b74e",
                 },
+                ChainName = "chain_name66f3d828",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Snapshot.Types.Status.Deleting,
                 DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
                 },
-                ChainName = "chain_name66f3d828",
                 Licenses =
                 {
                     "licensesd1cc2f9d",
@@ -403,8 +405,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -441,9 +441,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -467,9 +467,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -494,9 +494,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -519,9 +519,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -542,9 +542,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SnapshotList expectedResponse = new SnapshotList
@@ -571,9 +571,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SnapshotList expectedResponse = new SnapshotList
@@ -650,16 +650,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -676,16 +676,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -704,16 +704,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -730,16 +730,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -758,9 +758,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -769,24 +769,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -801,9 +801,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -812,24 +812,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -846,9 +846,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -857,24 +857,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -889,9 +889,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -900,24 +900,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SnapshotsClient client = new SnapshotsClientImpl(mockGrpcClient.Object, null);
@@ -934,9 +934,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -958,9 +958,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -984,9 +984,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1008,9 +1008,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

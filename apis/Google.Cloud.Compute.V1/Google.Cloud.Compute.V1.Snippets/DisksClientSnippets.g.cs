@@ -106,10 +106,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -129,10 +129,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -179,9 +179,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 Zone = "",
                 RequestId = "",
+                Project = "",
                 GuestFlush = false,
                 SnapshotResource = new Snapshot(),
-                Project = "",
             };
             // Make the request
             Operation response = disksClient.CreateSnapshot(request);
@@ -201,9 +201,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 Zone = "",
                 RequestId = "",
+                Project = "",
                 GuestFlush = false,
                 SnapshotResource = new Snapshot(),
-                Project = "",
             };
             // Make the request
             Operation response = await disksClient.CreateSnapshotAsync(request);
@@ -535,9 +535,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -558,9 +558,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -609,8 +609,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 Zone = "",
                 RequestId = "",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = disksClient.RemoveResourcePolicies(request);
@@ -630,8 +630,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 Zone = "",
                 RequestId = "",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = await disksClient.RemoveResourcePoliciesAsync(request);
@@ -755,9 +755,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = disksClient.SetIamPolicy(request);
@@ -775,9 +775,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = await disksClient.SetIamPolicyAsync(request);
@@ -828,9 +828,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             // Make the request
             Operation response = disksClient.SetLabels(request);
@@ -849,9 +849,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             // Make the request
             Operation response = await disksClient.SetLabelsAsync(request);
@@ -901,9 +901,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = disksClient.TestIamPermissions(request);
@@ -921,9 +921,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await disksClient.TestIamPermissionsAsync(request);

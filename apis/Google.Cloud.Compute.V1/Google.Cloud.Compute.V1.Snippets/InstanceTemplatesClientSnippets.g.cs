@@ -31,8 +31,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteInstanceTemplateRequest request = new DeleteInstanceTemplateRequest
             {
                 RequestId = "",
-                InstanceTemplate = "",
                 Project = "",
+                InstanceTemplate = "",
             };
             // Make the request
             Operation response = instanceTemplatesClient.Delete(request);
@@ -50,8 +50,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteInstanceTemplateRequest request = new DeleteInstanceTemplateRequest
             {
                 RequestId = "",
-                InstanceTemplate = "",
                 Project = "",
+                InstanceTemplate = "",
             };
             // Make the request
             Operation response = await instanceTemplatesClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
-                InstanceTemplate = "",
                 Project = "",
+                InstanceTemplate = "",
             };
             // Make the request
             InstanceTemplate response = instanceTemplatesClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
-                InstanceTemplate = "",
                 Project = "",
+                InstanceTemplate = "",
             };
             // Make the request
             InstanceTemplate response = await instanceTemplatesClient.GetAsync(request);
@@ -294,9 +294,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -316,9 +316,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -362,9 +362,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = instanceTemplatesClient.SetIamPolicy(request);
@@ -381,9 +381,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = await instanceTemplatesClient.SetIamPolicyAsync(request);
@@ -430,9 +430,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = instanceTemplatesClient.TestIamPermissions(request);
@@ -449,9 +449,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await instanceTemplatesClient.TestIamPermissionsAsync(request);

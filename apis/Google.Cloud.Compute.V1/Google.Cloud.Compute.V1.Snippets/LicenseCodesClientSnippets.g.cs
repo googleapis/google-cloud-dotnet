@@ -94,9 +94,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = licenseCodesClient.TestIamPermissions(request);
@@ -113,9 +113,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await licenseCodesClient.TestIamPermissionsAsync(request);

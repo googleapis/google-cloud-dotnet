@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -104,8 +104,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Operation response = addressesClient.Delete(request);
@@ -124,8 +124,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Operation response = await addressesClient.DeleteAsync(request);
@@ -173,8 +173,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetAddressRequest request = new GetAddressRequest
             {
                 Region = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Address response = addressesClient.Get(request);
@@ -192,8 +192,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetAddressRequest request = new GetAddressRequest
             {
                 Region = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Address response = await addressesClient.GetAsync(request);
@@ -242,8 +242,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                AddressResource = new Address(),
                 Project = "",
+                AddressResource = new Address(),
             };
             // Make the request
             Operation response = addressesClient.Insert(request);
@@ -262,8 +262,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                AddressResource = new Address(),
                 Project = "",
+                AddressResource = new Address(),
             };
             // Make the request
             Operation response = await addressesClient.InsertAsync(request);
@@ -312,10 +312,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -335,10 +335,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

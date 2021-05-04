@@ -32,8 +32,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                SignedUrlKeyResource = new SignedUrlKey(),
                 Project = "",
+                SignedUrlKeyResource = new SignedUrlKey(),
             };
             // Make the request
             Operation response = backendBucketsClient.AddSignedUrlKey(request);
@@ -52,8 +52,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                SignedUrlKeyResource = new SignedUrlKey(),
                 Project = "",
+                SignedUrlKeyResource = new SignedUrlKey(),
             };
             // Make the request
             Operation response = await backendBucketsClient.AddSignedUrlKeyAsync(request);
@@ -301,8 +301,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertBackendBucketRequest request = new InsertBackendBucketRequest
             {
                 RequestId = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = backendBucketsClient.Insert(request);
@@ -320,8 +320,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertBackendBucketRequest request = new InsertBackendBucketRequest
             {
                 RequestId = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = await backendBucketsClient.InsertAsync(request);
@@ -368,9 +368,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -390,9 +390,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -438,8 +438,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = backendBucketsClient.Patch(request);
@@ -458,8 +458,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = await backendBucketsClient.PatchAsync(request);
@@ -508,8 +508,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = backendBucketsClient.Update(request);
@@ -528,8 +528,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 BackendBucket = "",
-                BackendBucketResource = new BackendBucket(),
                 Project = "",
+                BackendBucketResource = new BackendBucket(),
             };
             // Make the request
             Operation response = await backendBucketsClient.UpdateAsync(request);

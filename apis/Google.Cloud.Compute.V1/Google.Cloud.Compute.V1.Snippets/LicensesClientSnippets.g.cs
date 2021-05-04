@@ -227,8 +227,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertLicenseRequest request = new InsertLicenseRequest
             {
                 RequestId = "",
-                LicenseResource = new License(),
                 Project = "",
+                LicenseResource = new License(),
             };
             // Make the request
             Operation response = licensesClient.Insert(request);
@@ -246,8 +246,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertLicenseRequest request = new InsertLicenseRequest
             {
                 RequestId = "",
-                LicenseResource = new License(),
                 Project = "",
+                LicenseResource = new License(),
             };
             // Make the request
             Operation response = await licensesClient.InsertAsync(request);
@@ -294,9 +294,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -316,9 +316,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -362,9 +362,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyLicenseRequest request = new SetIamPolicyLicenseRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = licensesClient.SetIamPolicy(request);
@@ -381,9 +381,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyLicenseRequest request = new SetIamPolicyLicenseRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = await licensesClient.SetIamPolicyAsync(request);
@@ -430,9 +430,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsLicenseRequest request = new TestIamPermissionsLicenseRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = licensesClient.TestIamPermissions(request);
@@ -449,9 +449,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsLicenseRequest request = new TestIamPermissionsLicenseRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await licensesClient.TestIamPermissionsAsync(request);

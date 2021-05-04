@@ -32,8 +32,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "interconnect_location365a00f5",
                 Project = "projectaa6ff846",
+                InterconnectLocation = "interconnect_location365a00f5",
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
@@ -42,15 +42,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
+                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                AvailabilityZone = "availability_zone1778d0ba",
+                Status = InterconnectLocation.Types.Status.Closed,
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
                 },
-                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
                 Description = "description2cf9da67",
-                AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
                 SelfLink = "self_link7e87f12d",
                 Address = "address04984d88",
                 FacilityProvider = "facility_provider3fff5132",
@@ -69,8 +69,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "interconnect_location365a00f5",
                 Project = "projectaa6ff846",
+                InterconnectLocation = "interconnect_location365a00f5",
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
@@ -79,15 +79,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
+                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                AvailabilityZone = "availability_zone1778d0ba",
+                Status = InterconnectLocation.Types.Status.Closed,
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
                 },
-                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
                 Description = "description2cf9da67",
-                AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
                 SelfLink = "self_link7e87f12d",
                 Address = "address04984d88",
                 FacilityProvider = "facility_provider3fff5132",
@@ -108,8 +108,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "interconnect_location365a00f5",
                 Project = "projectaa6ff846",
+                InterconnectLocation = "interconnect_location365a00f5",
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
@@ -118,15 +118,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
+                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                AvailabilityZone = "availability_zone1778d0ba",
+                Status = InterconnectLocation.Types.Status.Closed,
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
                 },
-                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
                 Description = "description2cf9da67",
-                AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
                 SelfLink = "self_link7e87f12d",
                 Address = "address04984d88",
                 FacilityProvider = "facility_provider3fff5132",
@@ -145,8 +145,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "interconnect_location365a00f5",
                 Project = "projectaa6ff846",
+                InterconnectLocation = "interconnect_location365a00f5",
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
@@ -155,15 +155,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
+                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                AvailabilityZone = "availability_zone1778d0ba",
+                Status = InterconnectLocation.Types.Status.Closed,
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
                 },
-                FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
                 Description = "description2cf9da67",
-                AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
                 SelfLink = "self_link7e87f12d",
                 Address = "address04984d88",
                 FacilityProvider = "facility_provider3fff5132",
@@ -186,9 +186,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             InterconnectLocationList expectedResponse = new InterconnectLocationList
@@ -218,9 +218,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             InterconnectLocationList expectedResponse = new InterconnectLocationList

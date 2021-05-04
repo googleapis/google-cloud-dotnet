@@ -32,8 +32,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest(),
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = globalNetworkEndpointGroupsClient.AttachNetworkEndpoints(request);
@@ -52,8 +52,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest(),
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await globalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(request);
@@ -101,8 +101,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteGlobalNetworkEndpointGroupRequest request = new DeleteGlobalNetworkEndpointGroupRequest
             {
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = globalNetworkEndpointGroupsClient.Delete(request);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteGlobalNetworkEndpointGroupRequest request = new DeleteGlobalNetworkEndpointGroupRequest
             {
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await globalNetworkEndpointGroupsClient.DeleteAsync(request);
@@ -168,8 +168,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest(),
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(request);
@@ -188,8 +188,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest(),
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await globalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(request);
@@ -236,8 +236,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalNetworkEndpointGroupRequest request = new GetGlobalNetworkEndpointGroupRequest
             {
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = globalNetworkEndpointGroupsClient.Get(request);
@@ -254,8 +254,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalNetworkEndpointGroupRequest request = new GetGlobalNetworkEndpointGroupRequest
             {
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = await globalNetworkEndpointGroupsClient.GetAsync(request);
@@ -368,9 +368,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -390,9 +390,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -438,10 +438,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                Filter = "",
+                NetworkEndpointGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -461,10 +461,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                Filter = "",
+                NetworkEndpointGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

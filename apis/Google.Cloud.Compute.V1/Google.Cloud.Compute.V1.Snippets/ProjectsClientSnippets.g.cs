@@ -221,8 +221,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
                 RequestId = "",
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             // Make the request
             Operation response = projectsClient.EnableXpnResource(request);
@@ -240,8 +240,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
                 RequestId = "",
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             // Make the request
             Operation response = await projectsClient.EnableXpnResourceAsync(request);
@@ -396,9 +396,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -418,9 +418,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -466,10 +466,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -489,10 +489,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -539,8 +539,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
                 RequestId = "",
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             // Make the request
             Operation response = projectsClient.MoveDisk(request);
@@ -558,8 +558,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
                 RequestId = "",
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             // Make the request
             Operation response = await projectsClient.MoveDiskAsync(request);
@@ -605,8 +605,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
                 RequestId = "",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             // Make the request
             Operation response = projectsClient.MoveInstance(request);
@@ -624,8 +624,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
                 RequestId = "",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             // Make the request
             Operation response = await projectsClient.MoveInstanceAsync(request);
@@ -670,9 +670,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 RequestId = "",
                 Project = "",
+                MetadataResource = new Metadata(),
             };
             // Make the request
             Operation response = projectsClient.SetCommonInstanceMetadata(request);
@@ -689,9 +689,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 RequestId = "",
                 Project = "",
+                MetadataResource = new Metadata(),
             };
             // Make the request
             Operation response = await projectsClient.SetCommonInstanceMetadataAsync(request);

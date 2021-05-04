@@ -160,9 +160,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<LicenseCodes.LicenseCodesClient> mockGrpcClient = new moq::Mock<LicenseCodes.LicenseCodesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -184,9 +184,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<LicenseCodes.LicenseCodesClient> mockGrpcClient = new moq::Mock<LicenseCodes.LicenseCodesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -210,9 +210,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<LicenseCodes.LicenseCodesClient> mockGrpcClient = new moq::Mock<LicenseCodes.LicenseCodesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -234,9 +234,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<LicenseCodes.LicenseCodesClient> mockGrpcClient = new moq::Mock<LicenseCodes.LicenseCodesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsLicenseCodeRequest request = new TestIamPermissionsLicenseCodeRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

@@ -32,8 +32,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                HealthCheckService = "",
                 Project = "",
+                HealthCheckService = "",
             };
             // Make the request
             Operation response = regionHealthCheckServicesClient.Delete(request);
@@ -52,8 +52,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                HealthCheckService = "",
                 Project = "",
+                HealthCheckService = "",
             };
             // Make the request
             Operation response = await regionHealthCheckServicesClient.DeleteAsync(request);
@@ -101,8 +101,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionHealthCheckServiceRequest request = new GetRegionHealthCheckServiceRequest
             {
                 Region = "",
-                HealthCheckService = "",
                 Project = "",
+                HealthCheckService = "",
             };
             // Make the request
             HealthCheckService response = regionHealthCheckServicesClient.Get(request);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionHealthCheckServiceRequest request = new GetRegionHealthCheckServiceRequest
             {
                 Region = "",
-                HealthCheckService = "",
                 Project = "",
+                HealthCheckService = "",
             };
             // Make the request
             HealthCheckService response = await regionHealthCheckServicesClient.GetAsync(request);
@@ -170,8 +170,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                HealthCheckServiceResource = new HealthCheckService(),
                 Project = "",
+                HealthCheckServiceResource = new HealthCheckService(),
             };
             // Make the request
             Operation response = regionHealthCheckServicesClient.Insert(request);
@@ -190,8 +190,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                HealthCheckServiceResource = new HealthCheckService(),
                 Project = "",
+                HealthCheckServiceResource = new HealthCheckService(),
             };
             // Make the request
             Operation response = await regionHealthCheckServicesClient.InsertAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -314,9 +314,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
+                Project = "",
                 HealthCheckService = "",
                 HealthCheckServiceResource = new HealthCheckService(),
-                Project = "",
             };
             // Make the request
             Operation response = regionHealthCheckServicesClient.Patch(request);
@@ -335,9 +335,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
+                Project = "",
                 HealthCheckService = "",
                 HealthCheckServiceResource = new HealthCheckService(),
-                Project = "",
             };
             // Make the request
             Operation response = await regionHealthCheckServicesClient.PatchAsync(request);

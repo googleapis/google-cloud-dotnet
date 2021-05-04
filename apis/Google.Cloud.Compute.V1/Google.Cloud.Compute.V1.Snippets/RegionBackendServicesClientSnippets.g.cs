@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = regionBackendServicesClient.Delete(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = await regionBackendServicesClient.DeleteAsync(request);
@@ -100,9 +100,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "",
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendService response = regionBackendServicesClient.Get(request);
@@ -119,9 +119,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "",
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendService response = await regionBackendServicesClient.GetAsync(request);
@@ -168,10 +168,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendServiceGroupHealth response = regionBackendServicesClient.GetHealth(request);
@@ -188,10 +188,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendServiceGroupHealth response = await regionBackendServicesClient.GetHealthAsync(request);
@@ -241,9 +241,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = regionBackendServicesClient.Insert(request);
@@ -261,9 +261,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = await regionBackendServicesClient.InsertAsync(request);
@@ -312,10 +312,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -335,10 +335,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -385,10 +385,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendService = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = regionBackendServicesClient.Patch(request);
@@ -406,10 +406,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendService = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = await regionBackendServicesClient.PatchAsync(request);
@@ -459,10 +459,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendService = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = regionBackendServicesClient.Update(request);
@@ -480,10 +480,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
-                BackendServiceResource = new BackendService(),
                 Region = "",
                 Project = "",
+                BackendService = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = await regionBackendServicesClient.UpdateAsync(request);

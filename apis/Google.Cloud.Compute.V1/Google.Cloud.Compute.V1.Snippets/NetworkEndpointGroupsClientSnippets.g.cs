@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -105,8 +105,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroupsAttachEndpointsRequestResource = new NetworkEndpointGroupsAttachEndpointsRequest(),
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = networkEndpointGroupsClient.AttachNetworkEndpoints(request);
@@ -126,8 +126,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroupsAttachEndpointsRequestResource = new NetworkEndpointGroupsAttachEndpointsRequest(),
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await networkEndpointGroupsClient.AttachNetworkEndpointsAsync(request);
@@ -178,8 +178,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = networkEndpointGroupsClient.Delete(request);
@@ -198,8 +198,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await networkEndpointGroupsClient.DeleteAsync(request);
@@ -248,8 +248,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
                 NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest(),
             };
             // Make the request
@@ -269,8 +269,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
                 NetworkEndpointGroupsDetachEndpointsRequestResource = new NetworkEndpointGroupsDetachEndpointsRequest(),
             };
             // Make the request
@@ -321,8 +321,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = networkEndpointGroupsClient.Get(request);
@@ -340,8 +340,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = await networkEndpointGroupsClient.GetAsync(request);
@@ -461,9 +461,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -484,9 +484,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -536,10 +536,10 @@ namespace Google.Cloud.Compute.V1.Snippets
                 PageToken = "",
                 MaxResults = 0U,
                 NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                Filter = "",
                 OrderBy = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                Filter = "",
+                NetworkEndpointGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -561,10 +561,10 @@ namespace Google.Cloud.Compute.V1.Snippets
                 PageToken = "",
                 MaxResults = 0U,
                 NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                Filter = "",
                 OrderBy = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                Filter = "",
+                NetworkEndpointGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -615,9 +615,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = networkEndpointGroupsClient.TestIamPermissions(request);
@@ -635,9 +635,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await networkEndpointGroupsClient.TestIamPermissionsAsync(request);

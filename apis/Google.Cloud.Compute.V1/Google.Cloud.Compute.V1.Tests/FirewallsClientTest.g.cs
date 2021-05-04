@@ -43,24 +43,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -86,24 +86,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -130,24 +130,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -172,24 +172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -212,27 +212,32 @@ namespace Google.Cloud.Compute.V1.Tests
             Firewall expectedResponse = new Firewall
             {
                 Id = "id74b70bb8",
-                Disabled = false,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Denied = { new Denied(), },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                DestinationRanges =
-                {
-                    "destination_rangesf67f2379",
-                },
                 TargetTags =
                 {
                     "target_tags29e39aea",
                 },
-                LogConfig = new FirewallLogConfig(),
                 SourceServiceAccounts =
                 {
                     "source_service_accounts462c1c37",
                 },
                 Direction = Firewall.Types.Direction.Ingress,
-                Description = "description2cf9da67",
                 Allowed = { new Allowed(), },
+                SourceRanges =
+                {
+                    "source_ranges5dbeae62",
+                },
+                Network = "networkd22ce091",
+                Disabled = false,
+                Denied = { new Denied(), },
+                DestinationRanges =
+                {
+                    "destination_rangesf67f2379",
+                },
+                LogConfig = new FirewallLogConfig(),
+                Description = "description2cf9da67",
                 Priority = 1546225849,
                 SourceTags =
                 {
@@ -243,11 +248,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "target_service_accounts61bf1663",
                 },
-                SourceRanges =
-                {
-                    "source_ranges5dbeae62",
-                },
-                Network = "networkd22ce091",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -268,27 +268,32 @@ namespace Google.Cloud.Compute.V1.Tests
             Firewall expectedResponse = new Firewall
             {
                 Id = "id74b70bb8",
-                Disabled = false,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Denied = { new Denied(), },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                DestinationRanges =
-                {
-                    "destination_rangesf67f2379",
-                },
                 TargetTags =
                 {
                     "target_tags29e39aea",
                 },
-                LogConfig = new FirewallLogConfig(),
                 SourceServiceAccounts =
                 {
                     "source_service_accounts462c1c37",
                 },
                 Direction = Firewall.Types.Direction.Ingress,
-                Description = "description2cf9da67",
                 Allowed = { new Allowed(), },
+                SourceRanges =
+                {
+                    "source_ranges5dbeae62",
+                },
+                Network = "networkd22ce091",
+                Disabled = false,
+                Denied = { new Denied(), },
+                DestinationRanges =
+                {
+                    "destination_rangesf67f2379",
+                },
+                LogConfig = new FirewallLogConfig(),
+                Description = "description2cf9da67",
                 Priority = 1546225849,
                 SourceTags =
                 {
@@ -299,11 +304,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "target_service_accounts61bf1663",
                 },
-                SourceRanges =
-                {
-                    "source_ranges5dbeae62",
-                },
-                Network = "networkd22ce091",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Firewall>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -326,27 +326,32 @@ namespace Google.Cloud.Compute.V1.Tests
             Firewall expectedResponse = new Firewall
             {
                 Id = "id74b70bb8",
-                Disabled = false,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Denied = { new Denied(), },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                DestinationRanges =
-                {
-                    "destination_rangesf67f2379",
-                },
                 TargetTags =
                 {
                     "target_tags29e39aea",
                 },
-                LogConfig = new FirewallLogConfig(),
                 SourceServiceAccounts =
                 {
                     "source_service_accounts462c1c37",
                 },
                 Direction = Firewall.Types.Direction.Ingress,
-                Description = "description2cf9da67",
                 Allowed = { new Allowed(), },
+                SourceRanges =
+                {
+                    "source_ranges5dbeae62",
+                },
+                Network = "networkd22ce091",
+                Disabled = false,
+                Denied = { new Denied(), },
+                DestinationRanges =
+                {
+                    "destination_rangesf67f2379",
+                },
+                LogConfig = new FirewallLogConfig(),
+                Description = "description2cf9da67",
                 Priority = 1546225849,
                 SourceTags =
                 {
@@ -357,11 +362,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "target_service_accounts61bf1663",
                 },
-                SourceRanges =
-                {
-                    "source_ranges5dbeae62",
-                },
-                Network = "networkd22ce091",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -382,27 +382,32 @@ namespace Google.Cloud.Compute.V1.Tests
             Firewall expectedResponse = new Firewall
             {
                 Id = "id74b70bb8",
-                Disabled = false,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Denied = { new Denied(), },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                DestinationRanges =
-                {
-                    "destination_rangesf67f2379",
-                },
                 TargetTags =
                 {
                     "target_tags29e39aea",
                 },
-                LogConfig = new FirewallLogConfig(),
                 SourceServiceAccounts =
                 {
                     "source_service_accounts462c1c37",
                 },
                 Direction = Firewall.Types.Direction.Ingress,
-                Description = "description2cf9da67",
                 Allowed = { new Allowed(), },
+                SourceRanges =
+                {
+                    "source_ranges5dbeae62",
+                },
+                Network = "networkd22ce091",
+                Disabled = false,
+                Denied = { new Denied(), },
+                DestinationRanges =
+                {
+                    "destination_rangesf67f2379",
+                },
+                LogConfig = new FirewallLogConfig(),
+                Description = "description2cf9da67",
                 Priority = 1546225849,
                 SourceTags =
                 {
@@ -413,11 +418,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "target_service_accounts61bf1663",
                 },
-                SourceRanges =
-                {
-                    "source_ranges5dbeae62",
-                },
-                Network = "networkd22ce091",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Firewall>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -445,24 +445,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -488,24 +488,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -532,24 +532,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -574,24 +574,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -610,9 +610,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             FirewallList expectedResponse = new FirewallList
@@ -639,9 +639,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             FirewallList expectedResponse = new FirewallList
@@ -730,24 +730,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -774,24 +774,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -819,24 +819,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -862,24 +862,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -908,24 +908,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -952,24 +952,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -997,24 +997,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);
@@ -1040,24 +1040,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallsClient client = new FirewallsClientImpl(mockGrpcClient.Object, null);

@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,9 +103,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                Subnetwork = "",
             };
             // Make the request
             Operation response = subnetworksClient.Delete(request);
@@ -123,9 +123,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                Subnetwork = "",
             };
             // Make the request
             Operation response = await subnetworksClient.DeleteAsync(request);
@@ -173,10 +173,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "",
+                Subnetwork = "",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             // Make the request
             Operation response = subnetworksClient.ExpandIpCidrRange(request);
@@ -194,10 +194,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "",
+                Subnetwork = "",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             // Make the request
             Operation response = await subnetworksClient.ExpandIpCidrRangeAsync(request);
@@ -246,9 +246,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                Subnetwork = "",
             };
             // Make the request
             Subnetwork response = subnetworksClient.Get(request);
@@ -265,9 +265,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                Subnetwork = "",
             };
             // Make the request
             Subnetwork response = await subnetworksClient.GetAsync(request);
@@ -456,10 +456,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -479,10 +479,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -530,9 +530,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -552,9 +552,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -599,11 +599,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 SubnetworkResource = new Subnetwork(),
-                DrainTimeoutSeconds = 0,
                 Region = "",
                 Project = "",
+                Subnetwork = "",
+                DrainTimeoutSeconds = 0,
             };
             // Make the request
             Operation response = subnetworksClient.Patch(request);
@@ -621,11 +621,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
                 RequestId = "",
-                Subnetwork = "",
                 SubnetworkResource = new Subnetwork(),
-                DrainTimeoutSeconds = 0,
                 Region = "",
                 Project = "",
+                Subnetwork = "",
+                DrainTimeoutSeconds = 0,
             };
             // Make the request
             Operation response = await subnetworksClient.PatchAsync(request);
@@ -674,10 +674,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = subnetworksClient.SetIamPolicy(request);
@@ -694,10 +694,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = await subnetworksClient.SetIamPolicyAsync(request);
@@ -746,11 +746,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "",
             };
             // Make the request
             Operation response = subnetworksClient.SetPrivateIpGoogleAccess(request);
@@ -767,11 +767,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
                 RequestId = "",
-                Subnetwork = "",
                 Region = "",
                 Project = "",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "",
             };
             // Make the request
             Operation response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(request);
@@ -821,9 +821,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = subnetworksClient.TestIamPermissions(request);
@@ -841,9 +841,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await subnetworksClient.TestIamPermissionsAsync(request);

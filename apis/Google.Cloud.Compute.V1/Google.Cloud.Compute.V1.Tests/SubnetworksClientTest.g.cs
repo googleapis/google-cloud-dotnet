@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             SubnetworkAggregatedList expectedResponse = new SubnetworkAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new SubnetworksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             SubnetworkAggregatedList expectedResponse = new SubnetworkAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new SubnetworksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SubnetworkAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new SubnetworksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new SubnetworksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SubnetworkAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -185,9 +185,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -196,24 +196,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -229,9 +229,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -240,24 +240,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -274,9 +274,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -285,24 +285,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -317,9 +317,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             DeleteSubnetworkRequest request = new DeleteSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -328,24 +328,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -363,10 +363,10 @@ namespace Google.Cloud.Compute.V1.Tests
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -375,24 +375,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ExpandIpCidrRange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -408,10 +408,10 @@ namespace Google.Cloud.Compute.V1.Tests
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -420,24 +420,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ExpandIpCidrRangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -454,10 +454,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -466,24 +466,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ExpandIpCidrRange(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -498,10 +498,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             ExpandIpCidrRangeSubnetworkRequest request = new ExpandIpCidrRangeSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
-                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -510,24 +510,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ExpandIpCidrRangeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -544,9 +544,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Subnetwork expectedResponse = new Subnetwork
             {
@@ -554,11 +554,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Role = Subnetwork.Types.Role.Active,
-                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
                 PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
-                LogConfig = new SubnetworkLogConfig(),
                 IpCidrRange = "ip_cidr_range745a04d3",
                 State = Subnetwork.Types.State.UndefinedState,
                 SecondaryIpRanges =
@@ -567,12 +564,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Region = "regionedb20d96",
                 EnableFlowLogs = false,
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
+                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
+                LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -587,9 +587,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Subnetwork expectedResponse = new Subnetwork
             {
@@ -597,11 +597,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Role = Subnetwork.Types.Role.Active,
-                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
                 PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
-                LogConfig = new SubnetworkLogConfig(),
                 IpCidrRange = "ip_cidr_range745a04d3",
                 State = Subnetwork.Types.State.UndefinedState,
                 SecondaryIpRanges =
@@ -610,12 +607,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Region = "regionedb20d96",
                 EnableFlowLogs = false,
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
+                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
+                LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -632,9 +632,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Subnetwork expectedResponse = new Subnetwork
             {
@@ -642,11 +642,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Role = Subnetwork.Types.Role.Active,
-                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
                 PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
-                LogConfig = new SubnetworkLogConfig(),
                 IpCidrRange = "ip_cidr_range745a04d3",
                 State = Subnetwork.Types.State.UndefinedState,
                 SecondaryIpRanges =
@@ -655,12 +652,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Region = "regionedb20d96",
                 EnableFlowLogs = false,
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
+                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
+                LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -675,9 +675,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Subnetwork expectedResponse = new Subnetwork
             {
@@ -685,11 +685,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Role = Subnetwork.Types.Role.Active,
-                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
                 PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
-                LogConfig = new SubnetworkLogConfig(),
                 IpCidrRange = "ip_cidr_range745a04d3",
                 State = Subnetwork.Types.State.UndefinedState,
                 SecondaryIpRanges =
@@ -698,12 +695,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Region = "regionedb20d96",
                 EnableFlowLogs = false,
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
+                Purpose = Subnetwork.Types.Purpose.PrivateRfc1918,
+                LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -728,9 +728,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -755,9 +755,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -783,9 +783,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -809,9 +809,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -842,24 +842,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -886,24 +886,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -931,24 +931,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -974,24 +974,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1010,10 +1010,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SubnetworkList expectedResponse = new SubnetworkList
@@ -1040,10 +1040,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SubnetworkList expectedResponse = new SubnetworkList
@@ -1124,9 +1124,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             UsableSubnetworksAggregatedList expectedResponse = new UsableSubnetworksAggregatedList
@@ -1156,9 +1156,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             UsableSubnetworksAggregatedList expectedResponse = new UsableSubnetworksAggregatedList
@@ -1245,11 +1245,11 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 SubnetworkResource = new Subnetwork(),
-                DrainTimeoutSeconds = -72030427,
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                DrainTimeoutSeconds = -72030427,
             };
             Operation expectedResponse = new Operation
             {
@@ -1258,24 +1258,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1291,11 +1291,11 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 SubnetworkResource = new Subnetwork(),
-                DrainTimeoutSeconds = -72030427,
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
+                DrainTimeoutSeconds = -72030427,
             };
             Operation expectedResponse = new Operation
             {
@@ -1304,24 +1304,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1338,10 +1338,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 SubnetworkResource = new Subnetwork(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1350,24 +1350,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1382,10 +1382,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             PatchSubnetworkRequest request = new PatchSubnetworkRequest
             {
-                Subnetwork = "subnetworkf55bf572",
                 SubnetworkResource = new Subnetwork(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1394,24 +1394,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1428,17 +1428,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1455,17 +1455,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1484,17 +1484,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1511,17 +1511,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1540,11 +1540,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1553,24 +1553,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetPrivateIpGoogleAccess(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1585,11 +1585,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
                 RequestId = "request_id362c8df6",
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1598,24 +1598,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetPrivateIpGoogleAccessAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1632,10 +1632,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1644,24 +1644,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetPrivateIpGoogleAccess(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1676,10 +1676,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
             SetPrivateIpGoogleAccessSubnetworkRequest request = new SetPrivateIpGoogleAccessSubnetworkRequest
             {
-                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
-                Subnetwork = "subnetworkf55bf572",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                SubnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest(),
+                Subnetwork = "subnetworkf55bf572",
             };
             Operation expectedResponse = new Operation
             {
@@ -1688,24 +1688,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetPrivateIpGoogleAccessAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -1723,9 +1723,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1748,9 +1748,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1775,9 +1775,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1800,9 +1800,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

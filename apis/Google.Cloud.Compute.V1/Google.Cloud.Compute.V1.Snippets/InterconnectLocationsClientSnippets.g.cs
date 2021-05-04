@@ -30,8 +30,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "",
                 Project = "",
+                InterconnectLocation = "",
             };
             // Make the request
             InterconnectLocation response = interconnectLocationsClient.Get(request);
@@ -48,8 +48,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInterconnectLocationRequest request = new GetInterconnectLocationRequest
             {
-                InterconnectLocation = "",
                 Project = "",
+                InterconnectLocation = "",
             };
             // Make the request
             InterconnectLocation response = await interconnectLocationsClient.GetAsync(request);
@@ -96,9 +96,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -118,9 +118,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

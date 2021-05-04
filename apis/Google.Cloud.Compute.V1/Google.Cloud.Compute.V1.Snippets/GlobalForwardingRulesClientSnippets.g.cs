@@ -30,9 +30,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteGlobalForwardingRuleRequest request = new DeleteGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
             };
             // Make the request
             Operation response = globalForwardingRulesClient.Delete(request);
@@ -49,9 +49,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteGlobalForwardingRuleRequest request = new DeleteGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
             };
             // Make the request
             Operation response = await globalForwardingRulesClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 Project = "",
+                ForwardingRule = "",
             };
             // Make the request
             ForwardingRule response = globalForwardingRulesClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 Project = "",
+                ForwardingRule = "",
             };
             // Make the request
             ForwardingRule response = await globalForwardingRulesClient.GetAsync(request);
@@ -160,9 +160,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             InsertGlobalForwardingRuleRequest request = new InsertGlobalForwardingRuleRequest
             {
-                ForwardingRuleResource = new ForwardingRule(),
                 RequestId = "",
                 Project = "",
+                ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
             Operation response = globalForwardingRulesClient.Insert(request);
@@ -179,9 +179,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             InsertGlobalForwardingRuleRequest request = new InsertGlobalForwardingRuleRequest
             {
-                ForwardingRuleResource = new ForwardingRule(),
                 RequestId = "",
                 Project = "",
+                ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
             Operation response = await globalForwardingRulesClient.InsertAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -296,10 +296,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchGlobalForwardingRuleRequest request = new PatchGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
-                ForwardingRuleResource = new ForwardingRule(),
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
+                ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
             Operation response = globalForwardingRulesClient.Patch(request);
@@ -316,10 +316,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchGlobalForwardingRuleRequest request = new PatchGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
-                ForwardingRuleResource = new ForwardingRule(),
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
+                ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
             Operation response = await globalForwardingRulesClient.PatchAsync(request);
@@ -366,9 +366,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetTargetGlobalForwardingRuleRequest request = new SetTargetGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
                 TargetReferenceResource = new TargetReference(),
             };
             // Make the request
@@ -386,9 +386,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetTargetGlobalForwardingRuleRequest request = new SetTargetGlobalForwardingRuleRequest
             {
-                ForwardingRule = "",
                 RequestId = "",
                 Project = "",
+                ForwardingRule = "",
                 TargetReferenceResource = new TargetReference(),
             };
             // Make the request

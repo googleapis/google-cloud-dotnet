@@ -30,11 +30,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             // Make the request
             Operation response = targetPoolsClient.AddHealthCheck(request);
@@ -51,11 +51,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             // Make the request
             Operation response = await targetPoolsClient.AddHealthCheckAsync(request);
@@ -107,8 +107,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             // Make the request
             Operation response = targetPoolsClient.AddInstance(request);
@@ -128,8 +128,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             // Make the request
             Operation response = await targetPoolsClient.AddInstanceAsync(request);
@@ -180,10 +180,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -203,10 +203,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -388,10 +388,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                InstanceReferenceResource = new InstanceReference(),
             };
             // Make the request
             TargetPoolInstanceHealth response = targetPoolsClient.GetHealth(request);
@@ -408,10 +408,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                InstanceReferenceResource = new InstanceReference(),
             };
             // Make the request
             TargetPoolInstanceHealth response = await targetPoolsClient.GetHealthAsync(request);
@@ -532,10 +532,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -555,10 +555,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -604,11 +604,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             // Make the request
             Operation response = targetPoolsClient.RemoveHealthCheck(request);
@@ -625,11 +625,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 RequestId = "",
                 TargetPool = "",
                 Region = "",
                 Project = "",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             // Make the request
             Operation response = await targetPoolsClient.RemoveHealthCheckAsync(request);

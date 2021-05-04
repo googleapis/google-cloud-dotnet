@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -233,8 +233,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertTargetHttpsProxyRequest request = new InsertTargetHttpsProxyRequest
             {
                 RequestId = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
                 Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
             };
             // Make the request
             Operation response = targetHttpsProxiesClient.Insert(request);
@@ -252,8 +252,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertTargetHttpsProxyRequest request = new InsertTargetHttpsProxyRequest
             {
                 RequestId = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
                 Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
             };
             // Make the request
             Operation response = await targetHttpsProxiesClient.InsertAsync(request);
@@ -300,9 +300,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -322,9 +322,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -580,8 +580,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = targetHttpsProxiesClient.SetUrlMap(request);
@@ -600,8 +600,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = await targetHttpsProxiesClient.SetUrlMapAsync(request);

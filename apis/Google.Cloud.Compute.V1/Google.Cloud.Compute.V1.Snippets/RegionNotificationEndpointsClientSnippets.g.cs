@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionNotificationEndpointRequest request = new DeleteRegionNotificationEndpointRequest
             {
                 RequestId = "",
-                NotificationEndpoint = "",
                 Region = "",
                 Project = "",
+                NotificationEndpoint = "",
             };
             // Make the request
             Operation response = regionNotificationEndpointsClient.Delete(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionNotificationEndpointRequest request = new DeleteRegionNotificationEndpointRequest
             {
                 RequestId = "",
-                NotificationEndpoint = "",
                 Region = "",
                 Project = "",
+                NotificationEndpoint = "",
             };
             // Make the request
             Operation response = await regionNotificationEndpointsClient.DeleteAsync(request);
@@ -100,9 +100,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionNotificationEndpointRequest request = new GetRegionNotificationEndpointRequest
             {
-                NotificationEndpoint = "",
                 Region = "",
                 Project = "",
+                NotificationEndpoint = "",
             };
             // Make the request
             NotificationEndpoint response = regionNotificationEndpointsClient.Get(request);
@@ -119,9 +119,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionNotificationEndpointRequest request = new GetRegionNotificationEndpointRequest
             {
-                NotificationEndpoint = "",
                 Region = "",
                 Project = "",
+                NotificationEndpoint = "",
             };
             // Make the request
             NotificationEndpoint response = await regionNotificationEndpointsClient.GetAsync(request);
@@ -169,9 +169,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertRegionNotificationEndpointRequest request = new InsertRegionNotificationEndpointRequest
             {
                 RequestId = "",
-                NotificationEndpointResource = new NotificationEndpoint(),
                 Region = "",
                 Project = "",
+                NotificationEndpointResource = new NotificationEndpoint(),
             };
             // Make the request
             Operation response = regionNotificationEndpointsClient.Insert(request);
@@ -189,9 +189,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertRegionNotificationEndpointRequest request = new InsertRegionNotificationEndpointRequest
             {
                 RequestId = "",
-                NotificationEndpointResource = new NotificationEndpoint(),
                 Region = "",
                 Project = "",
+                NotificationEndpointResource = new NotificationEndpoint(),
             };
             // Make the request
             Operation response = await regionNotificationEndpointsClient.InsertAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

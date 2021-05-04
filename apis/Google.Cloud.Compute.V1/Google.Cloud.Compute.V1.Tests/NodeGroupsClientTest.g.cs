@@ -35,8 +35,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -45,24 +45,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -80,8 +80,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -90,24 +90,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -126,8 +126,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -136,24 +136,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -170,8 +170,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -180,24 +180,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -216,10 +216,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeGroupAggregatedList expectedResponse = new NodeGroupAggregatedList
@@ -235,11 +235,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeGroupsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -256,10 +256,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeGroupAggregatedList expectedResponse = new NodeGroupAggregatedList
@@ -275,11 +275,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeGroupsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroupAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -311,11 +311,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeGroupsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -345,11 +345,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeGroupsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroupAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -368,8 +368,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -378,24 +378,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -412,8 +412,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -422,24 +422,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -457,8 +457,8 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -467,24 +467,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -500,8 +500,8 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -510,24 +510,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -547,8 +547,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -557,24 +557,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -592,8 +592,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -602,24 +602,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -638,8 +638,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -648,24 +648,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -682,8 +682,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -692,24 +692,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -727,8 +727,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroup expectedResponse = new NodeGroup
             {
@@ -738,13 +738,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                NodeTemplate = "node_template118e38ae",
-                Description = "description2cf9da67",
                 Status = NodeGroup.Types.Status.Ready,
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
-                SelfLink = "self_link7e87f12d",
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
+                NodeTemplate = "node_template118e38ae",
+                Description = "description2cf9da67",
+                SelfLink = "self_link7e87f12d",
                 MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -761,8 +761,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroup expectedResponse = new NodeGroup
             {
@@ -772,13 +772,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                NodeTemplate = "node_template118e38ae",
-                Description = "description2cf9da67",
                 Status = NodeGroup.Types.Status.Ready,
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
-                SelfLink = "self_link7e87f12d",
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
+                NodeTemplate = "node_template118e38ae",
+                Description = "description2cf9da67",
+                SelfLink = "self_link7e87f12d",
                 MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -797,8 +797,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroup expectedResponse = new NodeGroup
             {
@@ -808,13 +808,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                NodeTemplate = "node_template118e38ae",
-                Description = "description2cf9da67",
                 Status = NodeGroup.Types.Status.Ready,
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
-                SelfLink = "self_link7e87f12d",
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
+                NodeTemplate = "node_template118e38ae",
+                Description = "description2cf9da67",
+                SelfLink = "self_link7e87f12d",
                 MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -831,8 +831,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroup expectedResponse = new NodeGroup
             {
@@ -842,13 +842,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                NodeTemplate = "node_template118e38ae",
-                Description = "description2cf9da67",
                 Status = NodeGroup.Types.Status.Ready,
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
-                SelfLink = "self_link7e87f12d",
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
+                NodeTemplate = "node_template118e38ae",
+                Description = "description2cf9da67",
+                SelfLink = "self_link7e87f12d",
                 MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -874,9 +874,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -901,9 +901,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -929,9 +929,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -955,9 +955,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -989,24 +989,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1034,24 +1034,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1080,24 +1080,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1124,24 +1124,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1161,9 +1161,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeGroupList expectedResponse = new NodeGroupList
@@ -1191,9 +1191,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeGroupList expectedResponse = new NodeGroupList
@@ -1275,10 +1275,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                NodeGroup = "node_groupa42a295a",
                 ReturnPartialSuccess = false,
             };
             NodeGroupsListNodes expectedResponse = new NodeGroupsListNodes
@@ -1309,10 +1309,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                NodeGroup = "node_groupa42a295a",
                 ReturnPartialSuccess = false,
             };
             NodeGroupsListNodes expectedResponse = new NodeGroupsListNodes
@@ -1343,8 +1343,8 @@ namespace Google.Cloud.Compute.V1.Tests
             ListNodesNodeGroupsRequest request = new ListNodesNodeGroupsRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroupsListNodes expectedResponse = new NodeGroupsListNodes
             {
@@ -1372,8 +1372,8 @@ namespace Google.Cloud.Compute.V1.Tests
             ListNodesNodeGroupsRequest request = new ListNodesNodeGroupsRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             NodeGroupsListNodes expectedResponse = new NodeGroupsListNodes
             {
@@ -1404,8 +1404,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
                 NodeGroupResource = new NodeGroup(),
             };
             Operation expectedResponse = new Operation
@@ -1415,24 +1415,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1449,8 +1449,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
                 NodeGroupResource = new NodeGroup(),
             };
             Operation expectedResponse = new Operation
@@ -1460,24 +1460,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1495,8 +1495,8 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchNodeGroupRequest request = new PatchNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
                 NodeGroupResource = new NodeGroup(),
             };
             Operation expectedResponse = new Operation
@@ -1506,24 +1506,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1539,8 +1539,8 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchNodeGroupRequest request = new PatchNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
                 NodeGroupResource = new NodeGroup(),
             };
             Operation expectedResponse = new Operation
@@ -1550,24 +1550,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1585,16 +1585,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1612,16 +1612,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1641,16 +1641,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1668,16 +1668,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1699,8 +1699,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -1709,24 +1709,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetNodeTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1744,8 +1744,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -1754,24 +1754,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetNodeTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1790,8 +1790,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -1800,24 +1800,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetNodeTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1834,8 +1834,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "node_groupa42a295a",
                 Project = "projectaa6ff846",
+                NodeGroup = "node_groupa42a295a",
             };
             Operation expectedResponse = new Operation
             {
@@ -1844,24 +1844,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetNodeTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -1879,9 +1879,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1904,9 +1904,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1931,9 +1931,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1956,9 +1956,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

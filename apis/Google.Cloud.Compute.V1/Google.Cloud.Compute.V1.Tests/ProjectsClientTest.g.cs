@@ -42,24 +42,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -84,24 +84,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -127,24 +127,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -168,24 +168,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -213,24 +213,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -256,24 +256,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -300,24 +300,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -342,24 +342,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DisableXpnResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -386,24 +386,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -428,24 +428,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -471,24 +471,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -512,24 +512,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -547,8 +547,8 @@ namespace Google.Cloud.Compute.V1.Tests
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "projectaa6ff846",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -557,24 +557,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -590,8 +590,8 @@ namespace Google.Cloud.Compute.V1.Tests
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "projectaa6ff846",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -600,24 +600,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -634,8 +634,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "projectaa6ff846",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -644,24 +644,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnResource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -676,8 +676,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             EnableXpnResourceProjectRequest request = new EnableXpnResourceProjectRequest
             {
-                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
                 Project = "projectaa6ff846",
+                ProjectsEnableXpnResourceRequestResource = new ProjectsEnableXpnResourceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -686,24 +686,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.EnableXpnResourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -727,19 +727,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -761,19 +761,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -797,19 +797,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -831,19 +831,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -867,19 +867,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -901,19 +901,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -937,19 +937,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -971,19 +971,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                DefaultServiceAccount = "default_service_accountdf12b0f2",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                UsageExportLocation = new UsageExportLocation(),
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 CommonInstanceMetadata = new Metadata(),
+                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                DefaultServiceAccount = "default_service_accountdf12b0f2",
+                UsageExportLocation = new UsageExportLocation(),
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
                 DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1002,9 +1002,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             ProjectsGetXpnResources expectedResponse = new ProjectsGetXpnResources
@@ -1031,9 +1031,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             ProjectsGetXpnResources expectedResponse = new ProjectsGetXpnResources
@@ -1112,10 +1112,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             XpnHostList expectedResponse = new XpnHostList
@@ -1142,10 +1142,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             XpnHostList expectedResponse = new XpnHostList
@@ -1225,8 +1225,8 @@ namespace Google.Cloud.Compute.V1.Tests
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "projectaa6ff846",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1235,24 +1235,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveDisk(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1268,8 +1268,8 @@ namespace Google.Cloud.Compute.V1.Tests
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "projectaa6ff846",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1278,24 +1278,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveDiskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1312,8 +1312,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "projectaa6ff846",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1322,24 +1322,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveDisk(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1354,8 +1354,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             MoveDiskProjectRequest request = new MoveDiskProjectRequest
             {
-                DiskMoveRequestResource = new DiskMoveRequest(),
                 Project = "projectaa6ff846",
+                DiskMoveRequestResource = new DiskMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1364,24 +1364,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveDiskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1399,8 +1399,8 @@ namespace Google.Cloud.Compute.V1.Tests
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "projectaa6ff846",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1409,24 +1409,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1442,8 +1442,8 @@ namespace Google.Cloud.Compute.V1.Tests
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
                 RequestId = "request_id362c8df6",
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "projectaa6ff846",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1452,24 +1452,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1486,8 +1486,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "projectaa6ff846",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1496,24 +1496,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1528,8 +1528,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             MoveInstanceProjectRequest request = new MoveInstanceProjectRequest
             {
-                InstanceMoveRequestResource = new InstanceMoveRequest(),
                 Project = "projectaa6ff846",
+                InstanceMoveRequestResource = new InstanceMoveRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1538,24 +1538,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.MoveInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1572,9 +1572,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                MetadataResource = new Metadata(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1583,24 +1583,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetCommonInstanceMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1615,9 +1615,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                MetadataResource = new Metadata(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1626,24 +1626,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetCommonInstanceMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1660,8 +1660,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 Project = "projectaa6ff846",
+                MetadataResource = new Metadata(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1670,24 +1670,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetCommonInstanceMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1702,8 +1702,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
             SetCommonInstanceMetadataProjectRequest request = new SetCommonInstanceMetadataProjectRequest
             {
-                MetadataResource = new Metadata(),
                 Project = "projectaa6ff846",
+                MetadataResource = new Metadata(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1712,24 +1712,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetCommonInstanceMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1757,24 +1757,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetDefaultNetworkTier(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1800,24 +1800,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetDefaultNetworkTierAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1844,24 +1844,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetDefaultNetworkTier(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1886,24 +1886,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetDefaultNetworkTierAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1931,24 +1931,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetUsageExportBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -1974,24 +1974,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetUsageExportBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -2018,24 +2018,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetUsageExportBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -2060,24 +2060,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetUsageExportBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);

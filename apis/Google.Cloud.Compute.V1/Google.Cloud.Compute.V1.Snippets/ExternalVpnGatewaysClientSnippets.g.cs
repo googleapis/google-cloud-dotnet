@@ -161,8 +161,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertExternalVpnGatewayRequest request = new InsertExternalVpnGatewayRequest
             {
                 RequestId = "",
-                ExternalVpnGatewayResource = new ExternalVpnGateway(),
                 Project = "",
+                ExternalVpnGatewayResource = new ExternalVpnGateway(),
             };
             // Make the request
             Operation response = externalVpnGatewaysClient.Insert(request);
@@ -180,8 +180,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertExternalVpnGatewayRequest request = new InsertExternalVpnGatewayRequest
             {
                 RequestId = "",
-                ExternalVpnGatewayResource = new ExternalVpnGateway(),
                 Project = "",
+                ExternalVpnGatewayResource = new ExternalVpnGateway(),
             };
             // Make the request
             Operation response = await externalVpnGatewaysClient.InsertAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -296,9 +296,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsExternalVpnGatewayRequest request = new SetLabelsExternalVpnGatewayRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = externalVpnGatewaysClient.SetLabels(request);
@@ -315,9 +315,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsExternalVpnGatewayRequest request = new SetLabelsExternalVpnGatewayRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = await externalVpnGatewaysClient.SetLabelsAsync(request);
@@ -364,9 +364,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = externalVpnGatewaysClient.TestIamPermissions(request);
@@ -383,9 +383,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await externalVpnGatewaysClient.TestIamPermissionsAsync(request);

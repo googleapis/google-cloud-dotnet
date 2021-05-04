@@ -4,7 +4,7 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "a8cd11e2c420a194348839c6490a8a1bef2835d3"        
+        "sha": "5efeb79eed444f14cf2cf89516dbf9ece86a4a0c"        
       }
     }
   ]

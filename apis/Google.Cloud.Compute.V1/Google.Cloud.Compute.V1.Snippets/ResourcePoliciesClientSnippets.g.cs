@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -382,10 +382,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -405,10 +405,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -454,10 +454,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyResourcePolicyRequest request = new SetIamPolicyResourcePolicyRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = resourcePoliciesClient.SetIamPolicy(request);
@@ -474,10 +474,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyResourcePolicyRequest request = new SetIamPolicyResourcePolicyRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = await resourcePoliciesClient.SetIamPolicyAsync(request);
@@ -527,9 +527,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsResourcePolicyRequest request = new TestIamPermissionsResourcePolicyRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = resourcePoliciesClient.TestIamPermissions(request);
@@ -547,9 +547,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsResourcePolicyRequest request = new TestIamPermissionsResourcePolicyRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await resourcePoliciesClient.TestIamPermissionsAsync(request);

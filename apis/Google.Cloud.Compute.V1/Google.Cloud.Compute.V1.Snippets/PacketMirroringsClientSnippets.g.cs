@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -242,8 +242,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                PacketMirroringResource = new PacketMirroring(),
                 Project = "",
+                PacketMirroringResource = new PacketMirroring(),
             };
             // Make the request
             Operation response = packetMirroringsClient.Insert(request);
@@ -262,8 +262,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                PacketMirroringResource = new PacketMirroring(),
                 Project = "",
+                PacketMirroringResource = new PacketMirroring(),
             };
             // Make the request
             Operation response = await packetMirroringsClient.InsertAsync(request);
@@ -312,10 +312,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -335,10 +335,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -387,8 +387,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 PacketMirroring = "",
                 RequestId = "",
                 Region = "",
-                PacketMirroringResource = new PacketMirroring(),
                 Project = "",
+                PacketMirroringResource = new PacketMirroring(),
             };
             // Make the request
             Operation response = packetMirroringsClient.Patch(request);
@@ -408,8 +408,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 PacketMirroring = "",
                 RequestId = "",
                 Region = "",
-                PacketMirroringResource = new PacketMirroring(),
                 Project = "",
+                PacketMirroringResource = new PacketMirroring(),
             };
             // Make the request
             Operation response = await packetMirroringsClient.PatchAsync(request);
@@ -459,9 +459,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = packetMirroringsClient.TestIamPermissions(request);
@@ -479,9 +479,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await packetMirroringsClient.TestIamPermissionsAsync(request);

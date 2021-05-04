@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,9 +103,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteVpnGatewayRequest request = new DeleteVpnGatewayRequest
             {
                 RequestId = "",
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             Operation response = vpnGatewaysClient.Delete(request);
@@ -123,9 +123,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteVpnGatewayRequest request = new DeleteVpnGatewayRequest
             {
                 RequestId = "",
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             Operation response = await vpnGatewaysClient.DeleteAsync(request);
@@ -172,9 +172,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             VpnGateway response = vpnGatewaysClient.Get(request);
@@ -191,9 +191,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             VpnGateway response = await vpnGatewaysClient.GetAsync(request);
@@ -240,9 +240,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             VpnGatewaysGetStatusResponse response = vpnGatewaysClient.GetStatus(request);
@@ -259,9 +259,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
-                VpnGateway = "",
                 Region = "",
                 Project = "",
+                VpnGateway = "",
             };
             // Make the request
             VpnGatewaysGetStatusResponse response = await vpnGatewaysClient.GetStatusAsync(request);
@@ -380,10 +380,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -403,10 +403,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -527,9 +527,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = vpnGatewaysClient.TestIamPermissions(request);
@@ -547,9 +547,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await vpnGatewaysClient.TestIamPermissionsAsync(request);

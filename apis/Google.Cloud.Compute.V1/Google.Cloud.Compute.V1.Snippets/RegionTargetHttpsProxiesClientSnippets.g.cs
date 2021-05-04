@@ -170,8 +170,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
                 Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
             };
             // Make the request
             Operation response = regionTargetHttpsProxiesClient.Insert(request);
@@ -190,8 +190,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                TargetHttpsProxyResource = new TargetHttpsProxy(),
                 Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
             };
             // Make the request
             Operation response = await regionTargetHttpsProxiesClient.InsertAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -314,9 +314,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest(),
                 Region = "",
                 Project = "",
+                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest(),
             };
             // Make the request
             Operation response = regionTargetHttpsProxiesClient.SetSslCertificates(request);
@@ -335,9 +335,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest(),
                 Region = "",
                 Project = "",
+                RegionTargetHttpsProxiesSetSslCertificatesRequestResource = new RegionTargetHttpsProxiesSetSslCertificatesRequest(),
             };
             // Make the request
             Operation response = await regionTargetHttpsProxiesClient.SetSslCertificatesAsync(request);
@@ -388,9 +388,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Region = "",
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = regionTargetHttpsProxiesClient.SetUrlMap(request);
@@ -409,9 +409,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 TargetHttpsProxy = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Region = "",
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = await regionTargetHttpsProxiesClient.SetUrlMapAsync(request);

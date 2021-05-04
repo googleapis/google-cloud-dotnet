@@ -32,9 +32,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                RegionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest(),
             };
             // Make the request
             Operation response = regionInstanceGroupManagersClient.AbandonInstances(request);
@@ -53,9 +53,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                RegionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersAbandonInstancesRequestResource = new RegionInstanceGroupManagersAbandonInstancesRequest(),
             };
             // Make the request
             Operation response = await regionInstanceGroupManagersClient.AbandonInstancesAsync(request);
@@ -177,10 +177,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             CreateInstancesRegionInstanceGroupManagerRequest request = new CreateInstancesRegionInstanceGroupManagerRequest
             {
                 RequestId = "",
-                RegionInstanceGroupManagersCreateInstancesRequestResource = new RegionInstanceGroupManagersCreateInstancesRequest(),
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersCreateInstancesRequestResource = new RegionInstanceGroupManagersCreateInstancesRequest(),
             };
             // Make the request
             Operation response = regionInstanceGroupManagersClient.CreateInstances(request);
@@ -198,10 +198,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             CreateInstancesRegionInstanceGroupManagerRequest request = new CreateInstancesRegionInstanceGroupManagerRequest
             {
                 RequestId = "",
-                RegionInstanceGroupManagersCreateInstancesRequestResource = new RegionInstanceGroupManagersCreateInstancesRequest(),
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersCreateInstancesRequestResource = new RegionInstanceGroupManagersCreateInstancesRequest(),
             };
             // Make the request
             Operation response = await regionInstanceGroupManagersClient.CreateInstancesAsync(request);
@@ -323,8 +323,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
             };
             // Make the request
             Operation response = regionInstanceGroupManagersClient.DeleteInstances(request);
@@ -344,8 +344,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RequestId = "",
                 Region = "",
                 Project = "",
-                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
                 InstanceGroupManager = "",
+                RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
             };
             // Make the request
             Operation response = await regionInstanceGroupManagersClient.DeleteInstancesAsync(request);
@@ -606,10 +606,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -629,10 +629,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -680,12 +680,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListErrorsResponse response = regionInstanceGroupManagersClient.ListErrors(request);
@@ -704,12 +704,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListErrorsResponse response = await regionInstanceGroupManagersClient.ListErrorsAsync(request);
@@ -758,12 +758,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListInstancesResponse response = regionInstanceGroupManagersClient.ListManagedInstances(request);
@@ -782,12 +782,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListInstancesResponse response = await regionInstanceGroupManagersClient.ListManagedInstancesAsync(request);
@@ -836,12 +836,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListInstanceConfigsResp response = regionInstanceGroupManagersClient.ListPerInstanceConfigs(request);
@@ -860,12 +860,12 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
-                ReturnPartialSuccess = false,
                 InstanceGroupManager = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             RegionInstanceGroupManagersListInstanceConfigsResp response = await regionInstanceGroupManagersClient.ListPerInstanceConfigsAsync(request);

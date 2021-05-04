@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = regionHealthChecksClient.Delete(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await regionHealthChecksClient.DeleteAsync(request);
@@ -100,9 +100,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "",
                 Region = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             HealthCheck response = regionHealthChecksClient.Get(request);
@@ -119,9 +119,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "",
                 Region = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             HealthCheck response = await regionHealthChecksClient.GetAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -313,10 +313,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = regionHealthChecksClient.Patch(request);
@@ -334,10 +334,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await regionHealthChecksClient.PatchAsync(request);
@@ -387,10 +387,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = regionHealthChecksClient.Update(request);
@@ -408,10 +408,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Region = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await regionHealthChecksClient.UpdateAsync(request);

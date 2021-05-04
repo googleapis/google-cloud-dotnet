@@ -30,9 +30,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AddRuleSecurityPolicyRequest request = new AddRuleSecurityPolicyRequest
             {
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 SecurityPolicy = "",
                 Project = "",
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
             };
             // Make the request
             Operation response = securityPoliciesClient.AddRule(request);
@@ -49,9 +49,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AddRuleSecurityPolicyRequest request = new AddRuleSecurityPolicyRequest
             {
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 SecurityPolicy = "",
                 Project = "",
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
             };
             // Make the request
             Operation response = await securityPoliciesClient.AddRuleAsync(request);
@@ -229,8 +229,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                Priority = 0,
             };
             // Make the request
             SecurityPolicyRule response = securityPoliciesClient.GetRule(request);
@@ -248,8 +248,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                Priority = 0,
             };
             // Make the request
             SecurityPolicyRule response = await securityPoliciesClient.GetRuleAsync(request);
@@ -362,9 +362,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -384,9 +384,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -432,9 +432,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -454,9 +454,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -570,10 +570,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchRuleSecurityPolicyRequest request = new PatchRuleSecurityPolicyRequest
             {
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                Priority = 0,
             };
             // Make the request
             Operation response = securityPoliciesClient.PatchRule(request);
@@ -590,10 +590,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchRuleSecurityPolicyRequest request = new PatchRuleSecurityPolicyRequest
             {
-                SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                Priority = 0,
             };
             // Make the request
             Operation response = await securityPoliciesClient.PatchRuleAsync(request);
@@ -641,8 +641,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             RemoveRuleSecurityPolicyRequest request = new RemoveRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                Priority = 0,
             };
             // Make the request
             Operation response = securityPoliciesClient.RemoveRule(request);
@@ -660,8 +660,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             RemoveRuleSecurityPolicyRequest request = new RemoveRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "",
-                Priority = 0,
                 Project = "",
+                Priority = 0,
             };
             // Make the request
             Operation response = await securityPoliciesClient.RemoveRuleAsync(request);

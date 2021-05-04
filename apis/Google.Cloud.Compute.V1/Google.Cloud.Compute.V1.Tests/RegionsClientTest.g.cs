@@ -43,8 +43,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Zones = { "zones3641f926", },
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 Status = Region.Types.Status.Up,
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
             };
@@ -72,8 +72,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Zones = { "zones3641f926", },
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 Status = Region.Types.Status.Up,
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
             };
@@ -103,8 +103,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Zones = { "zones3641f926", },
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 Status = Region.Types.Status.Up,
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
             };
@@ -132,8 +132,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Zones = { "zones3641f926", },
                 Quotas = { new Quota(), },
-                Description = "description2cf9da67",
                 Status = Region.Types.Status.Up,
+                Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
             };
@@ -154,9 +154,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             RegionList expectedResponse = new RegionList
@@ -183,9 +183,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             RegionList expectedResponse = new RegionList

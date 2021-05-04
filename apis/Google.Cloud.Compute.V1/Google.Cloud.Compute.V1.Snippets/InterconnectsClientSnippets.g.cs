@@ -225,8 +225,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertInterconnectRequest request = new InsertInterconnectRequest
             {
                 RequestId = "",
-                InterconnectResource = new Interconnect(),
                 Project = "",
+                InterconnectResource = new Interconnect(),
             };
             // Make the request
             Operation response = interconnectsClient.Insert(request);
@@ -244,8 +244,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertInterconnectRequest request = new InsertInterconnectRequest
             {
                 RequestId = "",
-                InterconnectResource = new Interconnect(),
                 Project = "",
+                InterconnectResource = new Interconnect(),
             };
             // Make the request
             Operation response = await interconnectsClient.InsertAsync(request);
@@ -292,9 +292,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -314,9 +314,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -361,9 +361,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchInterconnectRequest request = new PatchInterconnectRequest
             {
                 RequestId = "",
-                InterconnectResource = new Interconnect(),
                 Interconnect = "",
                 Project = "",
+                InterconnectResource = new Interconnect(),
             };
             // Make the request
             Operation response = interconnectsClient.Patch(request);
@@ -381,9 +381,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchInterconnectRequest request = new PatchInterconnectRequest
             {
                 RequestId = "",
-                InterconnectResource = new Interconnect(),
                 Interconnect = "",
                 Project = "",
+                InterconnectResource = new Interconnect(),
             };
             // Make the request
             Operation response = await interconnectsClient.PatchAsync(request);

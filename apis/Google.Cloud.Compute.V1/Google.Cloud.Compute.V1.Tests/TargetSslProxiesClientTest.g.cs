@@ -33,8 +33,8 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -43,24 +43,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -76,8 +76,8 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -86,24 +86,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -130,24 +130,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -162,8 +162,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -172,24 +172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -206,23 +206,23 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             TargetSslProxy expectedResponse = new TargetSslProxy
             {
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                SslPolicy = "ssl_policybf005a65",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
                     "ssl_certificates50ceaff5",
                 },
                 Service = "serviced3f0abaa",
                 Description = "description2cf9da67",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -238,23 +238,23 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             TargetSslProxy expectedResponse = new TargetSslProxy
             {
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                SslPolicy = "ssl_policybf005a65",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
                     "ssl_certificates50ceaff5",
                 },
                 Service = "serviced3f0abaa",
                 Description = "description2cf9da67",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetSslProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -272,23 +272,23 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             TargetSslProxy expectedResponse = new TargetSslProxy
             {
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                SslPolicy = "ssl_policybf005a65",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
                     "ssl_certificates50ceaff5",
                 },
                 Service = "serviced3f0abaa",
                 Description = "description2cf9da67",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -304,23 +304,23 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             TargetSslProxy expectedResponse = new TargetSslProxy
             {
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                SslPolicy = "ssl_policybf005a65",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
                     "ssl_certificates50ceaff5",
                 },
                 Service = "serviced3f0abaa",
                 Description = "description2cf9da67",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetSslProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -349,24 +349,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -392,24 +392,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -436,24 +436,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -478,24 +478,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -514,9 +514,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             TargetSslProxyList expectedResponse = new TargetSslProxyList
@@ -546,9 +546,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             TargetSslProxyList expectedResponse = new TargetSslProxyList
@@ -635,9 +635,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -646,24 +646,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackendService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -679,9 +679,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -690,24 +690,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackendServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -724,9 +724,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -735,24 +735,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackendService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -767,9 +767,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -778,24 +778,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackendServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -813,9 +813,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -824,24 +824,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetProxyHeader(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -857,9 +857,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -868,24 +868,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetProxyHeaderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -902,9 +902,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -913,24 +913,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetProxyHeader(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -945,9 +945,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -956,24 +956,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetProxyHeaderAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -991,9 +991,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1002,24 +1002,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslCertificates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1035,9 +1035,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1046,24 +1046,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslCertificatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1080,9 +1080,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1091,24 +1091,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslCertificates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1123,9 +1123,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "projectaa6ff846",
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1134,24 +1134,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslCertificatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1169,9 +1169,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1180,24 +1180,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1213,9 +1213,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
                 RequestId = "request_id362c8df6",
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1224,24 +1224,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1258,9 +1258,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1269,24 +1269,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);
@@ -1301,9 +1301,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetSslProxies.TargetSslProxiesClient> mockGrpcClient = new moq::Mock<TargetSslProxies.TargetSslProxiesClient>(moq::MockBehavior.Strict);
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
-                TargetSslProxy = "target_ssl_proxy8c6691c6",
                 Project = "projectaa6ff846",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "target_ssl_proxy8c6691c6",
             };
             Operation expectedResponse = new Operation
             {
@@ -1312,24 +1312,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetSslPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetSslProxiesClient client = new TargetSslProxiesClientImpl(mockGrpcClient.Object, null);

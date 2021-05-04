@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             AcceleratorTypeAggregatedList expectedResponse = new AcceleratorTypeAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new AcceleratorTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             AcceleratorTypeAggregatedList expectedResponse = new AcceleratorTypeAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new AcceleratorTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new AcceleratorTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new AcceleratorTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -195,10 +195,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                MaximumCardsPerInstance = 739769688,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
-                MaximumCardsPerInstance = 739769688,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -224,10 +224,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                MaximumCardsPerInstance = 739769688,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
-                MaximumCardsPerInstance = 739769688,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -255,10 +255,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                MaximumCardsPerInstance = 739769688,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
-                MaximumCardsPerInstance = 739769688,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -284,10 +284,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                MaximumCardsPerInstance = 739769688,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
-                MaximumCardsPerInstance = 739769688,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AcceleratorType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AcceleratorTypesClient client = new AcceleratorTypesClientImpl(mockGrpcClient.Object, null);
@@ -307,9 +307,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             AcceleratorTypeList expectedResponse = new AcceleratorTypeList
@@ -340,9 +340,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             AcceleratorTypeList expectedResponse = new AcceleratorTypeList

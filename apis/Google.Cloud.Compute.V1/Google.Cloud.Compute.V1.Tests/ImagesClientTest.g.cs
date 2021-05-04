@@ -43,24 +43,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -86,24 +86,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -130,24 +130,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -172,24 +172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -207,9 +207,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeprecateImageRequest request = new DeprecateImageRequest
             {
                 RequestId = "request_id362c8df6",
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "image225a8078",
                 Project = "projectaa6ff846",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             Operation expectedResponse = new Operation
             {
@@ -218,24 +218,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Deprecate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -251,9 +251,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeprecateImageRequest request = new DeprecateImageRequest
             {
                 RequestId = "request_id362c8df6",
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "image225a8078",
                 Project = "projectaa6ff846",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             Operation expectedResponse = new Operation
             {
@@ -262,24 +262,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeprecateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -296,9 +296,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             DeprecateImageRequest request = new DeprecateImageRequest
             {
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "image225a8078",
                 Project = "projectaa6ff846",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             Operation expectedResponse = new Operation
             {
@@ -307,24 +307,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Deprecate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -339,9 +339,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             DeprecateImageRequest request = new DeprecateImageRequest
             {
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "image225a8078",
                 Project = "projectaa6ff846",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             Operation expectedResponse = new Operation
             {
@@ -350,24 +350,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeprecateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -393,14 +393,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -410,23 +419,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -460,14 +460,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -477,23 +486,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -529,14 +529,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -546,23 +555,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -596,14 +596,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -613,23 +622,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -656,8 +656,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "family0bda3f0d",
                 Project = "projectaa6ff846",
+                Family = "family0bda3f0d",
             };
             Image expectedResponse = new Image
             {
@@ -665,14 +665,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -682,23 +691,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -723,8 +723,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "family0bda3f0d",
                 Project = "projectaa6ff846",
+                Family = "family0bda3f0d",
             };
             Image expectedResponse = new Image
             {
@@ -732,14 +732,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -749,23 +758,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -792,8 +792,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "family0bda3f0d",
                 Project = "projectaa6ff846",
+                Family = "family0bda3f0d",
             };
             Image expectedResponse = new Image
             {
@@ -801,14 +801,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -818,23 +827,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -859,8 +859,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "family0bda3f0d",
                 Project = "projectaa6ff846",
+                Family = "family0bda3f0d",
             };
             Image expectedResponse = new Image
             {
@@ -868,14 +868,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LicenseCodes =
                 {
                     "license_codesdd63b74e",
                 },
-                DiskSizeGb = "disk_size_gbf071de02",
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
+                GuestOsFeatures =
+                {
+                    new GuestOsFeature(),
+                },
+                SourceSnapshotId = "source_snapshot_id008ab5dd",
+                SourceSnapshot = "source_snapshot1fcf3da1",
+                LabelFingerprint = "label_fingerprint06ccff3a",
+                Status = Image.Types.Status.Ready,
+                ShieldedInstanceInitialState = new InitialStateConfig(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                DiskSizeGb = "disk_size_gbf071de02",
                 StorageLocations =
                 {
                     "storage_locationse772402d",
@@ -885,23 +894,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
-                GuestOsFeatures =
-                {
-                    new GuestOsFeature(),
-                },
-                SourceSnapshotId = "source_snapshot_id008ab5dd",
                 ImageEncryptionKey = new CustomerEncryptionKey(),
                 ArchiveSizeBytes = "archive_size_bytes3bae3605",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                SourceSnapshot = "source_snapshot1fcf3da1",
                 Description = "description2cf9da67",
-                LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Image.Types.Status.Ready,
                 SourceDisk = "source_disk0eec086f",
                 SourceType = Image.Types.SourceType.UndefinedSourceType,
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
-                ShieldedInstanceInitialState = new InitialStateConfig(),
                 Labels =
                 {
                     {
@@ -935,9 +935,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -961,9 +961,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -988,9 +988,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1013,9 +1013,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1035,9 +1035,9 @@ namespace Google.Cloud.Compute.V1.Tests
             InsertImageRequest request = new InsertImageRequest
             {
                 RequestId = "request_id362c8df6",
-                ImageResource = new Image(),
                 ForceCreate = false,
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1046,24 +1046,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1079,9 +1079,9 @@ namespace Google.Cloud.Compute.V1.Tests
             InsertImageRequest request = new InsertImageRequest
             {
                 RequestId = "request_id362c8df6",
-                ImageResource = new Image(),
                 ForceCreate = false,
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1090,24 +1090,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1124,8 +1124,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             InsertImageRequest request = new InsertImageRequest
             {
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1134,24 +1134,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1166,8 +1166,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             InsertImageRequest request = new InsertImageRequest
             {
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1176,24 +1176,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1212,9 +1212,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             ImageList expectedResponse = new ImageList
@@ -1241,9 +1241,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             ImageList expectedResponse = new ImageList
@@ -1322,8 +1322,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 RequestId = "request_id362c8df6",
                 Image = "image225a8078",
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1332,24 +1332,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1366,8 +1366,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 RequestId = "request_id362c8df6",
                 Image = "image225a8078",
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1376,24 +1376,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1411,8 +1411,8 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchImageRequest request = new PatchImageRequest
             {
                 Image = "image225a8078",
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1421,24 +1421,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1454,8 +1454,8 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchImageRequest request = new PatchImageRequest
             {
                 Image = "image225a8078",
-                ImageResource = new Image(),
                 Project = "projectaa6ff846",
+                ImageResource = new Image(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1464,24 +1464,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1498,16 +1498,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1524,16 +1524,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1552,16 +1552,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1578,16 +1578,16 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1606,9 +1606,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1617,24 +1617,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1649,9 +1649,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1660,24 +1660,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1694,9 +1694,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1705,24 +1705,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1737,9 +1737,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1748,24 +1748,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
@@ -1782,9 +1782,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1806,9 +1806,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1832,9 +1832,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1856,9 +1856,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

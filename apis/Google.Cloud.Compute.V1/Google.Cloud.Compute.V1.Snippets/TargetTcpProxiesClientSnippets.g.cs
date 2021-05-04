@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -296,9 +296,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetBackendServiceTargetTcpProxyRequest request = new SetBackendServiceTargetTcpProxyRequest
             {
-                TargetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest(),
                 RequestId = "",
                 Project = "",
+                TargetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest(),
                 TargetTcpProxy = "",
             };
             // Make the request
@@ -316,9 +316,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetBackendServiceTargetTcpProxyRequest request = new SetBackendServiceTargetTcpProxyRequest
             {
-                TargetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest(),
                 RequestId = "",
                 Project = "",
+                TargetTcpProxiesSetBackendServiceRequestResource = new TargetTcpProxiesSetBackendServiceRequest(),
                 TargetTcpProxy = "",
             };
             // Make the request
