@@ -19,22 +19,16 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerExceptionTests
     {
-        [Fact]
-        public void IsRetryable()
+        [InlineData(ErrorCode.InvalidArgument, StatusCode.InvalidArgument, "Invalid argument", false)]
+        [InlineData(ErrorCode.Aborted, StatusCode.Aborted, "Transaction aborted", true)]
+        [InlineData(ErrorCode.Unknown, StatusCode.Unknown, "An unknown error occurred", false)]
+        [InlineData(ErrorCode.Unknown, StatusCode.Unknown, "Transaction outcome unknown", true)]
+        [Theory]
+        public void IsRetryableWithErrorCodeAndInnerException(ErrorCode errorCode, StatusCode statusCode, string message, bool isRetryable)
         {
-            Assert.False(new SpannerException(ErrorCode.InvalidArgument, "Invalid argument").IsRetryable);
-            Assert.False(new SpannerException(ErrorCode.InvalidArgument, new RpcException(new Status(StatusCode.InvalidArgument, "Invalid argument"))).IsRetryable);
-            Assert.False(new SpannerException(new RpcException(new Status(StatusCode.InvalidArgument, "Invalid argument"))).IsRetryable);
-            Assert.True(new SpannerException(ErrorCode.Aborted, "Transaction aborted").IsRetryable);
-            Assert.True(new SpannerException(ErrorCode.Aborted, new RpcException(new Status(StatusCode.Aborted, "Transaction aborted"))).IsRetryable);
-            Assert.True(new SpannerException(new RpcException(new Status(StatusCode.Aborted, "Transaction aborted"))).IsRetryable);
-            Assert.False(new SpannerException(ErrorCode.Unknown, "An unknown error occurred").IsRetryable);
-            Assert.False(new SpannerException(ErrorCode.Unknown, new RpcException(new Status(StatusCode.Unknown, "An unknown error occurred"))).IsRetryable);
-            Assert.False(new SpannerException(new RpcException(new Status(StatusCode.Unknown, "An unknown error occurred"))).IsRetryable);
-            Assert.True(new SpannerException(ErrorCode.Unknown, "Transaction outcome unknown.").IsRetryable);
-            Assert.True(new SpannerException(ErrorCode.Unknown, new RpcException(new Status(StatusCode.Unknown, "Transaction outcome unknown."))).IsRetryable);
-            Assert.True(new SpannerException(new RpcException(new Status(StatusCode.Unknown, "Transaction outcome unknown."))).IsRetryable);
+            Assert.Equal(isRetryable, new SpannerException(errorCode, message).IsRetryable);
+            Assert.Equal(isRetryable, new SpannerException(new RpcException(new Status(statusCode, message))).IsRetryable);
+            Assert.Equal(isRetryable, new SpannerException(errorCode, new RpcException(new Status(statusCode, message))).IsRetryable);
         }
-
     }
 }
