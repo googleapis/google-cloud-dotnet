@@ -32,11 +32,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -45,24 +45,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddHealthCheck(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -77,11 +77,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -90,24 +90,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddHealthCheckAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -124,10 +124,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -136,24 +136,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddHealthCheck(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -168,10 +168,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             AddHealthCheckTargetPoolRequest request = new AddHealthCheckTargetPoolRequest
             {
-                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsAddHealthCheckRequestResource = new TargetPoolsAddHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -180,24 +180,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddHealthCheckAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -217,8 +217,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "projectaa6ff846",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -227,24 +227,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -262,8 +262,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "projectaa6ff846",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -272,24 +272,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -308,8 +308,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "projectaa6ff846",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -318,24 +318,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -352,8 +352,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
-                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
                 Project = "projectaa6ff846",
+                TargetPoolsAddInstanceRequestResource = new TargetPoolsAddInstanceRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -362,24 +362,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -398,10 +398,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             TargetPoolAggregatedList expectedResponse = new TargetPoolAggregatedList
@@ -417,11 +417,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new TargetPoolsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -438,10 +438,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             TargetPoolAggregatedList expectedResponse = new TargetPoolAggregatedList
@@ -457,11 +457,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new TargetPoolsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPoolAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -493,11 +493,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new TargetPoolsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -527,11 +527,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new TargetPoolsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPoolAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -560,24 +560,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -604,24 +604,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -649,24 +649,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -692,24 +692,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -742,6 +742,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 BackupPool = "backup_pool2446601c",
                 Region = "regionedb20d96",
+                FailoverRatio = -7.1869584E+17F,
                 Description = "description2cf9da67",
                 HealthChecks =
                 {
@@ -749,7 +750,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 SelfLink = "self_link7e87f12d",
                 SessionAffinity = TargetPool.Types.SessionAffinity.ClientIp,
-                FailoverRatio = -7.1869584E+17F,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -780,6 +780,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 BackupPool = "backup_pool2446601c",
                 Region = "regionedb20d96",
+                FailoverRatio = -7.1869584E+17F,
                 Description = "description2cf9da67",
                 HealthChecks =
                 {
@@ -787,7 +788,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 SelfLink = "self_link7e87f12d",
                 SessionAffinity = TargetPool.Types.SessionAffinity.ClientIp,
-                FailoverRatio = -7.1869584E+17F,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -820,6 +820,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 BackupPool = "backup_pool2446601c",
                 Region = "regionedb20d96",
+                FailoverRatio = -7.1869584E+17F,
                 Description = "description2cf9da67",
                 HealthChecks =
                 {
@@ -827,7 +828,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 SelfLink = "self_link7e87f12d",
                 SessionAffinity = TargetPool.Types.SessionAffinity.ClientIp,
-                FailoverRatio = -7.1869584E+17F,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -858,6 +858,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 BackupPool = "backup_pool2446601c",
                 Region = "regionedb20d96",
+                FailoverRatio = -7.1869584E+17F,
                 Description = "description2cf9da67",
                 HealthChecks =
                 {
@@ -865,7 +866,6 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 SelfLink = "self_link7e87f12d",
                 SessionAffinity = TargetPool.Types.SessionAffinity.ClientIp,
-                FailoverRatio = -7.1869584E+17F,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -882,10 +882,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InstanceReferenceResource = new InstanceReference(),
             };
             TargetPoolInstanceHealth expectedResponse = new TargetPoolInstanceHealth
             {
@@ -905,10 +905,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InstanceReferenceResource = new InstanceReference(),
             };
             TargetPoolInstanceHealth expectedResponse = new TargetPoolInstanceHealth
             {
@@ -930,10 +930,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InstanceReferenceResource = new InstanceReference(),
             };
             TargetPoolInstanceHealth expectedResponse = new TargetPoolInstanceHealth
             {
@@ -953,10 +953,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
-                InstanceReferenceResource = new InstanceReference(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InstanceReferenceResource = new InstanceReference(),
             };
             TargetPoolInstanceHealth expectedResponse = new TargetPoolInstanceHealth
             {
@@ -990,24 +990,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1034,24 +1034,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1079,24 +1079,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1122,24 +1122,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1158,10 +1158,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             TargetPoolList expectedResponse = new TargetPoolList
@@ -1188,10 +1188,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             TargetPoolList expectedResponse = new TargetPoolList
@@ -1270,11 +1270,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1283,24 +1283,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveHealthCheck(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1315,11 +1315,11 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 RequestId = "request_id362c8df6",
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1328,24 +1328,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveHealthCheckAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1362,10 +1362,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1374,24 +1374,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveHealthCheck(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1406,10 +1406,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
             RemoveHealthCheckTargetPoolRequest request = new RemoveHealthCheckTargetPoolRequest
             {
-                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
                 TargetPool = "target_pool65e437ac",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                TargetPoolsRemoveHealthCheckRequestResource = new TargetPoolsRemoveHealthCheckRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1418,24 +1418,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveHealthCheckAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1465,24 +1465,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1510,24 +1510,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1556,24 +1556,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1600,24 +1600,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1648,24 +1648,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1694,24 +1694,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1740,24 +1740,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -1784,24 +1784,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);

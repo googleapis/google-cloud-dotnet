@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -311,9 +311,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertReservationRequest request = new InsertReservationRequest
             {
                 Zone = "",
-                ReservationResource = new Reservation(),
                 RequestId = "",
                 Project = "",
+                ReservationResource = new Reservation(),
             };
             // Make the request
             Operation response = reservationsClient.Insert(request);
@@ -331,9 +331,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertReservationRequest request = new InsertReservationRequest
             {
                 Zone = "",
-                ReservationResource = new Reservation(),
                 RequestId = "",
                 Project = "",
+                ReservationResource = new Reservation(),
             };
             // Make the request
             Operation response = await reservationsClient.InsertAsync(request);
@@ -383,9 +383,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -406,9 +406,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -457,8 +457,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 Reservation = "",
-                ReservationsResizeRequestResource = new ReservationsResizeRequest(),
                 Project = "",
+                ReservationsResizeRequestResource = new ReservationsResizeRequest(),
             };
             // Make the request
             Operation response = reservationsClient.Resize(request);
@@ -478,8 +478,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 Reservation = "",
-                ReservationsResizeRequestResource = new ReservationsResizeRequest(),
                 Project = "",
+                ReservationsResizeRequestResource = new ReservationsResizeRequest(),
             };
             // Make the request
             Operation response = await reservationsClient.ResizeAsync(request);
@@ -529,9 +529,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = reservationsClient.SetIamPolicy(request);
@@ -549,9 +549,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = await reservationsClient.SetIamPolicyAsync(request);
@@ -601,9 +601,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = reservationsClient.TestIamPermissions(request);
@@ -621,9 +621,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await reservationsClient.TestIamPermissionsAsync(request);

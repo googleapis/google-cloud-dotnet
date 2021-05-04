@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,9 +103,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
                 RequestId = "",
-                NodeTemplate = "",
                 Region = "",
                 Project = "",
+                NodeTemplate = "",
             };
             // Make the request
             Operation response = nodeTemplatesClient.Delete(request);
@@ -123,9 +123,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
                 RequestId = "",
-                NodeTemplate = "",
                 Region = "",
                 Project = "",
+                NodeTemplate = "",
             };
             // Make the request
             Operation response = await nodeTemplatesClient.DeleteAsync(request);
@@ -172,9 +172,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "",
                 Region = "",
                 Project = "",
+                NodeTemplate = "",
             };
             // Make the request
             NodeTemplate response = nodeTemplatesClient.Get(request);
@@ -191,9 +191,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "",
                 Region = "",
                 Project = "",
+                NodeTemplate = "",
             };
             // Make the request
             NodeTemplate response = await nodeTemplatesClient.GetAsync(request);
@@ -382,10 +382,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -405,10 +405,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -454,10 +454,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = nodeTemplatesClient.SetIamPolicy(request);
@@ -474,10 +474,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = await nodeTemplatesClient.SetIamPolicyAsync(request);
@@ -527,9 +527,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = nodeTemplatesClient.TestIamPermissions(request);
@@ -547,9 +547,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await nodeTemplatesClient.TestIamPermissionsAsync(request);

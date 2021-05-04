@@ -30,9 +30,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "",
                 RequestId = "",
                 Project = "",
+                SslPolicy = "",
             };
             // Make the request
             Operation response = sslPoliciesClient.Delete(request);
@@ -49,9 +49,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "",
                 RequestId = "",
                 Project = "",
+                SslPolicy = "",
             };
             // Make the request
             Operation response = await sslPoliciesClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "",
                 Project = "",
+                SslPolicy = "",
             };
             // Make the request
             SslPolicy response = sslPoliciesClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "",
                 Project = "",
+                SslPolicy = "",
             };
             // Make the request
             SslPolicy response = await sslPoliciesClient.GetAsync(request);
@@ -160,9 +160,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 RequestId = "",
                 Project = "",
+                SslPolicyResource = new SslPolicy(),
             };
             // Make the request
             Operation response = sslPoliciesClient.Insert(request);
@@ -179,9 +179,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 RequestId = "",
                 Project = "",
+                SslPolicyResource = new SslPolicy(),
             };
             // Make the request
             Operation response = await sslPoliciesClient.InsertAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -298,9 +298,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -320,9 +320,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -366,10 +366,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
-                SslPolicy = "",
                 RequestId = "",
                 Project = "",
+                SslPolicyResource = new SslPolicy(),
+                SslPolicy = "",
             };
             // Make the request
             Operation response = sslPoliciesClient.Patch(request);
@@ -386,10 +386,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
-                SslPolicy = "",
                 RequestId = "",
                 Project = "",
+                SslPolicyResource = new SslPolicy(),
+                SslPolicy = "",
             };
             // Make the request
             Operation response = await sslPoliciesClient.PatchAsync(request);

@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,9 +103,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
                 RequestId = "",
-                InterconnectAttachment = "",
                 Region = "",
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             Operation response = interconnectAttachmentsClient.Delete(request);
@@ -123,9 +123,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
                 RequestId = "",
-                InterconnectAttachment = "",
                 Region = "",
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             Operation response = await interconnectAttachmentsClient.DeleteAsync(request);
@@ -172,9 +172,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "",
                 Region = "",
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             InterconnectAttachment response = interconnectAttachmentsClient.Get(request);
@@ -191,9 +191,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "",
                 Region = "",
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             InterconnectAttachment response = await interconnectAttachmentsClient.GetAsync(request);
@@ -314,10 +314,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -337,10 +337,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -387,10 +387,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
                 RequestId = "",
-                InterconnectAttachment = "",
                 Region = "",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             Operation response = interconnectAttachmentsClient.Patch(request);
@@ -408,10 +408,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
                 RequestId = "",
-                InterconnectAttachment = "",
                 Region = "",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "",
+                InterconnectAttachment = "",
             };
             // Make the request
             Operation response = await interconnectAttachmentsClient.PatchAsync(request);

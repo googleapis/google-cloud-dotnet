@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeTemplateAggregatedList expectedResponse = new NodeTemplateAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTemplatesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeTemplateAggregatedList expectedResponse = new NodeTemplateAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTemplatesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTemplateAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTemplatesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTemplatesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTemplateAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -185,9 +185,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
                 RequestId = "request_id362c8df6",
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             Operation expectedResponse = new Operation
             {
@@ -196,24 +196,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -229,9 +229,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
                 RequestId = "request_id362c8df6",
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             Operation expectedResponse = new Operation
             {
@@ -240,24 +240,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -274,9 +274,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             Operation expectedResponse = new Operation
             {
@@ -285,24 +285,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -317,9 +317,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             DeleteNodeTemplateRequest request = new DeleteNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             Operation expectedResponse = new Operation
             {
@@ -328,24 +328,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -362,21 +362,26 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             NodeTemplate expectedResponse = new NodeTemplate
             {
                 Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                Disks = { new LocalDisk(), },
+                Region = "regionedb20d96",
+                Status = NodeTemplate.Types.Status.Ready,
+                ServerBinding = new ServerBinding(),
+                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
                 Accelerators =
                 {
                     new AcceleratorConfig(),
                 },
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
                 StatusMessage = "status_message2c618f86",
-                CreationTimestamp = "creation_timestamp235e59a1",
                 NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility(),
                 NodeAffinityLabels =
                 {
@@ -385,14 +390,9 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                Disks = { new LocalDisk(), },
-                Region = "regionedb20d96",
                 Description = "description2cf9da67",
-                Status = NodeTemplate.Types.Status.Ready,
                 SelfLink = "self_link7e87f12d",
                 NodeType = "node_type98c685da",
-                ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -407,21 +407,26 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             NodeTemplate expectedResponse = new NodeTemplate
             {
                 Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                Disks = { new LocalDisk(), },
+                Region = "regionedb20d96",
+                Status = NodeTemplate.Types.Status.Ready,
+                ServerBinding = new ServerBinding(),
+                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
                 Accelerators =
                 {
                     new AcceleratorConfig(),
                 },
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
                 StatusMessage = "status_message2c618f86",
-                CreationTimestamp = "creation_timestamp235e59a1",
                 NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility(),
                 NodeAffinityLabels =
                 {
@@ -430,14 +435,9 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                Disks = { new LocalDisk(), },
-                Region = "regionedb20d96",
                 Description = "description2cf9da67",
-                Status = NodeTemplate.Types.Status.Ready,
                 SelfLink = "self_link7e87f12d",
                 NodeType = "node_type98c685da",
-                ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -454,21 +454,26 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             NodeTemplate expectedResponse = new NodeTemplate
             {
                 Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                Disks = { new LocalDisk(), },
+                Region = "regionedb20d96",
+                Status = NodeTemplate.Types.Status.Ready,
+                ServerBinding = new ServerBinding(),
+                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
                 Accelerators =
                 {
                     new AcceleratorConfig(),
                 },
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
                 StatusMessage = "status_message2c618f86",
-                CreationTimestamp = "creation_timestamp235e59a1",
                 NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility(),
                 NodeAffinityLabels =
                 {
@@ -477,14 +482,9 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                Disks = { new LocalDisk(), },
-                Region = "regionedb20d96",
                 Description = "description2cf9da67",
-                Status = NodeTemplate.Types.Status.Ready,
                 SelfLink = "self_link7e87f12d",
                 NodeType = "node_type98c685da",
-                ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -499,21 +499,26 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
-                NodeTemplate = "node_template118e38ae",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                NodeTemplate = "node_template118e38ae",
             };
             NodeTemplate expectedResponse = new NodeTemplate
             {
                 Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                Disks = { new LocalDisk(), },
+                Region = "regionedb20d96",
+                Status = NodeTemplate.Types.Status.Ready,
+                ServerBinding = new ServerBinding(),
+                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
                 Accelerators =
                 {
                     new AcceleratorConfig(),
                 },
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
                 StatusMessage = "status_message2c618f86",
-                CreationTimestamp = "creation_timestamp235e59a1",
                 NodeTypeFlexibility = new NodeTemplateNodeTypeFlexibility(),
                 NodeAffinityLabels =
                 {
@@ -522,14 +527,9 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                Disks = { new LocalDisk(), },
-                Region = "regionedb20d96",
                 Description = "description2cf9da67",
-                Status = NodeTemplate.Types.Status.Ready,
                 SelfLink = "self_link7e87f12d",
                 NodeType = "node_type98c685da",
-                ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -554,9 +554,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -581,9 +581,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -609,9 +609,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -635,9 +635,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -668,24 +668,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -712,24 +712,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -757,24 +757,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -800,24 +800,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTemplatesClient client = new NodeTemplatesClientImpl(mockGrpcClient.Object, null);
@@ -836,10 +836,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeTemplateList expectedResponse = new NodeTemplateList
@@ -866,10 +866,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeTemplateList expectedResponse = new NodeTemplateList
@@ -948,17 +948,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -975,17 +975,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1004,17 +1004,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1031,17 +1031,17 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "regionedb20d96",
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1061,9 +1061,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1086,9 +1086,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1113,9 +1113,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -1138,9 +1138,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

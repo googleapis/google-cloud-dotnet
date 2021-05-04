@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionUrlMapRequest request = new DeleteRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = regionUrlMapsClient.Delete(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteRegionUrlMapRequest request = new DeleteRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await regionUrlMapsClient.DeleteAsync(request);
@@ -100,9 +100,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMap response = regionUrlMapsClient.Get(request);
@@ -119,9 +119,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMap response = await regionUrlMapsClient.GetAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -313,10 +313,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionUrlMapRequest request = new PatchRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = regionUrlMapsClient.Patch(request);
@@ -334,10 +334,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchRegionUrlMapRequest request = new PatchRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await regionUrlMapsClient.PatchAsync(request);
@@ -387,10 +387,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionUrlMapRequest request = new UpdateRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = regionUrlMapsClient.Update(request);
@@ -408,10 +408,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateRegionUrlMapRequest request = new UpdateRegionUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Region = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await regionUrlMapsClient.UpdateAsync(request);
@@ -461,9 +461,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMapsValidateResponse response = regionUrlMapsClient.Validate(request);
@@ -481,9 +481,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
-                UrlMap = "",
                 Region = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMapsValidateResponse response = await regionUrlMapsClient.ValidateAsync(request);

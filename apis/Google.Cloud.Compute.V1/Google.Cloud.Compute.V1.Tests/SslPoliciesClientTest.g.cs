@@ -32,9 +32,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -43,24 +43,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -75,9 +75,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -86,24 +86,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -130,24 +130,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -162,8 +162,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             DeleteSslPolicyRequest request = new DeleteSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -172,24 +172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -206,8 +206,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             SslPolicy expectedResponse = new SslPolicy
             {
@@ -220,15 +220,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
                 Warnings = { new Warnings(), },
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -243,8 +243,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             SslPolicy expectedResponse = new SslPolicy
             {
@@ -257,15 +257,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
                 Warnings = { new Warnings(), },
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -282,8 +282,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             SslPolicy expectedResponse = new SslPolicy
             {
@@ -296,15 +296,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
                 Warnings = { new Warnings(), },
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -319,8 +319,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             GetSslPolicyRequest request = new GetSslPolicyRequest
             {
-                SslPolicy = "ssl_policybf005a65",
                 Project = "projectaa6ff846",
+                SslPolicy = "ssl_policybf005a65",
             };
             SslPolicy expectedResponse = new SslPolicy
             {
@@ -333,15 +333,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "custom_features19916d63",
                 },
+                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 EnabledFeatures =
                 {
                     "enabled_featuresf1f398e0",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
                 Warnings = { new Warnings(), },
-                Fingerprint = "fingerprint009e6052",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SslPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -358,9 +358,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
             };
             Operation expectedResponse = new Operation
             {
@@ -369,24 +369,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -401,9 +401,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
             };
             Operation expectedResponse = new Operation
             {
@@ -412,24 +412,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -446,8 +446,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
             };
             Operation expectedResponse = new Operation
             {
@@ -456,24 +456,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -488,8 +488,8 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             InsertSslPolicyRequest request = new InsertSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
             };
             Operation expectedResponse = new Operation
             {
@@ -498,24 +498,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -534,9 +534,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SslPoliciesList expectedResponse = new SslPoliciesList
@@ -563,9 +563,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SslPoliciesList expectedResponse = new SslPoliciesList
@@ -644,9 +644,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SslPoliciesListAvailableFeaturesResponse expectedResponse = new SslPoliciesListAvailableFeaturesResponse
@@ -671,9 +671,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             SslPoliciesListAvailableFeaturesResponse expectedResponse = new SslPoliciesListAvailableFeaturesResponse
@@ -744,10 +744,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
-                SslPolicy = "ssl_policybf005a65",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -756,24 +756,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -788,10 +788,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
-                SslPolicyResource = new SslPolicy(),
-                SslPolicy = "ssl_policybf005a65",
                 RequestId = "request_id362c8df6",
                 Project = "projectaa6ff846",
+                SslPolicyResource = new SslPolicy(),
+                SslPolicy = "ssl_policybf005a65",
             };
             Operation expectedResponse = new Operation
             {
@@ -800,24 +800,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -834,9 +834,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
+                Project = "projectaa6ff846",
                 SslPolicyResource = new SslPolicy(),
                 SslPolicy = "ssl_policybf005a65",
-                Project = "projectaa6ff846",
             };
             Operation expectedResponse = new Operation
             {
@@ -845,24 +845,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);
@@ -877,9 +877,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<SslPolicies.SslPoliciesClient> mockGrpcClient = new moq::Mock<SslPolicies.SslPoliciesClient>(moq::MockBehavior.Strict);
             PatchSslPolicyRequest request = new PatchSslPolicyRequest
             {
+                Project = "projectaa6ff846",
                 SslPolicyResource = new SslPolicy(),
                 SslPolicy = "ssl_policybf005a65",
-                Project = "projectaa6ff846",
             };
             Operation expectedResponse = new Operation
             {
@@ -888,24 +888,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SslPoliciesClient client = new SslPoliciesClientImpl(mockGrpcClient.Object, null);

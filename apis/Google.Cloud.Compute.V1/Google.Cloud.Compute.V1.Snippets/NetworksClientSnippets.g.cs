@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddPeeringNetworkRequest request = new AddPeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
                 Project = "",
                 Network = "",
+                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
             };
             // Make the request
             Operation response = networksClient.AddPeering(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddPeeringNetworkRequest request = new AddPeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
                 Project = "",
                 Network = "",
+                NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
             };
             // Make the request
             Operation response = await networksClient.AddPeeringAsync(request);
@@ -298,9 +298,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -320,9 +320,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -368,14 +368,14 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Direction = ListPeeringRoutesNetworksRequest.Types.Direction.UndefinedDirection,
                 Region = "",
                 OrderBy = "",
                 Project = "",
                 Network = "",
-                ReturnPartialSuccess = false,
                 PeeringName = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             ExchangedPeeringRoutesList response = networksClient.ListPeeringRoutes(request);
@@ -394,14 +394,14 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Direction = ListPeeringRoutesNetworksRequest.Types.Direction.UndefinedDirection,
                 Region = "",
                 OrderBy = "",
                 Project = "",
                 Network = "",
-                ReturnPartialSuccess = false,
                 PeeringName = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             ExchangedPeeringRoutesList response = await networksClient.ListPeeringRoutesAsync(request);
@@ -517,9 +517,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             RemovePeeringNetworkRequest request = new RemovePeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
                 Project = "",
                 Network = "",
+                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
             };
             // Make the request
             Operation response = networksClient.RemovePeering(request);
@@ -537,9 +537,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             RemovePeeringNetworkRequest request = new RemovePeeringNetworkRequest
             {
                 RequestId = "",
-                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
                 Project = "",
                 Network = "",
+                NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
             };
             // Make the request
             Operation response = await networksClient.RemovePeeringAsync(request);

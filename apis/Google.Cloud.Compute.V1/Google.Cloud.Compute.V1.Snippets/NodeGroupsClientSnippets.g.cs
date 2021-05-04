@@ -33,8 +33,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = nodeGroupsClient.AddNodes(request);
@@ -54,8 +54,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = await nodeGroupsClient.AddNodesAsync(request);
@@ -106,10 +106,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -129,10 +129,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -178,8 +178,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = nodeGroupsClient.Delete(request);
@@ -198,8 +198,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = await nodeGroupsClient.DeleteAsync(request);
@@ -249,8 +249,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = nodeGroupsClient.DeleteNodes(request);
@@ -270,8 +270,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = await nodeGroupsClient.DeleteNodesAsync(request);
@@ -321,8 +321,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             NodeGroup response = nodeGroupsClient.Get(request);
@@ -340,8 +340,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             NodeGroup response = await nodeGroupsClient.GetAsync(request);
@@ -535,9 +535,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -558,9 +558,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -609,10 +609,10 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
-                NodeGroup = "",
                 Project = "",
+                Filter = "",
+                NodeGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -633,10 +633,10 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
-                NodeGroup = "",
                 Project = "",
+                Filter = "",
+                NodeGroup = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -686,8 +686,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
                 NodeGroupResource = new NodeGroup(),
             };
             // Make the request
@@ -707,8 +707,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
                 NodeGroupResource = new NodeGroup(),
             };
             // Make the request
@@ -759,9 +759,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = nodeGroupsClient.SetIamPolicy(request);
@@ -779,9 +779,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = await nodeGroupsClient.SetIamPolicyAsync(request);
@@ -833,8 +833,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = nodeGroupsClient.SetNodeTemplate(request);
@@ -854,8 +854,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                NodeGroup = "",
                 Project = "",
+                NodeGroup = "",
             };
             // Make the request
             Operation response = await nodeGroupsClient.SetNodeTemplateAsync(request);
@@ -905,9 +905,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = nodeGroupsClient.TestIamPermissions(request);
@@ -925,9 +925,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await nodeGroupsClient.TestIamPermissionsAsync(request);

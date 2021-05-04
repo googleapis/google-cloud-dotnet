@@ -97,9 +97,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeprecateImageRequest request = new DeprecateImageRequest
             {
                 RequestId = "",
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "",
                 Project = "",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             // Make the request
             Operation response = imagesClient.Deprecate(request);
@@ -117,9 +117,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeprecateImageRequest request = new DeprecateImageRequest
             {
                 RequestId = "",
-                DeprecationStatusResource = new DeprecationStatus(),
                 Image = "",
                 Project = "",
+                DeprecationStatusResource = new DeprecationStatus(),
             };
             // Make the request
             Operation response = await imagesClient.DeprecateAsync(request);
@@ -230,8 +230,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "",
                 Project = "",
+                Family = "",
             };
             // Make the request
             Image response = imagesClient.GetFromFamily(request);
@@ -248,8 +248,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
-                Family = "",
                 Project = "",
+                Family = "",
             };
             // Make the request
             Image response = await imagesClient.GetFromFamilyAsync(request);
@@ -361,9 +361,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertImageRequest request = new InsertImageRequest
             {
                 RequestId = "",
-                ImageResource = new Image(),
                 ForceCreate = false,
                 Project = "",
+                ImageResource = new Image(),
             };
             // Make the request
             Operation response = imagesClient.Insert(request);
@@ -381,9 +381,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertImageRequest request = new InsertImageRequest
             {
                 RequestId = "",
-                ImageResource = new Image(),
                 ForceCreate = false,
                 Project = "",
+                ImageResource = new Image(),
             };
             // Make the request
             Operation response = await imagesClient.InsertAsync(request);
@@ -430,9 +430,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -452,9 +452,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -500,8 +500,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Image = "",
-                ImageResource = new Image(),
                 Project = "",
+                ImageResource = new Image(),
             };
             // Make the request
             Operation response = imagesClient.Patch(request);
@@ -520,8 +520,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Image = "",
-                ImageResource = new Image(),
                 Project = "",
+                ImageResource = new Image(),
             };
             // Make the request
             Operation response = await imagesClient.PatchAsync(request);
@@ -568,9 +568,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = imagesClient.SetIamPolicy(request);
@@ -587,9 +587,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = await imagesClient.SetIamPolicyAsync(request);
@@ -636,9 +636,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = imagesClient.SetLabels(request);
@@ -655,9 +655,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsImageRequest request = new SetLabelsImageRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = await imagesClient.SetLabelsAsync(request);
@@ -704,9 +704,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = imagesClient.TestIamPermissions(request);
@@ -723,9 +723,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await imagesClient.TestIamPermissionsAsync(request);

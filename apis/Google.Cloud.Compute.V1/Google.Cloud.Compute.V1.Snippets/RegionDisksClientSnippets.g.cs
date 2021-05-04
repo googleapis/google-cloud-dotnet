@@ -31,10 +31,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
             {
                 Disk = "",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
                 RequestId = "",
                 Region = "",
                 Project = "",
+                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = regionDisksClient.AddResourcePolicies(request);
@@ -52,10 +52,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
             {
                 Disk = "",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
                 RequestId = "",
                 Region = "",
                 Project = "",
+                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = await regionDisksClient.AddResourcePoliciesAsync(request);
@@ -107,8 +107,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 RequestId = "",
                 Region = "",
-                SnapshotResource = new Snapshot(),
                 Project = "",
+                SnapshotResource = new Snapshot(),
             };
             // Make the request
             Operation response = regionDisksClient.CreateSnapshot(request);
@@ -128,8 +128,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 RequestId = "",
                 Region = "",
-                SnapshotResource = new Snapshot(),
                 Project = "",
+                SnapshotResource = new Snapshot(),
             };
             // Make the request
             Operation response = await regionDisksClient.CreateSnapshotAsync(request);
@@ -460,10 +460,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -483,10 +483,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -609,8 +609,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 RequestId = "",
                 Region = "",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
                 Project = "",
+                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
             };
             // Make the request
             Operation response = regionDisksClient.Resize(request);
@@ -630,8 +630,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Disk = "",
                 RequestId = "",
                 Region = "",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
                 Project = "",
+                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
             };
             // Make the request
             Operation response = await regionDisksClient.ResizeAsync(request);
@@ -680,10 +680,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = regionDisksClient.SetIamPolicy(request);
@@ -700,10 +700,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
-                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
                 Region = "",
                 Resource = "",
                 Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
             };
             // Make the request
             Policy response = await regionDisksClient.SetIamPolicyAsync(request);
@@ -827,9 +827,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = regionDisksClient.TestIamPermissions(request);
@@ -847,9 +847,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await regionDisksClient.TestIamPermissionsAsync(request);

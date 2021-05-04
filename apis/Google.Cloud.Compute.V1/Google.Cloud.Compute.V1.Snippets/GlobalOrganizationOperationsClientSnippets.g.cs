@@ -156,8 +156,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
+                Filter = "",
                 ParentId = "",
                 ReturnPartialSuccess = false,
             };
@@ -178,8 +178,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
+                Filter = "",
                 ParentId = "",
                 ReturnPartialSuccess = false,
             };

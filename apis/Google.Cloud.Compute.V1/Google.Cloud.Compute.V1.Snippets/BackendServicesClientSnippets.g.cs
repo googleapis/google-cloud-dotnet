@@ -31,9 +31,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddSignedUrlKeyBackendServiceRequest request = new AddSignedUrlKeyBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 SignedUrlKeyResource = new SignedUrlKey(),
-                Project = "",
             };
             // Make the request
             Operation response = backendServicesClient.AddSignedUrlKey(request);
@@ -51,9 +51,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             AddSignedUrlKeyBackendServiceRequest request = new AddSignedUrlKeyBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 SignedUrlKeyResource = new SignedUrlKey(),
-                Project = "",
             };
             // Make the request
             Operation response = await backendServicesClient.AddSignedUrlKeyAsync(request);
@@ -102,10 +102,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -125,10 +125,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -173,8 +173,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteBackendServiceRequest request = new DeleteBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = backendServicesClient.Delete(request);
@@ -192,8 +192,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteBackendServiceRequest request = new DeleteBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = await backendServicesClient.DeleteAsync(request);
@@ -239,8 +239,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteSignedUrlKeyBackendServiceRequest request = new DeleteSignedUrlKeyBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Project = "",
+                BackendService = "",
                 KeyName = "",
             };
             // Make the request
@@ -259,8 +259,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteSignedUrlKeyBackendServiceRequest request = new DeleteSignedUrlKeyBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 Project = "",
+                BackendService = "",
                 KeyName = "",
             };
             // Make the request
@@ -308,8 +308,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetBackendServiceRequest request = new GetBackendServiceRequest
             {
-                BackendService = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendService response = backendServicesClient.Get(request);
@@ -326,8 +326,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetBackendServiceRequest request = new GetBackendServiceRequest
             {
-                BackendService = "",
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendService response = await backendServicesClient.GetAsync(request);
@@ -372,9 +372,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthBackendServiceRequest request = new GetHealthBackendServiceRequest
             {
-                BackendService = "",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendServiceGroupHealth response = backendServicesClient.GetHealth(request);
@@ -391,9 +391,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthBackendServiceRequest request = new GetHealthBackendServiceRequest
             {
-                BackendService = "",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             BackendServiceGroupHealth response = await backendServicesClient.GetHealthAsync(request);
@@ -441,8 +441,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertBackendServiceRequest request = new InsertBackendServiceRequest
             {
                 RequestId = "",
-                BackendServiceResource = new BackendService(),
                 Project = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = backendServicesClient.Insert(request);
@@ -460,8 +460,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertBackendServiceRequest request = new InsertBackendServiceRequest
             {
                 RequestId = "",
-                BackendServiceResource = new BackendService(),
                 Project = "",
+                BackendServiceResource = new BackendService(),
             };
             // Make the request
             Operation response = await backendServicesClient.InsertAsync(request);
@@ -508,9 +508,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -530,9 +530,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -577,9 +577,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchBackendServiceRequest request = new PatchBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 BackendServiceResource = new BackendService(),
-                Project = "",
             };
             // Make the request
             Operation response = backendServicesClient.Patch(request);
@@ -597,9 +597,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchBackendServiceRequest request = new PatchBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 BackendServiceResource = new BackendService(),
-                Project = "",
             };
             // Make the request
             Operation response = await backendServicesClient.PatchAsync(request);
@@ -647,9 +647,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSecurityPolicyBackendServiceRequest request = new SetSecurityPolicyBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 SecurityPolicyReferenceResource = new SecurityPolicyReference(),
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = backendServicesClient.SetSecurityPolicy(request);
@@ -667,9 +667,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSecurityPolicyBackendServiceRequest request = new SetSecurityPolicyBackendServiceRequest
             {
                 RequestId = "",
-                BackendService = "",
                 SecurityPolicyReferenceResource = new SecurityPolicyReference(),
                 Project = "",
+                BackendService = "",
             };
             // Make the request
             Operation response = await backendServicesClient.SetSecurityPolicyAsync(request);
@@ -717,9 +717,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateBackendServiceRequest request = new UpdateBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 BackendServiceResource = new BackendService(),
-                Project = "",
             };
             // Make the request
             Operation response = backendServicesClient.Update(request);
@@ -737,9 +737,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateBackendServiceRequest request = new UpdateBackendServiceRequest
             {
                 RequestId = "",
+                Project = "",
                 BackendService = "",
                 BackendServiceResource = new BackendService(),
-                Project = "",
             };
             // Make the request
             Operation response = await backendServicesClient.UpdateAsync(request);

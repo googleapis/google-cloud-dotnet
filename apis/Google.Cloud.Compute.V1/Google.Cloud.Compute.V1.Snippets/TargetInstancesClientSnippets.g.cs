@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,9 +103,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteTargetInstanceRequest request = new DeleteTargetInstanceRequest
             {
                 Zone = "",
-                TargetInstance = "",
                 RequestId = "",
                 Project = "",
+                TargetInstance = "",
             };
             // Make the request
             Operation response = targetInstancesClient.Delete(request);
@@ -123,9 +123,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteTargetInstanceRequest request = new DeleteTargetInstanceRequest
             {
                 Zone = "",
-                TargetInstance = "",
                 RequestId = "",
                 Project = "",
+                TargetInstance = "",
             };
             // Make the request
             Operation response = await targetInstancesClient.DeleteAsync(request);
@@ -173,8 +173,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "",
-                TargetInstance = "",
                 Project = "",
+                TargetInstance = "",
             };
             // Make the request
             TargetInstance response = targetInstancesClient.Get(request);
@@ -192,8 +192,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "",
-                TargetInstance = "",
                 Project = "",
+                TargetInstance = "",
             };
             // Make the request
             TargetInstance response = await targetInstancesClient.GetAsync(request);
@@ -242,8 +242,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                TargetInstanceResource = new TargetInstance(),
                 Project = "",
+                TargetInstanceResource = new TargetInstance(),
             };
             // Make the request
             Operation response = targetInstancesClient.Insert(request);
@@ -262,8 +262,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                TargetInstanceResource = new TargetInstance(),
                 Project = "",
+                TargetInstanceResource = new TargetInstance(),
             };
             // Make the request
             Operation response = await targetInstancesClient.InsertAsync(request);
@@ -313,9 +313,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -336,9 +336,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

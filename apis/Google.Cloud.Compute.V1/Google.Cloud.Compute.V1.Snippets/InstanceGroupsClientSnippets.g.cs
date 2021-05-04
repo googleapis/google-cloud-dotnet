@@ -33,8 +33,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
                 Project = "",
+                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
             };
             // Make the request
             Operation response = instanceGroupsClient.AddInstances(request);
@@ -54,8 +54,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
                 Project = "",
+                InstanceGroupsAddInstancesRequestResource = new InstanceGroupsAddInstancesRequest(),
             };
             // Make the request
             Operation response = await instanceGroupsClient.AddInstancesAsync(request);
@@ -106,10 +106,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -129,10 +129,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -315,9 +315,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertInstanceGroupRequest request = new InsertInstanceGroupRequest
             {
                 Zone = "",
-                InstanceGroupResource = new InstanceGroup(),
                 RequestId = "",
                 Project = "",
+                InstanceGroupResource = new InstanceGroup(),
             };
             // Make the request
             Operation response = instanceGroupsClient.Insert(request);
@@ -335,9 +335,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertInstanceGroupRequest request = new InsertInstanceGroupRequest
             {
                 Zone = "",
-                InstanceGroupResource = new InstanceGroup(),
                 RequestId = "",
                 Project = "",
+                InstanceGroupResource = new InstanceGroup(),
             };
             // Make the request
             Operation response = await instanceGroupsClient.InsertAsync(request);
@@ -387,9 +387,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -410,9 +410,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -461,11 +461,11 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 InstanceGroup = "",
                 OrderBy = "",
-                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
                 Project = "",
+                Filter = "",
+                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -486,11 +486,11 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 InstanceGroup = "",
                 OrderBy = "",
-                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
                 Project = "",
+                Filter = "",
+                InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -543,8 +543,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest(),
                 Project = "",
+                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest(),
             };
             // Make the request
             Operation response = instanceGroupsClient.RemoveInstances(request);
@@ -564,8 +564,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest(),
                 Project = "",
+                InstanceGroupsRemoveInstancesRequestResource = new InstanceGroupsRemoveInstancesRequest(),
             };
             // Make the request
             Operation response = await instanceGroupsClient.RemoveInstancesAsync(request);
@@ -617,8 +617,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest(),
                 Project = "",
+                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest(),
             };
             // Make the request
             Operation response = instanceGroupsClient.SetNamedPorts(request);
@@ -638,8 +638,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 RequestId = "",
                 InstanceGroup = "",
-                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest(),
                 Project = "",
+                InstanceGroupsSetNamedPortsRequestResource = new InstanceGroupsSetNamedPortsRequest(),
             };
             // Make the request
             Operation response = await instanceGroupsClient.SetNamedPortsAsync(request);

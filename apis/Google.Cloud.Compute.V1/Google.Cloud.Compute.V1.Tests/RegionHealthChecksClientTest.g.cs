@@ -33,9 +33,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -44,24 +44,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -77,9 +77,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -88,24 +88,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -122,9 +122,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -133,24 +133,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -165,9 +165,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             DeleteRegionHealthCheckRequest request = new DeleteRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -176,24 +176,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -210,9 +210,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             HealthCheck expectedResponse = new HealthCheck
             {
@@ -221,20 +221,20 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = HealthCheck.Types.Type.Tcp,
                 Http2HealthCheck = new HTTP2HealthCheck(),
-                SslHealthCheck = new SSLHealthCheck(),
                 CreationTimestamp = "creation_timestamp235e59a1",
-                CheckIntervalSec = 932847778,
                 TimeoutSec = -1529270667,
-                LogConfig = new HealthCheckLogConfig(),
                 GrpcHealthCheck = new GRPCHealthCheck(),
-                HealthyThreshold = -1266282289,
                 Region = "regionedb20d96",
+                UnhealthyThreshold = -790413526,
+                SslHealthCheck = new SSLHealthCheck(),
+                CheckIntervalSec = 932847778,
+                LogConfig = new HealthCheckLogConfig(),
+                HealthyThreshold = -1266282289,
                 HttpHealthCheck = new HTTPHealthCheck(),
                 Description = "description2cf9da67",
                 HttpsHealthCheck = new HTTPSHealthCheck(),
                 SelfLink = "self_link7e87f12d",
                 TcpHealthCheck = new TCPHealthCheck(),
-                UnhealthyThreshold = -790413526,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -249,9 +249,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             HealthCheck expectedResponse = new HealthCheck
             {
@@ -260,20 +260,20 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = HealthCheck.Types.Type.Tcp,
                 Http2HealthCheck = new HTTP2HealthCheck(),
-                SslHealthCheck = new SSLHealthCheck(),
                 CreationTimestamp = "creation_timestamp235e59a1",
-                CheckIntervalSec = 932847778,
                 TimeoutSec = -1529270667,
-                LogConfig = new HealthCheckLogConfig(),
                 GrpcHealthCheck = new GRPCHealthCheck(),
-                HealthyThreshold = -1266282289,
                 Region = "regionedb20d96",
+                UnhealthyThreshold = -790413526,
+                SslHealthCheck = new SSLHealthCheck(),
+                CheckIntervalSec = 932847778,
+                LogConfig = new HealthCheckLogConfig(),
+                HealthyThreshold = -1266282289,
                 HttpHealthCheck = new HTTPHealthCheck(),
                 Description = "description2cf9da67",
                 HttpsHealthCheck = new HTTPSHealthCheck(),
                 SelfLink = "self_link7e87f12d",
                 TcpHealthCheck = new TCPHealthCheck(),
-                UnhealthyThreshold = -790413526,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HealthCheck>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -290,9 +290,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             HealthCheck expectedResponse = new HealthCheck
             {
@@ -301,20 +301,20 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = HealthCheck.Types.Type.Tcp,
                 Http2HealthCheck = new HTTP2HealthCheck(),
-                SslHealthCheck = new SSLHealthCheck(),
                 CreationTimestamp = "creation_timestamp235e59a1",
-                CheckIntervalSec = 932847778,
                 TimeoutSec = -1529270667,
-                LogConfig = new HealthCheckLogConfig(),
                 GrpcHealthCheck = new GRPCHealthCheck(),
-                HealthyThreshold = -1266282289,
                 Region = "regionedb20d96",
+                UnhealthyThreshold = -790413526,
+                SslHealthCheck = new SSLHealthCheck(),
+                CheckIntervalSec = 932847778,
+                LogConfig = new HealthCheckLogConfig(),
+                HealthyThreshold = -1266282289,
                 HttpHealthCheck = new HTTPHealthCheck(),
                 Description = "description2cf9da67",
                 HttpsHealthCheck = new HTTPSHealthCheck(),
                 SelfLink = "self_link7e87f12d",
                 TcpHealthCheck = new TCPHealthCheck(),
-                UnhealthyThreshold = -790413526,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -329,9 +329,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             GetRegionHealthCheckRequest request = new GetRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             HealthCheck expectedResponse = new HealthCheck
             {
@@ -340,20 +340,20 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Type = HealthCheck.Types.Type.Tcp,
                 Http2HealthCheck = new HTTP2HealthCheck(),
-                SslHealthCheck = new SSLHealthCheck(),
                 CreationTimestamp = "creation_timestamp235e59a1",
-                CheckIntervalSec = 932847778,
                 TimeoutSec = -1529270667,
-                LogConfig = new HealthCheckLogConfig(),
                 GrpcHealthCheck = new GRPCHealthCheck(),
-                HealthyThreshold = -1266282289,
                 Region = "regionedb20d96",
+                UnhealthyThreshold = -790413526,
+                SslHealthCheck = new SSLHealthCheck(),
+                CheckIntervalSec = 932847778,
+                LogConfig = new HealthCheckLogConfig(),
+                HealthyThreshold = -1266282289,
                 HttpHealthCheck = new HTTPHealthCheck(),
                 Description = "description2cf9da67",
                 HttpsHealthCheck = new HTTPSHealthCheck(),
                 SelfLink = "self_link7e87f12d",
                 TcpHealthCheck = new TCPHealthCheck(),
-                UnhealthyThreshold = -790413526,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<HealthCheck>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -382,24 +382,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -426,24 +426,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -471,24 +471,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -514,24 +514,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -550,10 +550,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             HealthCheckList expectedResponse = new HealthCheckList
@@ -580,10 +580,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             HealthCheckList expectedResponse = new HealthCheckList
@@ -663,10 +663,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -675,24 +675,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -708,10 +708,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -720,24 +720,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -754,10 +754,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -766,24 +766,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -798,10 +798,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             PatchRegionHealthCheckRequest request = new PatchRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -810,24 +810,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -845,10 +845,10 @@ namespace Google.Cloud.Compute.V1.Tests
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -857,24 +857,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -890,10 +890,10 @@ namespace Google.Cloud.Compute.V1.Tests
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
                 RequestId = "request_id362c8df6",
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -902,24 +902,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -936,10 +936,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -948,24 +948,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);
@@ -980,10 +980,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionHealthChecks.RegionHealthChecksClient> mockGrpcClient = new moq::Mock<RegionHealthChecks.RegionHealthChecksClient>(moq::MockBehavior.Strict);
             UpdateRegionHealthCheckRequest request = new UpdateRegionHealthCheckRequest
             {
-                HealthCheck = "health_check13a16219",
                 Region = "regionedb20d96",
                 HealthCheckResource = new HealthCheck(),
                 Project = "projectaa6ff846",
+                HealthCheck = "health_check13a16219",
             };
             Operation expectedResponse = new Operation
             {
@@ -992,24 +992,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionHealthChecksClient client = new RegionHealthChecksClientImpl(mockGrpcClient.Object, null);

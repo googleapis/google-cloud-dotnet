@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             CommitmentAggregatedList expectedResponse = new CommitmentAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new CommitmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             CommitmentAggregatedList expectedResponse = new CommitmentAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new CommitmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitmentAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new CommitmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new CommitmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CommitmentAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -185,8 +185,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "regionedb20d96",
-                Commitment = "commitment726158e4",
                 Project = "projectaa6ff846",
+                Commitment = "commitment726158e4",
             };
             Commitment expectedResponse = new Commitment
             {
@@ -194,19 +194,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Plan = Commitment.Types.Plan.TwelveMonth,
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Category = Commitment.Types.Category.UndefinedCategory,
                 StartTimestamp = "start_timestamp8aac6e77",
-                Reservations = { new Reservation(), },
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
                 Resources =
                 {
                     new ResourceCommitment(),
                 },
-                LicenseResource = new LicenseResourceCommitment(),
                 Status = Commitment.Types.Status.NotYetActive,
+                StatusMessage = "status_message2c618f86",
+                Reservations = { new Reservation(), },
+                Description = "description2cf9da67",
+                LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
             };
@@ -224,8 +224,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "regionedb20d96",
-                Commitment = "commitment726158e4",
                 Project = "projectaa6ff846",
+                Commitment = "commitment726158e4",
             };
             Commitment expectedResponse = new Commitment
             {
@@ -233,19 +233,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Plan = Commitment.Types.Plan.TwelveMonth,
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Category = Commitment.Types.Category.UndefinedCategory,
                 StartTimestamp = "start_timestamp8aac6e77",
-                Reservations = { new Reservation(), },
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
                 Resources =
                 {
                     new ResourceCommitment(),
                 },
-                LicenseResource = new LicenseResourceCommitment(),
                 Status = Commitment.Types.Status.NotYetActive,
+                StatusMessage = "status_message2c618f86",
+                Reservations = { new Reservation(), },
+                Description = "description2cf9da67",
+                LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
             };
@@ -265,8 +265,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "regionedb20d96",
-                Commitment = "commitment726158e4",
                 Project = "projectaa6ff846",
+                Commitment = "commitment726158e4",
             };
             Commitment expectedResponse = new Commitment
             {
@@ -274,19 +274,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Plan = Commitment.Types.Plan.TwelveMonth,
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Category = Commitment.Types.Category.UndefinedCategory,
                 StartTimestamp = "start_timestamp8aac6e77",
-                Reservations = { new Reservation(), },
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
                 Resources =
                 {
                     new ResourceCommitment(),
                 },
-                LicenseResource = new LicenseResourceCommitment(),
                 Status = Commitment.Types.Status.NotYetActive,
+                StatusMessage = "status_message2c618f86",
+                Reservations = { new Reservation(), },
+                Description = "description2cf9da67",
+                LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
             };
@@ -304,8 +304,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "regionedb20d96",
-                Commitment = "commitment726158e4",
                 Project = "projectaa6ff846",
+                Commitment = "commitment726158e4",
             };
             Commitment expectedResponse = new Commitment
             {
@@ -313,19 +313,19 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Plan = Commitment.Types.Plan.TwelveMonth,
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Category = Commitment.Types.Category.UndefinedCategory,
                 StartTimestamp = "start_timestamp8aac6e77",
-                Reservations = { new Reservation(), },
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
                 Resources =
                 {
                     new ResourceCommitment(),
                 },
-                LicenseResource = new LicenseResourceCommitment(),
                 Status = Commitment.Types.Status.NotYetActive,
+                StatusMessage = "status_message2c618f86",
+                Reservations = { new Reservation(), },
+                Description = "description2cf9da67",
+                LicenseResource = new LicenseResourceCommitment(),
                 SelfLink = "self_link7e87f12d",
                 EndTimestamp = "end_timestamp91060b72",
             };
@@ -356,24 +356,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -400,24 +400,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -445,24 +445,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -488,24 +488,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionCommitmentsClient client = new RegionCommitmentsClientImpl(mockGrpcClient.Object, null);
@@ -524,10 +524,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             CommitmentList expectedResponse = new CommitmentList
@@ -554,10 +554,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             CommitmentList expectedResponse = new CommitmentList

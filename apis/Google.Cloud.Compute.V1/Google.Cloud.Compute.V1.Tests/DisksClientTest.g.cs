@@ -45,24 +45,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -90,24 +90,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -136,24 +136,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -180,24 +180,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.AddResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -216,10 +216,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             DiskAggregatedList expectedResponse = new DiskAggregatedList
@@ -235,11 +235,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new DisksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -256,10 +256,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             DiskAggregatedList expectedResponse = new DiskAggregatedList
@@ -275,11 +275,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new DisksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -311,11 +311,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new DisksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -345,11 +345,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new DisksScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -369,9 +369,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
+                Project = "projectaa6ff846",
                 GuestFlush = false,
                 SnapshotResource = new Snapshot(),
-                Project = "projectaa6ff846",
             };
             Operation expectedResponse = new Operation
             {
@@ -380,24 +380,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -415,9 +415,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
+                Project = "projectaa6ff846",
                 GuestFlush = false,
                 SnapshotResource = new Snapshot(),
-                Project = "projectaa6ff846",
             };
             Operation expectedResponse = new Operation
             {
@@ -426,24 +426,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -462,8 +462,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
-                SnapshotResource = new Snapshot(),
                 Project = "projectaa6ff846",
+                SnapshotResource = new Snapshot(),
             };
             Operation expectedResponse = new Operation
             {
@@ -472,24 +472,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -506,8 +506,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
-                SnapshotResource = new Snapshot(),
                 Project = "projectaa6ff846",
+                SnapshotResource = new Snapshot(),
             };
             Operation expectedResponse = new Operation
             {
@@ -516,24 +516,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -562,24 +562,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -606,24 +606,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -651,24 +651,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -694,24 +694,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -735,7 +735,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Disk expectedResponse = new Disk
             {
                 Id = "id74b70bb8",
-                DiskEncryptionKey = new CustomerEncryptionKey(),
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -745,7 +744,6 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
@@ -758,24 +756,26 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
-                Licenses =
-                {
-                    "licensesd1cc2f9d",
-                },
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
                 },
-                Options = "optionsa965da93",
                 SourceSnapshotId = "source_snapshot_id008ab5dd",
                 Users = { "users2a5cc69b", },
-                SourceImageEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshot = "source_snapshot1fcf3da1",
                 Region = "regionedb20d96",
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
-                Description = "description2cf9da67",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
+                DiskEncryptionKey = new CustomerEncryptionKey(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                Licenses =
+                {
+                    "licensesd1cc2f9d",
+                },
+                Options = "optionsa965da93",
+                SourceImageEncryptionKey = new CustomerEncryptionKey(),
+                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -808,7 +808,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Disk expectedResponse = new Disk
             {
                 Id = "id74b70bb8",
-                DiskEncryptionKey = new CustomerEncryptionKey(),
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -818,7 +817,6 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
@@ -831,24 +829,26 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
-                Licenses =
-                {
-                    "licensesd1cc2f9d",
-                },
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
                 },
-                Options = "optionsa965da93",
                 SourceSnapshotId = "source_snapshot_id008ab5dd",
                 Users = { "users2a5cc69b", },
-                SourceImageEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshot = "source_snapshot1fcf3da1",
                 Region = "regionedb20d96",
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
-                Description = "description2cf9da67",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
+                DiskEncryptionKey = new CustomerEncryptionKey(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                Licenses =
+                {
+                    "licensesd1cc2f9d",
+                },
+                Options = "optionsa965da93",
+                SourceImageEncryptionKey = new CustomerEncryptionKey(),
+                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -883,7 +883,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Disk expectedResponse = new Disk
             {
                 Id = "id74b70bb8",
-                DiskEncryptionKey = new CustomerEncryptionKey(),
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -893,7 +892,6 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
@@ -906,24 +904,26 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
-                Licenses =
-                {
-                    "licensesd1cc2f9d",
-                },
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
                 },
-                Options = "optionsa965da93",
                 SourceSnapshotId = "source_snapshot_id008ab5dd",
                 Users = { "users2a5cc69b", },
-                SourceImageEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshot = "source_snapshot1fcf3da1",
                 Region = "regionedb20d96",
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
-                Description = "description2cf9da67",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
+                DiskEncryptionKey = new CustomerEncryptionKey(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                Licenses =
+                {
+                    "licensesd1cc2f9d",
+                },
+                Options = "optionsa965da93",
+                SourceImageEncryptionKey = new CustomerEncryptionKey(),
+                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -956,7 +956,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Disk expectedResponse = new Disk
             {
                 Id = "id74b70bb8",
-                DiskEncryptionKey = new CustomerEncryptionKey(),
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -966,7 +965,6 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
@@ -979,24 +977,26 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceImage = "source_image5e9c0c38",
                 SourceImageId = "source_image_id954b5e55",
                 LastDetachTimestamp = "last_detach_timestampffef196b",
-                Licenses =
-                {
-                    "licensesd1cc2f9d",
-                },
                 GuestOsFeatures =
                 {
                     new GuestOsFeature(),
                 },
-                Options = "optionsa965da93",
                 SourceSnapshotId = "source_snapshot_id008ab5dd",
                 Users = { "users2a5cc69b", },
-                SourceImageEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshot = "source_snapshot1fcf3da1",
                 Region = "regionedb20d96",
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
-                Description = "description2cf9da67",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
+                DiskEncryptionKey = new CustomerEncryptionKey(),
+                SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
+                Licenses =
+                {
+                    "licensesd1cc2f9d",
+                },
+                Options = "optionsa965da93",
+                SourceImageEncryptionKey = new CustomerEncryptionKey(),
+                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
@@ -1032,9 +1032,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1059,9 +1059,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1087,9 +1087,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1113,9 +1113,9 @@ namespace Google.Cloud.Compute.V1.Tests
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1147,24 +1147,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1192,24 +1192,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1237,24 +1237,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1280,24 +1280,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1317,9 +1317,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             DiskList expectedResponse = new DiskList
@@ -1347,9 +1347,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             DiskList expectedResponse = new DiskList
@@ -1431,8 +1431,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "projectaa6ff846",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1441,24 +1441,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1476,8 +1476,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "projectaa6ff846",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1486,24 +1486,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1522,8 +1522,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "projectaa6ff846",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1532,24 +1532,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1566,8 +1566,8 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Disk = "disk028b6875",
                 Zone = "zone255f4ea8",
-                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
                 Project = "projectaa6ff846",
+                DisksRemoveResourcePoliciesRequestResource = new DisksRemoveResourcePoliciesRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1576,24 +1576,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.RemoveResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1623,24 +1623,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Resize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1668,24 +1668,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ResizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1714,24 +1714,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Resize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1758,24 +1758,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.ResizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1793,16 +1793,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1820,16 +1820,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1849,16 +1849,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1876,16 +1876,16 @@ namespace Google.Cloud.Compute.V1.Tests
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             Policy expectedResponse = new Policy
             {
                 Etag = "etage8ad7218",
+                Rules = { new Rule(), },
                 AuditConfigs = { new AuditConfig(), },
                 Version = 271578922,
-                Rules = { new Rule(), },
                 Bindings = { new Binding(), },
                 IamOwned = false,
             };
@@ -1906,9 +1906,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1917,24 +1917,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1951,9 +1951,9 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Zone = "zone255f4ea8",
                 RequestId = "request_id362c8df6",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1962,24 +1962,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -1997,9 +1997,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetLabelsDiskRequest request = new SetLabelsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -2008,24 +2008,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -2041,9 +2041,9 @@ namespace Google.Cloud.Compute.V1.Tests
             SetLabelsDiskRequest request = new SetLabelsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                ZoneSetLabelsRequestResource = new ZoneSetLabelsRequest(),
             };
             Operation expectedResponse = new Operation
             {
@@ -2052,24 +2052,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DisksClient client = new DisksClientImpl(mockGrpcClient.Object, null);
@@ -2087,9 +2087,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -2112,9 +2112,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -2139,9 +2139,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {
@@ -2164,9 +2164,9 @@ namespace Google.Cloud.Compute.V1.Tests
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "resource164eab96",
                 Project = "projectaa6ff846",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             TestPermissionsResponse expectedResponse = new TestPermissionsResponse
             {

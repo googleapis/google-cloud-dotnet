@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             InterconnectAttachmentAggregatedList expectedResponse = new InterconnectAttachmentAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new InterconnectAttachmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             InterconnectAttachmentAggregatedList expectedResponse = new InterconnectAttachmentAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new InterconnectAttachmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachmentAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new InterconnectAttachmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new InterconnectAttachmentsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachmentAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -185,9 +185,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
                 RequestId = "request_id362c8df6",
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -196,24 +196,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -229,9 +229,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
                 RequestId = "request_id362c8df6",
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -240,24 +240,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -274,9 +274,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -285,24 +285,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -317,9 +317,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             DeleteInterconnectAttachmentRequest request = new DeleteInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -328,24 +328,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -362,9 +362,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             InterconnectAttachment expectedResponse = new InterconnectAttachment
             {
@@ -373,22 +373,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = InterconnectAttachment.Types.Type.PartnerProvider,
-                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
-                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
                 EdgeAvailabilityDomain = InterconnectAttachment.Types.EdgeAvailabilityDomain.AvailabilityDomain1,
                 State = InterconnectAttachment.Types.State.Unspecified,
                 VlanTag8021Q = 1290733749,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Description = "description2cf9da67",
-                PartnerAsn = "partner_asn50096c15",
-                PairingKey = "pairing_keyfe878c44",
-                AdminEnabled = true,
                 Bandwidth = InterconnectAttachment.Types.Bandwidth.Bps500M,
-                SelfLink = "self_link7e87f12d",
                 OperationalStatus = InterconnectAttachment.Types.OperationalStatus.UndefinedOperationalStatus,
                 Interconnect = "interconnect253e8bf5",
                 PrivateInterconnectInfo = new InterconnectAttachmentPrivateInfo(),
@@ -396,6 +389,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "candidate_subnets3377adaa",
                 },
+                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                Description = "description2cf9da67",
+                PartnerAsn = "partner_asn50096c15",
+                PairingKey = "pairing_keyfe878c44",
+                AdminEnabled = true,
+                SelfLink = "self_link7e87f12d",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -411,9 +411,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             InterconnectAttachment expectedResponse = new InterconnectAttachment
             {
@@ -422,22 +422,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = InterconnectAttachment.Types.Type.PartnerProvider,
-                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
-                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
                 EdgeAvailabilityDomain = InterconnectAttachment.Types.EdgeAvailabilityDomain.AvailabilityDomain1,
                 State = InterconnectAttachment.Types.State.Unspecified,
                 VlanTag8021Q = 1290733749,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Description = "description2cf9da67",
-                PartnerAsn = "partner_asn50096c15",
-                PairingKey = "pairing_keyfe878c44",
-                AdminEnabled = true,
                 Bandwidth = InterconnectAttachment.Types.Bandwidth.Bps500M,
-                SelfLink = "self_link7e87f12d",
                 OperationalStatus = InterconnectAttachment.Types.OperationalStatus.UndefinedOperationalStatus,
                 Interconnect = "interconnect253e8bf5",
                 PrivateInterconnectInfo = new InterconnectAttachmentPrivateInfo(),
@@ -445,6 +438,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "candidate_subnets3377adaa",
                 },
+                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                Description = "description2cf9da67",
+                PartnerAsn = "partner_asn50096c15",
+                PairingKey = "pairing_keyfe878c44",
+                AdminEnabled = true,
+                SelfLink = "self_link7e87f12d",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -462,9 +462,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             InterconnectAttachment expectedResponse = new InterconnectAttachment
             {
@@ -473,22 +473,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = InterconnectAttachment.Types.Type.PartnerProvider,
-                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
-                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
                 EdgeAvailabilityDomain = InterconnectAttachment.Types.EdgeAvailabilityDomain.AvailabilityDomain1,
                 State = InterconnectAttachment.Types.State.Unspecified,
                 VlanTag8021Q = 1290733749,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Description = "description2cf9da67",
-                PartnerAsn = "partner_asn50096c15",
-                PairingKey = "pairing_keyfe878c44",
-                AdminEnabled = true,
                 Bandwidth = InterconnectAttachment.Types.Bandwidth.Bps500M,
-                SelfLink = "self_link7e87f12d",
                 OperationalStatus = InterconnectAttachment.Types.OperationalStatus.UndefinedOperationalStatus,
                 Interconnect = "interconnect253e8bf5",
                 PrivateInterconnectInfo = new InterconnectAttachmentPrivateInfo(),
@@ -496,6 +489,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "candidate_subnets3377adaa",
                 },
+                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                Description = "description2cf9da67",
+                PartnerAsn = "partner_asn50096c15",
+                PairingKey = "pairing_keyfe878c44",
+                AdminEnabled = true,
+                SelfLink = "self_link7e87f12d",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -511,9 +511,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             InterconnectAttachment expectedResponse = new InterconnectAttachment
             {
@@ -522,22 +522,15 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = InterconnectAttachment.Types.Type.PartnerProvider,
-                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 DataplaneVersion = -763719012,
-                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
                 PartnerMetadata = new InterconnectAttachmentPartnerMetadata(),
                 EdgeAvailabilityDomain = InterconnectAttachment.Types.EdgeAvailabilityDomain.AvailabilityDomain1,
                 State = InterconnectAttachment.Types.State.Unspecified,
                 VlanTag8021Q = 1290733749,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Description = "description2cf9da67",
-                PartnerAsn = "partner_asn50096c15",
-                PairingKey = "pairing_keyfe878c44",
-                AdminEnabled = true,
                 Bandwidth = InterconnectAttachment.Types.Bandwidth.Bps500M,
-                SelfLink = "self_link7e87f12d",
                 OperationalStatus = InterconnectAttachment.Types.OperationalStatus.UndefinedOperationalStatus,
                 Interconnect = "interconnect253e8bf5",
                 PrivateInterconnectInfo = new InterconnectAttachmentPrivateInfo(),
@@ -545,6 +538,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "candidate_subnets3377adaa",
                 },
+                CloudRouterIpAddress = "cloud_router_ip_address62b476a9",
+                CustomerRouterIpAddress = "customer_router_ip_address819aa186",
+                Description = "description2cf9da67",
+                PartnerAsn = "partner_asn50096c15",
+                PairingKey = "pairing_keyfe878c44",
+                AdminEnabled = true,
+                SelfLink = "self_link7e87f12d",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectAttachment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -575,24 +575,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -620,24 +620,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -665,24 +665,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -708,24 +708,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -744,10 +744,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             InterconnectAttachmentList expectedResponse = new InterconnectAttachmentList
@@ -777,10 +777,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             InterconnectAttachmentList expectedResponse = new InterconnectAttachmentList
@@ -869,10 +869,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
                 RequestId = "request_id362c8df6",
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -881,24 +881,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -914,10 +914,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
                 RequestId = "request_id362c8df6",
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -926,24 +926,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -960,10 +960,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -972,24 +972,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);
@@ -1004,10 +1004,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
             PatchInterconnectAttachmentRequest request = new PatchInterconnectAttachmentRequest
             {
-                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
                 Region = "regionedb20d96",
                 InterconnectAttachmentResource = new InterconnectAttachment(),
                 Project = "projectaa6ff846",
+                InterconnectAttachment = "interconnect_attachmentc83a7a7c",
             };
             Operation expectedResponse = new Operation
             {
@@ -1016,24 +1016,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InterconnectAttachmentsClient client = new InterconnectAttachmentsClientImpl(mockGrpcClient.Object, null);

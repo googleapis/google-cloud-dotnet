@@ -31,8 +31,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = targetSslProxiesClient.Delete(request);
@@ -50,8 +50,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteTargetSslProxyRequest request = new DeleteTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = await targetSslProxiesClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "",
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             TargetSslProxy response = targetSslProxiesClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetTargetSslProxyRequest request = new GetTargetSslProxyRequest
             {
-                TargetSslProxy = "",
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             TargetSslProxy response = await targetSslProxiesClient.GetAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -297,9 +297,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = targetSslProxiesClient.SetBackendService(request);
@@ -317,9 +317,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetBackendServiceTargetSslProxyRequest request = new SetBackendServiceTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetBackendServiceRequestResource = new TargetSslProxiesSetBackendServiceRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = await targetSslProxiesClient.SetBackendServiceAsync(request);
@@ -367,9 +367,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = targetSslProxiesClient.SetProxyHeader(request);
@@ -387,9 +387,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetProxyHeaderTargetSslProxyRequest request = new SetProxyHeaderTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetProxyHeaderRequestResource = new TargetSslProxiesSetProxyHeaderRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = await targetSslProxiesClient.SetProxyHeaderAsync(request);
@@ -437,9 +437,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = targetSslProxiesClient.SetSslCertificates(request);
@@ -457,9 +457,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSslCertificatesTargetSslProxyRequest request = new SetSslCertificatesTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 TargetSslProxiesSetSslCertificatesRequestResource = new TargetSslProxiesSetSslCertificatesRequest(),
                 Project = "",
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = await targetSslProxiesClient.SetSslCertificatesAsync(request);
@@ -507,9 +507,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 Project = "",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = targetSslProxiesClient.SetSslPolicy(request);
@@ -527,9 +527,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetSslPolicyTargetSslProxyRequest request = new SetSslPolicyTargetSslProxyRequest
             {
                 RequestId = "",
-                TargetSslProxy = "",
                 Project = "",
                 SslPolicyReferenceResource = new SslPolicyReference(),
+                TargetSslProxy = "",
             };
             // Make the request
             Operation response = await targetSslProxiesClient.SetSslPolicyAsync(request);

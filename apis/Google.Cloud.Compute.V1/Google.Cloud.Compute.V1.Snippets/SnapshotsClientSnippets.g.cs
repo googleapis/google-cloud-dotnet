@@ -30,9 +30,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "",
                 RequestId = "",
                 Project = "",
+                Snapshot = "",
             };
             // Make the request
             Operation response = snapshotsClient.Delete(request);
@@ -49,9 +49,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = "",
                 RequestId = "",
                 Project = "",
+                Snapshot = "",
             };
             // Make the request
             Operation response = await snapshotsClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "",
                 Project = "",
+                Snapshot = "",
             };
             // Make the request
             Snapshot response = snapshotsClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetSnapshotRequest request = new GetSnapshotRequest
             {
-                Snapshot = "",
                 Project = "",
+                Snapshot = "",
             };
             // Make the request
             Snapshot response = await snapshotsClient.GetAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -296,9 +296,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = snapshotsClient.SetIamPolicy(request);
@@ -315,9 +315,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
-                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
             };
             // Make the request
             Policy response = await snapshotsClient.SetIamPolicyAsync(request);
@@ -364,9 +364,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = snapshotsClient.SetLabels(request);
@@ -383,9 +383,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             SetLabelsSnapshotRequest request = new SetLabelsSnapshotRequest
             {
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
                 Resource = "",
                 Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
             Operation response = await snapshotsClient.SetLabelsAsync(request);
@@ -432,9 +432,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = snapshotsClient.TestIamPermissions(request);
@@ -451,9 +451,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await snapshotsClient.TestIamPermissionsAsync(request);

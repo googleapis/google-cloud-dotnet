@@ -161,8 +161,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertTargetGrpcProxyRequest request = new InsertTargetGrpcProxyRequest
             {
                 RequestId = "",
-                TargetGrpcProxyResource = new TargetGrpcProxy(),
                 Project = "",
+                TargetGrpcProxyResource = new TargetGrpcProxy(),
             };
             // Make the request
             Operation response = targetGrpcProxiesClient.Insert(request);
@@ -180,8 +180,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertTargetGrpcProxyRequest request = new InsertTargetGrpcProxyRequest
             {
                 RequestId = "",
-                TargetGrpcProxyResource = new TargetGrpcProxy(),
                 Project = "",
+                TargetGrpcProxyResource = new TargetGrpcProxy(),
             };
             // Make the request
             Operation response = await targetGrpcProxiesClient.InsertAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -298,8 +298,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 TargetGrpcProxy = "",
                 RequestId = "",
-                TargetGrpcProxyResource = new TargetGrpcProxy(),
                 Project = "",
+                TargetGrpcProxyResource = new TargetGrpcProxy(),
             };
             // Make the request
             Operation response = targetGrpcProxiesClient.Patch(request);
@@ -318,8 +318,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 TargetGrpcProxy = "",
                 RequestId = "",
-                TargetGrpcProxyResource = new TargetGrpcProxy(),
                 Project = "",
+                TargetGrpcProxyResource = new TargetGrpcProxy(),
             };
             // Make the request
             Operation response = await targetGrpcProxiesClient.PatchAsync(request);

@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             VpnTunnelAggregatedList expectedResponse = new VpnTunnelAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new VpnTunnelsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             VpnTunnelAggregatedList expectedResponse = new VpnTunnelAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new VpnTunnelsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnelAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new VpnTunnelsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new VpnTunnelsScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnelAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -196,24 +196,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -240,24 +240,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -285,24 +285,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -328,24 +328,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -371,8 +371,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                PeerGcpGateway = "peer_gcp_gateway613039db",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                VpnGatewayInterface = 1166485993,
+                Region = "regionedb20d96",
+                Router = "routerd55c39f3",
+                Status = VpnTunnel.Types.Status.Provisioning,
+                IkeVersion = 485306612,
+                PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
                 {
                     "local_traffic_selector09bfbb68",
@@ -382,19 +387,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "remote_traffic_selector8463a07f",
                 },
-                VpnGatewayInterface = 1166485993,
                 SharedSecret = "shared_secret3a48b317",
                 PeerIp = "peer_ip5b148b8e",
                 PeerExternalGateway = "peer_external_gatewaye60baaef",
                 SharedSecretHash = "shared_secret_hash3ba18c3b",
                 VpnGateway = "vpn_gatewayaa15de14",
-                Region = "regionedb20d96",
-                Router = "routerd55c39f3",
                 Description = "description2cf9da67",
-                Status = VpnTunnel.Types.Status.Provisioning,
                 PeerExternalGatewayInterface = -994715857,
                 SelfLink = "self_link7e87f12d",
-                IkeVersion = 485306612,
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -419,8 +419,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                PeerGcpGateway = "peer_gcp_gateway613039db",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                VpnGatewayInterface = 1166485993,
+                Region = "regionedb20d96",
+                Router = "routerd55c39f3",
+                Status = VpnTunnel.Types.Status.Provisioning,
+                IkeVersion = 485306612,
+                PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
                 {
                     "local_traffic_selector09bfbb68",
@@ -430,19 +435,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "remote_traffic_selector8463a07f",
                 },
-                VpnGatewayInterface = 1166485993,
                 SharedSecret = "shared_secret3a48b317",
                 PeerIp = "peer_ip5b148b8e",
                 PeerExternalGateway = "peer_external_gatewaye60baaef",
                 SharedSecretHash = "shared_secret_hash3ba18c3b",
                 VpnGateway = "vpn_gatewayaa15de14",
-                Region = "regionedb20d96",
-                Router = "routerd55c39f3",
                 Description = "description2cf9da67",
-                Status = VpnTunnel.Types.Status.Provisioning,
                 PeerExternalGatewayInterface = -994715857,
                 SelfLink = "self_link7e87f12d",
-                IkeVersion = 485306612,
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -469,8 +469,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                PeerGcpGateway = "peer_gcp_gateway613039db",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                VpnGatewayInterface = 1166485993,
+                Region = "regionedb20d96",
+                Router = "routerd55c39f3",
+                Status = VpnTunnel.Types.Status.Provisioning,
+                IkeVersion = 485306612,
+                PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
                 {
                     "local_traffic_selector09bfbb68",
@@ -480,19 +485,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "remote_traffic_selector8463a07f",
                 },
-                VpnGatewayInterface = 1166485993,
                 SharedSecret = "shared_secret3a48b317",
                 PeerIp = "peer_ip5b148b8e",
                 PeerExternalGateway = "peer_external_gatewaye60baaef",
                 SharedSecretHash = "shared_secret_hash3ba18c3b",
                 VpnGateway = "vpn_gatewayaa15de14",
-                Region = "regionedb20d96",
-                Router = "routerd55c39f3",
                 Description = "description2cf9da67",
-                Status = VpnTunnel.Types.Status.Provisioning,
                 PeerExternalGatewayInterface = -994715857,
                 SelfLink = "self_link7e87f12d",
-                IkeVersion = 485306612,
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -517,8 +517,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = "id74b70bb8",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                PeerGcpGateway = "peer_gcp_gateway613039db",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                VpnGatewayInterface = 1166485993,
+                Region = "regionedb20d96",
+                Router = "routerd55c39f3",
+                Status = VpnTunnel.Types.Status.Provisioning,
+                IkeVersion = 485306612,
+                PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
                 {
                     "local_traffic_selector09bfbb68",
@@ -528,19 +533,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "remote_traffic_selector8463a07f",
                 },
-                VpnGatewayInterface = 1166485993,
                 SharedSecret = "shared_secret3a48b317",
                 PeerIp = "peer_ip5b148b8e",
                 PeerExternalGateway = "peer_external_gatewaye60baaef",
                 SharedSecretHash = "shared_secret_hash3ba18c3b",
                 VpnGateway = "vpn_gatewayaa15de14",
-                Region = "regionedb20d96",
-                Router = "routerd55c39f3",
                 Description = "description2cf9da67",
-                Status = VpnTunnel.Types.Status.Provisioning,
                 PeerExternalGatewayInterface = -994715857,
                 SelfLink = "self_link7e87f12d",
-                IkeVersion = 485306612,
                 TargetVpnGateway = "target_vpn_gateway6c481371",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VpnTunnel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -570,24 +570,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -614,24 +614,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -659,24 +659,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -702,24 +702,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpnTunnelsClient client = new VpnTunnelsClientImpl(mockGrpcClient.Object, null);
@@ -738,10 +738,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             VpnTunnelList expectedResponse = new VpnTunnelList
@@ -768,10 +768,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             VpnTunnelList expectedResponse = new VpnTunnelList

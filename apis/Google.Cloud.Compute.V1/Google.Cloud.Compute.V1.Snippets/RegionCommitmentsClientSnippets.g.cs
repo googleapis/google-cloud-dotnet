@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,8 +103,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "",
-                Commitment = "",
                 Project = "",
+                Commitment = "",
             };
             // Make the request
             Commitment response = regionCommitmentsClient.Get(request);
@@ -122,8 +122,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionCommitmentRequest request = new GetRegionCommitmentRequest
             {
                 Region = "",
-                Commitment = "",
                 Project = "",
+                Commitment = "",
             };
             // Make the request
             Commitment response = await regionCommitmentsClient.GetAsync(request);
@@ -242,10 +242,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -265,10 +265,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

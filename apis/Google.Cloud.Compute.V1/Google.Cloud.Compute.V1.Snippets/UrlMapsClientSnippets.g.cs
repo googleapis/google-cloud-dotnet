@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,8 +103,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteUrlMapRequest request = new DeleteUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = urlMapsClient.Delete(request);
@@ -122,8 +122,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteUrlMapRequest request = new DeleteUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await urlMapsClient.DeleteAsync(request);
@@ -168,8 +168,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetUrlMapRequest request = new GetUrlMapRequest
             {
-                UrlMap = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMap response = urlMapsClient.Get(request);
@@ -186,8 +186,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetUrlMapRequest request = new GetUrlMapRequest
             {
-                UrlMap = "",
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             UrlMap response = await urlMapsClient.GetAsync(request);
@@ -299,9 +299,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InvalidateCacheUrlMapRequest request = new InvalidateCacheUrlMapRequest
             {
                 RequestId = "",
+                Project = "",
                 CacheInvalidationRuleResource = new CacheInvalidationRule(),
                 UrlMap = "",
-                Project = "",
             };
             // Make the request
             Operation response = urlMapsClient.InvalidateCache(request);
@@ -319,9 +319,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             InvalidateCacheUrlMapRequest request = new InvalidateCacheUrlMapRequest
             {
                 RequestId = "",
+                Project = "",
                 CacheInvalidationRuleResource = new CacheInvalidationRule(),
                 UrlMap = "",
-                Project = "",
             };
             // Make the request
             Operation response = await urlMapsClient.InvalidateCacheAsync(request);
@@ -370,9 +370,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -392,9 +392,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -439,9 +439,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchUrlMapRequest request = new PatchUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = urlMapsClient.Patch(request);
@@ -459,9 +459,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchUrlMapRequest request = new PatchUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await urlMapsClient.PatchAsync(request);
@@ -509,9 +509,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateUrlMapRequest request = new UpdateUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = urlMapsClient.Update(request);
@@ -529,9 +529,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateUrlMapRequest request = new UpdateUrlMapRequest
             {
                 RequestId = "",
-                UrlMap = "",
                 UrlMapResource = new UrlMap(),
                 Project = "",
+                UrlMap = "",
             };
             // Make the request
             Operation response = await urlMapsClient.UpdateAsync(request);
@@ -578,9 +578,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
+                Project = "",
                 UrlMap = "",
                 UrlMapsValidateRequestResource = new UrlMapsValidateRequest(),
-                Project = "",
             };
             // Make the request
             UrlMapsValidateResponse response = urlMapsClient.Validate(request);
@@ -597,9 +597,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
+                Project = "",
                 UrlMap = "",
                 UrlMapsValidateRequestResource = new UrlMapsValidateRequest(),
-                Project = "",
             };
             // Make the request
             UrlMapsValidateResponse response = await urlMapsClient.ValidateAsync(request);

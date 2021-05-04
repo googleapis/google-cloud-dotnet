@@ -33,9 +33,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterface = "",
                 AccessConfigResource = new AccessConfig(),
-                Project = "",
             };
             // Make the request
             Operation response = instancesClient.AddAccessConfig(request);
@@ -55,9 +55,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterface = "",
                 AccessConfigResource = new AccessConfig(),
-                Project = "",
             };
             // Make the request
             Operation response = await instancesClient.AddAccessConfigAsync(request);
@@ -111,8 +111,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest(),
                 Project = "",
+                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = instancesClient.AddResourcePolicies(request);
@@ -132,8 +132,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest(),
                 Project = "",
+                InstancesAddResourcePoliciesRequestResource = new InstancesAddResourcePoliciesRequest(),
             };
             // Make the request
             Operation response = await instancesClient.AddResourcePoliciesAsync(request);
@@ -184,10 +184,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -207,10 +207,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -404,8 +404,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 AccessConfig = "",
-                NetworkInterface = "",
                 Project = "",
+                NetworkInterface = "",
             };
             // Make the request
             Operation response = instancesClient.DeleteAccessConfig(request);
@@ -426,8 +426,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 AccessConfig = "",
-                NetworkInterface = "",
                 Project = "",
+                NetworkInterface = "",
             };
             // Make the request
             Operation response = await instancesClient.DeleteAccessConfigAsync(request);
@@ -622,9 +622,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                QueryPath = "",
                 VariableKey = "",
                 Project = "",
+                QueryPath = "",
             };
             // Make the request
             GuestAttributes response = instancesClient.GetGuestAttributes(request);
@@ -643,9 +643,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                QueryPath = "",
                 VariableKey = "",
                 Project = "",
+                QueryPath = "",
             };
             // Make the request
             GuestAttributes response = await instancesClient.GetGuestAttributesAsync(request);
@@ -972,9 +972,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                SourceInstanceTemplate = "",
                 InstanceResource = new Instance(),
                 Project = "",
+                SourceInstanceTemplate = "",
             };
             // Make the request
             Operation response = instancesClient.Insert(request);
@@ -993,9 +993,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                SourceInstanceTemplate = "",
                 InstanceResource = new Instance(),
                 Project = "",
+                SourceInstanceTemplate = "",
             };
             // Make the request
             Operation response = await instancesClient.InsertAsync(request);
@@ -1045,9 +1045,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -1068,9 +1068,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -1120,9 +1120,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -1144,9 +1144,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -1340,9 +1340,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                DeletionProtection = false,
                 Resource = "",
                 Project = "",
+                DeletionProtection = false,
             };
             // Make the request
             Operation response = instancesClient.SetDeletionProtection(request);
@@ -1361,9 +1361,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 RequestId = "",
-                DeletionProtection = false,
                 Resource = "",
                 Project = "",
+                DeletionProtection = false,
             };
             // Make the request
             Operation response = await instancesClient.SetDeletionProtectionAsync(request);
@@ -1414,8 +1414,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 DeviceName = "",
-                AutoDelete = false,
                 Project = "",
+                AutoDelete = false,
             };
             // Make the request
             Operation response = instancesClient.SetDiskAutoDelete(request);
@@ -1436,8 +1436,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Instance = "",
                 RequestId = "",
                 DeviceName = "",
-                AutoDelete = false,
                 Project = "",
+                AutoDelete = false,
             };
             // Make the request
             Operation response = await instancesClient.SetDiskAutoDeleteAsync(request);
@@ -1489,9 +1489,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = instancesClient.SetIamPolicy(request);
@@ -1509,9 +1509,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "",
-                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
                 Resource = "",
                 Project = "",
+                ZoneSetPolicyRequestResource = new ZoneSetPolicyRequest(),
             };
             // Make the request
             Policy response = await instancesClient.SetIamPolicyAsync(request);
@@ -1784,9 +1784,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                MetadataResource = new Metadata(),
                 RequestId = "",
                 Project = "",
+                MetadataResource = new Metadata(),
             };
             // Make the request
             Operation response = instancesClient.SetMetadata(request);
@@ -1805,9 +1805,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                MetadataResource = new Metadata(),
                 RequestId = "",
                 Project = "",
+                MetadataResource = new Metadata(),
             };
             // Make the request
             Operation response = await instancesClient.SetMetadataAsync(request);
@@ -1933,8 +1933,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                SchedulingResource = new Scheduling(),
                 Project = "",
+                SchedulingResource = new Scheduling(),
             };
             // Make the request
             Operation response = instancesClient.SetScheduling(request);
@@ -1954,8 +1954,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                SchedulingResource = new Scheduling(),
                 Project = "",
+                SchedulingResource = new Scheduling(),
             };
             // Make the request
             Operation response = await instancesClient.SetSchedulingAsync(request);
@@ -2005,10 +2005,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetServiceAccountInstanceRequest request = new SetServiceAccountInstanceRequest
             {
                 Zone = "",
-                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest(),
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest(),
             };
             // Make the request
             Operation response = instancesClient.SetServiceAccount(request);
@@ -2026,10 +2026,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetServiceAccountInstanceRequest request = new SetServiceAccountInstanceRequest
             {
                 Zone = "",
-                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest(),
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                InstancesSetServiceAccountRequestResource = new InstancesSetServiceAccountRequest(),
             };
             // Make the request
             Operation response = await instancesClient.SetServiceAccountAsync(request);
@@ -2081,8 +2081,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy(),
                 Project = "",
+                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy(),
             };
             // Make the request
             Operation response = instancesClient.SetShieldedInstanceIntegrityPolicy(request);
@@ -2102,8 +2102,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy(),
                 Project = "",
+                ShieldedInstanceIntegrityPolicyResource = new ShieldedInstanceIntegrityPolicy(),
             };
             // Make the request
             Operation response = await instancesClient.SetShieldedInstanceIntegrityPolicyAsync(request);
@@ -2155,8 +2155,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                TagsResource = new Tags(),
                 Project = "",
+                TagsResource = new Tags(),
             };
             // Make the request
             Operation response = instancesClient.SetTags(request);
@@ -2176,8 +2176,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                TagsResource = new Tags(),
                 Project = "",
+                TagsResource = new Tags(),
             };
             // Make the request
             Operation response = await instancesClient.SetTagsAsync(request);
@@ -2367,8 +2367,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest(),
                 Project = "",
+                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest(),
             };
             // Make the request
             Operation response = instancesClient.StartWithEncryptionKey(request);
@@ -2388,8 +2388,8 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
-                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest(),
                 Project = "",
+                InstancesStartWithEncryptionKeyRequestResource = new InstancesStartWithEncryptionKeyRequest(),
             };
             // Make the request
             Operation response = await instancesClient.StartWithEncryptionKeyAsync(request);
@@ -2509,9 +2509,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = instancesClient.TestIamPermissions(request);
@@ -2529,9 +2529,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "",
-                TestPermissionsRequestResource = new TestPermissionsRequest(),
                 Resource = "",
                 Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
             };
             // Make the request
             TestPermissionsResponse response = await instancesClient.TestIamPermissionsAsync(request);
@@ -2580,13 +2580,13 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                MinimalAction = "",
                 Zone = "",
                 Instance = "",
                 RequestId = "",
                 MostDisruptiveAllowedAction = "",
                 InstanceResource = new Instance(),
                 Project = "",
+                MinimalAction = "",
             };
             // Make the request
             Operation response = instancesClient.Update(request);
@@ -2603,13 +2603,13 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
-                MinimalAction = "",
                 Zone = "",
                 Instance = "",
                 RequestId = "",
                 MostDisruptiveAllowedAction = "",
                 InstanceResource = new Instance(),
                 Project = "",
+                MinimalAction = "",
             };
             // Make the request
             Operation response = await instancesClient.UpdateAsync(request);
@@ -2661,9 +2661,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterface = "",
                 AccessConfigResource = new AccessConfig(),
-                Project = "",
             };
             // Make the request
             Operation response = instancesClient.UpdateAccessConfig(request);
@@ -2683,9 +2683,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterface = "",
                 AccessConfigResource = new AccessConfig(),
-                Project = "",
             };
             // Make the request
             Operation response = await instancesClient.UpdateAccessConfigAsync(request);
@@ -2738,9 +2738,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                DisplayDeviceResource = new DisplayDevice(),
                 RequestId = "",
                 Project = "",
+                DisplayDeviceResource = new DisplayDevice(),
             };
             // Make the request
             Operation response = instancesClient.UpdateDisplayDevice(request);
@@ -2759,9 +2759,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
-                DisplayDeviceResource = new DisplayDevice(),
                 RequestId = "",
                 Project = "",
+                DisplayDeviceResource = new DisplayDevice(),
             };
             // Make the request
             Operation response = await instancesClient.UpdateDisplayDeviceAsync(request);
@@ -2813,9 +2813,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterfaceResource = new NetworkInterface(),
                 NetworkInterface = "",
-                Project = "",
             };
             // Make the request
             Operation response = instancesClient.UpdateNetworkInterface(request);
@@ -2835,9 +2835,9 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Zone = "",
                 Instance = "",
                 RequestId = "",
+                Project = "",
                 NetworkInterfaceResource = new NetworkInterface(),
                 NetworkInterface = "",
-                Project = "",
             };
             // Make the request
             Operation response = await instancesClient.UpdateNetworkInterfaceAsync(request);
@@ -2888,11 +2888,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             UpdateShieldedInstanceConfigInstanceRequest request = new UpdateShieldedInstanceConfigInstanceRequest
             {
-                ShieldedInstanceConfigResource = new ShieldedInstanceConfig(),
                 Zone = "",
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                ShieldedInstanceConfigResource = new ShieldedInstanceConfig(),
             };
             // Make the request
             Operation response = instancesClient.UpdateShieldedInstanceConfig(request);
@@ -2909,11 +2909,11 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             UpdateShieldedInstanceConfigInstanceRequest request = new UpdateShieldedInstanceConfigInstanceRequest
             {
-                ShieldedInstanceConfigResource = new ShieldedInstanceConfig(),
                 Zone = "",
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                ShieldedInstanceConfigResource = new ShieldedInstanceConfig(),
             };
             // Make the request
             Operation response = await instancesClient.UpdateShieldedInstanceConfigAsync(request);

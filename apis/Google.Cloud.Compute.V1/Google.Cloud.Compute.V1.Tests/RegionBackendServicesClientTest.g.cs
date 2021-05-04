@@ -33,9 +33,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             Operation expectedResponse = new Operation
             {
@@ -44,24 +44,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -77,9 +77,9 @@ namespace Google.Cloud.Compute.V1.Tests
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             Operation expectedResponse = new Operation
             {
@@ -88,24 +88,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -122,9 +122,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             Operation expectedResponse = new Operation
             {
@@ -133,24 +133,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -165,9 +165,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             Operation expectedResponse = new Operation
             {
@@ -176,24 +176,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -210,9 +210,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendService expectedResponse = new BackendService
             {
@@ -229,21 +229,25 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 PortName = "port_namebaaa4cd4",
                 TimeoutSec = -1529270667,
-                LogConfig = new BackendServiceLogConfig(),
                 Protocol = BackendService.Types.Protocol.Udp,
+                FailoverPolicy = new BackendServiceFailoverPolicy(),
+                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                Region = "regionedb20d96",
+                SecurityPolicy = "security_policy76596315",
+                CdnPolicy = new BackendServiceCdnPolicy(),
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                EnableCDN = false,
+                LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
                 LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 AffinityCookieTtlSec = -328985636,
-                FailoverPolicy = new BackendServiceFailoverPolicy(),
                 CustomResponseHeaders =
                 {
                     "custom_response_headersda5d431e",
                 },
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
-                Region = "regionedb20d96",
                 CircuitBreakers = new CircuitBreakers(),
                 Description = "description2cf9da67",
-                SecurityPolicy = "security_policy76596315",
                 HealthChecks =
                 {
                     "health_checksedb1f3f8",
@@ -252,11 +256,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.ClientIp,
                 SecuritySettings = new SecuritySettings(),
-                CdnPolicy = new BackendServiceCdnPolicy(),
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
                 Backends = { new Backend(), },
-                EnableCDN = false,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -271,9 +271,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendService expectedResponse = new BackendService
             {
@@ -290,21 +290,25 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 PortName = "port_namebaaa4cd4",
                 TimeoutSec = -1529270667,
-                LogConfig = new BackendServiceLogConfig(),
                 Protocol = BackendService.Types.Protocol.Udp,
+                FailoverPolicy = new BackendServiceFailoverPolicy(),
+                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                Region = "regionedb20d96",
+                SecurityPolicy = "security_policy76596315",
+                CdnPolicy = new BackendServiceCdnPolicy(),
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                EnableCDN = false,
+                LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
                 LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 AffinityCookieTtlSec = -328985636,
-                FailoverPolicy = new BackendServiceFailoverPolicy(),
                 CustomResponseHeaders =
                 {
                     "custom_response_headersda5d431e",
                 },
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
-                Region = "regionedb20d96",
                 CircuitBreakers = new CircuitBreakers(),
                 Description = "description2cf9da67",
-                SecurityPolicy = "security_policy76596315",
                 HealthChecks =
                 {
                     "health_checksedb1f3f8",
@@ -313,11 +317,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.ClientIp,
                 SecuritySettings = new SecuritySettings(),
-                CdnPolicy = new BackendServiceCdnPolicy(),
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
                 Backends = { new Backend(), },
-                EnableCDN = false,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -334,9 +334,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendService expectedResponse = new BackendService
             {
@@ -353,21 +353,25 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 PortName = "port_namebaaa4cd4",
                 TimeoutSec = -1529270667,
-                LogConfig = new BackendServiceLogConfig(),
                 Protocol = BackendService.Types.Protocol.Udp,
+                FailoverPolicy = new BackendServiceFailoverPolicy(),
+                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                Region = "regionedb20d96",
+                SecurityPolicy = "security_policy76596315",
+                CdnPolicy = new BackendServiceCdnPolicy(),
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                EnableCDN = false,
+                LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
                 LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 AffinityCookieTtlSec = -328985636,
-                FailoverPolicy = new BackendServiceFailoverPolicy(),
                 CustomResponseHeaders =
                 {
                     "custom_response_headersda5d431e",
                 },
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
-                Region = "regionedb20d96",
                 CircuitBreakers = new CircuitBreakers(),
                 Description = "description2cf9da67",
-                SecurityPolicy = "security_policy76596315",
                 HealthChecks =
                 {
                     "health_checksedb1f3f8",
@@ -376,11 +380,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.ClientIp,
                 SecuritySettings = new SecuritySettings(),
-                CdnPolicy = new BackendServiceCdnPolicy(),
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
                 Backends = { new Backend(), },
-                EnableCDN = false,
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -395,9 +395,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendService expectedResponse = new BackendService
             {
@@ -414,21 +414,25 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 PortName = "port_namebaaa4cd4",
                 TimeoutSec = -1529270667,
-                LogConfig = new BackendServiceLogConfig(),
                 Protocol = BackendService.Types.Protocol.Udp,
+                FailoverPolicy = new BackendServiceFailoverPolicy(),
+                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                Region = "regionedb20d96",
+                SecurityPolicy = "security_policy76596315",
+                CdnPolicy = new BackendServiceCdnPolicy(),
+                Network = "networkd22ce091",
+                Fingerprint = "fingerprint009e6052",
+                EnableCDN = false,
+                LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
                 LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 AffinityCookieTtlSec = -328985636,
-                FailoverPolicy = new BackendServiceFailoverPolicy(),
                 CustomResponseHeaders =
                 {
                     "custom_response_headersda5d431e",
                 },
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
-                Region = "regionedb20d96",
                 CircuitBreakers = new CircuitBreakers(),
                 Description = "description2cf9da67",
-                SecurityPolicy = "security_policy76596315",
                 HealthChecks =
                 {
                     "health_checksedb1f3f8",
@@ -437,11 +441,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.ClientIp,
                 SecuritySettings = new SecuritySettings(),
-                CdnPolicy = new BackendServiceCdnPolicy(),
-                Network = "networkd22ce091",
-                Fingerprint = "fingerprint009e6052",
                 Backends = { new Backend(), },
-                EnableCDN = false,
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BackendService>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -458,10 +458,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendServiceGroupHealth expectedResponse = new BackendServiceGroupHealth
             {
@@ -488,10 +488,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendServiceGroupHealth expectedResponse = new BackendServiceGroupHealth
             {
@@ -520,10 +520,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendServiceGroupHealth expectedResponse = new BackendServiceGroupHealth
             {
@@ -550,10 +550,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
             };
             BackendServiceGroupHealth expectedResponse = new BackendServiceGroupHealth
             {
@@ -583,9 +583,9 @@ namespace Google.Cloud.Compute.V1.Tests
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -594,24 +594,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -627,9 +627,9 @@ namespace Google.Cloud.Compute.V1.Tests
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -638,24 +638,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -672,9 +672,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -683,24 +683,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -715,9 +715,9 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
             {
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -726,24 +726,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -762,10 +762,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             BackendServiceList expectedResponse = new BackendServiceList
@@ -795,10 +795,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 Region = "regionedb20d96",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             BackendServiceList expectedResponse = new BackendServiceList
@@ -887,10 +887,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -899,24 +899,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -932,10 +932,10 @@ namespace Google.Cloud.Compute.V1.Tests
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -944,24 +944,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -978,10 +978,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -990,24 +990,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -1022,10 +1022,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1034,24 +1034,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -1069,10 +1069,10 @@ namespace Google.Cloud.Compute.V1.Tests
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1081,24 +1081,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -1114,10 +1114,10 @@ namespace Google.Cloud.Compute.V1.Tests
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
                 RequestId = "request_id362c8df6",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1126,24 +1126,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -1160,10 +1160,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1172,24 +1172,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
@@ -1204,10 +1204,10 @@ namespace Google.Cloud.Compute.V1.Tests
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
             UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
             {
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
                 Region = "regionedb20d96",
                 Project = "projectaa6ff846",
+                BackendService = "backend_serviceed490d45",
+                BackendServiceResource = new BackendService(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1216,24 +1216,24 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
                 Zone = "zone255f4ea8",
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
-                HttpErrorStatusCode = 1766362655,
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
                 EndTime = "end_time89285d30",
                 Region = "regionedb20d96",
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
-                SelfLink = "self_link7e87f12d",
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                Warnings = { new Warnings(), },
                 TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
             };
             mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);

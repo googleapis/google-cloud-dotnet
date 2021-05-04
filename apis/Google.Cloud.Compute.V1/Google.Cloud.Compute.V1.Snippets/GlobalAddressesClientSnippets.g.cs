@@ -31,8 +31,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteGlobalAddressRequest request = new DeleteGlobalAddressRequest
             {
                 RequestId = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Operation response = globalAddressesClient.Delete(request);
@@ -50,8 +50,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteGlobalAddressRequest request = new DeleteGlobalAddressRequest
             {
                 RequestId = "",
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Operation response = await globalAddressesClient.DeleteAsync(request);
@@ -96,8 +96,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Address response = globalAddressesClient.Get(request);
@@ -114,8 +114,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
-                Address = "",
                 Project = "",
+                Address = "",
             };
             // Make the request
             Address response = await globalAddressesClient.GetAsync(request);
@@ -161,8 +161,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertGlobalAddressRequest request = new InsertGlobalAddressRequest
             {
                 RequestId = "",
-                AddressResource = new Address(),
                 Project = "",
+                AddressResource = new Address(),
             };
             // Make the request
             Operation response = globalAddressesClient.Insert(request);
@@ -180,8 +180,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             InsertGlobalAddressRequest request = new InsertGlobalAddressRequest
             {
                 RequestId = "",
-                AddressResource = new Address(),
                 Project = "",
+                AddressResource = new Address(),
             };
             // Make the request
             Operation response = await globalAddressesClient.InsertAsync(request);
@@ -228,9 +228,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -250,9 +250,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

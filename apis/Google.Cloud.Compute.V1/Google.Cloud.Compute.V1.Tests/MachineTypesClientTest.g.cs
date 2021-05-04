@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new MachineTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new MachineTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new MachineTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new MachineTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
@@ -191,15 +191,15 @@ namespace Google.Cloud.Compute.V1.Tests
             MachineType expectedResponse = new MachineType
             {
                 Id = "id74b70bb8",
-                Accelerators = { new Accelerators(), },
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                GuestCpus = 325324266,
                 MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                Accelerators = { new Accelerators(), },
+                GuestCpus = 325324266,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ScratchDisks = { new ScratchDisks(), },
@@ -227,15 +227,15 @@ namespace Google.Cloud.Compute.V1.Tests
             MachineType expectedResponse = new MachineType
             {
                 Id = "id74b70bb8",
-                Accelerators = { new Accelerators(), },
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                GuestCpus = 325324266,
                 MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                Accelerators = { new Accelerators(), },
+                GuestCpus = 325324266,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ScratchDisks = { new ScratchDisks(), },
@@ -265,15 +265,15 @@ namespace Google.Cloud.Compute.V1.Tests
             MachineType expectedResponse = new MachineType
             {
                 Id = "id74b70bb8",
-                Accelerators = { new Accelerators(), },
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                GuestCpus = 325324266,
                 MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                Accelerators = { new Accelerators(), },
+                GuestCpus = 325324266,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ScratchDisks = { new ScratchDisks(), },
@@ -301,15 +301,15 @@ namespace Google.Cloud.Compute.V1.Tests
             MachineType expectedResponse = new MachineType
             {
                 Id = "id74b70bb8",
-                Accelerators = { new Accelerators(), },
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                GuestCpus = 325324266,
                 MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                Accelerators = { new Accelerators(), },
+                GuestCpus = 325324266,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ScratchDisks = { new ScratchDisks(), },
@@ -335,9 +335,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             MachineTypeList expectedResponse = new MachineTypeList
@@ -365,9 +365,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             MachineTypeList expectedResponse = new MachineTypeList

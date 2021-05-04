@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -313,10 +313,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetUrlMapRegionTargetHttpProxyRequest request = new SetUrlMapRegionTargetHttpProxyRequest
             {
                 RequestId = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Region = "",
                 TargetHttpProxy = "",
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = regionTargetHttpProxiesClient.SetUrlMap(request);
@@ -334,10 +334,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             SetUrlMapRegionTargetHttpProxyRequest request = new SetUrlMapRegionTargetHttpProxyRequest
             {
                 RequestId = "",
-                UrlMapReferenceResource = new UrlMapReference(),
                 Region = "",
                 TargetHttpProxy = "",
                 Project = "",
+                UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
             Operation response = await regionTargetHttpProxiesClient.SetUrlMapAsync(request);

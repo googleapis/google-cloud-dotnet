@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -55,10 +55,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
-                IncludeAllScopes = false,
                 OrderBy = "",
                 Project = "",
+                Filter = "",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -103,8 +103,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteHealthCheckRequest request = new DeleteHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = healthChecksClient.Delete(request);
@@ -122,8 +122,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             DeleteHealthCheckRequest request = new DeleteHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await healthChecksClient.DeleteAsync(request);
@@ -168,8 +168,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
-                HealthCheck = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             HealthCheck response = healthChecksClient.Get(request);
@@ -186,8 +186,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
-                HealthCheck = "",
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             HealthCheck response = await healthChecksClient.GetAsync(request);
@@ -300,9 +300,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -322,9 +322,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -369,9 +369,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchHealthCheckRequest request = new PatchHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = healthChecksClient.Patch(request);
@@ -389,9 +389,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             PatchHealthCheckRequest request = new PatchHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await healthChecksClient.PatchAsync(request);
@@ -439,9 +439,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateHealthCheckRequest request = new UpdateHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = healthChecksClient.Update(request);
@@ -459,9 +459,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             UpdateHealthCheckRequest request = new UpdateHealthCheckRequest
             {
                 RequestId = "",
-                HealthCheck = "",
                 HealthCheckResource = new HealthCheck(),
                 Project = "",
+                HealthCheck = "",
             };
             // Make the request
             Operation response = await healthChecksClient.UpdateAsync(request);

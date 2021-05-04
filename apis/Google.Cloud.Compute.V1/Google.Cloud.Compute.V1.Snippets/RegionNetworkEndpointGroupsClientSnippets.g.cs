@@ -32,8 +32,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = regionNetworkEndpointGroupsClient.Delete(request);
@@ -52,8 +52,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 RequestId = "",
                 Region = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             Operation response = await regionNetworkEndpointGroupsClient.DeleteAsync(request);
@@ -101,8 +101,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = regionNetworkEndpointGroupsClient.Get(request);
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Snippets
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "",
-                NetworkEndpointGroup = "",
                 Project = "",
+                NetworkEndpointGroup = "",
             };
             // Make the request
             NetworkEndpointGroup response = await regionNetworkEndpointGroupsClient.GetAsync(request);
@@ -240,10 +240,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
@@ -263,10 +263,10 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 PageToken = "",
                 MaxResults = 0U,
-                Filter = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
+                Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request

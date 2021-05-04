@@ -34,10 +34,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeTypeAggregatedList expectedResponse = new NodeTypeAggregatedList
@@ -53,11 +53,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTypesClient client = new NodeTypesClientImpl(mockGrpcClient.Object, null);
@@ -74,10 +74,10 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
+                IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
             };
             NodeTypeAggregatedList expectedResponse = new NodeTypeAggregatedList
@@ -93,11 +93,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTypesClient client = new NodeTypesClientImpl(mockGrpcClient.Object, null);
@@ -129,11 +129,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeTypesClient client = new NodeTypesClientImpl(mockGrpcClient.Object, null);
@@ -163,11 +163,11 @@ namespace Google.Cloud.Compute.V1.Tests
                         new NodeTypesScopedList()
                     },
                 },
-                SelfLink = "self_link7e87f12d",
                 Unreachables =
                 {
                     "unreachables3ca950ee",
                 },
+                SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeTypesClient client = new NodeTypesClientImpl(mockGrpcClient.Object, null);
@@ -185,8 +185,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeTypeRequest request = new GetNodeTypeRequest
             {
                 Zone = "zone255f4ea8",
-                NodeType = "node_type98c685da",
                 Project = "projectaa6ff846",
+                NodeType = "node_type98c685da",
             };
             NodeType expectedResponse = new NodeType
             {
@@ -195,8 +195,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                LocalSsdGb = -81635889,
                 MemoryMb = -1241574521,
+                LocalSsdGb = -81635889,
                 GuestCpus = 325324266,
                 CpuPlatform = "cpu_platformd5794042",
                 Description = "description2cf9da67",
@@ -217,8 +217,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeTypeRequest request = new GetNodeTypeRequest
             {
                 Zone = "zone255f4ea8",
-                NodeType = "node_type98c685da",
                 Project = "projectaa6ff846",
+                NodeType = "node_type98c685da",
             };
             NodeType expectedResponse = new NodeType
             {
@@ -227,8 +227,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                LocalSsdGb = -81635889,
                 MemoryMb = -1241574521,
+                LocalSsdGb = -81635889,
                 GuestCpus = 325324266,
                 CpuPlatform = "cpu_platformd5794042",
                 Description = "description2cf9da67",
@@ -251,8 +251,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeTypeRequest request = new GetNodeTypeRequest
             {
                 Zone = "zone255f4ea8",
-                NodeType = "node_type98c685da",
                 Project = "projectaa6ff846",
+                NodeType = "node_type98c685da",
             };
             NodeType expectedResponse = new NodeType
             {
@@ -261,8 +261,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                LocalSsdGb = -81635889,
                 MemoryMb = -1241574521,
+                LocalSsdGb = -81635889,
                 GuestCpus = 325324266,
                 CpuPlatform = "cpu_platformd5794042",
                 Description = "description2cf9da67",
@@ -283,8 +283,8 @@ namespace Google.Cloud.Compute.V1.Tests
             GetNodeTypeRequest request = new GetNodeTypeRequest
             {
                 Zone = "zone255f4ea8",
-                NodeType = "node_type98c685da",
                 Project = "projectaa6ff846",
+                NodeType = "node_type98c685da",
             };
             NodeType expectedResponse = new NodeType
             {
@@ -293,8 +293,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                LocalSsdGb = -81635889,
                 MemoryMb = -1241574521,
+                LocalSsdGb = -81635889,
                 GuestCpus = 325324266,
                 CpuPlatform = "cpu_platformd5794042",
                 Description = "description2cf9da67",
@@ -319,9 +319,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeTypeList expectedResponse = new NodeTypeList
@@ -349,9 +349,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 PageToken = "page_tokenf09e5538",
                 MaxResults = 2806814450U,
-                Filter = "filtere47ac9b2",
                 OrderBy = "order_byb4d33ada",
                 Project = "projectaa6ff846",
+                Filter = "filtere47ac9b2",
                 ReturnPartialSuccess = false,
             };
             NodeTypeList expectedResponse = new NodeTypeList
