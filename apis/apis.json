@@ -893,7 +893,7 @@
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Essential Contacts",
       "productUrl": "https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest",
