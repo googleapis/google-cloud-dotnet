@@ -892,6 +892,22 @@
       ]
     },
     {
+      "id": "Google.Cloud.EssentialContacts.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Essential Contacts",
+      "productUrl": "https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest",
+      "description": "Recommended Google client library to access the Google Cloud Essential Contacts API",
+      "tags": [
+        "resources",
+        "notification",
+        "contacts"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/essentialcontacts/v1"
+    },
+    {
       "id": "Google.Cloud.Firestore.Admin.V1",
       "generator": "micro",
       "protoPath": "google/firestore/admin/v1",
