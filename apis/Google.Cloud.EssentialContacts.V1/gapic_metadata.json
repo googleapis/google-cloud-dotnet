@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.essentialcontacts.v1",
+  "libraryPackage": "Google.Cloud.EssentialContacts.V1",
+  "services": {
+    "EssentialContactsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EssentialContactsServiceClient",
+          "rpcs": {
+            "ComputeContacts": {
+              "methods": [
+                "ComputeContacts",
+                "ComputeContactsAsync"
+              ]
+            },
+            "CreateContact": {
+              "methods": [
+                "CreateContact",
+                "CreateContactAsync"
+              ]
+            },
+            "DeleteContact": {
+              "methods": [
+                "DeleteContact",
+                "DeleteContactAsync"
+              ]
+            },
+            "GetContact": {
+              "methods": [
+                "GetContact",
+                "GetContactAsync"
+              ]
+            },
+            "ListContacts": {
+              "methods": [
+                "ListContacts",
+                "ListContactsAsync"
+              ]
+            },
+            "SendTestMessage": {
+              "methods": [
+                "SendTestMessage",
+                "SendTestMessageAsync"
+              ]
+            },
+            "UpdateContact": {
+              "methods": [
+                "UpdateContact",
+                "UpdateContactAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
