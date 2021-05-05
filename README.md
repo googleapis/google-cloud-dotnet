@@ -65,7 +65,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.1.0) | 2.1.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.4.0) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.3.0) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
-| [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.0.0) | 1.0.0 | [Cloud Functions](https://cloud.google.com/functions) |
+| [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.1.0) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
 | [Google.Cloud.GSuiteAddOns.V1](https://googleapis.dev/dotnet/Google.Cloud.GSuiteAddOns.V1/1.0.0-beta01) | 1.0.0-beta01 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.0.0) | 1.0.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta06) | 1.0.0-beta06 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
