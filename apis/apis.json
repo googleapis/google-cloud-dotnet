@@ -1792,13 +1792,13 @@
       "protoPath": "google/cloud/secretmanager/v1",
       "productName": "Secret Manager",
       "productUrl": "https://cloud.google.com/secret-manager",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Secret Manager API.",
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Iam.V1": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "tags": [
         "secret",
