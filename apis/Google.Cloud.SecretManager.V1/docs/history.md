@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.4.0, released 2021-05-05
+
+- [Commit 5e2fe40](https://github.com/googleapis/google-cloud-dotnet/commit/5e2fe40): feat: Rotation for Secrets
+- [Commit 28c6ac6](https://github.com/googleapis/google-cloud-dotnet/commit/28c6ac6): feat: added topic field to Secret
+
 # Version 1.3.0, released 2021-01-20
 
 - [Commit 9bd5f77](https://github.com/googleapis/google-cloud-dotnet/commit/9bd5f77): feat: added expire_time and ttl fields to Secret
