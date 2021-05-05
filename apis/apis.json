@@ -935,7 +935,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "2.3.1",
+      "version": "2.4.0",
       "type": "other",
       "metadataType": "VENEER_GRPC",
       "targetFrameworks": "netstandard2.0;net461",
@@ -954,7 +954,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "3.3.0",
         "Google.Api.Gax.Testing": "3.3.0",
-        "Grpc.Core.Testing": "2.31.0",
+        "Grpc.Core.Testing": "2.36.4",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.2.7"
       }
@@ -966,7 +966,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
