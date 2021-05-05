@@ -81,7 +81,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.Log4Net](Google.Cloud.Logging.Log4Net/index.html) | 3.2.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](Google.Cloud.Logging.NLog/index.html) | 3.3.0 | NLog target for the Google Cloud Logging API |
 | [Google.Cloud.Logging.Type](Google.Cloud.Logging.Type/index.html) | 3.2.0 | Version-agnostic types for the Google Cloud Logging API |
-| [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.2.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
+| [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.3.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html) | 2.2.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.MediaTranslation.V1Beta1](Google.Cloud.MediaTranslation.V1Beta1/index.html) | 1.0.0-beta02 | [Media Translation](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1](Google.Cloud.Memcache.V1/index.html) | 1.0.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
