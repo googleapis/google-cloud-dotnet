@@ -45,7 +45,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Channel.V1](Google.Cloud.Channel.V1/index.html) | 1.1.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.1.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
-| [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
+| [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
 | [Google.Cloud.DataQnA.V1Alpha](Google.Cloud.DataQnA.V1Alpha/index.html) | 1.0.0-alpha01 | [Data QnA](https://cloud.google.com/bigquery/docs/dataqna) |
 | [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html) | 3.1.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
