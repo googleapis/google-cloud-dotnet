@@ -66,8 +66,8 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.EssentialContacts.V1](Google.Cloud.EssentialContacts.V1/index.html) | 1.0.0-beta01 | [Essential Contacts](https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest) |
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.1.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
-| [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.3.1 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
-| [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.2.0 | [Firestore low-level API access](https://firebase.google.com) |
+| [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
+| [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](Google.Cloud.Functions.V1/index.html) | 1.0.0 | [Cloud Functions](https://cloud.google.com/functions) |
 | [Google.Cloud.GSuiteAddOns.V1](Google.Cloud.GSuiteAddOns.V1/index.html) | 1.0.0-beta01 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](Google.Cloud.Gaming.V1/index.html) | 1.0.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
