@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.2.0, released 2021-05-05
+
+- [Commit 8bb2981](https://github.com/googleapis/google-cloud-dotnet/commit/8bb2981): Use CopySettingsForEmulator in DatastoreDbBuilder
+
+No API surface changes, but CopySettingsForEmulator ensures that any UserAgent or GrpcAdapter set in the client builder is also used in the emulator.
+
 # Version 3.1.0, released 2020-09-28
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
