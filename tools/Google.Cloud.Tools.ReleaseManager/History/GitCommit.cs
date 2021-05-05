@@ -66,10 +66,13 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 .ToList();
 
             // Autosynth includes helpful metadata about the original internal and googleapis commit.
-            // We don't need that in release notes though.
+            // We don't need that in release notes though. Likewise any "Committer" lines can be skipped.
             if (_libGit2Commit.Author.Email == AutosynthEmail)
             {
-                messageLines = messageLines.TakeWhile(line => !line.StartsWith("PiperOrigin-RevId")).ToList();
+                messageLines = messageLines
+                    .Where(line => !line.StartsWith("Committer: @"))
+                    .TakeWhile(line => !line.StartsWith("PiperOrigin-RevId"))
+                    .ToList();
             }
 
             // Allow the version history to be overridden by a line on its own of "Version history:"
