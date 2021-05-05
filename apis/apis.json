@@ -339,7 +339,7 @@
       "protoPath": "google/bigtable/v2",
       "productName": "Google Bigtable",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "2.1.1",
+      "version": "2.2.0",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
@@ -348,13 +348,13 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.Gcp": "3.2.0",
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.Gcp": "3.3.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.Bigtable.Common.V2": "2.0.0",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "3.2.0",
+        "Google.Api.Gax.Grpc.Testing": "3.3.0",
         "Google.Cloud.Bigtable.Admin.V2": "project"
       }
     },
