@@ -88,7 +88,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetAgent</summary>
-        public void GetAgentResourceNames()
+        public void GetAgentResourceNames1()
         {
             // Snippet: GetAgent(ProjectName, CallSettings)
             // Create client
@@ -101,7 +101,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for GetAgentAsync</summary>
-        public async Task GetAgentResourceNamesAsync()
+        public async Task GetAgentResourceNames1Async()
         {
             // Snippet: GetAgentAsync(ProjectName, CallSettings)
             // Additional: GetAgentAsync(ProjectName, CancellationToken)
@@ -109,6 +109,33 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentsClient agentsClient = await AgentsClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            Agent response = await agentsClient.GetAgentAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgent</summary>
+        public void GetAgentResourceNames2()
+        {
+            // Snippet: GetAgent(LocationName, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Agent response = agentsClient.GetAgent(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentAsync</summary>
+        public async Task GetAgentResourceNames2Async()
+        {
+            // Snippet: GetAgentAsync(LocationName, CallSettings)
+            // Additional: GetAgentAsync(LocationName, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Agent response = await agentsClient.GetAgentAsync(parent);
             // End snippet
@@ -237,7 +264,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgent</summary>
-        public void DeleteAgentResourceNames()
+        public void DeleteAgentResourceNames1()
         {
             // Snippet: DeleteAgent(ProjectName, CallSettings)
             // Create client
@@ -250,7 +277,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for DeleteAgentAsync</summary>
-        public async Task DeleteAgentResourceNamesAsync()
+        public async Task DeleteAgentResourceNames1Async()
         {
             // Snippet: DeleteAgentAsync(ProjectName, CallSettings)
             // Additional: DeleteAgentAsync(ProjectName, CancellationToken)
@@ -258,6 +285,33 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentsClient agentsClient = await AgentsClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            await agentsClient.DeleteAgentAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgent</summary>
+        public void DeleteAgentResourceNames2()
+        {
+            // Snippet: DeleteAgent(LocationName, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            agentsClient.DeleteAgent(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentAsync</summary>
+        public async Task DeleteAgentResourceNames2Async()
+        {
+            // Snippet: DeleteAgentAsync(LocationName, CallSettings)
+            // Additional: DeleteAgentAsync(LocationName, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             await agentsClient.DeleteAgentAsync(parent);
             // End snippet
@@ -450,7 +504,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgents</summary>
-        public void SearchAgentsResourceNames()
+        public void SearchAgentsResourceNames1()
         {
             // Snippet: SearchAgents(ProjectName, string, int?, CallSettings)
             // Create client
@@ -495,13 +549,103 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SearchAgentsAsync</summary>
-        public async Task SearchAgentsResourceNamesAsync()
+        public async Task SearchAgentsResourceNames1Async()
         {
             // Snippet: SearchAgentsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             AgentsClient agentsClient = await AgentsClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<SearchAgentsResponse, Agent> response = agentsClient.SearchAgentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Agent item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchAgentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Agent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Agent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Agent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAgents</summary>
+        public void SearchAgentsResourceNames2()
+        {
+            // Snippet: SearchAgents(LocationName, string, int?, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<SearchAgentsResponse, Agent> response = agentsClient.SearchAgents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Agent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchAgentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Agent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Agent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Agent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAgentsAsync</summary>
+        public async Task SearchAgentsResourceNames2Async()
+        {
+            // Snippet: SearchAgentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<SearchAgentsResponse, Agent> response = agentsClient.SearchAgentsAsync(parent);
 
@@ -664,7 +808,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgent</summary>
-        public void TrainAgentResourceNames()
+        public void TrainAgentResourceNames1()
         {
             // Snippet: TrainAgent(ProjectName, CallSettings)
             // Create client
@@ -693,7 +837,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for TrainAgentAsync</summary>
-        public async Task TrainAgentResourceNamesAsync()
+        public async Task TrainAgentResourceNames1Async()
         {
             // Snippet: TrainAgentAsync(ProjectName, CallSettings)
             // Additional: TrainAgentAsync(ProjectName, CancellationToken)
@@ -701,6 +845,65 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentsClient agentsClient = await AgentsClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            Operation<Empty, Struct> response = await agentsClient.TrainAgentAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = await agentsClient.PollOnceTrainAgentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainAgent</summary>
+        public void TrainAgentResourceNames2()
+        {
+            // Snippet: TrainAgent(LocationName, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<Empty, Struct> response = agentsClient.TrainAgent(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, Struct> retrievedResponse = agentsClient.PollOnceTrainAgent(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainAgentAsync</summary>
+        public async Task TrainAgentResourceNames2Async()
+        {
+            // Snippet: TrainAgentAsync(LocationName, CallSettings)
+            // Additional: TrainAgentAsync(LocationName, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<Empty, Struct> response = await agentsClient.TrainAgentAsync(parent);
 
@@ -849,7 +1052,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgent</summary>
-        public void ExportAgentResourceNames()
+        public void ExportAgentResourceNames1()
         {
             // Snippet: ExportAgent(ProjectName, CallSettings)
             // Create client
@@ -878,7 +1081,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ExportAgentAsync</summary>
-        public async Task ExportAgentResourceNamesAsync()
+        public async Task ExportAgentResourceNames1Async()
         {
             // Snippet: ExportAgentAsync(ProjectName, CallSettings)
             // Additional: ExportAgentAsync(ProjectName, CancellationToken)
@@ -886,6 +1089,65 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             AgentsClient agentsClient = await AgentsClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            Operation<ExportAgentResponse, Struct> response = await agentsClient.ExportAgentAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportAgentResponse, Struct> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportAgentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportAgentResponse, Struct> retrievedResponse = await agentsClient.PollOnceExportAgentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportAgentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportAgent</summary>
+        public void ExportAgentResourceNames2()
+        {
+            // Snippet: ExportAgent(LocationName, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<ExportAgentResponse, Struct> response = agentsClient.ExportAgent(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportAgentResponse, Struct> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportAgentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportAgentResponse, Struct> retrievedResponse = agentsClient.PollOnceExportAgent(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportAgentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportAgentAsync</summary>
+        public async Task ExportAgentResourceNames2Async()
+        {
+            // Snippet: ExportAgentAsync(LocationName, CallSettings)
+            // Additional: ExportAgentAsync(LocationName, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<ExportAgentResponse, Struct> response = await agentsClient.ExportAgentAsync(parent);
 

@@ -24,8 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
-  /// Service for managing
-  /// [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
+  /// Service for managing [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
   /// </summary>
   public static partial class AnswerRecords
   {

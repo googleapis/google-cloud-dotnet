@@ -33,9 +33,17 @@ namespace Google.Cloud.Dialogflow.V2
             /// A resource name with pattern <c>projects/{project}/agent/entityTypes/{entity_type}</c>.
             /// </summary>
             ProjectEntityType = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c>
+            /// .
+            /// </summary>
+            ProjectLocationEntityType = 2,
         }
 
         private static gax::PathTemplate s_projectEntityType = new gax::PathTemplate("projects/{project}/agent/entityTypes/{entity_type}");
+
+        private static gax::PathTemplate s_projectLocationEntityType = new gax::PathTemplate("projects/{project}/locations/{location}/agent/entityTypes/{entity_type}");
 
         /// <summary>Creates a <see cref="EntityTypeName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -55,6 +63,17 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A new instance of <see cref="EntityTypeName"/> constructed from the provided ids.</returns>
         public static EntityTypeName FromProjectEntityType(string projectId, string entityTypeId) =>
             new EntityTypeName(ResourceNameType.ProjectEntityType, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
+
+        /// <summary>
+        /// Creates a <see cref="EntityTypeName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="EntityTypeName"/> constructed from the provided ids.</returns>
+        public static EntityTypeName FromProjectLocationEntityType(string projectId, string locationId, string entityTypeId) =>
+            new EntityTypeName(ResourceNameType.ProjectLocationEntityType, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="EntityTypeName"/> with pattern
@@ -81,11 +100,28 @@ namespace Google.Cloud.Dialogflow.V2
         public static string FormatProjectEntityType(string projectId, string entityTypeId) =>
             s_projectEntityType.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EntityTypeName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entityTypeId">The <c>EntityType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EntityTypeName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c>.
+        /// </returns>
+        public static string FormatProjectLocationEntityType(string projectId, string locationId, string entityTypeId) =>
+            s_projectLocationEntityType.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="EntityTypeName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/entityTypes/{entity_type}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="entityTypeName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -100,6 +136,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/entityTypes/{entity_type}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -120,6 +159,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/entityTypes/{entity_type}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="entityTypeName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -138,6 +180,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/entityTypes/{entity_type}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/entityTypes/{entity_type}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -160,6 +205,11 @@ namespace Google.Cloud.Dialogflow.V2
                 result = FromProjectEntityType(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocationEntityType.TryParseName(entityTypeName, out resourceName))
+            {
+                result = FromProjectLocationEntityType(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(entityTypeName, out gax::UnparsedResourceName unparsedResourceName))
@@ -172,11 +222,12 @@ namespace Google.Cloud.Dialogflow.V2
             return false;
         }
 
-        private EntityTypeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string projectId = null)
+        private EntityTypeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             EntityTypeId = entityTypeId;
+            LocationId = locationId;
             ProjectId = projectId;
         }
 
@@ -200,12 +251,18 @@ namespace Google.Cloud.Dialogflow.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>EntityType</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>EntityType</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string EntityTypeId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -220,6 +277,7 @@ namespace Google.Cloud.Dialogflow.V2
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectEntityType: return s_projectEntityType.Expand(ProjectId, EntityTypeId);
+                case ResourceNameType.ProjectLocationEntityType: return s_projectLocationEntityType.Expand(ProjectId, LocationId, EntityTypeId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

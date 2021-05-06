@@ -33,9 +33,17 @@ namespace Google.Cloud.Dialogflow.V2
             /// A resource name with pattern <c>projects/{project}/agent/environments/{environment}</c>.
             /// </summary>
             ProjectEnvironment = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/agent/environments/{environment}</c>
+            /// .
+            /// </summary>
+            ProjectLocationEnvironment = 2,
         }
 
         private static gax::PathTemplate s_projectEnvironment = new gax::PathTemplate("projects/{project}/agent/environments/{environment}");
+
+        private static gax::PathTemplate s_projectLocationEnvironment = new gax::PathTemplate("projects/{project}/locations/{location}/agent/environments/{environment}");
 
         /// <summary>Creates a <see cref="EnvironmentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -55,6 +63,17 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A new instance of <see cref="EnvironmentName"/> constructed from the provided ids.</returns>
         public static EnvironmentName FromProjectEnvironment(string projectId, string environmentId) =>
             new EnvironmentName(ResourceNameType.ProjectEnvironment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), environmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)));
+
+        /// <summary>
+        /// Creates a <see cref="EnvironmentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/agent/environments/{environment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="EnvironmentName"/> constructed from the provided ids.</returns>
+        public static EnvironmentName FromProjectLocationEnvironment(string projectId, string locationId, string environmentId) =>
+            new EnvironmentName(ResourceNameType.ProjectLocationEnvironment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), environmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="EnvironmentName"/> with pattern
@@ -82,11 +101,28 @@ namespace Google.Cloud.Dialogflow.V2
         public static string FormatProjectEnvironment(string projectId, string environmentId) =>
             s_projectEnvironment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EnvironmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/environments/{environment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="environmentId">The <c>Environment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EnvironmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/environments/{environment}</c>.
+        /// </returns>
+        public static string FormatProjectLocationEnvironment(string projectId, string locationId, string environmentId) =>
+            s_projectLocationEnvironment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(environmentId, nameof(environmentId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="EnvironmentName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/environments/{environment}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/environments/{environment}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="environmentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -101,6 +137,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/environments/{environment}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/environments/{environment}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -121,6 +160,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/environments/{environment}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/environments/{environment}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="environmentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -139,6 +181,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/environments/{environment}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/environments/{environment}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -161,6 +206,11 @@ namespace Google.Cloud.Dialogflow.V2
                 result = FromProjectEnvironment(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocationEnvironment.TryParseName(environmentName, out resourceName))
+            {
+                result = FromProjectLocationEnvironment(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(environmentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -173,11 +223,12 @@ namespace Google.Cloud.Dialogflow.V2
             return false;
         }
 
-        private EnvironmentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string environmentId = null, string projectId = null)
+        private EnvironmentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string environmentId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             EnvironmentId = environmentId;
+            LocationId = locationId;
             ProjectId = projectId;
         }
 
@@ -201,12 +252,18 @@ namespace Google.Cloud.Dialogflow.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Environment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Environment</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string EnvironmentId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -221,6 +278,7 @@ namespace Google.Cloud.Dialogflow.V2
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectEnvironment: return s_projectEnvironment.Expand(ProjectId, EnvironmentId);
+                case ResourceNameType.ProjectLocationEnvironment: return s_projectLocationEnvironment.Expand(ProjectId, LocationId, EnvironmentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -259,6 +317,64 @@ namespace Google.Cloud.Dialogflow.V2
         public AgentName ParentAsAgentName
         {
             get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEnvironmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EnvironmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EnvironmentName EnvironmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EnvironmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateEnvironmentRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateEnvironmentRequest
+    {
+        /// <summary>
+        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Environment"/> resource name property.
+        /// </summary>
+        public EnvironmentName EnvironmentAsEnvironmentName
+        {
+            get => string.IsNullOrEmpty(Environment) ? null : EnvironmentName.Parse(Environment, allowUnparsed: true);
+            set => Environment = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEnvironmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EnvironmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EnvironmentName EnvironmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EnvironmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEnvironmentHistoryRequest
+    {
+        /// <summary>
+        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EnvironmentName ParentAsEnvironmentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EnvironmentName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
