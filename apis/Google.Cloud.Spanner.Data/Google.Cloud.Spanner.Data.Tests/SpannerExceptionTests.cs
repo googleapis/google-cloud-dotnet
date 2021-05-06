@@ -19,6 +19,26 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerExceptionTests
     {
+        [InlineData(ErrorCode.InvalidArgument, "Invalid argument", false)]
+        [InlineData(ErrorCode.Aborted, "Transaction aborted", true)]
+        [InlineData(ErrorCode.Unknown, "An unknown error occurred", false)]
+        [InlineData(ErrorCode.Unknown, "Transaction outcome unknown", true)]
+        [Theory]
+        public void IsRetryableWithErrorCodeAndMessage(ErrorCode errorCode, string message, bool isRetryable)
+        {
+            Assert.Equal(isRetryable, new SpannerException(errorCode, message).IsRetryable);
+        }
+
+        [InlineData(StatusCode.InvalidArgument, "Invalid argument", false)]
+        [InlineData(StatusCode.Aborted, "Transaction aborted", true)]
+        [InlineData(StatusCode.Unknown, "An unknown error occurred", false)]
+        [InlineData(StatusCode.Unknown, "Transaction outcome unknown", true)]
+        [Theory]
+        public void IsRetryableWithInnerException(StatusCode statusCode, string message, bool isRetryable)
+        {
+            Assert.Equal(isRetryable, new SpannerException(new RpcException(new Status(statusCode, message))).IsRetryable);
+        }
+
         [InlineData(ErrorCode.InvalidArgument, StatusCode.InvalidArgument, "Invalid argument", false)]
         [InlineData(ErrorCode.Aborted, StatusCode.Aborted, "Transaction aborted", true)]
         [InlineData(ErrorCode.Unknown, StatusCode.Unknown, "An unknown error occurred", false)]
@@ -26,8 +46,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Theory]
         public void IsRetryableWithErrorCodeAndInnerException(ErrorCode errorCode, StatusCode statusCode, string message, bool isRetryable)
         {
-            Assert.Equal(isRetryable, new SpannerException(errorCode, message).IsRetryable);
-            Assert.Equal(isRetryable, new SpannerException(new RpcException(new Status(statusCode, message))).IsRetryable);
             Assert.Equal(isRetryable, new SpannerException(errorCode, new RpcException(new Status(statusCode, message))).IsRetryable);
         }
     }
