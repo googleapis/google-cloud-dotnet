@@ -4,6 +4,11 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+# Version 2.3.0, released 2021-05-05
+
+- [Commit 9f5f0aa](https://github.com/googleapis/google-cloud-dotnet/commit/9f5f0aa): Regenerate server-streaming calls with Google request params
+- [Commit 1add4dc](https://github.com/googleapis/google-cloud-dotnet/commit/1add4dc): fix: retry RESOURCE_EXHAUSTED errors docs: various documentation improvements
+
 # Version 2.2.0, released 2020-11-18
 
 - [Commit 9f32781](https://github.com/googleapis/google-cloud-dotnet/commit/9f32781): fix: retry PartitionQuery for INTERNAL and DEADLINE_EXCEEDED

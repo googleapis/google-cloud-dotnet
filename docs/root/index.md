@@ -33,11 +33,11 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.BigQuery.Connection.V1](Google.Cloud.BigQuery.Connection.V1/index.html) | 1.1.0 | [BigQuery Connection](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html) | 3.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.Reservation.V1](Google.Cloud.BigQuery.Reservation.V1/index.html) | 1.1.0 | [BigQuery Reservation](https://cloud.google.com/bigquery/docs/reference/reservations) |
-| [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html) | 2.1.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
+| [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html) | 2.2.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
 | [Google.Cloud.BigQuery.Storage.V1](Google.Cloud.BigQuery.Storage.V1/index.html) | 2.2.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
-| [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html) | 2.3.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
+| [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html) | 2.4.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](Google.Cloud.Bigtable.Common.V2/index.html) | 2.0.0 | Common code used by Bigtable V2 APIs |
-| [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html) | 2.1.1 | [Google Bigtable](https://cloud.google.com/bigtable/) |
+| [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html) | 2.2.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Billing.Budgets.V1](Google.Cloud.Billing.Budgets.V1/index.html) | 1.1.0 | [Cloud Billing Budget (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta03 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
@@ -45,12 +45,12 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Channel.V1](Google.Cloud.Channel.V1/index.html) | 1.1.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.1.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
-| [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
+| [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
 | [Google.Cloud.DataQnA.V1Alpha](Google.Cloud.DataQnA.V1Alpha/index.html) | 1.0.0-alpha01 | [Data QnA](https://cloud.google.com/bigquery/docs/dataqna) |
 | [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html) | 3.1.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
 | [Google.Cloud.Datastore.Admin.V1](Google.Cloud.Datastore.Admin.V1/index.html) | 1.1.0 | Cloud Datastore |
-| [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.1.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
+| [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html) | 2.1.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](Google.Cloud.DevTools.Common/index.html) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html) | 2.1.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
@@ -64,10 +64,11 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.DocumentAI.V1Beta2](Google.Cloud.DocumentAI.V1Beta2/index.html) | 1.0.0-beta02 | [Cloud Document AI (V1Beta2 API)](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.Domains.V1Beta1](Google.Cloud.Domains.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Domains](https://cloud.google.com/domains/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
+| [Google.Cloud.EssentialContacts.V1](Google.Cloud.EssentialContacts.V1/index.html) | 1.0.0-beta01 | [Essential Contacts](https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest) |
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.1.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
-| [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.3.1 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
-| [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.2.0 | [Firestore low-level API access](https://firebase.google.com) |
-| [Google.Cloud.Functions.V1](Google.Cloud.Functions.V1/index.html) | 1.0.0 | [Cloud Functions](https://cloud.google.com/functions) |
+| [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
+| [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
+| [Google.Cloud.Functions.V1](Google.Cloud.Functions.V1/index.html) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
 | [Google.Cloud.GSuiteAddOns.V1](Google.Cloud.GSuiteAddOns.V1/index.html) | 1.0.0-beta01 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](Google.Cloud.Gaming.V1/index.html) | 1.0.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta06 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
@@ -80,12 +81,12 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.Log4Net](Google.Cloud.Logging.Log4Net/index.html) | 3.2.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](Google.Cloud.Logging.NLog/index.html) | 3.3.0 | NLog target for the Google Cloud Logging API |
 | [Google.Cloud.Logging.Type](Google.Cloud.Logging.Type/index.html) | 3.2.0 | Version-agnostic types for the Google Cloud Logging API |
-| [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.2.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
+| [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.3.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html) | 2.2.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.MediaTranslation.V1Beta1](Google.Cloud.MediaTranslation.V1Beta1/index.html) | 1.0.0-beta02 | [Media Translation](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1](Google.Cloud.Memcache.V1/index.html) | 1.0.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta03 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.Metastore.V1](Google.Cloud.Metastore.V1/index.html) | 1.0.0-beta01 | [Dataproc Metastore (V1 API)](https://cloud.google.com/dataproc-metastore/docs) |
+| [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta04 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
+| [Google.Cloud.Metastore.V1](Google.Cloud.Metastore.V1/index.html) | 1.0.0-beta02 | [Dataproc Metastore (V1 API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Metastore.V1Alpha](Google.Cloud.Metastore.V1Alpha/index.html) | 1.0.0-alpha02 | [Dataproc Metastore (V1Alpha API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Metastore.V1Beta](Google.Cloud.Metastore.V1Beta/index.html) | 1.0.0-beta01 | [Dataproc Metastore (V1Beta API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.3.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
@@ -103,13 +104,13 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html) | 2.4.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
 | [Google.Cloud.RecaptchaEnterprise.V1](Google.Cloud.RecaptchaEnterprise.V1/index.html) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](Google.Cloud.RecaptchaEnterprise.V1Beta1/index.html) | 1.0.0-beta03 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
-| [Google.Cloud.RecommendationEngine.V1Beta1](Google.Cloud.RecommendationEngine.V1Beta1/index.html) | 1.0.0-beta01 | [Recommendations AI](https://cloud.google.com/recommendations) |
+| [Google.Cloud.RecommendationEngine.V1Beta1](Google.Cloud.RecommendationEngine.V1Beta1/index.html) | 1.0.0-beta02 | [Recommendations AI](https://cloud.google.com/recommendations) |
 | [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html) | 2.5.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html) | 2.1.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Retail.V2](Google.Cloud.Retail.V2/index.html) | 1.1.0 | [Retail](https://cloud.google.com/retail/docs) |
 | [Google.Cloud.Scheduler.V1](Google.Cloud.Scheduler.V1/index.html) | 2.1.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
-| [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.3.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
+| [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.4.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta03 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.Security.PrivateCA.V1Beta1](Google.Cloud.Security.PrivateCA.V1Beta1/index.html) | 1.0.0-beta01 | [Certificate Authority (V1Beta1 API)](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta02 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |

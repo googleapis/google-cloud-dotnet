@@ -269,34 +269,36 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "CWRuc19uYW1lcxgBIAMoCRIMCgR1cmlzGAIgAygJEhcKD2VtYWlsX2FkZHJl",
             "c3NlcxgDIAMoCRIUCgxpcF9hZGRyZXNzZXMYBCADKAkSRgoLY3VzdG9tX3Nh",
             "bnMYBSADKAsyMS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYx",
-            "Llg1MDlFeHRlbnNpb24iqgEKHkNlcnRpZmljYXRlSWRlbnRpdHlDb25zdHJh",
+            "Llg1MDlFeHRlbnNpb24i+gEKHkNlcnRpZmljYXRlSWRlbnRpdHlDb25zdHJh",
             "aW50cxIuCg5jZWxfZXhwcmVzc2lvbhgBIAEoCzIRLmdvb2dsZS50eXBlLkV4",
-            "cHJCA+BBARImChlhbGxvd19zdWJqZWN0X3Bhc3N0aHJvdWdoGAIgASgIQgPg",
-            "QQESMAojYWxsb3dfc3ViamVjdF9hbHRfbmFtZXNfcGFzc3Rocm91Z2gYAyAB",
-            "KAhCA+BBASKeAwofQ2VydGlmaWNhdGVFeHRlbnNpb25Db25zdHJhaW50cxJ8",
-            "ChBrbm93bl9leHRlbnNpb25zGAEgAygOMl0uZ29vZ2xlLmNsb3VkLnNlY3Vy",
-            "aXR5LnByaXZhdGVjYS52MS5DZXJ0aWZpY2F0ZUV4dGVuc2lvbkNvbnN0cmFp",
-            "bnRzLktub3duQ2VydGlmaWNhdGVFeHRlbnNpb25CA+BBARJQChVhZGRpdGlv",
-            "bmFsX2V4dGVuc2lvbnMYAiADKAsyLC5nb29nbGUuY2xvdWQuc2VjdXJpdHku",
-            "cHJpdmF0ZWNhLnYxLk9iamVjdElkQgPgQQEiqgEKGUtub3duQ2VydGlmaWNh",
-            "dGVFeHRlbnNpb24SKwonS05PV05fQ0VSVElGSUNBVEVfRVhURU5TSU9OX1VO",
-            "U1BFQ0lGSUVEEAASEgoOQkFTRV9LRVlfVVNBR0UQARIWChJFWFRFTkRFRF9L",
-            "RVlfVVNBR0UQAhIOCgpDQV9PUFRJT05TEAMSDgoKUE9MSUNZX0lEUxAEEhQK",
-            "EEFJQV9PQ1NQX1NFUlZFUlMQBSqHAgoQUmV2b2NhdGlvblJlYXNvbhIhCh1S",
-            "RVZPQ0FUSU9OX1JFQVNPTl9VTlNQRUNJRklFRBAAEhIKDktFWV9DT01QUk9N",
-            "SVNFEAESJAogQ0VSVElGSUNBVEVfQVVUSE9SSVRZX0NPTVBST01JU0UQAhIX",
-            "ChNBRkZJTElBVElPTl9DSEFOR0VEEAMSDgoKU1VQRVJTRURFRBAEEhoKFkNF",
-            "U1NBVElPTl9PRl9PUEVSQVRJT04QBRIUChBDRVJUSUZJQ0FURV9IT0xEEAYS",
-            "FwoTUFJJVklMRUdFX1dJVEhEUkFXThAHEiIKHkFUVFJJQlVURV9BVVRIT1JJ",
-            "VFlfQ09NUFJPTUlTRRAIKl0KElN1YmplY3RSZXF1ZXN0TW9kZRIkCiBTVUJK",
-            "RUNUX1JFUVVFU1RfTU9ERV9VTlNQRUNJRklFRBAAEgsKB0RFRkFVTFQQARIU",
-            "ChBSRUZMRUNURURfU1BJRkZFEAJChgIKJmNvbS5nb29nbGUuY2xvdWQuc2Vj",
-            "dXJpdHkucHJpdmF0ZWNhLnYxQhdQcml2YXRlQ2FSZXNvdXJjZXNQcm90b1AB",
-            "Wktnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3NlY3VyaXR5L3ByaXZhdGVjYS92MTtwcml2YXRlY2H4AQGqAiJHb29nbGUu",
-            "Q2xvdWQuU2VjdXJpdHkuUHJpdmF0ZUNBLlYxygIiR29vZ2xlXENsb3VkXFNl",
-            "Y3VyaXR5XFByaXZhdGVDQVxWMeoCJkdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5",
-            "OjpQcml2YXRlQ0E6OlYxYgZwcm90bzM="));
+            "cHJCA+BBARIrChlhbGxvd19zdWJqZWN0X3Bhc3N0aHJvdWdoGAIgASgIQgPg",
+            "QQJIAIgBARI1CiNhbGxvd19zdWJqZWN0X2FsdF9uYW1lc19wYXNzdGhyb3Vn",
+            "aBgDIAEoCEID4EECSAGIAQFCHAoaX2FsbG93X3N1YmplY3RfcGFzc3Rocm91",
+            "Z2hCJgokX2FsbG93X3N1YmplY3RfYWx0X25hbWVzX3Bhc3N0aHJvdWdoIp4D",
+            "Ch9DZXJ0aWZpY2F0ZUV4dGVuc2lvbkNvbnN0cmFpbnRzEnwKEGtub3duX2V4",
+            "dGVuc2lvbnMYASADKA4yXS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0",
+            "ZWNhLnYxLkNlcnRpZmljYXRlRXh0ZW5zaW9uQ29uc3RyYWludHMuS25vd25D",
+            "ZXJ0aWZpY2F0ZUV4dGVuc2lvbkID4EEBElAKFWFkZGl0aW9uYWxfZXh0ZW5z",
+            "aW9ucxgCIAMoCzIsLmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2Eu",
+            "djEuT2JqZWN0SWRCA+BBASKqAQoZS25vd25DZXJ0aWZpY2F0ZUV4dGVuc2lv",
+            "bhIrCidLTk9XTl9DRVJUSUZJQ0FURV9FWFRFTlNJT05fVU5TUEVDSUZJRUQQ",
+            "ABISCg5CQVNFX0tFWV9VU0FHRRABEhYKEkVYVEVOREVEX0tFWV9VU0FHRRAC",
+            "Eg4KCkNBX09QVElPTlMQAxIOCgpQT0xJQ1lfSURTEAQSFAoQQUlBX09DU1Bf",
+            "U0VSVkVSUxAFKocCChBSZXZvY2F0aW9uUmVhc29uEiEKHVJFVk9DQVRJT05f",
+            "UkVBU09OX1VOU1BFQ0lGSUVEEAASEgoOS0VZX0NPTVBST01JU0UQARIkCiBD",
+            "RVJUSUZJQ0FURV9BVVRIT1JJVFlfQ09NUFJPTUlTRRACEhcKE0FGRklMSUFU",
+            "SU9OX0NIQU5HRUQQAxIOCgpTVVBFUlNFREVEEAQSGgoWQ0VTU0FUSU9OX09G",
+            "X09QRVJBVElPThAFEhQKEENFUlRJRklDQVRFX0hPTEQQBhIXChNQUklWSUxF",
+            "R0VfV0lUSERSQVdOEAcSIgoeQVRUUklCVVRFX0FVVEhPUklUWV9DT01QUk9N",
+            "SVNFEAgqXQoSU3ViamVjdFJlcXVlc3RNb2RlEiQKIFNVQkpFQ1RfUkVRVUVT",
+            "VF9NT0RFX1VOU1BFQ0lGSUVEEAASCwoHREVGQVVMVBABEhQKEFJFRkxFQ1RF",
+            "RF9TUElGRkUQAkKGAgomY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2",
+            "YXRlY2EudjFCF1ByaXZhdGVDYVJlc291cmNlc1Byb3RvUAFaS2dvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHkv",
+            "cHJpdmF0ZWNhL3YxO3ByaXZhdGVjYfgBAaoCIkdvb2dsZS5DbG91ZC5TZWN1",
+            "cml0eS5Qcml2YXRlQ0EuVjHKAiJHb29nbGVcQ2xvdWRcU2VjdXJpdHlcUHJp",
+            "dmF0ZUNBXFYx6gImR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHk6OlByaXZhdGVD",
+            "QTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Security.PrivateCA.V1.RevocationReason), typeof(global::Google.Cloud.Security.PrivateCA.V1.SubjectRequestMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -326,7 +328,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.KeyUsage.Types.ExtendedKeyUsageOptions), global::Google.Cloud.Security.PrivateCA.V1.KeyUsage.Types.ExtendedKeyUsageOptions.Parser, new[]{ "ServerAuth", "ClientAuth", "CodeSigning", "EmailProtection", "TimeStamping", "OcspSigning" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.Subject), global::Google.Cloud.Security.PrivateCA.V1.Subject.Parser, new[]{ "CommonName", "CountryCode", "Organization", "OrganizationalUnit", "Locality", "Province", "StreetAddress", "PostalCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.SubjectAltNames), global::Google.Cloud.Security.PrivateCA.V1.SubjectAltNames.Parser, new[]{ "DnsNames", "Uris", "EmailAddresses", "IpAddresses", "CustomSans" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints), global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints.Parser, new[]{ "CelExpression", "AllowSubjectPassthrough", "AllowSubjectAltNamesPassthrough" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints), global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints.Parser, new[]{ "CelExpression", "AllowSubjectPassthrough", "AllowSubjectAltNamesPassthrough" }, new[]{ "AllowSubjectPassthrough", "AllowSubjectAltNamesPassthrough" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints), global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints.Parser, new[]{ "KnownExtensions", "AdditionalExtensions" }, null, new[]{ typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints.Types.KnownCertificateExtension) }, null, null)
           }));
     }
@@ -11581,6 +11583,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   {
     private static readonly pb::MessageParser<CertificateIdentityConstraints> _parser = new pb::MessageParser<CertificateIdentityConstraints>(() => new CertificateIdentityConstraints());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<CertificateIdentityConstraints> Parser { get { return _parser; } }
 
@@ -11603,6 +11606,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CertificateIdentityConstraints(CertificateIdentityConstraints other) : this() {
+      _hasBits0 = other._hasBits0;
       celExpression_ = other.celExpression_ != null ? other.celExpression_.Clone() : null;
       allowSubjectPassthrough_ = other.allowSubjectPassthrough_;
       allowSubjectAltNamesPassthrough_ = other.allowSubjectAltNamesPassthrough_;
@@ -11635,32 +11639,55 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int AllowSubjectPassthroughFieldNumber = 2;
     private bool allowSubjectPassthrough_;
     /// <summary>
-    /// Optional. If this is set, the [Subject][google.cloud.security.privateca.v1.Subject] field may be copied from a certificate
+    /// Required. If this is true, the [Subject][google.cloud.security.privateca.v1.Subject] field may be copied from a certificate
     /// request into the signed certificate. Otherwise, the requested [Subject][google.cloud.security.privateca.v1.Subject]
-    /// will be discarded.
+    /// will be discarded. The bool is optional to indicate an unset field, which suggests a forgotten value that needs to be set by the caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowSubjectPassthrough {
-      get { return allowSubjectPassthrough_; }
+      get { if ((_hasBits0 & 1) != 0) { return allowSubjectPassthrough_; } else { return false; } }
       set {
+        _hasBits0 |= 1;
         allowSubjectPassthrough_ = value;
       }
+    }
+    /// <summary>Gets whether the "allow_subject_passthrough" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool HasAllowSubjectPassthrough {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "allow_subject_passthrough" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAllowSubjectPassthrough() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "allow_subject_alt_names_passthrough" field.</summary>
     public const int AllowSubjectAltNamesPassthroughFieldNumber = 3;
     private bool allowSubjectAltNamesPassthrough_;
     /// <summary>
-    /// Optional. If this is set, the [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] extension may be copied from a
+    /// Required. If this is true, the [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] extension may be copied from a
     /// certificate request into the signed certificate. Otherwise, the requested
     /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will be discarded.
+    /// The bool is optional to indicate an unset field, which suggests a forgotten value that needs to be set by the caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowSubjectAltNamesPassthrough {
-      get { return allowSubjectAltNamesPassthrough_; }
+      get { if ((_hasBits0 & 2) != 0) { return allowSubjectAltNamesPassthrough_; } else { return false; } }
       set {
+        _hasBits0 |= 2;
         allowSubjectAltNamesPassthrough_ = value;
       }
+    }
+    /// <summary>Gets whether the "allow_subject_alt_names_passthrough" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool HasAllowSubjectAltNamesPassthrough {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "allow_subject_alt_names_passthrough" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAllowSubjectAltNamesPassthrough() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11686,8 +11713,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (celExpression_ != null) hash ^= CelExpression.GetHashCode();
-      if (AllowSubjectPassthrough != false) hash ^= AllowSubjectPassthrough.GetHashCode();
-      if (AllowSubjectAltNamesPassthrough != false) hash ^= AllowSubjectAltNamesPassthrough.GetHashCode();
+      if (HasAllowSubjectPassthrough) hash ^= AllowSubjectPassthrough.GetHashCode();
+      if (HasAllowSubjectAltNamesPassthrough) hash ^= AllowSubjectAltNamesPassthrough.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11708,11 +11735,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CelExpression);
       }
-      if (AllowSubjectPassthrough != false) {
+      if (HasAllowSubjectPassthrough) {
         output.WriteRawTag(16);
         output.WriteBool(AllowSubjectPassthrough);
       }
-      if (AllowSubjectAltNamesPassthrough != false) {
+      if (HasAllowSubjectAltNamesPassthrough) {
         output.WriteRawTag(24);
         output.WriteBool(AllowSubjectAltNamesPassthrough);
       }
@@ -11729,11 +11756,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CelExpression);
       }
-      if (AllowSubjectPassthrough != false) {
+      if (HasAllowSubjectPassthrough) {
         output.WriteRawTag(16);
         output.WriteBool(AllowSubjectPassthrough);
       }
-      if (AllowSubjectAltNamesPassthrough != false) {
+      if (HasAllowSubjectAltNamesPassthrough) {
         output.WriteRawTag(24);
         output.WriteBool(AllowSubjectAltNamesPassthrough);
       }
@@ -11749,10 +11776,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       if (celExpression_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CelExpression);
       }
-      if (AllowSubjectPassthrough != false) {
+      if (HasAllowSubjectPassthrough) {
         size += 1 + 1;
       }
-      if (AllowSubjectAltNamesPassthrough != false) {
+      if (HasAllowSubjectAltNamesPassthrough) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -11772,10 +11799,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         }
         CelExpression.MergeFrom(other.CelExpression);
       }
-      if (other.AllowSubjectPassthrough != false) {
+      if (other.HasAllowSubjectPassthrough) {
         AllowSubjectPassthrough = other.AllowSubjectPassthrough;
       }
-      if (other.AllowSubjectAltNamesPassthrough != false) {
+      if (other.HasAllowSubjectAltNamesPassthrough) {
         AllowSubjectAltNamesPassthrough = other.AllowSubjectAltNamesPassthrough;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

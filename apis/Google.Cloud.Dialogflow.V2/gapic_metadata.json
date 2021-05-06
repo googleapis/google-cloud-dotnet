@@ -331,10 +331,61 @@
         "grpc": {
           "libraryClient": "EnvironmentsClient",
           "rpcs": {
+            "CreateEnvironment": {
+              "methods": [
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
+              ]
+            },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
+              ]
+            },
+            "GetEnvironmentHistory": {
+              "methods": [
+                "GetEnvironmentHistory",
+                "GetEnvironmentHistoryAsync"
+              ]
+            },
             "ListEnvironments": {
               "methods": [
                 "ListEnvironments",
                 "ListEnvironmentsAsync"
+              ]
+            },
+            "UpdateEnvironment": {
+              "methods": [
+                "UpdateEnvironment",
+                "UpdateEnvironmentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Fulfillments": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FulfillmentsClient",
+          "rpcs": {
+            "GetFulfillment": {
+              "methods": [
+                "GetFulfillment",
+                "GetFulfillmentAsync"
+              ]
+            },
+            "UpdateFulfillment": {
+              "methods": [
+                "UpdateFulfillment",
+                "UpdateFulfillmentAsync"
               ]
             }
           }
@@ -536,6 +587,45 @@
               "methods": [
                 "StreamingDetectIntent",
                 "StreamingDetectIntentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Versions": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VersionsClient",
+          "rpcs": {
+            "CreateVersion": {
+              "methods": [
+                "CreateVersion",
+                "CreateVersionAsync"
+              ]
+            },
+            "DeleteVersion": {
+              "methods": [
+                "DeleteVersion",
+                "DeleteVersionAsync"
+              ]
+            },
+            "GetVersion": {
+              "methods": [
+                "GetVersion",
+                "GetVersionAsync"
+              ]
+            },
+            "ListVersions": {
+              "methods": [
+                "ListVersions",
+                "ListVersionsAsync"
+              ]
+            },
+            "UpdateVersion": {
+              "methods": [
+                "UpdateVersion",
+                "UpdateVersionAsync"
               ]
             }
           }

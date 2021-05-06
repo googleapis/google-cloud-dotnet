@@ -31,9 +31,16 @@ namespace Google.Cloud.Dialogflow.V2
 
             /// <summary>A resource name with pattern <c>projects/{project}/agent/intents/{intent}</c>.</summary>
             ProjectIntent = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/agent/intents/{intent}</c>.
+            /// </summary>
+            ProjectLocationIntent = 2,
         }
 
         private static gax::PathTemplate s_projectIntent = new gax::PathTemplate("projects/{project}/agent/intents/{intent}");
+
+        private static gax::PathTemplate s_projectLocationIntent = new gax::PathTemplate("projects/{project}/locations/{location}/agent/intents/{intent}");
 
         /// <summary>Creates a <see cref="IntentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -51,6 +58,17 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A new instance of <see cref="IntentName"/> constructed from the provided ids.</returns>
         public static IntentName FromProjectIntent(string projectId, string intentId) =>
             new IntentName(ResourceNameType.ProjectIntent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), intentId: gax::GaxPreconditions.CheckNotNullOrEmpty(intentId, nameof(intentId)));
+
+        /// <summary>
+        /// Creates a <see cref="IntentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/agent/intents/{intent}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intentId">The <c>Intent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="IntentName"/> constructed from the provided ids.</returns>
+        public static IntentName FromProjectLocationIntent(string projectId, string locationId, string intentId) =>
+            new IntentName(ResourceNameType.ProjectLocationIntent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), intentId: gax::GaxPreconditions.CheckNotNullOrEmpty(intentId, nameof(intentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="IntentName"/> with pattern
@@ -77,11 +95,28 @@ namespace Google.Cloud.Dialogflow.V2
         public static string FormatProjectIntent(string projectId, string intentId) =>
             s_projectIntent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(intentId, nameof(intentId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="IntentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/intents/{intent}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intentId">The <c>Intent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="IntentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agent/intents/{intent}</c>.
+        /// </returns>
+        public static string FormatProjectLocationIntent(string projectId, string locationId, string intentId) =>
+            s_projectLocationIntent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(intentId, nameof(intentId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="IntentName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/intents/{intent}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/intents/{intent}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="intentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -96,6 +131,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/intents/{intent}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/intents/{intent}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -116,6 +154,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/intents/{intent}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/intents/{intent}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="intentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -133,6 +174,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/agent/intents/{intent}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/agent/intents/{intent}</c></description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -155,6 +199,11 @@ namespace Google.Cloud.Dialogflow.V2
                 result = FromProjectIntent(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocationIntent.TryParseName(intentName, out resourceName))
+            {
+                result = FromProjectLocationIntent(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(intentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -167,11 +216,12 @@ namespace Google.Cloud.Dialogflow.V2
             return false;
         }
 
-        private IntentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string intentId = null, string projectId = null)
+        private IntentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string intentId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             IntentId = intentId;
+            LocationId = locationId;
             ProjectId = projectId;
         }
 
@@ -195,12 +245,17 @@ namespace Google.Cloud.Dialogflow.V2
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Intent</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Intent</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string IntentId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -215,6 +270,7 @@ namespace Google.Cloud.Dialogflow.V2
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectIntent: return s_projectIntent.Expand(ProjectId, IntentId);
+                case ResourceNameType.ProjectLocationIntent: return s_projectLocationIntent.Expand(ProjectId, LocationId, IntentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

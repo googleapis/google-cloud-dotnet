@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-05-05
+
+- [Commit 6f8b4e0](https://github.com/googleapis/google-cloud-dotnet/commit/6f8b4e0): Use CopySettingsForEmulator in FirestoreDbBuilder
+
 # Version 2.3.1, released 2021-04-06
 
 - [Commit 62182ca](https://github.com/googleapis/google-cloud-dotnet/commit/62182ca): fix: Propagate properties in FirestoreDbBuilder when using the emulator. Fixes [issue 6313](https://github.com/googleapis/google-cloud-dotnet/issues/6313)

@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.4.0, released 2021-05-05
+
+- [Commit 9b48308](https://github.com/googleapis/google-cloud-dotnet/commit/9b48308): fix(retry): restore grpc_service_config for CreateBackup and {Restore,Snapshot}Table
+- [Commit 632d8f4](https://github.com/googleapis/google-cloud-dotnet/commit/632d8f4): feat: Publish new fields to support Customer Managed Encryption Keys (CMEK) on the existing Cloud Bigtable service methods.
+- [Commit 89c1826](https://github.com/googleapis/google-cloud-dotnet/commit/89c1826): fix: add retryableStatusCodes back to bigtable
+- [Commit 7171c87](https://github.com/googleapis/google-cloud-dotnet/commit/7171c87): feat: migrate bigtable retry/timeout settings to gRPC's service configs
+
 # Version 2.3.0, released 2020-11-19
 
 - [Commit 532b6ae](https://github.com/googleapis/google-cloud-dotnet/commit/532b6ae):

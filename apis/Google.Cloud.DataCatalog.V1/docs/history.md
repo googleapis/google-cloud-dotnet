@@ -1,5 +1,15 @@
 # Version history
 
+# Version 1.2.0, released 2021-05-05
+
+- [Commit 29c9961](https://github.com/googleapis/google-cloud-dotnet/commit/29c9961): docs: reformat comments in PolicyTagManager definition
+- [Commit afadcef](https://github.com/googleapis/google-cloud-dotnet/commit/afadcef):
+  - feat: Policy Tag Manager v1 API service
+  - feat: new RenameTagTemplateFieldEnumValue API
+  - feat: adding fully_qualified_name in lookup and search
+  - feat: added DATAPROC_METASTORE integrated system along with new entry types: DATABASE and SERVICE
+  - docs: Documentation improvements
+
 # Version 1.1.0, released 2020-10-14
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors

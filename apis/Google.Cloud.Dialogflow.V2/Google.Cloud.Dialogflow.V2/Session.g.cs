@@ -130,15 +130,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVz",
             "cG9uc2UiACgBMAEaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlo",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0LE",
-            "AgoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgxTZXNzaW9uUHJv",
+            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0Lw",
+            "AwoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgxTZXNzaW9uUHJv",
             "dG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
             "bG91ZC9kaWFsb2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2ds",
-            "ZS5DbG91ZC5EaWFsb2dmbG93LlYy6kGlAQohZGlhbG9nZmxvdy5nb29nbGVh",
+            "ZS5DbG91ZC5EaWFsb2dmbG93LlYy6kHRAgohZGlhbG9nZmxvdy5nb29nbGVh",
             "cGlzLmNvbS9TZXNzaW9uEitwcm9qZWN0cy97cHJvamVjdH0vYWdlbnQvc2Vz",
             "c2lvbnMve3Nlc3Npb259ElNwcm9qZWN0cy97cHJvamVjdH0vYWdlbnQvZW52",
             "aXJvbm1lbnRzL3tlbnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25z",
-            "L3tzZXNzaW9ufWIGcHJvdG8z"));
+            "L3tzZXNzaW9ufRJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2FnZW50L3Nlc3Npb25zL3tzZXNzaW9ufRJocHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FnZW50L2Vudmlyb25tZW50",
+            "cy97ZW52aXJvbm1lbnR9L3VzZXJzL3t1c2VyfS9zZXNzaW9ucy97c2Vzc2lv",
+            "bn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

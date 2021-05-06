@@ -129,6 +129,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     {
                         Lines.AddRange(commit.GetHistoryLines());
                     }
+                    // No "interesting" commits? That usually means it's just a dependency update.
+                    if (Lines.Count == 2)
+                    {
+                        Lines.Add("No API surface changes; just dependency updates.");
+                    }
                     Lines.Add("");
                 }
             }

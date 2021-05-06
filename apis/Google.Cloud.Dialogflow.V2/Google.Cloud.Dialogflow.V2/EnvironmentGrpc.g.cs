@@ -62,6 +62,14 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest> __Marshaller_google_cloud_dialogflow_v2_ListEnvironmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse> __Marshaller_google_cloud_dialogflow_v2_ListEnvironmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest> __Marshaller_google_cloud_dialogflow_v2_GetEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Environment> __Marshaller_google_cloud_dialogflow_v2_Environment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.Environment.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest> __Marshaller_google_cloud_dialogflow_v2_CreateEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest> __Marshaller_google_cloud_dialogflow_v2_GetEnvironmentHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.EnvironmentHistory> __Marshaller_google_cloud_dialogflow_v2_EnvironmentHistory = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.EnvironmentHistory.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest, global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse> __Method_ListEnvironments = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest, global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse>(
         grpc::MethodType.Unary,
@@ -69,6 +77,41 @@ namespace Google.Cloud.Dialogflow.V2 {
         "ListEnvironments",
         __Marshaller_google_cloud_dialogflow_v2_ListEnvironmentsRequest,
         __Marshaller_google_cloud_dialogflow_v2_ListEnvironmentsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment> __Method_GetEnvironment = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEnvironment",
+        __Marshaller_google_cloud_dialogflow_v2_GetEnvironmentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_Environment);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment> __Method_CreateEnvironment = new grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateEnvironment",
+        __Marshaller_google_cloud_dialogflow_v2_CreateEnvironmentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_Environment);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment> __Method_UpdateEnvironment = new grpc::Method<global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEnvironment",
+        __Marshaller_google_cloud_dialogflow_v2_UpdateEnvironmentRequest,
+        __Marshaller_google_cloud_dialogflow_v2_Environment);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEnvironment = new grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteEnvironment",
+        __Marshaller_google_cloud_dialogflow_v2_DeleteEnvironmentRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest, global::Google.Cloud.Dialogflow.V2.EnvironmentHistory> __Method_GetEnvironmentHistory = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest, global::Google.Cloud.Dialogflow.V2.EnvironmentHistory>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEnvironmentHistory",
+        __Marshaller_google_cloud_dialogflow_v2_GetEnvironmentHistoryRequest,
+        __Marshaller_google_cloud_dialogflow_v2_EnvironmentHistory);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -87,6 +130,72 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse> ListEnvironments(global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.Environment> GetEnvironment(global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an agent environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.Environment> CreateEnvironment(global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified agent environment.
+      ///
+      /// This method allows you to deploy new agent versions into the environment.
+      /// When an environment is pointed to a new agent version by setting
+      /// `environment.agent_version`, the environment is temporarily set to the
+      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// previous version of the agent. After the new agent version is done loading,
+      /// the environment is set back to the `RUNNING` state.
+      /// You can use "-" as Environment ID in environment name to update version
+      /// in "draft" environment. WARNING: this will negate all recent changes to
+      /// draft and can't be undone. You may want to save the draft to a version
+      /// before calling this function.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.Environment> UpdateEnvironment(global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEnvironment(global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the history of the specified environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.EnvironmentHistory> GetEnvironmentHistory(global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -160,6 +269,270 @@ namespace Google.Cloud.Dialogflow.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEnvironments, null, options, request);
       }
+      /// <summary>
+      /// Retrieves the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment GetEnvironment(global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment GetEnvironment(global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> GetEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> GetEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Creates an agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment CreateEnvironment(global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment CreateEnvironment(global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Creates an agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> CreateEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> CreateEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified agent environment.
+      ///
+      /// This method allows you to deploy new agent versions into the environment.
+      /// When an environment is pointed to a new agent version by setting
+      /// `environment.agent_version`, the environment is temporarily set to the
+      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// previous version of the agent. After the new agent version is done loading,
+      /// the environment is set back to the `RUNNING` state.
+      /// You can use "-" as Environment ID in environment name to update version
+      /// in "draft" environment. WARNING: this will negate all recent changes to
+      /// draft and can't be undone. You may want to save the draft to a version
+      /// before calling this function.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment UpdateEnvironment(global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified agent environment.
+      ///
+      /// This method allows you to deploy new agent versions into the environment.
+      /// When an environment is pointed to a new agent version by setting
+      /// `environment.agent_version`, the environment is temporarily set to the
+      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// previous version of the agent. After the new agent version is done loading,
+      /// the environment is set back to the `RUNNING` state.
+      /// You can use "-" as Environment ID in environment name to update version
+      /// in "draft" environment. WARNING: this will negate all recent changes to
+      /// draft and can't be undone. You may want to save the draft to a version
+      /// before calling this function.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Environment UpdateEnvironment(global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified agent environment.
+      ///
+      /// This method allows you to deploy new agent versions into the environment.
+      /// When an environment is pointed to a new agent version by setting
+      /// `environment.agent_version`, the environment is temporarily set to the
+      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// previous version of the agent. After the new agent version is done loading,
+      /// the environment is set back to the `RUNNING` state.
+      /// You can use "-" as Environment ID in environment name to update version
+      /// in "draft" environment. WARNING: this will negate all recent changes to
+      /// draft and can't be undone. You may want to save the draft to a version
+      /// before calling this function.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> UpdateEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified agent environment.
+      ///
+      /// This method allows you to deploy new agent versions into the environment.
+      /// When an environment is pointed to a new agent version by setting
+      /// `environment.agent_version`, the environment is temporarily set to the
+      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// previous version of the agent. After the new agent version is done loading,
+      /// the environment is set back to the `RUNNING` state.
+      /// You can use "-" as Environment ID in environment name to update version
+      /// in "draft" environment. WARNING: this will negate all recent changes to
+      /// draft and can't be undone. You may want to save the draft to a version
+      /// before calling this function.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Environment> UpdateEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEnvironment(global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEnvironment(global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified agent environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEnvironmentAsync(global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteEnvironment, null, options, request);
+      }
+      /// <summary>
+      /// Gets the history of the specified environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.EnvironmentHistory GetEnvironmentHistory(global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnvironmentHistory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the history of the specified environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.EnvironmentHistory GetEnvironmentHistory(global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEnvironmentHistory, null, options, request);
+      }
+      /// <summary>
+      /// Gets the history of the specified environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.EnvironmentHistory> GetEnvironmentHistoryAsync(global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnvironmentHistoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the history of the specified environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.EnvironmentHistory> GetEnvironmentHistoryAsync(global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEnvironmentHistory, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override EnvironmentsClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -172,7 +545,12 @@ namespace Google.Cloud.Dialogflow.V2 {
     public static grpc::ServerServiceDefinition BindService(EnvironmentsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ListEnvironments, serviceImpl.ListEnvironments).Build();
+          .AddMethod(__Method_ListEnvironments, serviceImpl.ListEnvironments)
+          .AddMethod(__Method_GetEnvironment, serviceImpl.GetEnvironment)
+          .AddMethod(__Method_CreateEnvironment, serviceImpl.CreateEnvironment)
+          .AddMethod(__Method_UpdateEnvironment, serviceImpl.UpdateEnvironment)
+          .AddMethod(__Method_DeleteEnvironment, serviceImpl.DeleteEnvironment)
+          .AddMethod(__Method_GetEnvironmentHistory, serviceImpl.GetEnvironmentHistory).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -182,6 +560,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, EnvironmentsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListEnvironments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListEnvironmentsRequest, global::Google.Cloud.Dialogflow.V2.ListEnvironmentsResponse>(serviceImpl.ListEnvironments));
+      serviceBinder.AddMethod(__Method_GetEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(serviceImpl.GetEnvironment));
+      serviceBinder.AddMethod(__Method_CreateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.CreateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(serviceImpl.CreateEnvironment));
+      serviceBinder.AddMethod(__Method_UpdateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateEnvironmentRequest, global::Google.Cloud.Dialogflow.V2.Environment>(serviceImpl.UpdateEnvironment));
+      serviceBinder.AddMethod(__Method_DeleteEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DeleteEnvironmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEnvironment));
+      serviceBinder.AddMethod(__Method_GetEnvironmentHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetEnvironmentHistoryRequest, global::Google.Cloud.Dialogflow.V2.EnvironmentHistory>(serviceImpl.GetEnvironmentHistory));
     }
 
   }
