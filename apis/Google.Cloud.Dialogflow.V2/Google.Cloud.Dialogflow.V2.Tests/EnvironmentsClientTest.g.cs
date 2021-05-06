@@ -141,7 +141,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
             {
-                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Environment = new Environment(),
                 UpdateMask = new wkt::FieldMask(),
                 AllowLoadToDraftAndDiscardChanges = true,
             };
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
             UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
             {
-                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Environment = new Environment(),
                 UpdateMask = new wkt::FieldMask(),
                 AllowLoadToDraftAndDiscardChanges = true,
             };

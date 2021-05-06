@@ -343,18 +343,6 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
-    public partial class UpdateEnvironmentRequest
-    {
-        /// <summary>
-        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Environment"/> resource name property.
-        /// </summary>
-        public EnvironmentName EnvironmentAsEnvironmentName
-        {
-            get => string.IsNullOrEmpty(Environment) ? null : EnvironmentName.Parse(Environment, allowUnparsed: true);
-            set => Environment = value?.ToString() ?? "";
-        }
-    }
-
     public partial class DeleteEnvironmentRequest
     {
         /// <summary>
