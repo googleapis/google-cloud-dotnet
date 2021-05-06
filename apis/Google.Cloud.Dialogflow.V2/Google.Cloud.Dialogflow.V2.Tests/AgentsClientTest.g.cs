@@ -178,7 +178,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetAgentResourceNames()
+        public void GetAgentResourceNames1()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -214,7 +214,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetAgentResourceNamesAsync()
+        public async stt::Task GetAgentResourceNames1Async()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -247,6 +247,80 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             Agent responseCallSettings = await client.GetAgentAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Agent responseCancellationToken = await client.GetAgentAsync(request.ParentAsProjectName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAgentResourceNames2()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentRequest request = new GetAgentRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Agent expectedResponse = new Agent
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                DisplayName = "display_name137f65c2",
+                DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
+                TimeZone = "time_zone73f23b20",
+                Description = "description2cf9da67",
+                AvatarUri = "avatar_urie1767db7",
+                EnableLogging = false,
+#pragma warning disable CS0612
+                MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
+                ClassificationThreshold = -7.6869614E+17F,
+                ApiVersion = Agent.Types.ApiVersion.V2Beta1,
+                Tier = Agent.Types.Tier.Standard,
+            };
+            mockGrpcClient.Setup(x => x.GetAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            Agent response = client.GetAgent(request.ParentAsLocationName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAgentResourceNames2Async()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentRequest request = new GetAgentRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            Agent expectedResponse = new Agent
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                DisplayName = "display_name137f65c2",
+                DefaultLanguageCode = "default_language_codee612e130",
+                SupportedLanguageCodes =
+                {
+                    "supported_language_codesbcd806b9",
+                },
+                TimeZone = "time_zone73f23b20",
+                Description = "description2cf9da67",
+                AvatarUri = "avatar_urie1767db7",
+                EnableLogging = false,
+#pragma warning disable CS0612
+                MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
+                ClassificationThreshold = -7.6869614E+17F,
+                ApiVersion = Agent.Types.ApiVersion.V2Beta1,
+                Tier = Agent.Types.Tier.Standard,
+            };
+            mockGrpcClient.Setup(x => x.GetAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Agent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            Agent responseCallSettings = await client.GetAgentAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Agent responseCancellationToken = await client.GetAgentAsync(request.ParentAsLocationName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -462,7 +536,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteAgentResourceNames()
+        public void DeleteAgentResourceNames1()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -478,7 +552,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task DeleteAgentResourceNamesAsync()
+        public async stt::Task DeleteAgentResourceNames1Async()
         {
             moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
@@ -491,6 +565,39 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
             await client.DeleteAgentAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request.ParentAsProjectName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteAgentResourceNames2()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAgentRequest request = new DeleteAgentRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAgent(request.ParentAsLocationName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteAgentResourceNames2Async()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteAgentRequest request = new DeleteAgentRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAgentAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteAgentAsync(request.ParentAsLocationName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 

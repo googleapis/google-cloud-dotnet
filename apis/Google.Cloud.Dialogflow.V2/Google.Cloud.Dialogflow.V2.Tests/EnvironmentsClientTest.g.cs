@@ -14,10 +14,212 @@
 
 // Generated code. DO NOT EDIT!
 
+using gaxgrpc = Google.Api.Gax.Grpc;
+using wkt = Google.Protobuf.WellKnownTypes;
+using grpccore = Grpc.Core;
+using moq = Moq;
+using st = System.Threading;
+using stt = System.Threading.Tasks;
+using xunit = Xunit;
+
 namespace Google.Cloud.Dialogflow.V2.Tests
 {
     /// <summary>Generated unit tests.</summary>
     public sealed class GeneratedEnvironmentsClientTest
     {
+        [xunit::FactAttribute]
+        public void GetEnvironmentRequestObject()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.GetEnvironment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEnvironmentRequestObjectAsync()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            GetEnvironmentRequest request = new GetEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.GetEnvironmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateEnvironmentRequestObject()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Environment = new Environment(),
+                EnvironmentId = "environment_id26e3069e",
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.CreateEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.CreateEnvironment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateEnvironmentRequestObjectAsync()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            {
+                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                Environment = new Environment(),
+                EnvironmentId = "environment_id26e3069e",
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.CreateEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.CreateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.CreateEnvironmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateEnvironmentRequestObject()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                UpdateMask = new wkt::FieldMask(),
+                AllowLoadToDraftAndDiscardChanges = true,
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment response = client.UpdateEnvironment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateEnvironmentRequestObjectAsync()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                UpdateMask = new wkt::FieldMask(),
+                AllowLoadToDraftAndDiscardChanges = true,
+            };
+            Environment expectedResponse = new Environment
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                Description = "description2cf9da67",
+                AgentVersion = "agent_versioncd5f59a0",
+                State = Environment.Types.State.Loading,
+                UpdateTime = new wkt::Timestamp(),
+                TextToSpeechSettings = new TextToSpeechSettings(),
+                Fulfillment = new Fulfillment(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            Environment responseCallSettings = await client.UpdateEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Environment responseCancellationToken = await client.UpdateEnvironmentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteEnvironmentRequestObject()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteEnvironment(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteEnvironmentRequestObjectAsync()
+        {
+            moq::Mock<Environments.EnvironmentsClient> mockGrpcClient = new moq::Mock<Environments.EnvironmentsClient>(moq::MockBehavior.Strict);
+            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            {
+                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteEnvironmentAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
