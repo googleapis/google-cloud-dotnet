@@ -20,7 +20,6 @@ fi
 install_dotcover
 install_reportgenerator
 
-codecov_params=
 upload_report=false
 while (( "$#" )); do
   if [[ "$1" == "--upload" ]]
@@ -29,15 +28,15 @@ while (( "$#" )); do
   elif [[ "$1" == "--upload_reportname" ]]
   then
     shift
-    codecov_params="$codecov_params --flag $1"
+    # No further actions right now
   elif [[ "$1" == "--upload_commit" ]]
   then
     shift
-    codecov_params="$codecov_params --c $1"
+    # No further actions right now
   elif [[ "$1" == "--upload_build" ]]
   then
     shift
-    codecov_params="$codecov_params --b $1"
+    # No further actions right now
   else
     echo "Unexpected param: $1"
     exit 1
@@ -64,11 +63,5 @@ $REPORTGENERATOR \
 
 if [[ "$upload_report" = true ]]
 then
-  # -y option to confirm all prompts.
-  # --no-progress to avoid our log file being spammed with download progress
-  choco install codecov -y --no-progress
-
-  # Assume we've created the coverage file by this point. If we haven't, there should already have been an error.
-  # Pass whatever parameters we recieved.
-  codecov -f "coverage/coverage-filtered.xml" $codecov_params
+  echo "Code coverage report uploading currently disabled."
 fi
