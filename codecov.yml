@@ -1,7 +1,0 @@
-coverage:
-  status:
-    # For overall status
-    project:
-      default:
-        # Allow coverage to drop by 2% before complaining
-        threshold: 2

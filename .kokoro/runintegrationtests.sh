@@ -39,11 +39,12 @@ rm -rf coverage
 echo "Available disk space after removing old coverage"
 df -h
 
+# Note: we still use the presence of a codecov token to determine whether or not to
+# run coverage, even though we don't upload to codecov.
+# TODO: Use an environment variable instead.
 if [[ -f "$SECRETS_LOCATION/codecov-token" ]]
 then
- export CODECOV_TOKEN=$(cat "$SECRETS_LOCATION/codecov-token")
  script_flags=--coverage
- report_flags="--upload $report_flags"
 fi
 
 # Build the libraries and run unit tests, optionally with coverage.

@@ -3,7 +3,6 @@
 
 [![GitHub Actions status](https://img.shields.io/github/workflow/status/googleapis/google-cloud-dotnet/Build%20push)](https://github.com/googleapis/google-cloud-dotnet/actions?query=workflow%3A%22Build+push%22)
 [![Appveyor build status](https://ci.appveyor.com/api/projects/status/hkkyregfhh5m4d2u?svg=true)](https://ci.appveyor.com/project/googleapis/google-cloud-dotnet)
-[![Coverage Status](https://codecov.io/gh/googleapis/google-cloud-dotnet/branch/master/graph/badge.svg)](https://codecov.io/gh/googleapis/google-cloud-dotnet)
 
 * [Homepage](https://cloud.google.com/dotnet/)
 * [API Documentation](http://googleapis.github.io/google-cloud-dotnet/docs/)
