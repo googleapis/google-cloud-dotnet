@@ -42,6 +42,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -65,6 +66,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -90,6 +92,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -113,6 +116,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -138,6 +142,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -161,6 +166,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.GetWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -187,6 +193,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -211,6 +218,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -237,6 +245,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -261,6 +270,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -287,6 +297,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -311,6 +322,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.CreateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -337,6 +349,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -361,6 +374,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -387,6 +401,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
@@ -411,6 +426,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 GenericWebService = new Webhook.Types.GenericWebService(),
                 Disabled = false,
                 Timeout = new wkt::Duration(),
+                ServiceDirectory = new Webhook.Types.ServiceDirectoryConfig(),
             };
             mockGrpcClient.Setup(x => x.UpdateWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Webhook>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebhooksClient client = new WebhooksClientImpl(mockGrpcClient.Object, null);
