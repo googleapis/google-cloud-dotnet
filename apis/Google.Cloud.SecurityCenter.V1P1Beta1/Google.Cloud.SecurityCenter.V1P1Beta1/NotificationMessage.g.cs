@@ -26,23 +26,22 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           string.Concat(
             "CkBnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL25vdGlm",
             "aWNhdGlvbl9tZXNzYWdlLnByb3RvEiVnb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjFwMWJldGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
-            "GjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL2Fzc2V0",
-            "LnByb3RvGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGEx",
-            "L2ZpbmRpbmcucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92",
-            "MXAxYmV0YTEvcmVzb3VyY2UucHJvdG8ixgEKE05vdGlmaWNhdGlvbk1lc3Nh",
-            "Z2USIAoYbm90aWZpY2F0aW9uX2NvbmZpZ19uYW1lGAEgASgJEkEKB2ZpbmRp",
-            "bmcYAiABKAsyLi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJl",
-            "dGExLkZpbmRpbmdIABJBCghyZXNvdXJjZRgDIAEoCzIvLmdvb2dsZS5jbG91",
-            "ZC5zZWN1cml0eWNlbnRlci52MXAxYmV0YTEuUmVzb3VyY2VCBwoFZXZlbnRC",
-            "/QEKKWNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGEx",
-            "UAFaU2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3VyaXR5Y2VudGVyqgIl",
-            "R29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFCZXRhMcoCJUdvb2ds",
-            "ZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHqAihHb29nbGU6OkNs",
-            "b3VkOjpTZWN1cml0eUNlbnRlcjo6VjFwMWJldGExYgZwcm90bzM="));
+            "ZW50ZXIudjFwMWJldGExGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIv",
+            "djFwMWJldGExL2ZpbmRpbmcucHJvdG8aNGdvb2dsZS9jbG91ZC9zZWN1cml0",
+            "eWNlbnRlci92MXAxYmV0YTEvcmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8ixgEKE05vdGlmaWNhdGlvbk1lc3NhZ2USIAoY",
+            "bm90aWZpY2F0aW9uX2NvbmZpZ19uYW1lGAEgASgJEkEKB2ZpbmRpbmcYAiAB",
+            "KAsyLi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExLkZp",
+            "bmRpbmdIABJBCghyZXNvdXJjZRgDIAEoCzIvLmdvb2dsZS5jbG91ZC5zZWN1",
+            "cml0eWNlbnRlci52MXAxYmV0YTEuUmVzb3VyY2VCBwoFZXZlbnRC/QEKKWNv",
+            "bS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExUAFaU2dv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2Vj",
+            "dXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3VyaXR5Y2VudGVyqgIlR29vZ2xl",
+            "LkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFCZXRhMcoCJUdvb2dsZVxDbG91",
+            "ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpT",
+            "ZWN1cml0eUNlbnRlcjo6VjFwMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1P1Beta1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding", "Resource" }, new[]{ "Event" }, null, null, null)
           }));

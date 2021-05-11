@@ -26,26 +26,31 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL3NlY3Vy",
             "aXR5X21hcmtzLnByb3RvEiVnb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
-            "djFwMWJldGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhlnb29n",
-            "bGUvYXBpL3Jlc291cmNlLnByb3RvItoCCg1TZWN1cml0eU1hcmtzEgwKBG5h",
+            "djFwMWJldGExGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhxnb29nbGUv",
+            "YXBpL2Fubm90YXRpb25zLnByb3RvItwECg1TZWN1cml0eU1hcmtzEgwKBG5h",
             "bWUYASABKAkSTgoFbWFya3MYAiADKAsyPy5nb29nbGUuY2xvdWQuc2VjdXJp",
-            "dHljZW50ZXIudjFwMWJldGExLlNlY3VyaXR5TWFya3MuTWFya3NFbnRyeRos",
-            "CgpNYXJrc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
-            "vAHqQbgBCitzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9TZWN1cml0",
-            "eU1hcmtzEjlvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2Fzc2V0cy97",
-            "YXNzZXR9L3NlY3VyaXR5TWFya3MSTm9yZ2FuaXphdGlvbnMve29yZ2FuaXph",
-            "dGlvbn0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30vc2Vj",
-            "dXJpdHlNYXJrc0L9AQopY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
-            "ci52MXAxYmV0YTFQAVpTZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MXAxYmV0YTE7c2VjdXJp",
-            "dHljZW50ZXKqAiVHb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjFQMUJl",
-            "dGExygIlR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYxcDFiZXRhMeoC",
-            "KEdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxYmV0YTFiBnBy",
-            "b3RvMw=="));
+            "dHljZW50ZXIudjFwMWJldGExLlNlY3VyaXR5TWFya3MuTWFya3NFbnRyeRIW",
+            "Cg5jYW5vbmljYWxfbmFtZRgDIAEoCRosCgpNYXJrc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6pgPqQaIDCitzZWN1cml0eWNlbnRl",
+            "ci5nb29nbGVhcGlzLmNvbS9TZWN1cml0eU1hcmtzEjlvcmdhbml6YXRpb25z",
+            "L3tvcmdhbml6YXRpb259L2Fzc2V0cy97YXNzZXR9L3NlY3VyaXR5TWFya3MS",
+            "Tm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc291cmNlcy97c291cmNl",
+            "fS9maW5kaW5ncy97ZmluZGluZ30vc2VjdXJpdHlNYXJrcxItZm9sZGVycy97",
+            "Zm9sZGVyfS9hc3NldHMve2Fzc2V0fS9zZWN1cml0eU1hcmtzEi9wcm9qZWN0",
+            "cy97cHJvamVjdH0vYXNzZXRzL3thc3NldH0vc2VjdXJpdHlNYXJrcxJCZm9s",
+            "ZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5k",
+            "aW5nfS9zZWN1cml0eU1hcmtzEkRwcm9qZWN0cy97cHJvamVjdH0vc291cmNl",
+            "cy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30vc2VjdXJpdHlNYXJrc0L9",
+            "AQopY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MXAxYmV0YTFQ",
+            "AVpTZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
+            "ZC9zZWN1cml0eWNlbnRlci92MXAxYmV0YTE7c2VjdXJpdHljZW50ZXKqAiVH",
+            "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjFQMUJldGExygIlR29vZ2xl",
+            "XENsb3VkXFNlY3VyaXR5Q2VudGVyXFYxcDFiZXRhMeoCKEdvb2dsZTo6Q2xv",
+            "dWQ6OlNlY3VyaXR5Q2VudGVyOjpWMXAxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks), global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks.Parser, new[]{ "Name", "Marks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks), global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks.Parser, new[]{ "Name", "Marks", "CanonicalName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -89,6 +94,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public SecurityMarks(SecurityMarks other) : this() {
       name_ = other.name_;
       marks_ = other.marks_.Clone();
+      canonicalName_ = other.canonicalName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,6 +141,27 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       get { return marks_; }
     }
 
+    /// <summary>Field number for the "canonical_name" field.</summary>
+    public const int CanonicalNameFieldNumber = 3;
+    private string canonicalName_ = "";
+    /// <summary>
+    /// The canonical name of the marks.
+    /// Examples:
+    /// "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+    /// "folders/{folder_id}/assets/{asset_id}/securityMarks"
+    /// "projects/{project_number}/assets/{asset_id}/securityMarks"
+    /// "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+    /// "folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+    /// "projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CanonicalName {
+      get { return canonicalName_; }
+      set {
+        canonicalName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SecurityMarks);
@@ -150,6 +177,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
       if (Name != other.Name) return false;
       if (!Marks.Equals(other.Marks)) return false;
+      if (CanonicalName != other.CanonicalName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -158,6 +186,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= Marks.GetHashCode();
+      if (CanonicalName.Length != 0) hash ^= CanonicalName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -179,6 +208,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteString(Name);
       }
       marks_.WriteTo(output, _map_marks_codec);
+      if (CanonicalName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CanonicalName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -193,6 +226,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteString(Name);
       }
       marks_.WriteTo(ref output, _map_marks_codec);
+      if (CanonicalName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CanonicalName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -206,6 +243,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += marks_.CalculateSize(_map_marks_codec);
+      if (CanonicalName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -221,6 +261,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         Name = other.Name;
       }
       marks_.Add(other.marks_);
+      if (other.CanonicalName.Length != 0) {
+        CanonicalName = other.CanonicalName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -243,6 +286,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             marks_.AddEntriesFrom(input, _map_marks_codec);
             break;
           }
+          case 26: {
+            CanonicalName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -263,6 +310,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           }
           case 18: {
             marks_.AddEntriesFrom(ref input, _map_marks_codec);
+            break;
+          }
+          case 26: {
+            CanonicalName = input.ReadString();
             break;
           }
         }
