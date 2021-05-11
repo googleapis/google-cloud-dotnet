@@ -331,8 +331,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the instance in which to create the restored
-    /// table. This instance must be the parent of the source backup. Values are
-    /// of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// table. This instance must be in the same project as the source backup.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
