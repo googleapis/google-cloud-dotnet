@@ -47,6 +47,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -70,6 +71,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -95,6 +97,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -118,6 +121,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -143,6 +147,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -166,6 +171,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -206,6 +212,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -244,6 +251,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -284,6 +292,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -322,6 +331,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -362,6 +372,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -400,6 +411,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -440,6 +452,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -478,6 +491,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -518,6 +532,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -556,6 +571,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1407,6 +1423,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1429,6 +1446,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1453,6 +1471,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1475,6 +1494,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1499,6 +1519,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1521,6 +1542,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.GetSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1561,6 +1583,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1599,6 +1622,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1639,6 +1663,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1677,6 +1702,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1717,6 +1743,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1755,6 +1782,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2124,6 +2152,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2161,6 +2190,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2199,6 +2229,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2235,6 +2266,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2274,6 +2306,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2311,6 +2344,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 EventTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2590,6 +2624,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2613,6 +2648,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2637,6 +2673,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2659,6 +2696,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2684,6 +2722,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSource(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2707,6 +2746,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                 SourceName = SourceName.FromOrganizationSource("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSourceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Source>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2738,6 +2778,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2767,6 +2808,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityMarks>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2796,6 +2838,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2823,6 +2866,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityMarks>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2853,6 +2897,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2881,6 +2926,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CanonicalName = "canonical_name5e3d81e6",
             };
             mockGrpcClient.Setup(x => x.UpdateSecurityMarksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityMarks>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);

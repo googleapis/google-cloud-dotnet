@@ -26,21 +26,23 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL3NvdXJj",
             "ZS5wcm90bxIlZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxcDFiZXRh",
-            "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byKbAQoGU291cmNlEgwKBG5hbWUYASABKAkSFAoMZGlz",
-            "cGxheV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJOljqQVUKJHNl",
-            "Y3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL1NvdXJjZRItb3JnYW5pemF0",
-            "aW9ucy97b3JnYW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9Qv0BCiljb20u",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxcDFiZXRhMVABWlNnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3Vy",
-            "aXR5Y2VudGVyL3YxcDFiZXRhMTtzZWN1cml0eWNlbnRlcqoCJUdvb2dsZS5D",
-            "bG91ZC5TZWN1cml0eUNlbnRlci5WMVAxQmV0YTHKAiVHb29nbGVcQ2xvdWRc",
-            "U2VjdXJpdHlDZW50ZXJcVjFwMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6U2Vj",
-            "dXJpdHlDZW50ZXI6OlYxcDFiZXRhMWIGcHJvdG8z"));
+            "MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90byL9AQoGU291cmNlEgwKBG5hbWUYASABKAkSFAoMZGlz",
+            "cGxheV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhYKDmNhbm9u",
+            "aWNhbF9uYW1lGA4gASgJOqEB6kGdAQokc2VjdXJpdHljZW50ZXIuZ29vZ2xl",
+            "YXBpcy5jb20vU291cmNlEi1vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
+            "L3NvdXJjZXMve3NvdXJjZX0SIWZvbGRlcnMve2ZvbGRlcn0vc291cmNlcy97",
+            "c291cmNlfRIjcHJvamVjdHMve3Byb2plY3R9L3NvdXJjZXMve3NvdXJjZX1C",
+            "/QEKKWNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGEx",
+            "UAFaU2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3VyaXR5Y2VudGVyqgIl",
+            "R29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFCZXRhMcoCJUdvb2ds",
+            "ZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHqAihHb29nbGU6OkNs",
+            "b3VkOjpTZWN1cml0eUNlbnRlcjo6VjFwMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Source), global::Google.Cloud.SecurityCenter.V1P1Beta1.Source.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Source), global::Google.Cloud.SecurityCenter.V1P1Beta1.Source.Parser, new[]{ "Name", "DisplayName", "Description", "CanonicalName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,6 +86,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       name_ = other.name_;
       displayName_ = other.displayName_;
       description_ = other.description_;
+      canonicalName_ = other.canonicalName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -147,6 +150,25 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "canonical_name" field.</summary>
+    public const int CanonicalNameFieldNumber = 14;
+    private string canonicalName_ = "";
+    /// <summary>
+    /// The canonical name of the finding. It's either
+    /// "organizations/{organization_id}/sources/{source_id}",
+    /// "folders/{folder_id}/sources/{source_id}" or
+    /// "projects/{project_number}/sources/{source_id}",
+    /// depending on the closest CRM ancestor of the resource associated with the
+    /// finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CanonicalName {
+      get { return canonicalName_; }
+      set {
+        canonicalName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Source);
@@ -163,6 +185,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
+      if (CanonicalName != other.CanonicalName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -172,6 +195,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (CanonicalName.Length != 0) hash ^= CanonicalName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,6 +224,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
+      if (CanonicalName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(CanonicalName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -221,6 +249,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
+      if (CanonicalName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(CanonicalName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -238,6 +270,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (CanonicalName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,6 +293,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.CanonicalName.Length != 0) {
+        CanonicalName = other.CanonicalName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,6 +323,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             Description = input.ReadString();
             break;
           }
+          case 114: {
+            CanonicalName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -309,6 +351,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           }
           case 26: {
             Description = input.ReadString();
+            break;
+          }
+          case 114: {
+            CanonicalName = input.ReadString();
             break;
           }
         }

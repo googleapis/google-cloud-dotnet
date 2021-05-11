@@ -26,9 +26,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           string.Concat(
             "Cj9nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjFwMWJldGExL25vdGlm",
             "aWNhdGlvbl9jb25maWcucHJvdG8SJWdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
-            "bnRlci52MXAxYmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8itgQKEk5vdGlmaWNhdGlvbkNvbmZpZxIMCgRuYW1l",
+            "bnRlci52MXAxYmV0YTEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
+            "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
+            "b3RhdGlvbnMucHJvdG8itgQKEk5vdGlmaWNhdGlvbkNvbmZpZxIMCgRuYW1l",
             "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJElcKCmV2ZW50X3R5cGUYAyAB",
             "KA4yQy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExLk5v",
             "dGlmaWNhdGlvbkNvbmZpZy5FdmVudFR5cGUSNgoMcHVic3ViX3RvcGljGAQg",
@@ -50,7 +50,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "bGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97",
             "dG9waWN9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Parser, new[]{ "Name", "Description", "EventType", "PubsubTopic", "ServiceAccount", "StreamingConfig" }, new[]{ "NotifyConfig" }, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null, null)})
           }));
