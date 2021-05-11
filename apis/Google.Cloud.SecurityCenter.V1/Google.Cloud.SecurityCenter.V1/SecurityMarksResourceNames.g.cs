@@ -39,11 +39,36 @@ namespace Google.Cloud.SecurityCenter.V1
             /// <c>organizations/{organization}/sources/{source}/findings/{finding}/securityMarks</c>.
             /// </summary>
             OrganizationSourceFinding = 2,
+
+            /// <summary>A resource name with pattern <c>folders/{folder}/assets/{asset}/securityMarks</c>.</summary>
+            FolderAsset = 3,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/assets/{asset}/securityMarks</c>.</summary>
+            ProjectAsset = 4,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c>.
+            /// </summary>
+            FolderSourceFinding = 5,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c>
+            /// .
+            /// </summary>
+            ProjectSourceFinding = 6,
         }
 
         private static gax::PathTemplate s_organizationAsset = new gax::PathTemplate("organizations/{organization}/assets/{asset}/securityMarks");
 
         private static gax::PathTemplate s_organizationSourceFinding = new gax::PathTemplate("organizations/{organization}/sources/{source}/findings/{finding}/securityMarks");
+
+        private static gax::PathTemplate s_folderAsset = new gax::PathTemplate("folders/{folder}/assets/{asset}/securityMarks");
+
+        private static gax::PathTemplate s_projectAsset = new gax::PathTemplate("projects/{project}/assets/{asset}/securityMarks");
+
+        private static gax::PathTemplate s_folderSourceFinding = new gax::PathTemplate("folders/{folder}/sources/{source}/findings/{finding}/securityMarks");
+
+        private static gax::PathTemplate s_projectSourceFinding = new gax::PathTemplate("projects/{project}/sources/{source}/findings/{finding}/securityMarks");
 
         /// <summary>Creates a <see cref="SecurityMarksName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -74,6 +99,48 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A new instance of <see cref="SecurityMarksName"/> constructed from the provided ids.</returns>
         public static SecurityMarksName FromOrganizationSourceFinding(string organizationId, string sourceId, string findingId) =>
             new SecurityMarksName(ResourceNameType.OrganizationSourceFinding, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), sourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecurityMarksName"/> with the pattern <c>folders/{folder}/assets/{asset}/securityMarks</c>
+        /// .
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecurityMarksName"/> constructed from the provided ids.</returns>
+        public static SecurityMarksName FromFolderAsset(string folderId, string assetId) =>
+            new SecurityMarksName(ResourceNameType.FolderAsset, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), assetId: gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecurityMarksName"/> with the pattern
+        /// <c>projects/{project}/assets/{asset}/securityMarks</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecurityMarksName"/> constructed from the provided ids.</returns>
+        public static SecurityMarksName FromProjectAsset(string projectId, string assetId) =>
+            new SecurityMarksName(ResourceNameType.ProjectAsset, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), assetId: gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecurityMarksName"/> with the pattern
+        /// <c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecurityMarksName"/> constructed from the provided ids.</returns>
+        public static SecurityMarksName FromFolderSourceFinding(string folderId, string sourceId, string findingId) =>
+            new SecurityMarksName(ResourceNameType.FolderSourceFinding, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), sourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecurityMarksName"/> with the pattern
+        /// <c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecurityMarksName"/> constructed from the provided ids.</returns>
+        public static SecurityMarksName FromProjectSourceFinding(string projectId, string sourceId, string findingId) =>
+            new SecurityMarksName(ResourceNameType.ProjectSourceFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), sourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SecurityMarksName"/> with pattern
@@ -115,6 +182,60 @@ namespace Google.Cloud.SecurityCenter.V1
             s_organizationSourceFinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>folders/{folder}/assets/{asset}/securityMarks</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>folders/{folder}/assets/{asset}/securityMarks</c>.
+        /// </returns>
+        public static string FormatFolderAsset(string folderId, string assetId) =>
+            s_folderAsset.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>projects/{project}/assets/{asset}/securityMarks</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>projects/{project}/assets/{asset}/securityMarks</c>.
+        /// </returns>
+        public static string FormatProjectAsset(string projectId, string assetId) =>
+            s_projectAsset.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </returns>
+        public static string FormatFolderSourceFinding(string folderId, string sourceId, string findingId) =>
+            s_folderSourceFinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecurityMarksName"/> with pattern
+        /// <c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c>.
+        /// </returns>
+        public static string FormatProjectSourceFinding(string projectId, string sourceId, string findingId) =>
+            s_projectSourceFinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="SecurityMarksName"/> instance.
         /// </summary>
         /// <remarks>
@@ -125,6 +246,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <description>
         /// <c>organizations/{organization}/sources/{source}/findings/{finding}/securityMarks</c>
         /// </description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/assets/{asset}/securityMarks</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}/securityMarks</c></description></item>
+        /// <item>
+        /// <description><c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -144,6 +273,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <description>
         /// <c>organizations/{organization}/sources/{source}/findings/{finding}/securityMarks</c>
         /// </description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/assets/{asset}/securityMarks</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}/securityMarks</c></description></item>
+        /// <item>
+        /// <description><c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -170,6 +307,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <c>organizations/{organization}/sources/{source}/findings/{finding}/securityMarks</c>
         /// </description>
         /// </item>
+        /// <item><description><c>folders/{folder}/assets/{asset}/securityMarks</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}/securityMarks</c></description></item>
+        /// <item>
+        /// <description><c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="securityMarksName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -192,6 +337,14 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <description>
         /// <c>organizations/{organization}/sources/{source}/findings/{finding}/securityMarks</c>
         /// </description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/assets/{asset}/securityMarks</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}/securityMarks</c></description></item>
+        /// <item>
+        /// <description><c>folders/{folder}/sources/{source}/findings/{finding}/securityMarks</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/sources/{source}/findings/{finding}/securityMarks</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -220,6 +373,26 @@ namespace Google.Cloud.SecurityCenter.V1
                 result = FromOrganizationSourceFinding(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_folderAsset.TryParseName(securityMarksName, out resourceName))
+            {
+                result = FromFolderAsset(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_projectAsset.TryParseName(securityMarksName, out resourceName))
+            {
+                result = FromProjectAsset(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_folderSourceFinding.TryParseName(securityMarksName, out resourceName))
+            {
+                result = FromFolderSourceFinding(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectSourceFinding.TryParseName(securityMarksName, out resourceName))
+            {
+                result = FromProjectSourceFinding(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(securityMarksName, out gax::UnparsedResourceName unparsedResourceName))
@@ -232,13 +405,15 @@ namespace Google.Cloud.SecurityCenter.V1
             return false;
         }
 
-        private SecurityMarksName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string assetId = null, string findingId = null, string organizationId = null, string sourceId = null)
+        private SecurityMarksName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string assetId = null, string findingId = null, string folderId = null, string organizationId = null, string projectId = null, string sourceId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AssetId = assetId;
             FindingId = findingId;
+            FolderId = folderId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
             SourceId = sourceId;
         }
 
@@ -272,10 +447,20 @@ namespace Google.Cloud.SecurityCenter.V1
         public string FindingId { get; }
 
         /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
         /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
         /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>
         /// The <c>Source</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
@@ -294,6 +479,10 @@ namespace Google.Cloud.SecurityCenter.V1
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationAsset: return s_organizationAsset.Expand(OrganizationId, AssetId);
                 case ResourceNameType.OrganizationSourceFinding: return s_organizationSourceFinding.Expand(OrganizationId, SourceId, FindingId);
+                case ResourceNameType.FolderAsset: return s_folderAsset.Expand(FolderId, AssetId);
+                case ResourceNameType.ProjectAsset: return s_projectAsset.Expand(ProjectId, AssetId);
+                case ResourceNameType.FolderSourceFinding: return s_folderSourceFinding.Expand(FolderId, SourceId, FindingId);
+                case ResourceNameType.ProjectSourceFinding: return s_projectSourceFinding.Expand(ProjectId, SourceId, FindingId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

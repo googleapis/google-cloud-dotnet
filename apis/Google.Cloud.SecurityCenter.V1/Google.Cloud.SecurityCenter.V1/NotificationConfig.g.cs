@@ -26,8 +26,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjhnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbm90aWZpY2F0aW9u",
             "X2NvbmZpZy5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
+            "L3Jlc291cmNlLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
             "IqADChJOb3RpZmljYXRpb25Db25maWcSDAoEbmFtZRgBIAEoCRITCgtkZXNj",
             "cmlwdGlvbhgCIAEoCRI2CgxwdWJzdWJfdG9waWMYAyABKAlCIPpBHQobcHVi",
             "c3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEhwKD3NlcnZpY2VfYWNjb3VudBgE",
@@ -46,7 +46,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3Rv",
             "cGljcy97dG9waWN9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Parser, new[]{ "Name", "Description", "PubsubTopic", "ServiceAccount", "StreamingConfig" }, new[]{ "NotifyConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null, null)})
           }));

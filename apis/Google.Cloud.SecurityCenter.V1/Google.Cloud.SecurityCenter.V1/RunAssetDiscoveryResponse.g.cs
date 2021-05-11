@@ -26,8 +26,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "CkFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvcnVuX2Fzc2V0X2Rp",
             "c2NvdmVyeV9yZXNwb25zZS5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
-            "Y2VudGVyLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh5nb29n",
-            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8i5wEKGVJ1bkFzc2V0RGlzY292",
+            "Y2VudGVyLnYxGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdv",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i5wEKGVJ1bkFzc2V0RGlzY292",
             "ZXJ5UmVzcG9uc2USTgoFc3RhdGUYASABKA4yPy5nb29nbGUuY2xvdWQuc2Vj",
             "dXJpdHljZW50ZXIudjEuUnVuQXNzZXREaXNjb3ZlcnlSZXNwb25zZS5TdGF0",
             "ZRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
@@ -39,7 +39,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "bnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdv",
             "b2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Parser, new[]{ "State", "Duration" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) }, null, null)
           }));

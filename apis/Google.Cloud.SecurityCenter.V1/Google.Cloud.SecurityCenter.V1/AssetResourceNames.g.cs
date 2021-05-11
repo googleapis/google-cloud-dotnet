@@ -31,9 +31,19 @@ namespace Google.Cloud.SecurityCenter.V1
 
             /// <summary>A resource name with pattern <c>organizations/{organization}/assets/{asset}</c>.</summary>
             OrganizationAsset = 1,
+
+            /// <summary>A resource name with pattern <c>folders/{folder}/assets/{asset}</c>.</summary>
+            FolderAsset = 2,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/assets/{asset}</c>.</summary>
+            ProjectAsset = 3,
         }
 
         private static gax::PathTemplate s_organizationAsset = new gax::PathTemplate("organizations/{organization}/assets/{asset}");
+
+        private static gax::PathTemplate s_folderAsset = new gax::PathTemplate("folders/{folder}/assets/{asset}");
+
+        private static gax::PathTemplate s_projectAsset = new gax::PathTemplate("projects/{project}/assets/{asset}");
 
         /// <summary>Creates a <see cref="AssetName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -51,6 +61,24 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A new instance of <see cref="AssetName"/> constructed from the provided ids.</returns>
         public static AssetName FromOrganizationAsset(string organizationId, string assetId) =>
             new AssetName(ResourceNameType.OrganizationAsset, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), assetId: gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Creates a <see cref="AssetName"/> with the pattern <c>folders/{folder}/assets/{asset}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AssetName"/> constructed from the provided ids.</returns>
+        public static AssetName FromFolderAsset(string folderId, string assetId) =>
+            new AssetName(ResourceNameType.FolderAsset, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), assetId: gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Creates a <see cref="AssetName"/> with the pattern <c>projects/{project}/assets/{asset}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AssetName"/> constructed from the provided ids.</returns>
+        public static AssetName FromProjectAsset(string projectId, string assetId) =>
+            new AssetName(ResourceNameType.ProjectAsset, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), assetId: gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AssetName"/> with pattern
@@ -77,11 +105,39 @@ namespace Google.Cloud.SecurityCenter.V1
         public static string FormatOrganizationAsset(string organizationId, string assetId) =>
             s_organizationAsset.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AssetName"/> with pattern
+        /// <c>folders/{folder}/assets/{asset}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AssetName"/> with pattern <c>folders/{folder}/assets/{asset}</c>
+        /// .
+        /// </returns>
+        public static string FormatFolderAsset(string folderId, string assetId) =>
+            s_folderAsset.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AssetName"/> with pattern
+        /// <c>projects/{project}/assets/{asset}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="assetId">The <c>Asset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AssetName"/> with pattern <c>projects/{project}/assets/{asset}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectAsset(string projectId, string assetId) =>
+            s_projectAsset.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="AssetName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/assets/{asset}</c></description></item>
+        /// <item><description><c>folders/{folder}/assets/{asset}</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="assetName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -96,6 +152,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/assets/{asset}</c></description></item>
+        /// <item><description><c>folders/{folder}/assets/{asset}</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -116,6 +174,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/assets/{asset}</c></description></item>
+        /// <item><description><c>folders/{folder}/assets/{asset}</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="assetName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -133,6 +193,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/assets/{asset}</c></description></item>
+        /// <item><description><c>folders/{folder}/assets/{asset}</c></description></item>
+        /// <item><description><c>projects/{project}/assets/{asset}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -155,6 +217,16 @@ namespace Google.Cloud.SecurityCenter.V1
                 result = FromOrganizationAsset(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_folderAsset.TryParseName(assetName, out resourceName))
+            {
+                result = FromFolderAsset(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_projectAsset.TryParseName(assetName, out resourceName))
+            {
+                result = FromProjectAsset(resourceName[0], resourceName[1]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(assetName, out gax::UnparsedResourceName unparsedResourceName))
@@ -167,12 +239,14 @@ namespace Google.Cloud.SecurityCenter.V1
             return false;
         }
 
-        private AssetName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string assetId = null, string organizationId = null)
+        private AssetName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string assetId = null, string folderId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AssetId = assetId;
+            FolderId = folderId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -195,15 +269,25 @@ namespace Google.Cloud.SecurityCenter.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Asset</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Asset</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string AssetId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -216,6 +300,8 @@ namespace Google.Cloud.SecurityCenter.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationAsset: return s_organizationAsset.Expand(OrganizationId, AssetId);
+                case ResourceNameType.FolderAsset: return s_folderAsset.Expand(FolderId, AssetId);
+                case ResourceNameType.ProjectAsset: return s_projectAsset.Expand(ProjectId, AssetId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

@@ -1746,7 +1746,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1759,7 +1761,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1772,13 +1776,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        /// all sources provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-
+        /// "organizations/[organization_id]/sources/[source_id]",
+        /// folders/[folder_id]/sources/[source_id], or
+        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// provide a source_id of `-`. For example:
+        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
+        /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping (including
@@ -1821,13 +1830,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        /// all sources provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-
+        /// "organizations/[organization_id]/sources/[source_id]",
+        /// folders/[folder_id]/sources/[source_id], or
+        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// provide a source_id of `-`. For example:
+        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
+        /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping (including
@@ -1870,13 +1884,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        /// all sources provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-
+        /// "organizations/[organization_id]/sources/[source_id]",
+        /// folders/[folder_id]/sources/[source_id], or
+        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// provide a source_id of `-`. For example:
+        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
+        /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping (including
@@ -1919,13 +1938,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the source to groupBy. Its format is
-        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        /// all sources provide a source_id of `-`. For example:
-        /// organizations/{organization_id}/sources/-
+        /// "organizations/[organization_id]/sources/[source_id]",
+        /// folders/[folder_id]/sources/[source_id], or
+        /// projects/[project_id]/sources/[source_id]. To groupBy across all sources
+        /// provide a source_id of `-`. For example:
+        /// organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-,
+        /// or projects/{project_id}/sources/-
         /// </param>
         /// <param name="groupBy">
         /// Required. Expression that defines what assets fields to use for grouping (including
@@ -2151,8 +2175,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2176,8 +2201,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2201,8 +2227,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2226,8 +2253,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Lists all sources belonging to an organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id]".
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2243,6 +2271,110 @@ namespace Google.Cloud.SecurityCenter.V1
             ListSourcesAsync(new ListSourcesRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSources(new ListSourcesRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSourcesAsync(new ListSourcesRequest
+            {
+                ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Source"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSources(new ListSourcesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id], folders/[folder_id], or
+        /// projects/[project_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Source"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSourcesAsync(new ListSourcesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -3787,7 +3919,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3803,7 +3937,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// specified properties.
         /// 
         /// To group across all sources provide a `-` as the source id.
-        /// Example: /v1/organizations/{organization_id}/sources/-/findings
+        /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+        /// /v1/folders/{folder_id}/sources/-/findings,
+        /// /v1/projects/{project_id}/sources/-/findings
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
