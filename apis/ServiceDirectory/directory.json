@@ -889,7 +889,7 @@
         "google/rpc"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Clouddms.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.CloudDms.V1"
     },
     {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
