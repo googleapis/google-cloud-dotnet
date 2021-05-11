@@ -3,7 +3,7 @@
 //     source: google/cloud/securitycenter/v1/securitycenter_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -376,7 +376,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/{organization_id}/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+      /// /v1/folders/{folder_id}/sources/-/findings,
+      /// /v1/projects/{project_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -495,6 +497,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      ///
       /// Updates a notification config. The following update
       /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
@@ -973,7 +976,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/{organization_id}/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+      /// /v1/folders/{folder_id}/sources/-/findings,
+      /// /v1/projects/{project_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -989,7 +994,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/{organization_id}/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+      /// /v1/folders/{folder_id}/sources/-/findings,
+      /// /v1/projects/{project_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1003,7 +1010,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/{organization_id}/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+      /// /v1/folders/{folder_id}/sources/-/findings,
+      /// /v1/projects/{project_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1019,7 +1028,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// specified properties.
       ///
       /// To group across all sources provide a `-` as the source id.
-      /// Example: /v1/organizations/{organization_id}/sources/-/findings
+      /// Example: /v1/organizations/{organization_id}/sources/-/findings,
+      /// /v1/folders/{folder_id}/sources/-/findings,
+      /// /v1/projects/{project_id}/sources/-/findings
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1461,6 +1472,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFinding, null, options, request);
       }
       /// <summary>
+      ///
       /// Updates a notification config. The following update
       /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
@@ -1474,6 +1486,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return UpdateNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      ///
       /// Updates a notification config. The following update
       /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
@@ -1485,6 +1498,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateNotificationConfig, null, options, request);
       }
       /// <summary>
+      ///
       /// Updates a notification config. The following update
       /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
@@ -1498,6 +1512,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return UpdateNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      ///
       /// Updates a notification config. The following update
       /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
