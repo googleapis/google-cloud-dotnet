@@ -44,6 +44,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.BinaryAuthorization.V1Beta1](Google.Cloud.BinaryAuthorization.V1Beta1/index.html) | 1.0.0-beta02 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
 | [Google.Cloud.Channel.V1](Google.Cloud.Channel.V1/index.html) | 1.1.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.1.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
+| [Google.Cloud.CloudDms.V1](Google.Cloud.CloudDms.V1/index.html) | 1.0.0-beta01 | [Database Migration](https://cloud.google.com/database-migration) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
