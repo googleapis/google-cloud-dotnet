@@ -36,6 +36,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Int64,
             SpannerDbType.Timestamp,
             SpannerDbType.Float64,
+            SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
@@ -43,14 +44,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
-        };
-
-        public static TheoryData<SpannerDbType> BindNullNumericData { get; } = new TheoryData<SpannerDbType>
-        {
-            SpannerDbType.Numeric,
-            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
         };
 
         // [START spanner_test_query_bind_bool_null]
@@ -59,6 +55,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_int64_null]
         // [START spanner_test_query_bind_float64_null]
         // [END spanner_test_query_bind_float64_null]
+        // [START spanner_test_query_bind_numeric_null]
+        // [END spanner_test_query_bind_numeric_null]
         // [START spanner_test_query_bind_string_null]
         // [END spanner_test_query_bind_string_null]
         // [START spanner_test_query_bind_bytes_null]
@@ -73,6 +71,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_int64_array_null]
         // [START spanner_test_query_bind_float64_array_null]
         // [END spanner_test_query_bind_float64_array_null]
+        // [START spanner_test_query_bind_numeric_array_null]
+        // [END spanner_test_query_bind_numeric_array_null]
         // [START spanner_test_query_bind_string_array_null]
         // [END spanner_test_query_bind_string_array_null]
         // [START spanner_test_query_bind_bytes_array_null]
@@ -84,30 +84,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Theory]
         [MemberData(nameof(BindNullData))]
         public async Task BindNull(SpannerDbType parameterType)
-        {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand("SELECT @v");
-                cmd.Parameters.Add("v", parameterType, null);
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-
-                    Assert.True(reader.IsDBNull(0));
-                    Assert.Equal(DBNull.Value, reader.GetValue(0));
-
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
-        }
-
-        // [START spanner_test_query_bind_numeric_null]
-        // [END spanner_test_query_bind_numeric_null]
-        // [START spanner_test_query_bind_numeric_array_null]
-        // [END spanner_test_query_bind_numeric_array_null]
-        [Theory]
-        [MemberData(nameof(BindNullNumericData))]
-        public async Task BindNullNumeric(SpannerDbType parameterType)
         {
             using (var connection = _fixture.GetConnection())
             {
