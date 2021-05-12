@@ -1618,6 +1618,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.OsConfig.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/osconfig/v1alpha",
+      "Name": "osconfig.googleapis.com",
+      "Title": "OS Config API",
+      "Description": "OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
+      "ServiceConfigFile": "google/cloud/osconfig/v1alpha/osconfig_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.cloud.osconfig.v1alpha",
+      "PackageFromProtos": "google.cloud.osconfig.v1alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/osconfig/v1alpha",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.OsConfig.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/osconfig/v1beta",
       "Name": "osconfig.googleapis.com",
       "Title": "Cloud OS Config API",
