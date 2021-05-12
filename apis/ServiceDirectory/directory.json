@@ -1340,6 +1340,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Language.V1Beta2"
     },
     {
+      "ServiceDirectory": "google/cloud/lifesciences/v2beta",
+      "Name": "lifesciences.googleapis.com",
+      "Title": "Cloud Life Sciences API",
+      "Description": "Cloud Life Sciences is a suite of services and tools for managing, processing, and transforming life sciences data.",
+      "ServiceConfigFile": "google/cloud/lifesciences/v2beta/lifesciences_v2beta.yaml",
+      "Version": "v2beta",
+      "PackageFromDirectory": "google.cloud.lifesciences.v2beta",
+      "PackageFromProtos": "google.cloud.lifesciences.v2beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Lifesciences.V2Beta"
+    },
+    {
       "ServiceDirectory": "google/cloud/managedidentities/v1",
       "Name": "managedidentities.googleapis.com",
       "Title": "Managed Service for Microsoft Active Directory API",
