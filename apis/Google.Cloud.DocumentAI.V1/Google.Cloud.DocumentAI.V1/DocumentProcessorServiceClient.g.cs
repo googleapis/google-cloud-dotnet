@@ -214,9 +214,9 @@ namespace Google.Cloud.DocumentAI.V1
     {
         /// <summary>
         /// The default endpoint for the DocumentProcessorService service, which is a host of
-        /// "us-documentai.googleapis.com" and a port of 443.
+        /// "documentai.googleapis.com" and a port of 443.
         /// </summary>
-        public static string DefaultEndpoint { get; } = "us-documentai.googleapis.com:443";
+        public static string DefaultEndpoint { get; } = "documentai.googleapis.com:443";
 
         /// <summary>The default DocumentProcessorService scopes.</summary>
         /// <remarks>
