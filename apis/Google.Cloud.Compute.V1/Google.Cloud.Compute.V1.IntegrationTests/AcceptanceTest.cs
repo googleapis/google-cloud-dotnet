@@ -63,7 +63,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
 
                 Operation insertOperation = addressesClient.Insert(projectId, region, addressResource);
                 _output.WriteLine($"Operation to create address: {insertOperation.Name} status {insertOperation.Status}; start time {insertOperation.StartTime}");
-                insertOperation = _fixture.PollRegionalOperationUntilCompleted(insertOperation, "create", _output);
+                insertOperation = _fixture.PollUntilCompleted(insertOperation, "create", _output);
                 _output.WriteLine($"Operation to create address completed: status {insertOperation.Status}; start time {insertOperation.StartTime}; end time {insertOperation.EndTime}");
             }
 
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 _output.WriteLine($"Deleting address with the name: {addressName}");
                 Operation deleteOp = addressesClient.Delete(projectId, region, addressName);
                 _output.WriteLine($"Operation to delete address: {deleteOp.Name} status {deleteOp.Status}; start time {deleteOp.StartTime}");
-                deleteOp = _fixture.PollRegionalOperationUntilCompleted(deleteOp, "delete", _output);
+                deleteOp = _fixture.PollUntilCompleted(deleteOp, "delete", _output);
                 _output.WriteLine($"Operation to delete address completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
             }
         }
