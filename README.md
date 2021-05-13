@@ -40,6 +40,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Channel.V1](https://googleapis.dev/dotnet/Google.Cloud.Channel.V1/1.1.0) | 1.1.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](https://googleapis.dev/dotnet/Google.Cloud.CloudBuild.V1/1.1.0) | 1.1.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.CloudDms.V1](https://googleapis.dev/dotnet/Google.Cloud.CloudDms.V1/1.0.0-beta01) | 1.0.0-beta01 | [Database Migration](https://cloud.google.com/database-migration) |
+| [Google.Cloud.Compute.V1](https://googleapis.dev/dotnet/Google.Cloud.Compute.V1/1.0.0-alpha01) | 1.0.0-alpha01 | [Compute Engine](https://cloud.google.com/compute) |
 | [Google.Cloud.Container.V1](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/2.2.0) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://googleapis.dev/dotnet/Google.Cloud.DataCatalog.V1/1.2.0) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.DataLabeling.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
