@@ -15,7 +15,9 @@
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
+using System.Threading;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Google.Cloud.Compute.V1.IntegrationTests
 {
@@ -77,6 +79,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 client.Delete(ProjectId, Region, addressToDelete);
             }
         }
+
         private void CleanUpInstances()
         {
             var client = InstancesClient.Create();
@@ -88,6 +91,74 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             {
                 client.Delete(ProjectId, Zone, instanceToDelete);
             }
+        }
+
+        // TODO: Can we autodetect operation type (and recreate the request) based just on the data in
+        // the initial operation?
+
+        public Operation PollRegionalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
+        {
+            RegionOperationsClient client = RegionOperationsClient.Create();
+            GetRegionOperationRequest request = new GetRegionOperationRequest
+            {
+                Operation = operation.Name,
+                Region = Region,
+                Project = ProjectId,
+            };
+            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
+        }
+
+        public Operation PollZonalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
+        {
+            ZoneOperationsClient client = ZoneOperationsClient.Create();
+            GetZoneOperationRequest request = new GetZoneOperationRequest
+            {
+                Operation = operation.Name,
+                Zone = Zone,
+                Project = ProjectId,
+            };
+            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
+        }
+
+        public Operation PollGlobalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
+        {
+            GlobalOperationsClient client = GlobalOperationsClient.Create();
+            GetGlobalOperationRequest request = new GetGlobalOperationRequest
+            {
+                Operation = operation.Name,
+                Project = ProjectId,
+            };
+            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
+        }
+
+        private static Operation PollUntilCompleted(Operation initialOperation, Func<Operation> poller, string alias, ITestOutputHelper output)
+        {
+            Operation operation = initialOperation;
+
+            TimeSpan timeOut = TimeSpan.FromMinutes(3);
+            TimeSpan pollInterval = TimeSpan.FromSeconds(15);
+
+            DateTime deadline = DateTime.UtcNow + timeOut;
+            while (operation.Status != Operation.Types.Status.Done)
+            {                
+                output.WriteLine($"Checking for {alias} operation status ...");
+                operation = poller();
+
+                if (operation.Status == Operation.Types.Status.Done)
+                {
+                    break;
+                }
+
+                if (DateTime.UtcNow > deadline)
+                {
+                    throw new InvalidOperationException(
+                        $"Timeout hit while polling for the status of the {alias} operation\n{operation}");
+                }
+
+                output.WriteLine($"Status: {operation.Status}. Sleeping for the {pollInterval.TotalSeconds}s");
+                Thread.Sleep(pollInterval);
+            }
+            return operation;
         }
     }
 }

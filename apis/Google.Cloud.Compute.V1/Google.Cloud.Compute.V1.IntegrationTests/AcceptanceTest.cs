@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Threading;
 using Grpc.Core;
 using Xunit;
 using Xunit.Abstractions;
@@ -65,7 +63,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
 
                 Operation insertOperation = addressesClient.Insert(projectId, region, addressResource);
                 _output.WriteLine($"Operation to create address: {insertOperation.Name} status {insertOperation.Status}; start time {insertOperation.StartTime}");
-                insertOperation = PollForCompletion(insertOperation, "create");
+                insertOperation = _fixture.PollRegionalOperationUntilCompleted(insertOperation, "create", _output);
                 _output.WriteLine($"Operation to create address completed: status {insertOperation.Status}; start time {insertOperation.StartTime}; end time {insertOperation.EndTime}");
             }
 
@@ -82,44 +80,11 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 _output.WriteLine($"Deleting address with the name: {addressName}");
                 Operation deleteOp = addressesClient.Delete(projectId, region, addressName);
                 _output.WriteLine($"Operation to delete address: {deleteOp.Name} status {deleteOp.Status}; start time {deleteOp.StartTime}");
-                deleteOp = PollForCompletion(deleteOp, "delete");
+                deleteOp = _fixture.PollRegionalOperationUntilCompleted(deleteOp, "delete", _output);
                 _output.WriteLine($"Operation to delete address completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
             }
         }
 
-        private Operation PollForCompletion(Operation operation, string alias)
-        {
-            RegionOperationsClient regionOperationsClient = RegionOperationsClient.Create();
-
-            TimeSpan timeOut = TimeSpan.FromMinutes(3);
-            TimeSpan pollInterval = TimeSpan.FromSeconds(15);
-
-            DateTime deadline = DateTime.UtcNow + timeOut;
-            while (operation.Status != Operation.Types.Status.Done)
-            {
-                GetRegionOperationRequest request = new GetRegionOperationRequest
-                {
-                    Operation = operation.Name,
-                    Region = _fixture.Region,
-                    Project = _fixture.ProjectId,
-                };
-                _output.WriteLine($"Checking for {alias} operation status ...");
-                operation = regionOperationsClient.Get(request);
-
-                if (operation.Status == Operation.Types.Status.Done) 
-                {
-                    break;
-                }
-                if (DateTime.UtcNow > deadline)
-                {
-                    throw new InvalidOperationException(
-                        $"Timeout hit while polling for the status of the {alias} operation\n{operation}");
-                }
-                _output.WriteLine($"Status: {operation.Status}. Sleeping for the {pollInterval.TotalSeconds}s");
-                Thread.Sleep(pollInterval);
-            }
-
-            return operation;
-        }
+        
     }
 }

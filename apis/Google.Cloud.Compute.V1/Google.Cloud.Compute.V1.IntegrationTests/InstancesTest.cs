@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Threading;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -65,7 +63,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     NetworkInterfaces = {new NetworkInterface {Name = "default"}}
                 };
                 Operation insertOp = instancesClient.Insert(projectId, zone, instanceResource);
-                PollForCompletion(insertOp, "create");
+                _fixture.PollZonalOperationUntilCompleted(insertOp, "create", _output);
             }
 
             void FetchInstance()
@@ -83,7 +81,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             {
                 _output.WriteLine($"Deleting instance with the name: {instanceName}");
                 Operation deleteOp = instancesClient.Delete(projectId, zone, instanceName);
-                deleteOp = PollForCompletion(deleteOp, "delete");
+                deleteOp = _fixture.PollZonalOperationUntilCompleted(deleteOp, "delete", _output);
                 _output.WriteLine(
                     $"Operation to delete instance completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
             }
@@ -95,13 +93,13 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     EnableSecureBoot = true
                 };
                 Operation stopOp = instancesClient.Stop(projectId, zone, instanceName);
-                PollForCompletion(stopOp, "stop");
+                _fixture.PollZonalOperationUntilCompleted(stopOp, "stop", _output);
                 Operation patchOp = instancesClient.UpdateShieldedInstanceConfig(
                     projectId,
                     zone,
                     instanceName,
                     shieldedInstanceConfigResource);
-                PollForCompletion(patchOp, "patch");
+                _fixture.PollZonalOperationUntilCompleted(patchOp, "patch", _output);
                 Instance instance = instancesClient.Get(projectId, zone, instanceName);
                 Assert.Equal(true, instance.ShieldedInstanceConfig.EnableSecureBoot);
             }
@@ -142,7 +140,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             try
             {
                 Operation insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
-                PollForCompletionGlobalOp(insertTemplateOp, "insert template");
+                _fixture.PollZonalOperationUntilCompleted(insertTemplateOp, "insert template", _output);
 
                 InstanceGroupManager instanceGroupManager = new InstanceGroupManager
                 {
@@ -153,7 +151,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 };
 
                 Operation insertIgmOp = instanceGroupManagersClient.Insert(projectId, zone, instanceGroupManager);
-                PollForCompletion(insertIgmOp, "insert group manager");
+                _fixture.PollZonalOperationUntilCompleted(insertIgmOp, "insert group manager", _output);
 
                 Operation resizeOp = instanceGroupManagersClient.Resize(
                     projectId,
@@ -162,7 +160,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     0
                 );
 
-                PollForCompletion(resizeOp, "resize");
+                _fixture.PollZonalOperationUntilCompleted(resizeOp, "resize", _output);
 
                 var fetched = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
 
@@ -172,85 +170,12 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             {
                 Operation deleteOp = instanceGroupManagersClient.Delete(projectId, zone, instanceGroupManagerName);
 
-                PollForCompletion(deleteOp, "delete igm");
+                _fixture.PollZonalOperationUntilCompleted(deleteOp, "delete igm", _output);
 
                 Operation deleteTemplateOp = instanceTemplatesClient.Delete(projectId, instanceTemplateName);
 
-                PollForCompletionGlobalOp(deleteTemplateOp, "delete template");
+                _fixture.PollGlobalOperationUntilCompleted(deleteTemplateOp, "delete template", _output);
             }
-        }
-
-        private Operation PollForCompletion(Operation operation, string alias)
-        {
-            ZoneOperationsClient zoneOperationsClient = ZoneOperationsClient.Create();
-
-            TimeSpan timeOut = TimeSpan.FromMinutes(3);
-            TimeSpan pollInterval = TimeSpan.FromSeconds(15);
-
-            DateTime deadline = DateTime.UtcNow + timeOut;
-            while (operation.Status != Operation.Types.Status.Done)
-            {
-                GetZoneOperationRequest request = new GetZoneOperationRequest
-                {
-                    Operation = operation.Name,
-                    Zone = _fixture.Zone,
-                    Project = _fixture.ProjectId,
-                };
-                _output.WriteLine($"Checking for {alias} operation status ...");
-                operation = zoneOperationsClient.Get(request);
-
-                if (operation.Status == Operation.Types.Status.Done)
-                {
-                    break;
-                }
-
-                if (DateTime.UtcNow > deadline)
-                {
-                    throw new InvalidOperationException(
-                        $"Timeout hit while polling for the status of the {alias} operation\n{operation}");
-                }
-
-                _output.WriteLine($"Status: {operation.Status}. Sleeping for the {pollInterval.TotalSeconds}s");
-                Thread.Sleep(pollInterval);
-            }
-
-            return operation;
-        }
-
-        private Operation PollForCompletionGlobalOp(Operation operation, string alias)
-        {
-            GlobalOperationsClient globalOperationClient = GlobalOperationsClient.Create();
-
-            TimeSpan timeOut = TimeSpan.FromMinutes(3);
-            TimeSpan pollInterval = TimeSpan.FromSeconds(15);
-
-            DateTime deadline = DateTime.UtcNow + timeOut;
-            while (operation.Status != Operation.Types.Status.Done)
-            {
-                GetGlobalOperationRequest request = new GetGlobalOperationRequest
-                {
-                    Operation = operation.Name,
-                    Project = _fixture.ProjectId,
-                };
-                _output.WriteLine($"Checking for {alias} operation status ...");
-                operation = globalOperationClient.Get(request);
-
-                if (operation.Status == Operation.Types.Status.Done)
-                {
-                    break;
-                }
-
-                if (DateTime.UtcNow > deadline)
-                {
-                    throw new InvalidOperationException(
-                        $"Timeout hit while polling for the status of the {alias} operation\n{operation}");
-                }
-
-                _output.WriteLine($"Status: {operation.Status}. Sleeping for the {pollInterval.TotalSeconds}s");
-                Thread.Sleep(pollInterval);
-            }
-
-            return operation;
         }
     }
 }
