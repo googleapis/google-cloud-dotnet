@@ -27,9 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Generate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.PostProcessDevSite", "..\tools\Google.Cloud.Tools.PostProcessDevSite\Google.Cloud.Tools.PostProcessDevSite.csproj", "{F6D3A1D9-4D6D-4DAF-85B6-AB8CDDE10780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.RegenerateToc", "..\tools\Google.Cloud.Tools.RegenerateToc\Google.Cloud.Tools.RegenerateToc.csproj", "{D1C3EFCD-0ED3-4555-8437-007BAB1D3D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.RegenerateToc", "..\tools\Google.Cloud.Tools.RegenerateToc\Google.Cloud.Tools.RegenerateToc.csproj", "{D1C3EFCD-0ED3-4555-8437-007BAB1D3D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.DocfxMetadata", "..\tools\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocfxMetadata", "..\tools\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.GenerateCanonicalLinks", "..\tools\Google.Cloud.Tools.GenerateCanonicalLinks\Google.Cloud.Tools.GenerateCanonicalLinks.csproj", "{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.CanonicalLinkFunction", "..\tools\Google.Cloud.Tools.CanonicalLinkFunction\Google.Cloud.Tools.CanonicalLinkFunction.csproj", "{C42A623C-F5C8-43A4-9842-F8D8D6206626}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +213,30 @@ Global
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x64.Build.0 = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.ActiveCfg = Release|Any CPU
 		{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}.Release|x86.Build.0 = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|x64.Build.0 = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Debug|x86.Build.0 = Debug|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|x64.ActiveCfg = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|x64.Build.0 = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|x86.ActiveCfg = Release|Any CPU
+		{49D50464-CB7E-4FBF-AE53-B34C42BD5B15}.Release|x86.Build.0 = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|x64.Build.0 = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Debug|x86.Build.0 = Debug|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|x64.ActiveCfg = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|x64.Build.0 = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|x86.ActiveCfg = Release|Any CPU
+		{C42A623C-F5C8-43A4-9842-F8D8D6206626}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
