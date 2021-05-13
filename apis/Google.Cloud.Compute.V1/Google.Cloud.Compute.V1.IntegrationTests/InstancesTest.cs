@@ -63,7 +63,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     NetworkInterfaces = {new NetworkInterface {Name = "default"}}
                 };
                 Operation insertOp = instancesClient.Insert(projectId, zone, instanceResource);
-                _fixture.PollZonalOperationUntilCompleted(insertOp, "create", _output);
+                _fixture.PollUntilCompleted(insertOp, "create", _output);
             }
 
             void FetchInstance()
@@ -81,7 +81,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             {
                 _output.WriteLine($"Deleting instance with the name: {instanceName}");
                 Operation deleteOp = instancesClient.Delete(projectId, zone, instanceName);
-                deleteOp = _fixture.PollZonalOperationUntilCompleted(deleteOp, "delete", _output);
+                deleteOp = _fixture.PollUntilCompleted(deleteOp, "delete", _output);
                 _output.WriteLine(
                     $"Operation to delete instance completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
             }
@@ -93,13 +93,13 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     EnableSecureBoot = true
                 };
                 Operation stopOp = instancesClient.Stop(projectId, zone, instanceName);
-                _fixture.PollZonalOperationUntilCompleted(stopOp, "stop", _output);
+                _fixture.PollUntilCompleted(stopOp, "stop", _output);
                 Operation patchOp = instancesClient.UpdateShieldedInstanceConfig(
                     projectId,
                     zone,
                     instanceName,
                     shieldedInstanceConfigResource);
-                _fixture.PollZonalOperationUntilCompleted(patchOp, "patch", _output);
+                _fixture.PollUntilCompleted(patchOp, "patch", _output);
                 Instance instance = instancesClient.Get(projectId, zone, instanceName);
                 Assert.Equal(true, instance.ShieldedInstanceConfig.EnableSecureBoot);
             }
@@ -140,7 +140,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             try
             {
                 Operation insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
-                _fixture.PollZonalOperationUntilCompleted(insertTemplateOp, "insert template", _output);
+                _fixture.PollUntilCompleted(insertTemplateOp, "insert template", _output);
 
                 InstanceGroupManager instanceGroupManager = new InstanceGroupManager
                 {
@@ -151,7 +151,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 };
 
                 Operation insertIgmOp = instanceGroupManagersClient.Insert(projectId, zone, instanceGroupManager);
-                _fixture.PollZonalOperationUntilCompleted(insertIgmOp, "insert group manager", _output);
+                _fixture.PollUntilCompleted(insertIgmOp, "insert group manager", _output);
 
                 Operation resizeOp = instanceGroupManagersClient.Resize(
                     projectId,
@@ -160,7 +160,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     0
                 );
 
-                _fixture.PollZonalOperationUntilCompleted(resizeOp, "resize", _output);
+                _fixture.PollUntilCompleted(resizeOp, "resize", _output);
 
                 var fetched = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
 
@@ -170,11 +170,11 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             {
                 Operation deleteOp = instanceGroupManagersClient.Delete(projectId, zone, instanceGroupManagerName);
 
-                _fixture.PollZonalOperationUntilCompleted(deleteOp, "delete igm", _output);
+                _fixture.PollUntilCompleted(deleteOp, "delete igm", _output);
 
                 Operation deleteTemplateOp = instanceTemplatesClient.Delete(projectId, instanceTemplateName);
 
-                _fixture.PollGlobalOperationUntilCompleted(deleteTemplateOp, "delete template", _output);
+                _fixture.PollUntilCompleted(deleteTemplateOp, "delete template", _output);
             }
         }
     }

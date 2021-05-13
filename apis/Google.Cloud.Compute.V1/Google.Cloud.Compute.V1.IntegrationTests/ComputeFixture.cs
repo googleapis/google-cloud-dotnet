@@ -93,47 +93,13 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             }
         }
 
-        // TODO: Can we autodetect operation type (and recreate the request) based just on the data in
-        // the initial operation?
+        // Note: we could extract the region/zone from the operation, but it's a URL rather than just the region/zone part.
+        // So instead, we just use the fixture's region/zone. If we want to generalize this into a helper method in the
+        // library itself, we'll need to parse those URLs (or maybe the self-link, which would contain the project ID).
 
-        public Operation PollRegionalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
+        public Operation PollUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
         {
-            RegionOperationsClient client = RegionOperationsClient.Create();
-            GetRegionOperationRequest request = new GetRegionOperationRequest
-            {
-                Operation = operation.Name,
-                Region = Region,
-                Project = ProjectId,
-            };
-            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
-        }
-
-        public Operation PollZonalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
-        {
-            ZoneOperationsClient client = ZoneOperationsClient.Create();
-            GetZoneOperationRequest request = new GetZoneOperationRequest
-            {
-                Operation = operation.Name,
-                Zone = Zone,
-                Project = ProjectId,
-            };
-            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
-        }
-
-        public Operation PollGlobalOperationUntilCompleted(Operation operation, string alias, ITestOutputHelper output)
-        {
-            GlobalOperationsClient client = GlobalOperationsClient.Create();
-            GetGlobalOperationRequest request = new GetGlobalOperationRequest
-            {
-                Operation = operation.Name,
-                Project = ProjectId,
-            };
-            return PollUntilCompleted(operation, () => client.Get(request), alias, output);
-        }
-
-        private static Operation PollUntilCompleted(Operation initialOperation, Func<Operation> poller, string alias, ITestOutputHelper output)
-        {
-            Operation operation = initialOperation;
+            var poller = CreatePoller(operation);
 
             TimeSpan timeOut = TimeSpan.FromMinutes(3);
             TimeSpan pollInterval = TimeSpan.FromSeconds(15);
@@ -159,6 +125,43 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 Thread.Sleep(pollInterval);
             }
             return operation;
+        }
+
+        private Func<Operation> CreatePoller(Operation operation)
+        {
+            if (operation.HasRegion && !operation.HasZone)
+            {
+                RegionOperationsClient client = RegionOperationsClient.Create();
+                GetRegionOperationRequest request = new GetRegionOperationRequest
+                {
+                    Operation = operation.Name,
+                    Region = Region,
+                    Project = ProjectId,
+                };
+                return () => client.Get(request);
+            }
+            else if (operation.HasZone && !operation.HasRegion)
+            {
+                ZoneOperationsClient client = ZoneOperationsClient.Create();
+                GetZoneOperationRequest request = new GetZoneOperationRequest
+                {
+                    Operation = operation.Name,
+                    Zone = Zone,
+                    Project = ProjectId,
+                };
+                return () => client.Get(request);
+            }
+            else if (!operation.HasZone && !operation.HasRegion)
+            {
+                GlobalOperationsClient client = GlobalOperationsClient.Create();
+                GetGlobalOperationRequest request = new GetGlobalOperationRequest
+                {
+                    Operation = operation.Name,
+                    Project = ProjectId,
+                };
+                return () => client.Get(request);
+            }
+            throw new ArgumentException($"Unable to determine operation type for {operation}");
         }
     }
 }
