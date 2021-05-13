@@ -1,0 +1,6 @@
+{
+  "distribution_name": "Google.Cloud.Compute.V1",
+  "release_level": "alpha",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Compute.V1/latest",
+  "library_type": "GAPIC_AUTO"
+}
