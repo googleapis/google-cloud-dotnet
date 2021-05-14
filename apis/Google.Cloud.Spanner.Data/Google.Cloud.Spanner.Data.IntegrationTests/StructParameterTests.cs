@@ -304,7 +304,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_query_select_struct_fails]
         [SkippableFact]
         public async Task SelectStructFails()
         {
@@ -326,9 +325,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_select_struct_fails]
 
-        // [START spanner_test_query_select_array_struct_fails]
         [SkippableFact]
         public async Task SelectStructArrayFails()
         {
@@ -353,9 +350,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_select_array_struct_fails]
 
-        // [START spanner_test_query_select_ambiguous_field_fails]
         [Fact]
         public async Task SelectAmbiguousFieldFails()
         {
@@ -376,6 +371,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_select_ambiguous_field_fails]
     }
 }

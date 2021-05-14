@@ -269,7 +269,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        // [START spanner_test_dml_duplicate_update]
         [Fact]
         public void InsertAndUpdateWithQuery()
         {
@@ -306,7 +305,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             };
             Assert.Equal(expected, actual);
         }
-        // [END spanner_test_dml_duplicate_update]
 
         [Fact]
         public void DmlResultsVisibleWithinTransaction()

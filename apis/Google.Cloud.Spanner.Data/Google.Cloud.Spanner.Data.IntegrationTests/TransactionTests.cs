@@ -119,7 +119,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_transaction_retry_on_aborted]
         [SkippableFact]
         public async Task AbortedThrownCorrectly()
         {
@@ -191,9 +190,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_transaction_retry_on_aborted]
 
-        // [START spanner_test_transaction_query_increment]
         [Fact]
         public async Task MultiWrite()
         {
@@ -227,7 +224,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 connections[i].Dispose();
             }
         }
-        // [END spanner_test_transaction_query_increment]
 
         [Fact]
         public void MultiTableWrite()
@@ -290,7 +286,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_read_exact]
         [Fact]
         public async Task ReadExact()
         {
@@ -316,9 +311,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_exact]
 
-        // [START spanner_test_exact_read_concurrent_updates]
         [Fact]
         public async Task ReadExactSingle()
         {
@@ -335,11 +328,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_exact_read_concurrent_updates]
 
-        // [START spanner_test_read_min_single_use]
-        // [END spanner_test_read_min_single_use]
-        // [START spanner_test_read_min]
         [Fact]
         public async Task ReadMin()
         {
@@ -361,9 +350,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_min]
 
-        // [START spanner_test_read_exact_staleness]
         [Fact]
         public async Task ReadStaleExact()
         {
@@ -385,9 +372,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_exact_staleness]
 
-        // [START spanner_test_read_exact_staleness_concurrent_updates]
         [Fact]
         public async Task ReadStaleExactSingle()
         {
@@ -402,11 +387,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_exact_staleness_concurrent_updates]
 
-        // [START spanner_test_read_max_staleness_single_use]
-        // [END spanner_test_read_max_staleness_single_use]
-        // [START spanner_test_read_max_staleness]
         [Fact]
         public async Task ReadStaleMax()
         {
@@ -429,9 +410,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_max_staleness]
 
-        // [START spanner_test_strong_read]
         [Fact]
         public async Task ReadStrong()
         {
@@ -454,9 +433,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_strong_read]
 
-        // [START spanner_test_strong_read_concurrent_updates]
         [Fact]
         public async Task ReadStrongSingle()
         {
@@ -473,9 +450,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_strong_read_concurrent_updates]
 
-        // [START spanner_get_commit_stats]
         /// <summary>
         /// Simple extension of DefaultLogger that also keeps a reference to the last logged CommitResponse.
         /// </summary>
@@ -527,6 +502,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             });
         }
-        // [END spanner_get_commit_stats]
     }
 }

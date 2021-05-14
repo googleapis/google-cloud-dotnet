@@ -43,7 +43,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_read_invalid_column_name]
         [Fact]
         public async Task BadColumnName()
         {
@@ -58,9 +57,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_invalid_column_name]
 
-        // [START spanner_test_read_invalid_db_name]
         [Fact]
         public async Task BadDbName()
         {
@@ -80,9 +77,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // later in the log.
             await SessionPoolHelpers.ShutdownPoolAsync(connectionString);
         }
-        // [END spanner_test_read_invalid_db_name]
 
-        // [START spanner_test_read_invalid_table_name]
         [Fact]
         public async Task BadTableName()
         {
@@ -97,9 +92,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_read_invalid_table_name]
 
-        // [START spanner_test_cancel_read_fails]
         [SkippableFact]
         public async Task CancelRead()
         {
@@ -118,9 +111,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_cancel_read_fails]
 
-        // [START spanner_test_query_empty_array_struct]
         [Fact]
         public async Task EmptyStructArray()
         {
@@ -128,18 +119,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var result = await ExecuteAsync<IList>(sqlQuery);
             Assert.Equal(0, result.Count);
         }
-        // [END spanner_test_query_empty_array_struct]
 
-        // [START spanner_test_query_nan]
         [Fact]
         public async Task NaN()
         {
             double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(0, 0)");
             Assert.True(double.IsNaN(result));
         }
-        // [END spanner_test_query_nan]
 
-        // [START spanner_test_query_array_posinf_neginf_nan]
         [Fact]
         public async Task NaNArray()
         {
@@ -151,18 +138,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.True(double.IsNegativeInfinity(result[1]));
             Assert.True(double.IsNaN(result[2]));
         }
-        // [END spanner_test_query_array_posinf_neginf_nan]
 
-        // [START spanner_test_query_neg_infinity]
         [Fact]
         public async Task NegativeInf()
         {
             double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(-1, 0)");
             Assert.True(double.IsNegativeInfinity(result));
         }
-        // [END spanner_test_query_neg_infinity]
 
-        // [START spanner_test_single_key_read]
         [Fact]
         public async Task PointRead()
         {
@@ -179,7 +162,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_read]
 
         [Fact]
         public async Task ReadAllowsNewApis()
@@ -198,7 +180,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_single_key_dne_read]
         [Fact]
         public async Task PointReadEmpty()
         {
@@ -211,18 +192,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_dne_read]
 
-        // [START spanner_test_query_pos_infinity]
         [Fact]
         public async Task PositiveInf()
         {
             double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(1, 0)");
             Assert.True(double.IsPositiveInfinity(result));
         }
-        // [END spanner_test_query_pos_infinity]
 
-        // [START spanner_test_query_invalid]
         [Fact]
         public async Task QueryTypo()
         {
@@ -237,9 +214,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_invalid]
 
-        // [START spanner_test_empty_read]
         [Fact]
         public async Task ReadEmpty()
         {
@@ -253,7 +228,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_empty_read]
 
         [Fact]
         public async Task GetFieldValue_NoReadCall()
@@ -304,14 +278,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_query_select_one]
         [Fact]
         public async Task SelectOne()
         {
             long result = await ExecuteAsync<long>("SELECT 1");
             Assert.Equal(1, result);
         }
-        // [END spanner_test_query_select_one]
 
         [Fact]
         public async Task StructArray_AsDictionaryArray()
@@ -329,7 +301,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(2L, result[1]["C2"]);
         }
 
-        // [START spanner_test_query_array_struct]
         [Fact]
         public async Task StructArray_AsSpannerStructArray()
         {
@@ -347,7 +318,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             AssertStructField("C1", SpannerDbType.String, "b", struct2[0]);
             AssertStructField("C2", SpannerDbType.Int64, 2L, struct2[1]);
         }
-        // [END spanner_test_query_array_struct]
 
         [Fact]
         public async Task StructArray_DuplicateAndEmptyFieldNames()
@@ -427,7 +397,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_deadline_exceeded_fails]
         [SkippableFact]
         public async Task TimeoutFromOptions()
         {
@@ -446,9 +415,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 SpannerAssert.IsTimeout(e);
             }
         }
-        // [END spanner_test_deadline_exceeded_fails]
 
-        // [START spanner_test_query_bind_very_large_text_fails]
         [Fact]
         public async Task LargeRegexFailure()
         {
@@ -467,9 +434,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_bind_very_large_text_fails]
 
-        // [START spanner_test_query_select_unbound_param_fails]
         [Fact]
         public async Task UnboundParameter()
         {
@@ -487,7 +452,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_query_select_unbound_param_fails]
 
         [Fact]
         public void HasRows_NoRows_HasRowsFirst()
