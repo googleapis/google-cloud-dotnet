@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -32,7 +34,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = _fixture.GetConnection())
             {
-                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM {_fixture.TableName}");
+                var command = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
                 using (var reader = await command.ExecuteReaderAsync())
                 {
                     Assert.Null(reader.GetSchemaTable());
@@ -40,34 +42,71 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
-        public async Task GetSchemaTable_WithFlagEnabled_ReturnsNull()
+        [MemberData(nameof(SchemaTestData))]
+        [Theory]
+        public async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema(string columnName, System.Type type, SpannerDbType spannerDbType)
         {
             using (var connection = new SpannerConnection($"{_fixture.ConnectionString};EnableGetSchemaTable=true"))
             {
-                var command = connection.CreateSelectCommand($"SELECT Int64Value, BytesArrayValue FROM {_fixture.TableName}");
+                var command = connection.CreateSelectCommand($"SELECT {columnName} FROM {_fixture.TableName}");
                 using (var reader = await command.ExecuteReaderAsync())
                 {
                     var table = reader.GetSchemaTable();
-                    Assert.Equal(2, table.Rows.Count);
+                    Assert.Equal(1, table.Rows.Count);
 
-                    var int64ValueRow = table.Rows[0];
-                    Assert.Equal("Int64Value", (string) int64ValueRow["ColumnName"]);
-                    Assert.Equal(0, (int) int64ValueRow["ColumnOrdinal"]);
-                    Assert.Equal(typeof(long), (System.Type) int64ValueRow["DataType"]);
-                    Assert.Equal(SpannerDbType.Int64, (SpannerDbType) int64ValueRow["ProviderType"]);
-                    Assert.True(int64ValueRow.IsNull("ColumnSize"));
-                    Assert.True(int64ValueRow.IsNull("NumericPrecision"));
-                    Assert.True(int64ValueRow.IsNull("NumericScale"));
+                    var row = table.Rows[0];
+                    Assert.Equal(columnName, (string)row["ColumnName"]);
+                    Assert.Equal(0, (int)row["ColumnOrdinal"]);
+                    Assert.Equal(type, row["DataType"]);
+                    Assert.Equal(spannerDbType, (SpannerDbType)row["ProviderType"]);
+                    // These fields are (currently) not filled as Spanner does not provided enough
+                    // information to fill them.
+                    Assert.True(row.IsNull("ColumnSize"));
+                    Assert.True(row.IsNull("NumericPrecision"));
+                    Assert.True(row.IsNull("NumericScale"));
+                }
+            }
+        }
 
-                    var bytesArrayValueRow = table.Rows[1];
-                    Assert.Equal("BytesArrayValue", (string) bytesArrayValueRow["ColumnName"]);
-                    Assert.Equal(1, (int) bytesArrayValueRow["ColumnOrdinal"]);
-                    Assert.Equal(typeof(List<byte[]>), (System.Type) bytesArrayValueRow["DataType"]);
-                    Assert.Equal(SpannerDbType.ArrayOf(SpannerDbType.Bytes), (SpannerDbType) bytesArrayValueRow["ProviderType"]);
-                    Assert.True(bytesArrayValueRow.IsNull("ColumnSize"));
-                    Assert.True(bytesArrayValueRow.IsNull("NumericPrecision"));
-                    Assert.True(bytesArrayValueRow.IsNull("NumericScale"));
+        public static TheoryData<string, System.Type, SpannerDbType> SchemaTestData { get; } =
+            new TheoryData<string, System.Type, SpannerDbType>
+            {
+                // Base types.
+                { "BoolValue", typeof(bool), SpannerDbType.Bool },
+                { "Int64Value", typeof(long), SpannerDbType.Int64 },
+                { "Float64Value", typeof(double), SpannerDbType.Float64 },
+                { "NumericValue", typeof(SpannerNumeric), SpannerDbType.Numeric },
+                { "StringValue", typeof(string), SpannerDbType.String },
+                { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
+                { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
+                { "DateValue", typeof(DateTime), SpannerDbType.Date },
+                // Array types.
+                { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
+                { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
+                { "Float64ArrayValue", typeof(List<double>), SpannerDbType.ArrayOf(SpannerDbType.Float64) },
+                { "NumericArrayValue", typeof(List<SpannerNumeric>), SpannerDbType.ArrayOf(SpannerDbType.Numeric) },
+                { "StringArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.String) },
+                { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
+                { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
+                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
+            };
+
+        [Fact]
+        public async Task GetSchemaTable_WithFlagEnabled_ReturnsColumnOrdinals()
+        {
+            using (var connection = new SpannerConnection($"{_fixture.ConnectionString};EnableGetSchemaTable=true"))
+            {
+                var command = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    var table = reader.GetSchemaTable();
+                    // The table also contains the `K` column that is the primary key.
+                    Assert.Equal(SchemaTestData.Count() + 1, table.Rows.Count);
+                    for (var ordinal = 1; ordinal <= SchemaTestData.Count(); ordinal++)
+                    {
+                        var row = table.Rows[ordinal];
+                        Assert.Equal(ordinal, (int)row["ColumnOrdinal"]);
+                    }
                 }
             }
         }
