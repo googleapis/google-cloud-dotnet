@@ -219,6 +219,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.AppEngine.V1"
     },
     {
+      "ServiceDirectory": "google/apps/alertcenter/v1beta1",
+      "Name": "alertcenter.googleapis.com",
+      "Title": "Google Workspace Alert Center API",
+      "Description": "Manages alerts on issues affecting your domain.",
+      "ServiceConfigFile": "google/apps/alertcenter/v1beta1/alertcenter.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.apps.alertcenter.v1beta1",
+      "PackageFromProtos": "google.apps.alertcenter.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Apps.AlertCenter.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/apps/drive/activity/v2",
       "Name": "driveactivity.googleapis.com",
       "Title": "Drive Activity API",
