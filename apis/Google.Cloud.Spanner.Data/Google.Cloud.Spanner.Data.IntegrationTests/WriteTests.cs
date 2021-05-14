@@ -70,38 +70,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_write_read_bool]
-        // [END spanner_test_write_read_bool]
-        // [START spanner_test_write_read_int64]
-        // [END spanner_test_write_read_int64]
-        // [START spanner_test_write_read_float64]
-        // [END spanner_test_write_read_float64]
-        // [START spanner_test_write_read_numeric]
-        // [END spanner_test_write_read_numeric]
-        // [START spanner_test_write_read_string]
-        // [END spanner_test_write_read_string]
-        // [START spanner_test_write_read_bytes]
-        // [END spanner_test_write_read_bytes]
-        // [START spanner_test_write_read_timestamp]
-        // [END spanner_test_write_read_timestamp]
-        // [START spanner_test_write_read_date]
-        // [END spanner_test_write_read_date]
-        // [START spanner_test_write_read_bool_array]
-        // [END spanner_test_write_read_bool_array]
-        // [START spanner_test_write_read_int64_array]
-        // [END spanner_test_write_read_int64_array]
-        // [START spanner_test_write_read_float64_array]
-        // [END spanner_test_write_read_float64_array]
-        // [START spanner_test_write_read_numeric_array]
-        // [END spanner_test_write_read_numeric_array]
-        // [START spanner_test_write_read_string_array]
-        // [END spanner_test_write_read_string_array]
-        // [START spanner_test_write_read_bytes_array]
-        // [END spanner_test_write_read_bytes_array]
-        // [START spanner_test_write_read_timestamp_array]
-        // [END spanner_test_write_read_timestamp_array]
-        // [START spanner_test_write_read_date_array]
-        // [END spanner_test_write_read_date_array]
         [Fact]
         public async Task WriteValues()
         {
@@ -165,7 +133,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
-        // [START spanner_test_write_invalid_column_name]
         [Fact]
         public async Task BadColumnName()
         {
@@ -179,9 +146,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
-        // [END spanner_test_write_invalid_column_name]
 
-        // [START spanner_test_write_incorrect_type]
         [Fact]
         public async Task BadColumnType()
         {
@@ -195,9 +160,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
-        // [END spanner_test_write_incorrect_type]
 
-        // [START spanner_test_write_invalid_table_name]
         [Fact]
         public async Task BadTableName()
         {
@@ -211,24 +174,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
-        // [END spanner_test_write_invalid_table_name]
 
-        // [START spanner_test_write_read_empty_bool_array]
-        // [END spanner_test_write_read_empty_bool_array]
-        // [START spanner_test_write_read_empty_int64_array]
-        // [END spanner_test_write_read_empty_int64_array]
-        // [START spanner_test_write_read_empty_float64_array]
-        // [END spanner_test_write_read_empty_float64_array]
-        // [START spanner_test_write_read_empty_numeric_array]
-        // [END spanner_test_write_read_empty_numeric_array]
-        // [START spanner_test_write_read_empty_string_array]
-        // [END spanner_test_write_read_empty_string_array]
-        // [START spanner_test_write_read_empty_bytes_array]
-        // [END spanner_test_write_read_empty_bytes_array]
-        // [START spanner_test_write_read_empty_timestamp_array]
-        // [END spanner_test_write_read_empty_timestamp_array]
-        // [START spanner_test_write_read_empty_date_array]
-        // [END spanner_test_write_read_empty_date_array]
         [Fact]
         public async Task WriteEmpties()
         {
@@ -259,7 +205,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
-        // [START spanner_test_write_read_inf_nan_float64]
         [Fact]
         public async Task WriteInfinity()
         {
@@ -280,40 +225,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
             await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))));
         }
-        // [END spanner_test_write_read_inf_nan_float64]
 
-        // [START spanner_test_write_read_null_bool]
-        // [END spanner_test_write_read_null_bool]
-        // [START spanner_test_write_read_null_int64]
-        // [END spanner_test_write_read_null_int64]
-        // [START spanner_test_write_read_null_float64]
-        // [END spanner_test_write_read_null_float64]
-        // [START spanner_test_write_read_null_numeric]
-        // [END spanner_test_write_read_null_numeric]
-        // [START spanner_test_write_read_null_string]
-        // [END spanner_test_write_read_null_string]
-        // [START spanner_test_write_read_null_bytes]
-        // [END spanner_test_write_read_null_bytes]
-        // [START spanner_test_write_read_null_timestamp]
-        // [END spanner_test_write_read_null_timestamp]
-        // [START spanner_test_write_read_null_date]
-        // [END spanner_test_write_read_null_date]
-        // [START spanner_test_write_read_null_bool_array]
-        // [END spanner_test_write_read_null_bool_array]
-        // [START spanner_test_write_read_null_int64_array]
-        // [END spanner_test_write_read_null_int64_array]
-        // [START spanner_test_write_read_null_float64_array]
-        // [END spanner_test_write_read_null_float64_array]
-        // [START spanner_test_write_read_null_numeric_array]
-        // [END spanner_test_write_read_null_numeric_array]
-        // [START spanner_test_write_read_null_string_array]
-        // [END spanner_test_write_read_null_string_array]
-        // [START spanner_test_write_read_null_bytes_array]
-        // [END spanner_test_write_read_null_bytes_array]
-        // [START spanner_test_write_read_null_timestamp_array]
-        // [END spanner_test_write_read_null_timestamp_array]
-        // [START spanner_test_write_read_null_date_array]
-        // [END spanner_test_write_read_null_date_array]
         [Fact]
         public async Task WriteNulls()
         {
@@ -359,7 +271,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
-        // [START spanner_test_write_read_random_bytes]
         [Fact]
         public async Task WriteRandomBytes()
         {
@@ -401,7 +312,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(0, recordedValues.Count);
             }
         }
-        // [END spanner_test_write_read_random_bytes]
 
         [SkippableFact]
         public async Task CommandTimeout()

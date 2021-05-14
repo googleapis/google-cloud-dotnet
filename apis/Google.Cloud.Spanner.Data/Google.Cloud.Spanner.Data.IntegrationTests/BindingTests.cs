@@ -49,38 +49,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
         };
 
-        // [START spanner_test_query_bind_bool_null]
-        // [END spanner_test_query_bind_bool_null]
-        // [START spanner_test_query_bind_int64_null]
-        // [END spanner_test_query_bind_int64_null]
-        // [START spanner_test_query_bind_float64_null]
-        // [END spanner_test_query_bind_float64_null]
-        // [START spanner_test_query_bind_numeric_null]
-        // [END spanner_test_query_bind_numeric_null]
-        // [START spanner_test_query_bind_string_null]
-        // [END spanner_test_query_bind_string_null]
-        // [START spanner_test_query_bind_bytes_null]
-        // [END spanner_test_query_bind_bytes_null]
-        // [START spanner_test_query_bind_timestamp_null]
-        // [END spanner_test_query_bind_timestamp_null]
-        // [START spanner_test_query_bind_date_null]
-        // [END spanner_test_query_bind_date_null]
-        // [START spanner_test_query_bind_bool_array_null]
-        // [END spanner_test_query_bind_bool_array_null]
-        // [START spanner_test_query_bind_int64_array_null]
-        // [END spanner_test_query_bind_int64_array_null]
-        // [START spanner_test_query_bind_float64_array_null]
-        // [END spanner_test_query_bind_float64_array_null]
-        // [START spanner_test_query_bind_numeric_array_null]
-        // [END spanner_test_query_bind_numeric_array_null]
-        // [START spanner_test_query_bind_string_array_null]
-        // [END spanner_test_query_bind_string_array_null]
-        // [START spanner_test_query_bind_bytes_array_null]
-        // [END spanner_test_query_bind_bytes_array_null]
-        // [START spanner_test_query_bind_timestamp_array_null]
-        // [END spanner_test_query_bind_timestamp_array_null]
-        // [START spanner_test_query_bind_date_array_null]
-        // [END spanner_test_query_bind_date_array_null]
         [Theory]
         [MemberData(nameof(BindNullData))]
         public async Task BindNull(SpannerDbType parameterType)
@@ -146,33 +114,24 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        // [START spanner_test_query_bind_bool]
         [Fact]
         public Task BindBoolean() => TestBindNonNull(SpannerDbType.Bool, true, r => r.GetBoolean(0));
-        // [END spanner_test_query_bind_bool]
 
-        // [START spanner_test_query_bind_bool_array]
         [Fact]
         public Task BindBooleanArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             new bool?[] {true, null, false});
-        // [END spanner_test_query_bind_bool_array]
 
-        // [START spanner_test_query_bind_bool_array_empty]
         [Fact]
         public Task BindBooleanEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             new bool[] { });
-        // [END spanner_test_query_bind_bool_array_empty]
 
-        // [START spanner_test_query_bind_bytes]
         [Fact]
         public Task BindByteArray() => TestBindNonNull(
             SpannerDbType.Bytes,
             new byte[] {1, 2, 3});
-        // [END spanner_test_query_bind_bytes]
 
-        // [START spanner_test_query_bind_bytes_array]
         [Fact]
         public Task BindByteArrayList() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
@@ -181,83 +140,59 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 new byte[] { 4, 5, 6 },
                 null
             });
-        // [END spanner_test_query_bind_bytes_array]
 
-        // [START spanner_test_query_bind_bytes_array_empty]
         [Fact]
         public Task BindEmptyByteArrayList() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
             new List<byte[]>());
-        // [END spanner_test_query_bind_bytes_array_empty]
 
-        // [START spanner_test_query_bind_date]
         [Fact]
         public Task BindDate() => TestBindNonNull(
             SpannerDbType.Date,
             new DateTime(2017, 5, 26));
-        // [END spanner_test_query_bind_date]
 
-        // [START spanner_test_query_bind_date_array]
         [Fact]
         public Task BindDateArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9)});
-        // [END spanner_test_query_bind_date_array]
 
-        // [START spanner_test_query_bind_date_array_empty]
         [Fact]
         public Task BindDateEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             new DateTime?[] { });
-        // [END spanner_test_query_bind_date_array_empty]
 
-        // [START spanner_test_query_bind_float64]
         [Fact]
         public Task BindFloat64() => TestBindNonNull(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));
-        // [END spanner_test_query_bind_float64]
 
-        // [START spanner_test_query_bind_float64_array]
         [Fact]
         public Task BindFloat64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             new double?[] {0.0, null, 1.0});
-        // [END spanner_test_query_bind_float64_array]
 
-        // [START spanner_test_query_bind_float64_array_empty]
         [Fact]
         public Task BindFloat64EmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             new double[] { });
-        // [END spanner_test_query_bind_float64_array_empty]
 
-        // [START spanner_test_query_bind_int64]
         [Fact]
         public Task BindInt64() => TestBindNonNull(SpannerDbType.Int64, 1, r => r.GetInt64(0));
-        // [END spanner_test_query_bind_int64]
 
-        // [START spanner_test_query_bind_int64_array]
         [Fact]
         public Task BindInt64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long?[] {1, null, 0});
-        // [END spanner_test_query_bind_int64_array]
 
-        // [START spanner_test_query_bind_int64_array_empty]
         [Fact]
         public Task BindInt64EmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long[] { });
-        // [END spanner_test_query_bind_int64_array_empty]
 
-        // [START spanner_test_query_bind_numeric]
         [Fact]
         public async Task BindNumeric()
         {
             await TestBindNonNull(SpannerDbType.Numeric, SpannerNumeric.Parse("1.0"), r => r.GetNumeric(0));
         }
-        // [END spanner_test_query_bind_numeric]
 
-        // [START spanner_test_query_bind_numeric_array]
         [Fact]
         public async Task BindNumericArray()
         {
@@ -265,55 +200,40 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 SpannerDbType.ArrayOf(SpannerDbType.Numeric),
                 new SpannerNumeric?[] {SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0")});
         }
-        // [END spanner_test_query_bind_numeric_array]
 
-        // [START spanner_test_query_bind_numeric_array_empty]
         [Fact]
         public async Task BindNumericEmptyArray()
         {
             await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[] { });
         }
-        // [END spanner_test_query_bind_numeric_array_empty]
 
-        // [START spanner_test_query_bind_string]
         [Fact]
         public Task BindString() => TestBindNonNull(SpannerDbType.String, "abc", r => r.GetString(0));
-        // [END spanner_test_query_bind_string]
 
-        // [START spanner_test_query_bind_string_array]
         [Fact]
         public Task BindStringArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.String),
             new[] {"abc", null, "123"});
-        // [END spanner_test_query_bind_string_array]
 
-        // [START spanner_test_query_bind_string_array_empty]
         [Fact]
         public Task BindStringEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.String),
             new string[] { });
-        // [END spanner_test_query_bind_string_array_empty]
 
-        // [START spanner_test_query_bind_timestamp]
         [Fact]
         public Task BindTimestamp() => TestBindNonNull(
             SpannerDbType.Timestamp,
             new DateTime(2017, 5, 26, 15, 0, 0));
-        // [END spanner_test_query_bind_timestamp]
 
-        // [START spanner_test_query_bind_timestamp_array]
         [Fact]
         public Task BindTimestampArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             new DateTime?[]
                 {new DateTime(2017, 5, 26, 3, 15, 0), null, new DateTime(2017, 5, 9, 12, 30, 0)});
-        // [END spanner_test_query_bind_timestamp_array]
 
-        // [START spanner_test_query_bind_timestamp_array_empty]
         [Fact]
         public Task BindTimestampEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             new DateTime?[] { });
-        // [END spanner_test_query_bind_timestamp_array_empty]
     }
 }

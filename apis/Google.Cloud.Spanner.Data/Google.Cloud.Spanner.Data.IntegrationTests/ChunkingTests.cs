@@ -88,7 +88,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             return writeCommand.ExecuteNonQueryAsync();
         }
 
-        // [START spanner_test_query_chunked_data]
         [Fact]
         public async Task TestChunking()
         {
@@ -151,6 +150,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             Assert.Equal(rowsToWrite, rowsRead);
         }
-        // [END spanner_test_query_chunked_data]
     }
 }

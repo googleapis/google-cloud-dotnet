@@ -33,7 +33,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public QueryOptionsTests(ReadTableFixture fixture) =>
             _fixture = fixture;
 
-        // [START spanner_test_single_key_read_with_conn_level_query_options]
         [Fact]
         public async Task PointReadWithConnectionLevelQueryOptions()
         {
@@ -51,9 +50,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_read_with_conn_level_query_options]
 
-        // [START spanner_test_single_key_read_with_cmd_level_query_options]
         [Fact]
         public async Task PointReadWithQueryLevelOptions()
         {
@@ -71,9 +68,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_read_with_cmd_level_query_options]
 
-        // [START spanner_test_single_key_read_with_invalid_query_options]
         [SkippableFact]
         public async Task PointReadWithInvalidConnectionLevelQueryOptions()
         {
@@ -90,6 +85,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-        // [END spanner_test_single_key_read_with_invalid_query_options]
     }
 }
