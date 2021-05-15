@@ -368,7 +368,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -393,7 +401,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -418,7 +434,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -443,7 +467,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -468,7 +500,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -501,7 +541,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -534,7 +582,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -567,7 +623,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/{Project ID}/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
+        /// 
+        /// Alternatively, you can specify the environment to list intents for.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
+        /// Note: training phrases of the intents will not be returned for non-draft
+        /// environment.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
