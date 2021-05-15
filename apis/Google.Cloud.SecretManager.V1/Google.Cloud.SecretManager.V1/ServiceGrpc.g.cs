@@ -287,8 +287,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -301,8 +301,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -743,8 +743,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -758,8 +758,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -771,8 +771,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -786,8 +786,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -799,8 +799,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -814,8 +814,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -827,8 +827,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -842,8 +842,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
       ///
-      /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-      /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+      /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+      /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

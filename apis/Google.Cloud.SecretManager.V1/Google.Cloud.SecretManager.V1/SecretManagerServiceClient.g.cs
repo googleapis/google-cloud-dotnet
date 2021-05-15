@@ -1273,8 +1273,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1285,8 +1285,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1297,8 +1297,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1309,14 +1309,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1329,14 +1330,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1349,14 +1351,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1366,14 +1369,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1386,14 +1390,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1406,14 +1411,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1423,8 +1429,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1435,8 +1441,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1447,8 +1453,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1459,12 +1465,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1477,12 +1486,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1495,12 +1507,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1510,12 +1525,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1528,12 +1546,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1546,12 +1567,15 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
+        /// 
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2439,8 +2463,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2454,8 +2478,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2469,8 +2493,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2484,8 +2508,8 @@ namespace Google.Cloud.SecretManager.V1
         /// <summary>
         /// Accesses a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. This call returns the secret data.
         /// 
-        /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
-        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
+        /// created [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
