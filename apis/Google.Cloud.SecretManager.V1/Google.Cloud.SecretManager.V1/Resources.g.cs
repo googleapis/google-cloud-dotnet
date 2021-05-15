@@ -29,7 +29,7 @@ namespace Google.Cloud.SecretManager.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
             "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8iywQKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
+            "bnMucHJvdG8i3gQKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
             "bGljYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52",
             "MS5SZXBsaWNhdGlvbkIG4EEF4EECEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkEKBmxhYmVscxgEIAMo",
@@ -37,67 +37,68 @@ namespace Google.Cloud.SecretManager.V1 {
             "bHNFbnRyeRI5CgZ0b3BpY3MYBSADKAsyJC5nb29nbGUuY2xvdWQuc2VjcmV0",
             "bWFuYWdlci52MS5Ub3BpY0ID4EEBEjYKC2V4cGlyZV90aW1lGAYgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBSAASLQoDdHRsGAcgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQRIABI+Cghyb3RhdGlv",
-            "bhgJIAEoCzInLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJvdGF0",
-            "aW9uQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ATpN6kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH1C",
-            "DAoKZXhwaXJhdGlvbiLfAwoNU2VjcmV0VmVyc2lvbhIRCgRuYW1lGAEgASgJ",
-            "QgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNQoMZGVzdHJveV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKBXN0YXRlGAQgASgOMjIuZ29v",
-            "Z2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuU2VjcmV0VmVyc2lvbi5TdGF0",
-            "ZUID4EEDEkwKEnJlcGxpY2F0aW9uX3N0YXR1cxgFIAEoCzIwLmdvb2dsZS5j",
-            "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzIkgKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJ",
-            "U0FCTEVEEAISDQoJREVTVFJPWUVEEAM6bupBawoqc2VjcmV0bWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEj1wcm9qZWN0cy97cHJvamVj",
-            "dH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2VjcmV0X3ZlcnNpb259",
-            "IpAECgtSZXBsaWNhdGlvbhJJCglhdXRvbWF0aWMYASABKAsyNC5nb29nbGUu",
-            "Y2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5BdXRvbWF0aWNI",
-            "ABJOCgx1c2VyX21hbmFnZWQYAiABKAsyNi5nb29nbGUuY2xvdWQuc2VjcmV0",
-            "bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2VyTWFuYWdlZEgAGm8KCUF1dG9t",
-            "YXRpYxJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YASABKAsyOC5n",
-            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRF",
-            "bmNyeXB0aW9uQgPgQQEa5QEKC1VzZXJNYW5hZ2VkElUKCHJlcGxpY2FzGAEg",
-            "AygLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRp",
-            "b24uVXNlck1hbmFnZWQuUmVwbGljYUID4EECGn8KB1JlcGxpY2ESEAoIbG9j",
-            "YXRpb24YASABKAkSYgobY3VzdG9tZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAIg",
-            "ASgLMjguZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuQ3VzdG9tZXJN",
-            "YW5hZ2VkRW5jcnlwdGlvbkID4EEBQg0KC3JlcGxpY2F0aW9uIjYKGUN1c3Rv",
-            "bWVyTWFuYWdlZEVuY3J5cHRpb24SGQoMa21zX2tleV9uYW1lGAEgASgJQgPg",
-            "QQIi6wQKEVJlcGxpY2F0aW9uU3RhdHVzElUKCWF1dG9tYXRpYxgBIAEoCzJA",
-            "Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3Rh",
-            "dHVzLkF1dG9tYXRpY1N0YXR1c0gAEloKDHVzZXJfbWFuYWdlZBgCIAEoCzJC",
-            "Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3Rh",
-            "dHVzLlVzZXJNYW5hZ2VkU3RhdHVzSAAaewoPQXV0b21hdGljU3RhdHVzEmgK",
-            "G2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgBIAEoCzI+Lmdvb2dsZS5j",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQRIABIRCgRldGFnGAgg",
+            "ASgJQgPgQQESPgoIcm90YXRpb24YCSABKAsyJy5nb29nbGUuY2xvdWQuc2Vj",
+            "cmV0bWFuYWdlci52MS5Sb3RhdGlvbkID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6TepBSgojc2VjcmV0bWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0",
+            "fS9zZWNyZXRzL3tzZWNyZXR9QgwKCmV4cGlyYXRpb24i8gMKDVNlY3JldFZl",
+            "cnNpb24SEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJG",
+            "CgVzdGF0ZRgEIAEoDjIyLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYx",
+            "LlNlY3JldFZlcnNpb24uU3RhdGVCA+BBAxJMChJyZXBsaWNhdGlvbl9zdGF0",
+            "dXMYBSABKAsyMC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBs",
+            "aWNhdGlvblN0YXR1cxIRCgRldGFnGAYgASgJQgPgQQMiSAoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQ",
+            "AhINCglERVNUUk9ZRUQQAzpu6kFrCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFw",
+            "aXMuY29tL1NlY3JldFZlcnNpb24SPXByb2plY3RzL3twcm9qZWN0fS9zZWNy",
+            "ZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3tzZWNyZXRfdmVyc2lvbn0ikAQKC1Jl",
+            "cGxpY2F0aW9uEkkKCWF1dG9tYXRpYxgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5z",
+            "ZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLkF1dG9tYXRpY0gAEk4KDHVz",
+            "ZXJfbWFuYWdlZBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2Vy",
+            "LnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5hZ2VkSAAabwoJQXV0b21hdGljEmIK",
+            "G2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgBIAEoCzI4Lmdvb2dsZS5j",
             "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRp",
-            "b25TdGF0dXNCA+BBAxqPAgoRVXNlck1hbmFnZWRTdGF0dXMSZwoIcmVwbGlj",
-            "YXMYASADKAsyUC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBs",
-            "aWNhdGlvblN0YXR1cy5Vc2VyTWFuYWdlZFN0YXR1cy5SZXBsaWNhU3RhdHVz",
-            "QgPgQQMakAEKDVJlcGxpY2FTdGF0dXMSFQoIbG9jYXRpb24YASABKAlCA+BB",
-            "AxJoChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YAiABKAsyPi5nb29n",
-            "bGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNy",
-            "eXB0aW9uU3RhdHVzQgPgQQNCFAoScmVwbGljYXRpb25fc3RhdHVzIkQKH0N1",
-            "c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXMSIQoUa21zX2tleV92ZXJz",
-            "aW9uX25hbWUYASABKAlCA+BBAiJfCgVUb3BpYxIRCgRuYW1lGAEgASgJQgPg",
-            "QQI6Q+pBQAobcHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEiFwcm9qZWN0",
-            "cy97cHJvamVjdH0vdG9waWNzL3t0b3BpY30igAEKCFJvdGF0aW9uEjsKEm5l",
-            "eHRfcm90YXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBARI3Cg9yb3RhdGlvbl9wZXJpb2QYAiABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25CA+BBBCIdCg1TZWNyZXRQYXlsb2FkEgwKBGRh",
-            "dGEYASABKAxC7QEKIWNvbS5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52",
-            "MUIOUmVzb3VyY2VzUHJvdG9QAVpKZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWNyZXRtYW5hZ2VyL3YxO3NlY3JldG1h",
-            "bmFnZXL4AQGiAgNHU02qAh1Hb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5W",
-            "McoCHUdvb2dsZVxDbG91ZFxTZWNyZXRNYW5hZ2VyXFYx6gIgR29vZ2xlOjpD",
-            "bG91ZDo6U2VjcmV0TWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "b25CA+BBARrlAQoLVXNlck1hbmFnZWQSVQoIcmVwbGljYXMYASADKAsyPi5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2Vy",
+            "TWFuYWdlZC5SZXBsaWNhQgPgQQIafwoHUmVwbGljYRIQCghsb2NhdGlvbhgB",
+            "IAEoCRJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YAiABKAsyOC5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRF",
+            "bmNyeXB0aW9uQgPgQQFCDQoLcmVwbGljYXRpb24iNgoZQ3VzdG9tZXJNYW5h",
+            "Z2VkRW5jcnlwdGlvbhIZCgxrbXNfa2V5X25hbWUYASABKAlCA+BBAiLrBAoR",
+            "UmVwbGljYXRpb25TdGF0dXMSVQoJYXV0b21hdGljGAEgASgLMkAuZ29vZ2xl",
+            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuQXV0",
+            "b21hdGljU3RhdHVzSAASWgoMdXNlcl9tYW5hZ2VkGAIgASgLMkIuZ29vZ2xl",
+            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuVXNl",
+            "ck1hbmFnZWRTdGF0dXNIABp7Cg9BdXRvbWF0aWNTdGF0dXMSaAobY3VzdG9t",
+            "ZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMj4uZ29vZ2xlLmNsb3VkLnNl",
+            "Y3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1",
+            "c0ID4EEDGo8CChFVc2VyTWFuYWdlZFN0YXR1cxJnCghyZXBsaWNhcxgBIAMo",
+            "CzJQLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9u",
+            "U3RhdHVzLlVzZXJNYW5hZ2VkU3RhdHVzLlJlcGxpY2FTdGF0dXNCA+BBAxqQ",
+            "AQoNUmVwbGljYVN0YXR1cxIVCghsb2NhdGlvbhgBIAEoCUID4EEDEmgKG2N1",
+            "c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI+Lmdvb2dsZS5jbG91",
+            "ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25T",
+            "dGF0dXNCA+BBA0IUChJyZXBsaWNhdGlvbl9zdGF0dXMiRAofQ3VzdG9tZXJN",
+            "YW5hZ2VkRW5jcnlwdGlvblN0YXR1cxIhChRrbXNfa2V5X3ZlcnNpb25fbmFt",
+            "ZRgBIAEoCUID4EECIl8KBVRvcGljEhEKBG5hbWUYASABKAlCA+BBAjpD6kFA",
+            "ChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2plY3RzL3twcm9q",
+            "ZWN0fS90b3BpY3Mve3RvcGljfSKAAQoIUm90YXRpb24SOwoSbmV4dF9yb3Rh",
+            "dGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEBEjcKD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbkID4EEEIh0KDVNlY3JldFBheWxvYWQSDAoEZGF0YRgBIAEo",
+            "DELtAQohY29tLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxQg5SZXNv",
+            "dXJjZXNQcm90b1ABWkpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL3NlY3JldG1hbmFnZXIvdjE7c2VjcmV0bWFuYWdlcvgB",
+            "AaICA0dTTaoCHUdvb2dsZS5DbG91ZC5TZWNyZXRNYW5hZ2VyLlYxygIdR29v",
+            "Z2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjHqAiBHb29nbGU6OkNsb3VkOjpT",
+            "ZWNyZXRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Rotation" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus", "Etag" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
@@ -154,6 +155,7 @@ namespace Google.Cloud.SecretManager.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       topics_ = other.topics_.Clone();
+      etag_ = other.etag_;
       rotation_ = other.rotation_ != null ? other.rotation_.Clone() : null;
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
@@ -282,6 +284,20 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 8;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. Etag of the currently stored [Secret][google.cloud.secretmanager.v1.Secret].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "rotation" field.</summary>
     public const int RotationFieldNumber = 9;
     private global::Google.Cloud.SecretManager.V1.Rotation rotation_;
@@ -336,6 +352,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if(!topics_.Equals(other.topics_)) return false;
       if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
       if (!object.Equals(Ttl, other.Ttl)) return false;
+      if (Etag != other.Etag) return false;
       if (!object.Equals(Rotation, other.Rotation)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -351,6 +368,7 @@ namespace Google.Cloud.SecretManager.V1 {
       hash ^= topics_.GetHashCode();
       if (expirationCase_ == ExpirationOneofCase.ExpireTime) hash ^= ExpireTime.GetHashCode();
       if (expirationCase_ == ExpirationOneofCase.Ttl) hash ^= Ttl.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (rotation_ != null) hash ^= Rotation.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
@@ -391,6 +409,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Ttl);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Etag);
+      }
       if (rotation_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(Rotation);
@@ -426,6 +448,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Ttl);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Etag);
+      }
       if (rotation_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(Rotation);
@@ -455,6 +481,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (expirationCase_ == ExpirationOneofCase.Ttl) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ttl);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (rotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rotation);
@@ -487,6 +516,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       labels_.Add(other.labels_);
       topics_.Add(other.topics_);
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
       if (other.rotation_ != null) {
         if (rotation_ == null) {
           Rotation = new global::Google.Cloud.SecretManager.V1.Rotation();
@@ -566,6 +598,10 @@ namespace Google.Cloud.SecretManager.V1 {
             Ttl = subBuilder;
             break;
           }
+          case 66: {
+            Etag = input.ReadString();
+            break;
+          }
           case 74: {
             if (rotation_ == null) {
               Rotation = new global::Google.Cloud.SecretManager.V1.Rotation();
@@ -631,6 +667,10 @@ namespace Google.Cloud.SecretManager.V1 {
             Ttl = subBuilder;
             break;
           }
+          case 66: {
+            Etag = input.ReadString();
+            break;
+          }
           case 74: {
             if (rotation_ == null) {
               Rotation = new global::Google.Cloud.SecretManager.V1.Rotation();
@@ -682,6 +722,7 @@ namespace Google.Cloud.SecretManager.V1 {
       destroyTime_ = other.destroyTime_ != null ? other.destroyTime_.Clone() : null;
       state_ = other.state_;
       replicationStatus_ = other.replicationStatus_ != null ? other.replicationStatus_.Clone() : null;
+      etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -766,6 +807,20 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 6;
+    private string etag_ = "";
+    /// <summary>
+    /// Output only. Etag of the currently stored [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SecretVersion);
@@ -784,6 +839,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (!object.Equals(DestroyTime, other.DestroyTime)) return false;
       if (State != other.State) return false;
       if (!object.Equals(ReplicationStatus, other.ReplicationStatus)) return false;
+      if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -795,6 +851,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (destroyTime_ != null) hash ^= DestroyTime.GetHashCode();
       if (State != global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (replicationStatus_ != null) hash ^= ReplicationStatus.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -831,6 +888,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReplicationStatus);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -860,6 +921,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReplicationStatus);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -883,6 +948,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (replicationStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplicationStatus);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -918,6 +986,9 @@ namespace Google.Cloud.SecretManager.V1 {
           ReplicationStatus = new global::Google.Cloud.SecretManager.V1.ReplicationStatus();
         }
         ReplicationStatus.MergeFrom(other.ReplicationStatus);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -962,6 +1033,10 @@ namespace Google.Cloud.SecretManager.V1 {
             input.ReadMessage(ReplicationStatus);
             break;
           }
+          case 50: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1003,6 +1078,10 @@ namespace Google.Cloud.SecretManager.V1 {
               ReplicationStatus = new global::Google.Cloud.SecretManager.V1.ReplicationStatus();
             }
             input.ReadMessage(ReplicationStatus);
+            break;
+          }
+          case 50: {
+            Etag = input.ReadString();
             break;
           }
         }
@@ -3412,7 +3491,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NextRotationTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp nextRotationTime_;
     /// <summary>
-    /// Optional. Timestamp in UTC at which the [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to rotate.
+    /// Optional. Timestamp in UTC at which the [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to rotate. Cannot be
+    /// set to less than 300s (5 min) in the future and at most 3153600000s (100
+    /// years).
     ///
     /// [next_rotation_time][google.cloud.secretmanager.v1.Rotation.next_rotation_time] MUST  be set if [rotation_period][google.cloud.secretmanager.v1.Rotation.rotation_period] is set.
     /// </summary>

@@ -656,6 +656,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DeleteSecretRequest request = new DeleteSecretRequest
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                Etag = "",
             };
             // Make the request
             secretManagerServiceClient.DeleteSecret(request);
@@ -673,6 +674,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DeleteSecretRequest request = new DeleteSecretRequest
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                Etag = "",
             };
             // Make the request
             await secretManagerServiceClient.DeleteSecretAsync(request);
@@ -1193,6 +1195,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.DisableSecretVersion(request);
@@ -1210,6 +1213,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DisableSecretVersionRequest request = new DisableSecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DisableSecretVersionAsync(request);
@@ -1280,6 +1284,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableSecretVersion(request);
@@ -1297,6 +1302,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             EnableSecretVersionRequest request = new EnableSecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableSecretVersionAsync(request);
@@ -1367,6 +1373,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DestroySecretVersionRequest request = new DestroySecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.DestroySecretVersion(request);
@@ -1384,6 +1391,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             DestroySecretVersionRequest request = new DestroySecretVersionRequest
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
+                Etag = "",
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.DestroySecretVersionAsync(request);
