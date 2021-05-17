@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListCertificateTemplates",
+    "client": "CertificateAuthorityServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListCaPools",
+    "client": "CertificateAuthorityServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
