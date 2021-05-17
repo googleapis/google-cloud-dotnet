@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListNodes",
+    "client": "TpuClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1-a"
+    }
+  }
+]
