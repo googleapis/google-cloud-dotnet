@@ -2035,6 +2035,22 @@
       "protoPath": "google/api/servicemanagement/v1"
     },
     {
+      "id": "Google.Cloud.Shell.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Shell",
+      "productUrl": "https://cloud.google.com/shell/",
+      "description": "Recommended Google client library to access the Cloud Shell API, which allows users to start, configure, and connect to interactive shell sessions running in the cloud.",
+      "tags": [
+        "shell"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/shell/v1"
+    },
+    {
       "id": "Google.Cloud.Spanner.Admin.Database.V1",
       "generator": "micro",
       "protoPath": "google/spanner/admin/database/v1",
