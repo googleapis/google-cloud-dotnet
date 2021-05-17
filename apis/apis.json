@@ -2358,6 +2358,22 @@
       "protoPath": "google/cloud/texttospeech/v1beta1"
     },
     {
+      "id": "Google.Cloud.Tpu.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud TPU",
+      "productUrl": "https://cloud.google.com/tpu/",
+      "description": "Recommended Google client library to access the Google Cloud TPU API, which provides customers with access to Google TPU technology.",
+      "tags": [
+        "tpu"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/tpu/v1"
+    },
+    {
       "id": "Google.Cloud.Trace.V1",
       "generator": "micro",
       "protoPath": "google/devtools/cloudtrace/v1",
