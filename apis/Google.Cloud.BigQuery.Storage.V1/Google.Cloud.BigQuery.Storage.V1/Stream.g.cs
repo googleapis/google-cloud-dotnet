@@ -170,10 +170,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int ExpireTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. Time at which the session becomes invalid. After this time,
-    /// subsequent requests to read this Session will return errors. The
-    /// expire_time is automatically assigned and currently cannot be specified or
-    /// updated.
+    /// Output only. Time at which the session becomes invalid. After this time, subsequent
+    /// requests to read this Session will return errors. The expire_time is
+    /// automatically assigned and currently cannot be specified or updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
@@ -244,8 +243,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int TableModifiersFieldNumber = 7;
     private global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers tableModifiers_;
     /// <summary>
-    /// Optional. Any modifiers which are applied when reading from the specified
-    /// table.
+    /// Optional. Any modifiers which are applied when reading from the specified table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers TableModifiers {
@@ -947,6 +945,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         /// <summary>Field number for the "arrow_serialization_options" field.</summary>
         public const int ArrowSerializationOptionsFieldNumber = 3;
+        /// <summary>
+        /// Optional. Options specific to the Apache Arrow output format.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions ArrowSerializationOptions {
           get { return outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions) outputFormatSerializationOptions_ : null; }
