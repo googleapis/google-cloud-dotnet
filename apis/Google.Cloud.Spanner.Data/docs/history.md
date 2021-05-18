@@ -1,5 +1,13 @@
 # Version history
 
+# Version 3.8.0, released 2021-05-18
+
+- [Commit a334723](https://github.com/googleapis/google-cloud-dotnet/commit/a334723): feat: add option to return read timestamp
+- [Commit fbcacf0](https://github.com/googleapis/google-cloud-dotnet/commit/fbcacf0): fix: Use CopySettingsForEmulator in Spanner clients
+- [Commit 4371842](https://github.com/googleapis/google-cloud-dotnet/commit/4371842): feat: add `progress` field to `UpdateDatabaseDdlMetadata`
+- [Commit 5eef4b4](https://github.com/googleapis/google-cloud-dotnet/commit/5eef4b4): feat: add `progress` field to `UpdateDatabaseDdlMetadata`
+- [Commit 9f5f0aa](https://github.com/googleapis/google-cloud-dotnet/commit/9f5f0aa): fix: Regenerate server-streaming calls with Google request params
+
 # Version 3.7.0, released 2021-04-01
 
 - [Commit 63f54b5](https://github.com/googleapis/google-cloud-dotnet/commit/63f54b5): feat: add support for request and transaction tagging
