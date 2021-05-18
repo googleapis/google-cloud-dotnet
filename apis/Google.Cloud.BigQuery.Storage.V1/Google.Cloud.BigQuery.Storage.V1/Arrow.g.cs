@@ -28,16 +28,16 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEiKAoLQXJyb3dT",
             "Y2hlbWESGQoRc2VyaWFsaXplZF9zY2hlbWEYASABKAwiRgoQQXJyb3dSZWNv",
             "cmRCYXRjaBIfChdzZXJpYWxpemVkX3JlY29yZF9iYXRjaBgBIAEoDBIRCgly",
-            "b3dfY291bnQYAiABKAMixQEKGUFycm93U2VyaWFsaXphdGlvbk9wdGlvbnMS",
+            "b3dfY291bnQYAiABKAMizwEKGUFycm93U2VyaWFsaXphdGlvbk9wdGlvbnMS",
             "aAoSYnVmZmVyX2NvbXByZXNzaW9uGAIgASgOMkwuZ29vZ2xlLmNsb3VkLmJp",
             "Z3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTZXJpYWxpemF0aW9uT3B0aW9ucy5D",
-            "b21wcmVzc2lvbkNvZGVjIj4KEENvbXByZXNzaW9uQ29kZWMSGwoXQ09NUFJF",
-            "U1NJT05fVU5TUEVDSUZJRUQQABINCglMWjRfRlJBTUUQAULDAQokY29tLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpBcnJvd1Byb3RvUAFa",
-            "R2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "YmlncXVlcnkvc3RvcmFnZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNsb3VkLkJp",
-            "Z1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3Rv",
-            "cmFnZVxWMWIGcHJvdG8z"));
+            "b21wcmVzc2lvbkNvZGVjIkgKEENvbXByZXNzaW9uQ29kZWMSGwoXQ09NUFJF",
+            "U1NJT05fVU5TUEVDSUZJRUQQABINCglMWjRfRlJBTUUQARIICgRaU1REEAJC",
+            "wwEKJGNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MUIKQXJy",
+            "b3dQcm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjE7c3RvcmFnZaoCIEdvb2ds",
+            "ZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xlXENsb3VkXEJp",
+            "Z1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -643,6 +643,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// LZ4 Frame (https://github.com/lz4/lz4/blob/dev/doc/lz4_Frame_format.md)
         /// </summary>
         [pbr::OriginalName("LZ4_FRAME")] Lz4Frame = 1,
+        /// <summary>
+        /// Zstandard compression.
+        /// </summary>
+        [pbr::OriginalName("ZSTD")] Zstd = 2,
       }
 
     }
