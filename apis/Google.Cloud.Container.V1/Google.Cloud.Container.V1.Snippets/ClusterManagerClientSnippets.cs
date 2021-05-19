@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
-
-// TODO: Use location instead of zone when building the request.
-// The Container API config is being revisited to make all of this simpler.
 
 namespace Google.Cloud.Container.V1.Snippets
 {
@@ -37,7 +35,8 @@ namespace Google.Cloud.Container.V1.Snippets
             // Sample: ListAllClusters
             ClusterManagerClient client = ClusterManagerClient.Create();
             // You can list clusters in a single zone, or specify "-" for all zones.
-            ListClustersResponse zones = client.ListClusters(projectId, zone: "-");
+            LocationName location = new LocationName(projectId, locationId: "-");
+            ListClustersResponse zones = client.ListClusters(location.ToString());
             foreach (Cluster cluster in zones.Clusters)
             {
                 Console.WriteLine($"Cluster {cluster.Name} in {cluster.Location}");
