@@ -37,6 +37,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public void Overview()
         {
             string projectId = _fixture.ProjectId;
@@ -217,6 +218,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public void Pull()
         {
             string projectId = _fixture.ProjectId;
@@ -253,6 +255,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public async Task PullAsync()
         {
             string projectId = _fixture.ProjectId;
