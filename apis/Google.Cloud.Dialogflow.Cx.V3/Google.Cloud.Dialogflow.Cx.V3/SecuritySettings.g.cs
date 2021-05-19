@@ -1507,8 +1507,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int RedactionScopeFieldNumber = 4;
     private global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope redactionScope_ = global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope.Unspecified;
     /// <summary>
-    /// Defines on what data we apply redaction. Note that we don't
-    /// redact data to which we don't have access, e.g., Stackdriver logs.
+    /// Defines the data for which Dialogflow applies redaction. Dialogflow does
+    /// not redact data that it does not have access to – for example, Cloud
+    /// logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope RedactionScope {
@@ -1542,11 +1543,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "retention_window_days" field.</summary>
     public const int RetentionWindowDaysFieldNumber = 6;
     /// <summary>
-    /// Retains the data for the specified number of days.
+    /// Retains data in interaction logging for the specified number of days.
+    /// This does not apply to Cloud logging, which is owned by the user - not
+    /// Dialogflow.
     /// User must Set a value lower than Dialogflow's default 30d TTL. Setting a
     /// value higher than that has no effect.
     /// A missing value or setting to 0 also means we use Dialogflow's default
     /// TTL.
+    /// Note: Interaction logging is a limited access feature. Talk to your
+    /// Google representative to check availability for you.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RetentionWindowDays {
@@ -1893,8 +1898,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// </summary>
         [pbr::OriginalName("PURGE_DATA_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Dialogflow history. This does not include Stackdriver log, which is
-        /// owned by the user not Dialogflow.
+        /// Dialogflow history. This does not include Cloud logging, which is
+        /// owned by the user - not Dialogflow.
         /// </summary>
         [pbr::OriginalName("DIALOGFLOW_HISTORY")] DialogflowHistory = 1,
       }
