@@ -1813,13 +1813,12 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual PullResponse Pull(string subscription, bool returnImmediately, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
             Pull(new PullRequest
             {
                 Subscription = gax::GaxPreconditions.CheckNotNullOrEmpty(subscription, nameof(subscription)),
-#pragma warning disable CS0612
                 ReturnImmediately = returnImmediately,
-#pragma warning restore CS0612
                 MaxMessages = maxMessages,
             }, callSettings);
 
@@ -1848,13 +1847,12 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<PullResponse> PullAsync(string subscription, bool returnImmediately, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
             PullAsync(new PullRequest
             {
                 Subscription = gax::GaxPreconditions.CheckNotNullOrEmpty(subscription, nameof(subscription)),
-#pragma warning disable CS0612
                 ReturnImmediately = returnImmediately,
-#pragma warning restore CS0612
                 MaxMessages = maxMessages,
             }, callSettings);
 
@@ -1883,6 +1881,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<PullResponse> PullAsync(string subscription, bool returnImmediately, int maxMessages, st::CancellationToken cancellationToken) =>
             PullAsync(subscription, returnImmediately, maxMessages, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1911,13 +1910,12 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual PullResponse Pull(SubscriptionName subscription, bool returnImmediately, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
             Pull(new PullRequest
             {
                 SubscriptionAsSubscriptionName = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
-#pragma warning disable CS0612
                 ReturnImmediately = returnImmediately,
-#pragma warning restore CS0612
                 MaxMessages = maxMessages,
             }, callSettings);
 
@@ -1946,13 +1944,12 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<PullResponse> PullAsync(SubscriptionName subscription, bool returnImmediately, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
             PullAsync(new PullRequest
             {
                 SubscriptionAsSubscriptionName = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
-#pragma warning disable CS0612
                 ReturnImmediately = returnImmediately,
-#pragma warning restore CS0612
                 MaxMessages = maxMessages,
             }, callSettings);
 
@@ -1981,6 +1978,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<PullResponse> PullAsync(SubscriptionName subscription, bool returnImmediately, int maxMessages, st::CancellationToken cancellationToken) =>
             PullAsync(subscription, returnImmediately, maxMessages, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
