@@ -1548,7 +1548,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<EnableServiceResponse, OperationMetadata> retrievedResponse = serviceManagerClient.PollOnceEnableService(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1584,7 +1586,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<EnableServiceResponse, OperationMetadata> retrievedResponse = await serviceManagerClient.PollOnceEnableServiceAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1616,7 +1620,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<EnableServiceResponse, OperationMetadata> retrievedResponse = serviceManagerClient.PollOnceEnableService(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1649,7 +1655,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<EnableServiceResponse, OperationMetadata> retrievedResponse = await serviceManagerClient.PollOnceEnableServiceAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1684,7 +1692,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DisableServiceResponse, OperationMetadata> retrievedResponse = serviceManagerClient.PollOnceDisableService(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1720,7 +1730,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DisableServiceResponse, OperationMetadata> retrievedResponse = await serviceManagerClient.PollOnceDisableServiceAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1752,7 +1764,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DisableServiceResponse, OperationMetadata> retrievedResponse = serviceManagerClient.PollOnceDisableService(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1785,7 +1799,9 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DisableServiceResponse, OperationMetadata> retrievedResponse = await serviceManagerClient.PollOnceDisableServiceAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
