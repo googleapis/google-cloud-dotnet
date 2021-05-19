@@ -167,10 +167,10 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                     : File.ReadLines(file).First().TrimStart(' ', '#');
                 guidesToc.Add(new { Name = title, Href = Path.GetFileName(file) });
             }
-            // All guides go under a "Guides" node
+            // All overview pages go under an "Overview" node
             var guidesNode = new Dictionary<string, object>
             {
-                ["name"] = "User Guides",
+                ["name"] = "Overview",
                 ["items"] = guidesToc
             };
 
