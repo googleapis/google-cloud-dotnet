@@ -2632,7 +2632,7 @@
       "generator": "micro",
       "protoPath": "google/longrunning",
       "listingDescription": "Support for the Long-Running Operations API pattern",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "metadataType": "CORE",
       "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
@@ -2640,11 +2640,11 @@
         "LongRunning"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Grpc.Core": "2.31.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Grpc.Core": "2.36.4"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "3.2.0"
+        "Google.Api.Gax.Testing": "3.3.0"
       }
     },
     {
