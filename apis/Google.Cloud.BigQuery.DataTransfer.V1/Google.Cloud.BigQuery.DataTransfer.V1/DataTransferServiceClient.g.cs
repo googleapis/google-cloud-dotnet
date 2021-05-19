@@ -1444,6 +1444,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ScheduleTransferRunsResponse ScheduleTransferRuns(ScheduleTransferRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1457,6 +1458,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(ScheduleTransferRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1470,6 +1472,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(ScheduleTransferRunsRequest request, st::CancellationToken cancellationToken) =>
             ScheduleTransferRunsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1495,6 +1498,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ScheduleTransferRunsResponse ScheduleTransferRuns(string parent, wkt::Timestamp startTime, wkt::Timestamp endTime, gaxgrpc::CallSettings callSettings = null) =>
             ScheduleTransferRuns(new ScheduleTransferRunsRequest
             {
@@ -1525,6 +1529,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(string parent, wkt::Timestamp startTime, wkt::Timestamp endTime, gaxgrpc::CallSettings callSettings = null) =>
             ScheduleTransferRunsAsync(new ScheduleTransferRunsRequest
             {
@@ -1555,6 +1560,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(string parent, wkt::Timestamp startTime, wkt::Timestamp endTime, st::CancellationToken cancellationToken) =>
             ScheduleTransferRunsAsync(parent, startTime, endTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1580,6 +1586,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ScheduleTransferRunsResponse ScheduleTransferRuns(TransferConfigName parent, wkt::Timestamp startTime, wkt::Timestamp endTime, gaxgrpc::CallSettings callSettings = null) =>
             ScheduleTransferRuns(new ScheduleTransferRunsRequest
             {
@@ -1610,6 +1617,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(TransferConfigName parent, wkt::Timestamp startTime, wkt::Timestamp endTime, gaxgrpc::CallSettings callSettings = null) =>
             ScheduleTransferRunsAsync(new ScheduleTransferRunsRequest
             {
@@ -1640,6 +1648,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(TransferConfigName parent, wkt::Timestamp startTime, wkt::Timestamp endTime, st::CancellationToken cancellationToken) =>
             ScheduleTransferRunsAsync(parent, startTime, endTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2393,7 +2402,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             _callListTransferConfigs = clientHelper.BuildApiCall<ListTransferConfigsRequest, ListTransferConfigsResponse>(grpcClient.ListTransferConfigsAsync, grpcClient.ListTransferConfigs, effectiveSettings.ListTransferConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTransferConfigs);
             Modify_ListTransferConfigsApiCall(ref _callListTransferConfigs);
+#pragma warning disable CS0612
             _callScheduleTransferRuns = clientHelper.BuildApiCall<ScheduleTransferRunsRequest, ScheduleTransferRunsResponse>(grpcClient.ScheduleTransferRunsAsync, grpcClient.ScheduleTransferRuns, effectiveSettings.ScheduleTransferRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callScheduleTransferRuns);
             Modify_ScheduleTransferRunsApiCall(ref _callScheduleTransferRuns);
             _callStartManualTransferRuns = clientHelper.BuildApiCall<StartManualTransferRunsRequest, StartManualTransferRunsResponse>(grpcClient.StartManualTransferRunsAsync, grpcClient.StartManualTransferRuns, effectiveSettings.StartManualTransferRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2666,6 +2677,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override ScheduleTransferRunsResponse ScheduleTransferRuns(ScheduleTransferRunsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ScheduleTransferRunsRequest(ref request, ref callSettings);
@@ -2682,6 +2694,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(ScheduleTransferRunsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ScheduleTransferRunsRequest(ref request, ref callSettings);

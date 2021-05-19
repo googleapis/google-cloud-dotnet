@@ -62,7 +62,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ListClustersResponse response = clusterManagerClient.ListClusters(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -77,7 +79,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ListClustersResponse response = await clusterManagerClient.ListClustersAsync(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -146,7 +150,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Cluster response = clusterManagerClient.GetCluster(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -162,7 +168,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Cluster response = await clusterManagerClient.GetClusterAsync(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -239,7 +247,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             Cluster cluster = new Cluster();
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.CreateCluster(projectId, zone, cluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -255,7 +265,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             Cluster cluster = new Cluster();
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.CreateClusterAsync(projectId, zone, cluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -335,7 +347,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             ClusterUpdate update = new ClusterUpdate();
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.UpdateCluster(projectId, zone, clusterId, update);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -352,7 +366,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             ClusterUpdate update = new ClusterUpdate();
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.UpdateClusterAsync(projectId, zone, clusterId, update);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -510,7 +526,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string loggingService = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetLoggingService(projectId, zone, clusterId, loggingService);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -527,7 +545,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string loggingService = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetLoggingServiceAsync(projectId, zone, clusterId, loggingService);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -607,7 +627,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string monitoringService = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetMonitoringService(projectId, zone, clusterId, monitoringService);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -624,7 +646,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string monitoringService = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -704,7 +728,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetAddonsConfig(projectId, zone, clusterId, addonsConfig);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -721,7 +747,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             AddonsConfig addonsConfig = new AddonsConfig();
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -767,7 +795,9 @@ namespace Google.Cloud.Container.V1.Snippets
                 Name = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetLocations(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -785,7 +815,9 @@ namespace Google.Cloud.Container.V1.Snippets
                 Name = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetLocationsAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -801,7 +833,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             IEnumerable<string> locations = new string[] { "", };
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetLocations(projectId, zone, clusterId, locations);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -818,7 +852,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             IEnumerable<string> locations = new string[] { "", };
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetLocationsAsync(projectId, zone, clusterId, locations);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -832,7 +868,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string name = "";
             IEnumerable<string> locations = new string[] { "", };
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetLocations(name, locations);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -847,7 +885,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string name = "";
             IEnumerable<string> locations = new string[] { "", };
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetLocationsAsync(name, locations);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -898,7 +938,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string masterVersion = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.UpdateMaster(projectId, zone, clusterId, masterVersion);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -915,7 +957,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string masterVersion = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.UpdateMasterAsync(projectId, zone, clusterId, masterVersion);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1023,7 +1067,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.DeleteCluster(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1039,7 +1085,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.DeleteClusterAsync(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1107,7 +1155,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ListOperationsResponse response = clusterManagerClient.ListOperations(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1122,7 +1172,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ListOperationsResponse response = await clusterManagerClient.ListOperationsAsync(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1164,7 +1216,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.GetOperation(projectId, zone, operationId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1180,7 +1234,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1249,7 +1305,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
+#pragma warning disable CS0612
             clusterManagerClient.CancelOperation(projectId, zone, operationId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1265,7 +1323,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string operationId = "";
             // Make the request
+#pragma warning disable CS0612
             await clusterManagerClient.CancelOperationAsync(projectId, zone, operationId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1333,7 +1393,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ServerConfig response = clusterManagerClient.GetServerConfig(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1348,7 +1410,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string projectId = "";
             string zone = "";
             // Make the request
+#pragma warning disable CS0612
             ServerConfig response = await clusterManagerClient.GetServerConfigAsync(projectId, zone);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1444,7 +1508,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             ListNodePoolsResponse response = clusterManagerClient.ListNodePools(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1460,7 +1526,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             ListNodePoolsResponse response = await clusterManagerClient.ListNodePoolsAsync(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1530,7 +1598,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             NodePool response = clusterManagerClient.GetNodePool(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1547,7 +1617,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             NodePool response = await clusterManagerClient.GetNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1625,7 +1697,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NodePool nodePool = new NodePool();
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.CreateNodePool(projectId, zone, clusterId, nodePool);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1642,7 +1716,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NodePool nodePool = new NodePool();
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.CreateNodePoolAsync(projectId, zone, clusterId, nodePool);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1714,7 +1790,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.DeleteNodePool(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1731,7 +1809,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1801,7 +1881,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.RollbackNodePoolUpgrade(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1818,7 +1900,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             string nodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1968,7 +2052,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             bool enabled = false;
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetLegacyAbac(projectId, zone, clusterId, enabled);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1985,7 +2071,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             bool enabled = false;
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetLegacyAbacAsync(projectId, zone, clusterId, enabled);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2064,7 +2152,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.StartIPRotation(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2080,7 +2170,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.StartIPRotationAsync(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2149,7 +2241,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.CompleteIPRotation(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2165,7 +2259,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string zone = "";
             string clusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.CompleteIPRotationAsync(projectId, zone, clusterId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2278,7 +2374,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
+#pragma warning disable CS0612
             Operation response = clusterManagerClient.SetNetworkPolicy(projectId, zone, clusterId, networkPolicy);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2295,7 +2393,9 @@ namespace Google.Cloud.Container.V1.Snippets
             string clusterId = "";
             NetworkPolicy networkPolicy = new NetworkPolicy();
             // Make the request
+#pragma warning disable CS0612
             Operation response = await clusterManagerClient.SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy);
+#pragma warning restore CS0612
             // End snippet
         }
 

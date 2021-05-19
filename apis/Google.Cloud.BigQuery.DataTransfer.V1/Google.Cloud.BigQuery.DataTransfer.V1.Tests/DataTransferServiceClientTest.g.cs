@@ -1044,7 +1044,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1065,9 +1067,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1088,7 +1094,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request.Parent, request.StartTime, request.EndTime);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1109,9 +1117,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request.Parent, request.StartTime, request.EndTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request.Parent, request.StartTime, request.EndTime, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1132,7 +1144,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRuns(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = client.ScheduleTransferRuns(request.ParentAsTransferConfigName, request.StartTime, request.EndTime);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1153,9 +1167,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             };
             mockGrpcClient.Setup(x => x.ScheduleTransferRunsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScheduleTransferRunsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCallSettings = await client.ScheduleTransferRunsAsync(request.ParentAsTransferConfigName, request.StartTime, request.EndTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCallSettings);
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse responseCancellationToken = await client.ScheduleTransferRunsAsync(request.ParentAsTransferConfigName, request.StartTime, request.EndTime, st::CancellationToken.None);
+#pragma warning restore CS0612
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

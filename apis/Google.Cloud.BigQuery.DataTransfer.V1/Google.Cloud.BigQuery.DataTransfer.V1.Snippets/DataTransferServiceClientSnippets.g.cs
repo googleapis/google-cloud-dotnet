@@ -1233,7 +1233,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 EndTime = new Timestamp(),
             };
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1252,7 +1254,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
                 EndTime = new Timestamp(),
             };
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1267,7 +1271,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(parent, startTime, endTime);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1283,7 +1289,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(parent, startTime, endTime);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1298,7 +1306,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = dataTransferServiceClient.ScheduleTransferRuns(parent, startTime, endTime);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1314,7 +1324,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             Timestamp startTime = new Timestamp();
             Timestamp endTime = new Timestamp();
             // Make the request
+#pragma warning disable CS0612
             ScheduleTransferRunsResponse response = await dataTransferServiceClient.ScheduleTransferRunsAsync(parent, startTime, endTime);
+#pragma warning restore CS0612
             // End snippet
         }
 

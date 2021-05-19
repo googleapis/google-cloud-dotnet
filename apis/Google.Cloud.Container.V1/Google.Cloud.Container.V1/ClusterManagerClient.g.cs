@@ -687,13 +687,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ListClustersResponse ListClusters(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             ListClusters(new ListClustersRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -713,13 +712,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListClustersResponse> ListClustersAsync(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             ListClustersAsync(new ListClustersRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -739,6 +737,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListClustersResponse> ListClustersAsync(string projectId, string zone, st::CancellationToken cancellationToken) =>
             ListClustersAsync(projectId, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -831,14 +830,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Cluster GetCluster(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             GetCluster(new GetClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -861,14 +859,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Cluster> GetClusterAsync(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             GetClusterAsync(new GetClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -891,6 +888,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Cluster> GetClusterAsync(string projectId, string zone, string clusterId, st::CancellationToken cancellationToken) =>
             GetClusterAsync(projectId, zone, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1029,13 +1027,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation CreateCluster(string projectId, string zone, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateCluster(new CreateClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
                 Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
             }, callSettings);
 
@@ -1072,13 +1069,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CreateClusterAsync(string projectId, string zone, Cluster cluster, gaxgrpc::CallSettings callSettings = null) =>
             CreateClusterAsync(new CreateClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
                 Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
             }, callSettings);
 
@@ -1115,6 +1111,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CreateClusterAsync(string projectId, string zone, Cluster cluster, st::CancellationToken cancellationToken) =>
             CreateClusterAsync(projectId, zone, cluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1263,14 +1260,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation UpdateCluster(string projectId, string zone, string clusterId, ClusterUpdate update, gaxgrpc::CallSettings callSettings = null) =>
             UpdateCluster(new UpdateClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Update = gax::GaxPreconditions.CheckNotNull(update, nameof(update)),
             }, callSettings);
 
@@ -1297,14 +1293,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> UpdateClusterAsync(string projectId, string zone, string clusterId, ClusterUpdate update, gaxgrpc::CallSettings callSettings = null) =>
             UpdateClusterAsync(new UpdateClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Update = gax::GaxPreconditions.CheckNotNull(update, nameof(update)),
             }, callSettings);
 
@@ -1331,6 +1326,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> UpdateClusterAsync(string projectId, string zone, string clusterId, ClusterUpdate update, st::CancellationToken cancellationToken) =>
             UpdateClusterAsync(projectId, zone, clusterId, update, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1501,14 +1497,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetLoggingService(string projectId, string zone, string clusterId, string loggingService, gaxgrpc::CallSettings callSettings = null) =>
             SetLoggingService(new SetLoggingServiceRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 LoggingService = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
             }, callSettings);
 
@@ -1545,14 +1540,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLoggingServiceAsync(string projectId, string zone, string clusterId, string loggingService, gaxgrpc::CallSettings callSettings = null) =>
             SetLoggingServiceAsync(new SetLoggingServiceRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 LoggingService = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingService, nameof(loggingService)),
             }, callSettings);
 
@@ -1589,6 +1583,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLoggingServiceAsync(string projectId, string zone, string clusterId, string loggingService, st::CancellationToken cancellationToken) =>
             SetLoggingServiceAsync(projectId, zone, clusterId, loggingService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1735,14 +1730,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetMonitoringService(string projectId, string zone, string clusterId, string monitoringService, gaxgrpc::CallSettings callSettings = null) =>
             SetMonitoringService(new SetMonitoringServiceRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 MonitoringService = gax::GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
             }, callSettings);
 
@@ -1779,14 +1773,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetMonitoringServiceAsync(string projectId, string zone, string clusterId, string monitoringService, gaxgrpc::CallSettings callSettings = null) =>
             SetMonitoringServiceAsync(new SetMonitoringServiceRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 MonitoringService = gax::GaxPreconditions.CheckNotNullOrEmpty(monitoringService, nameof(monitoringService)),
             }, callSettings);
 
@@ -1823,6 +1816,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetMonitoringServiceAsync(string projectId, string zone, string clusterId, string monitoringService, st::CancellationToken cancellationToken) =>
             SetMonitoringServiceAsync(projectId, zone, clusterId, monitoringService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1960,14 +1954,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetAddonsConfig(string projectId, string zone, string clusterId, AddonsConfig addonsConfig, gaxgrpc::CallSettings callSettings = null) =>
             SetAddonsConfig(new SetAddonsConfigRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 AddonsConfig = gax::GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
             }, callSettings);
 
@@ -1995,14 +1988,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetAddonsConfigAsync(string projectId, string zone, string clusterId, AddonsConfig addonsConfig, gaxgrpc::CallSettings callSettings = null) =>
             SetAddonsConfigAsync(new SetAddonsConfigRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 AddonsConfig = gax::GaxPreconditions.CheckNotNull(addonsConfig, nameof(addonsConfig)),
             }, callSettings);
 
@@ -2030,6 +2022,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetAddonsConfigAsync(string projectId, string zone, string clusterId, AddonsConfig addonsConfig, st::CancellationToken cancellationToken) =>
             SetAddonsConfigAsync(projectId, zone, clusterId, addonsConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2098,6 +2091,7 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetLocations(SetLocationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2110,6 +2104,7 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(SetLocationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2122,6 +2117,7 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(SetLocationsRequest request, st::CancellationToken cancellationToken) =>
             SetLocationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2157,14 +2153,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetLocations(string projectId, string zone, string clusterId, scg::IEnumerable<string> locations, gaxgrpc::CallSettings callSettings = null) =>
             SetLocations(new SetLocationsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Locations =
                 {
                     gax::GaxPreconditions.CheckNotNull(locations, nameof(locations)),
@@ -2203,14 +2198,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(string projectId, string zone, string clusterId, scg::IEnumerable<string> locations, gaxgrpc::CallSettings callSettings = null) =>
             SetLocationsAsync(new SetLocationsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Locations =
                 {
                     gax::GaxPreconditions.CheckNotNull(locations, nameof(locations)),
@@ -2249,6 +2243,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(string projectId, string zone, string clusterId, scg::IEnumerable<string> locations, st::CancellationToken cancellationToken) =>
             SetLocationsAsync(projectId, zone, clusterId, locations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2273,6 +2268,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetLocations(string name, scg::IEnumerable<string> locations, gaxgrpc::CallSettings callSettings = null) =>
             SetLocations(new SetLocationsRequest
             {
@@ -2304,6 +2300,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(string name, scg::IEnumerable<string> locations, gaxgrpc::CallSettings callSettings = null) =>
             SetLocationsAsync(new SetLocationsRequest
             {
@@ -2335,6 +2332,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLocationsAsync(string name, scg::IEnumerable<string> locations, st::CancellationToken cancellationToken) =>
             SetLocationsAsync(name, locations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2397,14 +2395,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation UpdateMaster(string projectId, string zone, string clusterId, string masterVersion, gaxgrpc::CallSettings callSettings = null) =>
             UpdateMaster(new UpdateMasterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 MasterVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
             }, callSettings);
 
@@ -2440,14 +2437,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> UpdateMasterAsync(string projectId, string zone, string clusterId, string masterVersion, gaxgrpc::CallSettings callSettings = null) =>
             UpdateMasterAsync(new UpdateMasterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 MasterVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(masterVersion, nameof(masterVersion)),
             }, callSettings);
 
@@ -2483,6 +2479,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> UpdateMasterAsync(string projectId, string zone, string clusterId, string masterVersion, st::CancellationToken cancellationToken) =>
             UpdateMasterAsync(projectId, zone, clusterId, masterVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2678,14 +2675,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation DeleteCluster(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCluster(new DeleteClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -2716,14 +2712,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> DeleteClusterAsync(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteClusterAsync(new DeleteClusterRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -2754,6 +2749,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> DeleteClusterAsync(string projectId, string zone, string clusterId, st::CancellationToken cancellationToken) =>
             DeleteClusterAsync(projectId, zone, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2860,13 +2856,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ListOperationsResponse ListOperations(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             ListOperations(new ListOperationsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -2885,13 +2880,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             ListOperationsAsync(new ListOperationsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -2910,6 +2904,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListOperationsResponse> ListOperationsAsync(string projectId, string zone, st::CancellationToken cancellationToken) =>
             ListOperationsAsync(projectId, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2960,14 +2955,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation GetOperation(string projectId, string zone, string operationId, gaxgrpc::CallSettings callSettings = null) =>
             GetOperation(new GetOperationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 OperationId = operationId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -2990,14 +2984,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> GetOperationAsync(string projectId, string zone, string operationId, gaxgrpc::CallSettings callSettings = null) =>
             GetOperationAsync(new GetOperationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 OperationId = operationId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3020,6 +3013,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> GetOperationAsync(string projectId, string zone, string operationId, st::CancellationToken cancellationToken) =>
             GetOperationAsync(projectId, zone, operationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3106,14 +3100,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void CancelOperation(string projectId, string zone, string operationId, gaxgrpc::CallSettings callSettings = null) =>
             CancelOperation(new CancelOperationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 OperationId = operationId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3136,14 +3129,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task CancelOperationAsync(string projectId, string zone, string operationId, gaxgrpc::CallSettings callSettings = null) =>
             CancelOperationAsync(new CancelOperationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 OperationId = operationId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3166,6 +3158,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task CancelOperationAsync(string projectId, string zone, string operationId, st::CancellationToken cancellationToken) =>
             CancelOperationAsync(projectId, zone, operationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3248,13 +3241,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ServerConfig GetServerConfig(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             GetServerConfig(new GetServerConfigRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3273,13 +3265,12 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ServerConfig> GetServerConfigAsync(string projectId, string zone, gaxgrpc::CallSettings callSettings = null) =>
             GetServerConfigAsync(new GetServerConfigRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3298,6 +3289,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ServerConfig> GetServerConfigAsync(string projectId, string zone, st::CancellationToken cancellationToken) =>
             GetServerConfigAsync(projectId, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3420,14 +3412,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual ListNodePoolsResponse ListNodePools(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             ListNodePools(new ListNodePoolsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3450,14 +3441,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             ListNodePoolsAsync(new ListNodePoolsRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3480,6 +3470,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<ListNodePoolsResponse> ListNodePoolsAsync(string projectId, string zone, string clusterId, st::CancellationToken cancellationToken) =>
             ListNodePoolsAsync(projectId, zone, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3570,15 +3561,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual NodePool GetNodePool(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             GetNodePool(new GetNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3605,15 +3595,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<NodePool> GetNodePoolAsync(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             GetNodePoolAsync(new GetNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3640,6 +3629,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<NodePool> GetNodePoolAsync(string projectId, string zone, string clusterId, string nodePoolId, st::CancellationToken cancellationToken) =>
             GetNodePoolAsync(projectId, zone, clusterId, nodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3732,14 +3722,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation CreateNodePool(string projectId, string zone, string clusterId, NodePool nodePool, gaxgrpc::CallSettings callSettings = null) =>
             CreateNodePool(new CreateNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 NodePool = gax::GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
             }, callSettings);
 
@@ -3766,14 +3755,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CreateNodePoolAsync(string projectId, string zone, string clusterId, NodePool nodePool, gaxgrpc::CallSettings callSettings = null) =>
             CreateNodePoolAsync(new CreateNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 NodePool = gax::GaxPreconditions.CheckNotNull(nodePool, nameof(nodePool)),
             }, callSettings);
 
@@ -3800,6 +3788,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CreateNodePoolAsync(string projectId, string zone, string clusterId, NodePool nodePool, st::CancellationToken cancellationToken) =>
             CreateNodePoolAsync(projectId, zone, clusterId, nodePool, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3910,15 +3899,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation DeleteNodePool(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteNodePool(new DeleteNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3945,15 +3933,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> DeleteNodePoolAsync(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteNodePoolAsync(new DeleteNodePoolRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -3980,6 +3967,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> DeleteNodePoolAsync(string projectId, string zone, string clusterId, string nodePoolId, st::CancellationToken cancellationToken) =>
             DeleteNodePoolAsync(projectId, zone, clusterId, nodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4077,15 +4065,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation RollbackNodePoolUpgrade(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             RollbackNodePoolUpgrade(new RollbackNodePoolUpgradeRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4113,15 +4100,14 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(string projectId, string zone, string clusterId, string nodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             RollbackNodePoolUpgradeAsync(new RollbackNodePoolUpgradeRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
                 NodePoolId = nodePoolId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4149,6 +4135,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> RollbackNodePoolUpgradeAsync(string projectId, string zone, string clusterId, string nodePoolId, st::CancellationToken cancellationToken) =>
             RollbackNodePoolUpgradeAsync(projectId, zone, clusterId, nodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4298,14 +4285,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetLegacyAbac(string projectId, string zone, string clusterId, bool enabled, gaxgrpc::CallSettings callSettings = null) =>
             SetLegacyAbac(new SetLegacyAbacRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Enabled = enabled,
             }, callSettings);
 
@@ -4332,14 +4318,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLegacyAbacAsync(string projectId, string zone, string clusterId, bool enabled, gaxgrpc::CallSettings callSettings = null) =>
             SetLegacyAbacAsync(new SetLegacyAbacRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 Enabled = enabled,
             }, callSettings);
 
@@ -4366,6 +4351,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetLegacyAbacAsync(string projectId, string zone, string clusterId, bool enabled, st::CancellationToken cancellationToken) =>
             SetLegacyAbacAsync(projectId, zone, clusterId, enabled, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4469,14 +4455,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation StartIPRotation(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             StartIPRotation(new StartIPRotationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4499,14 +4484,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> StartIPRotationAsync(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             StartIPRotationAsync(new StartIPRotationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4529,6 +4513,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> StartIPRotationAsync(string projectId, string zone, string clusterId, st::CancellationToken cancellationToken) =>
             StartIPRotationAsync(projectId, zone, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4615,14 +4600,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation CompleteIPRotation(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             CompleteIPRotation(new CompleteIPRotationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4645,14 +4629,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CompleteIPRotationAsync(string projectId, string zone, string clusterId, gaxgrpc::CallSettings callSettings = null) =>
             CompleteIPRotationAsync(new CompleteIPRotationRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
             }, callSettings);
 
         /// <summary>
@@ -4675,6 +4658,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> CompleteIPRotationAsync(string projectId, string zone, string clusterId, st::CancellationToken cancellationToken) =>
             CompleteIPRotationAsync(projectId, zone, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4791,14 +4775,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Operation SetNetworkPolicy(string projectId, string zone, string clusterId, NetworkPolicy networkPolicy, gaxgrpc::CallSettings callSettings = null) =>
             SetNetworkPolicy(new SetNetworkPolicyRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 NetworkPolicy = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
             }, callSettings);
 
@@ -4825,14 +4808,13 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetNetworkPolicyAsync(string projectId, string zone, string clusterId, NetworkPolicy networkPolicy, gaxgrpc::CallSettings callSettings = null) =>
             SetNetworkPolicyAsync(new SetNetworkPolicyRequest
             {
-#pragma warning disable CS0612
                 ProjectId = projectId ?? "",
                 Zone = zone ?? "",
                 ClusterId = clusterId ?? "",
-#pragma warning restore CS0612
                 NetworkPolicy = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
             }, callSettings);
 
@@ -4859,6 +4841,7 @@ namespace Google.Cloud.Container.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Operation> SetNetworkPolicyAsync(string projectId, string zone, string clusterId, NetworkPolicy networkPolicy, st::CancellationToken cancellationToken) =>
             SetNetworkPolicyAsync(projectId, zone, clusterId, networkPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5211,7 +5194,9 @@ namespace Google.Cloud.Container.V1
             _callSetAddonsConfig = clientHelper.BuildApiCall<SetAddonsConfigRequest, Operation>(grpcClient.SetAddonsConfigAsync, grpcClient.SetAddonsConfig, effectiveSettings.SetAddonsConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSetAddonsConfig);
             Modify_SetAddonsConfigApiCall(ref _callSetAddonsConfig);
+#pragma warning disable CS0612
             _callSetLocations = clientHelper.BuildApiCall<SetLocationsRequest, Operation>(grpcClient.SetLocationsAsync, grpcClient.SetLocations, effectiveSettings.SetLocationsSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callSetLocations);
             Modify_SetLocationsApiCall(ref _callSetLocations);
             _callUpdateMaster = clientHelper.BuildApiCall<UpdateMasterRequest, Operation>(grpcClient.UpdateMasterAsync, grpcClient.UpdateMaster, effectiveSettings.UpdateMasterSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -5671,6 +5656,7 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Operation SetLocations(SetLocationsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLocationsRequest(ref request, ref callSettings);
@@ -5686,6 +5672,7 @@ namespace Google.Cloud.Container.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Operation> SetLocationsAsync(SetLocationsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLocationsRequest(ref request, ref callSettings);
