@@ -101,7 +101,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                 // This is the only place we use async in this test, because it makes it easy to cancel the request after 10 seconds.
                 var token = new CancellationTokenSource(TimeSpan.FromSeconds(10)).Token;
-                var pullResponse = await subscriberClient.PullAsync(subscriptionName, false, maxMessages: 10, cancellationToken: token);
+                var pullRequest = new PullRequest { SubscriptionAsSubscriptionName = subscriptionName, MaxMessages = 10 };
+                var pullResponse = await subscriberClient.PullAsync(pullRequest);
 
                 var messages = pullResponse.ReceivedMessages;
                 subscriberClient.Acknowledge(subscriptionName, messages.Select(m => m.AckId));
