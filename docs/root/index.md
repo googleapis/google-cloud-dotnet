@@ -123,6 +123,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ServiceDirectory.V1](Google.Cloud.ServiceDirectory.V1/index.html) | 1.0.0 | [Service Directory (V1 API)](https://cloud.google.com/service-directory/) |
 | [Google.Cloud.ServiceDirectory.V1Beta1](Google.Cloud.ServiceDirectory.V1Beta1/index.html) | 1.0.0-beta03 | [Service Directory (V1Beta1 API)](https://cloud.google.com/service-directory/) |
 | [Google.Cloud.ServiceManagement.V1](Google.Cloud.ServiceManagement.V1/index.html) | 1.1.0 | [Service Management](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
+| [Google.Cloud.ServiceUsage.V1](Google.Cloud.ServiceUsage.V1/index.html) | 1.0.0-beta01 | [Service Usage](https://cloud.google.com/service-usage/docs/) |
 | [Google.Cloud.Shell.V1](Google.Cloud.Shell.V1/index.html) | 1.0.0-beta01 | [Cloud Shell](https://cloud.google.com/shell/) |
 | [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html) | 3.8.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html) | 3.8.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
