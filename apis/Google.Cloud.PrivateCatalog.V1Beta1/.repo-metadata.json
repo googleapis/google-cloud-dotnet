@@ -1,0 +1,6 @@
+{
+  "distribution_name": "Google.Cloud.PrivateCatalog.V1Beta1",
+  "release_level": "beta",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.PrivateCatalog.V1Beta1/latest",
+  "library_type": "GAPIC_AUTO"
+}

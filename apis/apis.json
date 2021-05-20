@@ -1632,7 +1632,7 @@
     },
     {
       "id": "Google.Cloud.PrivateCatalog.V1Beta1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Private Catalog",
       "productUrl": "https://cloud.google.com/private-catalog/docs/",
