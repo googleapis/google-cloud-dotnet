@@ -1752,7 +1752,7 @@
         "google/protobuf"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Privatecatalog.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.PrivateCatalog.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/pubsublite/v1",
