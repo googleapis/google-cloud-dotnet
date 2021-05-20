@@ -2035,6 +2035,23 @@
       "protoPath": "google/api/servicemanagement/v1"
     },
     {
+      "id": "Google.Cloud.ServiceUsage.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Service Usage",
+      "productUrl": "https://cloud.google.com/service-usage/docs/",
+      "description": "Recommended Google client library to access the Service Usage API, which enables services that service consumers want to use on Google Cloud Platform, lists the available or enabled services, or disables services that service consumers no longer use.",
+      "tags": [
+        "services",
+        "apis"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/api/serviceusage/v1"
+    },
+    {
       "id": "Google.Cloud.Shell.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
