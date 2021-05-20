@@ -1631,6 +1631,23 @@
       "protoPath": "google/cloud/policytroubleshooter/v1"
     },
     {
+      "id": "Google.Cloud.PrivateCatalog.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Private Catalog",
+      "productUrl": "https://cloud.google.com/private-catalog/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Private Catalog API, which enables Cloud users to discover private catalogs and products in their organizations.",
+      "tags": [
+        "catalog",
+        "solutions"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/privatecatalog/v1beta1"
+    },
+    {
       "id": "Google.Cloud.Profiler.V2",
       "version": "1.0.0",
       "type": "grpc",
