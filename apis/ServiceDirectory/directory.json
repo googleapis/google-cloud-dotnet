@@ -180,7 +180,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Api.Serviceusage.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ServiceUsage.V1"
     },
     {
       "ServiceDirectory": "google/api/serviceusage/v1beta1",
