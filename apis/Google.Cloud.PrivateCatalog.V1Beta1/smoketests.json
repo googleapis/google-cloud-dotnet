@@ -1,0 +1,11 @@
+[
+  {
+    "method": "SearchCatalogs",
+    "client": "PrivateCatalogClient",
+    "arguments": {
+      "request": {
+        "resource": "projects/${PROJECT_ID}"
+      }
+    }
+  }
+]
