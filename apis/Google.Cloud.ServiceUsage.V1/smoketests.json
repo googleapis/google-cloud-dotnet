@@ -1,0 +1,11 @@
+[
+  {
+    "method": "ListServices",
+    "client": "ServiceUsageClient",
+    "arguments": {
+      "request": {
+        "parent": "projects/${PROJECT_ID}"
+      }
+    }
+  }
+]
