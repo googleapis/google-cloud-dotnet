@@ -2468,6 +2468,22 @@
       }
     },
     {
+      "id": "Google.Cloud.VpcAccess.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Serverless VPC Access",
+      "productUrl": "https://cloud.google.com/vpc/docs/",
+      "description": "API for managing VPC access connectors.",
+      "tags": [
+        "vpc"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/vpcaccess/v1"
+    },
+    {
       "id": "Google.Cloud.WebRisk.V1",
       "generator": "micro",
       "protoPath": "google/cloud/webrisk/v1",
