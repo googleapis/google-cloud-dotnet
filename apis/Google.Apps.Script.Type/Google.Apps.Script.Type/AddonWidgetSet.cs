@@ -32,11 +32,11 @@ namespace Google.Apps.Script.Type {
             "EAESEgoOU1RZTEVEX0JVVFRPTlMQAhIUChBQRVJTSVNURU5UX0ZPUk1TEAMS",
             "EAoMRklYRURfRk9PVEVSEAQSIQodVVBEQVRFX1NVQkpFQ1RfQU5EX1JFQ0lQ",
             "SUVOVFMQBRIPCgtHUklEX1dJREdFVBAGEhsKF0FERE9OX0NPTVBPU0VfVUlf",
-            "QUNUSU9OEAdCqAEKG2NvbS5nb29nbGUuYXBwcy5zY3JpcHQudHlwZVABWjZn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwcHMvc2Ny",
-            "aXB0L3R5cGWqAhdHb29nbGUuQXBwcy5TY3JpcHQuVHlwZcoCF0dvb2dsZVxB",
-            "cHBzXFNjcmlwdFxUeXBl6gIaR29vZ2xlOjpBcHBzOjpTY3JpcHQ6OlR5cGVi",
-            "BnByb3RvMw=="));
+            "QUNUSU9OEAdCvQEKG2NvbS5nb29nbGUuYXBwcy5zY3JpcHQudHlwZUITQWRk",
+            "T25XaWRnZXRTZXRQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2FwcHMvc2NyaXB0L3R5cGWqAhdHb29nbGUuQXBwcy5T",
+            "Y3JpcHQuVHlwZcoCF0dvb2dsZVxBcHBzXFNjcmlwdFxUeXBl6gIaR29vZ2xl",
+            "OjpBcHBzOjpTY3JpcHQ6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
