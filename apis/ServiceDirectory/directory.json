@@ -1569,7 +1569,7 @@
       "ServiceDirectory": "google/cloud/orgpolicy/v2",
       "Name": "orgpolicy.googleapis.com",
       "Title": "Organization Policy API",
-      "Description": "The Org Policy API allows users to configure governance ruleson their GCP resources across the Cloud Resource Hierarchy.",
+      "Description": "The Org Policy API allows users to configure governance rules on their GCP resources across the Cloud Resource Hierarchy.",
       "ServiceConfigFile": "google/cloud/orgpolicy/v2/orgpolicy_v2.yaml",
       "Version": "v2",
       "PackageFromDirectory": "google.cloud.orgpolicy.v2",
