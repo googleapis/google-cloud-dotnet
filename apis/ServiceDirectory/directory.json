@@ -2650,7 +2650,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Vpcaccess.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.VpcAccess.V1"
     },
     {
       "ServiceDirectory": "google/cloud/webrisk/v1",
