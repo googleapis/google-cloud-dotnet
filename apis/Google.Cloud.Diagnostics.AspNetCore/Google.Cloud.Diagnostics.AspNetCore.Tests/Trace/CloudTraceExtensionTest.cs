@@ -14,6 +14,7 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System;
 using Xunit;
@@ -81,7 +82,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var accessor = new HttpContextAccessor();
             var mockProvider = new Mock<IServiceProvider>();
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-            var service = mockProvider.Object.GetServiceCheckNotNull<IHttpContextAccessor>();
+            var service = mockProvider.Object.GetRequiredService<IHttpContextAccessor>();
             Assert.Equal(accessor, service);
         }
 
@@ -90,7 +91,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var mockProvider = new Mock<IServiceProvider>();
             Assert.Throws<InvalidOperationException>(
-                () => mockProvider.Object.GetServiceCheckNotNull<IHttpContextAccessor>());
+                () => mockProvider.Object.GetRequiredService<IHttpContextAccessor>());
         }
     }
 }

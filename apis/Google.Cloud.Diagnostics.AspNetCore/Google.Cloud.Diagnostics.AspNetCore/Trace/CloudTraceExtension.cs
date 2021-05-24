@@ -18,7 +18,6 @@ using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 #if NETCOREAPP3_1
@@ -141,8 +140,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
-            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var traceDecisionPredicate = provider.GetServiceCheckNotNull<TraceDecisionPredicate>();
+            var accessor = provider.GetRequiredService<IHttpContextAccessor>();
+            var traceDecisionPredicate = provider.GetRequiredService<TraceDecisionPredicate>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
             Func<bool?> shouldTraceFunc = () =>

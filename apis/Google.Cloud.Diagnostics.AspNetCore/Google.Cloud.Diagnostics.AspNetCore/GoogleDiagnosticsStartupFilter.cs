@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using Google.Api;
-using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 #if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
@@ -58,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             return app =>
             {
-                var loggerFactory = app.ApplicationServices.GetServiceCheckNotNull<ILoggerFactory>();
+                var loggerFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
                 loggerFactory.AddGoogle(app.ApplicationServices, _projectId, _loggerOptions);
                 app.UseGoogleExceptionLogging();
                 app.UseGoogleTrace();
