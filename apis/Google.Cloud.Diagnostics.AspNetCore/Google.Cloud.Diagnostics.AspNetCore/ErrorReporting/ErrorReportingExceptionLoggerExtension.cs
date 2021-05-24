@@ -17,7 +17,6 @@ using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 #if NETCOREAPP3_1
@@ -113,8 +112,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private static IExceptionLogger CreateExceptionLogger(IServiceProvider provider)
         {
-            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var contextLogger = provider.GetServiceCheckNotNull<IContextExceptionLogger>();
+            var accessor = provider.GetRequiredService<IHttpContextAccessor>();
+            var contextLogger = provider.GetRequiredService<IContextExceptionLogger>();
             return new GoogleExceptionLogger(contextLogger, accessor);
         }
     }
