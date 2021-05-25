@@ -26,14 +26,14 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvb3Njb25maWcvdjFhbHBoYS9vc19wb2xpY3kucHJv",
             "dG8SHWdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIs8hCghPU1BvbGljeRIPCgJpZBgBIAEo",
+            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIukhCghPU1BvbGljeRIPCgJpZBgBIAEo",
             "CUID4EECEhMKC2Rlc2NyaXB0aW9uGAIgASgJEj8KBG1vZGUYAyABKA4yLC5n",
             "b29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5Nb2RlQgPg",
             "QQISUwoPcmVzb3VyY2VfZ3JvdXBzGAQgAygLMjUuZ29vZ2xlLmNsb3VkLm9z",
             "Y29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2VHcm91cEID4EECEiUK",
             "HWFsbG93X25vX3Jlc291cmNlX2dyb3VwX21hdGNoGAUgASgIGjUKCE9TRmls",
             "dGVyEhUKDW9zX3Nob3J0X25hbWUYASABKAkSEgoKb3NfdmVyc2lvbhgCIAEo",
-            "CRrIHQoIUmVzb3VyY2USDwoCaWQYASABKAlCA+BBAhJPCgNwa2cYAiABKAsy",
+            "CRriHQoIUmVzb3VyY2USDwoCaWQYASABKAlCA+BBAhJPCgNwa2cYAiABKAsy",
             "QC5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNv",
             "dXJjZS5QYWNrYWdlUmVzb3VyY2VIABJZCgpyZXBvc2l0b3J5GAMgASgLMkMu",
             "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3Vy",
@@ -98,36 +98,36 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             "4EECEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIVCghiYXNlX3VybBgDIAEoCUID",
             "4EECEhAKCGdwZ19rZXlzGAQgAygJGjQKDUdvb1JlcG9zaXRvcnkSEQoEbmFt",
             "ZRgBIAEoCUID4EECEhAKA3VybBgCIAEoCUID4EECQgwKCnJlcG9zaXRvcnka",
-            "8wMKDEV4ZWNSZXNvdXJjZRJZCgh2YWxpZGF0ZRgBIAEoCzJCLmdvb2dsZS5j",
+            "jQQKDEV4ZWNSZXNvdXJjZRJZCgh2YWxpZGF0ZRgBIAEoCzJCLmdvb2dsZS5j",
             "bG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkV4ZWNS",
             "ZXNvdXJjZS5FeGVjQgPgQQISUwoHZW5mb3JjZRgCIAEoCzJCLmdvb2dsZS5j",
             "bG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkV4ZWNS",
-            "ZXNvdXJjZS5FeGVjGrICCgRFeGVjEkUKBGZpbGUYASABKAsyNS5nb29nbGUu",
+            "ZXNvdXJjZS5FeGVjGswCCgRFeGVjEkUKBGZpbGUYASABKAsyNS5nb29nbGUu",
             "Y2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5GaWxl",
             "SAASEAoGc2NyaXB0GAIgASgJSAASDAoEYXJncxgDIAMoCRJoCgtpbnRlcnBy",
             "ZXRlchgEIAEoDjJOLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9T",
             "UG9saWN5LlJlc291cmNlLkV4ZWNSZXNvdXJjZS5FeGVjLkludGVycHJldGVy",
-            "QgPgQQIiTwoLSW50ZXJwcmV0ZXISGwoXSU5URVJQUkVURVJfVU5TUEVDSUZJ",
-            "RUQQABIICgROT05FEAESCQoFU0hFTEwQAhIOCgpQT1dFUlNIRUxMEANCCAoG",
-            "c291cmNlGtYCCgxGaWxlUmVzb3VyY2USRQoEZmlsZRgBIAEoCzI1Lmdvb2ds",
-            "ZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5LlJlc291cmNlLkZp",
-            "bGVIABIRCgdjb250ZW50GAIgASgJSAASEQoEcGF0aBgDIAEoCUID4EECEl4K",
-            "BXN0YXRlGAQgASgOMkouZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEu",
-            "T1NQb2xpY3kuUmVzb3VyY2UuRmlsZVJlc291cmNlLkRlc2lyZWRTdGF0ZUID",
-            "4EECEhMKC3Blcm1pc3Npb25zGAUgASgJIloKDERlc2lyZWRTdGF0ZRIdChlE",
-            "RVNJUkVEX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUFJFU0VOVBABEgoKBkFC",
-            "U0VOVBACEhIKDkNPTlRFTlRTX01BVENIEANCCAoGc291cmNlQg8KDXJlc291",
-            "cmNlX3R5cGUangEKDVJlc291cmNlR3JvdXASQwoJb3NfZmlsdGVyGAEgASgL",
-            "MjAuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3kuT1NG",
-            "aWx0ZXISSAoJcmVzb3VyY2VzGAIgAygLMjAuZ29vZ2xlLmNsb3VkLm9zY29u",
-            "ZmlnLnYxYWxwaGEuT1NQb2xpY3kuUmVzb3VyY2VCA+BBAiI9CgRNb2RlEhQK",
-            "EE1PREVfVU5TUEVDSUZJRUQQABIOCgpWQUxJREFUSU9OEAESDwoLRU5GT1JD",
-            "RU1FTlQQAkLeAQohY29tLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhh",
-            "Qg1PU1BvbGljeVByb3RvUAFaRWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvb3Njb25maWcvdjFhbHBoYTtvc2NvbmZpZ6oC",
-            "HUdvb2dsZS5DbG91ZC5Pc0NvbmZpZy5WMUFscGhhygIdR29vZ2xlXENsb3Vk",
-            "XE9zQ29uZmlnXFYxYWxwaGHqAiBHb29nbGU6OkNsb3VkOjpPc0NvbmZpZzo6",
-            "VjFhbHBoYWIGcHJvdG8z"));
+            "QgPgQQISGAoQb3V0cHV0X2ZpbGVfcGF0aBgFIAEoCSJPCgtJbnRlcnByZXRl",
+            "chIbChdJTlRFUlBSRVRFUl9VTlNQRUNJRklFRBAAEggKBE5PTkUQARIJCgVT",
+            "SEVMTBACEg4KClBPV0VSU0hFTEwQA0IICgZzb3VyY2Ua1gIKDEZpbGVSZXNv",
+            "dXJjZRJFCgRmaWxlGAEgASgLMjUuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
+            "YWxwaGEuT1NQb2xpY3kuUmVzb3VyY2UuRmlsZUgAEhEKB2NvbnRlbnQYAiAB",
+            "KAlIABIRCgRwYXRoGAMgASgJQgPgQQISXgoFc3RhdGUYBCABKA4ySi5nb29n",
+            "bGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGljeS5SZXNvdXJjZS5G",
+            "aWxlUmVzb3VyY2UuRGVzaXJlZFN0YXRlQgPgQQISEwoLcGVybWlzc2lvbnMY",
+            "BSABKAkiWgoMRGVzaXJlZFN0YXRlEh0KGURFU0lSRURfU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABILCgdQUkVTRU5UEAESCgoGQUJTRU5UEAISEgoOQ09OVEVOVFNf",
+            "TUFUQ0gQA0IICgZzb3VyY2VCDwoNcmVzb3VyY2VfdHlwZRqeAQoNUmVzb3Vy",
+            "Y2VHcm91cBJDCglvc19maWx0ZXIYASABKAsyMC5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjFhbHBoYS5PU1BvbGljeS5PU0ZpbHRlchJICglyZXNvdXJjZXMY",
+            "AiADKAsyMC5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGlj",
+            "eS5SZXNvdXJjZUID4EECIj0KBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAA",
+            "Eg4KClZBTElEQVRJT04QARIPCgtFTkZPUkNFTUVOVBACQt4BCiFjb20uZ29v",
+            "Z2xlLmNsb3VkLm9zY29uZmlnLnYxYWxwaGFCDU9TUG9saWN5UHJvdG9QAVpF",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9v",
+            "c2NvbmZpZy92MWFscGhhO29zY29uZmlnqgIdR29vZ2xlLkNsb3VkLk9zQ29u",
+            "ZmlnLlYxQWxwaGHKAh1Hb29nbGVcQ2xvdWRcT3NDb25maWdcVjFhbHBoYeoC",
+            "IEdvb2dsZTo6Q2xvdWQ6Ok9zQ29uZmlnOjpWMWFscGhhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +145,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.YumRepository), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.YumRepository.Parser, new[]{ "Id", "DisplayName", "BaseUrl", "GpgKeys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.ZypperRepository), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.ZypperRepository.Parser, new[]{ "Id", "DisplayName", "BaseUrl", "GpgKeys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.GooRepository), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.RepositoryResource.Types.GooRepository.Parser, new[]{ "Name", "Url" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Parser, new[]{ "Validate", "Enforce" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Parser, new[]{ "File", "Script", "Args", "Interpreter" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Parser, new[]{ "Validate", "Enforce" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Parser, new[]{ "File", "Script", "Args", "Interpreter", "OutputFilePath" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Parser, new[]{ "File", "Content", "Path", "State", "Permissions" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Types.DesiredState) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup), global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.ResourceGroup.Parser, new[]{ "OsFilter", "Resources" }, null, null, null, null)})
           }));
@@ -1583,8 +1583,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public const int UriFieldNumber = 1;
                 private string uri_ = "";
                 /// <summary>
-                /// Required. URI from which to fetch the object. It should contain both
-                /// the protocol and path following the format `{protocol}://{location}`.
+                /// Required. URI from which to fetch the object. It should contain both the
+                /// protocol and path following the format `{protocol}://{location}`.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public string Uri {
@@ -4507,8 +4507,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     = pb::FieldCodec.ForString(34);
                 private readonly pbc::RepeatedField<string> components_ = new pbc::RepeatedField<string>();
                 /// <summary>
-                /// Required. List of components for this repository. Must contain at
-                /// least one item.
+                /// Required. List of components for this repository. Must contain at least one
+                /// item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public pbc::RepeatedField<string> Components {
@@ -4814,8 +4814,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public const int IdFieldNumber = 1;
                 private string id_ = "";
                 /// <summary>
-                /// Required. A one word, unique name for this repository. This is  the
-                /// `repo id` in the yum config file and also the `display_name` if
+                /// Required. A one word, unique name for this repository. This is  the `repo
+                /// id` in the yum config file and also the `display_name` if
                 /// `display_name` is omitted. This id is also used as the unique
                 /// identifier when checking for resource conflicts.
                 /// </summary>
@@ -5103,8 +5103,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public const int IdFieldNumber = 1;
                 private string id_ = "";
                 /// <summary>
-                /// Required. A one word, unique name for this repository. This is the
-                /// `repo id` in the zypper config file and also the `display_name` if
+                /// Required. A one word, unique name for this repository. This is the `repo
+                /// id` in the zypper config file and also the `display_name` if
                 /// `display_name` is omitted. This id is also used as the unique
                 /// identifier when checking for GuestPolicy conflicts.
                 /// </summary>
@@ -5637,10 +5637,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             public const int ValidateFieldNumber = 1;
             private global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec validate_;
             /// <summary>
-            /// Required. What to run to validate this resource is in the desired
-            /// state. An exit code of 100 indicates "in desired state", and exit code
-            /// of 101 indicates "not in desired state". Any other exit code indicates
-            /// a failure running validate.
+            /// Required. What to run to validate this resource is in the desired state.
+            /// An exit code of 100 indicates "in desired state", and exit code of 101
+            /// indicates "not in desired state". Any other exit code indicates a
+            /// failure running validate.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec Validate {
@@ -5867,6 +5867,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public Exec(Exec other) : this() {
                   args_ = other.args_.Clone();
                   interpreter_ = other.interpreter_;
+                  outputFilePath_ = other.outputFilePath_;
                   switch (other.SourceCase) {
                     case SourceOneofCase.File:
                       File = other.File.Clone();
@@ -5940,6 +5941,25 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   }
                 }
 
+                /// <summary>Field number for the "output_file_path" field.</summary>
+                public const int OutputFilePathFieldNumber = 5;
+                private string outputFilePath_ = "";
+                /// <summary>
+                /// Only recorded for enforce Exec.
+                /// Path to an output file (that is created by this Exec) whose
+                /// content will be recorded in OSPolicyResourceCompliance after a
+                /// successful run. Absence or failure to read this file will result in
+                /// this ExecResource being non-compliant. Output file size is limited to
+                /// 100K bytes.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                public string OutputFilePath {
+                  get { return outputFilePath_; }
+                  set {
+                    outputFilePath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
                 private object source_;
                 /// <summary>Enum of possible cases for the "source" oneof.</summary>
                 public enum SourceOneofCase {
@@ -5976,6 +5996,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   if (Script != other.Script) return false;
                   if(!args_.Equals(other.args_)) return false;
                   if (Interpreter != other.Interpreter) return false;
+                  if (OutputFilePath != other.OutputFilePath) return false;
                   if (SourceCase != other.SourceCase) return false;
                   return Equals(_unknownFields, other._unknownFields);
                 }
@@ -5987,6 +6008,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   if (sourceCase_ == SourceOneofCase.Script) hash ^= Script.GetHashCode();
                   hash ^= args_.GetHashCode();
                   if (Interpreter != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter.Unspecified) hash ^= Interpreter.GetHashCode();
+                  if (OutputFilePath.Length != 0) hash ^= OutputFilePath.GetHashCode();
                   hash ^= (int) sourceCase_;
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
@@ -6017,6 +6039,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(32);
                     output.WriteEnum((int) Interpreter);
                   }
+                  if (OutputFilePath.Length != 0) {
+                    output.WriteRawTag(42);
+                    output.WriteString(OutputFilePath);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
@@ -6039,6 +6065,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(32);
                     output.WriteEnum((int) Interpreter);
                   }
+                  if (OutputFilePath.Length != 0) {
+                    output.WriteRawTag(42);
+                    output.WriteString(OutputFilePath);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(ref output);
                   }
@@ -6058,6 +6088,9 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   if (Interpreter != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter.Unspecified) {
                     size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Interpreter);
                   }
+                  if (OutputFilePath.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputFilePath);
+                  }
                   if (_unknownFields != null) {
                     size += _unknownFields.CalculateSize();
                   }
@@ -6072,6 +6105,9 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   args_.Add(other.args_);
                   if (other.Interpreter != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter.Unspecified) {
                     Interpreter = other.Interpreter;
+                  }
+                  if (other.OutputFilePath.Length != 0) {
+                    OutputFilePath = other.OutputFilePath;
                   }
                   switch (other.SourceCase) {
                     case SourceOneofCase.File:
@@ -6120,6 +6156,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                         Interpreter = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter) input.ReadEnum();
                         break;
                       }
+                      case 42: {
+                        OutputFilePath = input.ReadString();
+                        break;
+                      }
                     }
                   }
                 #endif
@@ -6153,6 +6193,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                       }
                       case 32: {
                         Interpreter = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter) input.ReadEnum();
+                        break;
+                      }
+                      case 42: {
+                        OutputFilePath = input.ReadString();
                         break;
                       }
                     }

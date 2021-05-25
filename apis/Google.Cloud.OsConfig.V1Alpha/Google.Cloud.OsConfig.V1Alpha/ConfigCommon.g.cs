@@ -25,35 +25,39 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvb3Njb25maWcvdjFhbHBoYS9jb25maWdfY29tbW9u",
-            "LnByb3RvEh1nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYSKOAwoaT1NQ",
+            "LnByb3RvEh1nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYSKlAwoaT1NQ",
             "b2xpY3lSZXNvdXJjZUNvbmZpZ1N0ZXASTAoEdHlwZRgBIAEoDjI+Lmdvb2ds",
             "ZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5UmVzb3VyY2VDb25m",
             "aWdTdGVwLlR5cGUSUgoHb3V0Y29tZRgCIAEoDjJBLmdvb2dsZS5jbG91ZC5v",
             "c2NvbmZpZy52MWFscGhhLk9TUG9saWN5UmVzb3VyY2VDb25maWdTdGVwLk91",
-            "dGNvbWUijgEKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg4KClZBTElE",
-            "QVRJT04QARIXChNERVNJUkVEX1NUQVRFX0NIRUNLEAISHQoZREVTSVJFRF9T",
-            "VEFURV9FTkZPUkNFTUVOVBADEigKJERFU0lSRURfU1RBVEVfQ0hFQ0tfUE9T",
-            "VF9FTkZPUkNFTUVOVBAEIj0KB091dGNvbWUSFwoTT1VUQ09NRV9VTlNQRUNJ",
-            "RklFRBAAEg0KCVNVQ0NFRURFRBABEgoKBkZBSUxFRBACItMBChpPU1BvbGlj",
-            "eVJlc291cmNlQ29tcGxpYW5jZRIdChVvc19wb2xpY3lfcmVzb3VyY2VfaWQY",
-            "ASABKAkSTwoMY29uZmlnX3N0ZXBzGAIgAygLMjkuZ29vZ2xlLmNsb3VkLm9z",
-            "Y29uZmlnLnYxYWxwaGEuT1NQb2xpY3lSZXNvdXJjZUNvbmZpZ1N0ZXASRQoF",
-            "c3RhdGUYAyABKA4yNi5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5P",
-            "U1BvbGljeUNvbXBsaWFuY2VTdGF0ZSqTAQoXT1NQb2xpY3lDb21wbGlhbmNl",
-            "U3RhdGUSKgomT1NfUE9MSUNZX0NPTVBMSUFOQ0VfU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABINCglDT01QTElBTlQQARIRCg1OT05fQ09NUExJQU5UEAISCwoHVU5L",
-            "Tk9XThADEh0KGU5PX09TX1BPTElDSUVTX0FQUExJQ0FCTEUQBELiAQohY29t",
-            "Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhQhFDb25maWdDb21tb25Q",
-            "cm90b1ABWkVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL29zY29uZmlnL3YxYWxwaGE7b3Njb25maWeqAh1Hb29nbGUuQ2xv",
-            "dWQuT3NDb25maWcuVjFBbHBoYcoCHUdvb2dsZVxDbG91ZFxPc0NvbmZpZ1xW",
-            "MWFscGhh6gIgR29vZ2xlOjpDbG91ZDo6T3NDb25maWc6OlYxYWxwaGFiBnBy",
-            "b3RvMw=="));
+            "dGNvbWUSFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSKOAQoEVHlwZRIUChBUWVBF",
+            "X1VOU1BFQ0lGSUVEEAASDgoKVkFMSURBVElPThABEhcKE0RFU0lSRURfU1RB",
+            "VEVfQ0hFQ0sQAhIdChlERVNJUkVEX1NUQVRFX0VORk9SQ0VNRU5UEAMSKAok",
+            "REVTSVJFRF9TVEFURV9DSEVDS19QT1NUX0VORk9SQ0VNRU5UEAQiPQoHT3V0",
+            "Y29tZRIXChNPVVRDT01FX1VOU1BFQ0lGSUVEEAASDQoJU1VDQ0VFREVEEAES",
+            "CgoGRkFJTEVEEAIi/QIKGk9TUG9saWN5UmVzb3VyY2VDb21wbGlhbmNlEh0K",
+            "FW9zX3BvbGljeV9yZXNvdXJjZV9pZBgBIAEoCRJPCgxjb25maWdfc3RlcHMY",
+            "AiADKAsyOS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5PU1BvbGlj",
+            "eVJlc291cmNlQ29uZmlnU3RlcBJFCgVzdGF0ZRgDIAEoDjI2Lmdvb2dsZS5j",
+            "bG91ZC5vc2NvbmZpZy52MWFscGhhLk9TUG9saWN5Q29tcGxpYW5jZVN0YXRl",
+            "EmwKFGV4ZWNfcmVzb3VyY2Vfb3V0cHV0GAQgASgLMkwuZ29vZ2xlLmNsb3Vk",
+            "Lm9zY29uZmlnLnYxYWxwaGEuT1NQb2xpY3lSZXNvdXJjZUNvbXBsaWFuY2Uu",
+            "RXhlY1Jlc291cmNlT3V0cHV0SAAaMAoSRXhlY1Jlc291cmNlT3V0cHV0EhoK",
+            "EmVuZm9yY2VtZW50X291dHB1dBgCIAEoDEIICgZvdXRwdXQqkwEKF09TUG9s",
+            "aWN5Q29tcGxpYW5jZVN0YXRlEioKJk9TX1BPTElDWV9DT01QTElBTkNFX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASDQoJQ09NUExJQU5UEAESEQoNTk9OX0NPTVBM",
+            "SUFOVBACEgsKB1VOS05PV04QAxIdChlOT19PU19QT0xJQ0lFU19BUFBMSUNB",
+            "QkxFEARC4gEKIWNvbS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYUIR",
+            "Q29uZmlnQ29tbW9uUHJvdG9QAVpFZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9vc2NvbmZpZy92MWFscGhhO29zY29uZmln",
+            "qgIdR29vZ2xlLkNsb3VkLk9zQ29uZmlnLlYxQWxwaGHKAh1Hb29nbGVcQ2xv",
+            "dWRcT3NDb25maWdcVjFhbHBoYeoCIEdvb2dsZTo6Q2xvdWQ6Ok9zQ29uZmln",
+            "OjpWMWFscGhhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep), global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Parser, new[]{ "Type", "Outcome" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Type), typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance), global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Parser, new[]{ "OsPolicyResourceId", "ConfigSteps", "State" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep), global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Parser, new[]{ "Type", "Outcome", "ErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Type), typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance), global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Parser, new[]{ "OsPolicyResourceId", "ConfigSteps", "State", "ExecResourceOutput" }, new[]{ "Output" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput), global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput.Parser, new[]{ "EnforcementOutput" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -125,6 +129,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     public OSPolicyResourceConfigStep(OSPolicyResourceConfigStep other) : this() {
       type_ = other.type_;
       outcome_ = other.outcome_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -161,6 +166,21 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 3;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// An error message recorded during the execution of this step.
+    /// Only populated when outcome is FAILED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as OSPolicyResourceConfigStep);
@@ -176,6 +196,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
       if (Type != other.Type) return false;
       if (Outcome != other.Outcome) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -184,6 +205,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       int hash = 1;
       if (Type != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (Outcome != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome.Unspecified) hash ^= Outcome.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -208,6 +230,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         output.WriteRawTag(16);
         output.WriteEnum((int) Outcome);
       }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,6 +251,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         output.WriteRawTag(16);
         output.WriteEnum((int) Outcome);
       }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -239,6 +269,9 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
       if (Outcome != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -256,6 +289,9 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
       if (other.Outcome != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome.Unspecified) {
         Outcome = other.Outcome;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -279,6 +315,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             Outcome = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome) input.ReadEnum();
             break;
           }
+          case 26: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -299,6 +339,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           }
           case 16: {
             Outcome = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceConfigStep.Types.Outcome) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -400,6 +444,12 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       osPolicyResourceId_ = other.osPolicyResourceId_;
       configSteps_ = other.configSteps_.Clone();
       state_ = other.state_;
+      switch (other.OutputCase) {
+        case OutputOneofCase.ExecResourceOutput:
+          ExecResourceOutput = other.ExecResourceOutput.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -450,6 +500,38 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "exec_resource_output" field.</summary>
+    public const int ExecResourceOutputFieldNumber = 4;
+    /// <summary>
+    /// ExecResource specific output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput ExecResourceOutput {
+      get { return outputCase_ == OutputOneofCase.ExecResourceOutput ? (global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput) output_ : null; }
+      set {
+        output_ = value;
+        outputCase_ = value == null ? OutputOneofCase.None : OutputOneofCase.ExecResourceOutput;
+      }
+    }
+
+    private object output_;
+    /// <summary>Enum of possible cases for the "output" oneof.</summary>
+    public enum OutputOneofCase {
+      None = 0,
+      ExecResourceOutput = 4,
+    }
+    private OutputOneofCase outputCase_ = OutputOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputOneofCase OutputCase {
+      get { return outputCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearOutput() {
+      outputCase_ = OutputOneofCase.None;
+      output_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as OSPolicyResourceCompliance);
@@ -466,6 +548,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       if (OsPolicyResourceId != other.OsPolicyResourceId) return false;
       if(!configSteps_.Equals(other.configSteps_)) return false;
       if (State != other.State) return false;
+      if (!object.Equals(ExecResourceOutput, other.ExecResourceOutput)) return false;
+      if (OutputCase != other.OutputCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -475,6 +559,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       if (OsPolicyResourceId.Length != 0) hash ^= OsPolicyResourceId.GetHashCode();
       hash ^= configSteps_.GetHashCode();
       if (State != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState.Unspecified) hash ^= State.GetHashCode();
+      if (outputCase_ == OutputOneofCase.ExecResourceOutput) hash ^= ExecResourceOutput.GetHashCode();
+      hash ^= (int) outputCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -500,6 +586,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
+      if (outputCase_ == OutputOneofCase.ExecResourceOutput) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExecResourceOutput);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -518,6 +608,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
+      if (outputCase_ == OutputOneofCase.ExecResourceOutput) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExecResourceOutput);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -533,6 +627,9 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       size += configSteps_.CalculateSize(_repeated_configSteps_codec);
       if (State != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (outputCase_ == OutputOneofCase.ExecResourceOutput) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExecResourceOutput);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -552,6 +649,15 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       if (other.State != global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState.Unspecified) {
         State = other.State;
       }
+      switch (other.OutputCase) {
+        case OutputOneofCase.ExecResourceOutput:
+          if (ExecResourceOutput == null) {
+            ExecResourceOutput = new global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput();
+          }
+          ExecResourceOutput.MergeFrom(other.ExecResourceOutput);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -576,6 +682,15 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           }
           case 24: {
             State = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput subBuilder = new global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput();
+            if (outputCase_ == OutputOneofCase.ExecResourceOutput) {
+              subBuilder.MergeFrom(ExecResourceOutput);
+            }
+            input.ReadMessage(subBuilder);
+            ExecResourceOutput = subBuilder;
             break;
           }
         }
@@ -604,10 +719,205 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             State = (global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState) input.ReadEnum();
             break;
           }
+          case 34: {
+            global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput subBuilder = new global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Types.ExecResourceOutput();
+            if (outputCase_ == OutputOneofCase.ExecResourceOutput) {
+              subBuilder.MergeFrom(ExecResourceOutput);
+            }
+            input.ReadMessage(subBuilder);
+            ExecResourceOutput = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the OSPolicyResourceCompliance message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// ExecResource specific output.
+      /// </summary>
+      public sealed partial class ExecResourceOutput : pb::IMessage<ExecResourceOutput>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ExecResourceOutput> _parser = new pb::MessageParser<ExecResourceOutput>(() => new ExecResourceOutput());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ExecResourceOutput> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExecResourceOutput() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExecResourceOutput(ExecResourceOutput other) : this() {
+          enforcementOutput_ = other.enforcementOutput_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ExecResourceOutput Clone() {
+          return new ExecResourceOutput(this);
+        }
+
+        /// <summary>Field number for the "enforcement_output" field.</summary>
+        public const int EnforcementOutputFieldNumber = 2;
+        private pb::ByteString enforcementOutput_ = pb::ByteString.Empty;
+        /// <summary>
+        /// Output from Enforcement phase output file (if run).
+        /// Output size is limited to 100K bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString EnforcementOutput {
+          get { return enforcementOutput_; }
+          set {
+            enforcementOutput_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ExecResourceOutput);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ExecResourceOutput other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnforcementOutput != other.EnforcementOutput) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnforcementOutput.Length != 0) hash ^= EnforcementOutput.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnforcementOutput.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(EnforcementOutput);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnforcementOutput.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(EnforcementOutput);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnforcementOutput.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(EnforcementOutput);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ExecResourceOutput other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnforcementOutput.Length != 0) {
+            EnforcementOutput = other.EnforcementOutput;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                EnforcementOutput = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 18: {
+                EnforcementOutput = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

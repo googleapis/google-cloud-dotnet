@@ -233,10 +233,10 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         = new pbc::MapField<string, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item> items_ = new pbc::MapField<string, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item>();
     /// <summary>
-    /// Output only. Inventory items related to the VM keyed by an opaque unique
-    /// identifier for each inventory item. The identifier is unique to each
-    /// distinct and addressable inventory item and will change, when there is a
-    /// new package version.
+    /// Output only. Inventory items related to the VM keyed by an opaque unique identifier for
+    /// each inventory item. The identifier is unique to each distinct and
+    /// addressable inventory item and will change, when there is a new package
+    /// version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item> Items {
