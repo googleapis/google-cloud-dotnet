@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-05-25
+
+- [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
+
 # Version 2.2.0, released 2020-11-19
 
 - [Commit 3a8598f](https://github.com/googleapis/google-cloud-dotnet/commit/3a8598f):
