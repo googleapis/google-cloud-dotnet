@@ -26,7 +26,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AccessApproval.V1](Google.Cloud.AccessApproval.V1/index.html) | 1.1.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](Google.Cloud.ApiGateway.V1/index.html) | 1.0.0 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
 | [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.1.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
-| [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
+| [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta02 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.7.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta04 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.1.0 | [Google AutoML](https://cloud.google.com/automl/) |
