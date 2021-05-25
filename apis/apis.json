@@ -2344,7 +2344,7 @@
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1Beta1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
