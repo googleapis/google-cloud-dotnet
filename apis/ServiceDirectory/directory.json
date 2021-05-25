@@ -2446,7 +2446,7 @@
         "google/api"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.TextToSpeech.V1beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.TextToSpeech.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/tpu/v1",
