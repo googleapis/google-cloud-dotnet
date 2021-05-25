@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.2.0, released 2021-05-25
+
+No API surface changes; just dependency updates.
+
 # Version 3.1.0, released 2020-10-19
 
 - [Commit 18f5adb](https://github.com/googleapis/google-cloud-dotnet/commit/18f5adb): Fix: retrieve job config for risk analysis jobs. Docs: clarify timespan config for BigQuery and Datastore.
