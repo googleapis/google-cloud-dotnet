@@ -325,14 +325,14 @@
       "id": "Google.Cloud.Bigtable.Common.V2",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "description": "Common code used by Bigtable V2 APIs",
       "tags": [
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax": "3.2.0",
-        "Google.Protobuf": "3.13.0"
+        "Google.Api.Gax": "3.3.0",
+        "Google.Protobuf": "3.15.8"
       }
     },
     {
