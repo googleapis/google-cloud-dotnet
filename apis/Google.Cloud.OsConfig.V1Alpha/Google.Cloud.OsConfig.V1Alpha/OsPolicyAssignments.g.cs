@@ -320,8 +320,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     public const int BaselineFieldNumber = 10;
     private bool baseline_;
     /// <summary>
-    /// Output only. Indicates that this revision has been successfully rolled out
-    /// in this zone and new VMs will be assigned OS policies from this revision.
+    /// Output only. Indicates that this revision has been successfully rolled out in this zone
+    /// and new VMs will be assigned OS policies from this revision.
     ///
     /// For a given OS policy assignment, there is only one revision with a value
     /// of `true` for this field.
@@ -369,8 +369,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     public const int UidFieldNumber = 13;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server generated unique id for the OS policy assignment
-    /// resource.
+    /// Output only. Server generated unique id for the OS policy assignment resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uid {
@@ -1310,8 +1309,8 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         public const int DisruptionBudgetFieldNumber = 1;
         private global::Google.Cloud.OsConfig.V1Alpha.FixedOrPercent disruptionBudget_;
         /// <summary>
-        /// Required. The maximum number (or percentage) of VMs per zone to disrupt
-        /// at any given moment.
+        /// Required. The maximum number (or percentage) of VMs per zone to disrupt at
+        /// any given moment.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.OsConfig.V1Alpha.FixedOrPercent DisruptionBudget {
@@ -2253,8 +2252,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. Field mask that controls which fields of the assignment should be
-    /// updated.
+    /// Optional. Field mask that controls which fields of the assignment should be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
