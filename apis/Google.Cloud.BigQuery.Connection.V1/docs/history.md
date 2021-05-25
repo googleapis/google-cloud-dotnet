@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.2.0, released 2021-05-25
+
+No API surface changes; just dependency updates.
+
 # Version 1.1.0, released 2020-10-07
 
 - [Commit 34b71e8](https://github.com/googleapis/google-cloud-dotnet/commit/34b71e8): feat: Add AWS connection support
