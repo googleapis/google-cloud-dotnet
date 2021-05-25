@@ -32,7 +32,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.2.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](Google.Cloud.BigQuery.Connection.V1/index.html) | 1.2.0 | [BigQuery Connection](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html) | 3.1.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
-| [Google.Cloud.BigQuery.Reservation.V1](Google.Cloud.BigQuery.Reservation.V1/index.html) | 1.1.0 | [BigQuery Reservation](https://cloud.google.com/bigquery/docs/reference/reservations) |
+| [Google.Cloud.BigQuery.Reservation.V1](Google.Cloud.BigQuery.Reservation.V1/index.html) | 1.2.0 | [BigQuery Reservation](https://cloud.google.com/bigquery/docs/reference/reservations) |
 | [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html) | 2.2.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
 | [Google.Cloud.BigQuery.Storage.V1](Google.Cloud.BigQuery.Storage.V1/index.html) | 2.2.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
 | [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html) | 2.4.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
