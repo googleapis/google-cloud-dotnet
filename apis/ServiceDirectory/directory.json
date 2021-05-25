@@ -1341,10 +1341,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Kms.V1"
     },
     {
-      "ServiceDirectory": "google/cloud/language/v1beta2",
+      "ServiceDirectory": "google/cloud/language/v1",
       "Name": "language.googleapis.com",
       "Title": "Cloud Natural Language API",
       "Description": "Provides natural language understanding technologies, such as sentiment analysis, entity recognition, entity sentiment analysis, and other text annotations, to developers.",
+      "ServiceConfigFile": "google/cloud/language/v1/language_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.language.v1",
+      "PackageFromProtos": "google.cloud.language.v1",
+      "ImportDirectories": [
+        "google/api"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Language.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/language/v1beta2",
+      "Name": "language.googleapis.com",
+      "Title": "Google Cloud Natural Language API",
+      "Description": "Google Cloud Natural Language API provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
       "ServiceConfigFile": "google/cloud/language/v1beta2/language_v1beta2.yaml",
       "Version": "v1beta2",
       "PackageFromDirectory": "google.cloud.language.v1beta2",
