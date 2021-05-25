@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.2.0, released 2021-05-25
+
+No API surface changes; just dependency updates.
+
 # Version 2.1.0, released 2020-11-12
 
 - [Commit fcf0dd6](https://github.com/googleapis/google-cloud-dotnet/commit/fcf0dd6): feat: add GetVulnerabilityOccurrencesSummary rpc.
