@@ -2332,7 +2332,7 @@
       "productUrl": "https://cloud.google.com/text-to-speech",
       "version": "2.1.0",
       "type": "grpc",
-      "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API, synthesizes natural-sounding speech by applying powerful neural network models.",
+      "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1, synthesizes natural-sounding speech by applying powerful neural network models.",
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
         "Grpc.Core": "2.31.0"
@@ -2341,6 +2341,21 @@
         "Speech",
         "Text-to-speech"
       ]
+    },
+    {
+      "id": "Google.Cloud.TextToSpeech.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Text-to-Speech",
+      "productUrl": "https://cloud.google.com/text-to-speech",
+      "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1beta1, synthesizes natural-sounding speech by applying powerful neural network models.",
+      "tags": [
+        "Speech",
+        "Text-to-speech"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/texttospeech/v1beta1"
     },
     {
       "id": "Google.Cloud.Trace.V1",
