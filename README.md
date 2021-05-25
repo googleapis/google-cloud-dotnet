@@ -49,7 +49,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Datastore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.Admin.V1/1.1.0) | 1.1.0 | Cloud Datastore |
 | [Google.Cloud.Datastore.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.V1/3.2.0) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.2.0) | 2.2.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
-| [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.0.0) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
+| [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.1.0) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.1.0) | 2.1.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
 | [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
 | [Google.Cloud.Diagnostics.AspNetCore3](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore3/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
