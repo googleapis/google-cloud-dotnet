@@ -55,7 +55,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html) | 2.2.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](Google.Cloud.DevTools.Common/index.html) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
-| [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html) | 2.1.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
+| [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html) | 2.2.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
 | [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
 | [Google.Cloud.Diagnostics.AspNetCore3](Google.Cloud.Diagnostics.AspNetCore3/index.html) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
 | [Google.Cloud.Diagnostics.Common](Google.Cloud.Diagnostics.Common/index.html) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
@@ -160,4 +160,4 @@ Each package name links to the documentation for that package.
 | [Google.Identity.AccessContextManager.Type](Google.Identity.AccessContextManager.Type/index.html) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
 | [Google.Identity.AccessContextManager.V1](Google.Identity.AccessContextManager.V1/index.html) | 1.1.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](Google.LongRunning/index.html) | 2.2.0 | Support for the Long-Running Operations API pattern |
-| [Grafeas.V1](Grafeas.V1/index.html) | 2.1.0 | [Grafeas](https://grafeas.io/) |
+| [Grafeas.V1](Grafeas.V1/index.html) | 2.2.0 | [Grafeas](https://grafeas.io/) |

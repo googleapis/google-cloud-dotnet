@@ -50,7 +50,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Datastore.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.V1/3.2.0) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.2.0) | 2.2.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.1.0) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
-| [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.1.0) | 2.1.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
+| [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.2.0) | 2.2.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
 | [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
 | [Google.Cloud.Diagnostics.AspNetCore3](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore3/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
 | [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
@@ -155,7 +155,7 @@ Each package name links to the documentation for that package.
 | [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
 | [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.1.0) | 1.1.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.2.0) | 2.2.0 | Support for the Long-Running Operations API pattern |
-| [Grafeas.V1](https://googleapis.dev/dotnet/Grafeas.V1/2.1.0) | 2.1.0 | [Grafeas](https://grafeas.io/) |
+| [Grafeas.V1](https://googleapis.dev/dotnet/Grafeas.V1/2.2.0) | 2.2.0 | [Grafeas](https://grafeas.io/) |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)
