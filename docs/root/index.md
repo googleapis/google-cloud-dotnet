@@ -61,7 +61,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Diagnostics.Common](Google.Cloud.Diagnostics.Common/index.html) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.Cx.V3](Google.Cloud.Dialogflow.Cx.V3/index.html) | 1.1.0 | [Dialogflow](https://cloud.google.com/dialogflow/cx/docs) |
 | [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html) | 3.2.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
-| [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html) | 3.1.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
+| [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html) | 3.2.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.DocumentAI.V1](Google.Cloud.DocumentAI.V1/index.html) | 1.0.0-beta02 | [Cloud Document AI (V1 API)](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.DocumentAI.V1Beta2](Google.Cloud.DocumentAI.V1Beta2/index.html) | 1.0.0-beta02 | [Cloud Document AI (V1Beta2 API)](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.Domains.V1Beta1](Google.Cloud.Domains.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Domains](https://cloud.google.com/domains/) |
