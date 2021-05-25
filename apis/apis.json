@@ -16,7 +16,7 @@
     },
     {
       "id": "Google.Analytics.Data.V1Alpha",
-      "version": "1.0.0-alpha04",
+      "version": "1.0.0-alpha05",
       "type": "grpc",
       "productName": "Google Analytics Data",
       "productUrl": "https://developers.google.com/analytics",
