@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.1.0, released 2021-05-25
+
+- [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
+
 # Version 3.0.0, released 2020-09-28
 
 - [Commit 924f350](https://github.com/googleapis/google-cloud-dotnet/commit/924f350): fix!: Remove obsolete `Datasource` code
