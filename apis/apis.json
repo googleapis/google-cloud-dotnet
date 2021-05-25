@@ -557,7 +557,7 @@
     },
     {
       "id": "Google.Cloud.DataQnA.V1Alpha",
-      "version": "1.0.0-alpha01",
+      "version": "1.0.0-alpha02",
       "type": "grpc",
       "productName": "Data QnA",
       "productUrl": "https://cloud.google.com/bigquery/docs/dataqna",
