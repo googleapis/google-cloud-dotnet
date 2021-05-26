@@ -132,8 +132,38 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListGoogleAdsLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataSharingSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataSharingSettings> __Marshaller_google_analytics_admin_v1alpha_DataSharingSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_GetMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> __Marshaller_google_analytics_admin_v1alpha_MeasurementProtocolSecret = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest> __Marshaller_google_analytics_admin_v1alpha_ListMeasurementProtocolSecretsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse> __Marshaller_google_analytics_admin_v1alpha_ListMeasurementProtocolSecretsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_CreateMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetGoogleSignalsSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> __Marshaller_google_analytics_admin_v1alpha_GoogleSignalsSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateGoogleSignalsSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_CreateConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Marshaller_google_analytics_admin_v1alpha_ConversionEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_GetConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_CreateCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Marshaller_google_analytics_admin_v1alpha_CustomDimension = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest> __Marshaller_google_analytics_admin_v1alpha_ListCustomDimensionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse> __Marshaller_google_analytics_admin_v1alpha_ListCustomDimensionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_ArchiveCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_GetCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_CreateCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CustomMetric> __Marshaller_google_analytics_admin_v1alpha_CustomMetric = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest> __Marshaller_google_analytics_admin_v1alpha_ListCustomMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> __Marshaller_google_analytics_admin_v1alpha_ListCustomMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_ArchiveCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_GetCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest.Parser));
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
         grpc::MethodType.Unary,
@@ -457,12 +487,159 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_GetDataSharingSettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_DataSharingSettings);
 
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> __Method_GetMeasurementProtocolSecret = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMeasurementProtocolSecret",
+        __Marshaller_google_analytics_admin_v1alpha_GetMeasurementProtocolSecretRequest,
+        __Marshaller_google_analytics_admin_v1alpha_MeasurementProtocolSecret);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest, global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse> __Method_ListMeasurementProtocolSecrets = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest, global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMeasurementProtocolSecrets",
+        __Marshaller_google_analytics_admin_v1alpha_ListMeasurementProtocolSecretsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListMeasurementProtocolSecretsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> __Method_CreateMeasurementProtocolSecret = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMeasurementProtocolSecret",
+        __Marshaller_google_analytics_admin_v1alpha_CreateMeasurementProtocolSecretRequest,
+        __Marshaller_google_analytics_admin_v1alpha_MeasurementProtocolSecret);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMeasurementProtocolSecret = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMeasurementProtocolSecret",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteMeasurementProtocolSecretRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> __Method_UpdateMeasurementProtocolSecret = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMeasurementProtocolSecret",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateMeasurementProtocolSecretRequest,
+        __Marshaller_google_analytics_admin_v1alpha_MeasurementProtocolSecret);
+
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Method_SearchChangeHistoryEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchChangeHistoryEvents",
         __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest,
         __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> __Method_GetGoogleSignalsSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGoogleSignalsSettings",
+        __Marshaller_google_analytics_admin_v1alpha_GetGoogleSignalsSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_GoogleSignalsSettings);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> __Method_UpdateGoogleSignalsSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGoogleSignalsSettings",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateGoogleSignalsSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_GoogleSignalsSettings);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Method_CreateConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateConversionEvent",
+        __Marshaller_google_analytics_admin_v1alpha_CreateConversionEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Method_GetConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetConversionEvent",
+        __Marshaller_google_analytics_admin_v1alpha_GetConversionEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteConversionEvent",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteConversionEventRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> __Method_ListConversionEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListConversionEvents",
+        __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Method_CreateCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomDimension",
+        __Marshaller_google_analytics_admin_v1alpha_CreateCustomDimensionRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomDimension);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Method_UpdateCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomDimension",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateCustomDimensionRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomDimension);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse> __Method_ListCustomDimensions = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomDimensions",
+        __Marshaller_google_analytics_admin_v1alpha_ListCustomDimensionsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListCustomDimensionsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ArchiveCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ArchiveCustomDimension",
+        __Marshaller_google_analytics_admin_v1alpha_ArchiveCustomDimensionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Method_GetCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomDimension",
+        __Marshaller_google_analytics_admin_v1alpha_GetCustomDimensionRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomDimension);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric> __Method_CreateCustomMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomMetric",
+        __Marshaller_google_analytics_admin_v1alpha_CreateCustomMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomMetric);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric> __Method_UpdateCustomMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomMetric",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateCustomMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomMetric);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> __Method_ListCustomMetrics = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomMetrics",
+        __Marshaller_google_analytics_admin_v1alpha_ListCustomMetricsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListCustomMetricsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ArchiveCustomMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ArchiveCustomMetric",
+        __Marshaller_google_analytics_admin_v1alpha_ArchiveCustomMetricRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric> __Method_GetCustomMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomMetric",
+        __Marshaller_google_analytics_admin_v1alpha_GetCustomMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CustomMetric);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1043,6 +1220,62 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> GetMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns child MeasurementProtocolSecrets under the specified parent
+      /// Property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse> ListMeasurementProtocolSecrets(global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> CreateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes target MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> UpdateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
       /// </summary>
@@ -1050,6 +1283,184 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> SearchChangeHistoryEvents(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> GetGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> UpdateGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve a single conversion event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a conversion event in a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of conversion events in the specified parent property.
+      ///
+      /// Returns an empty list if no conversion events are found.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a CustomDimension.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomDimension> CreateCustomDimension(global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomDimension> UpdateCustomDimension(global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists CustomDimensions on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse> ListCustomDimensions(global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Archives a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomDimension(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single CustomDimension.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomDimension> GetCustomDimension(global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a CustomMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomMetric> CreateCustomMetric(global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomMetric> UpdateCustomMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists CustomMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> ListCustomMetrics(global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Archives a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomMetric(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single CustomMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomMetric> GetCustomMetric(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3352,6 +3763,230 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSharingSettings, null, options, request);
       }
       /// <summary>
+      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret GetMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret GetMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> GetMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> GetMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Returns child MeasurementProtocolSecrets under the specified parent
+      /// Property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse ListMeasurementProtocolSecrets(global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMeasurementProtocolSecrets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns child MeasurementProtocolSecrets under the specified parent
+      /// Property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse ListMeasurementProtocolSecrets(global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMeasurementProtocolSecrets, null, options, request);
+      }
+      /// <summary>
+      /// Returns child MeasurementProtocolSecrets under the specified parent
+      /// Property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse> ListMeasurementProtocolSecretsAsync(global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMeasurementProtocolSecretsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns child MeasurementProtocolSecrets under the specified parent
+      /// Property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse> ListMeasurementProtocolSecretsAsync(global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMeasurementProtocolSecrets, null, options, request);
+      }
+      /// <summary>
+      /// Creates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret CreateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret CreateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Creates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> CreateMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target MeasurementProtocolSecret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Updates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret UpdateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret UpdateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Updates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> UpdateMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a measurement protocol secret.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> UpdateMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
       /// </summary>
@@ -3398,6 +4033,718 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> SearchChangeHistoryEventsAsync(global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchChangeHistoryEvents, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings GetGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGoogleSignalsSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings GetGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGoogleSignalsSettings, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> GetGoogleSignalsSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGoogleSignalsSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> GetGoogleSignalsSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGoogleSignalsSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings UpdateGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoogleSignalsSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings UpdateGoogleSignalsSettings(global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGoogleSignalsSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> UpdateGoogleSignalsSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoogleSignalsSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates Google Signals settings for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings> UpdateGoogleSignalsSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGoogleSignalsSettings, null, options, request);
+      }
+      /// <summary>
+      /// Creates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Creates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single conversion event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single conversion event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single conversion event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single conversion event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a conversion event in a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a conversion event in a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a conversion event in a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a conversion event in a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of conversion events in the specified parent property.
+      ///
+      /// Returns an empty list if no conversion events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConversionEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of conversion events in the specified parent property.
+      ///
+      /// Returns an empty list if no conversion events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListConversionEvents, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of conversion events in the specified parent property.
+      ///
+      /// Returns an empty list if no conversion events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConversionEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of conversion events in the specified parent property.
+      ///
+      /// Returns an empty list if no conversion events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListConversionEvents, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension CreateCustomDimension(global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomDimension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension CreateCustomDimension(global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> CreateCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomDimensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> CreateCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension UpdateCustomDimension(global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomDimension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension UpdateCustomDimension(global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> UpdateCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomDimensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> UpdateCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Lists CustomDimensions on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse ListCustomDimensions(global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomDimensions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CustomDimensions on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse ListCustomDimensions(global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomDimensions, null, options, request);
+      }
+      /// <summary>
+      /// Lists CustomDimensions on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse> ListCustomDimensionsAsync(global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomDimensionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CustomDimensions on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse> ListCustomDimensionsAsync(global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomDimensions, null, options, request);
+      }
+      /// <summary>
+      /// Archives a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ArchiveCustomDimension(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ArchiveCustomDimension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ArchiveCustomDimension(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ArchiveCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Archives a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ArchiveCustomDimensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a CustomDimension on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ArchiveCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension GetCustomDimension(global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomDimension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomDimension GetCustomDimension(global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> GetCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomDimensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CustomDimension.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomDimension> GetCustomDimensionAsync(global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCustomDimension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric CreateCustomMetric(global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric CreateCustomMetric(global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> CreateCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> CreateCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric UpdateCustomMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric UpdateCustomMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> UpdateCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> UpdateCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lists CustomMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse ListCustomMetrics(global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CustomMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse ListCustomMetrics(global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Lists CustomMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> ListCustomMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CustomMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> ListCustomMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Archives a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ArchiveCustomMetric(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ArchiveCustomMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ArchiveCustomMetric(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ArchiveCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Archives a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ArchiveCustomMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a CustomMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ArchiveCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric GetCustomMetric(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.CustomMetric GetCustomMetric(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCustomMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> GetCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CustomMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CustomMetric> GetCustomMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCustomMetric, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -3457,7 +4804,28 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteGoogleAdsLink, serviceImpl.DeleteGoogleAdsLink)
           .AddMethod(__Method_ListGoogleAdsLinks, serviceImpl.ListGoogleAdsLinks)
           .AddMethod(__Method_GetDataSharingSettings, serviceImpl.GetDataSharingSettings)
-          .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents).Build();
+          .AddMethod(__Method_GetMeasurementProtocolSecret, serviceImpl.GetMeasurementProtocolSecret)
+          .AddMethod(__Method_ListMeasurementProtocolSecrets, serviceImpl.ListMeasurementProtocolSecrets)
+          .AddMethod(__Method_CreateMeasurementProtocolSecret, serviceImpl.CreateMeasurementProtocolSecret)
+          .AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl.DeleteMeasurementProtocolSecret)
+          .AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl.UpdateMeasurementProtocolSecret)
+          .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents)
+          .AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl.GetGoogleSignalsSettings)
+          .AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl.UpdateGoogleSignalsSettings)
+          .AddMethod(__Method_CreateConversionEvent, serviceImpl.CreateConversionEvent)
+          .AddMethod(__Method_GetConversionEvent, serviceImpl.GetConversionEvent)
+          .AddMethod(__Method_DeleteConversionEvent, serviceImpl.DeleteConversionEvent)
+          .AddMethod(__Method_ListConversionEvents, serviceImpl.ListConversionEvents)
+          .AddMethod(__Method_CreateCustomDimension, serviceImpl.CreateCustomDimension)
+          .AddMethod(__Method_UpdateCustomDimension, serviceImpl.UpdateCustomDimension)
+          .AddMethod(__Method_ListCustomDimensions, serviceImpl.ListCustomDimensions)
+          .AddMethod(__Method_ArchiveCustomDimension, serviceImpl.ArchiveCustomDimension)
+          .AddMethod(__Method_GetCustomDimension, serviceImpl.GetCustomDimension)
+          .AddMethod(__Method_CreateCustomMetric, serviceImpl.CreateCustomMetric)
+          .AddMethod(__Method_UpdateCustomMetric, serviceImpl.UpdateCustomMetric)
+          .AddMethod(__Method_ListCustomMetrics, serviceImpl.ListCustomMetrics)
+          .AddMethod(__Method_ArchiveCustomMetric, serviceImpl.ArchiveCustomMetric)
+          .AddMethod(__Method_GetCustomMetric, serviceImpl.GetCustomMetric).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -3512,7 +4880,28 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteGoogleAdsLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteGoogleAdsLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteGoogleAdsLink));
       serviceBinder.AddMethod(__Method_ListGoogleAdsLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListGoogleAdsLinksResponse>(serviceImpl.ListGoogleAdsLinks));
       serviceBinder.AddMethod(__Method_GetDataSharingSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataSharingSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataSharingSettings>(serviceImpl.GetDataSharingSettings));
+      serviceBinder.AddMethod(__Method_GetMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.GetMeasurementProtocolSecret));
+      serviceBinder.AddMethod(__Method_ListMeasurementProtocolSecrets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsRequest, global::Google.Analytics.Admin.V1Alpha.ListMeasurementProtocolSecretsResponse>(serviceImpl.ListMeasurementProtocolSecrets));
+      serviceBinder.AddMethod(__Method_CreateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.CreateMeasurementProtocolSecret));
+      serviceBinder.AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMeasurementProtocolSecret));
+      serviceBinder.AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.UpdateMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
+      serviceBinder.AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.GetGoogleSignalsSettings));
+      serviceBinder.AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.UpdateGoogleSignalsSettings));
+      serviceBinder.AddMethod(__Method_CreateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.CreateConversionEvent));
+      serviceBinder.AddMethod(__Method_GetConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.GetConversionEvent));
+      serviceBinder.AddMethod(__Method_DeleteConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversionEvent));
+      serviceBinder.AddMethod(__Method_ListConversionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse>(serviceImpl.ListConversionEvents));
+      serviceBinder.AddMethod(__Method_CreateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(serviceImpl.CreateCustomDimension));
+      serviceBinder.AddMethod(__Method_UpdateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(serviceImpl.UpdateCustomDimension));
+      serviceBinder.AddMethod(__Method_ListCustomDimensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse>(serviceImpl.ListCustomDimensions));
+      serviceBinder.AddMethod(__Method_ArchiveCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomDimensionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ArchiveCustomDimension));
+      serviceBinder.AddMethod(__Method_GetCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(serviceImpl.GetCustomDimension));
+      serviceBinder.AddMethod(__Method_CreateCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(serviceImpl.CreateCustomMetric));
+      serviceBinder.AddMethod(__Method_UpdateCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(serviceImpl.UpdateCustomMetric));
+      serviceBinder.AddMethod(__Method_ListCustomMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse>(serviceImpl.ListCustomMetrics));
+      serviceBinder.AddMethod(__Method_ArchiveCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ArchiveCustomMetric));
+      serviceBinder.AddMethod(__Method_GetCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(serviceImpl.GetCustomMetric));
     }
 
   }

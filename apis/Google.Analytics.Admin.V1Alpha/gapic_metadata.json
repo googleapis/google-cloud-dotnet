@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "AnalyticsAdminServiceClient",
           "rpcs": {
+            "ArchiveCustomDimension": {
+              "methods": [
+                "ArchiveCustomDimension",
+                "ArchiveCustomDimensionAsync"
+              ]
+            },
+            "ArchiveCustomMetric": {
+              "methods": [
+                "ArchiveCustomMetric",
+                "ArchiveCustomMetricAsync"
+              ]
+            },
             "AuditUserLinks": {
               "methods": [
                 "AuditUserLinks",
@@ -40,6 +52,24 @@
                 "BatchUpdateUserLinksAsync"
               ]
             },
+            "CreateConversionEvent": {
+              "methods": [
+                "CreateConversionEvent",
+                "CreateConversionEventAsync"
+              ]
+            },
+            "CreateCustomDimension": {
+              "methods": [
+                "CreateCustomDimension",
+                "CreateCustomDimensionAsync"
+              ]
+            },
+            "CreateCustomMetric": {
+              "methods": [
+                "CreateCustomMetric",
+                "CreateCustomMetricAsync"
+              ]
+            },
             "CreateFirebaseLink": {
               "methods": [
                 "CreateFirebaseLink",
@@ -50,6 +80,12 @@
               "methods": [
                 "CreateGoogleAdsLink",
                 "CreateGoogleAdsLinkAsync"
+              ]
+            },
+            "CreateMeasurementProtocolSecret": {
+              "methods": [
+                "CreateMeasurementProtocolSecret",
+                "CreateMeasurementProtocolSecretAsync"
               ]
             },
             "CreateProperty": {
@@ -82,6 +118,12 @@
                 "DeleteAndroidAppDataStreamAsync"
               ]
             },
+            "DeleteConversionEvent": {
+              "methods": [
+                "DeleteConversionEvent",
+                "DeleteConversionEventAsync"
+              ]
+            },
             "DeleteFirebaseLink": {
               "methods": [
                 "DeleteFirebaseLink",
@@ -98,6 +140,12 @@
               "methods": [
                 "DeleteIosAppDataStream",
                 "DeleteIosAppDataStreamAsync"
+              ]
+            },
+            "DeleteMeasurementProtocolSecret": {
+              "methods": [
+                "DeleteMeasurementProtocolSecret",
+                "DeleteMeasurementProtocolSecretAsync"
               ]
             },
             "DeleteProperty": {
@@ -130,6 +178,24 @@
                 "GetAndroidAppDataStreamAsync"
               ]
             },
+            "GetConversionEvent": {
+              "methods": [
+                "GetConversionEvent",
+                "GetConversionEventAsync"
+              ]
+            },
+            "GetCustomDimension": {
+              "methods": [
+                "GetCustomDimension",
+                "GetCustomDimensionAsync"
+              ]
+            },
+            "GetCustomMetric": {
+              "methods": [
+                "GetCustomMetric",
+                "GetCustomMetricAsync"
+              ]
+            },
             "GetDataSharingSettings": {
               "methods": [
                 "GetDataSharingSettings",
@@ -148,10 +214,22 @@
                 "GetGlobalSiteTagAsync"
               ]
             },
+            "GetGoogleSignalsSettings": {
+              "methods": [
+                "GetGoogleSignalsSettings",
+                "GetGoogleSignalsSettingsAsync"
+              ]
+            },
             "GetIosAppDataStream": {
               "methods": [
                 "GetIosAppDataStream",
                 "GetIosAppDataStreamAsync"
+              ]
+            },
+            "GetMeasurementProtocolSecret": {
+              "methods": [
+                "GetMeasurementProtocolSecret",
+                "GetMeasurementProtocolSecretAsync"
               ]
             },
             "GetProperty": {
@@ -190,6 +268,24 @@
                 "ListAndroidAppDataStreamsAsync"
               ]
             },
+            "ListConversionEvents": {
+              "methods": [
+                "ListConversionEvents",
+                "ListConversionEventsAsync"
+              ]
+            },
+            "ListCustomDimensions": {
+              "methods": [
+                "ListCustomDimensions",
+                "ListCustomDimensionsAsync"
+              ]
+            },
+            "ListCustomMetrics": {
+              "methods": [
+                "ListCustomMetrics",
+                "ListCustomMetricsAsync"
+              ]
+            },
             "ListFirebaseLinks": {
               "methods": [
                 "ListFirebaseLinks",
@@ -206,6 +302,12 @@
               "methods": [
                 "ListIosAppDataStreams",
                 "ListIosAppDataStreamsAsync"
+              ]
+            },
+            "ListMeasurementProtocolSecrets": {
+              "methods": [
+                "ListMeasurementProtocolSecrets",
+                "ListMeasurementProtocolSecretsAsync"
               ]
             },
             "ListProperties": {
@@ -250,6 +352,18 @@
                 "UpdateAndroidAppDataStreamAsync"
               ]
             },
+            "UpdateCustomDimension": {
+              "methods": [
+                "UpdateCustomDimension",
+                "UpdateCustomDimensionAsync"
+              ]
+            },
+            "UpdateCustomMetric": {
+              "methods": [
+                "UpdateCustomMetric",
+                "UpdateCustomMetricAsync"
+              ]
+            },
             "UpdateEnhancedMeasurementSettings": {
               "methods": [
                 "UpdateEnhancedMeasurementSettings",
@@ -268,10 +382,22 @@
                 "UpdateGoogleAdsLinkAsync"
               ]
             },
+            "UpdateGoogleSignalsSettings": {
+              "methods": [
+                "UpdateGoogleSignalsSettings",
+                "UpdateGoogleSignalsSettingsAsync"
+              ]
+            },
             "UpdateIosAppDataStream": {
               "methods": [
                 "UpdateIosAppDataStream",
                 "UpdateIosAppDataStreamAsync"
+              ]
+            },
+            "UpdateMeasurementProtocolSecret": {
+              "methods": [
+                "UpdateMeasurementProtocolSecret",
+                "UpdateMeasurementProtocolSecretAsync"
               ]
             },
             "UpdateProperty": {

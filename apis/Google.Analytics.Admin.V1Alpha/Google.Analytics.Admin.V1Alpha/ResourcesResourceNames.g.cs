@@ -2704,6 +2704,1157 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(AccountSummaryName a, AccountSummaryName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>MeasurementProtocolSecret</c> resource.</summary>
+    public sealed partial class MeasurementProtocolSecretName : gax::IResourceName, sys::IEquatable<MeasurementProtocolSecretName>
+    {
+        /// <summary>The possible contents of <see cref="MeasurementProtocolSecretName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+            /// .
+            /// </summary>
+            PropertyWebDataStreamMeasurementProtocolSecret = 1,
+        }
+
+        private static gax::PathTemplate s_propertyWebDataStreamMeasurementProtocolSecret = new gax::PathTemplate("properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}");
+
+        /// <summary>
+        /// Creates a <see cref="MeasurementProtocolSecretName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MeasurementProtocolSecretName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MeasurementProtocolSecretName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MeasurementProtocolSecretName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MeasurementProtocolSecretName"/> with the pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="measurementProtocolSecretId">
+        /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="MeasurementProtocolSecretName"/> constructed from the provided ids.
+        /// </returns>
+        public static MeasurementProtocolSecretName FromPropertyWebDataStreamMeasurementProtocolSecret(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
+            new MeasurementProtocolSecretName(ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MeasurementProtocolSecretName"/> with
+        /// pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="measurementProtocolSecretId">
+        /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="MeasurementProtocolSecretName"/> with pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// .
+        /// </returns>
+        public static string Format(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
+            FormatPropertyWebDataStreamMeasurementProtocolSecret(propertyId, webDataStreamId, measurementProtocolSecretId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MeasurementProtocolSecretName"/> with
+        /// pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="measurementProtocolSecretId">
+        /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="MeasurementProtocolSecretName"/> with pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// .
+        /// </returns>
+        public static string FormatPropertyWebDataStreamMeasurementProtocolSecret(string propertyId, string webDataStreamId, string measurementProtocolSecretId) =>
+            s_propertyWebDataStreamMeasurementProtocolSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MeasurementProtocolSecretName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="measurementProtocolSecretName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="MeasurementProtocolSecretName"/> if successful.</returns>
+        public static MeasurementProtocolSecretName Parse(string measurementProtocolSecretName) =>
+            Parse(measurementProtocolSecretName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MeasurementProtocolSecretName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="measurementProtocolSecretName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MeasurementProtocolSecretName"/> if successful.</returns>
+        public static MeasurementProtocolSecretName Parse(string measurementProtocolSecretName, bool allowUnparsed) =>
+            TryParse(measurementProtocolSecretName, allowUnparsed, out MeasurementProtocolSecretName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MeasurementProtocolSecretName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="measurementProtocolSecretName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MeasurementProtocolSecretName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string measurementProtocolSecretName, out MeasurementProtocolSecretName result) =>
+            TryParse(measurementProtocolSecretName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MeasurementProtocolSecretName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="measurementProtocolSecretName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MeasurementProtocolSecretName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string measurementProtocolSecretName, bool allowUnparsed, out MeasurementProtocolSecretName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(measurementProtocolSecretName, nameof(measurementProtocolSecretName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyWebDataStreamMeasurementProtocolSecret.TryParseName(measurementProtocolSecretName, out resourceName))
+            {
+                result = FromPropertyWebDataStreamMeasurementProtocolSecret(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(measurementProtocolSecretName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MeasurementProtocolSecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string measurementProtocolSecretId = null, string propertyId = null, string webDataStreamId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            MeasurementProtocolSecretId = measurementProtocolSecretId;
+            PropertyId = propertyId;
+            WebDataStreamId = webDataStreamId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MeasurementProtocolSecretName"/> class from the component parts of
+        /// pattern
+        /// <c>
+        /// properties/{property}/webDataStreams/{web_data_stream}/measurementProtocolSecrets/{measurement_protocol_secret}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="webDataStreamId">The <c>WebDataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="measurementProtocolSecretId">
+        /// The <c>MeasurementProtocolSecret</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public MeasurementProtocolSecretName(string propertyId, string webDataStreamId, string measurementProtocolSecretId) : this(ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), webDataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(webDataStreamId, nameof(webDataStreamId)), measurementProtocolSecretId: gax::GaxPreconditions.CheckNotNullOrEmpty(measurementProtocolSecretId, nameof(measurementProtocolSecretId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>MeasurementProtocolSecret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string MeasurementProtocolSecretId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>
+        /// The <c>WebDataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string WebDataStreamId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyWebDataStreamMeasurementProtocolSecret: return s_propertyWebDataStreamMeasurementProtocolSecret.Expand(PropertyId, WebDataStreamId, MeasurementProtocolSecretId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MeasurementProtocolSecretName);
+
+        /// <inheritdoc/>
+        public bool Equals(MeasurementProtocolSecretName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(MeasurementProtocolSecretName a, MeasurementProtocolSecretName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(MeasurementProtocolSecretName a, MeasurementProtocolSecretName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>ConversionEvent</c> resource.</summary>
+    public sealed partial class ConversionEventName : gax::IResourceName, sys::IEquatable<ConversionEventName>
+    {
+        /// <summary>The possible contents of <see cref="ConversionEventName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+            /// </summary>
+            PropertyConversionEvent = 1,
+        }
+
+        private static gax::PathTemplate s_propertyConversionEvent = new gax::PathTemplate("properties/{property}/conversionEvents/{conversion_event}");
+
+        /// <summary>Creates a <see cref="ConversionEventName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ConversionEventName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ConversionEventName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ConversionEventName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ConversionEventName"/> with the pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversionEventId">The <c>ConversionEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ConversionEventName"/> constructed from the provided ids.</returns>
+        public static ConversionEventName FromPropertyConversionEvent(string propertyId, string conversionEventId) =>
+            new ConversionEventName(ResourceNameType.PropertyConversionEvent, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), conversionEventId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversionEventId, nameof(conversionEventId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConversionEventName"/> with pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversionEventId">The <c>ConversionEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConversionEventName"/> with pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string conversionEventId) =>
+            FormatPropertyConversionEvent(propertyId, conversionEventId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConversionEventName"/> with pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversionEventId">The <c>ConversionEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConversionEventName"/> with pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>.
+        /// </returns>
+        public static string FormatPropertyConversionEvent(string propertyId, string conversionEventId) =>
+            s_propertyConversionEvent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversionEventId, nameof(conversionEventId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ConversionEventName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/conversionEvents/{conversion_event}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="conversionEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ConversionEventName"/> if successful.</returns>
+        public static ConversionEventName Parse(string conversionEventName) => Parse(conversionEventName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ConversionEventName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/conversionEvents/{conversion_event}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="conversionEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ConversionEventName"/> if successful.</returns>
+        public static ConversionEventName Parse(string conversionEventName, bool allowUnparsed) =>
+            TryParse(conversionEventName, allowUnparsed, out ConversionEventName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ConversionEventName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/conversionEvents/{conversion_event}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="conversionEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ConversionEventName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string conversionEventName, out ConversionEventName result) =>
+            TryParse(conversionEventName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ConversionEventName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/conversionEvents/{conversion_event}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="conversionEventName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ConversionEventName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string conversionEventName, bool allowUnparsed, out ConversionEventName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(conversionEventName, nameof(conversionEventName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyConversionEvent.TryParseName(conversionEventName, out resourceName))
+            {
+                result = FromPropertyConversionEvent(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(conversionEventName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ConversionEventName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string conversionEventId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ConversionEventId = conversionEventId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ConversionEventName"/> class from the component parts of pattern
+        /// <c>properties/{property}/conversionEvents/{conversion_event}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversionEventId">The <c>ConversionEvent</c> ID. Must not be <c>null</c> or empty.</param>
+        public ConversionEventName(string propertyId, string conversionEventId) : this(ResourceNameType.PropertyConversionEvent, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), conversionEventId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversionEventId, nameof(conversionEventId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>ConversionEvent</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ConversionEventId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyConversionEvent: return s_propertyConversionEvent.Expand(PropertyId, ConversionEventId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ConversionEventName);
+
+        /// <inheritdoc/>
+        public bool Equals(ConversionEventName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ConversionEventName a, ConversionEventName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ConversionEventName a, ConversionEventName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>GoogleSignalsSettings</c> resource.</summary>
+    public sealed partial class GoogleSignalsSettingsName : gax::IResourceName, sys::IEquatable<GoogleSignalsSettingsName>
+    {
+        /// <summary>The possible contents of <see cref="GoogleSignalsSettingsName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/googleSignalsSettings</c>.</summary>
+            Property = 1,
+        }
+
+        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/googleSignalsSettings");
+
+        /// <summary>Creates a <see cref="GoogleSignalsSettingsName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="GoogleSignalsSettingsName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static GoogleSignalsSettingsName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new GoogleSignalsSettingsName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="GoogleSignalsSettingsName"/> with the pattern
+        /// <c>properties/{property}/googleSignalsSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="GoogleSignalsSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static GoogleSignalsSettingsName FromProperty(string propertyId) =>
+            new GoogleSignalsSettingsName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GoogleSignalsSettingsName"/> with pattern
+        /// <c>properties/{property}/googleSignalsSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GoogleSignalsSettingsName"/> with pattern
+        /// <c>properties/{property}/googleSignalsSettings</c>.
+        /// </returns>
+        public static string Format(string propertyId) => FormatProperty(propertyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GoogleSignalsSettingsName"/> with pattern
+        /// <c>properties/{property}/googleSignalsSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GoogleSignalsSettingsName"/> with pattern
+        /// <c>properties/{property}/googleSignalsSettings</c>.
+        /// </returns>
+        public static string FormatProperty(string propertyId) =>
+            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GoogleSignalsSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/googleSignalsSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="googleSignalsSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GoogleSignalsSettingsName"/> if successful.</returns>
+        public static GoogleSignalsSettingsName Parse(string googleSignalsSettingsName) =>
+            Parse(googleSignalsSettingsName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GoogleSignalsSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/googleSignalsSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="googleSignalsSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="GoogleSignalsSettingsName"/> if successful.</returns>
+        public static GoogleSignalsSettingsName Parse(string googleSignalsSettingsName, bool allowUnparsed) =>
+            TryParse(googleSignalsSettingsName, allowUnparsed, out GoogleSignalsSettingsName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GoogleSignalsSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/googleSignalsSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="googleSignalsSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GoogleSignalsSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string googleSignalsSettingsName, out GoogleSignalsSettingsName result) =>
+            TryParse(googleSignalsSettingsName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GoogleSignalsSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/googleSignalsSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="googleSignalsSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GoogleSignalsSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string googleSignalsSettingsName, bool allowUnparsed, out GoogleSignalsSettingsName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(googleSignalsSettingsName, nameof(googleSignalsSettingsName));
+            gax::TemplatedResourceName resourceName;
+            if (s_property.TryParseName(googleSignalsSettingsName, out resourceName))
+            {
+                result = FromProperty(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(googleSignalsSettingsName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private GoogleSignalsSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="GoogleSignalsSettingsName"/> class from the component parts of
+        /// pattern <c>properties/{property}/googleSignalsSettings</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        public GoogleSignalsSettingsName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as GoogleSignalsSettingsName);
+
+        /// <inheritdoc/>
+        public bool Equals(GoogleSignalsSettingsName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(GoogleSignalsSettingsName a, GoogleSignalsSettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(GoogleSignalsSettingsName a, GoogleSignalsSettingsName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>CustomDimension</c> resource.</summary>
+    public sealed partial class CustomDimensionName : gax::IResourceName, sys::IEquatable<CustomDimensionName>
+    {
+        /// <summary>The possible contents of <see cref="CustomDimensionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/customDimensions</c>.</summary>
+            Property = 1,
+        }
+
+        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/customDimensions");
+
+        /// <summary>Creates a <see cref="CustomDimensionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CustomDimensionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CustomDimensionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CustomDimensionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CustomDimensionName"/> with the pattern <c>properties/{property}/customDimensions</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CustomDimensionName"/> constructed from the provided ids.</returns>
+        public static CustomDimensionName FromProperty(string propertyId) =>
+            new CustomDimensionName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomDimensionName"/> with pattern
+        /// <c>properties/{property}/customDimensions</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomDimensionName"/> with pattern
+        /// <c>properties/{property}/customDimensions</c>.
+        /// </returns>
+        public static string Format(string propertyId) => FormatProperty(propertyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomDimensionName"/> with pattern
+        /// <c>properties/{property}/customDimensions</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomDimensionName"/> with pattern
+        /// <c>properties/{property}/customDimensions</c>.
+        /// </returns>
+        public static string FormatProperty(string propertyId) =>
+            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomDimensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CustomDimensionName"/> if successful.</returns>
+        public static CustomDimensionName Parse(string customDimensionName) => Parse(customDimensionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomDimensionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CustomDimensionName"/> if successful.</returns>
+        public static CustomDimensionName Parse(string customDimensionName, bool allowUnparsed) =>
+            TryParse(customDimensionName, allowUnparsed, out CustomDimensionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomDimensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomDimensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customDimensionName, out CustomDimensionName result) =>
+            TryParse(customDimensionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomDimensionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customDimensions</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customDimensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomDimensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customDimensionName, bool allowUnparsed, out CustomDimensionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(customDimensionName, nameof(customDimensionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_property.TryParseName(customDimensionName, out resourceName))
+            {
+                result = FromProperty(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(customDimensionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CustomDimensionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CustomDimensionName"/> class from the component parts of pattern
+        /// <c>properties/{property}/customDimensions</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomDimensionName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CustomDimensionName);
+
+        /// <inheritdoc/>
+        public bool Equals(CustomDimensionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(CustomDimensionName a, CustomDimensionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(CustomDimensionName a, CustomDimensionName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>CustomMetric</c> resource.</summary>
+    public sealed partial class CustomMetricName : gax::IResourceName, sys::IEquatable<CustomMetricName>
+    {
+        /// <summary>The possible contents of <see cref="CustomMetricName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/customMetrics</c>.</summary>
+            Property = 1,
+        }
+
+        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/customMetrics");
+
+        /// <summary>Creates a <see cref="CustomMetricName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CustomMetricName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CustomMetricName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CustomMetricName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CustomMetricName"/> with the pattern <c>properties/{property}/customMetrics</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CustomMetricName"/> constructed from the provided ids.</returns>
+        public static CustomMetricName FromProperty(string propertyId) =>
+            new CustomMetricName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomMetricName"/> with pattern
+        /// <c>properties/{property}/customMetrics</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomMetricName"/> with pattern
+        /// <c>properties/{property}/customMetrics</c>.
+        /// </returns>
+        public static string Format(string propertyId) => FormatProperty(propertyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomMetricName"/> with pattern
+        /// <c>properties/{property}/customMetrics</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomMetricName"/> with pattern
+        /// <c>properties/{property}/customMetrics</c>.
+        /// </returns>
+        public static string FormatProperty(string propertyId) =>
+            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="CustomMetricName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CustomMetricName"/> if successful.</returns>
+        public static CustomMetricName Parse(string customMetricName) => Parse(customMetricName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomMetricName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CustomMetricName"/> if successful.</returns>
+        public static CustomMetricName Parse(string customMetricName, bool allowUnparsed) =>
+            TryParse(customMetricName, allowUnparsed, out CustomMetricName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomMetricName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomMetricName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customMetricName, out CustomMetricName result) =>
+            TryParse(customMetricName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomMetricName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/customMetrics</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomMetricName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customMetricName, bool allowUnparsed, out CustomMetricName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(customMetricName, nameof(customMetricName));
+            gax::TemplatedResourceName resourceName;
+            if (s_property.TryParseName(customMetricName, out resourceName))
+            {
+                result = FromProperty(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(customMetricName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CustomMetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CustomMetricName"/> class from the component parts of pattern
+        /// <c>properties/{property}/customMetrics</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomMetricName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CustomMetricName);
+
+        /// <inheritdoc/>
+        public bool Equals(CustomMetricName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(CustomMetricName a, CustomMetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(CustomMetricName a, CustomMetricName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -2867,6 +4018,67 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
             set => Property = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MeasurementProtocolSecret
+    {
+        /// <summary>
+        /// <see cref="gaav::MeasurementProtocolSecretName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::MeasurementProtocolSecretName MeasurementProtocolSecretName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::MeasurementProtocolSecretName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ConversionEvent
+    {
+        /// <summary>
+        /// <see cref="gaav::ConversionEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::ConversionEventName ConversionEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ConversionEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GoogleSignalsSettings
+    {
+        /// <summary>
+        /// <see cref="gaav::GoogleSignalsSettingsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::GoogleSignalsSettingsName GoogleSignalsSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::GoogleSignalsSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CustomDimension
+    {
+        /// <summary>
+        /// <see cref="gaav::CustomDimensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CustomDimensionName CustomDimensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CustomDimensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CustomMetric
+    {
+        /// <summary>
+        /// <see cref="gaav::CustomMetricName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CustomMetricName CustomMetricName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CustomMetricName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

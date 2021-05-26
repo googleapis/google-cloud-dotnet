@@ -4236,5 +4236,2065 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetMeasurementProtocolSecretRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMeasurementProtocolSecretRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMeasurementProtocolSecret()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMeasurementProtocolSecretAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMeasurementProtocolSecretResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.GetMeasurementProtocolSecret(request.MeasurementProtocolSecretName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMeasurementProtocolSecretResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetMeasurementProtocolSecretRequest request = new GetMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.GetMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.GetMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.GetMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMeasurementProtocolSecretRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMeasurementProtocolSecretRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMeasurementProtocolSecret()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request.Parent, request.MeasurementProtocolSecret);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMeasurementProtocolSecretAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request.Parent, request.MeasurementProtocolSecret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request.Parent, request.MeasurementProtocolSecret, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMeasurementProtocolSecretResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.CreateMeasurementProtocolSecret(request.ParentAsWebDataStreamName, request.MeasurementProtocolSecret);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMeasurementProtocolSecretResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateMeasurementProtocolSecretRequest request = new CreateMeasurementProtocolSecretRequest
+            {
+                ParentAsWebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.CreateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.CreateMeasurementProtocolSecretAsync(request.ParentAsWebDataStreamName, request.MeasurementProtocolSecret, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.CreateMeasurementProtocolSecretAsync(request.ParentAsWebDataStreamName, request.MeasurementProtocolSecret, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMeasurementProtocolSecretRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMeasurementProtocolSecret(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMeasurementProtocolSecretRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMeasurementProtocolSecret()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMeasurementProtocolSecret(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMeasurementProtocolSecretAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMeasurementProtocolSecretAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMeasurementProtocolSecretAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMeasurementProtocolSecretResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMeasurementProtocolSecret(request.MeasurementProtocolSecretName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMeasurementProtocolSecretResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteMeasurementProtocolSecretRequest request = new DeleteMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMeasurementProtocolSecretAsync(request.MeasurementProtocolSecretName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateMeasurementProtocolSecretRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateMeasurementProtocolSecretRequest request = new UpdateMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.UpdateMeasurementProtocolSecret(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMeasurementProtocolSecretRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateMeasurementProtocolSecretRequest request = new UpdateMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.UpdateMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.UpdateMeasurementProtocolSecretAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateMeasurementProtocolSecret()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateMeasurementProtocolSecretRequest request = new UpdateMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret response = client.UpdateMeasurementProtocolSecret(request.MeasurementProtocolSecret, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMeasurementProtocolSecretAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateMeasurementProtocolSecretRequest request = new UpdateMeasurementProtocolSecretRequest
+            {
+                MeasurementProtocolSecret = new MeasurementProtocolSecret(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MeasurementProtocolSecret expectedResponse = new MeasurementProtocolSecret
+            {
+                MeasurementProtocolSecretName = MeasurementProtocolSecretName.FromPropertyWebDataStreamMeasurementProtocolSecret("[PROPERTY]", "[WEB_DATA_STREAM]", "[MEASUREMENT_PROTOCOL_SECRET]"),
+                DisplayName = "display_name137f65c2",
+                SecretValue = "secret_valueaa711688",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMeasurementProtocolSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MeasurementProtocolSecret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            MeasurementProtocolSecret responseCallSettings = await client.UpdateMeasurementProtocolSecretAsync(request.MeasurementProtocolSecret, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MeasurementProtocolSecret responseCancellationToken = await client.UpdateMeasurementProtocolSecretAsync(request.MeasurementProtocolSecret, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleSignalsSettingsRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleSignalsSettingsRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleSignalsSettings()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleSignalsSettingsAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetGoogleSignalsSettingsResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings response = client.GetGoogleSignalsSettings(request.GoogleSignalsSettingsName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetGoogleSignalsSettingsResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetGoogleSignalsSettingsRequest request = new GetGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings responseCallSettings = await client.GetGoogleSignalsSettingsAsync(request.GoogleSignalsSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleSignalsSettings responseCancellationToken = await client.GetGoogleSignalsSettingsAsync(request.GoogleSignalsSettingsName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGoogleSignalsSettingsRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateGoogleSignalsSettingsRequest request = new UpdateGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettings = new GoogleSignalsSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings response = client.UpdateGoogleSignalsSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGoogleSignalsSettingsRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateGoogleSignalsSettingsRequest request = new UpdateGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettings = new GoogleSignalsSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings responseCallSettings = await client.UpdateGoogleSignalsSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleSignalsSettings responseCancellationToken = await client.UpdateGoogleSignalsSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateGoogleSignalsSettings()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateGoogleSignalsSettingsRequest request = new UpdateGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettings = new GoogleSignalsSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings response = client.UpdateGoogleSignalsSettings(request.GoogleSignalsSettings, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateGoogleSignalsSettingsAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateGoogleSignalsSettingsRequest request = new UpdateGoogleSignalsSettingsRequest
+            {
+                GoogleSignalsSettings = new GoogleSignalsSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            GoogleSignalsSettings expectedResponse = new GoogleSignalsSettings
+            {
+                GoogleSignalsSettingsName = GoogleSignalsSettingsName.FromProperty("[PROPERTY]"),
+                State = GoogleSignalsState.Unspecified,
+                Consent = GoogleSignalsConsent.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateGoogleSignalsSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleSignalsSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            GoogleSignalsSettings responseCallSettings = await client.UpdateGoogleSignalsSettingsAsync(request.GoogleSignalsSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GoogleSignalsSettings responseCancellationToken = await client.UpdateGoogleSignalsSettingsAsync(request.GoogleSignalsSettings, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateConversionEventRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.CreateConversionEvent(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateConversionEventRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateConversionEvent()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.CreateConversionEvent(request.Parent, request.ConversionEvent);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateConversionEventAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request.Parent, request.ConversionEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request.Parent, request.ConversionEvent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateConversionEventResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.CreateConversionEvent(request.ParentAsPropertyName, request.ConversionEvent);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateConversionEventResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateConversionEventRequest request = new CreateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.CreateConversionEventAsync(request.ParentAsPropertyName, request.ConversionEvent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.CreateConversionEventAsync(request.ParentAsPropertyName, request.ConversionEvent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetConversionEventRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.GetConversionEvent(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetConversionEventRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetConversionEvent()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.GetConversionEvent(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetConversionEventAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetConversionEventResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent response = client.GetConversionEvent(request.ConversionEventName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetConversionEventResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetConversionEventRequest request = new GetConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            ConversionEvent expectedResponse = new ConversionEvent
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+                EventName = "event_name43c4a22d",
+                CreateTime = new wkt::Timestamp(),
+                IsDeletable = true,
+            };
+            mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ConversionEvent responseCallSettings = await client.GetConversionEventAsync(request.ConversionEventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ConversionEvent responseCancellationToken = await client.GetConversionEventAsync(request.ConversionEventName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteConversionEventRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteConversionEvent(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteConversionEventRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteConversionEventAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteConversionEvent()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteConversionEvent(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteConversionEventAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteConversionEventAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteConversionEventAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteConversionEventResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteConversionEvent(request.ConversionEventName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteConversionEventResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteConversionEventRequest request = new DeleteConversionEventRequest
+            {
+                ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteConversionEventAsync(request.ConversionEventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteConversionEventAsync(request.ConversionEventName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomDimensionRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.CreateCustomDimension(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomDimensionRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomDimension()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.CreateCustomDimension(request.Parent, request.CustomDimension);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomDimensionAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request.Parent, request.CustomDimension, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request.Parent, request.CustomDimension, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomDimensionResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.CreateCustomDimension(request.ParentAsPropertyName, request.CustomDimension);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomDimensionResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomDimensionRequest request = new CreateCustomDimensionRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomDimension = new CustomDimension(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.CreateCustomDimensionAsync(request.ParentAsPropertyName, request.CustomDimension, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.CreateCustomDimensionAsync(request.ParentAsPropertyName, request.CustomDimension, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCustomDimensionRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomDimensionRequest request = new UpdateCustomDimensionRequest
+            {
+                CustomDimension = new CustomDimension(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.UpdateCustomDimension(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCustomDimensionRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomDimensionRequest request = new UpdateCustomDimensionRequest
+            {
+                CustomDimension = new CustomDimension(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.UpdateCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.UpdateCustomDimensionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCustomDimension()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomDimensionRequest request = new UpdateCustomDimensionRequest
+            {
+                CustomDimension = new CustomDimension(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.UpdateCustomDimension(request.CustomDimension, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCustomDimensionAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomDimensionRequest request = new UpdateCustomDimensionRequest
+            {
+                CustomDimension = new CustomDimension(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.UpdateCustomDimensionAsync(request.CustomDimension, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.UpdateCustomDimensionAsync(request.CustomDimension, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomDimensionRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomDimension(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomDimensionRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomDimensionAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomDimension()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomDimension(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomDimensionAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomDimensionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomDimensionAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomDimensionResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomDimension(request.CustomDimensionName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomDimensionResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomDimensionRequest request = new ArchiveCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomDimensionAsync(request.CustomDimensionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomDimensionAsync(request.CustomDimensionName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomDimensionRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.GetCustomDimension(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomDimensionRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomDimension()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.GetCustomDimension(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomDimensionAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomDimensionResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimension(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension response = client.GetCustomDimension(request.CustomDimensionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomDimensionResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomDimensionRequest request = new GetCustomDimensionRequest
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+            };
+            CustomDimension expectedResponse = new CustomDimension
+            {
+                CustomDimensionName = CustomDimensionName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                Scope = CustomDimension.Types.DimensionScope.Unspecified,
+                DisallowAdsPersonalization = true,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomDimensionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomDimension>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomDimension responseCallSettings = await client.GetCustomDimensionAsync(request.CustomDimensionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomDimension responseCancellationToken = await client.GetCustomDimensionAsync(request.CustomDimensionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomMetricRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.CreateCustomMetric(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomMetricRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomMetric()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.CreateCustomMetric(request.Parent, request.CustomMetric);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomMetricAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request.Parent, request.CustomMetric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request.Parent, request.CustomMetric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateCustomMetricResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.CreateCustomMetric(request.ParentAsPropertyName, request.CustomMetric);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCustomMetricResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateCustomMetricRequest request = new CreateCustomMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CustomMetric = new CustomMetric(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.CreateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.CreateCustomMetricAsync(request.ParentAsPropertyName, request.CustomMetric, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.CreateCustomMetricAsync(request.ParentAsPropertyName, request.CustomMetric, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCustomMetricRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomMetricRequest request = new UpdateCustomMetricRequest
+            {
+                CustomMetric = new CustomMetric(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.UpdateCustomMetric(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCustomMetricRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomMetricRequest request = new UpdateCustomMetricRequest
+            {
+                CustomMetric = new CustomMetric(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.UpdateCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.UpdateCustomMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCustomMetric()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomMetricRequest request = new UpdateCustomMetricRequest
+            {
+                CustomMetric = new CustomMetric(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.UpdateCustomMetric(request.CustomMetric, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCustomMetricAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateCustomMetricRequest request = new UpdateCustomMetricRequest
+            {
+                CustomMetric = new CustomMetric(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.UpdateCustomMetricAsync(request.CustomMetric, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.UpdateCustomMetricAsync(request.CustomMetric, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomMetricRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomMetric(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomMetricRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomMetricAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomMetric()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomMetric(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomMetricAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomMetricAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomMetricAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ArchiveCustomMetricResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.ArchiveCustomMetric(request.CustomMetricName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ArchiveCustomMetricResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ArchiveCustomMetricRequest request = new ArchiveCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.ArchiveCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.ArchiveCustomMetricAsync(request.CustomMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.ArchiveCustomMetricAsync(request.CustomMetricName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomMetricRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.GetCustomMetric(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomMetricRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomMetric()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.GetCustomMetric(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomMetricAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetCustomMetricResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetric(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric response = client.GetCustomMetric(request.CustomMetricName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetCustomMetricResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetCustomMetricRequest request = new GetCustomMetricRequest
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+            };
+            CustomMetric expectedResponse = new CustomMetric
+            {
+                CustomMetricName = CustomMetricName.FromProperty("[PROPERTY]"),
+                ParameterName = "parameter_name7d56d532",
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                MeasurementUnit = CustomMetric.Types.MeasurementUnit.Standard,
+                Scope = CustomMetric.Types.MetricScope.Event,
+            };
+            mockGrpcClient.Setup(x => x.GetCustomMetricAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomMetric>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request.CustomMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request.CustomMetricName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
