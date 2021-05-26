@@ -44,7 +44,7 @@ namespace Google.Cloud.Tools.CanonicalLinkFunction
             }
 
             string url = Canonicalizer.GetUrl(package, page);
-            await response.WriteAsync(url);
+            await response.WriteAsync(url ?? "");
         }
     }
 }

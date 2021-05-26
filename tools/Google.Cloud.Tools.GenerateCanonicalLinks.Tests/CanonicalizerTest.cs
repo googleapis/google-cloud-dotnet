@@ -42,12 +42,21 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks.Tests
         // TODO: Types in Google.Cloud.Diagnostics.AspNetCore (and AspNetCore3) namespaces. Currently not published at all on googleapis.dev...
         [InlineData("Google.Cloud.Diagnostics.AspNetCore", "api/Google.Cloud.Diagnostics.Common.ContextTracerManager.html", "Google.Cloud.Diagnostics.Common/latest/Google.Cloud.Diagnostics.Common.ContextTracerManager")]
         [InlineData("Google.Cloud.Diagnostics.AspNetCore3", "api/Google.Cloud.Diagnostics.Common.ContextTracerManager.html", "Google.Cloud.Diagnostics.Common/latest/Google.Cloud.Diagnostics.Common.ContextTracerManager")]
+        [InlineData("Google.Cloud.OsLogin.V1", "api/Google.Cloud.OsLogin.Common.OperatingSystemType.html", "Google.Cloud.OsLogin.Common/latest/Google.Cloud.OsLogin.Common.OperatingSystemType")]
+        [InlineData("Google.Cloud.Debugger.V2", "api/Google.Cloud.DevTools.Source.V1.AliasContext.html", "Google.Cloud.DevTools.Common/latest/Google.Cloud.DevTools.Source.V1.AliasContext")]
         public void GetUrl(string package, string page, string expectedSuffix)
         {
             var actualUrl = Canonicalizer.GetUrl(package, page);
+            Assert.NotNull(actualUrl);
             Assert.StartsWith(Canonicalizer.CloudSitePrefix, actualUrl);
             var actualSuffix = actualUrl[Canonicalizer.CloudSitePrefix.Length..];
             Assert.Equal(expectedSuffix, actualSuffix);
         }
+
+        [Theory]
+        [InlineData("Google.Area120.Tables.V1Alpha1", "api/Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest.html")]
+        [InlineData("Google.Analytics.Data.V1Alpha", "api/Google.Analytics.Data.V1Alpha.AlphaAnalyticsData.html")]
+        public void GetUrl_NotOnDevsite(string package, string page) =>
+            Assert.Null(Canonicalizer.GetUrl(package, page));
     }
 }

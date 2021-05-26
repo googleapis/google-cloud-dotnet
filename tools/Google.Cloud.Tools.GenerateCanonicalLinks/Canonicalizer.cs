@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,19 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
     public static class Canonicalizer
     {
         public const string CloudSitePrefix = "https://cloud.google.com/dotnet/docs/reference/";
+
+        /// <summary>
+        /// "Packages" which are on DevSite to support client libraries. (Often these packages actually
+        /// contain the types from multiple NuGet packages.)
+        /// </summary>
+        private static readonly ISet<string> DevSiteSupportPackages = new HashSet<string>
+        {
+            "Grpc.Core",
+            "Google.Protobuf",
+            "Google.Api.Gax",
+            "Google.Api.CommonProtos",
+            "Google.Apis"
+        };
 
         // Note: list rather than a dictionary, as order is important.
         private static readonly List<(string prefix, string package)> Prefixes = new List<(string, string)>
@@ -48,6 +62,8 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             { ("Google.Apis.Util", "Google.Apis") },
             { ("Google.Apis", "Google.Apis") },
             { ("Google.Cloud.Diagnostics.Common", "Google.Cloud.Diagnostics.Common") },
+            { ("Google.Cloud.OsLogin.Common", "Google.Cloud.OsLogin.Common") },
+            { ("Google.Cloud.DevTools.Source", "Google.Cloud.DevTools.Common") },
             { ("Google.LongRunning", "Google.LongRunning") },
             // To avoid using putting V1 protos in Google.Cloud.Firestore.
             { ("Google.Cloud.Firestore.V1", "Google.Cloud.Firestore.V1") },
@@ -63,7 +79,7 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
         /// </summary>
         /// <param name="package">The package in which the page occurs</param>
         /// <param name="page">The page URL relative to the root, e.g. api/Google.Cloud.SomeApi.V1.SomeType</param>
-        /// <returns>The canonical DevSite URL</returns>
+        /// <returns>The canonical DevSite URL, or null if the page is not on DevSite.</returns>
         public static string GetUrl(string package, string page)
         {
             // TODO: Implement this properly, including utility docs, non-reference docs etc.
@@ -88,7 +104,9 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
 
             package = MaybeAdjustPackage(package, page);
 
-            return $"{CloudSitePrefix}{package}/latest/{page}";
+            return ApiMetadata.IsCloudPackage(package) || DevSiteSupportPackages.Contains(package)
+                ? $"{CloudSitePrefix}{package}/latest/{page}"
+                : null;
         }
 
         private static string MaybeAdjustPackage(string package, string page)
