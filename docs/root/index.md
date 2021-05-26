@@ -94,7 +94,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.3.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
 | [Google.Cloud.NetworkConnectivity.V1Alpha1](Google.Cloud.NetworkConnectivity.V1Alpha1/index.html) | 1.0.0-alpha02 | [Network Connectivity](https://cloud.google.com/network-connectivity/docs/apis) |
 | [Google.Cloud.Notebooks.V1Beta1](Google.Cloud.Notebooks.V1Beta1/index.html) | 1.0.0-beta03 | [AI Platform Notebooks](https://cloud.google.com/ai-platform-notebooks) |
-| [Google.Cloud.OrgPolicy.V1](Google.Cloud.OrgPolicy.V1/index.html) | 2.1.0 | OrgPolicy API messages |
+| [Google.Cloud.OrgPolicy.V1](Google.Cloud.OrgPolicy.V1/index.html) | 2.2.0 | OrgPolicy API messages |
 | [Google.Cloud.OrgPolicy.V2](Google.Cloud.OrgPolicy.V2/index.html) | 1.0.0 | [Organization Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview) |
 | [Google.Cloud.OsConfig.V1](Google.Cloud.OsConfig.V1/index.html) | 1.2.0 | [Google Cloud OS Config (V1 API)](https://cloud.google.com/compute/docs/osconfig/rest) |
 | [Google.Cloud.OsConfig.V1Alpha](Google.Cloud.OsConfig.V1Alpha/index.html) | 1.0.0-alpha01 | [Google Cloud OS Config (V1Alpha API)](https://cloud.google.com/compute/docs/osconfig/rest) |
