@@ -117,7 +117,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.4.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta04 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.Security.PrivateCA.V1Beta1](Google.Cloud.Security.PrivateCA.V1Beta1/index.html) | 1.0.0-beta02 | [Certificate Authority (V1Beta1 API)](https://cloud.google.com/certificate-authority-service/) |
-| [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta02 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
+| [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta03 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html) | 2.2.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.ServiceControl.V1](Google.Cloud.ServiceControl.V1/index.html) | 1.1.0 | [Service Control](https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc) |
