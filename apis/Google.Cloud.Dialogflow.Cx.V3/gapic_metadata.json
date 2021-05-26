@@ -130,6 +130,12 @@
                 "GetEnvironmentAsync"
               ]
             },
+            "ListContinuousTestResults": {
+              "methods": [
+                "ListContinuousTestResults",
+                "ListContinuousTestResultsAsync"
+              ]
+            },
             "ListEnvironments": {
               "methods": [
                 "ListEnvironments",
@@ -140,6 +146,12 @@
               "methods": [
                 "LookupEnvironmentHistory",
                 "LookupEnvironmentHistoryAsync"
+              ]
+            },
+            "RunContinuousTest": {
+              "methods": [
+                "RunContinuousTest",
+                "RunContinuousTestAsync"
               ]
             },
             "UpdateEnvironment": {

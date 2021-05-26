@@ -64,55 +64,66 @@ namespace Google.Cloud.Asset.V1 {
             "aW9uGAEgASgJEh4KFmRpc2NvdmVyeV9kb2N1bWVudF91cmkYAiABKAkSFgoO",
             "ZGlzY292ZXJ5X25hbWUYAyABKAkSFAoMcmVzb3VyY2VfdXJsGAQgASgJEg4K",
             "BnBhcmVudBgFIAEoCRIlCgRkYXRhGAYgASgLMhcuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cnVjdBIQCghsb2NhdGlvbhgIIAEoCSLMAgoUUmVzb3VyY2VTZWFyY2hS",
+            "LlN0cnVjdBIQCghsb2NhdGlvbhgIIAEoCSKzBAoUUmVzb3VyY2VTZWFyY2hS",
             "ZXN1bHQSDAoEbmFtZRgBIAEoCRISCgphc3NldF90eXBlGAIgASgJEg8KB3By",
-            "b2plY3QYAyABKAkSFAoMZGlzcGxheV9uYW1lGAQgASgJEhMKC2Rlc2NyaXB0",
-            "aW9uGAUgASgJEhAKCGxvY2F0aW9uGAYgASgJEkcKBmxhYmVscxgHIAMoCzI3",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNlYXJjaFJlc3VsdC5M",
-            "YWJlbHNFbnRyeRIUCgxuZXR3b3JrX3RhZ3MYCCADKAkSNgoVYWRkaXRpb25h",
-            "bF9hdHRyaWJ1dGVzGAkgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "ItQDChVJYW1Qb2xpY3lTZWFyY2hSZXN1bHQSEAoIcmVzb3VyY2UYASABKAkS",
-            "DwoHcHJvamVjdBgCIAEoCRIlCgZwb2xpY3kYAyABKAsyFS5nb29nbGUuaWFt",
-            "LnYxLlBvbGljeRJNCgtleHBsYW5hdGlvbhgEIAEoCzI4Lmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5JYW1Qb2xpY3lTZWFyY2hSZXN1bHQuRXhwbGFuYXRpb24a",
-            "oQIKC0V4cGxhbmF0aW9uEm0KE21hdGNoZWRfcGVybWlzc2lvbnMYASADKAsy",
-            "UC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2VhcmNoUmVzdWx0",
-            "LkV4cGxhbmF0aW9uLk1hdGNoZWRQZXJtaXNzaW9uc0VudHJ5GiIKC1Blcm1p",
-            "c3Npb25zEhMKC3Blcm1pc3Npb25zGAEgAygJGn8KF01hdGNoZWRQZXJtaXNz",
-            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRJTCgV2YWx1ZRgCIAEoCzJELmdvb2ds",
+            "b2plY3QYAyABKAkSDwoHZm9sZGVycxgRIAMoCRIUCgxvcmdhbml6YXRpb24Y",
+            "EiABKAkSFAoMZGlzcGxheV9uYW1lGAQgASgJEhMKC2Rlc2NyaXB0aW9uGAUg",
+            "ASgJEhAKCGxvY2F0aW9uGAYgASgJEkcKBmxhYmVscxgHIAMoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNlYXJjaFJlc3VsdC5MYWJlbHNF",
+            "bnRyeRIUCgxuZXR3b3JrX3RhZ3MYCCADKAkSDwoHa21zX2tleRgKIAEoCRIv",
+            "CgtjcmVhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASLwoLdXBkYXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEg0KBXN0YXRlGA0gASgJEjYKFWFkZGl0aW9uYWxfYXR0cmlidXRl",
+            "cxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSIQoZcGFyZW50X2Z1",
+            "bGxfcmVzb3VyY2VfbmFtZRgTIAEoCRIZChFwYXJlbnRfYXNzZXRfdHlwZRhn",
+            "IAEoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBItQDChVJYW1Qb2xpY3lTZWFyY2hSZXN1bHQSEAoIcmVzb3VyY2UY",
+            "ASABKAkSDwoHcHJvamVjdBgCIAEoCRIlCgZwb2xpY3kYAyABKAsyFS5nb29n",
+            "bGUuaWFtLnYxLlBvbGljeRJNCgtleHBsYW5hdGlvbhgEIAEoCzI4Lmdvb2ds",
             "ZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lTZWFyY2hSZXN1bHQuRXhwbGFu",
-            "YXRpb24uUGVybWlzc2lvbnM6AjgBIkcKFklhbVBvbGljeUFuYWx5c2lzU3Rh",
-            "dGUSHgoEY29kZRgBIAEoDjIQLmdvb2dsZS5ycGMuQ29kZRINCgVjYXVzZRgC",
-            "IAEoCSLhCAoXSWFtUG9saWN5QW5hbHlzaXNSZXN1bHQSIwobYXR0YWNoZWRf",
-            "cmVzb3VyY2VfZnVsbF9uYW1lGAEgASgJEisKC2lhbV9iaW5kaW5nGAIgASgL",
-            "MhYuZ29vZ2xlLmlhbS52MS5CaW5kaW5nEl4KFGFjY2Vzc19jb250cm9sX2xp",
-            "c3RzGAMgAygLMkAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFu",
-            "YWx5c2lzUmVzdWx0LkFjY2Vzc0NvbnRyb2xMaXN0ElIKDWlkZW50aXR5X2xp",
-            "c3QYBCABKAsyOy5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5h",
-            "bHlzaXNSZXN1bHQuSWRlbnRpdHlMaXN0EhYKDmZ1bGx5X2V4cGxvcmVkGAUg",
-            "ASgIGm0KCFJlc291cmNlEhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRJF",
-            "Cg5hbmFseXNpc19zdGF0ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5JYW1Qb2xpY3lBbmFseXNpc1N0YXRlGoUBCgZBY2Nlc3MSDgoEcm9sZRgB",
-            "IAEoCUgAEhQKCnBlcm1pc3Npb24YAiABKAlIABJFCg5hbmFseXNpc19zdGF0",
-            "ZRgDIAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFs",
-            "eXNpc1N0YXRlQg4KDG9uZW9mX2FjY2VzcxpfCghJZGVudGl0eRIMCgRuYW1l",
-            "GAEgASgJEkUKDmFuYWx5c2lzX3N0YXRlGAIgASgLMi0uZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzU3RhdGUaMAoERWRnZRITCgtz",
-            "b3VyY2Vfbm9kZRgBIAEoCRITCgt0YXJnZXRfbm9kZRgCIAEoCRr1AQoRQWNj",
-            "ZXNzQ29udHJvbExpc3QSSgoJcmVzb3VyY2VzGAEgAygLMjcuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0LlJlc291cmNl",
-            "EkcKCGFjY2Vzc2VzGAIgAygLMjUuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklh",
-            "bVBvbGljeUFuYWx5c2lzUmVzdWx0LkFjY2VzcxJLCg5yZXNvdXJjZV9lZGdl",
-            "cxgDIAMoCzIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFs",
-            "eXNpc1Jlc3VsdC5FZGdlGqUBCgxJZGVudGl0eUxpc3QSSwoKaWRlbnRpdGll",
-            "cxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFs",
-            "eXNpc1Jlc3VsdC5JZGVudGl0eRJICgtncm91cF9lZGdlcxgCIAMoCzIzLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1Jlc3VsdC5F",
-            "ZGdlQpgBChljb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxQgpBc3NldFByb3Rv",
-            "UAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvYXNzZXQvdjE7YXNzZXT4AQGqAhVHb29nbGUuQ2xvdWQuQXNzZXQuVjHK",
-            "AhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
+            "YXRpb24aoQIKC0V4cGxhbmF0aW9uEm0KE21hdGNoZWRfcGVybWlzc2lvbnMY",
+            "ASADKAsyUC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2VhcmNo",
+            "UmVzdWx0LkV4cGxhbmF0aW9uLk1hdGNoZWRQZXJtaXNzaW9uc0VudHJ5GiIK",
+            "C1Blcm1pc3Npb25zEhMKC3Blcm1pc3Npb25zGAEgAygJGn8KF01hdGNoZWRQ",
+            "ZXJtaXNzaW9uc0VudHJ5EgsKA2tleRgBIAEoCRJTCgV2YWx1ZRgCIAEoCzJE",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lTZWFyY2hSZXN1bHQu",
+            "RXhwbGFuYXRpb24uUGVybWlzc2lvbnM6AjgBIkcKFklhbVBvbGljeUFuYWx5",
+            "c2lzU3RhdGUSHgoEY29kZRgBIAEoDjIQLmdvb2dsZS5ycGMuQ29kZRINCgVj",
+            "YXVzZRgCIAEoCSLGAQoTQ29uZGl0aW9uRXZhbHVhdGlvbhJUChBldmFsdWF0",
+            "aW9uX3ZhbHVlGAEgASgOMjouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNvbmRp",
+            "dGlvbkV2YWx1YXRpb24uRXZhbHVhdGlvblZhbHVlIlkKD0V2YWx1YXRpb25W",
+            "YWx1ZRIgChxFVkFMVUFUSU9OX1ZBTFVFX1VOU1BFQ0lGSUVEEAASCAoEVFJV",
+            "RRABEgkKBUZBTFNFEAISDwoLQ09ORElUSU9OQUwQAyKrCQoXSWFtUG9saWN5",
+            "QW5hbHlzaXNSZXN1bHQSIwobYXR0YWNoZWRfcmVzb3VyY2VfZnVsbF9uYW1l",
+            "GAEgASgJEisKC2lhbV9iaW5kaW5nGAIgASgLMhYuZ29vZ2xlLmlhbS52MS5C",
+            "aW5kaW5nEl4KFGFjY2Vzc19jb250cm9sX2xpc3RzGAMgAygLMkAuZ29vZ2xl",
+            "LmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0LkFjY2Vz",
+            "c0NvbnRyb2xMaXN0ElIKDWlkZW50aXR5X2xpc3QYBCABKAsyOy5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5hbHlzaXNSZXN1bHQuSWRlbnRp",
+            "dHlMaXN0EhYKDmZ1bGx5X2V4cGxvcmVkGAUgASgIGm0KCFJlc291cmNlEhoK",
+            "EmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRJFCg5hbmFseXNpc19zdGF0ZRgC",
+            "IAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNp",
+            "c1N0YXRlGoUBCgZBY2Nlc3MSDgoEcm9sZRgBIAEoCUgAEhQKCnBlcm1pc3Np",
+            "b24YAiABKAlIABJFCg5hbmFseXNpc19zdGF0ZRgDIAEoCzItLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1N0YXRlQg4KDG9uZW9m",
+            "X2FjY2VzcxpfCghJZGVudGl0eRIMCgRuYW1lGAEgASgJEkUKDmFuYWx5c2lz",
+            "X3N0YXRlGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGlj",
+            "eUFuYWx5c2lzU3RhdGUaMAoERWRnZRITCgtzb3VyY2Vfbm9kZRgBIAEoCRIT",
+            "Cgt0YXJnZXRfbm9kZRgCIAEoCRq/AgoRQWNjZXNzQ29udHJvbExpc3QSSgoJ",
+            "cmVzb3VyY2VzGAEgAygLMjcuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBv",
+            "bGljeUFuYWx5c2lzUmVzdWx0LlJlc291cmNlEkcKCGFjY2Vzc2VzGAIgAygL",
+            "MjUuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVz",
+            "dWx0LkFjY2VzcxJLCg5yZXNvdXJjZV9lZGdlcxgDIAMoCzIzLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1Jlc3VsdC5FZGdlEkgK",
+            "FGNvbmRpdGlvbl9ldmFsdWF0aW9uGAQgASgLMiouZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkNvbmRpdGlvbkV2YWx1YXRpb24apQEKDElkZW50aXR5TGlzdBJL",
+            "CgppZGVudGl0aWVzGAEgAygLMjcuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklh",
+            "bVBvbGljeUFuYWx5c2lzUmVzdWx0LklkZW50aXR5EkgKC2dyb3VwX2VkZ2Vz",
+            "GAIgAygLMjMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5",
+            "c2lzUmVzdWx0LkVkZ2VCmAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFC",
+            "CkFzc2V0UHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9hc3NldC92MTthc3NldPgBAaoCFUdvb2dsZS5DbG91",
+            "ZC5Bc3NldC5WMcoCFUdvb2dsZVxDbG91ZFxBc3NldFxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Cloud.OsConfig.V1.InventoryReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -120,15 +131,16 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "UpdateTime", "Name", "AssetType", "Resource", "IamPolicy", "OrgPolicy", "AccessPolicy", "AccessLevel", "ServicePerimeter", "OsInventory", "Ancestors" }, new[]{ "AccessContextPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Resource), global::Google.Cloud.Asset.V1.Resource.Parser, new[]{ "Version", "DiscoveryDocumentUri", "DiscoveryName", "ResourceUrl", "Parent", "Data", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ResourceSearchResult), global::Google.Cloud.Asset.V1.ResourceSearchResult.Parser, new[]{ "Name", "AssetType", "Project", "DisplayName", "Description", "Location", "Labels", "NetworkTags", "AdditionalAttributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ResourceSearchResult), global::Google.Cloud.Asset.V1.ResourceSearchResult.Parser, new[]{ "Name", "AssetType", "Project", "Folders", "Organization", "DisplayName", "Description", "Location", "Labels", "NetworkTags", "KmsKey", "CreateTime", "UpdateTime", "State", "AdditionalAttributes", "ParentFullResourceName", "ParentAssetType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Parser, new[]{ "Resource", "Project", "Policy", "Explanation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Parser, new[]{ "MatchedPermissions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Types.Permissions), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Types.Permissions.Parser, new[]{ "Permissions_" }, null, null, null, null),
             null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisState), global::Google.Cloud.Asset.V1.IamPolicyAnalysisState.Parser, new[]{ "Code", "Cause" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ConditionEvaluation), global::Google.Cloud.Asset.V1.ConditionEvaluation.Parser, new[]{ "EvaluationValue" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Parser, new[]{ "AttachedResourceFullName", "IamBinding", "AccessControlLists", "IdentityList", "FullyExplored" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Resource), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Resource.Parser, new[]{ "FullResourceName", "AnalysisState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Access), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Access.Parser, new[]{ "Role", "Permission", "AnalysisState" }, new[]{ "OneofAccess" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Identity), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Identity.Parser, new[]{ "Name", "AnalysisState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.Edge.Parser, new[]{ "SourceNode", "TargetNode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList.Parser, new[]{ "Resources", "Accesses", "ResourceEdges" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.AccessControlList.Parser, new[]{ "Resources", "Accesses", "ResourceEdges", "ConditionEvaluation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.IdentityList), global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Types.IdentityList.Parser, new[]{ "Identities", "GroupEdges" }, null, null, null, null)})
           }));
     }
@@ -773,7 +785,8 @@ namespace Google.Cloud.Asset.V1 {
   /// [resource
   /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
   /// a resource outside the Google Cloud resource hierarchy (such as Google
-  /// Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy).
+  /// Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy),
+  /// or a relationship (e.g. an INSTANCE_TO_INSTANCEGROUP relationship).
   /// See [Supported asset
   /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
   /// for more information.
@@ -1945,12 +1958,20 @@ namespace Google.Cloud.Asset.V1 {
       name_ = other.name_;
       assetType_ = other.assetType_;
       project_ = other.project_;
+      folders_ = other.folders_.Clone();
+      organization_ = other.organization_;
       displayName_ = other.displayName_;
       description_ = other.description_;
       location_ = other.location_;
       labels_ = other.labels_.Clone();
       networkTags_ = other.networkTags_.Clone();
+      kmsKey_ = other.kmsKey_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      state_ = other.state_;
       additionalAttributes_ = other.additionalAttributes_ != null ? other.additionalAttributes_.Clone() : null;
+      parentFullResourceName_ = other.parentFullResourceName_;
+      parentAssetType_ = other.parentAssetType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2005,10 +2026,13 @@ namespace Google.Cloud.Asset.V1 {
     private string project_ = "";
     /// <summary>
     /// The project that this resource belongs to, in the form of
-    /// projects/{PROJECT_NUMBER}.
+    /// projects/{PROJECT_NUMBER}. This field is available when the resource
+    /// belongs to a project.
     ///
-    /// To search against the `project`:
+    /// To search against `project`:
     ///
+    /// * use a field query. Example: `project:12345`
+    /// * use a free text query. Example: `12345`
     /// * specify the `scope` field as this project in your search request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2019,11 +2043,55 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "folders" field.</summary>
+    public const int FoldersFieldNumber = 17;
+    private static readonly pb::FieldCodec<string> _repeated_folders_codec
+        = pb::FieldCodec.ForString(138);
+    private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The folder(s) that this resource belongs to, in the form of
+    /// folders/{FOLDER_NUMBER}. This field is available when the resource
+    /// belongs to one or more folders.
+    ///
+    /// To search against `folders`:
+    ///
+    /// * use a field query. Example: `folders:(123 OR 456)`
+    /// * use a free text query. Example: `123`
+    /// * specify the `scope` field as this folder in your search request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Folders {
+      get { return folders_; }
+    }
+
+    /// <summary>Field number for the "organization" field.</summary>
+    public const int OrganizationFieldNumber = 18;
+    private string organization_ = "";
+    /// <summary>
+    /// The organization that this resource belongs to, in the form of
+    /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
+    /// resource belongs to an organization.
+    ///
+    /// To search against `organization`:
+    ///
+    /// * use a field query. Example: `organization:123`
+    /// * use a free text query. Example: `123`
+    /// * specify the `scope` field as this organization in your search request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Organization {
+      get { return organization_; }
+      set {
+        organization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// The display name of this resource.
+    /// The display name of this resource. This field is available only when the
+    /// resource's proto contains it.
     ///
     /// To search against the `display_name`:
     ///
@@ -2043,12 +2111,13 @@ namespace Google.Cloud.Asset.V1 {
     private string description_ = "";
     /// <summary>
     /// One or more paragraphs of text description of this resource. Maximum length
-    /// could be up to 1M bytes.
+    /// could be up to 1M bytes. This field is available only when the resource's
+    /// proto contains it.
     ///
     /// To search against the `description`:
     ///
-    /// * use a field query. Example: `description:"*important instance*"`
-    /// * use a free text query. Example: `"*important instance*"`
+    /// * use a field query. Example: `description:"important instance"`
+    /// * use a free text query. Example: `"important instance"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -2063,7 +2132,8 @@ namespace Google.Cloud.Asset.V1 {
     private string location_ = "";
     /// <summary>
     /// Location can be `global`, regional like `us-east1`, or zonal like
-    /// `us-west1-b`.
+    /// `us-west1-b`. This field is available only when the resource's proto
+    /// contains it.
     ///
     /// To search against the `location`:
     ///
@@ -2086,7 +2156,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// Labels associated with this resource. See [Labelling and grouping GCP
     /// resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-platform-resources)
-    /// for more information.
+    /// for more information. This field is available only when the resource's
+    /// proto contains it.
     ///
     /// To search against the `labels`:
     ///
@@ -2110,7 +2181,8 @@ namespace Google.Cloud.Asset.V1 {
     /// Network tags associated with this resource. Like labels, network tags are a
     /// type of annotations used to group GCP resources. See [Labelling GCP
     /// resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-platform-resources)
-    /// for more information.
+    /// for more information. This field is available only when the resource's
+    /// proto contains it.
     ///
     /// To search against the `network_tags`:
     ///
@@ -2120,6 +2192,110 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> NetworkTags {
       get { return networkTags_; }
+    }
+
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 10;
+    private string kmsKey_ = "";
+    /// <summary>
+    /// The Cloud KMS
+    /// [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys?hl=en)
+    /// name or
+    /// [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en)
+    /// name. This field is available only when the resource's proto contains it.
+    ///
+    /// To search against the `kms_key`:
+    ///
+    /// * use a field query. Example: `kmsKey:key`
+    /// * use a free text query. Example: `key`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKey {
+      get { return kmsKey_; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The create timestamp of this resource, at which the resource was created.
+    /// The granularity is in seconds. Timestamp.nanos will always be 0. This field
+    /// is available only when the resource's proto contains it.
+    ///
+    /// To search against `create_time`:
+    ///
+    /// * use a field query.
+    ///     - value in seconds since unix epoch. Example: `createTime > 1609459200`
+    ///     - value in date string. Example: `createTime > 2021-01-01`
+    ///     - value in date-time string (must be quoted). Example: `createTime >
+    ///     "2021-01-01T00:00:00"`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// The last update timestamp of this resource, at which the resource was last
+    /// modified or deleted. The granularity is in seconds. Timestamp.nanos will
+    /// always be 0. This field is available only when the resource's proto
+    /// contains it.
+    ///
+    /// To search against `update_time`:
+    ///
+    /// * use a field query.
+    ///     - value in seconds since unix epoch. Example: `updateTime &lt; 1609459200`
+    ///     - value in date string. Example: `updateTime &lt; 2021-01-01`
+    ///     - value in date-time string (must be quoted). Example: `updateTime &lt;
+    ///     "2021-01-01T00:00:00"`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 13;
+    private string state_ = "";
+    /// <summary>
+    /// The state of this resource. Different resources types have different state
+    /// definitions that are mapped from various fields of different resource
+    /// types. This field is available only when the resource's proto contains it.
+    ///
+    /// Example:
+    /// If the resource is an instance provided by Compute Engine,
+    /// its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
+    /// SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition
+    /// in [API
+    /// Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances).
+    /// If the resource is a project provided by Cloud Resource Manager, its state
+    /// will include LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and
+    /// DELETE_IN_PROGRESS. See `lifecycleState` definition in [API
+    /// Reference](https://cloud.google.com/resource-manager/reference/rest/v1/projects).
+    ///
+    /// To search against the `state`:
+    ///
+    /// * use a field query. Example: `state:RUNNING`
+    /// * use a free text query. Example: `RUNNING`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string State {
+      get { return state_; }
+      set {
+        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "additional_attributes" field.</summary>
@@ -2133,7 +2309,7 @@ namespace Google.Cloud.Asset.V1 {
     /// corresponding GCP service (e.g., Compute Engine). see [API references and
     /// supported searchable
     /// attributes](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types)
-    /// for more information.
+    /// to see which fields are included.
     ///
     /// You can search values of these fields through free text search. However,
     /// you should not consume the field programically as the field names and
@@ -2154,6 +2330,47 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent_full_resource_name" field.</summary>
+    public const int ParentFullResourceNameFieldNumber = 19;
+    private string parentFullResourceName_ = "";
+    /// <summary>
+    /// The full resource name of this resource's parent, if it has one.
+    /// To search against the `parent_full_resource_name`:
+    ///
+    /// * use a field query. Example:
+    /// `parentFullResourceName:"project-name"`
+    /// * use a free text query. Example:
+    /// `project-name`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ParentFullResourceName {
+      get { return parentFullResourceName_; }
+      set {
+        parentFullResourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent_asset_type" field.</summary>
+    public const int ParentAssetTypeFieldNumber = 103;
+    private string parentAssetType_ = "";
+    /// <summary>
+    /// The type of this resource's immediate parent, if there is one.
+    ///
+    /// To search against the `parent_asset_type`:
+    ///
+    /// * use a field query. Example:
+    /// `parentAssetType:"cloudresourcemanager.googleapis.com/Project"`
+    /// * use a free text query. Example:
+    /// `cloudresourcemanager.googleapis.com/Project`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ParentAssetType {
+      get { return parentAssetType_; }
+      set {
+        parentAssetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ResourceSearchResult);
@@ -2170,12 +2387,20 @@ namespace Google.Cloud.Asset.V1 {
       if (Name != other.Name) return false;
       if (AssetType != other.AssetType) return false;
       if (Project != other.Project) return false;
+      if(!folders_.Equals(other.folders_)) return false;
+      if (Organization != other.Organization) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
       if (Location != other.Location) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if(!networkTags_.Equals(other.networkTags_)) return false;
+      if (KmsKey != other.KmsKey) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (State != other.State) return false;
       if (!object.Equals(AdditionalAttributes, other.AdditionalAttributes)) return false;
+      if (ParentFullResourceName != other.ParentFullResourceName) return false;
+      if (ParentAssetType != other.ParentAssetType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2185,12 +2410,20 @@ namespace Google.Cloud.Asset.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (Project.Length != 0) hash ^= Project.GetHashCode();
+      hash ^= folders_.GetHashCode();
+      if (Organization.Length != 0) hash ^= Organization.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= networkTags_.GetHashCode();
+      if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (State.Length != 0) hash ^= State.GetHashCode();
       if (additionalAttributes_ != null) hash ^= AdditionalAttributes.GetHashCode();
+      if (ParentFullResourceName.Length != 0) hash ^= ParentFullResourceName.GetHashCode();
+      if (ParentAssetType.Length != 0) hash ^= ParentAssetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2237,6 +2470,35 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(AdditionalAttributes);
       }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKey);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(State);
+      }
+      folders_.WriteTo(output, _repeated_folders_codec);
+      if (Organization.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Organization);
+      }
+      if (ParentFullResourceName.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(ParentFullResourceName);
+      }
+      if (ParentAssetType.Length != 0) {
+        output.WriteRawTag(186, 6);
+        output.WriteString(ParentAssetType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2276,6 +2538,35 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(AdditionalAttributes);
       }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKey);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(State);
+      }
+      folders_.WriteTo(ref output, _repeated_folders_codec);
+      if (Organization.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Organization);
+      }
+      if (ParentFullResourceName.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(ParentFullResourceName);
+      }
+      if (ParentAssetType.Length != 0) {
+        output.WriteRawTag(186, 6);
+        output.WriteString(ParentAssetType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2294,6 +2585,10 @@ namespace Google.Cloud.Asset.V1 {
       if (Project.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
       }
+      size += folders_.CalculateSize(_repeated_folders_codec);
+      if (Organization.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Organization);
+      }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
@@ -2305,8 +2600,26 @@ namespace Google.Cloud.Asset.V1 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += networkTags_.CalculateSize(_repeated_networkTags_codec);
+      if (KmsKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (State.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      }
       if (additionalAttributes_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdditionalAttributes);
+      }
+      if (ParentFullResourceName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ParentFullResourceName);
+      }
+      if (ParentAssetType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ParentAssetType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2328,6 +2641,10 @@ namespace Google.Cloud.Asset.V1 {
       if (other.Project.Length != 0) {
         Project = other.Project;
       }
+      folders_.Add(other.folders_);
+      if (other.Organization.Length != 0) {
+        Organization = other.Organization;
+      }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -2339,11 +2656,35 @@ namespace Google.Cloud.Asset.V1 {
       }
       labels_.Add(other.labels_);
       networkTags_.Add(other.networkTags_);
+      if (other.KmsKey.Length != 0) {
+        KmsKey = other.KmsKey;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.State.Length != 0) {
+        State = other.State;
+      }
       if (other.additionalAttributes_ != null) {
         if (additionalAttributes_ == null) {
           AdditionalAttributes = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         AdditionalAttributes.MergeFrom(other.AdditionalAttributes);
+      }
+      if (other.ParentFullResourceName.Length != 0) {
+        ParentFullResourceName = other.ParentFullResourceName;
+      }
+      if (other.ParentAssetType.Length != 0) {
+        ParentAssetType = other.ParentAssetType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2398,6 +2739,44 @@ namespace Google.Cloud.Asset.V1 {
             input.ReadMessage(AdditionalAttributes);
             break;
           }
+          case 82: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 98: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            State = input.ReadString();
+            break;
+          }
+          case 138: {
+            folders_.AddEntriesFrom(input, _repeated_folders_codec);
+            break;
+          }
+          case 146: {
+            Organization = input.ReadString();
+            break;
+          }
+          case 154: {
+            ParentFullResourceName = input.ReadString();
+            break;
+          }
+          case 826: {
+            ParentAssetType = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2449,6 +2828,44 @@ namespace Google.Cloud.Asset.V1 {
               AdditionalAttributes = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(AdditionalAttributes);
+            break;
+          }
+          case 82: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 98: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            State = input.ReadString();
+            break;
+          }
+          case 138: {
+            folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+            break;
+          }
+          case 146: {
+            Organization = input.ReadString();
+            break;
+          }
+          case 154: {
+            ParentFullResourceName = input.ReadString();
+            break;
+          }
+          case 826: {
+            ParentAssetType = input.ReadString();
             break;
           }
         }
@@ -2533,7 +2950,7 @@ namespace Google.Cloud.Asset.V1 {
     /// projects/{PROJECT_NUMBER}. If an IAM policy is set on a resource (like VM
     /// instance, Cloud Storage bucket), the project field will indicate the
     /// project that contains the resource. If an IAM policy is set on a folder or
-    /// orgnization, the project field will be empty.
+    /// orgnization, this field will be empty.
     ///
     /// To search against the `project`:
     ///
@@ -3380,6 +3797,215 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
+  /// The Condition evaluation.
+  /// </summary>
+  public sealed partial class ConditionEvaluation : pb::IMessage<ConditionEvaluation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConditionEvaluation> _parser = new pb::MessageParser<ConditionEvaluation>(() => new ConditionEvaluation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ConditionEvaluation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConditionEvaluation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConditionEvaluation(ConditionEvaluation other) : this() {
+      evaluationValue_ = other.evaluationValue_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConditionEvaluation Clone() {
+      return new ConditionEvaluation(this);
+    }
+
+    /// <summary>Field number for the "evaluation_value" field.</summary>
+    public const int EvaluationValueFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue evaluationValue_ = global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified;
+    /// <summary>
+    /// The evaluation result.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue EvaluationValue {
+      get { return evaluationValue_; }
+      set {
+        evaluationValue_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ConditionEvaluation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ConditionEvaluation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EvaluationValue != other.EvaluationValue) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EvaluationValue != global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified) hash ^= EvaluationValue.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EvaluationValue != global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) EvaluationValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EvaluationValue != global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) EvaluationValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EvaluationValue != global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EvaluationValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ConditionEvaluation other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EvaluationValue != global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue.Unspecified) {
+        EvaluationValue = other.EvaluationValue;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EvaluationValue = (global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EvaluationValue = (global::Google.Cloud.Asset.V1.ConditionEvaluation.Types.EvaluationValue) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ConditionEvaluation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Value of this expression.
+      /// </summary>
+      public enum EvaluationValue {
+        /// <summary>
+        /// Reserved for future use.
+        /// </summary>
+        [pbr::OriginalName("EVALUATION_VALUE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The evaluation result is `true`.
+        /// </summary>
+        [pbr::OriginalName("TRUE")] True = 1,
+        /// <summary>
+        /// The evaluation result is `false`.
+        /// </summary>
+        [pbr::OriginalName("FALSE")] False = 2,
+        /// <summary>
+        /// The evaluation result is `conditional` when the condition expression
+        /// contains variables that are either missing input values or have not been
+        /// supported by Analyzer yet.
+        /// </summary>
+        [pbr::OriginalName("CONDITIONAL")] Conditional = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// IAM Policy analysis result, consisting of one IAM policy binding and derived
   /// access control lists.
   /// </summary>
@@ -3395,7 +4021,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4755,6 +5381,7 @@ namespace Google.Cloud.Asset.V1 {
           resources_ = other.resources_.Clone();
           accesses_ = other.accesses_.Clone();
           resourceEdges_ = other.resourceEdges_.Clone();
+          conditionEvaluation_ = other.conditionEvaluation_ != null ? other.conditionEvaluation_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4810,6 +5437,21 @@ namespace Google.Cloud.Asset.V1 {
           get { return resourceEdges_; }
         }
 
+        /// <summary>Field number for the "condition_evaluation" field.</summary>
+        public const int ConditionEvaluationFieldNumber = 4;
+        private global::Google.Cloud.Asset.V1.ConditionEvaluation conditionEvaluation_;
+        /// <summary>
+        /// Condition evaluation for this AccessControlList, if there is a condition
+        /// defined in the above IAM policy binding.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Asset.V1.ConditionEvaluation ConditionEvaluation {
+          get { return conditionEvaluation_; }
+          set {
+            conditionEvaluation_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as AccessControlList);
@@ -4826,6 +5468,7 @@ namespace Google.Cloud.Asset.V1 {
           if(!resources_.Equals(other.resources_)) return false;
           if(!accesses_.Equals(other.accesses_)) return false;
           if(!resourceEdges_.Equals(other.resourceEdges_)) return false;
+          if (!object.Equals(ConditionEvaluation, other.ConditionEvaluation)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4835,6 +5478,7 @@ namespace Google.Cloud.Asset.V1 {
           hash ^= resources_.GetHashCode();
           hash ^= accesses_.GetHashCode();
           hash ^= resourceEdges_.GetHashCode();
+          if (conditionEvaluation_ != null) hash ^= ConditionEvaluation.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4854,6 +5498,10 @@ namespace Google.Cloud.Asset.V1 {
           resources_.WriteTo(output, _repeated_resources_codec);
           accesses_.WriteTo(output, _repeated_accesses_codec);
           resourceEdges_.WriteTo(output, _repeated_resourceEdges_codec);
+          if (conditionEvaluation_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(ConditionEvaluation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4866,6 +5514,10 @@ namespace Google.Cloud.Asset.V1 {
           resources_.WriteTo(ref output, _repeated_resources_codec);
           accesses_.WriteTo(ref output, _repeated_accesses_codec);
           resourceEdges_.WriteTo(ref output, _repeated_resourceEdges_codec);
+          if (conditionEvaluation_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(ConditionEvaluation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4878,6 +5530,9 @@ namespace Google.Cloud.Asset.V1 {
           size += resources_.CalculateSize(_repeated_resources_codec);
           size += accesses_.CalculateSize(_repeated_accesses_codec);
           size += resourceEdges_.CalculateSize(_repeated_resourceEdges_codec);
+          if (conditionEvaluation_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConditionEvaluation);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4892,6 +5547,12 @@ namespace Google.Cloud.Asset.V1 {
           resources_.Add(other.resources_);
           accesses_.Add(other.accesses_);
           resourceEdges_.Add(other.resourceEdges_);
+          if (other.conditionEvaluation_ != null) {
+            if (conditionEvaluation_ == null) {
+              ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+            }
+            ConditionEvaluation.MergeFrom(other.ConditionEvaluation);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4918,6 +5579,13 @@ namespace Google.Cloud.Asset.V1 {
                 resourceEdges_.AddEntriesFrom(input, _repeated_resourceEdges_codec);
                 break;
               }
+              case 34: {
+                if (conditionEvaluation_ == null) {
+                  ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+                }
+                input.ReadMessage(ConditionEvaluation);
+                break;
+              }
             }
           }
         #endif
@@ -4942,6 +5610,13 @@ namespace Google.Cloud.Asset.V1 {
               }
               case 26: {
                 resourceEdges_.AddEntriesFrom(ref input, _repeated_resourceEdges_codec);
+                break;
+              }
+              case 34: {
+                if (conditionEvaluation_ == null) {
+                  ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+                }
+                input.ReadMessage(ConditionEvaluation);
                 break;
               }
             }

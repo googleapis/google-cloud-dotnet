@@ -1069,5 +1069,346 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for RunContinuousTest</summary>
+        public void RunContinuousTestRequestObject()
+        {
+            // Snippet: RunContinuousTest(RunContinuousTestRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            RunContinuousTestRequest request = new RunContinuousTestRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> response = environmentsClient.RunContinuousTest(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunContinuousTestResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> retrievedResponse = environmentsClient.PollOnceRunContinuousTest(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunContinuousTestResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunContinuousTestAsync</summary>
+        public async Task RunContinuousTestRequestObjectAsync()
+        {
+            // Snippet: RunContinuousTestAsync(RunContinuousTestRequest, CallSettings)
+            // Additional: RunContinuousTestAsync(RunContinuousTestRequest, CancellationToken)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            RunContinuousTestRequest request = new RunContinuousTestRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> response = await environmentsClient.RunContinuousTestAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunContinuousTestResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunContinuousTestResponse, RunContinuousTestMetadata> retrievedResponse = await environmentsClient.PollOnceRunContinuousTestAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunContinuousTestResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResults</summary>
+        public void ListContinuousTestResultsRequestObject()
+        {
+            // Snippet: ListContinuousTestResults(ListContinuousTestResultsRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
+            {
+                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResults(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContinuousTestResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContinuousTestResultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResultsAsync</summary>
+        public async Task ListContinuousTestResultsRequestObjectAsync()
+        {
+            // Snippet: ListContinuousTestResultsAsync(ListContinuousTestResultsRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListContinuousTestResultsRequest request = new ListContinuousTestResultsRequest
+            {
+                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResultsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ContinuousTestResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListContinuousTestResultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResults</summary>
+        public void ListContinuousTestResults()
+        {
+            // Snippet: ListContinuousTestResults(string, string, int?, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/environments/[ENVIRONMENT]";
+            // Make the request
+            PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContinuousTestResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContinuousTestResultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResultsAsync</summary>
+        public async Task ListContinuousTestResultsAsync()
+        {
+            // Snippet: ListContinuousTestResultsAsync(string, string, int?, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/environments/[ENVIRONMENT]";
+            // Make the request
+            PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ContinuousTestResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListContinuousTestResultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResults</summary>
+        public void ListContinuousTestResultsResourceNames()
+        {
+            // Snippet: ListContinuousTestResults(EnvironmentName, string, int?, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            EnvironmentName parent = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]");
+            // Make the request
+            PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContinuousTestResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContinuousTestResultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContinuousTestResultsAsync</summary>
+        public async Task ListContinuousTestResultsResourceNamesAsync()
+        {
+            // Snippet: ListContinuousTestResultsAsync(EnvironmentName, string, int?, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            EnvironmentName parent = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]");
+            // Make the request
+            PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> response = environmentsClient.ListContinuousTestResultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ContinuousTestResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListContinuousTestResultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContinuousTestResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContinuousTestResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContinuousTestResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
