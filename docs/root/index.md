@@ -140,7 +140,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Tasks.V2Beta3](Google.Cloud.Tasks.V2Beta3/index.html) | 2.0.0-beta05 | [Google Cloud Tasks (V2Beta3 API)](https://cloud.google.com/tasks/) |
 | [Google.Cloud.TextToSpeech.V1](Google.Cloud.TextToSpeech.V1/index.html) | 2.2.0 | [Google Cloud Text-to-Speech (V1 API)](https://cloud.google.com/text-to-speech) |
 | [Google.Cloud.TextToSpeech.V1Beta1](Google.Cloud.TextToSpeech.V1Beta1/index.html) | 1.0.0-beta01 | [Google Cloud Text-to-Speech (V1Beta1 API)](https://cloud.google.com/text-to-speech) |
-| [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html) | 2.1.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
+| [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html) | 2.2.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html) | 2.1.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html) | 2.1.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html) | 2.0.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
