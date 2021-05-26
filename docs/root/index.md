@@ -149,7 +149,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html) | 2.3.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.VpcAccess.V1](Google.Cloud.VpcAccess.V1/index.html) | 1.0.0-beta01 | [Serverless VPC Access](https://cloud.google.com/vpc/docs/) |
 | [Google.Cloud.WebRisk.V1](Google.Cloud.WebRisk.V1/index.html) | 1.2.0 | [Google Cloud Web Risk (V1 API)](https://cloud.google.com/web-risk/) |
-| [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
+| [Google.Cloud.WebRisk.V1Beta1](Google.Cloud.WebRisk.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebSecurityScanner.V1](Google.Cloud.WebSecurityScanner.V1/index.html) | 1.0.0 | [Web Security Scanner](https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview) |
 | [Google.Cloud.Workflows.Common.V1](Google.Cloud.Workflows.Common.V1/index.html) | 1.0.0 | Common resource names used by all Workflows V1 APIs |
 | [Google.Cloud.Workflows.Common.V1Beta](Google.Cloud.Workflows.Common.V1Beta/index.html) | 1.0.0-beta01 | Common resource names used by all Workflows V1Beta APIs |

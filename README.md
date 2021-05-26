@@ -144,7 +144,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](https://googleapis.dev/dotnet/Google.Cloud.Vision.V1/2.3.0) | 2.3.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.VpcAccess.V1](https://googleapis.dev/dotnet/Google.Cloud.VpcAccess.V1/1.0.0-beta01) | 1.0.0-beta01 | [Serverless VPC Access](https://cloud.google.com/vpc/docs/) |
 | [Google.Cloud.WebRisk.V1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1/1.2.0) | 1.2.0 | [Google Cloud Web Risk (V1 API)](https://cloud.google.com/web-risk/) |
-| [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
+| [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebSecurityScanner.V1](https://googleapis.dev/dotnet/Google.Cloud.WebSecurityScanner.V1/1.0.0) | 1.0.0 | [Web Security Scanner](https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview) |
 | [Google.Cloud.Workflows.Common.V1](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Common.V1/1.0.0) | 1.0.0 | Common resource names used by all Workflows V1 APIs |
 | [Google.Cloud.Workflows.Common.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Common.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | Common resource names used by all Workflows V1Beta APIs |
