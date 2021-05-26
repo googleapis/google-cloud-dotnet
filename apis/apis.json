@@ -2313,7 +2313,7 @@
       "protoPath": "google/cloud/tasks/v2beta3",
       "productName": "Google Cloud Tasks",
       "productUrl": "https://cloud.google.com/tasks/",
-      "version": "2.0.0-beta04",
+      "version": "2.0.0-beta05",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Tasks API (v2beta3), which manages the execution of large numbers of distributed requests.",
@@ -2321,7 +2321,7 @@
         "Tasks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.1.0"
+        "Google.Cloud.Iam.V1": "2.2.0"
       }
     },
     {
