@@ -117,7 +117,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.SecurityCenter.V1P1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1P1Beta1/2.0.0-beta05) | 2.0.0-beta05 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.ServiceControl.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceControl.V1/1.1.0) | 1.1.0 | [Service Control](https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc) |
 | [Google.Cloud.ServiceDirectory.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceDirectory.V1/1.1.0) | 1.1.0 | [Service Directory (V1 API)](https://cloud.google.com/service-directory/) |
-| [Google.Cloud.ServiceDirectory.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ServiceDirectory.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Service Directory (V1Beta1 API)](https://cloud.google.com/service-directory/) |
+| [Google.Cloud.ServiceDirectory.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ServiceDirectory.V1Beta1/1.0.0-beta04) | 1.0.0-beta04 | [Service Directory (V1Beta1 API)](https://cloud.google.com/service-directory/) |
 | [Google.Cloud.ServiceManagement.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceManagement.V1/1.1.0) | 1.1.0 | [Service Management](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
 | [Google.Cloud.ServiceUsage.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceUsage.V1/1.0.0-beta01) | 1.0.0-beta01 | [Service Usage](https://cloud.google.com/service-usage/docs/) |
 | [Google.Cloud.Shell.V1](https://googleapis.dev/dotnet/Google.Cloud.Shell.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Shell](https://cloud.google.com/shell/) |
