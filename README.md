@@ -77,7 +77,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.2.0) | 2.2.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.3.0) | 3.3.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](https://googleapis.dev/dotnet/Google.Cloud.Logging.NLog/3.3.0) | 3.3.0 | NLog target for the Google Cloud Logging API |
-| [Google.Cloud.Logging.Type](https://googleapis.dev/dotnet/Google.Cloud.Logging.Type/3.2.0) | 3.2.0 | Version-agnostic types for the Google Cloud Logging API |
+| [Google.Cloud.Logging.Type](https://googleapis.dev/dotnet/Google.Cloud.Logging.Type/3.3.0) | 3.3.0 | Version-agnostic types for the Google Cloud Logging API |
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.3.0) | 3.3.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/2.2.0) | 2.2.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.MediaTranslation.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.MediaTranslation.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Media Translation](https://cloud.google.com/media-translation) |

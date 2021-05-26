@@ -1257,7 +1257,7 @@
       "id": "Google.Cloud.Logging.Type",
       "generator": "proto",
       "protoPath": "google/logging/type",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "description": "Version-agnostic types for the Google Cloud Logging API.",
@@ -1266,7 +1266,7 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.2.0"
+        "Google.Api.CommonProtos": "2.3.0"
       }
     },
     {

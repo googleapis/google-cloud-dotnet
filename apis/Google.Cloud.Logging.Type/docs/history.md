@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.3.0, released 2021-05-26
+
+No API surface changes; just dependency updates.
+
 # Version 3.2.0, released 2020-11-18
 
 - [Commit 762ed1f](https://github.com/googleapis/google-cloud-dotnet/commit/762ed1f): docs: Updates to IP address comments
