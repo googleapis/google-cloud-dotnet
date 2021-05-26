@@ -75,7 +75,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Iot.V1](https://googleapis.dev/dotnet/Google.Cloud.Iot.V1/1.1.0) | 1.1.0 | [Cloud IoT](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.2.0) | 2.2.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.2.0) | 2.2.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
-| [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.2.0) | 3.2.0 | Log4Net client library for the Google Cloud Logging API |
+| [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.3.0) | 3.3.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](https://googleapis.dev/dotnet/Google.Cloud.Logging.NLog/3.3.0) | 3.3.0 | NLog target for the Google Cloud Logging API |
 | [Google.Cloud.Logging.Type](https://googleapis.dev/dotnet/Google.Cloud.Logging.Type/3.2.0) | 3.2.0 | Version-agnostic types for the Google Cloud Logging API |
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.3.0) | 3.3.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
