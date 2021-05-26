@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta05, released 2021-05-26
+
+No API surface changes; just dependency updates.
+
 # Version 2.0.0-beta04, released 2021-01-22
 
 - [Commit 3bc4a75](https://github.com/googleapis/google-cloud-dotnet/commit/3bc4a75):

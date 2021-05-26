@@ -132,7 +132,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Talent.V4](https://googleapis.dev/dotnet/Google.Cloud.Talent.V4/1.1.0) | 1.1.0 | [Google Cloud Talent Solution (V4 API)](https://cloud.google.com/talent-solution/) |
 | [Google.Cloud.Talent.V4Beta1](https://googleapis.dev/dotnet/Google.Cloud.Talent.V4Beta1/2.0.0-beta05) | 2.0.0-beta05 | [Google Cloud Talent Solution (V4Beta1 API)](https://cloud.google.com/talent-solution/) |
 | [Google.Cloud.Tasks.V2](https://googleapis.dev/dotnet/Google.Cloud.Tasks.V2/2.2.0) | 2.2.0 | [Google Cloud Tasks (V2 API)](https://cloud.google.com/tasks/) |
-| [Google.Cloud.Tasks.V2Beta3](https://googleapis.dev/dotnet/Google.Cloud.Tasks.V2Beta3/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud Tasks (V2Beta3 API)](https://cloud.google.com/tasks/) |
+| [Google.Cloud.Tasks.V2Beta3](https://googleapis.dev/dotnet/Google.Cloud.Tasks.V2Beta3/2.0.0-beta05) | 2.0.0-beta05 | [Google Cloud Tasks (V2Beta3 API)](https://cloud.google.com/tasks/) |
 | [Google.Cloud.TextToSpeech.V1](https://googleapis.dev/dotnet/Google.Cloud.TextToSpeech.V1/2.1.0) | 2.1.0 | [Google Cloud Text-to-Speech (V1 API)](https://cloud.google.com/text-to-speech) |
 | [Google.Cloud.TextToSpeech.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.TextToSpeech.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Google Cloud Text-to-Speech (V1Beta1 API)](https://cloud.google.com/text-to-speech) |
 | [Google.Cloud.Trace.V1](https://googleapis.dev/dotnet/Google.Cloud.Trace.V1/2.1.0) | 2.1.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
