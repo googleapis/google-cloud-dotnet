@@ -105,7 +105,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.PolicyTroubleshooter.V1](Google.Cloud.PolicyTroubleshooter.V1/index.html) | 1.1.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PrivateCatalog.V1Beta1](Google.Cloud.PrivateCatalog.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Private Catalog](https://cloud.google.com/private-catalog/docs/) |
 | [Google.Cloud.Profiler.V2](Google.Cloud.Profiler.V2/index.html) | 1.1.0 | [Cloud Profiler](https://cloud.google.com/profiler/) |
-| [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html) | 2.4.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
+| [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html) | 2.5.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
 | [Google.Cloud.RecaptchaEnterprise.V1](Google.Cloud.RecaptchaEnterprise.V1/index.html) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](Google.Cloud.RecaptchaEnterprise.V1Beta1/index.html) | 1.0.0-beta03 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecommendationEngine.V1Beta1](Google.Cloud.RecommendationEngine.V1Beta1/index.html) | 1.0.0-beta02 | [Recommendations AI](https://cloud.google.com/recommendations) |
