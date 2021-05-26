@@ -101,7 +101,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.OsLogin.Common](Google.Cloud.OsLogin.Common/index.html) | 2.2.0 | Version-agnostic types for the Google OS Login API |
 | [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html) | 2.2.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.OsLogin.V1Beta](Google.Cloud.OsLogin.V1Beta/index.html) | 2.0.0-beta04 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
-| [Google.Cloud.PhishingProtection.V1Beta1](Google.Cloud.PhishingProtection.V1Beta1/index.html) | 1.0.0-beta03 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
+| [Google.Cloud.PhishingProtection.V1Beta1](Google.Cloud.PhishingProtection.V1Beta1/index.html) | 1.0.0-beta04 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
 | [Google.Cloud.PolicyTroubleshooter.V1](Google.Cloud.PolicyTroubleshooter.V1/index.html) | 1.0.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PrivateCatalog.V1Beta1](Google.Cloud.PrivateCatalog.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Private Catalog](https://cloud.google.com/private-catalog/docs/) |
 | [Google.Cloud.Profiler.V2](Google.Cloud.Profiler.V2/index.html) | 1.0.0 | [Cloud Profiler](https://cloud.google.com/profiler/) |
