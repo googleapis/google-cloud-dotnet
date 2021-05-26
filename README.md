@@ -153,7 +153,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Workflows.V1](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1/1.0.0) | 1.0.0 | [Workflows (V1 API)](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta02) | 1.0.0-beta02 | [Workflows (V1Beta API)](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.1.0) | 1.1.0 | Version-agnostic types for the Google Identity Access Context Manager API |
-| [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.1.0) | 1.1.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
+| [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.2.0) | 1.2.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.2.0) | 2.2.0 | Support for the Long-Running Operations API pattern |
 | [Grafeas.V1](https://googleapis.dev/dotnet/Grafeas.V1/2.2.0) | 2.2.0 | [Grafeas](https://grafeas.io/) |
 
