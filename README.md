@@ -93,9 +93,9 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.OrgPolicy.V2](https://googleapis.dev/dotnet/Google.Cloud.OrgPolicy.V2/1.0.0) | 1.0.0 | [Organization Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview) |
 | [Google.Cloud.OsConfig.V1](https://googleapis.dev/dotnet/Google.Cloud.OsConfig.V1/1.3.0) | 1.3.0 | [Google Cloud OS Config (V1 API)](https://cloud.google.com/compute/docs/osconfig/rest) |
 | [Google.Cloud.OsConfig.V1Alpha](https://googleapis.dev/dotnet/Google.Cloud.OsConfig.V1Alpha/1.0.0-alpha01) | 1.0.0-alpha01 | [Google Cloud OS Config (V1Alpha API)](https://cloud.google.com/compute/docs/osconfig/rest) |
-| [Google.Cloud.OsLogin.Common](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.Common/2.1.0) | 2.1.0 | Version-agnostic types for the Google OS Login API |
-| [Google.Cloud.OsLogin.V1](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1/2.1.0) | 2.1.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
-| [Google.Cloud.OsLogin.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1Beta/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
+| [Google.Cloud.OsLogin.Common](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.Common/2.2.0) | 2.2.0 | Version-agnostic types for the Google OS Login API |
+| [Google.Cloud.OsLogin.V1](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1/2.2.0) | 2.2.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
+| [Google.Cloud.OsLogin.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1Beta/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
 | [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0) | 1.0.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PrivateCatalog.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PrivateCatalog.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Private Catalog](https://cloud.google.com/private-catalog/docs/) |

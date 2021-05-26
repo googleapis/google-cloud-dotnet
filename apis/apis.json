@@ -1544,7 +1544,7 @@
       "id": "Google.Cloud.OsLogin.Common",
       "generator": "micro",
       "protoPath": "google/cloud/oslogin/common",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "description": "Version-agnostic types for the Google OS Login API.",
@@ -1553,8 +1553,8 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.2.0",
-        "Google.Api.Gax": "3.2.0"
+        "Google.Api.CommonProtos": "2.3.0",
+        "Google.Api.Gax": "3.3.0"
       },
       "noVersionHistory": true
     },
@@ -1564,7 +1564,7 @@
       "protoPath": "google/cloud/oslogin/v1",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to manage OS login configuration for Google account users.",
       "tags": [
@@ -1572,9 +1572,9 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.OsLogin.Common": "project",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       }
     },
     {
@@ -1583,7 +1583,7 @@
       "protoPath": "google/cloud/oslogin/v1beta",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "2.0.0-beta03",
+      "version": "2.0.0-beta04",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "description": "Recommended Google client library to manages OS login configuration for Google account users.",
@@ -1592,9 +1592,9 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
         "Google.Cloud.OsLogin.Common": "project",
-        "Grpc.Core": "2.31.0"
+        "Grpc.Core": "2.36.4"
       }
     },
     {
