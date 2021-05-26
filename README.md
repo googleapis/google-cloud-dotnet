@@ -62,7 +62,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Domains.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Domains.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Domains](https://cloud.google.com/domains/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.EssentialContacts.V1](https://googleapis.dev/dotnet/Google.Cloud.EssentialContacts.V1/1.0.0-beta01) | 1.0.0-beta01 | [Essential Contacts](https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest) |
-| [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.1.0) | 2.1.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
+| [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.2.0) | 2.2.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.4.0) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.3.0) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.1.0) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
