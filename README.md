@@ -81,7 +81,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.3.0) | 3.3.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/2.2.0) | 2.2.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.MediaTranslation.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.MediaTranslation.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Media Translation](https://cloud.google.com/media-translation) |
-| [Google.Cloud.Memcache.V1](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1/1.0.0) | 1.0.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
+| [Google.Cloud.Memcache.V1](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1/1.1.0) | 1.1.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Memcache.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1Beta2/1.0.0-beta04) | 1.0.0-beta04 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Metastore.V1](https://googleapis.dev/dotnet/Google.Cloud.Metastore.V1/1.0.0-beta02) | 1.0.0-beta02 | [Dataproc Metastore (V1 API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Metastore.V1Alpha](https://googleapis.dev/dotnet/Google.Cloud.Metastore.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | [Dataproc Metastore (V1Alpha API)](https://cloud.google.com/dataproc-metastore/docs) |
