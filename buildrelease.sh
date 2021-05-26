@@ -93,31 +93,11 @@ fi
 # TODO: Make builddocs.sh cope with being run from any directory.
 (cd docs && ./builddocs.sh root $projects)
 
-rm -rf releasedocs
-git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
-cd releasedocs
-
-for project in $projects
-do
-  rm -rf ./docs/$project
-  if [ -d "../docs/output/assembled/$project" ]; then
-    mv ../docs/output/assembled/$project ./docs
-  fi
-done
-
-mv -f ../docs/output/assembled/index.html ./docs/
-
 echo "Release build and docs complete for the following projects:"
 for project in $projects
 do
   echo "- ${project}"
 done
-echo "Next steps:"
-echo "- Upload new docs to gh-pages branch"
-echo "  - cd releasebuild/releasedocs"
-echo "  - git add --all"
-echo "  - git commit -m 'Regenerate docs'"
-echo "  - git push"
 if [[ "$rebuild_docs" = false ]]
 then
   echo "- Push packages to nuget:"
