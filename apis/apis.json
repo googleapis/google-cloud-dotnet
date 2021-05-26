@@ -2254,7 +2254,7 @@
     },
     {
       "id": "Google.Cloud.Talent.V4",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
@@ -2264,9 +2264,9 @@
         "Jobs"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.36.4"
       },
       "generator": "micro",
       "protoPath": "google/cloud/talent/v4"
