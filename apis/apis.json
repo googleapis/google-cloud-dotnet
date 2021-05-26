@@ -2664,7 +2664,7 @@
       "packageOwner": "google-cloud",
       "generator": "proto",
       "protoPath": "google/identity/accesscontextmanager/type",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
@@ -2672,7 +2672,7 @@
         "identity"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.2.0"
+        "Google.Api.CommonProtos": "2.3.0"
       }
     },
     {
