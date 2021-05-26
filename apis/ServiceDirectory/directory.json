@@ -891,6 +891,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.CloudDms.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/contactcenterinsights/v1",
+      "Name": "contactcenterinsights.googleapis.com",
+      "Title": "Contact Center AI Insights API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/contactcenterinsights/v1/contactcenterinsights_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.contactcenterinsights.v1",
+      "PackageFromProtos": "google.cloud.contactcenterinsights.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/contactcenterinsights/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Contactcenterinsights.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
       "Name": "datacatalog.googleapis.com",
       "Title": "Google Cloud Data Catalog API",
