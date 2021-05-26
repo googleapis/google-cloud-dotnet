@@ -54,6 +54,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateEnvironmentOperationsSettings = existing.UpdateEnvironmentOperationsSettings.Clone();
             DeleteEnvironmentSettings = existing.DeleteEnvironmentSettings;
             LookupEnvironmentHistorySettings = existing.LookupEnvironmentHistorySettings;
+            RunContinuousTestSettings = existing.RunContinuousTestSettings;
+            RunContinuousTestOperationsSettings = existing.RunContinuousTestOperationsSettings.Clone();
+            ListContinuousTestResultsSettings = existing.ListContinuousTestResultsSettings;
             OnCopy(existing);
         }
 
@@ -185,6 +188,55 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings LookupEnvironmentHistorySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.RunContinuousTest</c> and <c>EnvironmentsClient.RunContinuousTestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunContinuousTestSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EnvironmentsClient.RunContinuousTest</c> and
+        /// <c>EnvironmentsClient.RunContinuousTestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RunContinuousTestOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.ListContinuousTestResults</c> and <c>EnvironmentsClient.ListContinuousTestResultsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListContinuousTestResultsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EnvironmentsSettings"/> object.</returns>
@@ -1067,6 +1119,182 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata> RunContinuousTest(RunContinuousTestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>> RunContinuousTestAsync(RunContinuousTestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>> RunContinuousTestAsync(RunContinuousTestRequest request, st::CancellationToken cancellationToken) =>
+            RunContinuousTestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RunContinuousTest</c>.</summary>
+        public virtual lro::OperationsClient RunContinuousTestOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RunContinuousTest</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata> PollOnceRunContinuousTest(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunContinuousTestOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RunContinuousTest</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>> PollOnceRunContinuousTestAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunContinuousTestOperationsClient, callSettings);
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(ListContinuousTestResultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(ListContinuousTestResultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment to list results for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/
+        /// environments/&amp;lt;Environment ID&amp;gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListContinuousTestResults(new ListContinuousTestResultsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment to list results for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/
+        /// environments/&amp;lt;Environment ID&amp;gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment to list results for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/
+        /// environments/&amp;lt;Environment ID&amp;gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListContinuousTestResults(new ListContinuousTestResultsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment to list results for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent ID&amp;gt;/
+        /// environments/&amp;lt;Environment ID&amp;gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListContinuousTestResultsAsync(new ListContinuousTestResultsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
@@ -1087,6 +1315,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         private readonly gaxgrpc::ApiCall<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse> _callLookupEnvironmentHistory;
 
+        private readonly gaxgrpc::ApiCall<RunContinuousTestRequest, lro::Operation> _callRunContinuousTest;
+
+        private readonly gaxgrpc::ApiCall<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse> _callListContinuousTestResults;
+
         /// <summary>
         /// Constructs a client wrapper for the Environments service, with the specified gRPC client and settings.
         /// </summary>
@@ -1099,6 +1331,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEnvironmentOperationsSettings);
             UpdateEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEnvironmentOperationsSettings);
+            RunContinuousTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunContinuousTestOperationsSettings);
             _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>(grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEnvironments);
             Modify_ListEnvironmentsApiCall(ref _callListEnvironments);
@@ -1117,6 +1350,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callLookupEnvironmentHistory = clientHelper.BuildApiCall<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse>(grpcClient.LookupEnvironmentHistoryAsync, grpcClient.LookupEnvironmentHistory, effectiveSettings.LookupEnvironmentHistorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callLookupEnvironmentHistory);
             Modify_LookupEnvironmentHistoryApiCall(ref _callLookupEnvironmentHistory);
+            _callRunContinuousTest = clientHelper.BuildApiCall<RunContinuousTestRequest, lro::Operation>(grpcClient.RunContinuousTestAsync, grpcClient.RunContinuousTest, effectiveSettings.RunContinuousTestSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callRunContinuousTest);
+            Modify_RunContinuousTestApiCall(ref _callRunContinuousTest);
+            _callListContinuousTestResults = clientHelper.BuildApiCall<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse>(grpcClient.ListContinuousTestResultsAsync, grpcClient.ListContinuousTestResults, effectiveSettings.ListContinuousTestResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListContinuousTestResults);
+            Modify_ListContinuousTestResultsApiCall(ref _callListContinuousTestResults);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1134,6 +1373,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_LookupEnvironmentHistoryApiCall(ref gaxgrpc::ApiCall<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse> call);
 
+        partial void Modify_RunContinuousTestApiCall(ref gaxgrpc::ApiCall<RunContinuousTestRequest, lro::Operation> call);
+
+        partial void Modify_ListContinuousTestResultsApiCall(ref gaxgrpc::ApiCall<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse> call);
+
         partial void OnConstruction(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Environments client</summary>
@@ -1150,6 +1393,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_DeleteEnvironmentRequest(ref DeleteEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LookupEnvironmentHistoryRequest(ref LookupEnvironmentHistoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunContinuousTestRequest(ref RunContinuousTestRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListContinuousTestResultsRequest(ref ListContinuousTestResultsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
@@ -1300,6 +1547,57 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             Modify_LookupEnvironmentHistoryRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<LookupEnvironmentHistoryRequest, LookupEnvironmentHistoryResponse, Environment>(_callLookupEnvironmentHistory, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>RunContinuousTest</c>.</summary>
+        public override lro::OperationsClient RunContinuousTestOperationsClient { get; }
+
+        /// <summary>
+        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata> RunContinuousTest(RunContinuousTestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunContinuousTestRequest(ref request, ref callSettings);
+            return new lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>(_callRunContinuousTest.Sync(request, callSettings), RunContinuousTestOperationsClient);
+        }
+
+        /// <summary>
+        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>> RunContinuousTestAsync(RunContinuousTestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunContinuousTestRequest(ref request, ref callSettings);
+            return new lro::Operation<RunContinuousTestResponse, RunContinuousTestMetadata>(await _callRunContinuousTest.Async(request, callSettings).ConfigureAwait(false), RunContinuousTestOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public override gax::PagedEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResults(ListContinuousTestResultsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListContinuousTestResultsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse, ContinuousTestResult>(_callListContinuousTestResults, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of continuous test results for a given environment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContinuousTestResult"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListContinuousTestResultsResponse, ContinuousTestResult> ListContinuousTestResultsAsync(ListContinuousTestResultsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListContinuousTestResultsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListContinuousTestResultsRequest, ListContinuousTestResultsResponse, ContinuousTestResult>(_callListContinuousTestResults, request, callSettings);
+        }
     }
 
     public partial class ListEnvironmentsRequest : gaxgrpc::IPageRequest
@@ -1307,6 +1605,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
     }
 
     public partial class LookupEnvironmentHistoryRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListContinuousTestResultsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1322,6 +1624,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Environment> GetEnumerator() => Environments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListContinuousTestResultsResponse : gaxgrpc::IPageResponse<ContinuousTestResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ContinuousTestResult> GetEnumerator() => ContinuousTestResults.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

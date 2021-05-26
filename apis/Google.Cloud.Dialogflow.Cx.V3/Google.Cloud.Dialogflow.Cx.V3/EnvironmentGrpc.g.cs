@@ -71,6 +71,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryRequest> __Marshaller_google_cloud_dialogflow_cx_v3_LookupEnvironmentHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryResponse> __Marshaller_google_cloud_dialogflow_cx_v3_LookupEnvironmentHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest> __Marshaller_google_cloud_dialogflow_cx_v3_RunContinuousTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListContinuousTestResultsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListContinuousTestResultsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListEnvironmentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEnvironmentsResponse> __Method_ListEnvironments = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListEnvironmentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEnvironmentsResponse>(
         grpc::MethodType.Unary,
@@ -113,6 +116,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "LookupEnvironmentHistory",
         __Marshaller_google_cloud_dialogflow_cx_v3_LookupEnvironmentHistoryRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_LookupEnvironmentHistoryResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest, global::Google.LongRunning.Operation> __Method_RunContinuousTest = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunContinuousTest",
+        __Marshaller_google_cloud_dialogflow_cx_v3_RunContinuousTestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse> __Method_ListContinuousTestResults = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListContinuousTestResults",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ListContinuousTestResultsRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_ListContinuousTestResultsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -186,6 +203,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryResponse> LookupEnvironmentHistory(global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunContinuousTest(global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches a list of continuous test results for a given environment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse> ListContinuousTestResults(global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -479,6 +518,94 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_LookupEnvironmentHistory, null, options, request);
       }
+      /// <summary>
+      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RunContinuousTest(global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunContinuousTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RunContinuousTest(global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunContinuousTest, null, options, request);
+      }
+      /// <summary>
+      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunContinuousTestAsync(global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunContinuousTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunContinuousTestAsync(global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunContinuousTest, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a list of continuous test results for a given environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse ListContinuousTestResults(global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListContinuousTestResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a list of continuous test results for a given environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse ListContinuousTestResults(global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListContinuousTestResults, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a list of continuous test results for a given environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse> ListContinuousTestResultsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListContinuousTestResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a list of continuous test results for a given environment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse> ListContinuousTestResultsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListContinuousTestResults, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override EnvironmentsClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -496,7 +623,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_CreateEnvironment, serviceImpl.CreateEnvironment)
           .AddMethod(__Method_UpdateEnvironment, serviceImpl.UpdateEnvironment)
           .AddMethod(__Method_DeleteEnvironment, serviceImpl.DeleteEnvironment)
-          .AddMethod(__Method_LookupEnvironmentHistory, serviceImpl.LookupEnvironmentHistory).Build();
+          .AddMethod(__Method_LookupEnvironmentHistory, serviceImpl.LookupEnvironmentHistory)
+          .AddMethod(__Method_RunContinuousTest, serviceImpl.RunContinuousTest)
+          .AddMethod(__Method_ListContinuousTestResults, serviceImpl.ListContinuousTestResults).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -511,6 +640,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_UpdateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateEnvironment));
       serviceBinder.AddMethod(__Method_DeleteEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DeleteEnvironmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEnvironment));
       serviceBinder.AddMethod(__Method_LookupEnvironmentHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryRequest, global::Google.Cloud.Dialogflow.Cx.V3.LookupEnvironmentHistoryResponse>(serviceImpl.LookupEnvironmentHistory));
+      serviceBinder.AddMethod(__Method_RunContinuousTest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.RunContinuousTestRequest, global::Google.LongRunning.Operation>(serviceImpl.RunContinuousTest));
+      serviceBinder.AddMethod(__Method_ListContinuousTestResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListContinuousTestResultsResponse>(serviceImpl.ListContinuousTestResults));
     }
 
   }
