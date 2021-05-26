@@ -1451,7 +1451,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V1Beta1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "AI Platform Notebooks",
       "productUrl": "https://cloud.google.com/ai-platform-notebooks",
@@ -1461,7 +1461,7 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.1.0"
+        "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v1beta1"
