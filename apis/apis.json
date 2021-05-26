@@ -2381,12 +2381,12 @@
       "protoPath": "google/devtools/cloudtrace/v2",
       "productName": "Google Cloud Trace",
       "productUrl": "https://cloud.google.com/trace/",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Trace V2 API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Grpc.Core": "2.31.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Grpc.Core": "2.36.4"
       },
       "tags": [
         "Tracing",
