@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.5.0, released 2021-05-26
+
+- [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
+- [Commit 5022a1e](https://github.com/googleapis/google-cloud-dotnet/commit/5022a1e): Use CopySettingsForEmulator in PubSub clients
+- [Commit 8e6076e](https://github.com/googleapis/google-cloud-dotnet/commit/8e6076e): docs: Remove experimental note for schema APIs
+
 # Version 2.4.0, released 2021-02-24
 
 - [Commit a43730c](https://github.com/googleapis/google-cloud-dotnet/commit/a43730c): fix: PublisherClient required credentials even when using the emulator. Fixes [issue 5973](https://github.com/googleapis/google-cloud-dotnet/issues/5973)
