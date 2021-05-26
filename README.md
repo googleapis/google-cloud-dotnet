@@ -110,7 +110,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Retail.V2](https://googleapis.dev/dotnet/Google.Cloud.Retail.V2/1.1.0) | 1.1.0 | [Retail](https://cloud.google.com/retail/docs) |
 | [Google.Cloud.Scheduler.V1](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/2.2.0) | 2.2.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1/1.4.0) | 1.4.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
-| [Google.Cloud.SecretManager.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
+| [Google.Cloud.SecretManager.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/2.0.0-beta04) | 2.0.0-beta04 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.Security.PrivateCA.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Security.PrivateCA.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Certificate Authority (V1Beta1 API)](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.Settings.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1/2.2.0) | 2.2.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
