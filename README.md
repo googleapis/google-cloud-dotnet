@@ -97,7 +97,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.OsLogin.V1](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1/2.2.0) | 2.2.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.OsLogin.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1Beta/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta04) | 1.0.0-beta04 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
-| [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0) | 1.0.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
+| [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.1.0) | 1.1.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PrivateCatalog.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PrivateCatalog.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Private Catalog](https://cloud.google.com/private-catalog/docs/) |
 | [Google.Cloud.Profiler.V2](https://googleapis.dev/dotnet/Google.Cloud.Profiler.V2/1.0.0) | 1.0.0 | [Cloud Profiler](https://cloud.google.com/profiler/) |
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.4.0) | 2.4.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
