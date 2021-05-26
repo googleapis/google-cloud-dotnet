@@ -1,8 +1,10 @@
 # Version history
 
-# Version 2.2.1, released 2021-05-26
+# Version 2.3.0, released 2021-05-26
 
-Re-release 2.2.0. (The release failed, and it's simpler to re-release than to fix up 2.2.0.)
+No API surface changes; just dependency updates.
+This release is primarily to account for the 2.2.0 release failing,
+but the DevTools.Common dependency has also been updated. 
 
 # Version 2.2.0, released 2021-05-25
 
