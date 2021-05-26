@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.2.1, released 2021-05-26
+
+Re-release 2.2.0. (The release failed, and it's simpler to re-release than to fix up 2.2.0.)
+
 # Version 2.2.0, released 2021-05-25
 
 No API surface changes; just dependency updates.
