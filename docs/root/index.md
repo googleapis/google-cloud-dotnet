@@ -143,7 +143,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html) | 2.2.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html) | 2.2.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html) | 2.2.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
-| [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html) | 2.0.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
+| [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html) | 2.1.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Video.Transcoder.V1Beta1](Google.Cloud.Video.Transcoder.V1Beta1/index.html) | 1.0.0-beta01 | [Transcoder](https://cloud.google.com/transcoder/docs) |
 | [Google.Cloud.VideoIntelligence.V1](Google.Cloud.VideoIntelligence.V1/index.html) | 2.2.0 | [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence) |
 | [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html) | 2.3.0 | [Google Cloud Vision](https://cloud.google.com/vision) |

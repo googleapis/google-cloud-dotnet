@@ -2416,12 +2416,12 @@
       "id": "Google.Cloud.Translation.V2",
       "productName": "Google Cloud Translation",
       "productUrl": "https://cloud.google.com/translate/",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "rest",
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
-        "Google.Apis.Translate.v2": "1.42.0.875",
-        "Google.Api.Gax.Rest": "3.2.0"
+        "Google.Api.Gax.Rest": "3.3.0",
+        "Google.Apis.Translate.v2": "1.51.0.875"
       },
       "tags": [
         "Translate",
