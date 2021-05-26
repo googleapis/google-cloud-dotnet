@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
+  </ItemGroup>
+
 </Project>
