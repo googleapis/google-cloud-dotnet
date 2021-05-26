@@ -54,19 +54,6 @@ echo "Building with commit $COMMITTISH"
 # Build the release and run the tests.
 ./buildrelease.sh --ssh $COMMITTISH
 
-
-if [[ $SKIP_PAGES_UPLOAD = "" ]]
-then
-  echo "Pushing to GitHub pages"
-  # Add any docs changes if they exist.
-  cd ./releasebuild/releasedocs
-  git add --all
-  if ! git diff --quiet --cached; then git commit -m 'Regenerate docs'; git push; fi
-  cd ../..
-else
-  echo "Skipping push to GitHub pages"
-fi
-
 if [[ $SKIP_NUGET_PUSH = "" ]]
 then
   echo "Pushing NuGet packages"
