@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-05-26
+
+- [Commit 6b46c80](https://github.com/googleapis/google-cloud-dotnet/commit/6b46c80): feat: add canonical_name and folder fields
+
 # Version 2.2.0, released 2021-02-08
 
 - [Commit d6c34ac](https://github.com/googleapis/google-cloud-dotnet/commit/d6c34ac):
