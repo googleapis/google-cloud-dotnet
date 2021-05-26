@@ -247,3 +247,34 @@ that is propagated in a `custom_trace_id` header. This is of no use in the real 
 
 {{sample:Trace.CustomTraceContext}}
 
+## Using Google Trace in applications not based in ASP.NET Core
+
+If you want to use Google Cloud Trace in applications not based on ASP.NET Core you may use the
+`Google.Cloud.Diagnostics.Common` package directly and .NET's dependency injection mechanism.
+You can read more about .NET dependency injection in non ASP.NET Core apps in the
+[Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage).
+
+Note that this is useful for both installed applications and services that process incoming messages
+other than HTTP requests, such as a service reacting to Pub/Sub messages.
+
+Following you'll see a very simplified example of how you could set up Google Cloud Trace for these
+types of applications.
+
+- Configure Google Cloud Trace. You can set tracing options the same as you would do for ASP.NET Core apps.
+
+{{sample:StandaloneTrace.Configure}}
+
+- Build and start a `Microsoft.Extensions.Hosting.IHost`.
+
+{{sample:StandaloneTrace.Start}}
+
+- Create a tracing context when appropiate, for instance, when you receive a Pub/Sub message. You can create
+an empty tracing context (with all null values) if there's none. The tracer will create a tracing context
+depending on configuration options like QPS, etc.
+
+{{sample:StandaloneTrace.IncomingContext}}
+
+- Trace normally in your code
+
+{{sample:StandaloneTrace.Trace}}
+
