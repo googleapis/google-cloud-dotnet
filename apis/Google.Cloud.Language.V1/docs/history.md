@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.2.0, released 2021-05-26
+
+No API surface changes; just dependency updates.
+
 # Version 2.1.0, released 2020-10-20
 
 - [Commit fab7d7e](https://github.com/googleapis/google-cloud-dotnet/commit/fab7d7e): docs: Fix proto comments for language API inorder for docs parsing to work correctly. ([issue 5415](https://github.com/googleapis/google-cloud-dotnet/issues/5415))
