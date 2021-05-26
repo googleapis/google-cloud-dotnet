@@ -2322,6 +2322,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Speech.V1P1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/sql/v1beta4",
+      "Name": "sqladmin.googleapis.com",
+      "Title": "Cloud SQL Admin API",
+      "Description": "API for Cloud SQL database instance management",
+      "ServiceConfigFile": "google/cloud/sql/v1beta4/sqladmin_v1beta4.yaml",
+      "Version": "v1beta4",
+      "PackageFromDirectory": "google.cloud.sql.v1beta4",
+      "PackageFromProtos": "google.cloud.sql.v1beta4",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/sql/v1beta4",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Sql.V1Beta4"
+    },
+    {
       "ServiceDirectory": "google/cloud/talent/v4",
       "Name": "jobs.googleapis.com",
       "Title": "Cloud Talent Solution API",
