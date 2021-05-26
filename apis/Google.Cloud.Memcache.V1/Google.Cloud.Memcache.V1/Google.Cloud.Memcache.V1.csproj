@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library at access the Google Cloud Memorystore for Memcached API (v1), which is used for creating and managing Memcached instances in GCP.</Description>
@@ -11,9 +11,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.LongRunning" Version="[2.1.0, 3.0.0)" />
-    <PackageReference Include="Grpc.Core" Version="[2.31.0, 3.0.0)" PrivateAssets="None" />
+    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.3.0, 4.0.0)" />
+    <PackageReference Include="Google.LongRunning" Version="[2.2.0, 3.0.0)" />
+    <PackageReference Include="Grpc.Core" Version="[2.36.4, 3.0.0)" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
