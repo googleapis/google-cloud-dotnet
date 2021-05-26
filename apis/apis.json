@@ -2201,7 +2201,7 @@
       "protoPath": "google/cloud/speech/v1",
       "productName": "Google Cloud Speech",
       "productUrl": "https://cloud.google.com/speech",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
@@ -2209,9 +2209,9 @@
         "Speech"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.31.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.36.4"
       }
     },
     {
