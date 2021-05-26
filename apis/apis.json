@@ -1470,13 +1470,13 @@
       "id": "Google.Cloud.OrgPolicy.V1",
       "generator": "proto",
       "protoPath": "google/cloud/orgpolicy/v1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "description": "OrgPolicy API messages.",
       "tags": [],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.2.0"
+        "Google.Api.CommonProtos": "2.3.0"
       }
     },
     {
