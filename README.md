@@ -137,7 +137,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.TextToSpeech.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.TextToSpeech.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Google Cloud Text-to-Speech (V1Beta1 API)](https://cloud.google.com/text-to-speech) |
 | [Google.Cloud.Trace.V1](https://googleapis.dev/dotnet/Google.Cloud.Trace.V1/2.2.0) | 2.2.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Trace.V2](https://googleapis.dev/dotnet/Google.Cloud.Trace.V2/2.2.0) | 2.2.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
-| [Google.Cloud.Translate.V3](https://googleapis.dev/dotnet/Google.Cloud.Translate.V3/2.1.0) | 2.1.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
+| [Google.Cloud.Translate.V3](https://googleapis.dev/dotnet/Google.Cloud.Translate.V3/2.2.0) | 2.2.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Translation.V2](https://googleapis.dev/dotnet/Google.Cloud.Translation.V2/2.0.0) | 2.0.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Video.Transcoder.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Video.Transcoder.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Transcoder](https://cloud.google.com/transcoder/docs) |
 | [Google.Cloud.VideoIntelligence.V1](https://googleapis.dev/dotnet/Google.Cloud.VideoIntelligence.V1/2.2.0) | 2.2.0 | [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence) |
