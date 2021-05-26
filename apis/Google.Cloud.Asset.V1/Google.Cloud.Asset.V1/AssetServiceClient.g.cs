@@ -49,6 +49,7 @@ namespace Google.Cloud.Asset.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ExportAssetsSettings = existing.ExportAssetsSettings;
             ExportAssetsOperationsSettings = existing.ExportAssetsOperationsSettings.Clone();
+            ListAssetsSettings = existing.ListAssetsSettings;
             BatchGetAssetsHistorySettings = existing.BatchGetAssetsHistorySettings;
             CreateFeedSettings = existing.CreateFeedSettings;
             GetFeedSettings = existing.GetFeedSettings;
@@ -94,6 +95,21 @@ namespace Google.Cloud.Asset.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.ListAssets</c> and <c>AssetServiceClient.ListAssetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAssetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -476,6 +492,138 @@ namespace Google.Cloud.Asset.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<ExportAssetsResponse, ExportAssetsRequest>> PollOnceExportAssetsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ExportAssetsResponse, ExportAssetsRequest>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportAssetsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"), or
+        /// "projects/[project-number]" (such as "projects/12345").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssets(new ListAssetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"), or
+        /// "projects/[project-number]" (such as "projects/12345").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssetsAsync(new ListAssetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"), or
+        /// "projects/[project-number]" (such as "projects/12345").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssets(new ListAssetsRequest
+            {
+                ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the organization or project the assets belong to. Format:
+        /// "organizations/[organization-number]" (such as "organizations/123"),
+        /// "projects/[project-id]" (such as "projects/my-project-id"), or
+        /// "projects/[project-number]" (such as "projects/12345").
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssetsAsync(new ListAssetsRequest
+            {
+                ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Batch gets the update history of assets that overlap a time window.
@@ -1035,7 +1183,7 @@ namespace Google.Cloud.Asset.V1
         /// <param name="scope">
         /// Required. A scope can be a project, a folder, or an organization. The search is
         /// limited to the resources within the `scope`. The caller must be granted the
-        /// [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+        /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
         /// The allowed values are:
@@ -1047,36 +1195,41 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="query">
         /// Optional. The query statement. See [how to construct a
-        /// query](http://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
-        /// resources within the specified `scope`. Note that the query string is
-        /// compared against each Cloud IAM policy binding, including its members,
-        /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
-        /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see [IAM policy
-        /// doc](https://cloud.google.com/iam/docs/policies#structure).
+        /// resources within the specified `scope`.
         /// 
         /// Examples:
         /// 
         /// * `name:Important` to find Cloud resources whose name contains
         /// "Important" as a word.
+        /// * `name=Important` to find the Cloud resource whose name is exactly
+        /// "Important".
         /// * `displayName:Impor*` to find Cloud resources whose display name
-        /// contains "Impor" as a prefix.
-        /// * `description:*por*` to find Cloud resources whose description
-        /// contains "por" as a substring.
-        /// * `location:us-west*` to find Cloud resources whose location is
-        /// prefixed with "us-west".
+        /// contains "Impor" as a prefix of any word in the field.
+        /// * `location:us-west*` to find Cloud resources whose location contains both
+        /// "us" and "west" as prefixes.
         /// * `labels:prod` to find Cloud resources whose labels contain "prod" as
         /// a key or value.
         /// * `labels.env:prod` to find Cloud resources that have a label "env"
         /// and its value is "prod".
         /// * `labels.env:*` to find Cloud resources that have a label "env".
+        /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
+        /// encryption key whose name contains the word "key".
+        /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
+        /// word.
+        /// * `NOT state:ACTIVE` to find {{gcp_name}} resources whose state
+        /// doesn't contain "ACTIVE" as a word.
+        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
+        /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
+        /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+        /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word
         /// in any of the searchable fields.
-        /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix
-        /// in any of the searchable fields.
-        /// * `*por*` to find Cloud resources that contain "por" as a substring in
-        /// any of the searchable fields.
+        /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any
+        /// word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Cloud
         /// resources that contain "Important" as a word in any of the searchable
         /// fields and are also located in the "us-west1" region or the "global"
@@ -1086,6 +1239,17 @@ namespace Google.Cloud.Asset.V1
         /// Optional. A list of asset types that this request searches for. If empty, it will
         /// search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// 
+        /// Regular expressions are also supported. For example:
+        /// 
+        /// * "compute.googleapis.com.*" snapshots resources whose asset type starts
+        /// with "compute.googleapis.com".
+        /// * ".*Instance" snapshots resources whose asset type ends with "Instance".
+        /// * ".*Instance.*" snapshots resources whose asset type contains "Instance".
+        /// 
+        /// See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported
+        /// regular expression syntax. If the regular expression does not match any
+        /// supported asset type, an INVALID_ARGUMENT error will be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1119,7 +1283,7 @@ namespace Google.Cloud.Asset.V1
         /// <param name="scope">
         /// Required. A scope can be a project, a folder, or an organization. The search is
         /// limited to the resources within the `scope`. The caller must be granted the
-        /// [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+        /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
         /// The allowed values are:
@@ -1131,36 +1295,41 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="query">
         /// Optional. The query statement. See [how to construct a
-        /// query](http://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
-        /// resources within the specified `scope`. Note that the query string is
-        /// compared against each Cloud IAM policy binding, including its members,
-        /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
-        /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see [IAM policy
-        /// doc](https://cloud.google.com/iam/docs/policies#structure).
+        /// resources within the specified `scope`.
         /// 
         /// Examples:
         /// 
         /// * `name:Important` to find Cloud resources whose name contains
         /// "Important" as a word.
+        /// * `name=Important` to find the Cloud resource whose name is exactly
+        /// "Important".
         /// * `displayName:Impor*` to find Cloud resources whose display name
-        /// contains "Impor" as a prefix.
-        /// * `description:*por*` to find Cloud resources whose description
-        /// contains "por" as a substring.
-        /// * `location:us-west*` to find Cloud resources whose location is
-        /// prefixed with "us-west".
+        /// contains "Impor" as a prefix of any word in the field.
+        /// * `location:us-west*` to find Cloud resources whose location contains both
+        /// "us" and "west" as prefixes.
         /// * `labels:prod` to find Cloud resources whose labels contain "prod" as
         /// a key or value.
         /// * `labels.env:prod` to find Cloud resources that have a label "env"
         /// and its value is "prod".
         /// * `labels.env:*` to find Cloud resources that have a label "env".
+        /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
+        /// encryption key whose name contains the word "key".
+        /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
+        /// word.
+        /// * `NOT state:ACTIVE` to find {{gcp_name}} resources whose state
+        /// doesn't contain "ACTIVE" as a word.
+        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
+        /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
+        /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+        /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word
         /// in any of the searchable fields.
-        /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix
-        /// in any of the searchable fields.
-        /// * `*por*` to find Cloud resources that contain "por" as a substring in
-        /// any of the searchable fields.
+        /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any
+        /// word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Cloud
         /// resources that contain "Important" as a word in any of the searchable
         /// fields and are also located in the "us-west1" region or the "global"
@@ -1170,6 +1339,17 @@ namespace Google.Cloud.Asset.V1
         /// Optional. A list of asset types that this request searches for. If empty, it will
         /// search all the [searchable asset
         /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// 
+        /// Regular expressions are also supported. For example:
+        /// 
+        /// * "compute.googleapis.com.*" snapshots resources whose asset type starts
+        /// with "compute.googleapis.com".
+        /// * ".*Instance" snapshots resources whose asset type ends with "Instance".
+        /// * ".*Instance.*" snapshots resources whose asset type contains "Instance".
+        /// 
+        /// See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported
+        /// regular expression syntax. If the regular expression does not match any
+        /// supported asset type, an INVALID_ARGUMENT error will be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1228,7 +1408,7 @@ namespace Google.Cloud.Asset.V1
         /// Required. A scope can be a project, a folder, or an organization. The search is
         /// limited to the IAM policies within the `scope`. The caller must be granted
         /// the
-        /// [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+        /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
         /// The allowed values are:
@@ -1242,7 +1422,12 @@ namespace Google.Cloud.Asset.V1
         /// Optional. The query statement. See [how to construct a
         /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
-        /// IAM policies within the specified `scope`.
+        /// IAM policies within the specified `scope`. Note that the query string is
+        /// compared against each Cloud IAM policy binding, including its members,
+        /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
+        /// contain the bindings that match your query. To learn more about the IAM
+        /// policy structure, see [IAM policy
+        /// doc](https://cloud.google.com/iam/docs/policies#structure).
         /// 
         /// Examples:
         /// 
@@ -1250,18 +1435,25 @@ namespace Google.Cloud.Asset.V1
         /// "amy@gmail.com".
         /// * `policy:roles/compute.admin` to find IAM policy bindings that specify
         /// the Compute Admin role.
+        /// * `policy:comp*` to find IAM policy bindings that contain "comp" as a
+        /// prefix of any word in the binding.
         /// * `policy.role.permissions:storage.buckets.update` to find IAM policy
         /// bindings that specify a role containing "storage.buckets.update"
         /// permission. Note that if callers don't have `iam.roles.get` access to a
         /// role's included permissions, policy bindings that specify this role will
         /// be dropped from the search results.
+        /// * `policy.role.permissions:upd*` to find IAM policy bindings that specify a
+        /// role containing "upd" as a prefix of any word in the role permission.
+        /// Note that if callers don't have `iam.roles.get` access to a role's
+        /// included permissions, policy bindings that specify this role will be
+        /// dropped from the search results.
         /// * `resource:organizations/123456` to find IAM policy bindings
         /// that are set on "organizations/123456".
+        /// * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to
+        /// find IAM policy bindings that are set on the project named "myproject".
         /// * `Important` to find IAM policy bindings that contain "Important" as a
         /// word in any of the searchable fields (except for the included
         /// permissions).
-        /// * `*por*` to find IAM policy bindings that contain "por" as a substring
-        /// in any of the searchable fields (except for the included permissions).
         /// * `resource:(instance1 OR instance2) policy:amy` to find
         /// IAM policy bindings that are set on resources "instance1" or
         /// "instance2" and also specify user "amy".
@@ -1295,7 +1487,7 @@ namespace Google.Cloud.Asset.V1
         /// Required. A scope can be a project, a folder, or an organization. The search is
         /// limited to the IAM policies within the `scope`. The caller must be granted
         /// the
-        /// [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+        /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
         /// permission on the desired scope.
         /// 
         /// The allowed values are:
@@ -1309,7 +1501,12 @@ namespace Google.Cloud.Asset.V1
         /// Optional. The query statement. See [how to construct a
         /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
         /// for more information. If not specified or empty, it will search all the
-        /// IAM policies within the specified `scope`.
+        /// IAM policies within the specified `scope`. Note that the query string is
+        /// compared against each Cloud IAM policy binding, including its members,
+        /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
+        /// contain the bindings that match your query. To learn more about the IAM
+        /// policy structure, see [IAM policy
+        /// doc](https://cloud.google.com/iam/docs/policies#structure).
         /// 
         /// Examples:
         /// 
@@ -1317,18 +1514,25 @@ namespace Google.Cloud.Asset.V1
         /// "amy@gmail.com".
         /// * `policy:roles/compute.admin` to find IAM policy bindings that specify
         /// the Compute Admin role.
+        /// * `policy:comp*` to find IAM policy bindings that contain "comp" as a
+        /// prefix of any word in the binding.
         /// * `policy.role.permissions:storage.buckets.update` to find IAM policy
         /// bindings that specify a role containing "storage.buckets.update"
         /// permission. Note that if callers don't have `iam.roles.get` access to a
         /// role's included permissions, policy bindings that specify this role will
         /// be dropped from the search results.
+        /// * `policy.role.permissions:upd*` to find IAM policy bindings that specify a
+        /// role containing "upd" as a prefix of any word in the role permission.
+        /// Note that if callers don't have `iam.roles.get` access to a role's
+        /// included permissions, policy bindings that specify this role will be
+        /// dropped from the search results.
         /// * `resource:organizations/123456` to find IAM policy bindings
         /// that are set on "organizations/123456".
+        /// * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to
+        /// find IAM policy bindings that are set on the project named "myproject".
         /// * `Important` to find IAM policy bindings that contain "Important" as a
         /// word in any of the searchable fields (except for the included
         /// permissions).
-        /// * `*por*` to find IAM policy bindings that contain "por" as a substring
-        /// in any of the searchable fields (except for the included permissions).
         /// * `resource:(instance1 OR instance2) policy:amy` to find
         /// IAM policy bindings that are set on resources "instance1" or
         /// "instance2" and also specify user "amy".
@@ -1469,6 +1673,8 @@ namespace Google.Cloud.Asset.V1
     {
         private readonly gaxgrpc::ApiCall<ExportAssetsRequest, lro::Operation> _callExportAssets;
 
+        private readonly gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> _callListAssets;
+
         private readonly gaxgrpc::ApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse> _callBatchGetAssetsHistory;
 
         private readonly gaxgrpc::ApiCall<CreateFeedRequest, Feed> _callCreateFeed;
@@ -1504,6 +1710,9 @@ namespace Google.Cloud.Asset.V1
             _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>(grpcClient.ExportAssetsAsync, grpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportAssets);
             Modify_ExportAssetsApiCall(ref _callExportAssets);
+            _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>(grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAssets);
+            Modify_ListAssetsApiCall(ref _callListAssets);
             _callBatchGetAssetsHistory = clientHelper.BuildApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse>(grpcClient.BatchGetAssetsHistoryAsync, grpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchGetAssetsHistory);
             Modify_BatchGetAssetsHistoryApiCall(ref _callBatchGetAssetsHistory);
@@ -1541,6 +1750,8 @@ namespace Google.Cloud.Asset.V1
 
         partial void Modify_ExportAssetsApiCall(ref gaxgrpc::ApiCall<ExportAssetsRequest, lro::Operation> call);
 
+        partial void Modify_ListAssetsApiCall(ref gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> call);
+
         partial void Modify_BatchGetAssetsHistoryApiCall(ref gaxgrpc::ApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse> call);
 
         partial void Modify_CreateFeedApiCall(ref gaxgrpc::ApiCall<CreateFeedRequest, Feed> call);
@@ -1567,6 +1778,8 @@ namespace Google.Cloud.Asset.V1
         public override AssetService.AssetServiceClient GrpcClient { get; }
 
         partial void Modify_ExportAssetsRequest(ref ExportAssetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAssetsRequest(ref ListAssetsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchGetAssetsHistoryRequest(ref BatchGetAssetsHistoryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1631,6 +1844,32 @@ namespace Google.Cloud.Asset.V1
         {
             Modify_ExportAssetsRequest(ref request, ref callSettings);
             return new lro::Operation<ExportAssetsResponse, ExportAssetsRequest>(await _callExportAssets.Async(request, callSettings).ConfigureAwait(false), ExportAssetsOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAssetsRequest, ListAssetsResponse, Asset>(_callListAssets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists assets with time and resource types and returns paged results in
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAssetsRequest, ListAssetsResponse, Asset>(_callListAssets, request, callSettings);
         }
 
         /// <summary>
@@ -1921,12 +2160,24 @@ namespace Google.Cloud.Asset.V1
         }
     }
 
+    public partial class ListAssetsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class SearchAllResourcesRequest : gaxgrpc::IPageRequest
     {
     }
 
     public partial class SearchAllIamPoliciesRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListAssetsResponse : gaxgrpc::IPageResponse<Asset>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Asset> GetEnumerator() => Assets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class SearchAllResourcesResponse : gaxgrpc::IPageResponse<ResourceSearchResult>

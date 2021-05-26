@@ -52,6 +52,12 @@
                 "GetFeedAsync"
               ]
             },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
             "ListFeeds": {
               "methods": [
                 "ListFeeds",

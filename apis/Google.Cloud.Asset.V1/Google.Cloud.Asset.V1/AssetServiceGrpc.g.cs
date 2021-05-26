@@ -3,7 +3,7 @@
 //     source: google/cloud/asset/v1/asset_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -62,6 +62,8 @@ namespace Google.Cloud.Asset.V1 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ExportAssetsRequest> __Marshaller_google_cloud_asset_v1_ExportAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListAssetsRequest> __Marshaller_google_cloud_asset_v1_ListAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListAssetsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListAssetsResponse> __Marshaller_google_cloud_asset_v1_ListAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListAssetsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateFeedRequest> __Marshaller_google_cloud_asset_v1_CreateFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser));
@@ -86,6 +88,13 @@ namespace Google.Cloud.Asset.V1 {
         "ExportAssets",
         __Marshaller_google_cloud_asset_v1_ExportAssetsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.ListAssetsRequest, global::Google.Cloud.Asset.V1.ListAssetsResponse> __Method_ListAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ListAssetsRequest, global::Google.Cloud.Asset.V1.ListAssetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAssets",
+        __Marshaller_google_cloud_asset_v1_ListAssetsRequest,
+        __Marshaller_google_cloud_asset_v1_ListAssetsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Method_BatchGetAssetsHistory = new grpc::Method<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse>(
         grpc::MethodType.Unary,
@@ -183,6 +192,18 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportAssets(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists assets with time and resource types and returns paged results in
+      /// response.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -423,6 +444,54 @@ namespace Google.Cloud.Asset.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportAssetsAsync(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportAssets, null, options, request);
+      }
+      /// <summary>
+      /// Lists assets with time and resource types and returns paged results in
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists assets with time and resource types and returns paged results in
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAssets, null, options, request);
+      }
+      /// <summary>
+      /// Lists assets with time and resource types and returns paged results in
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists assets with time and resource types and returns paged results in
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAssets, null, options, request);
       }
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
@@ -965,6 +1034,7 @@ namespace Google.Cloud.Asset.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ExportAssets, serviceImpl.ExportAssets)
+          .AddMethod(__Method_ListAssets, serviceImpl.ListAssets)
           .AddMethod(__Method_BatchGetAssetsHistory, serviceImpl.BatchGetAssetsHistory)
           .AddMethod(__Method_CreateFeed, serviceImpl.CreateFeed)
           .AddMethod(__Method_GetFeed, serviceImpl.GetFeed)
@@ -984,6 +1054,7 @@ namespace Google.Cloud.Asset.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssetServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ExportAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportAssets));
+      serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ListAssetsRequest, global::Google.Cloud.Asset.V1.ListAssetsResponse>(serviceImpl.ListAssets));
       serviceBinder.AddMethod(__Method_BatchGetAssetsHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse>(serviceImpl.BatchGetAssetsHistory));
       serviceBinder.AddMethod(__Method_CreateFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(serviceImpl.CreateFeed));
       serviceBinder.AddMethod(__Method_GetFeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed>(serviceImpl.GetFeed));
