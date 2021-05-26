@@ -101,7 +101,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.PrivateCatalog.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PrivateCatalog.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Private Catalog](https://cloud.google.com/private-catalog/docs/) |
 | [Google.Cloud.Profiler.V2](https://googleapis.dev/dotnet/Google.Cloud.Profiler.V2/1.1.0) | 1.1.0 | [Cloud Profiler](https://cloud.google.com/profiler/) |
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.5.0) | 2.5.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
-| [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
+| [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.2.0) | 1.2.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecommendationEngine.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecommendationEngine.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Recommendations AI](https://cloud.google.com/recommendations) |
 | [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.5.0) | 2.5.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
