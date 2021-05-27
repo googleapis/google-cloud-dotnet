@@ -58,8 +58,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return host.GetTestServer();
         }
 
-        public static TestServer GetTestServer<TStartup>() where TStartup : class =>
-            GetTestServer(GetHostBuilder<TStartup>());
+        public static TestServer GetTestServer<TStartup>(Action<IWebHostBuilder> configure = null) where TStartup : class =>
+            GetTestServer(GetHostBuilder<TStartup>(configure));
 
         public static IServiceProvider GetServices(TestServer server) => server.Services;
 
