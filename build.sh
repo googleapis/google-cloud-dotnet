@@ -109,6 +109,26 @@ then
   fi
 fi
 
+# If we are building Google.Cloud.Diagnostics.AspNetCore we also need to build
+# Google.Cloud.Diagnostics.AspNetCore3 since they share code files.
+hasCore=false
+hasCore3=false
+for api in ${apis[*]}
+do
+  if [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore" ]]
+  then
+    hasCore=true
+  elif [[ "$api" == "Google.Cloud.Diagnostics.AspNetCore3" ]]
+  then
+    hasCore3=true
+  fi
+done
+if [[ "$hasCore" == "true" ]] && [[ "$hasCore3" == "false" ]]
+then
+  apis+=("Google.Cloud.Diagnostics.AspNetCore3")
+fi
+
+
 if [[ "$nobuild" == "true" ]]
 then
   echo "APIs that would be built:"
@@ -133,12 +153,6 @@ do
 
   # ServiceDirectory is in apis/ for the sake of autosynth, but doesn't really build.
   if [[ "$api" == "ServiceDirectory" ]]
-  then
-    continue
-  fi
-
-  # Only build ASP.NET support on Windows
-  if [[ "$OS" != "Windows_NT" ]] && [[ "$apidir" == "apis/Google.Cloud.Diagnostics.AspNet" ]]
   then
     continue
   fi
