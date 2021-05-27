@@ -15,7 +15,7 @@
 using System.Runtime.CompilerServices;
 using Xunit;
 
-// Because of the Stackdriver limits on reading and writing entries.
+// Because of the Google Cloud limits on reading and writing entries.
 // This reduces the chances of exceeding the limits.
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
 

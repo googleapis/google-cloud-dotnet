@@ -63,9 +63,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             _startTime = DateTime.UtcNow;
         }
 
-        /// <summary>
-        /// Test for the GcpStackdriverLoggingConsoleUrl snippet.
-        /// </summary>
         [Fact]
         public void GetsLogViewingUrl()
         {

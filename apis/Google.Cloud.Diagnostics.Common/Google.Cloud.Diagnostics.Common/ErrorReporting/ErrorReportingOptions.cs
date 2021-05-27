@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
-        /// Stackdriver Logging API.
+        /// Google Cloud Logging API.
         /// </summary>
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be

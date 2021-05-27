@@ -22,13 +22,13 @@ using System.Threading;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// An <see cref="IConsumer{T}"/> that will send received logs to the Stackdriver Logging API.
+    /// An <see cref="IConsumer{T}"/> that will send received logs to the Google Cloud Logging API.
     /// </summary>
     internal sealed class GrpcLogConsumer : IConsumer<LogEntry>
     {
         private LoggingServiceV2Client _client;
 
-        /// <param name="client">The logging client that will push logs to the Stackdriver Logging API.</param>
+        /// <param name="client">The logging client that will push logs to the Google Cloud Logging API.</param>
         public GrpcLogConsumer(LoggingServiceV2Client client)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));

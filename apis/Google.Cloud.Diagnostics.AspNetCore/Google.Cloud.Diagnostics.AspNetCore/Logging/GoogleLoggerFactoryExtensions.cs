@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </example>
     /// 
     /// <remarks>
-    /// Logs to Google Stackdriver Cloud Logging.
+    /// Logs to Google Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
     /// </remarks>
     /// <seealso cref="GoogleLogger"/>
