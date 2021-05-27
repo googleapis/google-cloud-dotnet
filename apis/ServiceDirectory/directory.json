@@ -907,7 +907,7 @@
         "google/rpc"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Contactcenterinsights.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ContactCenterInsights.V1"
     },
     {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
