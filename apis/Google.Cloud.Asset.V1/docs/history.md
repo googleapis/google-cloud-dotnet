@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.8.0, released 2021-05-27
+
+- [Commit 2722d51](https://github.com/googleapis/google-cloud-dotnet/commit/2722d51):
+  - feat: add Cloud Asset List API
+  - feat: add access time as condition context in request and evaluation value in response for Cloud Asset AnalyzeIamPolicy API
+  - feat: add more info in response for Cloud Asset SearchAllResources API
+
 # Version 2.7.0, released 2021-04-29
 
 - [Commit cb59fb9](https://github.com/googleapis/google-cloud-dotnet/commit/cb59fb9): chore: fix typo 'partion_key' in comments
