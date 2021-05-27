@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 #endif
 {
     /// <summary>
-    /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+    /// <see cref="ILoggerProvider"/> for Google Cloud Logging.
     /// </summary>
     public sealed class GoogleLoggerProvider : ILoggerProvider
     {
@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
-        /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+        /// <see cref="ILoggerProvider"/> for Google Cloud Logging.
         /// </summary>
         /// <param name="consumer">The consumer to push logs to. Must not be null.</param>
         /// <param name="logTarget">Where to log to. Must not be null.</param>
@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+        /// Create an <see cref="ILoggerProvider"/> for Google Cloud Logging.
         /// </summary>
         /// <param name="serviceProvider">The service provider to resolve additional services from.
         /// May be null, in which case additional services (such as custom labels) will not be used.</param>
@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+        /// Create an <see cref="ILoggerProvider"/> for Google Cloud Logging.
         /// </summary>
         /// <param name="logTarget">Where to log to. Must not be null.</param>
         /// <param name="serviceProvider">Optional, the service provider to resolve additional services from. May be null,

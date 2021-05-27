@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        public void CreateConsumer_BufferdConsumer()
+        public void CreateConsumer_BufferedConsumer()
         {
             var bufferOptions = BufferOptions.SizedBuffer();
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);

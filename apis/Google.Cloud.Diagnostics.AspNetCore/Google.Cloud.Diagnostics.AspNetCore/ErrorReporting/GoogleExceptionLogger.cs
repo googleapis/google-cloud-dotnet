@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 #endif
 {
     /// <summary>
-    /// Google Cloud Error Reporting Logger. Reports exceptions to the Stackdriver Error Reporting API.
+    /// Google Cloud Error Reporting Logger. Reports exceptions to the Google Cloud Error Reporting API.
     /// </summary>
     /// 
     /// <example>

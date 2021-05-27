@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     ///  Uses the Google Cloud Trace Middleware.
     ///  Traces the time taken for all subsequent delegates to run.  The time taken
-    ///  and metadata will be sent to the Stackdriver Trace API.  Also allows for more
+    ///  and metadata will be sent to the Google Cloud Trace API.  Also allows for more
     ///  finely grained manual tracing.
     /// </summary>
     ///
@@ -80,7 +80,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     {
         /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
-        /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
+        /// The time taken and metadata will be sent to the Google Cloud Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
         /// </summary>
         public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app)

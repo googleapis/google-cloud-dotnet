@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     public enum EventTargetKind
     {
-        /// <summary>Stackdriver Error Logging API.</summary>
+        /// <summary>Google Cloud Error Logging API.</summary>
         Logging
     }
 
@@ -55,9 +55,9 @@ namespace Google.Cloud.Diagnostics.Common
         public MonitoredResource MonitoredResource { get; private set; }
 
         /// <summary>
-        /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Logging API.
-        /// The events are then automatically propagated to the Stackdriver Error Logging API from the 
-        /// Stackdriver Logging API.
+        /// Creates a new <see cref="EventTarget"/> instance that will report to the Google Cloud Logging API.
+        /// The events are then automatically propagated to the Google Cloud Error Logging API from the 
+        /// Google Cloud Logging API.
         /// </summary>
         /// <remarks>
         /// For more information see "Formatting Log Error Messages"
@@ -80,9 +80,9 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Logging API.
-        /// The events are then automatically propagated to the Stackdriver Error Logging API from the 
-        /// Stackdriver Logging API.
+        /// Creates a new <see cref="EventTarget"/> instance that will report to the Google Cloud Logging API.
+        /// The events are then automatically propagated to the Google Cloud Error Logging API from the 
+        /// Google Cloud Logging API.
         /// </summary>
         /// <remarks>
         /// For more information see "Formatting Log Error Messages"

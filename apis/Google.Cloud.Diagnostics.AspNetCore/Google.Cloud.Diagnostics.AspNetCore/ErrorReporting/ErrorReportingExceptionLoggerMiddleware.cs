@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Middleware that will, when invoked, call the next <see cref="RequestDelegate"/>,
     /// catch any exception that it may throw, send that exception to the
-    /// Stackdriver Error Reporting API and rethrow the given exception.
+    /// Google Cloud Error Reporting API and rethrow the given exception.
     /// </summary>
     public sealed class ErrorReportingExceptionLoggerMiddleware
     {
@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// Invokes the next <see cref="RequestDelegate"/>, catches any exception thrown,
-        /// reports the exception to the  Stackdriver Error Reporting API and rethrows
+        /// reports the exception to the Google Cloud Error Reporting API and rethrows
         /// the exception.
         /// </summary>
         public async Task Invoke(HttpContext httpContext)

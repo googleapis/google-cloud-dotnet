@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Invokes the next <see cref="RequestDelegate"/> and traces the time 
         /// taken for the next delegate to run, reporting the results to the
-        /// Stackdriver Trace API.
+        /// Google Cloud Trace API.
         /// </summary>
         /// <param name="httpContext">The current HTTP context.</param>
         /// <param name="traceContext">Trace information from the current request. Must not be null.</param>

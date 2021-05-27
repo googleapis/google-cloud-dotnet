@@ -24,13 +24,13 @@ using TraceProto = Google.Cloud.Trace.V1.Trace;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A <see cref="IConsumer{TraceProto}"/> that will send received traces to the Stackdriver Trace API.
+    /// A <see cref="IConsumer{TraceProto}"/> that will send received traces to the Google Cloud Trace API.
     /// </summary>
     internal sealed class GrpcTraceConsumer : IConsumer<TraceProto>
     {
         private readonly TraceServiceClient _client;
 
-        /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
+        /// <param name="client">The trace client that will push traces to the Google Cloud Trace API.</param>
         internal GrpcTraceConsumer(TraceServiceClient client)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));

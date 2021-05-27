@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 #endif
 {
     /// <summary>
-    /// <see cref="ILogger"/> for Google Stackdriver Logging.
+    /// <see cref="ILogger"/> for Google Cloud Logging.
     /// </summary>
     ///
     /// <example>
@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </example>
     ///
     /// <remarks>
-    /// Logs to Google Stackdriver Cloud Logging.
+    /// Logs to Google Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
     /// </remarks>
     /// <seealso cref="GoogleLoggerFactoryExtensions"/>
@@ -289,7 +289,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// For diagnostic purposes. Builds and returns the URL where the entries logged by
-        /// this <see cref="GoogleLogger"/> can be seen on the GCP Stackdriver Logging Console.
+        /// this <see cref="GoogleLogger"/> can be seen on the Google Cloud Logging Console.
         /// </summary>
         public Uri GetGcpConsoleLogsUrl()
         {
