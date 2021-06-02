@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListServiceAccounts",
+    "client": "IAMClient",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}"
+    }
+  }
+]
