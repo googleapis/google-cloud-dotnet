@@ -3254,7 +3254,7 @@
         "google/type"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Iam.Admin.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Iam.Admin.V1"
     },
     {
       "ServiceDirectory": "google/iam/credentials/v1",
