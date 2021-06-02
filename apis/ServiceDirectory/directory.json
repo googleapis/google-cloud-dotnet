@@ -1266,6 +1266,51 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Gaming.V1Beta"
     },
     {
+      "ServiceDirectory": "google/cloud/gkeconnect/gateway/v1",
+      "Name": "connectgateway.googleapis.com",
+      "Title": "Connect Gateway API",
+      "Description": "The Connect Gateway service allows connectivity from external parties to connected Kubernetes clusters.",
+      "ServiceConfigFile": "google/cloud/gkeconnect/gateway/v1/connectgateway_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.gkeconnect.gateway.v1",
+      "PackageFromProtos": "google.cloud.gkeconnect.gateway.v1",
+      "ImportDirectories": [
+        "google/api"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/gkeconnect/gateway/v1alpha1",
+      "Name": "connectgateway.googleapis.com",
+      "Title": "Connect Gateway API",
+      "Description": "The Connect Gateway service allows connectivity from external parties to connected Kubernetes clusters.",
+      "ServiceConfigFile": "google/cloud/gkeconnect/gateway/v1alpha1/connectgateway_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.cloud.gkeconnect.gateway.v1alpha1",
+      "PackageFromProtos": "google.cloud.gkeconnect.gateway.v1alpha1",
+      "ImportDirectories": [
+        "google/api"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1Alpha1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/gkeconnect/gateway/v1beta1",
+      "Name": "connectgateway.googleapis.com",
+      "Title": "Connect Gateway API",
+      "Description": "The Connect Gateway service allows connectivity from external parties to connected Kubernetes clusters.",
+      "ServiceConfigFile": "google/cloud/gkeconnect/gateway/v1beta1/connectgateway_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.gkeconnect.gateway.v1beta1",
+      "PackageFromProtos": "google.cloud.gkeconnect.gateway.v1beta1",
+      "ImportDirectories": [
+        "google/api"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Gkeconnect.Gateway.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/gkehub/v1alpha2",
       "Name": "gkehub.googleapis.com",
       "Title": "GKE Hub",
