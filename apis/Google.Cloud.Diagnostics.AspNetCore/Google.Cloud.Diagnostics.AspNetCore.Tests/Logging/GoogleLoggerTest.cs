@@ -19,7 +19,6 @@ using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
@@ -141,7 +140,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
                 l.Single().JsonPayload.Fields["message"].StringValue == LogMessage &&
-                l.Single().JsonPayload.Fields["scope"].StringValue == "scope => ";
+                l.Single().JsonPayload.Fields["scope"].StringValue == "scope";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
@@ -161,7 +160,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var parentScopes = json["parent_scopes"].ListValue.Values;
                 var parentScope0 = parentScopes[0].StructValue.Fields;
                 return json["message"].StringValue == LogMessage &&
-                       json["scope"].StringValue == "scope 42, Baz => " &&
+                       json["scope"].StringValue == "scope 42, Baz" &&
                        parentScopes.Count == 1 &&
                        parentScope0.Count == 3 &&
                        parentScope0["Foo"].StringValue == "42" &&
@@ -189,7 +188,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var parentScopes = json["parent_scopes"].ListValue.Values;
                 var parentScope0 = parentScopes[0].StructValue.Fields;
                 return json["message"].StringValue == LogMessage &&
-                       json["scope"].StringValue == "scope 42, Baz => " &&
+                       json["scope"].StringValue == "scope 42, Baz" &&
                        parentScopes.Count == 1 &&
                        parentScope0.Count == 3 &&
                        parentScope0["_0"].StringValue == "42" &&
@@ -219,7 +218,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var scope1 = parentScopes[1].StructValue.Fields;
 
                 return json["message"].StringValue == LogMessage &&
-                       json["scope"].StringValue == "first 42 => second Baz => " &&
+                       json["scope"].StringValue == "first 42 => second Baz" &&
                        parentScopes.Count == 2 &&
                        scope0.Count == 2 &&
                        scope0["{OriginalFormat}"].StringValue == "second {Bar}" &&
@@ -256,7 +255,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var parentScopes = json["parent_scopes"].ListValue.Values;
                 var parentScope0 = parentScopes[0].StructValue.Fields;
                 return json["message"].StringValue == "a log message with stuff" &&
-                       json["scope"].StringValue == "scope 42 => " &&
+                       json["scope"].StringValue == "scope 42" &&
                        formatParams.Count == 2 &&
                        formatParams["things"].StringValue == logParam &&
                        formatParams["{OriginalFormat}"].StringValue == message &&
@@ -282,7 +281,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
                 l.Single().JsonPayload.Fields["message"].StringValue == LogMessage &&
-                l.Single().JsonPayload.Fields["scope"].StringValue == "parent => child => ";
+                l.Single().JsonPayload.Fields["scope"].StringValue == "parent => child";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
