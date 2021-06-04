@@ -160,7 +160,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var message = EntryData.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
-                Assert.Contains("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
+                Assert.Contains("Scope", results.Single().JsonPayload.Fields["scope"].StringValue);
             });
         }
 

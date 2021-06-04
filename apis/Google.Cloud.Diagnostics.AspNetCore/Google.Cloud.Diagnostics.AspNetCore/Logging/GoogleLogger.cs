@@ -35,23 +35,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILogger"/> for Google Cloud Logging.
     /// </summary>
-    ///
-    /// <example>
-    /// <code>
-    /// public void Configure(ILoggerFactory loggerFactory)
-    /// {
-    ///     string projectId = "[Google Cloud Platform project ID]";
-    ///     loggerFactory.AddGoogle(projectId);
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    ///
-    /// <remarks>
-    /// Logs to Google Cloud Logging.
-    /// Docs: https://cloud.google.com/logging/docs/
-    /// </remarks>
-    /// <seealso cref="GoogleLoggerFactoryExtensions"/>
     public sealed class GoogleLogger : ILogger
     {
         private const string GcpConsoleLogsBaseUrl = "https://console.cloud.google.com/logs/viewer";
@@ -97,7 +80,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public IDisposable BeginScope<TState>(TState state) => new GoogleLoggerScope(state);
+        public IDisposable BeginScope<TState>(TState state) => GoogleLoggerScope.BeginScope(state);
 
         /// <inheritdoc />
         public bool IsEnabled(LogLevel logLevel) => logLevel >= _loggerOptions.LogLevel;
@@ -130,6 +113,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     Labels = { CreateLabels() },
                 };
 
+                GoogleLoggerScope.Current?.ApplyFullScopeStack(entry);
                 SetTraceAndSpanIfAny(entry);
 
                 _consumer.Receive(new[] { entry });
@@ -194,32 +178,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
                 ContainsFormatParameters(formatParams))
             {
-                jsonStruct.Fields.Add("format_parameters", CreateStructValue(formatParams));
-            }
-
-            var currentLogScope = GoogleLoggerScope.Current;
-            if (currentLogScope != null)
-            {
-                jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
-            }
-
-            // Create a map of format parameters of all the parent scopes,
-            // starting from the most inner scope to the top-level scope.
-            var scopeParamsList = new List<Value>();
-            while (currentLogScope != null)
-            {
-                // Determine if the state of the scope are format params
-                if (currentLogScope.State is IEnumerable<KeyValuePair<string, object>> scopeFormatParams)
-                {
-                    scopeParamsList.Add(CreateStructValue(scopeFormatParams));
-                }
-
-                currentLogScope = currentLogScope.Parent;
-            }
-
-            if (scopeParamsList.Count > 0)
-            {
-                jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
+                jsonStruct.Fields.Add("format_parameters", formatParams.ToStructValue());
             }
 
             return jsonStruct;
@@ -246,25 +205,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     // if and only if there's at least one more entry.
                     return iterator.MoveNext();
                 }
-            }
-
-            Value CreateStructValue(IEnumerable<KeyValuePair<string, object>> fields)
-            {
-                Struct fieldsStruct = new Struct();
-                foreach (var pair in fields)
-                {
-                    string key = pair.Key;
-                    if (string.IsNullOrEmpty(key))
-                    {
-                        continue;
-                    }
-                    if (char.IsDigit(key[0]))
-                    {
-                        key = "_" + key;
-                    }
-                    fieldsStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
-                }
-                return Value.ForStruct(fieldsStruct);
             }
         }
 
