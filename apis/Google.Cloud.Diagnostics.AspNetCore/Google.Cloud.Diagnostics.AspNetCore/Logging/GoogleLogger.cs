@@ -21,7 +21,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using static System.FormattableString;
 
 #if NETCOREAPP3_1
@@ -65,6 +64,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The service provider to resolve additional services from.</summary>
         private readonly IServiceProvider _serviceProvider;
 
+        private readonly AmbientScopeManager _ambientScopeManager;
+
         internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
             string logName, IClock clock = null, IServiceProvider serviceProvider = null)
         {
@@ -77,6 +78,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
+            _ambientScopeManager = new AmbientScopeManager(_loggerOptions, _serviceProvider);
         }
 
         /// <inheritdoc />
@@ -110,39 +112,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     Severity = logLevel.ToLogSeverity(),
                     Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                     JsonPayload = CreateJsonPayload(eventId, state, exception, message),
-                    Labels = { CreateLabels() },
                 };
 
-                GoogleLoggerScope.Current?.ApplyFullScopeStack(entry);
+                _ambientScopeManager.GetCurrentScope()?.ApplyTo(entry);
+                GoogleLoggerScope.Current?.ApplyTo(entry);
                 SetTraceAndSpanIfAny(entry);
 
                 _consumer.Receive(new[] { entry });
             }
             catch (Exception) when (_loggerOptions.RetryOptions.ExceptionHandling == ExceptionHandling.Ignore) { }
-        }
-
-        private Dictionary<string, string> CreateLabels()
-        {
-            var labelProviders = _serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>();
-            if (labelProviders is null)
-            {
-                return _loggerOptions.Labels;
-            }
-            using (var iterator = labelProviders.GetEnumerator())
-            {
-                if (!iterator.MoveNext())
-                {
-                    return _loggerOptions.Labels;
-                }
-                // By now, we know we have at least one label provider. Clone the labels from the options,
-                // and invoke each provider on the clone in turn.
-                var labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                do
-                {
-                    iterator.Current.Invoke(labels);
-                } while (iterator.MoveNext());
-                return labels;
-            }
         }
 
         private Struct CreateJsonPayload<TState>(EventId eventId, TState state, Exception exception, string message)
@@ -267,6 +245,43 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             writer.WriteLine(Invariant($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger will write logs to: {GetGcpConsoleLogsUrl()}"));
             writer.Flush();
+        }
+
+        /// <summary>
+        /// Obtains the current ambient scope, which is not set by user code
+        /// but instead it is calculated based on the Logger configuration.
+        /// The ambient scope will be applied to all log entries.
+        /// It will be applied before the user specified scopes so that the
+        /// user code is able to override ambient scope values on a per
+        /// log entry basis.
+        /// </summary>
+        internal class AmbientScopeManager
+        {
+            private readonly GoogleLoggerScope _permanentParent;
+            private readonly IServiceProvider _serviceProvider;
+
+            internal AmbientScopeManager(LoggerOptions options, IServiceProvider serviceProvider)
+            {
+                _permanentParent = options?.Labels is null ? null : GoogleLoggerScope.CreateScope(new LabellingScopeState(options.Labels), null);
+                _serviceProvider = serviceProvider;
+            }
+
+            public GoogleLoggerScope GetCurrentScope()
+            {
+                var current = _permanentParent;
+
+                if (_serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>() is IEnumerable<ILogEntryLabelProvider> providers)
+                {
+                    var labels = new Dictionary<string, string>();
+                    foreach (var provider in providers)
+                    {
+                        provider.Invoke(labels);
+                    }
+                    current = GoogleLoggerScope.CreateScope(new LabellingScopeState(labels), current);
+                }
+
+                return current;
+            }
         }
     }
 }

@@ -32,17 +32,44 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private void AssertScope(string scopeValue)
         {
             var logEntry = GetEmptyLogEntry();
-            GoogleLoggerScope.Current.ApplyFullScopeStack(logEntry);
+            GoogleLoggerScope.Current.ApplyTo(logEntry);
             Assert.Equal(scopeValue, logEntry.JsonPayload.Fields["scope"].StringValue);
+        }
+
+        private void AssertEmptyScope()
+        {
+            var logEntry = GetEmptyLogEntry();
+            GoogleLoggerScope.Current.ApplyTo(logEntry);
+            Assert.DoesNotContain(logEntry.JsonPayload.Fields.Keys, key => key == "scope");
         }
 
         private void AssertParentScopes(params Struct[] values)
         {
             var logEntry = GetEmptyLogEntry();
-            GoogleLoggerScope.Current.ApplyFullScopeStack(logEntry);
+            GoogleLoggerScope.Current.ApplyTo(logEntry);
             Assert.Collection(
                 logEntry.JsonPayload.Fields["parent_scopes"].ListValue.Values.Select(v => v.StructValue),
                 values.Select<Struct, Action<Struct>>(expected => actual => Assert.Equal(expected, actual)).ToArray());
+        }
+
+        private void AssertEmptyParentScopes()
+        {
+            var logEntry = GetEmptyLogEntry();
+            GoogleLoggerScope.Current.ApplyTo(logEntry);
+            Assert.DoesNotContain(logEntry.JsonPayload.Fields.Keys, key => key == "parent_scopes");
+        }
+
+        private void AssertLabels(params KeyValuePair<string, string>[] labels)
+        {
+            var logEntry = GetEmptyLogEntry();
+            GoogleLoggerScope.Current.ApplyTo(logEntry);
+            Assert.Collection(
+                logEntry.Labels,
+                labels.Select<KeyValuePair<string, string>, Action<KeyValuePair<string, string>>>(expected => actual =>
+                {
+                    Assert.Equal(expected.Key, actual.Key);
+                    Assert.Equal(expected.Value, actual.Value);
+                }).ToArray());
         }
 
         [Fact]
@@ -98,17 +125,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void MultipleScopes_Nested_KeyValuePairs()
         {
             Assert.Null(GoogleLoggerScope.Current);
-            using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs(
-                new KeyValuePair<string, object>("grandfather", "Joey"),
-                new KeyValuePair<string, object>("grandmother", "Janey"))))
+            using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs { { "grandfather", "Joey" }, { "grandmother", "Janey" } }))
             {
                 AssertScope("['grandfather'='Joey']['grandmother'='Janey']");
                 AssertParentScopes(
                     new Struct { Fields = { { "grandfather", Value.ForString("Joey") }, { "grandmother", Value.ForString("Janey") } } });
 
-                using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs(
-                    new KeyValuePair<string, object>("father", "Joe"),
-                    new KeyValuePair<string, object>("mother", "Jane"))))
+                using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs { { "father", "Joe" }, { "mother", "Jane" } }))
                 {
                     AssertScope("['grandfather'='Joey']['grandmother'='Janey'] => ['father'='Joe']['mother'='Jane']");
                     AssertParentScopes(
@@ -124,12 +147,47 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void MultipleScopes_Nested_Labels()
+        {
+            Assert.Null(GoogleLoggerScope.Current);
+            using (GoogleLoggerScope.BeginScope(new LabellingScopeState(
+                new KeyValuePair<string, string>("grandfather", "Joey"),
+                new KeyValuePair<string, string>("grandmother", "Janey"))))
+            {
+                // This is the labelling scope, we add its information on labels only.
+                AssertEmptyScope();
+                AssertEmptyParentScopes();
+                AssertLabels(
+                    new KeyValuePair<string, string>("grandfather", "Joey"),
+                    new KeyValuePair<string, string>("grandmother", "Janey"));
+
+                using (GoogleLoggerScope.BeginScope(new LabellingScopeState(
+                    new KeyValuePair<string, string>("father", "Joe"),
+                    new KeyValuePair<string, string>("mother", "Jane"))))
+                {
+                    AssertEmptyScope();
+                    AssertEmptyParentScopes();
+                    AssertLabels(
+                        new KeyValuePair<string, string>("grandfather", "Joey"),
+                        new KeyValuePair<string, string>("grandmother", "Janey"),
+                        new KeyValuePair<string, string>("father", "Joe"),
+                        new KeyValuePair<string, string>("mother", "Jane"));
+                }
+
+                AssertEmptyScope();
+                AssertEmptyParentScopes();
+                AssertLabels(
+                    new KeyValuePair<string, string>("grandfather", "Joey"),
+                    new KeyValuePair<string, string>("grandmother", "Janey"));
+            }
+            Assert.Null(GoogleLoggerScope.Current);
+        }
+
+        [Fact]
         public void MultipleScopes_Nested_Mixed()
         {
             Assert.Null(GoogleLoggerScope.Current);
-            using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs(
-                new KeyValuePair<string, object>("father", "Joe"),
-                new KeyValuePair<string, object>("mother", "Jane"))))
+            using (GoogleLoggerScope.BeginScope(new DummyKeyValuePairs { { "father", "Joe" }, { "mother", "Jane" } }))
             {
                 AssertScope("['father'='Joe']['mother'='Jane']");
                 AssertParentScopes(
@@ -141,6 +199,15 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     // "myself" is not added to parent_scopes because it is not of the form key=>value.
                     AssertParentScopes(
                         new Struct { Fields = { { "father", Value.ForString("Joe") }, { "mother", Value.ForString("Jane") } } });
+                    using (GoogleLoggerScope.BeginScope(new LabellingScopeState(
+                        new KeyValuePair<string, string>("job_title", "hairdresser"))))
+                    {
+                        AssertScope("['father'='Joe']['mother'='Jane'] => myself");
+                        // "myself" is not added to parent_scopes because it is not of the form key=>value.
+                        AssertParentScopes(
+                            new Struct { Fields = { { "father", Value.ForString("Joe") }, { "mother", Value.ForString("Jane") } } });
+                        AssertLabels(new KeyValuePair<string, string>("job_title", "hairdresser"));
+                    }
                 }
 
                 AssertScope("['father'='Joe']['mother'='Jane']");
@@ -281,9 +348,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private class DummyKeyValuePairs : IEnumerable<KeyValuePair<string, object>>
         {
-            private IEnumerable<KeyValuePair<string, object>> _pairs;
-            public DummyKeyValuePairs(params KeyValuePair<string, object>[] pairs) => _pairs = pairs;
+            private IList<KeyValuePair<string, object>> _pairs = new List<KeyValuePair<string, object>>();
 
+            public void Add(string key, object value) => _pairs.Add(new KeyValuePair<string, object>(key, value));
 
             public IEnumerator<KeyValuePair<string, object>> GetEnumerator() => _pairs.GetEnumerator();
 
