@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListSettings",
+    "client": "ResourceSettingsServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
