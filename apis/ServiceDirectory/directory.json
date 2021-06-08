@@ -1469,7 +1469,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Lifesciences.V2Beta"
+      "CSharpNamespaceFromProtos": "Google.Cloud.LifeSciences.V2Beta"
     },
     {
       "ServiceDirectory": "google/cloud/managedidentities/v1",
