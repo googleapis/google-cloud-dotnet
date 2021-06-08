@@ -2109,7 +2109,7 @@
         "google/api"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Resourcesettings.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ResourceSettings.V1"
     },
     {
       "ServiceDirectory": "google/cloud/retail/v2",
