@@ -915,7 +915,7 @@
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Essential Contacts",
       "productUrl": "https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest",
@@ -925,7 +925,10 @@
         "notification",
         "contacts"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Grpc.Core": "2.36.4"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/essentialcontacts/v1"
     },
