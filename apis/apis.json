@@ -1209,6 +1209,23 @@
       ]
     },
     {
+      "id": "Google.Cloud.LifeSciences.V2Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Life Sciences",
+      "productUrl": "https://cloud.google.com/life-sciences/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Life Sciences API, which is a suite of services and tools for managing, processing, and transforming life sciences data.",
+      "tags": [
+        "genomics",
+        "life sciences"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/lifesciences/v2beta"
+    },
+    {
       "id": "Google.Cloud.Logging.Log4Net",
       "version": "3.3.0",
       "type": "other",
