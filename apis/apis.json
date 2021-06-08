@@ -1828,6 +1828,21 @@
       "protoPath": "google/cloud/resourcemanager/v3"
     },
     {
+      "id": "Google.Cloud.ResourceSettings.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Resource Settings",
+      "productUrl": "https://cloud.google.com/resource-settings/docs",
+      "description": "Recommended Google client library to access the Google Cloud Resource Settings API, which allows users to control and modify the behavior of their GCP resources (e.g., VM, firewall, Project, etc.) across the Cloud Resource Hierarchy.",
+      "tags": [
+        "resources",
+        "settings"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/resourcesettings/v1"
+    },
+    {
       "id": "Google.Cloud.Retail.V2",
       "version": "1.1.0",
       "type": "grpc",
