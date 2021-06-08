@@ -90,7 +90,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.MediaTranslation.V1Beta1](Google.Cloud.MediaTranslation.V1Beta1/index.html) | 1.0.0-beta02 | [Media Translation](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1](Google.Cloud.Memcache.V1/index.html) | 1.1.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta04 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.Metastore.V1](Google.Cloud.Metastore.V1/index.html) | 1.0.0-beta02 | [Dataproc Metastore (V1 API)](https://cloud.google.com/dataproc-metastore/docs) |
+| [Google.Cloud.Metastore.V1](Google.Cloud.Metastore.V1/index.html) | 1.0.0 | [Dataproc Metastore (V1 API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Metastore.V1Alpha](Google.Cloud.Metastore.V1Alpha/index.html) | 1.0.0-alpha02 | [Dataproc Metastore (V1Alpha API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Metastore.V1Beta](Google.Cloud.Metastore.V1Beta/index.html) | 1.0.0-beta01 | [Dataproc Metastore (V1Beta API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.3.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
