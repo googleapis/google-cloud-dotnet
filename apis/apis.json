@@ -1936,7 +1936,7 @@
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
@@ -1947,7 +1947,7 @@
         "private-ca"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.1.0"
+        "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/security/privateca/v1"
