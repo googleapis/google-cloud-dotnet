@@ -2132,7 +2132,7 @@
     },
     {
       "id": "Google.Cloud.Shell.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Shell",
       "productUrl": "https://cloud.google.com/shell/",
@@ -2141,7 +2141,9 @@
         "shell"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.1.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.36.4"
       },
       "generator": "micro",
       "protoPath": "google/cloud/shell/v1"
