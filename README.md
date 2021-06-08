@@ -16,7 +16,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha06) | 1.0.0-alpha06 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha05) | 1.0.0-alpha05 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta03) | 1.0.0-beta03 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
-| [Google.Apps.Script.Type](https://googleapis.dev/dotnet/Google.Apps.Script.Type/1.0.0-beta01) | 1.0.0-beta01 | Version-agnostic types for Apps Script APIs |
+| [Google.Apps.Script.Type](https://googleapis.dev/dotnet/Google.Apps.Script.Type/1.0.0) | 1.0.0 | Version-agnostic types for Apps Script APIs |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha03) | 1.0.0-alpha03 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.1.0) | 1.1.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](https://googleapis.dev/dotnet/Google.Cloud.ApiGateway.V1/1.0.0) | 1.0.0 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
@@ -66,7 +66,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.4.0) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.3.0) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.1.0) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
-| [Google.Cloud.GSuiteAddOns.V1](https://googleapis.dev/dotnet/Google.Cloud.GSuiteAddOns.V1/1.0.0-beta01) | 1.0.0-beta01 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
+| [Google.Cloud.GSuiteAddOns.V1](https://googleapis.dev/dotnet/Google.Cloud.GSuiteAddOns.V1/1.0.0) | 1.0.0 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.1.0) | 1.1.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta07) | 1.0.0-beta07 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.GkeHub.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.GkeHub.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [GKE Hub](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster) |
