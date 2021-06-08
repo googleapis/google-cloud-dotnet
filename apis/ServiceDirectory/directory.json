@@ -429,7 +429,7 @@
         "google/rpc"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Apigeeconnect.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ApigeeConnect.V1"
     },
     {
       "ServiceDirectory": "google/cloud/asset/v1",
