@@ -93,6 +93,12 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
                 package = packageParts[^2];
             }
 
+            // DevSite doesn't have toc.html files
+            if (page == "api/toc.html")
+            {
+                return null;
+            }
+
             // DevSite URLs don't have an extension
             if (page.EndsWith(".html"))
             {
