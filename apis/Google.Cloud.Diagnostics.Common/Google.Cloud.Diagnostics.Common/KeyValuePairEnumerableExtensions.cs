@@ -12,13 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Protobuf.WellKnownTypes;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Extension methods for converting several types to Protobub well known types.
+    /// Extension methods for converting KeyValuePair Enumerables to several types,
+    /// including Protobuf well known types.
     /// </summary>
     public static class KeyValuePairEnumerableExtensions
     {
@@ -32,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// which case this method will return null.</param>
         public static Value ToStructValue(this IEnumerable<KeyValuePair<string, object>> fields)
         {
-            if (fields == null)
+            if (fields is null)
             {
                 return null;
             }
@@ -41,12 +44,12 @@ namespace Google.Cloud.Diagnostics.Common
             Struct fieldsStruct = new Struct();
             foreach (var pair in fields)
             {
-                hasValues = true;
                 string key = pair.Key;
                 if (string.IsNullOrEmpty(key))
                 {
                     continue;
                 }
+                hasValues = true;
                 if (char.IsDigit(key[0]))
                 {
                     key = "_" + key;
@@ -54,6 +57,21 @@ namespace Google.Cloud.Diagnostics.Common
                 fieldsStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
             }
             return hasValues ? Value.ForStruct(fieldsStruct) : null;
+        }
+
+        /// <summary>
+        /// Returns a string representing the given fields with the format:
+        /// ['key1'='value1']['key2'='value2']...
+        /// </summary>
+        internal static string ToDefaultStringRepresentation<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> fields)
+        {
+            GaxPreconditions.CheckNotNull(fields, nameof(fields));
+            StringBuilder builder = new StringBuilder();
+            foreach (var pair in fields)
+            {
+                builder.Append($"['{pair.Key}'='{pair.Value}']");
+            }
+            return builder.ToString();
         }
     }
 }

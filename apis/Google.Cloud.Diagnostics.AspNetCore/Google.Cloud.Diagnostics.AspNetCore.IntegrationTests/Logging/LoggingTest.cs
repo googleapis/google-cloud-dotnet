@@ -221,6 +221,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
+        public async Task Logging_AugmentedWithLabels()
+        {
+            string testId = IdGenerator.FromGuid();
+
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/AugmentWithLabels/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var message = EntryData.GetMessage(nameof(MainController.AugmentWithLabels), testId);
+                var entry = results.Single();
+                var json = entry.JsonPayload.Fields;
+                Assert.Equal(message, json["message"].StringValue);
+
+                Assert.Equal(1, entry.Labels.Count);
+                Assert.Equal(testId, entry.Labels["test_id"]);
+            });
+        }
+
+        [Fact]
         public async Task Logging_Trace_FromHeader_Implicit()
         {
             string traceId = s_traceIdFactory.NextId();
@@ -1055,6 +1078,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 _logger.LogCritical(message);
                 return message;
             }
+        }
+
+        public string AugmentWithLabels(string id)
+        {
+            string message = EntryData.GetMessage(nameof(AugmentWithLabels), id);
+            _logger.WithLabels(new KeyValuePair<string, string>("test_id", id)).LogCritical(message);
+            return message;
         }
 
         public string Exception(string id)

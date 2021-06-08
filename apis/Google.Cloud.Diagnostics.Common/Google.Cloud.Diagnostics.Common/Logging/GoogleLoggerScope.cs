@@ -33,38 +33,38 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         public static GoogleLoggerScope Current
         {
-            get
-            {
-                return _current.Value;
-            }
-            private set
-            {
-                _current.Value = value;
-            }
+            get => _current.Value;
+            private set => _current.Value = value;
         }
 
         /// <summary>
         /// Creates a new scope with the given state and <see cref="Current"/> as parent.
         /// Sets the newly created scope as <see cref="Current"/>.
         /// </summary>
-        /// <param name="state"></param>
         public static GoogleLoggerScope BeginScope(object state) =>
-            Current = state switch
+            Current = CreateScope(state, Current);
+
+        /// <summary>
+        /// Creates a new scope with the given state and <see cref="Current"/> as parent.
+        /// Sets the newly created scope as <see cref="Current"/>.
+        /// </summary>
+        public static GoogleLoggerScope CreateScope(object state, GoogleLoggerScope parent) =>
+            state switch
             {
-                IEnumerable<KeyValuePair<string, object>> keyValues => new KeyValueLoggerScope(keyValues, Current),
-                _ => new GoogleLoggerScope<object>(state, Current)
+                LabellingScopeState labels => new LabellingScope(labels, parent),
+                IEnumerable<KeyValuePair<string, object>> keyValues => new KeyValueLoggerScope(keyValues, parent),
+                _ => new GoogleLoggerScope<object>(state, parent)
             };
 
         /// <summary>
         /// The parent scope, may be null.
         /// </summary>
-        protected internal GoogleLoggerScope Parent { get; }
+        private GoogleLoggerScope Parent { get; }
 
         /// <summary>
         /// Creates a new scope.
         /// </summary>
-        protected internal GoogleLoggerScope(GoogleLoggerScope parent)
-            => Parent = parent;
+        protected internal GoogleLoggerScope(GoogleLoggerScope parent) => Parent = parent;
 
         /// <summary>
         /// Removes this scope, and all inner scopes, from the scope stack.
@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
                 maybeMyself = maybeMyself.Parent;
             }
             // Only if we've found this instance in the Scope stack
-            // we pop it and all it's child scopes.
+            // we pop it and all its child scopes.
             if (maybeMyself == this)
             {
                 Current = Parent;
@@ -91,25 +91,25 @@ namespace Google.Cloud.Diagnostics.Common
         /// information added by more recent scopes can overwrite information added
         /// by less recent ones.
         /// </summary>
-        public void ApplyFullScopeStack(LogEntry entry)
+        public void ApplyTo(LogEntry entry)
         {
             GaxPreconditions.CheckNotNull(entry, nameof(entry));
             GaxPreconditions.CheckNotNull(entry.JsonPayload, nameof(entry.JsonPayload));
-            ApplyFullScopeStackImpl(entry);
+            ApplyToImp(entry);
         }
 
-        private void ApplyFullScopeStackImpl(LogEntry entry)
+        private void ApplyToImp(LogEntry entry)
         {
-            Parent?.ApplyFullScopeStackImpl(entry);
-            ApplyThisScope(entry);
+            Parent?.ApplyToImp(entry);
+            ApplyThisScopeOnlyTo(entry);
         }
 
         /// <summary>
         /// Apply this scope's information only.
-        /// Implementers should decide whether to overwirte similar information from
+        /// Implementers should decide whether to overwrite similar information from
         /// previous scopes or combine it with this one.
         /// </summary>
-        protected internal abstract void ApplyThisScope(LogEntry entry);
+        protected internal abstract void ApplyThisScopeOnlyTo(LogEntry entry);
     }
 
     internal class GoogleLoggerScope<TState> : GoogleLoggerScope
@@ -133,19 +133,16 @@ namespace Google.Cloud.Diagnostics.Common
         /// This method will combine existing information so that the <code>scope</code>
         /// field looks like "grandparentScope => parentScope => childScope".
         /// </remarks>
-        protected internal override void ApplyThisScope(LogEntry entry)
+        protected internal override void ApplyThisScopeOnlyTo(LogEntry entry)
         {
             string stateText = State.ToString() ?? "";
-            if (entry.JsonPayload.Fields.TryGetValue("scope", out Value value))
-            {
-                value = Value.ForString($"{value.StringValue} => {stateText}");
-            }
-            else
-            {
-                value = Value.ForString(stateText);
-            }
-
-            entry.JsonPayload.Fields["scope"] = value;
+            string effectiveText = entry.JsonPayload.Fields.TryGetValue("scope", out Value value)
+                ? value.KindCase == Value.KindOneofCase.StringValue
+                    ? $"{value.StringValue} => {stateText}"
+                    : throw new InvalidOperationException(
+                        $"scope field in {nameof(entry.JsonPayload)} is expected to be a {nameof(Value.KindOneofCase.StringValue)} or unset. Found a {value.KindCase} instead.")
+                : stateText;
+            entry.JsonPayload.Fields["scope"] = Value.ForString(effectiveText);
         }
     }
 
@@ -159,15 +156,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// Applies the information contained in <see cref="GoogleLoggerScope{TState}.State"/> to the log entry.
         /// </summary>
         /// <remarks>
-        /// This method first calls <see cref="GoogleLoggerScope{TState}.ApplyThisScope(LogEntry)"/>.
+        /// This method first calls <see cref="GoogleLoggerScope{TState}.ApplyThisScopeOnlyTo(LogEntry)"/>.
         /// Then, if <see cref="GoogleLoggerScope{TState}.State"/> contains elements it will create
         /// a <see cref="Struct"/> adding each key value pair to <see cref="Struct.Fields"/>.
         /// This <see cref="Struct"/> will be added to the <see cref="LogEntry.JsonPayload"/> on a list field
         /// named <code>parent_scopes</code>.
         /// </remarks>
-        protected internal override void ApplyThisScope(LogEntry entry)
+        protected internal override void ApplyThisScopeOnlyTo(LogEntry entry)
         {
-            base.ApplyThisScope(entry);
+            base.ApplyThisScopeOnlyTo(entry);
 
             if (!(State.ToStructValue() is Value newValue))
             {
@@ -176,7 +173,15 @@ namespace Google.Cloud.Diagnostics.Common
 
             if (entry.JsonPayload.Fields.TryGetValue("parent_scopes", out Value existingValues))
             {
-                existingValues.ListValue.Values.Insert(0, newValue);
+                if (existingValues.KindCase == Value.KindOneofCase.ListValue)
+                {
+                    existingValues.ListValue.Values.Insert(0, newValue);
+                }
+                else
+                {
+                    throw new InvalidOperationException(
+                        $"parent_scopes field in {nameof(entry.JsonPayload)} is expected to be a {nameof(Value.KindOneofCase.ListValue)} or unset. Found a {existingValues.KindCase} instead.");
+                }
             }
             else
             {
