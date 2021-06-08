@@ -61,6 +61,10 @@ build_api_docs() {
   # Note that the devsite build will happen elsewhere.
   $DOCFX build --logLevel Warning --disableGitFeatures output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
+  
+  # Add canonical links where appropriate
+  # (Uncomment this when the canonical links are actually published.)
+  # dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateCanonicalLinks -- $api
 
   # Special case root: that should end up in the root of the assembled
   # site.

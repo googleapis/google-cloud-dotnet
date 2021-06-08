@@ -12,18 +12,51 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using System;
+using System.IO;
 
 namespace Google.Cloud.Tools.GenerateCanonicalLinks
 {
     /// <summary>
-    /// Tool to canonicalize links in googleapis.dev. Currently unimplemented, but
-    /// present as a project in order to expose the canonicalization logic as a Google Cloud Function.
+    /// Tool to canonicalize links in googleapis.dev.
     /// </summary>
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            foreach (var api in args)
+            {
+                Canonicalize(api);
+            }
+        }
+
+        private static void Canonicalize(string api)
+        {
+            if (api == "root")
+            {
+                return;
+            }
+            var layout = DirectoryLayout.ForApi(api);
+            var site = Path.Combine(layout.DocsOutputDirectory, "site");
+
+            foreach (var page in Directory.GetFiles(site, "*.html", new EnumerationOptions { RecurseSubdirectories = true }))
+            {
+                var relative = Path.GetRelativePath(site, page).Replace('\\', '/');
+
+                var canonicalLink = Canonicalizer.GetUrl(api, relative);
+                // If the page isn't on CloudSite, skip it.
+                if (canonicalLink is null)
+                {
+                    continue;
+                }
+
+                var canonicalElement = $"<link rel=\"canonical\" href=\"{canonicalLink}\" />";
+
+                var html = File.ReadAllText(page);
+                html = html.Replace("<head>", $"<head>{canonicalElement}");
+                File.WriteAllText(page, html);
+            }
         }
     }
 }
