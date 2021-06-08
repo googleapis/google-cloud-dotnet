@@ -1019,6 +1019,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.DataQnA.V1Alpha"
     },
     {
+      "ServiceDirectory": "google/cloud/datastream/v1alpha1",
+      "Name": "datastream.googleapis.com",
+      "Title": "DataStream API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/datastream/v1alpha1/datastream_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.cloud.datastream.v1alpha1",
+      "PackageFromProtos": "google.cloud.datastream.v1alpha1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/datastream/v1alpha1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Datastream.V1Alpha1"
+    },
+    {
       "ServiceDirectory": "google/cloud/dialogflow/cx/v3",
       "Name": "dialogflow.googleapis.com",
       "Title": "Dialogflow API",
