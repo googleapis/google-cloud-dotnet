@@ -1645,6 +1645,44 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Notebooks.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/ondemandscanning/v1",
+      "Name": "ondemandscanning.googleapis.com",
+      "Title": "On-Demand Scanning API",
+      "Description": "A service to scan container images for vulnerabilities.",
+      "ServiceConfigFile": "google/cloud/ondemandscanning/v1/ondemandscanning_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.ondemandscanning.v1",
+      "PackageFromProtos": "google.cloud.ondemandscanning.v1",
+      "ImportDirectories": [
+        "cloud/containers/workflow/vulnerability/proto",
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "grafeas/v1"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.OnDemandScanning.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/ondemandscanning/v1beta1",
+      "Name": "ondemandscanning.googleapis.com",
+      "Title": "On-Demand Scanning API",
+      "Description": "A service to scan container images for vulnerabilities.",
+      "ServiceConfigFile": "google/cloud/ondemandscanning/v1beta1/ondemandscanning_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.ondemandscanning.v1beta1",
+      "PackageFromProtos": "google.cloud.ondemandscanning.v1beta1",
+      "ImportDirectories": [
+        "cloud/containers/workflow/vulnerability/proto",
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "grafeas/v1"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.OnDemandScanning.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/orgpolicy/v2",
       "Name": "orgpolicy.googleapis.com",
       "Title": "Organization Policy API",
