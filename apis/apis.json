@@ -1210,7 +1210,7 @@
     },
     {
       "id": "Google.Cloud.LifeSciences.V2Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Life Sciences",
       "productUrl": "https://cloud.google.com/life-sciences/docs/",
