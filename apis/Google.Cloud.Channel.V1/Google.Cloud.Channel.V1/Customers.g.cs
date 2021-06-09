@@ -145,11 +145,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int OrgPostalAddressFieldNumber = 3;
     private global::Google.Type.PostalAddress orgPostalAddress_;
     /// <summary>
-    /// Required. Address of the organization of the customer entity.
-    /// Region and zip codes are required to enforce US laws and embargoes.
-    /// Valid address lines are required for all customers.
-    /// Language code is discarded. Use the Customer-level language code to set the
-    /// customer's language.
+    /// Required. The organization address for the customer. To enforce US laws and
+    /// embargoes, we require a region and zip code. You must provide valid
+    /// addresses for every customer. To set the customer's language, use the
+    /// Customer-level language code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.PostalAddress OrgPostalAddress {
@@ -177,11 +176,10 @@ namespace Google.Cloud.Channel.V1 {
     public const int AlternateEmailFieldNumber = 5;
     private string alternateEmail_ = "";
     /// <summary>
-    /// Secondary contact email.
-    /// Alternate email and primary contact email are required to have different
-    /// domains if primary contact email is present.
-    /// When creating admin.google.com accounts, users get notified credentials at
-    /// this email. This email address is also used as a recovery email.
+    /// Secondary contact email. You need to provide an alternate email to create
+    /// different domains if a primary contact email already exists. Users will
+    /// receive a notification with credentials when you create an admin.google.com
+    /// account. Secondary emails are also recovery email addresses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AlternateEmail {
@@ -195,9 +193,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int DomainFieldNumber = 6;
     private string domain_ = "";
     /// <summary>
-    /// Required. Primary domain used by the customer.
-    /// Domain of primary contact email is required to be same as the provided
-    /// domain.
+    /// Required. The customer's primary domain. Must match the primary contact
+    /// email's domain.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Domain {
@@ -211,7 +208,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the customer is created.
+    /// Output only. Time when the customer was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -225,7 +222,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int UpdateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which the customer is updated.
+    /// Output only. Time when the customer was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -239,8 +236,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int CloudIdentityIdFieldNumber = 9;
     private string cloudIdentityId_ = "";
     /// <summary>
-    /// Output only. Customer's cloud_identity_id.
-    /// Populated only if a Cloud Identity resource exists for this customer.
+    /// Output only. The customer's Cloud Identity ID if the customer has a Cloud
+    /// Identity resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CloudIdentityId {
@@ -778,7 +775,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int FirstNameFieldNumber = 1;
     private string firstName_ = "";
     /// <summary>
-    /// First name of the contact in the customer account.
+    /// The customer account contact's first name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FirstName {
@@ -792,7 +789,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int LastNameFieldNumber = 2;
     private string lastName_ = "";
     /// <summary>
-    /// Last name of the contact in the customer account.
+    /// The customer account contact's last name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LastName {
@@ -806,8 +803,8 @@ namespace Google.Cloud.Channel.V1 {
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// Output only. Display name of the contact in the customer account.
-    /// Populated by combining customer first name and last name.
+    /// Output only. The customer account contact's display name, formatted as a
+    /// combination of the customer's first and last name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -821,10 +818,9 @@ namespace Google.Cloud.Channel.V1 {
     public const int EmailFieldNumber = 5;
     private string email_ = "";
     /// <summary>
-    /// Email of the contact in the customer account.
-    /// Email is required for entitlements that need creation of admin.google.com
-    /// accounts. The email will be the username used in credentials to access the
-    /// admin.google.com account.
+    /// The customer account's contact email. Required for entitlements that create
+    /// admin.google.com accounts, and serves as the customer's username for those
+    /// accounts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Email {
@@ -838,7 +834,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int TitleFieldNumber = 6;
     private string title_ = "";
     /// <summary>
-    /// Optional. Job title of the contact in the customer account.
+    /// Optional. The customer account contact's job title.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Title {
@@ -852,7 +848,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int PhoneFieldNumber = 7;
     private string phone_ = "";
     /// <summary>
-    /// Phone number of the contact in the customer account.
+    /// The customer account's contact phone number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Phone {

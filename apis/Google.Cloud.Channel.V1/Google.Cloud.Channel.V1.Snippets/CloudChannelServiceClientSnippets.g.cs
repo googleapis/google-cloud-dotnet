@@ -1694,6 +1694,39 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LookupOffer</summary>
+        public void LookupOfferRequestObject()
+        {
+            // Snippet: LookupOffer(LookupOfferRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            LookupOfferRequest request = new LookupOfferRequest
+            {
+                EntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+            };
+            // Make the request
+            Offer response = cloudChannelServiceClient.LookupOffer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupOfferAsync</summary>
+        public async Task LookupOfferRequestObjectAsync()
+        {
+            // Snippet: LookupOfferAsync(LookupOfferRequest, CallSettings)
+            // Additional: LookupOfferAsync(LookupOfferRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LookupOfferRequest request = new LookupOfferRequest
+            {
+                EntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+            };
+            // Make the request
+            Offer response = await cloudChannelServiceClient.LookupOfferAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListProducts</summary>
         public void ListProductsRequestObject()
         {

@@ -82,6 +82,7 @@ namespace Google.Cloud.Channel.V1
             GetChannelPartnerLinkSettings = existing.GetChannelPartnerLinkSettings;
             CreateChannelPartnerLinkSettings = existing.CreateChannelPartnerLinkSettings;
             UpdateChannelPartnerLinkSettings = existing.UpdateChannelPartnerLinkSettings;
+            LookupOfferSettings = existing.LookupOfferSettings;
             ListProductsSettings = existing.ListProductsSettings;
             ListSkusSettings = existing.ListSkusSettings;
             ListOffersSettings = existing.ListOffersSettings;
@@ -655,6 +656,21 @@ namespace Google.Cloud.Channel.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.LookupOffer</c> and <c>CloudChannelServiceClient.LookupOfferAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupOfferSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudChannelServiceClient.ListProducts</c> and <c>CloudChannelServiceClient.ListProductsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -978,7 +994,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -998,7 +1014,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1018,7 +1034,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1038,7 +1054,7 @@ namespace Google.Cloud.Channel.V1
             GetCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1064,7 +1080,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1090,7 +1106,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1113,7 +1129,7 @@ namespace Google.Cloud.Channel.V1
             GetCustomerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1139,7 +1155,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1165,7 +1181,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1383,7 +1399,7 @@ namespace Google.Cloud.Channel.V1
             UpdateCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1400,7 +1416,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1417,7 +1433,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1434,7 +1450,7 @@ namespace Google.Cloud.Channel.V1
             DeleteCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1456,7 +1472,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1478,7 +1494,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1497,7 +1513,7 @@ namespace Google.Cloud.Channel.V1
             DeleteCustomerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1519,7 +1535,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1541,7 +1557,7 @@ namespace Google.Cloud.Channel.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -1812,7 +1828,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+        /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1830,7 +1846,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+        /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -1848,7 +1864,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+        /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -3188,7 +3204,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+        /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
         /// You must be a distributor to call this method.
         /// 
         /// Possible error codes:
@@ -3209,7 +3225,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+        /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
         /// You must be a distributor to call this method.
         /// 
         /// Possible error codes:
@@ -3230,7 +3246,7 @@ namespace Google.Cloud.Channel.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+        /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
         /// You must be a distributor to call this method.
         /// 
         /// Possible error codes:
@@ -3426,6 +3442,60 @@ namespace Google.Cloud.Channel.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ChannelPartnerLink> UpdateChannelPartnerLinkAsync(UpdateChannelPartnerLinkRequest request, st::CancellationToken cancellationToken) =>
             UpdateChannelPartnerLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * NOT_FOUND: Entitlement or offer was not found.
+        /// 
+        /// Return value:
+        /// The [Offer][google.cloud.channel.v1.Offer] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Offer LookupOffer(LookupOfferRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * NOT_FOUND: Entitlement or offer was not found.
+        /// 
+        /// Return value:
+        /// The [Offer][google.cloud.channel.v1.Offer] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Offer> LookupOfferAsync(LookupOfferRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * NOT_FOUND: Entitlement or offer was not found.
+        /// 
+        /// Return value:
+        /// The [Offer][google.cloud.channel.v1.Offer] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Offer> LookupOfferAsync(LookupOfferRequest request, st::CancellationToken cancellationToken) =>
+            LookupOfferAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the Products the reseller is authorized to sell.
@@ -3860,6 +3930,8 @@ namespace Google.Cloud.Channel.V1
 
         private readonly gaxgrpc::ApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink> _callUpdateChannelPartnerLink;
 
+        private readonly gaxgrpc::ApiCall<LookupOfferRequest, Offer> _callLookupOffer;
+
         private readonly gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> _callListProducts;
 
         private readonly gaxgrpc::ApiCall<ListSkusRequest, ListSkusResponse> _callListSkus;
@@ -3973,6 +4045,9 @@ namespace Google.Cloud.Channel.V1
             _callUpdateChannelPartnerLink = clientHelper.BuildApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink>(grpcClient.UpdateChannelPartnerLinkAsync, grpcClient.UpdateChannelPartnerLink, effectiveSettings.UpdateChannelPartnerLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateChannelPartnerLink);
             Modify_UpdateChannelPartnerLinkApiCall(ref _callUpdateChannelPartnerLink);
+            _callLookupOffer = clientHelper.BuildApiCall<LookupOfferRequest, Offer>(grpcClient.LookupOfferAsync, grpcClient.LookupOffer, effectiveSettings.LookupOfferSettings).WithGoogleRequestParam("entitlement", request => request.Entitlement);
+            Modify_ApiCall(ref _callLookupOffer);
+            Modify_LookupOfferApiCall(ref _callLookupOffer);
             _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(grpcClient.ListProductsAsync, grpcClient.ListProducts, effectiveSettings.ListProductsSettings);
             Modify_ApiCall(ref _callListProducts);
             Modify_ListProductsApiCall(ref _callListProducts);
@@ -4052,6 +4127,8 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_UpdateChannelPartnerLinkApiCall(ref gaxgrpc::ApiCall<UpdateChannelPartnerLinkRequest, ChannelPartnerLink> call);
 
+        partial void Modify_LookupOfferApiCall(ref gaxgrpc::ApiCall<LookupOfferRequest, Offer> call);
+
         partial void Modify_ListProductsApiCall(ref gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> call);
 
         partial void Modify_ListSkusApiCall(ref gaxgrpc::ApiCall<ListSkusRequest, ListSkusResponse> call);
@@ -4123,6 +4200,8 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_UpdateChannelPartnerLinkRequest(ref UpdateChannelPartnerLinkRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_LookupOfferRequest(ref LookupOfferRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListProductsRequest(ref ListProductsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSkusRequest(ref ListSkusRequest request, ref gaxgrpc::CallSettings settings);
@@ -4182,7 +4261,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -4205,7 +4284,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+        /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -4376,7 +4455,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -4396,7 +4475,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+        /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
         /// 
         /// Possible error codes:
         /// 
@@ -4639,7 +4718,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+        /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -4660,7 +4739,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+        /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
         /// 
         /// Possible error codes:
         /// 
@@ -5493,7 +5572,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+        /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
         /// You must be a distributor to call this method.
         /// 
         /// Possible error codes:
@@ -5517,7 +5596,7 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
-        /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+        /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
         /// You must be a distributor to call this method.
         /// 
         /// Possible error codes:
@@ -5668,6 +5747,48 @@ namespace Google.Cloud.Channel.V1
         {
             Modify_UpdateChannelPartnerLinkRequest(ref request, ref callSettings);
             return _callUpdateChannelPartnerLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * NOT_FOUND: Entitlement or offer was not found.
+        /// 
+        /// Return value:
+        /// The [Offer][google.cloud.channel.v1.Offer] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Offer LookupOffer(LookupOfferRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupOfferRequest(ref request, ref callSettings);
+            return _callLookupOffer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+        /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+        /// * NOT_FOUND: Entitlement or offer was not found.
+        /// 
+        /// Return value:
+        /// The [Offer][google.cloud.channel.v1.Offer] resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Offer> LookupOfferAsync(LookupOfferRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupOfferRequest(ref request, ref callSettings);
+            return _callLookupOffer.Async(request, callSettings);
         }
 
         /// <summary>

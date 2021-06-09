@@ -749,6 +749,76 @@ namespace Google.Cloud.Channel.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void LookupOfferRequestObject()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            LookupOfferRequest request = new LookupOfferRequest
+            {
+                EntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+            };
+            Offer expectedResponse = new Offer
+            {
+                OfferName = OfferName.FromAccountOffer("[ACCOUNT]", "[OFFER]"),
+                MarketingInfo = new MarketingInfo(),
+                Sku = new Sku(),
+                Plan = new Plan(),
+                Constraints = new Constraints(),
+                PriceByResources =
+                {
+                    new PriceByResource(),
+                },
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                ParameterDefinitions =
+                {
+                    new ParameterDefinition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.LookupOffer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            Offer response = client.LookupOffer(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task LookupOfferRequestObjectAsync()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            LookupOfferRequest request = new LookupOfferRequest
+            {
+                EntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+            };
+            Offer expectedResponse = new Offer
+            {
+                OfferName = OfferName.FromAccountOffer("[ACCOUNT]", "[OFFER]"),
+                MarketingInfo = new MarketingInfo(),
+                Sku = new Sku(),
+                Plan = new Plan(),
+                Constraints = new Constraints(),
+                PriceByResources =
+                {
+                    new PriceByResource(),
+                },
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                ParameterDefinitions =
+                {
+                    new ParameterDefinition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.LookupOfferAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Offer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            Offer responseCallSettings = await client.LookupOfferAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Offer responseCancellationToken = await client.LookupOfferAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void RegisterSubscriberRequestObject()
         {
             moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
