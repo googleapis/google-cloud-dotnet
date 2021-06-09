@@ -1,5 +1,25 @@
 # Version history
 
+# Version 3.9.0, released 2021-06-09
+
+- [Commit 0fb438e](https://github.com/googleapis/google-cloud-dotnet/commit/0fb438e): feat(spanner): add `query_optimizer_statistics_package` support (see below)
+
+The optimizer statistics package can be set through `QueryOptions`, which can be configured through the following mechanisms:
+
+- At the `SpannerConnection` level.
+- Through the `SPANNER_OPTIMIZER_STATISTICS_PACKAGE` environment variable.
+- At a query level.
+
+If the options are configured through multiple mechanisms then:
+
+- Options set at an environment variable level will override options configured at the `SpannerConnection` level.
+- Options set at a query-level will override options set at either the `SpannerConnection` or environment variable level.
+
+If no options are set, the optimizer statistics package will default
+to the package the database is pinned to. If the database is not
+pinned to a specific package, then the Cloud Spanner backend will
+use the "latest" version.
+
 # Version 3.8.0, released 2021-05-18
 
 - [Commit a334723](https://github.com/googleapis/google-cloud-dotnet/commit/a334723): feat: add option to return read timestamp
