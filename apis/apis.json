@@ -108,6 +108,22 @@
       "protoPath": "google/cloud/apigateway/v1"
     },
     {
+      "id": "Google.Cloud.ApigeeConnect.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Apigee Connect",
+      "productUrl": "https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect",
+      "description": "Recommended Google client library to access the Apigee Connect API which allows the Apigee hybrid management plane to connect securely to the MART service in the runtime plane.",
+      "tags": [
+        "apigee",
+        "mart",
+        "hybrid"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/apigeeconnect/v1"
+    },
+    {
       "id": "Google.Cloud.AppEngine.V1",
       "version": "1.1.0",
       "type": "grpc",
