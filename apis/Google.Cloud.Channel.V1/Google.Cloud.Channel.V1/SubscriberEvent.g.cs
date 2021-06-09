@@ -32,22 +32,23 @@ namespace Google.Cloud.Channel.V1 {
             "IAEoDjIrLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkN1c3RvbWVyRXZlbnQu",
             "VHlwZSJVCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIaChZQUklNQVJZ",
             "X0RPTUFJTl9DSEFOR0VEEAESGwoXUFJJTUFSWV9ET01BSU5fVkVSSUZJRUQQ",
-            "AiKYAwoQRW50aXRsZW1lbnRFdmVudBJBCgtlbnRpdGxlbWVudBgBIAEoCUIs",
+            "AiKxAwoQRW50aXRsZW1lbnRFdmVudBJBCgtlbnRpdGxlbWVudBgBIAEoCUIs",
             "+kEpCidjbG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vRW50aXRsZW1lbnQS",
             "QgoKZXZlbnRfdHlwZRgCIAEoDjIuLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
-            "LkVudGl0bGVtZW50RXZlbnQuVHlwZSL8AQoEVHlwZRIUChBUWVBFX1VOU1BF",
+            "LkVudGl0bGVtZW50RXZlbnQuVHlwZSKVAgoEVHlwZRIUChBUWVBFX1VOU1BF",
             "Q0lGSUVEEAASCwoHQ1JFQVRFRBABEhcKE1BSSUNFX1BMQU5fU1dJVENIRUQQ",
             "AxIWChJDT01NSVRNRU5UX0NIQU5HRUQQBBILCgdSRU5FV0VEEAUSDQoJU1VT",
             "UEVOREVEEAYSDQoJQUNUSVZBVEVEEAcSDQoJQ0FOQ0VMTEVEEAgSDwoLU0tV",
             "X0NIQU5HRUQQCRIbChdSRU5FV0FMX1NFVFRJTkdfQ0hBTkdFRBAKEhgKFFBB",
             "SURfU0VSVklDRV9TVEFSVEVEEAsSHgoaTElDRU5TRV9BU1NJR05NRU5UX0NI",
-            "QU5HRUQQDCKkAQoPU3Vic2NyaWJlckV2ZW50EkAKDmN1c3RvbWVyX2V2ZW50",
-            "GAEgASgLMiYuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ3VzdG9tZXJFdmVu",
-            "dEgAEkYKEWVudGl0bGVtZW50X2V2ZW50GAIgASgLMikuZ29vZ2xlLmNsb3Vk",
-            "LmNoYW5uZWwudjEuRW50aXRsZW1lbnRFdmVudEgAQgcKBWV2ZW50QnUKG2Nv",
-            "bS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUIUU3Vic2NyaWJlckV2ZW50UHJv",
-            "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9jaGFubmVsL3YxO2NoYW5uZWxiBnByb3RvMw=="));
+            "QU5HRUQQDBIXChNMSUNFTlNFX0NBUF9DSEFOR0VEEA0ipAEKD1N1YnNjcmli",
+            "ZXJFdmVudBJACg5jdXN0b21lcl9ldmVudBgBIAEoCzImLmdvb2dsZS5jbG91",
+            "ZC5jaGFubmVsLnYxLkN1c3RvbWVyRXZlbnRIABJGChFlbnRpdGxlbWVudF9l",
+            "dmVudBgCIAEoCzIpLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkVudGl0bGVt",
+            "ZW50RXZlbnRIAEIHCgVldmVudEJ1Chtjb20uZ29vZ2xlLmNsb3VkLmNoYW5u",
+            "ZWwudjFCFFN1YnNjcmliZXJFdmVudFByb3RvUAFaPmdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvY2hhbm5lbC92MTtjaGFu",
+            "bmVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -578,6 +579,10 @@ namespace Google.Cloud.Channel.V1 {
         /// License was assigned to or revoked from a user.
         /// </summary>
         [pbr::OriginalName("LICENSE_ASSIGNMENT_CHANGED")] LicenseAssignmentChanged = 12,
+        /// <summary>
+        /// License cap was changed for the entitlement.
+        /// </summary>
+        [pbr::OriginalName("LICENSE_CAP_CHANGED")] LicenseCapChanged = 13,
       }
 
     }

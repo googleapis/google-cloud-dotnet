@@ -114,6 +114,8 @@ namespace Google.Cloud.Channel.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChannelPartnerLink> __Marshaller_google_cloud_channel_v1_ChannelPartnerLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChannelPartnerLink.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_CreateChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.LookupOfferRequest> __Marshaller_google_cloud_channel_v1_LookupOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.LookupOfferRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Offer> __Marshaller_google_cloud_channel_v1_Offer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Offer.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListProductsRequest> __Marshaller_google_cloud_channel_v1_ListProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListProductsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListProductsResponse> __Marshaller_google_cloud_channel_v1_ListProductsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListProductsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkusRequest> __Marshaller_google_cloud_channel_v1_ListSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkusRequest.Parser));
@@ -306,6 +308,13 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest,
         __Marshaller_google_cloud_channel_v1_ChannelPartnerLink);
 
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer> __Method_LookupOffer = new grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LookupOffer",
+        __Marshaller_google_cloud_channel_v1_LookupOfferRequest,
+        __Marshaller_google_cloud_channel_v1_Offer);
+
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse> __Method_ListProducts = new grpc::Method<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -393,7 +402,7 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
       /// Possible error codes:
       ///
@@ -486,7 +495,7 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
       ///
       /// Possible error codes:
       ///
@@ -611,7 +620,7 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
       /// Possible error codes:
       ///
@@ -1011,7 +1020,7 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -1092,6 +1101,26 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLink(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: Entitlement or offer was not found.
+      ///
+      /// Return value:
+      /// The [Offer][google.cloud.channel.v1.Offer] resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Offer> LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1370,7 +1399,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomers, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
       /// Possible error codes:
       ///
@@ -1393,7 +1422,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
       /// Possible error codes:
       ///
@@ -1414,7 +1443,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomer, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
       /// Possible error codes:
       ///
@@ -1437,7 +1466,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
+      /// Returns the requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
       /// Possible error codes:
       ///
@@ -1742,7 +1771,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomer, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
       ///
       /// Possible error codes:
       ///
@@ -1762,7 +1791,7 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
       ///
       /// Possible error codes:
       ///
@@ -1780,7 +1809,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomer, null, options, request);
       }
       /// <summary>
-      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
       ///
       /// Possible error codes:
       ///
@@ -1800,7 +1829,7 @@ namespace Google.Cloud.Channel.V1 {
         return DeleteCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
+      /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently.
       ///
       /// Possible error codes:
       ///
@@ -2242,7 +2271,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferableOffers, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
       /// Possible error codes:
       ///
@@ -2263,7 +2292,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
       /// Possible error codes:
       ///
@@ -2282,7 +2311,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntitlement, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
       /// Possible error codes:
       ///
@@ -2303,7 +2332,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
+      /// Returns the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
       /// Possible error codes:
       ///
@@ -3842,7 +3871,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListChannelPartnerLinks, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -3866,7 +3895,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -3888,7 +3917,7 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -3912,7 +3941,7 @@ namespace Google.Cloud.Channel.V1 {
         return GetChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
+      /// Returns the requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// You must be a distributor to call this method.
       ///
       /// Possible error codes:
@@ -4184,6 +4213,86 @@ namespace Google.Cloud.Channel.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelPartnerLink, null, options, request);
+      }
+      /// <summary>
+      /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: Entitlement or offer was not found.
+      ///
+      /// Return value:
+      /// The [Offer][google.cloud.channel.v1.Offer] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.Offer LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupOffer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: Entitlement or offer was not found.
+      ///
+      /// Return value:
+      /// The [Offer][google.cloud.channel.v1.Offer] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.Offer LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LookupOffer, null, options, request);
+      }
+      /// <summary>
+      /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: Entitlement or offer was not found.
+      ///
+      /// Return value:
+      /// The [Offer][google.cloud.channel.v1.Offer] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Offer> LookupOfferAsync(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupOfferAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The entitlement doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: Entitlement or offer was not found.
+      ///
+      /// Return value:
+      /// The [Offer][google.cloud.channel.v1.Offer] resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Offer> LookupOfferAsync(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LookupOffer, null, options, request);
       }
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
@@ -4894,6 +5003,7 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_GetChannelPartnerLink, serviceImpl.GetChannelPartnerLink)
           .AddMethod(__Method_CreateChannelPartnerLink, serviceImpl.CreateChannelPartnerLink)
           .AddMethod(__Method_UpdateChannelPartnerLink, serviceImpl.UpdateChannelPartnerLink)
+          .AddMethod(__Method_LookupOffer, serviceImpl.LookupOffer)
           .AddMethod(__Method_ListProducts, serviceImpl.ListProducts)
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
           .AddMethod(__Method_ListOffers, serviceImpl.ListOffers)
@@ -4935,6 +5045,7 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_GetChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.GetChannelPartnerLink));
       serviceBinder.AddMethod(__Method_CreateChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.CreateChannelPartnerLink));
       serviceBinder.AddMethod(__Method_UpdateChannelPartnerLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(serviceImpl.UpdateChannelPartnerLink));
+      serviceBinder.AddMethod(__Method_LookupOffer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(serviceImpl.LookupOffer));
       serviceBinder.AddMethod(__Method_ListProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(serviceImpl.ListProducts));
       serviceBinder.AddMethod(__Method_ListSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse>(serviceImpl.ListSkus));
       serviceBinder.AddMethod(__Method_ListOffers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListOffersRequest, global::Google.Cloud.Channel.V1.ListOffersResponse>(serviceImpl.ListOffers));

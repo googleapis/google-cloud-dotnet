@@ -154,6 +154,12 @@
                 "ListTransferableSkusAsync"
               ]
             },
+            "LookupOffer": {
+              "methods": [
+                "LookupOffer",
+                "LookupOfferAsync"
+              ]
+            },
             "ProvisionCloudIdentity": {
               "methods": [
                 "ProvisionCloudIdentity",
