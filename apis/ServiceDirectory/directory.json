@@ -1339,7 +1339,7 @@
         "google/api"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Gkeconnect.Gateway.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/gkehub/v1alpha2",
