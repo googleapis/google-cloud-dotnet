@@ -78,6 +78,19 @@
       "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
     },
     {
+      "ServiceDirectory": "google/ads/googleads/v8",
+      "Name": "googleads.googleapis.com",
+      "Title": "Google Ads API",
+      "Description": "Manage your Google Ads accounts, campaigns, and reports with this API.",
+      "ServiceConfigFile": "google/ads/googleads/v8/googleads_v8.yaml",
+      "Version": "v8",
+      "PackageFromDirectory": "google.ads.googleads.v8",
+      "PackageFromProtos": "<UNKNOWN - NO PROTOS WITH PACKAGES>",
+      "ImportDirectories": [],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
+    },
+    {
       "ServiceDirectory": "google/analytics/admin/v1alpha",
       "Name": "analyticsadmin.googleapis.com",
       "Title": "Google Analytics Admin API",
