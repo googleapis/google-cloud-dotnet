@@ -945,7 +945,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
@@ -969,7 +969,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
@@ -993,7 +993,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
@@ -1060,7 +1060,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="migrationJob">
         /// Required. Represents a [migration
-        /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+        /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
         /// object.
         /// </param>
         /// <param name="migrationJobId">
