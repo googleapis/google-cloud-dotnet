@@ -1067,7 +1067,7 @@ namespace Google.Cloud.CloudDms.V1 {
     private global::Google.Cloud.CloudDms.V1.MigrationJob migrationJob_;
     /// <summary>
     /// Required. Represents a [migration
-    /// job](https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.migrationJobs)
+    /// job](https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.migrationJobs)
     /// object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
