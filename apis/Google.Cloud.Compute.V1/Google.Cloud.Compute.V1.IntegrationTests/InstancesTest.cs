@@ -40,6 +40,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             CreateInstanceNonAsciiDescription();
             FetchInstance();
             PatchInstance();
+            UpdateDescriptionEmptyString();
             DeleteInstance();
 
             void CreateInstanceNonAsciiDescription()
@@ -77,6 +78,23 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 Assert.Equal("тест", instance.Description);
             }
 
+            /// <summary>
+            /// We want to test here: 1)set body field to empty string
+            ///                       2)optional body field not set
+            /// </summary>
+            void UpdateDescriptionEmptyString()
+            {
+                Instance instance = instancesClient.Get(projectId, zone, instanceName);
+                Assert.Equal("тест", instance.Description);
+                Assert.Equal(0, instance.Scheduling.MinNodeCpus);
+                instance.Description = "";
+                Operation updateOp = instancesClient.Update(projectId, zone, instanceName, instance);
+                _fixture.PollUntilCompleted(updateOp, "update instance", _output);
+                var fetched = instancesClient.Get(projectId, zone, instanceName);
+                Assert.Equal("", fetched.Description);
+                Assert.Equal(0, instance.Scheduling.MinNodeCpus);
+            }
+
             void DeleteInstance()
             {
                 _output.WriteLine($"Deleting instance with the name: {instanceName}");
@@ -105,7 +123,11 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             }
         }
 
-        [Fact(Skip = "resize fails")]
+        /// <summary>
+        /// We want to test here: 1)set body field to zero
+        ///                       2)set query param to zero
+        /// </summary>
+        [Fact]
         public void TestQueryParams()
         {
             string projectId = _fixture.ProjectId;
@@ -145,25 +167,37 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 InstanceGroupManager instanceGroupManager = new InstanceGroupManager
                 {
                     InstanceTemplate = insertTemplateOp.TargetLink,
-                    TargetSize = 1,
+                    TargetSize = 0,
                     Name = instanceGroupManagerName,
                     BaseInstanceName = "dotnetgapic"
                 };
 
                 Operation insertIgmOp = instanceGroupManagersClient.Insert(projectId, zone, instanceGroupManager);
-                _fixture.PollUntilCompleted(insertIgmOp, "insert group manager", _output);
+                _fixture.PollUntilCompleted(insertIgmOp, "insert group manager with 0 size", _output);
+                var inserted = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
+                Assert.Equal(0, inserted.TargetSize);
 
                 Operation resizeOp = instanceGroupManagersClient.Resize(
                     projectId,
                     zone,
                     instanceGroupManagerName,
+                    1
+                );
+                _fixture.PollUntilCompleted(resizeOp, "resize to 1", _output);
+
+                var resizedTo1 = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
+                Assert.Equal(1, resizedTo1.TargetSize);
+
+                Operation resizeToZeroOp = instanceGroupManagersClient.Resize(
+                    projectId,
+                    zone,
+                    instanceGroupManagerName,
                     0
                 );
-
-                _fixture.PollUntilCompleted(resizeOp, "resize", _output);
+                _fixture.PollUntilCompleted(resizeToZeroOp, "resize to 0", _output);
 
                 var fetched = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
-
+                _output.WriteLine($"fetched target size is {fetched.TargetSize} ");
                 Assert.Equal(0, fetched.TargetSize);
             }
             finally
