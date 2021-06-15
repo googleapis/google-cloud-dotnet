@@ -3234,7 +3234,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3245,7 +3246,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3256,7 +3258,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3267,7 +3270,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -3287,7 +3291,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -3307,7 +3312,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -3323,7 +3329,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -3343,7 +3350,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -3363,7 +3371,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -4530,7 +4539,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4544,7 +4554,8 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
         /// 
-        /// Returns an error if called on an asymmetric key.
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
