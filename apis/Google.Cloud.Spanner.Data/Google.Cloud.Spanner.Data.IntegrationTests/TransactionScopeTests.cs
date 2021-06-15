@@ -15,10 +15,10 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Transactions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -364,6 +364,36 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+        }
+        [Fact]
+        public async Task ParallelWriteAsync()
+        {
+            string[] keys = new string[] { IdGenerator.FromGuid(), IdGenerator.FromGuid(), IdGenerator.FromGuid() };
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            {
+                using var scope = new TransactionScope();
+                using var connection = _fixture.GetConnection();
+                await connection.OpenAsync();
+
+                await Task.WhenAll(keys.Select(key =>
+                {
+                    using var cmd = connection.CreateInsertCommand(_fixture.TableName);
+                    cmd.Parameters.Add("K", SpannerDbType.String).Value = key;
+                    cmd.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
+                    return cmd.ExecuteNonQueryAsync();
+                }));
+                scope.Complete();
+            });
+
+            // Read the inserted values.
+            using var connection = _fixture.GetConnection();
+            using var command = connection.CreateSelectCommand($"SELECT COUNT(*) AS C FROM {_fixture.TableName} WHERE K IN UNNEST(@Keys)");
+            command.Parameters.Add("Keys", SpannerDbType.ArrayOf(SpannerDbType.String)).Value = keys;
+            using var reader = command.ExecuteReader();
+
+            Assert.True(reader.Read());
+            Assert.Equal(keys.Length, reader.GetInt32(0));
+            Assert.False(reader.Read());
         }
 
         private void AssertDisposeThrows(Action<TransactionScope> action)
