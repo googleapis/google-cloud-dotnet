@@ -24,10 +24,12 @@ namespace Google.Cloud.Spanner.Data
 {
     internal sealed class VolatileResourceManager : ISinglePhaseNotification, ISpannerTransaction, IDisposable
     {
+        private readonly object _lock = new object();
         private readonly SpannerConnection _spannerConnection;
         private readonly TimestampBound _timestampBound;
         private readonly TransactionId _transactionId;
-        private SpannerTransaction _transaction;
+        private Task<SpannerTransaction> _transactionTask;
+        private bool _disposed = false;
 
         internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
         {
@@ -38,17 +40,33 @@ namespace Google.Cloud.Spanner.Data
 
         private Logger Logger => _spannerConnection.Logger;
 
+        private SpannerTransaction SpannerTransaction
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    return _transactionTask?.Result;
+                }
+            }
+        }
+
         public void Dispose()
         {
             try
             {
-                _transaction?.Dispose();
-                // Protect against multiple disposals
-                _transaction = null;
+                SpannerTransaction transaction = null;
+                lock (_lock)
+                {
+                    transaction = _transactionTask?.Result;
+                    // Protect against multiple disposals
+                    _transactionTask = null;
+                    _disposed = true;
+                }
+                transaction?.Dispose();
             }
             catch (Exception e)
             {
-
                 Logger.Error("Error disposing", e);
             }
         }
@@ -57,7 +75,7 @@ namespace Google.Cloud.Spanner.Data
         {
             try
             {
-                if (_transaction != null && !_transaction.HasMutations)
+                if (SpannerTransaction != null && !SpannerTransaction.HasMutations)
                 {
                     // In the case where our resource manager doesn't have any mutations, it was a read,
                     // which we will no-op and allow through even if it was a two phase commit.
@@ -91,7 +109,7 @@ namespace Google.Cloud.Spanner.Data
 
         public void Prepare(PreparingEnlistment preparingEnlistment)
         {
-            if (_transaction != null && !_transaction.HasMutations)
+            if (SpannerTransaction != null && !SpannerTransaction.HasMutations)
             {
                 // In the case where our resource manager doesn't have any mutations, it was a read,
                 // which we will no-op and allow through even if it was a two phase commit.
@@ -124,9 +142,9 @@ namespace Google.Cloud.Spanner.Data
             try
             {
                 // We don't need to roll back if we're in a read-only transaction, and indeed doing so will cause an error.
-                if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
+                if (SpannerTransaction != null && SpannerTransaction.Mode != TransactionMode.ReadOnly)
                 {
-                    ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction.Rollback(), "VolatileResourceManager.Rollback", Logger);
+                    ExecuteHelper.WithErrorTranslationAndProfiling(() => SpannerTransaction.Rollback(), "VolatileResourceManager.Rollback", Logger);
                 }
                 enlistment.Done();
             }
@@ -166,9 +184,9 @@ namespace Google.Cloud.Spanner.Data
             // If it's a read-only transaction, then just tell the outer transaction that everything is good.
             // This can happen with a read-only transaction or a write transaction where we never
             // executed any mutations.
-            if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
+            if (SpannerTransaction != null && SpannerTransaction.Mode != TransactionMode.ReadOnly)
             {
-                ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction.Commit(), "VolatileResourceManager.Commit", Logger);
+                ExecuteHelper.WithErrorTranslationAndProfiling(() => SpannerTransaction.Commit(), "VolatileResourceManager.Commit", Logger);
             }
         }
 
@@ -200,16 +218,29 @@ namespace Google.Cloud.Spanner.Data
         {
             // Note that we delay transaction creation (and thereby session allocation) until the first operation
             // (ExecuteMutations, ExecuteQuery, ExecuteDml)
-            if (_transaction == null)
+            var createdTransaction = false;
+            lock (_lock)
             {
-                _transaction =
-                    _timestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken).ConfigureAwait(false)
-                    : _transactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionId)
-                    : await _spannerConnection.BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
-                // The commit timeout is irrelevant for read-only transactions, but it's easier to set it unconditionally.
-                _transaction.CommitTimeout = timeoutSeconds;
+                if (_disposed)
+                {
+                    throw new ObjectDisposedException("The transaction has already been disposed");
+                }
+                if (_transactionTask == null)
+                {
+                    _transactionTask =
+                        _timestampBound != null ? _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken)
+                        : _transactionId != null ? Task.FromResult(_spannerConnection.BeginReadOnlyTransaction(_transactionId))
+                        : _spannerConnection.BeginTransactionAsync(cancellationToken);
+                    createdTransaction = true;
+                }
             }
-            return _transaction;
+            var transaction = await _transactionTask.ConfigureAwait(false);
+            if (createdTransaction)
+            {
+                // The commit timeout is irrelevant for read-only transactions, but it's easier to set it unconditionally.
+                transaction.CommitTimeout = timeoutSeconds;
+            }
+            return transaction;
         }
     }
 }
