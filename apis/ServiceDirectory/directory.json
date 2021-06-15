@@ -1243,6 +1243,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.EssentialContacts.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/eventarc/v1",
+      "Name": "eventarc.googleapis.com",
+      "Title": "Eventarc API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/eventarc/v1/eventarc_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.eventarc.v1",
+      "PackageFromProtos": "google.cloud.eventarc.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/eventarc/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Eventarc.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/functions/v1",
       "Name": "cloudfunctions.googleapis.com",
       "Title": "Cloud Functions API",
