@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListTriggers",
+    "client": "EventarcClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
