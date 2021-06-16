@@ -47,10 +47,12 @@ namespace Google.Cloud.Compute.V1
             AddResourcePoliciesSettings = existing.AddResourcePoliciesSettings;
             AggregatedListSettings = existing.AggregatedListSettings;
             AttachDiskSettings = existing.AttachDiskSettings;
+            BulkInsertSettings = existing.BulkInsertSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteAccessConfigSettings = existing.DeleteAccessConfigSettings;
             DetachDiskSettings = existing.DetachDiskSettings;
             GetSettings = existing.GetSettings;
+            GetEffectiveFirewallsSettings = existing.GetEffectiveFirewallsSettings;
             GetGuestAttributesSettings = existing.GetGuestAttributesSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             GetScreenshotSettings = existing.GetScreenshotSettings;
@@ -137,6 +139,18 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings AttachDiskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.BulkInsert</c>
+        ///  and <c>InstancesClient.BulkInsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkInsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Delete</c>
         /// and <c>InstancesClient.DeleteAsync</c>.
         /// </summary>
@@ -183,6 +197,18 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.GetEffectiveFirewalls</c> and <c>InstancesClient.GetEffectiveFirewallsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEffectiveFirewallsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1090,7 +1116,95 @@ namespace Google.Cloud.Compute.V1
             AttachDiskAsync(project, zone, instance, attachedDiskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, st::CancellationToken cancellationToken) =>
+            BulkInsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkInsertInstanceResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation BulkInsert(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkInsert(new BulkInsertInstanceRequest
+            {
+                BulkInsertInstanceResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertInstanceResourceResource, nameof(bulkInsertInstanceResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkInsertInstanceResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkInsertAsync(new BulkInsertInstanceRequest
+            {
+                BulkInsertInstanceResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertInstanceResourceResource, nameof(bulkInsertInstanceResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkInsertInstanceResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, st::CancellationToken cancellationToken) =>
+            BulkInsertAsync(project, zone, bulkInsertInstanceResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1099,7 +1213,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1108,7 +1222,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1117,7 +1231,7 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1139,7 +1253,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1161,7 +1275,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1473,6 +1587,105 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Instance> GetAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             GetAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancesGetEffectiveFirewallsResponse GetEffectiveFirewalls(GetEffectiveFirewallsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancesGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancesGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsInstanceRequest request, st::CancellationToken cancellationToken) =>
+            GetEffectiveFirewallsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="networkInterface">
+        /// The name of the network interface to get the effective firewalls.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancesGetEffectiveFirewallsResponse GetEffectiveFirewalls(string project, string zone, string instance, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveFirewalls(new GetEffectiveFirewallsInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterface = gax::GaxPreconditions.CheckNotNullOrEmpty(networkInterface, nameof(networkInterface)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="networkInterface">
+        /// The name of the network interface to get the effective firewalls.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancesGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(string project, string zone, string instance, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveFirewallsAsync(new GetEffectiveFirewallsInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterface = gax::GaxPreconditions.CheckNotNullOrEmpty(networkInterface, nameof(networkInterface)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="networkInterface">
+        /// The name of the network interface to get the effective firewalls.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancesGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(string project, string zone, string instance, string networkInterface, st::CancellationToken cancellationToken) =>
+            GetEffectiveFirewallsAsync(project, zone, instance, networkInterface, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the specified guest attributes entry.
@@ -4313,7 +4526,7 @@ namespace Google.Cloud.Compute.V1
             UpdateDisplayDeviceAsync(project, zone, instance, displayDeviceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4322,7 +4535,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4331,7 +4544,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4340,7 +4553,7 @@ namespace Google.Cloud.Compute.V1
             UpdateNetworkInterfaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4370,7 +4583,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4400,7 +4613,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4536,6 +4749,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<AttachDiskInstanceRequest, Operation> _callAttachDisk;
 
+        private readonly gaxgrpc::ApiCall<BulkInsertInstanceRequest, Operation> _callBulkInsert;
+
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<DeleteAccessConfigInstanceRequest, Operation> _callDeleteAccessConfig;
@@ -4543,6 +4758,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<DetachDiskInstanceRequest, Operation> _callDetachDisk;
 
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGet;
+
+        private readonly gaxgrpc::ApiCall<GetEffectiveFirewallsInstanceRequest, InstancesGetEffectiveFirewallsResponse> _callGetEffectiveFirewalls;
 
         private readonly gaxgrpc::ApiCall<GetGuestAttributesInstanceRequest, GuestAttributes> _callGetGuestAttributes;
 
@@ -4630,6 +4847,9 @@ namespace Google.Cloud.Compute.V1
             _callAttachDisk = clientHelper.BuildApiCall<AttachDiskInstanceRequest, Operation>(grpcClient.AttachDiskAsync, grpcClient.AttachDisk, effectiveSettings.AttachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAttachDisk);
             Modify_AttachDiskApiCall(ref _callAttachDisk);
+            _callBulkInsert = clientHelper.BuildApiCall<BulkInsertInstanceRequest, Operation>(grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            Modify_ApiCall(ref _callBulkInsert);
+            Modify_BulkInsertApiCall(ref _callBulkInsert);
             _callDelete = clientHelper.BuildApiCall<DeleteInstanceRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -4642,6 +4862,9 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsInstanceRequest, InstancesGetEffectiveFirewallsResponse>(grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callGetEffectiveFirewalls);
+            Modify_GetEffectiveFirewallsApiCall(ref _callGetEffectiveFirewalls);
             _callGetGuestAttributes = clientHelper.BuildApiCall<GetGuestAttributesInstanceRequest, GuestAttributes>(grpcClient.GetGuestAttributesAsync, grpcClient.GetGuestAttributes, effectiveSettings.GetGuestAttributesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetGuestAttributes);
             Modify_GetGuestAttributesApiCall(ref _callGetGuestAttributes);
@@ -4751,6 +4974,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AttachDiskApiCall(ref gaxgrpc::ApiCall<AttachDiskInstanceRequest, Operation> call);
 
+        partial void Modify_BulkInsertApiCall(ref gaxgrpc::ApiCall<BulkInsertInstanceRequest, Operation> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, Operation> call);
 
         partial void Modify_DeleteAccessConfigApiCall(ref gaxgrpc::ApiCall<DeleteAccessConfigInstanceRequest, Operation> call);
@@ -4758,6 +4983,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DetachDiskApiCall(ref gaxgrpc::ApiCall<DetachDiskInstanceRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
+
+        partial void Modify_GetEffectiveFirewallsApiCall(ref gaxgrpc::ApiCall<GetEffectiveFirewallsInstanceRequest, InstancesGetEffectiveFirewallsResponse> call);
 
         partial void Modify_GetGuestAttributesApiCall(ref gaxgrpc::ApiCall<GetGuestAttributesInstanceRequest, GuestAttributes> call);
 
@@ -4836,6 +5063,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AttachDiskInstanceRequest(ref AttachDiskInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BulkInsertInstanceRequest(ref BulkInsertInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAccessConfigInstanceRequest(ref DeleteAccessConfigInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -4843,6 +5072,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DetachDiskInstanceRequest(ref DetachDiskInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEffectiveFirewallsInstanceRequest(ref GetEffectiveFirewallsInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetGuestAttributesInstanceRequest(ref GetGuestAttributesInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5005,7 +5236,31 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkInsertInstanceRequest(ref request, ref callSettings);
+            return _callBulkInsert.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates multiple instances. Count specifies the number of instances to create.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkInsertInstanceRequest(ref request, ref callSettings);
+            return _callBulkInsert.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5017,7 +5272,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5098,6 +5353,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InstancesGetEffectiveFirewallsResponse GetEffectiveFirewalls(GetEffectiveFirewallsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveFirewallsInstanceRequest(ref request, ref callSettings);
+            return _callGetEffectiveFirewalls.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns effective firewalls applied to an interface of the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InstancesGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveFirewallsInstanceRequest(ref request, ref callSettings);
+            return _callGetEffectiveFirewalls.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5821,7 +6100,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5833,7 +6112,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an instance's network interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

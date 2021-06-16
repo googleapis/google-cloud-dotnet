@@ -449,6 +449,80 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabelsRequestObject()
+        {
+            // Snippet: SetLabels(SetLabelsForwardingRuleRequest, CallSettings)
+            // Create client
+            ForwardingRulesClient forwardingRulesClient = ForwardingRulesClient.Create();
+            // Initialize request argument(s)
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                RequestId = "",
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            // Make the request
+            Operation response = forwardingRulesClient.SetLabels(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsRequestObjectAsync()
+        {
+            // Snippet: SetLabelsAsync(SetLabelsForwardingRuleRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsForwardingRuleRequest, CancellationToken)
+            // Create client
+            ForwardingRulesClient forwardingRulesClient = await ForwardingRulesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                RequestId = "",
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            // Make the request
+            Operation response = await forwardingRulesClient.SetLabelsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabels()
+        {
+            // Snippet: SetLabels(string, string, string, RegionSetLabelsRequest, CallSettings)
+            // Create client
+            ForwardingRulesClient forwardingRulesClient = ForwardingRulesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
+            // Make the request
+            Operation response = forwardingRulesClient.SetLabels(project, region, resource, regionSetLabelsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync()
+        {
+            // Snippet: SetLabelsAsync(string, string, string, RegionSetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(string, string, string, RegionSetLabelsRequest, CancellationToken)
+            // Create client
+            ForwardingRulesClient forwardingRulesClient = await ForwardingRulesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
+            // Make the request
+            Operation response = await forwardingRulesClient.SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetTarget</summary>
         public void SetTargetRequestObject()
         {

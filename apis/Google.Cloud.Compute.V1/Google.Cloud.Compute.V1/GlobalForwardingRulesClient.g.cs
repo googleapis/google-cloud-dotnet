@@ -50,6 +50,7 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
+            SetLabelsSettings = existing.SetLabelsSettings;
             SetTargetSettings = existing.SetTargetSettings;
             OnCopy(existing);
         }
@@ -115,6 +116,18 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GlobalForwardingRulesClient.SetLabels</c> and <c>GlobalForwardingRulesClient.SetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -662,6 +675,94 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, forwardingRule, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+            SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation SetLabels(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetLabels(new SetLabelsGlobalForwardingRuleRequest
+            {
+                GlobalSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetLabelsRequestResource, nameof(globalSetLabelsRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetLabelsAsync(new SetLabelsGlobalForwardingRuleRequest
+            {
+                GlobalSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetLabelsRequestResource, nameof(globalSetLabelsRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="globalSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+            SetLabelsAsync(project, resource, globalSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -766,6 +867,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchGlobalForwardingRuleRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<SetLabelsGlobalForwardingRuleRequest, Operation> _callSetLabels;
+
         private readonly gaxgrpc::ApiCall<SetTargetGlobalForwardingRuleRequest, Operation> _callSetTarget;
 
         /// <summary>
@@ -794,6 +897,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchGlobalForwardingRuleRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callSetLabels = clientHelper.BuildApiCall<SetLabelsGlobalForwardingRuleRequest, Operation>(grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetLabels);
+            Modify_SetLabelsApiCall(ref _callSetLabels);
             _callSetTarget = clientHelper.BuildApiCall<SetTargetGlobalForwardingRuleRequest, Operation>(grpcClient.SetTargetAsync, grpcClient.SetTarget, effectiveSettings.SetTargetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callSetTarget);
             Modify_SetTargetApiCall(ref _callSetTarget);
@@ -812,6 +918,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchGlobalForwardingRuleRequest, Operation> call);
 
+        partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsGlobalForwardingRuleRequest, Operation> call);
+
         partial void Modify_SetTargetApiCall(ref gaxgrpc::ApiCall<SetTargetGlobalForwardingRuleRequest, Operation> call);
 
         partial void OnConstruction(GlobalForwardingRules.GlobalForwardingRulesClient grpcClient, GlobalForwardingRulesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -828,6 +936,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListGlobalForwardingRulesRequest(ref ListGlobalForwardingRulesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchGlobalForwardingRuleRequest(ref PatchGlobalForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetLabelsGlobalForwardingRuleRequest(ref SetLabelsGlobalForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetTargetGlobalForwardingRuleRequest(ref SetTargetGlobalForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -949,6 +1059,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_PatchGlobalForwardingRuleRequest(ref request, ref callSettings);
             return _callPatch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
+            return _callSetLabels.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
+            return _callSetLabels.Async(request, callSettings);
         }
 
         /// <summary>

@@ -41,6 +41,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SupportsPzs = false,
                 Region = "regionedb20d96",
                 AvailableCpuPlatforms =
                 {
@@ -73,6 +74,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SupportsPzs = false,
                 Region = "regionedb20d96",
                 AvailableCpuPlatforms =
                 {
@@ -107,6 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SupportsPzs = false,
                 Region = "regionedb20d96",
                 AvailableCpuPlatforms =
                 {
@@ -139,6 +142,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                SupportsPzs = false,
                 Region = "regionedb20d96",
                 AvailableCpuPlatforms =
                 {

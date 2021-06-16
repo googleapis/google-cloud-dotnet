@@ -359,6 +359,76 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Patch</summary>
+        public void PatchRequestObject()
+        {
+            // Snippet: Patch(PatchTargetHttpsProxyRequest, CallSettings)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = TargetHttpsProxiesClient.Create();
+            // Initialize request argument(s)
+            PatchTargetHttpsProxyRequest request = new PatchTargetHttpsProxyRequest
+            {
+                RequestId = "",
+                TargetHttpsProxy = "",
+                Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
+            };
+            // Make the request
+            Operation response = targetHttpsProxiesClient.Patch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchRequestObjectAsync()
+        {
+            // Snippet: PatchAsync(PatchTargetHttpsProxyRequest, CallSettings)
+            // Additional: PatchAsync(PatchTargetHttpsProxyRequest, CancellationToken)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = await TargetHttpsProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchTargetHttpsProxyRequest request = new PatchTargetHttpsProxyRequest
+            {
+                RequestId = "",
+                TargetHttpsProxy = "",
+                Project = "",
+                TargetHttpsProxyResource = new TargetHttpsProxy(),
+            };
+            // Make the request
+            Operation response = await targetHttpsProxiesClient.PatchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void Patch()
+        {
+            // Snippet: Patch(string, string, TargetHttpsProxy, CallSettings)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = TargetHttpsProxiesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string targetHttpsProxy = "";
+            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy();
+            // Make the request
+            Operation response = targetHttpsProxiesClient.Patch(project, targetHttpsProxy, targetHttpsProxyResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchAsync()
+        {
+            // Snippet: PatchAsync(string, string, TargetHttpsProxy, CallSettings)
+            // Additional: PatchAsync(string, string, TargetHttpsProxy, CancellationToken)
+            // Create client
+            TargetHttpsProxiesClient targetHttpsProxiesClient = await TargetHttpsProxiesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string targetHttpsProxy = "";
+            TargetHttpsProxy targetHttpsProxyResource = new TargetHttpsProxy();
+            // Make the request
+            Operation response = await targetHttpsProxiesClient.PatchAsync(project, targetHttpsProxy, targetHttpsProxyResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetQuicOverride</summary>
         public void SetQuicOverrideRequestObject()
         {

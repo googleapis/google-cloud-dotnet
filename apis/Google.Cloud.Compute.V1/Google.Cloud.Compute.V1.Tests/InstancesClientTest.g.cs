@@ -48,6 +48,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -94,6 +95,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -141,6 +143,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -186,6 +189,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -233,6 +237,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -278,6 +283,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -324,6 +330,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -368,6 +375,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -568,6 +576,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -614,6 +623,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -660,6 +670,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -704,6 +715,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -731,6 +743,188 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void BulkInsertRequestObject()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                RequestId = "request_id362c8df6",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "projectaa6ff846",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.BulkInsert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.BulkInsert(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BulkInsertRequestObjectAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                RequestId = "request_id362c8df6",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "projectaa6ff846",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.BulkInsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.BulkInsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.BulkInsertAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BulkInsert()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "projectaa6ff846",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.BulkInsert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.BulkInsert(request.Project, request.Zone, request.BulkInsertInstanceResourceResource);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BulkInsertAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "projectaa6ff846",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.BulkInsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.BulkInsertAsync(request.Project, request.Zone, request.BulkInsertInstanceResourceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.BulkInsertAsync(request.Project, request.Zone, request.BulkInsertInstanceResourceResource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
@@ -750,6 +944,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -794,6 +989,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -839,6 +1035,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -882,6 +1079,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -930,6 +1128,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -976,6 +1175,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1023,6 +1223,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1068,6 +1269,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1115,6 +1317,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1160,6 +1363,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1206,6 +1410,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1250,6 +1455,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1323,6 +1529,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
                 Description = "description2cf9da67",
@@ -1334,6 +1541,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     new AcceleratorConfig(),
                 },
                 CanIpForward = true,
+                SatisfiesPzs = false,
                 ConfidentialInstanceConfig = new ConfidentialInstanceConfig(),
                 Labels =
                 {
@@ -1397,6 +1605,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
                 Description = "description2cf9da67",
@@ -1408,6 +1617,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     new AcceleratorConfig(),
                 },
                 CanIpForward = true,
+                SatisfiesPzs = false,
                 ConfidentialInstanceConfig = new ConfidentialInstanceConfig(),
                 Labels =
                 {
@@ -1473,6 +1683,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
                 Description = "description2cf9da67",
@@ -1484,6 +1695,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     new AcceleratorConfig(),
                 },
                 CanIpForward = true,
+                SatisfiesPzs = false,
                 ConfidentialInstanceConfig = new ConfidentialInstanceConfig(),
                 Labels =
                 {
@@ -1547,6 +1759,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 StatusMessage = "status_message2c618f86",
                 LastSuspendedTimestamp = "last_suspended_timestamp1e59392b",
                 Scheduling = new Scheduling(),
+                AdvancedMachineFeatures = new AdvancedMachineFeatures(),
                 CpuPlatform = "cpu_platformd5794042",
                 LastStopTimestamp = "last_stop_timestampd336a8f1",
                 Description = "description2cf9da67",
@@ -1558,6 +1771,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     new AcceleratorConfig(),
                 },
                 CanIpForward = true,
+                SatisfiesPzs = false,
                 ConfidentialInstanceConfig = new ConfidentialInstanceConfig(),
                 Labels =
                 {
@@ -1572,6 +1786,114 @@ namespace Google.Cloud.Compute.V1.Tests
             Instance responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Instance responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetEffectiveFirewallsRequestObject()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+                NetworkInterface = "network_interfaceb50da44f",
+            };
+            InstancesGetEffectiveFirewallsResponse expectedResponse = new InstancesGetEffectiveFirewallsResponse
+            {
+                Firewalls = { new Firewall(), },
+                FirewallPolicys =
+                {
+                    new InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEffectiveFirewallsRequestObjectAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+                NetworkInterface = "network_interfaceb50da44f",
+            };
+            InstancesGetEffectiveFirewallsResponse expectedResponse = new InstancesGetEffectiveFirewallsResponse
+            {
+                Firewalls = { new Firewall(), },
+                FirewallPolicys =
+                {
+                    new InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstancesGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InstancesGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetEffectiveFirewalls()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+                NetworkInterface = "network_interfaceb50da44f",
+            };
+            InstancesGetEffectiveFirewallsResponse expectedResponse = new InstancesGetEffectiveFirewallsResponse
+            {
+                Firewalls = { new Firewall(), },
+                FirewallPolicys =
+                {
+                    new InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetEffectiveFirewalls(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesGetEffectiveFirewallsResponse response = client.GetEffectiveFirewalls(request.Project, request.Zone, request.Instance, request.NetworkInterface);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetEffectiveFirewallsAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+                NetworkInterface = "network_interfaceb50da44f",
+            };
+            InstancesGetEffectiveFirewallsResponse expectedResponse = new InstancesGetEffectiveFirewallsResponse
+            {
+                Firewalls = { new Firewall(), },
+                FirewallPolicys =
+                {
+                    new InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetEffectiveFirewallsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstancesGetEffectiveFirewallsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            InstancesGetEffectiveFirewallsResponse responseCallSettings = await client.GetEffectiveFirewallsAsync(request.Project, request.Zone, request.Instance, request.NetworkInterface, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            InstancesGetEffectiveFirewallsResponse responseCancellationToken = await client.GetEffectiveFirewallsAsync(request.Project, request.Zone, request.Instance, request.NetworkInterface, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -2115,6 +2437,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2160,6 +2483,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2205,6 +2529,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2248,6 +2573,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2527,6 +2853,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2572,6 +2899,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2618,6 +2946,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2662,6 +2991,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2708,6 +3038,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2752,6 +3083,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2797,6 +3129,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2840,6 +3173,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2887,6 +3221,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2932,6 +3267,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -2977,6 +3313,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3020,6 +3357,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3068,6 +3406,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3114,6 +3453,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3161,6 +3501,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3206,6 +3547,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3365,6 +3707,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3410,6 +3753,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3456,6 +3800,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3500,6 +3845,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3547,6 +3893,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3592,6 +3939,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3638,6 +3986,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3682,6 +4031,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3729,6 +4079,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3774,6 +4125,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3820,6 +4172,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3864,6 +4217,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3911,6 +4265,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -3956,6 +4311,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4002,6 +4358,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4046,6 +4403,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4093,6 +4451,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4138,6 +4497,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4184,6 +4544,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4228,6 +4589,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4275,6 +4637,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4320,6 +4683,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4366,6 +4730,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4410,6 +4775,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4457,6 +4823,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4502,6 +4869,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4548,6 +4916,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4592,6 +4961,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4639,6 +5009,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4684,6 +5055,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4730,6 +5102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4774,6 +5147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4821,6 +5195,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4866,6 +5241,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4912,6 +5288,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -4956,6 +5333,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5001,6 +5379,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5044,6 +5423,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5089,6 +5469,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5132,6 +5513,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5178,6 +5560,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5222,6 +5605,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5267,6 +5651,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5310,6 +5695,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5357,6 +5743,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5402,6 +5789,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5448,6 +5836,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5492,6 +5881,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5538,6 +5928,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5582,6 +5973,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5627,6 +6019,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5670,6 +6063,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5823,6 +6217,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5870,6 +6265,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5916,6 +6312,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -5960,6 +6357,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6008,6 +6406,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6054,6 +6453,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6101,6 +6501,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6146,6 +6547,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6193,6 +6595,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6238,6 +6641,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6284,6 +6688,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6328,6 +6733,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6376,6 +6782,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6422,6 +6829,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6469,6 +6877,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6514,6 +6923,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6561,6 +6971,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6606,6 +7017,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6652,6 +7064,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -6696,6 +7109,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),

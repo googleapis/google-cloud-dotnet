@@ -221,6 +221,70 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetEffectiveFirewalls</summary>
+        public void GetEffectiveFirewallsRequestObject()
+        {
+            // Snippet: GetEffectiveFirewalls(GetEffectiveFirewallsNetworkRequest, CallSettings)
+            // Create client
+            NetworksClient networksClient = NetworksClient.Create();
+            // Initialize request argument(s)
+            GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
+            {
+                Project = "",
+                Network = "",
+            };
+            // Make the request
+            NetworksGetEffectiveFirewallsResponse response = networksClient.GetEffectiveFirewalls(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewallsAsync</summary>
+        public async Task GetEffectiveFirewallsRequestObjectAsync()
+        {
+            // Snippet: GetEffectiveFirewallsAsync(GetEffectiveFirewallsNetworkRequest, CallSettings)
+            // Additional: GetEffectiveFirewallsAsync(GetEffectiveFirewallsNetworkRequest, CancellationToken)
+            // Create client
+            NetworksClient networksClient = await NetworksClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
+            {
+                Project = "",
+                Network = "",
+            };
+            // Make the request
+            NetworksGetEffectiveFirewallsResponse response = await networksClient.GetEffectiveFirewallsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewalls</summary>
+        public void GetEffectiveFirewalls()
+        {
+            // Snippet: GetEffectiveFirewalls(string, string, CallSettings)
+            // Create client
+            NetworksClient networksClient = NetworksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string network = "";
+            // Make the request
+            NetworksGetEffectiveFirewallsResponse response = networksClient.GetEffectiveFirewalls(project, network);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewallsAsync</summary>
+        public async Task GetEffectiveFirewallsAsync()
+        {
+            // Snippet: GetEffectiveFirewallsAsync(string, string, CallSettings)
+            // Additional: GetEffectiveFirewallsAsync(string, string, CancellationToken)
+            // Create client
+            NetworksClient networksClient = await NetworksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string network = "";
+            // Make the request
+            NetworksGetEffectiveFirewallsResponse response = await networksClient.GetEffectiveFirewallsAsync(project, network);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
