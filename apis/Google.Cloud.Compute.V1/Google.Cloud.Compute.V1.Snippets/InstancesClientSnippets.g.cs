@@ -321,6 +321,76 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkInsert</summary>
+        public void BulkInsertRequestObject()
+        {
+            // Snippet: BulkInsert(BulkInsertInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "",
+                RequestId = "",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "",
+            };
+            // Make the request
+            Operation response = instancesClient.BulkInsert(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsertAsync</summary>
+        public async Task BulkInsertRequestObjectAsync()
+        {
+            // Snippet: BulkInsertAsync(BulkInsertInstanceRequest, CallSettings)
+            // Additional: BulkInsertAsync(BulkInsertInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkInsertInstanceRequest request = new BulkInsertInstanceRequest
+            {
+                Zone = "",
+                RequestId = "",
+                BulkInsertInstanceResourceResource = new BulkInsertInstanceResource(),
+                Project = "",
+            };
+            // Make the request
+            Operation response = await instancesClient.BulkInsertAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsert</summary>
+        public void BulkInsert()
+        {
+            // Snippet: BulkInsert(string, string, BulkInsertInstanceResource, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkInsertInstanceResource bulkInsertInstanceResourceResource = new BulkInsertInstanceResource();
+            // Make the request
+            Operation response = instancesClient.BulkInsert(project, zone, bulkInsertInstanceResourceResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsertAsync</summary>
+        public async Task BulkInsertAsync()
+        {
+            // Snippet: BulkInsertAsync(string, string, BulkInsertInstanceResource, CallSettings)
+            // Additional: BulkInsertAsync(string, string, BulkInsertInstanceResource, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkInsertInstanceResource bulkInsertInstanceResourceResource = new BulkInsertInstanceResource();
+            // Make the request
+            Operation response = await instancesClient.BulkInsertAsync(project, zone, bulkInsertInstanceResourceResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {
@@ -608,6 +678,78 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instance = "";
             // Make the request
             Instance response = await instancesClient.GetAsync(project, zone, instance);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewalls</summary>
+        public void GetEffectiveFirewallsRequestObject()
+        {
+            // Snippet: GetEffectiveFirewalls(GetEffectiveFirewallsInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                Project = "",
+                NetworkInterface = "",
+            };
+            // Make the request
+            InstancesGetEffectiveFirewallsResponse response = instancesClient.GetEffectiveFirewalls(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewallsAsync</summary>
+        public async Task GetEffectiveFirewallsRequestObjectAsync()
+        {
+            // Snippet: GetEffectiveFirewallsAsync(GetEffectiveFirewallsInstanceRequest, CallSettings)
+            // Additional: GetEffectiveFirewallsAsync(GetEffectiveFirewallsInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                Project = "",
+                NetworkInterface = "",
+            };
+            // Make the request
+            InstancesGetEffectiveFirewallsResponse response = await instancesClient.GetEffectiveFirewallsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewalls</summary>
+        public void GetEffectiveFirewalls()
+        {
+            // Snippet: GetEffectiveFirewalls(string, string, string, string, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            string networkInterface = "";
+            // Make the request
+            InstancesGetEffectiveFirewallsResponse response = instancesClient.GetEffectiveFirewalls(project, zone, instance, networkInterface);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveFirewallsAsync</summary>
+        public async Task GetEffectiveFirewallsAsync()
+        {
+            // Snippet: GetEffectiveFirewallsAsync(string, string, string, string, CallSettings)
+            // Additional: GetEffectiveFirewallsAsync(string, string, string, string, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            string networkInterface = "";
+            // Make the request
+            InstancesGetEffectiveFirewallsResponse response = await instancesClient.GetEffectiveFirewallsAsync(project, zone, instance, networkInterface);
             // End snippet
         }
 

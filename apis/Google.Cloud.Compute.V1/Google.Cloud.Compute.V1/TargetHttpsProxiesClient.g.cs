@@ -48,6 +48,7 @@ namespace Google.Cloud.Compute.V1
             GetSettings = existing.GetSettings;
             InsertSettings = existing.InsertSettings;
             ListSettings = existing.ListSettings;
+            PatchSettings = existing.PatchSettings;
             SetQuicOverrideSettings = existing.SetQuicOverrideSettings;
             SetSslCertificatesSettings = existing.SetSslCertificatesSettings;
             SetSslPolicySettings = existing.SetSslPolicySettings;
@@ -116,6 +117,18 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetHttpsProxiesClient.Patch</c> and <c>TargetHttpsProxiesClient.PatchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -678,6 +691,94 @@ namespace Google.Cloud.Compute.V1
             ListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation Patch(PatchTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> PatchAsync(PatchTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> PatchAsync(PatchTargetHttpsProxyRequest request, st::CancellationToken cancellationToken) =>
+            PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource to patch.
+        /// </param>
+        /// <param name="targetHttpsProxyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation Patch(string project, string targetHttpsProxy, TargetHttpsProxy targetHttpsProxyResource, gaxgrpc::CallSettings callSettings = null) =>
+            Patch(new PatchTargetHttpsProxyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                TargetHttpsProxy = gax::GaxPreconditions.CheckNotNullOrEmpty(targetHttpsProxy, nameof(targetHttpsProxy)),
+                TargetHttpsProxyResource = gax::GaxPreconditions.CheckNotNull(targetHttpsProxyResource, nameof(targetHttpsProxyResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource to patch.
+        /// </param>
+        /// <param name="targetHttpsProxyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> PatchAsync(string project, string targetHttpsProxy, TargetHttpsProxy targetHttpsProxyResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchAsync(new PatchTargetHttpsProxyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                TargetHttpsProxy = gax::GaxPreconditions.CheckNotNullOrEmpty(targetHttpsProxy, nameof(targetHttpsProxy)),
+                TargetHttpsProxyResource = gax::GaxPreconditions.CheckNotNull(targetHttpsProxyResource, nameof(targetHttpsProxyResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="targetHttpsProxy">
+        /// Name of the TargetHttpsProxy resource to patch.
+        /// </param>
+        /// <param name="targetHttpsProxyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> PatchAsync(string project, string targetHttpsProxy, TargetHttpsProxy targetHttpsProxyResource, st::CancellationToken cancellationToken) =>
+            PatchAsync(project, targetHttpsProxy, targetHttpsProxyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the QUIC override policy for TargetHttpsProxy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1046,6 +1147,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListTargetHttpsProxiesRequest, TargetHttpsProxyList> _callList;
 
+        private readonly gaxgrpc::ApiCall<PatchTargetHttpsProxyRequest, Operation> _callPatch;
+
         private readonly gaxgrpc::ApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation> _callSetQuicOverride;
 
         private readonly gaxgrpc::ApiCall<SetSslCertificatesTargetHttpsProxyRequest, Operation> _callSetSslCertificates;
@@ -1079,6 +1182,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListTargetHttpsProxiesRequest, TargetHttpsProxyList>(grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callPatch = clientHelper.BuildApiCall<PatchTargetHttpsProxyRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
+            Modify_ApiCall(ref _callPatch);
+            Modify_PatchApiCall(ref _callPatch);
             _callSetQuicOverride = clientHelper.BuildApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation>(grpcClient.SetQuicOverrideAsync, grpcClient.SetQuicOverride, effectiveSettings.SetQuicOverrideSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callSetQuicOverride);
             Modify_SetQuicOverrideApiCall(ref _callSetQuicOverride);
@@ -1106,6 +1212,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListTargetHttpsProxiesRequest, TargetHttpsProxyList> call);
 
+        partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchTargetHttpsProxyRequest, Operation> call);
+
         partial void Modify_SetQuicOverrideApiCall(ref gaxgrpc::ApiCall<SetQuicOverrideTargetHttpsProxyRequest, Operation> call);
 
         partial void Modify_SetSslCertificatesApiCall(ref gaxgrpc::ApiCall<SetSslCertificatesTargetHttpsProxyRequest, Operation> call);
@@ -1128,6 +1236,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_InsertTargetHttpsProxyRequest(ref InsertTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTargetHttpsProxiesRequest(ref ListTargetHttpsProxiesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PatchTargetHttpsProxyRequest(ref PatchTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetQuicOverrideTargetHttpsProxyRequest(ref SetQuicOverrideTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1255,6 +1365,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListTargetHttpsProxiesRequest(ref request, ref callSettings);
             return _callList.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation Patch(PatchTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchTargetHttpsProxyRequest(ref request, ref callSettings);
+            return _callPatch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules. (== suppress_warning http-rest-shadowed ==)
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> PatchAsync(PatchTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchTargetHttpsProxyRequest(ref request, ref callSettings);
+            return _callPatch.Async(request, callSettings);
         }
 
         /// <summary>

@@ -49,6 +49,7 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
+            SetLabelsSettings = existing.SetLabelsSettings;
             SetTargetSettings = existing.SetTargetSettings;
             OnCopy(existing);
         }
@@ -126,6 +127,18 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ForwardingRulesClient.SetLabels</c> and <c>ForwardingRulesClient.SetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -791,6 +804,105 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, region, forwardingRule, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation SetLabels(SetLabelsForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+            SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation SetLabels(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetLabels(new SetLabelsForwardingRuleRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(regionSetLabelsRequestResource, nameof(regionSetLabelsRequestResource)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetLabelsAsync(new SetLabelsForwardingRuleRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(regionSetLabelsRequestResource, nameof(regionSetLabelsRequestResource)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+            SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Changes target URL for forwarding rule. The new target should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -908,6 +1020,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchForwardingRuleRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<SetLabelsForwardingRuleRequest, Operation> _callSetLabels;
+
         private readonly gaxgrpc::ApiCall<SetTargetForwardingRuleRequest, Operation> _callSetTarget;
 
         /// <summary>
@@ -938,6 +1052,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchForwardingRuleRequest, Operation>(grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callSetLabels = clientHelper.BuildApiCall<SetLabelsForwardingRuleRequest, Operation>(grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetLabels);
+            Modify_SetLabelsApiCall(ref _callSetLabels);
             _callSetTarget = clientHelper.BuildApiCall<SetTargetForwardingRuleRequest, Operation>(grpcClient.SetTargetAsync, grpcClient.SetTarget, effectiveSettings.SetTargetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callSetTarget);
             Modify_SetTargetApiCall(ref _callSetTarget);
@@ -958,6 +1075,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchForwardingRuleRequest, Operation> call);
 
+        partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsForwardingRuleRequest, Operation> call);
+
         partial void Modify_SetTargetApiCall(ref gaxgrpc::ApiCall<SetTargetForwardingRuleRequest, Operation> call);
 
         partial void OnConstruction(ForwardingRules.ForwardingRulesClient grpcClient, ForwardingRulesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -976,6 +1095,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListForwardingRulesRequest(ref ListForwardingRulesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchForwardingRuleRequest(ref PatchForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetLabelsForwardingRuleRequest(ref SetLabelsForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetTargetForwardingRuleRequest(ref SetTargetForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1121,6 +1242,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_PatchForwardingRuleRequest(ref request, ref callSettings);
             return _callPatch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation SetLabels(SetLabelsForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetLabelsForwardingRuleRequest(ref request, ref callSettings);
+            return _callSetLabels.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> SetLabelsAsync(SetLabelsForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetLabelsForwardingRuleRequest(ref request, ref callSettings);
+            return _callSetLabels.Async(request, callSettings);
         }
 
         /// <summary>
