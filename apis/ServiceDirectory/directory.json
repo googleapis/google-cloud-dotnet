@@ -3280,6 +3280,24 @@
       "CSharpNamespaceFromProtos": "Google.Devtools.Resultstore.V2"
     },
     {
+      "ServiceDirectory": "google/devtools/testing/v1",
+      "Name": "testing.googleapis.com",
+      "Title": "Cloud Testing API",
+      "Description": "Allows developers to run automated tests for their mobile applications on Google infrastructure.",
+      "ServiceConfigFile": "google/devtools/testing/v1/testing_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.devtools.testing.v1",
+      "PackageFromProtos": "google.devtools.testing.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/devtools/testing/v1",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Devtools.Testing.V1"
+    },
+    {
       "ServiceDirectory": "google/firestore/admin/v1",
       "Name": "firestore.googleapis.com",
       "Title": "Cloud Firestore API",
