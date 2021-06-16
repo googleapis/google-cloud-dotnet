@@ -1,0 +1,16 @@
+[
+  {
+    "method": "FetchProcessorTypes",
+    "client": "DocumentProcessorServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us"
+    }
+  },
+  {
+    "method": "ListProcessors",
+    "client": "DocumentProcessorServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us"
+    }
+  }
+]
