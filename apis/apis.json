@@ -970,6 +970,23 @@
       "protoPath": "google/cloud/essentialcontacts/v1"
     },
     {
+      "id": "Google.Cloud.Eventarc.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Eventarc",
+      "productUrl": "https://cloud.google.com/eventarc/docs",
+      "description": "Recommended Google client library to access the Eventarc API",
+      "tags": [
+        "events",
+        "cloudevents"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/eventarc/v1"
+    },
+    {
       "id": "Google.Cloud.Firestore.Admin.V1",
       "generator": "micro",
       "protoPath": "google/firestore/admin/v1",
