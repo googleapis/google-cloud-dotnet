@@ -345,7 +345,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "aXR5L3ByaXZhdGVjYS92MTtwcml2YXRlY2H4AQGqAiJHb29nbGUuQ2xvdWQu",
             "U2VjdXJpdHkuUHJpdmF0ZUNBLlYxygIiR29vZ2xlXENsb3VkXFNlY3VyaXR5",
             "XFByaXZhdGVDQVxWMeoCJkdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5OjpQcml2",
-            "YXRlQ0E6OnYxYgZwcm90bzM="));
+            "YXRlQ0E6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Security.PrivateCA.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
