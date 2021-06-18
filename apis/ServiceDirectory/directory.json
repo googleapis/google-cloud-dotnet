@@ -3477,6 +3477,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Logging.V2"
     },
     {
+      "ServiceDirectory": "google/maps/fleetengine/v1",
+      "Name": "fleetengine.googleapis.com",
+      "Title": "Local Rides and Deliveries API",
+      "Description": "Services for ridesharing providers.",
+      "ServiceConfigFile": "google/maps/fleetengine/v1/fleetengine.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.maps.fleetengine.v1",
+      "PackageFromProtos": "maps.fleetengine.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/maps/fleetengine/v1",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Maps.Fleetengine.V1"
+    },
+    {
       "ServiceDirectory": "google/maps/playablelocations/v3",
       "Name": "playablelocations.googleapis.com",
       "Title": "Playable Locations API",
