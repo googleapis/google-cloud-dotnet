@@ -460,9 +460,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
-            // Note: we don't currently support autosynth for regapic.
-            // (We'll get there over time.)
-            if (api.Generator == GeneratorType.None || api.Generator == GeneratorType.Regapic)
+            if (api.Generator == GeneratorType.None)
             {
                 return;
             }
