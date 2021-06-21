@@ -64,9 +64,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             consumer ??= new Mock<IConsumer<LogEntry>>(MockBehavior.Strict).Object;
             monitoredResource ??= MonitoredResourceBuilder.GlobalResource;
             logTarget ??= s_defaultLogTarget;
-            LoggerOptions options = LoggerOptions.CreateWithServiceContext(
+            Common.LoggerOptions options = Common.LoggerOptions.CreateWithServiceContext(
                 logLevel, logName, labels, monitoredResource, retryOptions: retryOptions, serviceName: serviceName, version: version);
-            return new GoogleLogger(consumer, logTarget, options, LogName, s_clock, serviceProvider);
+#pragma warning disable CS0618 // Type or member is obsolete
+            Common.GoogleLogger _innerLogger = new Common.GoogleLogger(
+                consumer, logTarget, options, LogName,
+                GoogleLoggerProvider.ObsoleteLabelsGetter, GoogleLoggerProvider.ObsoleteTraceContextGetter,
+                s_clock, serviceProvider);
+#pragma warning restore CS0618 // Type or member is obsolete
+            return new GoogleLogger(_innerLogger);
         }
 
         [Fact]
@@ -439,7 +445,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_Trace()
         {
             string traceId = "external_trace_id";
-            string spanId = "external_span_id";
+            ulong spanId = 1;
             string fullTraceName = TraceTarget.ForProject(ProjectId).GetFullTraceName(traceId);
 
             Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
@@ -447,15 +453,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 LogEntry entry = logEntries.Single();
                 return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
                     entry.Trace == fullTraceName &&
-                    entry.SpanId == spanId;
+                    entry.SpanId == $"{spanId:x16}";
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            var mockExternalTraceProvider = new Mock<IExternalTraceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IExternalTraceProvider))).Returns(mockExternalTraceProvider.Object);
-            mockExternalTraceProvider.Setup(
-                sp => sp.GetCurrentTraceContext(It.IsAny<IServiceProvider>()))
-                .Returns(new TraceContextForLogEntry(traceId, spanId));
+            var traceContext = new SimpleTraceContext(traceId, spanId, true);
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(ITraceContext))).Returns(traceContext);
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -481,8 +484,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
-                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
+                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -505,8 +508,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
-                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
+                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -519,8 +522,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_DoesNotLogIfNullLabels()
         {
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
-                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
+                .Returns(new Common.ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
@@ -532,8 +535,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_ThrowsIfNullLabels_RetryOptionsPropagateExceptions()
         {
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
-                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
+                .Returns(new Common.ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName, retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate));
@@ -564,8 +567,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
-                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
+                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -666,7 +669,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
+    internal class FooLogEntryLabelProvider : Common.ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
@@ -674,7 +677,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
+    internal class BarLogEntryLabelProvider : Common.ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
@@ -682,7 +685,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class EmptyLogEntryLabelProvider : ILogEntryLabelProvider
+    internal class EmptyLogEntryLabelProvider : Common.ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {

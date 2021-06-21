@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// Extension methods for converting KeyValuePair Enumerables to several types,
     /// including Protobuf well known types.
     /// </summary>
-    public static class KeyValuePairEnumerableExtensions
+    internal static class KeyValuePairEnumerableExtensions
     {
         /// <summary>
         /// Returns a <see cref="Value"/> for a <see cref="Struct"/> that will contain
@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="fields">The fields to convert to a Strcut. May be null or empty in
         /// which case this method will return null.</param>
-        public static Value ToStructValue(this IEnumerable<KeyValuePair<string, object>> fields)
+        internal static Value ToStructValue(this IEnumerable<KeyValuePair<string, object>> fields)
         {
             if (fields is null)
             {

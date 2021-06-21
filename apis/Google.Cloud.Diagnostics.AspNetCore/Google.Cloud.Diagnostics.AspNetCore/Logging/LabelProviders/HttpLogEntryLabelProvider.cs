@@ -28,7 +28,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Base class for <see cref="ILogEntryLabelProvider"/> implementations which needs an <see cref="HttpContext"/> instance.
     /// </summary>
-    public abstract class HttpLogEntryLabelProvider : ILogEntryLabelProvider
+#pragma warning disable CS0618 // Type or member is obsolete
+    public abstract class HttpLogEntryLabelProvider : ILogEntryLabelProvider, Common.ILogEntryLabelProvider
+#pragma warning restore CS0618 // Type or member is obsolete
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 

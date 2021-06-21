@@ -33,6 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// These values can be attached to a log entry to establish the
     /// relation of it and a trace.
     /// </summary>
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.ITraceContext instead.")]
     public sealed class TraceContextForLogEntry
     {
         /// <summary>

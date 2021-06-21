@@ -1,10 +1,10 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 // 
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 // 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,47 +14,48 @@
 
 using Google.Api;
 using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.IO;
+using static Google.Cloud.Diagnostics.Common.ServiceContextUtils;
 
-#if NETCOREAPP3_1
-namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Options for a <see cref="GoogleLogger"/>.
+    /// Options for a <see cref="GoogleLogger"/>".
     /// </summary>
     public sealed class LoggerOptions
     {
-        internal Common.LoggerOptions CommonLoggerOptions { get; }
+        /// <summary>The base log name for all logs.</summary>
+        // We keep this as aspnetcore for backwards compatibility.
+        // It might be a little awkward for someone writing a console application
+        // to see their logs end up in something named "aspnetcore" but this is
+        // just a name, and if they are really interested, they can specify their own.
+        private const string _baseLogName = "aspnetcore";
 
         /// <summary>The minimum log level.</summary>
-        public LogLevel LogLevel => CommonLoggerOptions.LogLevel;
+        public LogLevel LogLevel { get; }
 
-        /// <summary>The name for the all logs.</summary>
-        public string LogName => CommonLoggerOptions.LogName;
+        /// <summary>The name for the logs.</summary>
+        public string LogName { get; }
 
         /// <summary>The monitored resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
-        public MonitoredResource MonitoredResource => CommonLoggerOptions.MonitoredResource;
+        public MonitoredResource MonitoredResource { get; }
 
         /// <summary>The buffer options for the logger.</summary>
-        public BufferOptions BufferOptions => CommonLoggerOptions.BufferOptions;
+        public BufferOptions BufferOptions { get; }
 
         /// <summary>The retry options for the logger.</summary>
-        public RetryOptions RetryOptions => CommonLoggerOptions.RetryOptions;
+        public RetryOptions RetryOptions { get; }
 
         /// <summary>Custom labels for log entries.</summary>
         /// <remarks>Keys and values added to <see cref="Labels"/> should not be null.
         /// If they are, an exception will be throw when attempting to log an entry.
         /// The entry won't be logged and the exception will be propagated depending
         /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</remarks>
-        public Dictionary<string, string> Labels => CommonLoggerOptions.Labels;
+        public Dictionary<string, string> Labels { get; }
 
         /// <summary>
         /// A <see cref="TextWriter"/> to write diagnostics info about loggers created
@@ -62,22 +63,49 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Currently the only diagnostics info we provide is the URL where the logs written
         /// with these options can be found.
         /// </summary>
-        public TextWriter LoggerDiagnosticsOutput => CommonLoggerOptions.LoggerDiagnosticsOutput;
+        public TextWriter LoggerDiagnosticsOutput { get; }
 
         /// <summary>
         /// An identifier of the service, such as the name of the executable or job. May be null.
         /// When set, it will be included in the <code>serviceContext</code> field of the log entry JSON payload.
         /// </summary>
-        public string ServiceName => CommonLoggerOptions.ServiceName;
+        public string ServiceName =>
+            ServiceContext == null || !ServiceContext.Fields.TryGetValue(ServiceContextServiceKey, out Value v) ? null : v.StringValue;
 
         /// <summary>
         /// A string that represents the version of the service or the source code that logs are written for.
         /// When set, it will be included in the <code>serviceContext</code> field of the log entry JSON payload.
         /// </summary>
-        public string Version => CommonLoggerOptions.Version;
+        public string Version =>
+            ServiceContext == null || !ServiceContext.Fields.TryGetValue(ServiceContextVersionKey, out Value v) ? null : v.StringValue;
 
-        private LoggerOptions(Common.LoggerOptions loggerOptions) =>
-            CommonLoggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
+        /// <summary>
+        /// The service context to associate to the Logger.
+        /// </summary>
+        internal Struct ServiceContext { get; }
+
+        private LoggerOptions(
+            LogLevel logLevel,
+            string logName,
+            Dictionary<string, string> labels,
+            MonitoredResource monitoredResource,
+            BufferOptions bufferOptions,
+            RetryOptions retryOptions,
+            TextWriter loggerDiagnosticsOutput,
+            string serviceName,
+            string version)
+        {
+            LogName = logName;
+            LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
+            Labels = labels;
+            MonitoredResource = monitoredResource;
+            BufferOptions = bufferOptions;
+            RetryOptions = retryOptions;
+            LoggerDiagnosticsOutput = loggerDiagnosticsOutput;
+
+            // Create the service context here, this class is inmutable.
+            ServiceContext = CreateServiceContext(serviceName, version);
+        }
 
         /// <summary>
         /// Create a new instance of <see cref="LoggerOptions"/>.
@@ -177,7 +205,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             RetryOptions retryOptions = null,
             TextWriter loggerDiagnosticsOutput = null,
             string serviceName = null,
-            string version = null) => new LoggerOptions(Common.LoggerOptions.CreateWithServiceContext(
-                logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions, loggerDiagnosticsOutput, serviceName, version));
+            string version = null)
+        {
+            logName ??= _baseLogName;
+            labels ??= new Dictionary<string, string>();
+            monitoredResource ??= MonitoredResourceBuilder.FromPlatform();
+            bufferOptions ??= BufferOptions.TimedBuffer();
+            retryOptions ??= RetryOptions.NoRetry();
+            return new LoggerOptions(logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions, loggerDiagnosticsOutput, serviceName, version);
+        }
     }
 }
