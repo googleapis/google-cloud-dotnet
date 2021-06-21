@@ -10,3 +10,6 @@ sed -i s/AccessApprovalService.AccessApprovalServiceClient/AccessApproval.Access
 
 # Fix up unit test classes
 sed -i s/AccessApprovalService.AccessApprovalServiceClient/AccessApproval.AccessApprovalClient/g Google.Cloud.AccessApproval.V1.Tests/AccessApprovalServiceClientTest.g.cs
+
+# Fix up the metadata
+sed -i 's/"AccessApprovalService": {/"AccessApproval": {/g' gapic_metadata.json

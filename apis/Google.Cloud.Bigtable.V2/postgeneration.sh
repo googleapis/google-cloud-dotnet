@@ -13,6 +13,9 @@ sed -i -r -f BigtableServiceApiClient.sed Google.Cloud.Bigtable.V2/BigtableServi
 # Fix up the unit test class too
 sed -i s/BigtableServiceApi.BigtableServiceApiClient/Bigtable.BigtableClient/g Google.Cloud.Bigtable.V2.Tests/BigtableServiceApiClientTest.g.cs
 
+# Fix up the metadata
+sed -i 's/"BigtableServiceApi": {/"Bigtable": {/g' gapic_metadata.json
+
 # Generate BigtableClient
 dotnet run -p Google.Cloud.Bigtable.V2.GenerateClient \
   Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \

@@ -13,3 +13,7 @@ sed -i s/SubscriberServiceApi.SubscriberServiceApiClient/Subscriber.SubscriberCl
 # Fix up unit test classes
 sed -i s/PublisherServiceApi.PublisherServiceApiClient/Publisher.PublisherClient/g Google.Cloud.PubSub.V1.Tests/PublisherServiceApiClientTest.g.cs
 sed -i s/SubscriberServiceApi.SubscriberServiceApiClient/Subscriber.SubscriberClient/g Google.Cloud.PubSub.V1.Tests/SubscriberServiceApiClientTest.g.cs
+
+# Fix up the metadata
+sed -i 's/"PublisherServiceApi": {/"Publisher": {/g' gapic_metadata.json
+sed -i 's/"SubscriberServiceApi": {/"Subscriber": {/g' gapic_metadata.json
