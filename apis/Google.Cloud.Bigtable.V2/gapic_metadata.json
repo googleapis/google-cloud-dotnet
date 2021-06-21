@@ -5,7 +5,7 @@
   "protoPackage": "google.bigtable.v2",
   "libraryPackage": "Google.Cloud.Bigtable.V2",
   "services": {
-    "BigtableServiceApi": {
+    "Bigtable": {
       "clients": {
         "grpc": {
           "libraryClient": "BigtableServiceApiClient",
