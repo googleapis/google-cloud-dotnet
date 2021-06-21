@@ -460,7 +460,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
-            if (api.Generator == GeneratorType.None)
+            if (api.Generator == GeneratorType.None || api.Generator == GeneratorType.Regapic)
             {
                 return;
             }
