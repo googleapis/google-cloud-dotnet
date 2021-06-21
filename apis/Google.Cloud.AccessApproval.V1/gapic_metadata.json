@@ -5,7 +5,7 @@
   "protoPackage": "google.cloud.accessapproval.v1",
   "libraryPackage": "Google.Cloud.AccessApproval.V1",
   "services": {
-    "AccessApprovalService": {
+    "AccessApproval": {
       "clients": {
         "grpc": {
           "libraryClient": "AccessApprovalServiceClient",
