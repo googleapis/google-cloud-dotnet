@@ -1,10 +1,10 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 // 
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 // 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,15 +15,12 @@
 using Google.Cloud.Logging.Type;
 using Microsoft.Extensions.Logging;
 
-#if NETCOREAPP3_1
-namespace Google.Cloud.Diagnostics.AspNetCore3
-#elif NETSTANDARD2_0
-namespace Google.Cloud.Diagnostics.AspNetCore
-#else
-#error unknown target framework
-#endif
+namespace Google.Cloud.Diagnostics.Common
 {
-    internal static class LogUtils
+    /// <summary>
+    /// Extension methods for <see cref="LogLevel"/>.
+    /// </summary>
+    internal static class LogLevelExtensions
     {
         /// <summary>
         /// Extensions to get a <see cref="LogSeverity"/> for a <see cref="LogLevel"/>.

@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     // Note: We implement IEnumerable for the benefit of other ILogger implementations,
     // so they can represent this information as they see fit.
-    public class LabellingScopeState : IEnumerable<KeyValuePair<string, object>>
+    internal class LabellingScopeState : IEnumerable<KeyValuePair<string, object>>
     {
         /// <summary>
         /// Creates a new <see cref="LabellingScopeState"/> for the given labels.

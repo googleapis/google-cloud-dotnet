@@ -23,8 +23,8 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// Extensions for <see cref="ILogger"/> to allow augmenting the logged information with contextual data.
-    /// GoogleLogger(TODO: change this to a cref when I've moved it to this package)
-    /// will add the information to the <see cref="LogEntry"/> that is sent to Google Cloud Logging.
+    /// <see cref="GoogleLogger"/>" will add the information to the <see cref="LogEntry"/> that is sent to
+    /// Google Cloud Logging.
     /// For the consumption of other loggers, the information will be included in newly created scopes
     /// at the moment of logging, in a format that all loggers should understand.
     /// </summary>
@@ -34,8 +34,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <para>
         /// Adds labels to the returned logger that may be included with every subsequent log.
         /// How this information is included will depend on the actual <paramref name="logger"/>.
-        /// GoogleLogger(TODO: change this to a cref when I've moved it to this package) will include this
-        /// information in <see cref="LogEntry.Labels"/>.
+        /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
+        /// For the consumption of other loggers, the information will be included in newly created scopes
+        /// at the moment of logging, in a format that all loggers should understand. 
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, the old labels will be replaced
@@ -49,8 +50,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <para>
         /// Adds labels to the returned logger that may be included with every subsequent log.
         /// How this information is included will depend on the actual <paramref name="logger"/>.
-        /// GoogleLogger(TODO: change this to a cref when I've moved it to this package) will include this
-        /// information in <see cref="LogEntry.Labels"/>.
+        /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
+        /// For the consumption of other loggers, the information will be included in newly created scopes
+        /// at the moment of logging, in a format that all loggers should understand. 
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, the old labels will be replaced
@@ -68,8 +70,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <para>
         /// Adds labels to the returned logger that may be included with every subsequent log.
         /// How this information is included will depend on the actual <paramref name="logger"/>.
-        /// GoogleLogger(TODO: change this to a cref when I've moved it to this package) will include this
-        /// information in <see cref="LogEntry.Labels"/>.
+        /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
+        /// For the consumption of other loggers, the information will be included in newly created scopes
+        /// at the moment of logging, in a format that all loggers should understand. 
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, <paramref name="labels"/>
@@ -83,8 +86,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <para>
         /// Adds labels to the returned logger that may be included with every subsequent log.
         /// How this information is included will depend on the actual <paramref name="logger"/>.
-        /// GoogleLogger(TODO: change this to a cref when I've moved it to this package) will include this
-        /// information in <see cref="LogEntry.Labels"/>.
+        /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
+        /// For the consumption of other loggers, the information will be included in newly created scopes
+        /// at the moment of logging, in a format that all loggers should understand. 
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, <paramref name="labels"/>

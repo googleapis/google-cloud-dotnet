@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Represents a scope for a Google Logger.
     /// </summary>
-    public abstract class GoogleLoggerScope : IDisposable
+    internal abstract class GoogleLoggerScope : IDisposable
     {
         private static readonly AsyncLocal<GoogleLoggerScope> _current = new AsyncLocal<GoogleLoggerScope>();
 
