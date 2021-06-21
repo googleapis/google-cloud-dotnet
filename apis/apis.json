@@ -880,27 +880,6 @@
       "protoPath": "google/cloud/documentai/v1"
     },
     {
-      "id": "Google.Cloud.DocumentAI.V1Beta2",
-      "version": "1.0.0-beta03",
-      "generator": "micro",
-      "productName": "Cloud Document AI",
-      "productUrl": "https://cloud.google.com/solutions/document-ai",
-      "description": "Recommended Google client library to access the Google Document AI API (v1beta2), which is a service to parse structured information from unstructured or semi-structured documents using state-of-the-art Google AI such as natural language, computer vision, translation, and AutoML.",
-      "protoPath": "google/cloud/documentai/v1beta2",
-      "type": "grpc",
-      "tags": [
-        "ai",
-        "language",
-        "documents",
-        "vision",
-        "translation",
-        "automl"
-      ],
-      "dependencies": {
-        "Google.LongRunning": "2.2.0"
-      }
-    },
-    {
       "id": "Google.Cloud.DocumentAI.V1Beta3",
       "version": "1.0.0-beta01",
       "type": "grpc",
