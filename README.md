@@ -38,7 +38,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.Budgets.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/2.2.0) | 2.2.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.BinaryAuthorization.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
-| [Google.Cloud.Channel.V1](https://googleapis.dev/dotnet/Google.Cloud.Channel.V1/1.1.0) | 1.1.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
+| [Google.Cloud.Channel.V1](https://googleapis.dev/dotnet/Google.Cloud.Channel.V1/1.2.0) | 1.2.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](https://googleapis.dev/dotnet/Google.Cloud.CloudBuild.V1/1.1.0) | 1.1.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.CloudDms.V1](https://googleapis.dev/dotnet/Google.Cloud.CloudDms.V1/1.0.0) | 1.0.0 | [Database Migration](https://cloud.google.com/database-migration) |
 | [Google.Cloud.Compute.V1](https://googleapis.dev/dotnet/Google.Cloud.Compute.V1/1.0.0-alpha02) | 1.0.0-alpha02 | [Compute Engine](https://cloud.google.com/compute) |
