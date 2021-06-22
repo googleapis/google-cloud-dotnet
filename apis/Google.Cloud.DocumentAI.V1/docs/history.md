@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.1.0, released 2021-06-22
+
+- [Commit 1a7f5e6](https://github.com/googleapis/google-cloud-dotnet/commit/1a7f5e6): feat: update ReviewDocumentRequest to allow set priority and enable validation.
+
 # Version 1.0.0, released 2021-06-08
 
 - [Commit 7e77c2a](https://github.com/googleapis/google-cloud-dotnet/commit/7e77c2a): feat: Move CommonOperationMetadata into a separate proto file for potential reuse.
