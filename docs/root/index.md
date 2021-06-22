@@ -82,7 +82,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Iam.Credentials.V1](Google.Cloud.Iam.Credentials.V1/index.html) | 1.1.0 | [IAM Service Account Credentials](https://cloud.google.com/iam/docs/reference/credentials/rest) |
 | [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.2.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Iot.V1](Google.Cloud.Iot.V1/index.html) | 1.1.0 | [Cloud IoT](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
-| [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.2.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
+| [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.3.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html) | 2.2.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.LifeSciences.V2Beta](Google.Cloud.LifeSciences.V2Beta/index.html) | 1.0.0-beta01 | [Cloud Life Sciences](https://cloud.google.com/life-sciences/docs/) |
 | [Google.Cloud.Logging.Log4Net](Google.Cloud.Logging.Log4Net/index.html) | 3.3.0 | Log4Net client library for the Google Cloud Logging API |

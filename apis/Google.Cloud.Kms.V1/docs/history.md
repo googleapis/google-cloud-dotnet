@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-06-22
+
+- [Commit f1d52c1](https://github.com/googleapis/google-cloud-dotnet/commit/f1d52c1): feat: add ECDSA secp256k1 to the list of supported algorithms.
+
 # Version 2.2.0, released 2021-04-29
 
 - [Commit e89b7c2](https://github.com/googleapis/google-cloud-dotnet/commit/e89b7c2):

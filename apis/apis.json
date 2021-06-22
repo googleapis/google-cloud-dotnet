@@ -1237,7 +1237,7 @@
       "protoPath": "google/cloud/kms/v1",
       "productName": "Google Cloud Key Management Service",
       "productUrl": "https://cloud.google.com/kms/",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Key Management Service API, which manages encryption for your cloud services the same way you do on-premises. You can generate, use, rotate, and destroy AES256 encryption keys.",
       "tags": [
@@ -1247,9 +1247,9 @@
         "encryption"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
-        "Google.Cloud.Iam.V1": "2.1.0",
-        "Grpc.Core": "2.36.4"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Google.Cloud.Iam.V1": "2.2.0",
+        "Grpc.Core": "2.38.0"
       }
     },
     {
