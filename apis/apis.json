@@ -858,7 +858,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
@@ -872,9 +872,9 @@
         "automl"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
         "Google.LongRunning": "2.2.0",
-        "Grpc.Core": "2.36.4"
+        "Grpc.Core": "2.38.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/documentai/v1"
