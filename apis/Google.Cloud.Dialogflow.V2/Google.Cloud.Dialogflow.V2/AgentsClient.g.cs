@@ -571,6 +571,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -580,6 +584,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -589,6 +597,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -598,6 +610,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -612,6 +628,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -626,6 +646,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -1007,7 +1031,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1018,7 +1045,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1029,7 +1059,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1066,7 +1099,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1083,7 +1119,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1100,7 +1139,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1114,7 +1156,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1131,7 +1176,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1148,7 +1196,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1162,7 +1213,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1179,7 +1233,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1196,7 +1253,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -1209,8 +1269,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1220,8 +1278,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1231,8 +1287,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1268,8 +1322,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1285,8 +1337,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1302,8 +1352,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1316,8 +1364,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1333,8 +1379,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1350,8 +1394,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1364,8 +1406,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1381,8 +1421,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1398,8 +1436,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1421,9 +1457,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1442,9 +1481,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1463,9 +1505,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1509,9 +1554,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1529,9 +1577,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1549,9 +1600,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1753,6 +1807,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1765,6 +1823,10 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates/updates the specified agent.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1841,7 +1903,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1855,7 +1920,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation result type: google.protobuf.Empty
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1871,8 +1939,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1885,8 +1951,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Exports the specified agent to a ZIP file.
-        /// 
-        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1911,9 +1975,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1935,9 +2002,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1961,9 +2031,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1984,9 +2057,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
+        /// 
+        /// Note: You should always train an agent prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

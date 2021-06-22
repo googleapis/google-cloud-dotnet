@@ -179,6 +179,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -190,6 +194,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -201,6 +209,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -213,7 +225,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation result type: BatchUpdateEntityTypesResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -226,7 +240,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -239,7 +255,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -254,7 +272,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -267,7 +287,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -392,6 +414,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -404,6 +430,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -414,6 +444,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -426,6 +460,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,6 +474,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -448,6 +490,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -458,6 +504,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -470,6 +520,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -480,6 +534,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -492,6 +550,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -502,6 +564,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -514,6 +580,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -525,7 +595,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation result type: BatchUpdateEntityTypesResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -539,7 +611,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation result type: BatchUpdateEntityTypesResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -551,7 +625,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation result type: BatchUpdateEntityTypesResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -565,7 +641,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation result type: BatchUpdateEntityTypesResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -577,7 +655,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -591,7 +671,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -603,7 +685,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -617,7 +701,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -629,7 +715,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -643,7 +731,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -655,7 +745,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -669,7 +761,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -683,7 +777,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -699,7 +795,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -713,7 +811,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -729,7 +829,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -741,7 +843,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -755,7 +859,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -767,7 +873,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -781,7 +889,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
