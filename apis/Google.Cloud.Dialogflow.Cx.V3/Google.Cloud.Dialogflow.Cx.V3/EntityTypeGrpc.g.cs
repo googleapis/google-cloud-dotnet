@@ -138,6 +138,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -149,6 +153,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -160,6 +168,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -284,6 +296,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -296,6 +312,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -306,6 +326,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -318,6 +342,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates an entity type in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -328,6 +356,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -340,6 +372,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -350,6 +386,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -362,6 +402,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -372,6 +416,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -384,6 +432,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -394,6 +446,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -406,6 +462,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Deletes the specified entity type.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

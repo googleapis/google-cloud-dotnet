@@ -515,6 +515,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -524,6 +528,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -533,6 +541,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -542,6 +554,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -562,6 +578,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -582,6 +602,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -598,6 +622,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -618,6 +646,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -638,6 +670,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create a page for.
@@ -654,6 +690,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -663,6 +703,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -672,6 +716,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -681,6 +729,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="page">
         /// Required. The page to update.
@@ -700,6 +752,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="page">
         /// Required. The page to update.
@@ -719,6 +775,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="page">
         /// Required. The page to update.
@@ -734,6 +794,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -743,6 +807,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -752,6 +820,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -761,6 +833,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -777,6 +853,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -793,6 +873,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -806,6 +890,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -822,6 +910,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -838,6 +930,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the page to delete.
@@ -971,6 +1067,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -983,6 +1083,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a page in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -995,6 +1099,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1007,6 +1115,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1019,6 +1131,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1031,6 +1147,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified page.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

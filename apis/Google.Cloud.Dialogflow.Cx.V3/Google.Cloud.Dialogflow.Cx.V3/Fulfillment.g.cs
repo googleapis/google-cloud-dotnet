@@ -28,34 +28,35 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aNGdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4",
             "L3YzL3Jlc3BvbnNlX21lc3NhZ2UucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iwQYK",
+            "dHJ1Y3QucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i4wYK",
             "C0Z1bGZpbGxtZW50EkAKCG1lc3NhZ2VzGAEgAygLMi4uZ29vZ2xlLmNsb3Vk",
             "LmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlEjcKB3dlYmhvb2sY",
             "AiABKAlCJvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9XZWJob29r",
-            "EgsKA3RhZxgDIAEoCRJcChVzZXRfcGFyYW1ldGVyX2FjdGlvbnMYBCADKAsy",
-            "PS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5T",
-            "ZXRQYXJhbWV0ZXJBY3Rpb24SVgoRY29uZGl0aW9uYWxfY2FzZXMYBSADKAsy",
-            "Oy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5D",
-            "b25kaXRpb25hbENhc2VzGk4KElNldFBhcmFtZXRlckFjdGlvbhIRCglwYXJh",
-            "bWV0ZXIYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYu",
-            "VmFsdWUaowMKEENvbmRpdGlvbmFsQ2FzZXMSTwoFY2FzZXMYASADKAsyQC5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5Db25k",
-            "aXRpb25hbENhc2VzLkNhc2UavQIKBENhc2USEQoJY29uZGl0aW9uGAEgASgJ",
-            "EmIKDGNhc2VfY29udGVudBgCIAMoCzJMLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LmN4LnYzLkZ1bGZpbGxtZW50LkNvbmRpdGlvbmFsQ2FzZXMuQ2FzZS5D",
-            "YXNlQ29udGVudBq9AQoLQ2FzZUNvbnRlbnQSQQoHbWVzc2FnZRgBIAEoCzIu",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2Fn",
-            "ZUgAElcKEGFkZGl0aW9uYWxfY2FzZXMYAiABKAsyOy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5Db25kaXRpb25hbENhc2Vz",
-            "SABCEgoQY2FzZXNfb3JfbWVzc2FnZUKgAQohY29tLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzQhBGdWxmaWxsbWVudFByb3RvUAFaP2dvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxv",
-            "dy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
-            "Q3guVjNiBnByb3RvMw=="));
+            "EiAKGHJldHVybl9wYXJ0aWFsX3Jlc3BvbnNlcxgIIAEoCBILCgN0YWcYAyAB",
+            "KAkSXAoVc2V0X3BhcmFtZXRlcl9hY3Rpb25zGAQgAygLMj0uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQuU2V0UGFyYW1ldGVy",
+            "QWN0aW9uElYKEWNvbmRpdGlvbmFsX2Nhc2VzGAUgAygLMjsuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQuQ29uZGl0aW9uYWxD",
+            "YXNlcxpOChJTZXRQYXJhbWV0ZXJBY3Rpb24SEQoJcGFyYW1ldGVyGAEgASgJ",
+            "EiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlGqMDChBD",
+            "b25kaXRpb25hbENhc2VzEk8KBWNhc2VzGAEgAygLMkAuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQuQ29uZGl0aW9uYWxDYXNl",
+            "cy5DYXNlGr0CCgRDYXNlEhEKCWNvbmRpdGlvbhgBIAEoCRJiCgxjYXNlX2Nv",
+            "bnRlbnQYAiADKAsyTC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5G",
+            "dWxmaWxsbWVudC5Db25kaXRpb25hbENhc2VzLkNhc2UuQ2FzZUNvbnRlbnQa",
+            "vQEKC0Nhc2VDb250ZW50EkEKB21lc3NhZ2UYASABKAsyLi5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2VIABJXChBhZGRp",
+            "dGlvbmFsX2Nhc2VzGAIgASgLMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjMuRnVsZmlsbG1lbnQuQ29uZGl0aW9uYWxDYXNlc0gAQhIKEGNhc2Vz",
+            "X29yX21lc3NhZ2VCoAEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52M0IQRnVsZmlsbG1lbnRQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjM7Y3j4",
+            "AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Parser, new[]{ "Messages", "Webhook", "Tag", "SetParameterActions", "ConditionalCases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction.Parser, new[]{ "Parameter", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Parser, new[]{ "Messages", "Webhook", "ReturnPartialResponses", "Tag", "SetParameterActions", "ConditionalCases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction.Parser, new[]{ "Parameter", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Parser, new[]{ "Cases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Parser, new[]{ "Condition", "CaseContent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Types.CaseContent), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Types.CaseContent.Parser, new[]{ "Message", "AdditionalCases" }, new[]{ "CasesOrMessage" }, null, null, null)})})})
           }));
     }
@@ -107,6 +108,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public Fulfillment(Fulfillment other) : this() {
       messages_ = other.messages_.Clone();
       webhook_ = other.webhook_;
+      returnPartialResponses_ = other.returnPartialResponses_;
       tag_ = other.tag_;
       setParameterActions_ = other.setParameterActions_.Clone();
       conditionalCases_ = other.conditionalCases_.Clone();
@@ -144,6 +146,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return webhook_; }
       set {
         webhook_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "return_partial_responses" field.</summary>
+    public const int ReturnPartialResponsesFieldNumber = 8;
+    private bool returnPartialResponses_;
+    /// <summary>
+    /// Whether Dialogflow should return currently queued fulfillment response
+    /// messages in streaming APIs. If a webhook is specified, it happens before
+    /// Dialogflow invokes webhook.
+    /// Warning:
+    /// 1) This flag only affects streaming API. Responses are still queued
+    /// and returned once in non-streaming API.
+    /// 2) The flag can be enabled in any fulfillment but only the first 3 partial
+    /// responses will be returned. You may only want to apply it to fulfillments
+    /// that have slow webhooks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ReturnPartialResponses {
+      get { return returnPartialResponses_; }
+      set {
+        returnPartialResponses_ = value;
       }
     }
 
@@ -203,6 +227,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if(!messages_.Equals(other.messages_)) return false;
       if (Webhook != other.Webhook) return false;
+      if (ReturnPartialResponses != other.ReturnPartialResponses) return false;
       if (Tag != other.Tag) return false;
       if(!setParameterActions_.Equals(other.setParameterActions_)) return false;
       if(!conditionalCases_.Equals(other.conditionalCases_)) return false;
@@ -214,6 +239,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       int hash = 1;
       hash ^= messages_.GetHashCode();
       if (Webhook.Length != 0) hash ^= Webhook.GetHashCode();
+      if (ReturnPartialResponses != false) hash ^= ReturnPartialResponses.GetHashCode();
       if (Tag.Length != 0) hash ^= Tag.GetHashCode();
       hash ^= setParameterActions_.GetHashCode();
       hash ^= conditionalCases_.GetHashCode();
@@ -244,6 +270,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       setParameterActions_.WriteTo(output, _repeated_setParameterActions_codec);
       conditionalCases_.WriteTo(output, _repeated_conditionalCases_codec);
+      if (ReturnPartialResponses != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ReturnPartialResponses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -264,6 +294,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       setParameterActions_.WriteTo(ref output, _repeated_setParameterActions_codec);
       conditionalCases_.WriteTo(ref output, _repeated_conditionalCases_codec);
+      if (ReturnPartialResponses != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ReturnPartialResponses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -276,6 +310,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       size += messages_.CalculateSize(_repeated_messages_codec);
       if (Webhook.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Webhook);
+      }
+      if (ReturnPartialResponses != false) {
+        size += 1 + 1;
       }
       if (Tag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
@@ -296,6 +333,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       messages_.Add(other.messages_);
       if (other.Webhook.Length != 0) {
         Webhook = other.Webhook;
+      }
+      if (other.ReturnPartialResponses != false) {
+        ReturnPartialResponses = other.ReturnPartialResponses;
       }
       if (other.Tag.Length != 0) {
         Tag = other.Tag;
@@ -336,6 +376,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             conditionalCases_.AddEntriesFrom(input, _repeated_conditionalCases_codec);
             break;
           }
+          case 64: {
+            ReturnPartialResponses = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -368,6 +412,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 42: {
             conditionalCases_.AddEntriesFrom(ref input, _repeated_conditionalCases_codec);
+            break;
+          }
+          case 64: {
+            ReturnPartialResponses = input.ReadBool();
             break;
           }
         }

@@ -526,6 +526,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -535,6 +539,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -544,6 +552,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -553,6 +565,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -573,6 +589,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -593,6 +613,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -609,6 +633,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -629,6 +657,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -649,6 +681,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The flow to create an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] for.
@@ -665,6 +701,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -674,6 +714,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -683,6 +727,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -692,6 +740,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to update.
@@ -710,6 +762,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to update.
@@ -728,6 +784,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="transitionRouteGroup">
         /// Required. The transition route group to update.
@@ -742,6 +802,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -751,6 +815,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -760,6 +828,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -769,6 +841,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -785,6 +861,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -801,6 +881,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -814,6 +898,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -830,6 +918,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -846,6 +938,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] to delete.
@@ -980,6 +1076,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -992,6 +1092,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,6 +1108,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1016,6 +1124,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1028,6 +1140,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1040,6 +1156,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+        /// 
+        /// Note: You should always train a flow prior to sending it queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

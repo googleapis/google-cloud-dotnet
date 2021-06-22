@@ -158,6 +158,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       /// <summary>
       /// Creates a flow in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -202,6 +206,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Updates the specified flow.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -214,6 +222,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Trains the specified flow. Note that only the flow in 'draft' environment
       /// is trained.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -250,6 +262,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Imports the specified flow to the specified agent from a binary file.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -300,6 +316,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Creates a flow in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -312,6 +332,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a flow in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -322,6 +346,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a flow in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -334,6 +362,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a flow in the specified agent.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -476,6 +508,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified flow.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -488,6 +524,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified flow.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -498,6 +538,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified flow.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -510,6 +554,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Updates the specified flow.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -521,6 +569,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Trains the specified flow. Note that only the flow in 'draft' environment
       /// is trained.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -534,6 +586,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Trains the specified flow. Note that only the flow in 'draft' environment
       /// is trained.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -545,6 +601,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Trains the specified flow. Note that only the flow in 'draft' environment
       /// is trained.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -558,6 +618,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Trains the specified flow. Note that only the flow in 'draft' environment
       /// is trained.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -668,6 +732,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Imports the specified flow to the specified agent from a binary file.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -680,6 +748,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Imports the specified flow to the specified agent from a binary file.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -690,6 +762,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Imports the specified flow to the specified agent from a binary file.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -702,6 +778,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Imports the specified flow to the specified agent from a binary file.
+      ///
+      /// Note: You should always train a flow prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

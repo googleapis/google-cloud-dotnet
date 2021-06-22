@@ -97,6 +97,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                     QueryParams = new QueryParameters(),
                     QueryInput = new QueryInput(),
                     OutputAudioConfig = new OutputAudioConfig(),
+                    EnablePartialResponse = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
