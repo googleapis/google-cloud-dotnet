@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-06-22
+
+- [Commit 10470bb](https://github.com/googleapis/google-cloud-dotnet/commit/10470bb): feat: support for NodeAutoprovisioning ImageType
+
 # Version 2.3.0, released 2021-05-25
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
