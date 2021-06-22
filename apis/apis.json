@@ -2477,7 +2477,7 @@
     },
     {
       "id": "Google.Cloud.Tpu.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud TPU",
       "productUrl": "https://cloud.google.com/tpu/",
@@ -2486,7 +2486,9 @@
         "tpu"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.38.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/tpu/v1"
