@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-06-22
+
+- [Commit 16f75f9](https://github.com/googleapis/google-cloud-dotnet/commit/16f75f9): docs: update currently supported Finding filter fields.
+
 # Version 2.3.0, released 2021-05-26
 
 - [Commit 6b46c80](https://github.com/googleapis/google-cloud-dotnet/commit/6b46c80): feat: add canonical_name and folder fields
