@@ -1932,6 +1932,7 @@
       "ImportDirectories": [
         "google/api",
         "google/cloud/pubsublite/v1",
+        "google/longrunning",
         "google/protobuf"
       ],
       "Stable": true,
