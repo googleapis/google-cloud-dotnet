@@ -309,6 +309,15 @@ namespace Google.Cloud.Dialogflow.V2
             get => string.IsNullOrEmpty(Name) ? null : gcdv::EnvironmentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="AgentVersion"/> resource name property.
+        /// </summary>
+        public VersionName AgentVersionAsVersionName
+        {
+            get => string.IsNullOrEmpty(AgentVersion) ? null : VersionName.Parse(AgentVersion, allowUnparsed: true);
+            set => AgentVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListEnvironmentsRequest

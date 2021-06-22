@@ -155,6 +155,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Creates an intent in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -166,6 +170,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Updates the specified intent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -177,6 +185,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Deletes the specified intent and its direct or indirect followup intents.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -189,7 +201,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation result type: BatchUpdateIntentsResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -202,7 +216,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -327,6 +343,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an intent in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -339,6 +359,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an intent in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -349,6 +373,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an intent in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -361,6 +389,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates an intent in the specified agent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -371,6 +403,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified intent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -383,6 +419,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified intent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -393,6 +433,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified intent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,6 +449,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates the specified intent.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -415,6 +463,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified intent and its direct or indirect followup intents.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -427,6 +479,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified intent and its direct or indirect followup intents.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -437,6 +493,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified intent and its direct or indirect followup intents.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,6 +509,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes the specified intent and its direct or indirect followup intents.
+      ///
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +524,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation result type: BatchUpdateIntentsResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -474,7 +540,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation result type: BatchUpdateIntentsResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -486,7 +554,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation result type: BatchUpdateIntentsResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -500,7 +570,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation result type: BatchUpdateIntentsResponse
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -512,7 +584,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -526,7 +600,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -538,7 +614,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -552,7 +630,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation result type: google.protobuf.Empty
+      /// Note: You should always train an agent prior to sending it queries. See the
+      /// [training
+      /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
