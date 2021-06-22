@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta06, released 2021-06-22
+
+- [Commit db0b36e](https://github.com/googleapis/google-cloud-dotnet/commit/db0b36e): docs: fix grammar in documentation.
+
 # Version 2.0.0-beta05, released 2021-05-26
 
 No API surface changes; just dependency updates.
