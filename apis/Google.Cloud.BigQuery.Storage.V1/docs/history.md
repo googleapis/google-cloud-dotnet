@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-06-22
+
+- [Commit 72f542b](https://github.com/googleapis/google-cloud-dotnet/commit/72f542b): feat: Add ZSTD compression as an option for Arrow.
+
 # Version 2.2.0, released 2021-04-14
 
 - [Commit 9f5f0aa](https://github.com/googleapis/google-cloud-dotnet/commit/9f5f0aa): Regenerate server-streaming calls with Google request params. Fixes [issue 6310](https://github.com/googleapis/google-cloud-dotnet/issues/6310).
