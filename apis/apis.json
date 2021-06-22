@@ -820,7 +820,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API.",
       "tags": [
@@ -828,9 +828,9 @@
         "iot"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.3.0",
-        "Google.LongRunning": "2.1.0",
-        "Grpc.Core": "2.36.4"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.38.0"
       },
       "testDependencies": {
         "Microsoft.AspNetCore.Mvc.Core": "1.0.4"

@@ -1,5 +1,19 @@
 # Version history
 
+# Version 3.3.0, released 2021-06-22
+
+- [Commit c135978](https://github.com/googleapis/google-cloud-dotnet/commit/c135978): docs: added notes to train agent prior to sending queries fix: added resource reference to agent_version
+- [Commit 6567bfc](https://github.com/googleapis/google-cloud-dotnet/commit/6567bfc): feat: added Automated agent reply type and allow cancellation flag for partial response feature.
+- [Commit b270512](https://github.com/googleapis/google-cloud-dotnet/commit/b270512): feat: added a field in the query result to indicate whether slot filling is cancelled.
+- [Commit fe36e1e](https://github.com/googleapis/google-cloud-dotnet/commit/fe36e1e): feat: added location-aware HTTP path binding for ListIntents
+- [Commit b782110](https://github.com/googleapis/google-cloud-dotnet/commit/b782110): fix: removed incorrect resource annotation for UpdateEnvironmentRequest.
+- [Commit 88a63a8](https://github.com/googleapis/google-cloud-dotnet/commit/88a63a8):
+  - feat: added more Environment RPCs
+  - feat: added Versions service
+  - feat: added Fulfillment service
+  - feat: added TextToSpeechSettings.
+  - feat: added location in some resource patterns.
+
 # Version 3.2.0, released 2021-04-29
 
 - [Commit ae565e2](https://github.com/googleapis/google-cloud-dotnet/commit/ae565e2): feat: expose MP3_64_KBPS and MULAW for output audio encodings.
