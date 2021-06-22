@@ -609,6 +609,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -618,6 +622,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -627,6 +635,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -636,6 +648,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -655,6 +671,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -674,6 +694,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -689,6 +713,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -708,6 +736,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -727,6 +759,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="parent">
         /// Required. The location to create a agent for.
@@ -742,6 +778,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -751,6 +791,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -760,6 +804,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -769,6 +817,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -788,6 +840,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -807,6 +863,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="agent">
         /// Required. The agent to update.
@@ -989,6 +1049,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// Replaces the current agent with a new one. Note that all existing resources
         /// in agent (e.g. intents, entity types, flows) will be removed.
+        /// 
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1001,6 +1066,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// Replaces the current agent with a new one. Note that all existing resources
         /// in agent (e.g. intents, entity types, flows) will be removed.
+        /// 
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1013,6 +1083,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// Replaces the current agent with a new one. Note that all existing resources
         /// in agent (e.g. intents, entity types, flows) will be removed.
+        /// 
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1365,6 +1440,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1377,6 +1456,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates an agent in the specified location.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1389,6 +1472,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1401,6 +1488,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Updates the specified agent.
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1470,6 +1561,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// Replaces the current agent with a new one. Note that all existing resources
         /// in agent (e.g. intents, entity types, flows) will be removed.
+        /// 
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1485,6 +1581,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// Replaces the current agent with a new one. Note that all existing resources
         /// in agent (e.g. intents, entity types, flows) will be removed.
+        /// 
+        /// 
+        /// Note: You should always train flows prior to sending them queries. See the
+        /// [training
+        /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
