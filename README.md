@@ -30,7 +30,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/3.1.0) | 3.1.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.Reservation.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Reservation.V1/1.2.0) | 1.2.0 | [BigQuery Reservation](https://cloud.google.com/bigquery/docs/reference/reservations) |
 | [Google.Cloud.BigQuery.V2](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.V2/2.2.0) | 2.2.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
-| [Google.Cloud.BigQuery.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/2.2.0) | 2.2.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
+| [Google.Cloud.BigQuery.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/2.3.0) | 2.3.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
 | [Google.Cloud.Bigtable.Admin.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Admin.V2/2.4.0) | 2.4.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Common.V2/2.1.0) | 2.1.0 | Common code used by Bigtable V2 APIs |
 | [Google.Cloud.Bigtable.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.V2/2.2.0) | 2.2.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
