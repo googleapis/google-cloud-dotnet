@@ -1676,6 +1676,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.NetworkConnectivity.V1Alpha1"
     },
     {
+      "ServiceDirectory": "google/cloud/networksecurity/v1beta1",
+      "Name": "networksecurity.googleapis.com",
+      "Title": "Network Security API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/networksecurity/v1beta1/networksecurity_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.networksecurity.v1beta1",
+      "PackageFromProtos": "google.cloud.networksecurity.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networksecurity/v1beta1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkSecurity.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/notebooks/v1beta1",
       "Name": "notebooks.googleapis.com",
       "Title": "Notebooks API",
