@@ -589,6 +589,20 @@
       "protoPath": "google/cloud/dataqna/v1alpha"
     },
     {
+      "id": "Google.Cloud.Dataflow.V1Beta3",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Dataflow",
+      "productUrl": "https://cloud.google.com/dataflow/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Dataflow API (v1beta3) which manages Google Cloud Dataflow projects on Google Cloud Platform.",
+      "tags": [
+        "dataflow"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/dataflow/v1beta3"
+    },
+    {
       "id": "Google.Cloud.Dataproc.V1",
       "generator": "micro",
       "protoPath": "google/cloud/dataproc/v1",
