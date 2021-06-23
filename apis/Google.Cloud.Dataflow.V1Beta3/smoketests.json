@@ -1,0 +1,20 @@
+[
+  {
+    "client": "JobsV1Beta3Client",
+    "method": "ListJobs",
+    "arguments": {
+      "request": {
+        "projectId": "${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "client": "SnapshotsV1Beta3Client",
+    "method": "ListSnapshots",
+    "arguments": {
+      "request": {
+        "projectId": "${PROJECT_ID}"
+      }
+    }
+  }
+]
