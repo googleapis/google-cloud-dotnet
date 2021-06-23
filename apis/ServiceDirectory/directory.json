@@ -3037,6 +3037,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Container.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/dataflow/v1beta3",
+      "Name": "dataflow.googleapis.com",
+      "Title": "Dataflow API",
+      "Description": "Manages Google Cloud Dataflow projects on Google Cloud Platform.",
+      "ServiceConfigFile": "google/dataflow/v1beta3/dataflow_v1beta3.yaml",
+      "Version": "v1beta3",
+      "PackageFromDirectory": "google.dataflow.v1beta3",
+      "PackageFromProtos": "google.dataflow.v1beta3",
+      "ImportDirectories": [
+        "google/api",
+        "google/dataflow/v1beta3",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Dataflow.V1Beta3"
+    },
+    {
       "ServiceDirectory": "google/datastore/admin/v1",
       "Name": "datastore.googleapis.com",
       "Title": "Cloud Datastore API",
