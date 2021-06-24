@@ -53,9 +53,9 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.3.0) | 2.3.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.1.0) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.2.0) | 2.2.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
-| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.AspNetCore3](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore3/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
-| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.2.0) | 4.2.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
+| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.3.0-beta01) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
+| [Google.Cloud.Diagnostics.AspNetCore3](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore3/4.3.0-beta01) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
+| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.3.0-beta01) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.Cx.V3](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.Cx.V3/1.2.0) | 1.2.0 | [Dialogflow](https://cloud.google.com/dialogflow/cx/docs) |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/3.3.0) | 3.3.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.2.0) | 3.2.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
