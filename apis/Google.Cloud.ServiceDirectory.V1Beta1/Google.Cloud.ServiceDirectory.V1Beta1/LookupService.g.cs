@@ -140,22 +140,37 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     /// <summary>
     /// Optional. The filter applied to the endpoints of the resolved service.
     ///
-    /// General filter string syntax:
-    /// &lt;field> &lt;operator> &lt;value> (&lt;logical connector>)
-    /// &lt;field> can be "name" or "metadata.&lt;key>" for map field.
-    /// &lt;operator> can be "&lt;, >, &lt;=, >=, !=, =, :". Of which ":" means HAS and is
-    /// roughly the same as "=".
-    /// &lt;value> must be the same data type as the field.
-    /// &lt;logical connector> can be "AND, OR, NOT".
+    /// General `filter` string syntax:
+    /// `&lt;field> &lt;operator> &lt;value> (&lt;logical connector>)`
+    ///
+    /// *   `&lt;field>` can be `name`, `address`, `port`, or `metadata.&lt;key>` for
+    ///     map field
+    /// *   `&lt;operator>` can be `&lt;`, `>`, `&lt;=`, `>=`, `!=`, `=`, `:`. Of which `:`
+    ///     means `HAS`, and is roughly the same as `=`
+    /// *   `&lt;value>` must be the same data type as field
+    /// *   `&lt;logical connector>` can be `AND`, `OR`, `NOT`
     ///
     /// Examples of valid filters:
-    /// * "metadata.owner" returns Endpoints that have a label with the
-    ///   key "owner", this is the same as "metadata:owner"
-    /// * "metadata.protocol=gRPC" returns Endpoints that have key/value
-    ///   "protocol=gRPC"
-    /// * "metadata.owner!=sd AND metadata.foo=bar" returns
-    ///   Endpoints that have "owner" field in metadata with a value that is not
-    ///   "sd" AND have the key/value foo=bar.
+    ///
+    /// *   `metadata.owner` returns endpoints that have a annotation with the key
+    ///     `owner`, this is the same as `metadata:owner`
+    /// *   `metadata.protocol=gRPC` returns endpoints that have key/value
+    ///     `protocol=gRPC`
+    /// *   `address=192.108.1.105` returns endpoints that have this address
+    /// *   `port>8080` returns endpoints that have port number larger than 8080
+    /// *
+    /// `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-service/endpoints/endpoint-c`
+    ///     returns endpoints that have name that is alphabetically later than the
+    ///     string, so "endpoint-e" is returned but "endpoint-a" is not
+    /// *   `metadata.owner!=sd AND metadata.foo=bar` returns endpoints that have
+    ///     `owner` in annotation key but value is not `sd` AND have key/value
+    ///      `foo=bar`
+    /// *   `doesnotexist.foo=bar` returns an empty list. Note that endpoint
+    ///     doesn't have a field called "doesnotexist". Since the filter does not
+    ///     match any endpoint, it returns no results
+    ///
+    /// For more information about filtering, see
+    /// [API Filtering](https://aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string EndpointFilter {

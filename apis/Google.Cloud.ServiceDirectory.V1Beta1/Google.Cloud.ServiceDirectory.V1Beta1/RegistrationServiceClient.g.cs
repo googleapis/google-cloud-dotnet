@@ -502,7 +502,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         public virtual RegistrationService.RegistrationServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -511,7 +511,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -520,7 +520,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -529,7 +529,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateNamespaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -558,7 +558,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -587,7 +587,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -611,7 +611,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateNamespaceAsync(parent, @namespace, namespaceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -640,7 +640,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -669,7 +669,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project and location the namespace
@@ -714,8 +714,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces we'd like to
-        /// list.
+        /// Required. The resource name of the project and location whose namespaces you'd like
+        /// to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -739,8 +739,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces we'd like to
-        /// list.
+        /// Required. The resource name of the project and location whose namespaces you'd like
+        /// to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -764,8 +764,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces we'd like to
-        /// list.
+        /// Required. The resource name of the project and location whose namespaces you'd like
+        /// to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -789,8 +789,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces we'd like to
-        /// list.
+        /// Required. The resource name of the project and location whose namespaces you'd like
+        /// to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             DeleteNamespaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1162,7 +1162,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1190,7 +1190,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1213,7 +1213,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateServiceAsync(parent, service, serviceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1241,7 +1241,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1269,7 +1269,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the namespace this service will belong to.
@@ -1313,7 +1313,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all services belonging to a namespace.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the namespace whose services we'd
+        /// Required. The resource name of the namespace whose services you'd
         /// like to list.
         /// </param>
         /// <param name="pageToken">
@@ -1338,7 +1338,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all services belonging to a namespace.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the namespace whose services we'd
+        /// Required. The resource name of the namespace whose services you'd
         /// like to list.
         /// </param>
         /// <param name="pageToken">
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all services belonging to a namespace.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the namespace whose services we'd
+        /// Required. The resource name of the namespace whose services you'd
         /// like to list.
         /// </param>
         /// <param name="pageToken">
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all services belonging to a namespace.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the namespace whose services we'd
+        /// Required. The resource name of the namespace whose services you'd
         /// like to list.
         /// </param>
         /// <param name="pageToken">
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             DeleteServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1715,7 +1715,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1761,7 +1761,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1789,7 +1789,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1812,7 +1812,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             CreateEndpointAsync(parent, endpoint, endpointId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1840,7 +1840,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1868,7 +1868,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the service that this endpoint provides.
@@ -1912,7 +1912,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all endpoints.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the service whose endpoints we'd like to
+        /// Required. The resource name of the service whose endpoints you'd like to
         /// list.
         /// </param>
         /// <param name="pageToken">
@@ -1937,7 +1937,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all endpoints.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the service whose endpoints we'd like to
+        /// Required. The resource name of the service whose endpoints you'd like to
         /// list.
         /// </param>
         /// <param name="pageToken">
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all endpoints.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the service whose endpoints we'd like to
+        /// Required. The resource name of the service whose endpoints you'd like to
         /// list.
         /// </param>
         /// <param name="pageToken">
@@ -1987,7 +1987,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all endpoints.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the service whose endpoints we'd like to
+        /// Required. The resource name of the service whose endpoints you'd like to
         /// list.
         /// </param>
         /// <param name="pageToken">
@@ -2009,7 +2009,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2018,7 +2018,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2027,7 +2027,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2036,7 +2036,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GetEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2050,7 +2050,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2064,7 +2064,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2075,7 +2075,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GetEndpointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2103,7 +2103,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to get.
@@ -2114,7 +2114,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GetEndpointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2123,7 +2123,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2132,7 +2132,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2141,7 +2141,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             UpdateEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The updated endpoint.
@@ -2159,7 +2159,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The updated endpoint.
@@ -2177,7 +2177,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The updated endpoint.
@@ -2191,7 +2191,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             UpdateEndpointAsync(endpoint, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2200,7 +2200,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2209,7 +2209,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2218,7 +2218,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             DeleteEndpointAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2232,7 +2232,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2246,7 +2246,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2257,7 +2257,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             DeleteEndpointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2271,7 +2271,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2285,7 +2285,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the endpoint to delete.
@@ -2581,7 +2581,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2593,7 +2593,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Creates a namespace, and returns the new Namespace.
+        /// Creates a namespace, and returns the new namespace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2703,7 +2703,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2715,7 +2715,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Creates a service, and returns the new Service.
+        /// Creates a service, and returns the new service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2825,7 +2825,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2837,7 +2837,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Creates a endpoint, and returns the new Endpoint.
+        /// Creates an endpoint, and returns the new endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2873,7 +2873,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2885,7 +2885,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Gets a endpoint.
+        /// Gets an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2897,7 +2897,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2909,7 +2909,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Updates a endpoint.
+        /// Updates an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2921,7 +2921,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2933,7 +2933,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Deletes a endpoint.
+        /// Deletes an endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
