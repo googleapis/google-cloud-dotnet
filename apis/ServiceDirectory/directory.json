@@ -1261,6 +1261,40 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Eventarc.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/filestore/v1",
+      "Name": "file.googleapis.com",
+      "Title": "Cloud Filestore API",
+      "Description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+      "ServiceConfigFile": "google/cloud/filestore/v1/file_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.filestore.v1",
+      "PackageFromProtos": "google.cloud.filestore.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Filestore.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/filestore/v1beta1",
+      "Name": "file.googleapis.com",
+      "Title": "Cloud Filestore API",
+      "Description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+      "ServiceConfigFile": "google/cloud/filestore/v1beta1/file_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.filestore.v1beta1",
+      "PackageFromProtos": "google.cloud.filestore.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Filestore.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/functions/v1",
       "Name": "cloudfunctions.googleapis.com",
       "Title": "Cloud Functions API",
