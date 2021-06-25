@@ -506,7 +506,7 @@
     },
     {
       "id": "Google.Cloud.Common",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "targetFrameworks": "netstandard2.0;net461",
       "type": "other",
       "description": "Common protos for Cloud APIs.",
