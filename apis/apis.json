@@ -995,6 +995,20 @@
       "protoPath": "google/cloud/eventarc/v1"
     },
     {
+      "id": "Google.Cloud.Filestore.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Filestore",
+      "description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Common": "1.0.0-beta01",
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/filestore/v1"
+    },
+    {
       "id": "Google.Cloud.Firestore.Admin.V1",
       "generator": "micro",
       "protoPath": "google/firestore/admin/v1",
