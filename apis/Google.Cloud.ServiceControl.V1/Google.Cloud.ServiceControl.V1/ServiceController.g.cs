@@ -26,11 +26,11 @@ namespace Google.Cloud.ServiceControl.V1 {
           string.Concat(
             "CjVnb29nbGUvYXBpL3NlcnZpY2Vjb250cm9sL3YxL3NlcnZpY2VfY29udHJv",
             "bGxlci5wcm90bxIcZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MRocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxouZ29vZ2xlL2FwaS9zZXJ2aWNl",
-            "Y29udHJvbC92MS9jaGVja19lcnJvci5wcm90bxosZ29vZ2xlL2FwaS9zZXJ2",
-            "aWNlY29udHJvbC92MS9vcGVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhdn",
-            "b29nbGUvYXBpL2NsaWVudC5wcm90byJ7CgxDaGVja1JlcXVlc3QSFAoMc2Vy",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
+            "cHJvdG8aLmdvb2dsZS9hcGkvc2VydmljZWNvbnRyb2wvdjEvY2hlY2tfZXJy",
+            "b3IucHJvdG8aLGdvb2dsZS9hcGkvc2VydmljZWNvbnRyb2wvdjEvb3BlcmF0",
+            "aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdn",
+            "b29nbGUvcnBjL3N0YXR1cy5wcm90byJ7CgxDaGVja1JlcXVlc3QSFAoMc2Vy",
             "dmljZV9uYW1lGAEgASgJEjoKCW9wZXJhdGlvbhgCIAEoCzInLmdvb2dsZS5h",
             "cGkuc2VydmljZWNvbnRyb2wudjEuT3BlcmF0aW9uEhkKEXNlcnZpY2VfY29u",
             "ZmlnX2lkGAQgASgJIuYECg1DaGVja1Jlc3BvbnNlEhQKDG9wZXJhdGlvbl9p",
@@ -72,7 +72,7 @@ namespace Google.Cloud.ServiceControl.V1 {
             "bGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFHb29nbGU6OkNsb3VkOjpT",
             "ZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.CheckErrorReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.OperationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.CheckErrorReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.OperationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckRequest), global::Google.Cloud.ServiceControl.V1.CheckRequest.Parser, new[]{ "ServiceName", "Operation", "ServiceConfigId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse), global::Google.Cloud.ServiceControl.V1.CheckResponse.Parser, new[]{ "OperationId", "CheckErrors", "ServiceConfigId", "ServiceRolloutId", "CheckInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo), global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo.Parser, new[]{ "UnusedArguments", "ConsumerInfo" }, null, null, null, null),
@@ -408,8 +408,9 @@ namespace Google.Cloud.ServiceControl.V1 {
     public const int OperationIdFieldNumber = 1;
     private string operationId_ = "";
     /// <summary>
-    /// The same operation_id value used in the [CheckRequest][google.api.servicecontrol.v1.CheckRequest].
-    /// Used for logging and diagnostics purposes.
+    /// The same operation_id value used in the
+    /// [CheckRequest][google.api.servicecontrol.v1.CheckRequest]. Used for logging
+    /// and diagnostics purposes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OperationId {
@@ -1296,7 +1297,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///
     /// There is no limit on the number of operations in the same ReportRequest,
     /// however the ReportRequest size should be no larger than 1MB. See
-    /// [ReportResponse.report_errors][google.api.servicecontrol.v1.ReportResponse.report_errors] for partial failure behavior.
+    /// [ReportResponse.report_errors][google.api.servicecontrol.v1.ReportResponse.report_errors]
+    /// for partial failure behavior.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.Operation> Operations {
@@ -1743,7 +1745,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Represents the processing error of one [Operation][google.api.servicecontrol.v1.Operation] in the request.
+      /// Represents the processing error of one
+      /// [Operation][google.api.servicecontrol.v1.Operation] in the request.
       /// </summary>
       public sealed partial class ReportError : pb::IMessage<ReportError>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1788,7 +1791,9 @@ namespace Google.Cloud.ServiceControl.V1 {
         public const int OperationIdFieldNumber = 1;
         private string operationId_ = "";
         /// <summary>
-        /// The [Operation.operation_id][google.api.servicecontrol.v1.Operation.operation_id] value from the request.
+        /// The
+        /// [Operation.operation_id][google.api.servicecontrol.v1.Operation.operation_id]
+        /// value from the request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string OperationId {
@@ -1802,7 +1807,8 @@ namespace Google.Cloud.ServiceControl.V1 {
         public const int StatusFieldNumber = 2;
         private global::Google.Rpc.Status status_;
         /// <summary>
-        /// Details of the error when processing the [Operation][google.api.servicecontrol.v1.Operation].
+        /// Details of the error when processing the
+        /// [Operation][google.api.servicecontrol.v1.Operation].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Rpc.Status Status {

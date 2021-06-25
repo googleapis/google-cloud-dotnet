@@ -140,7 +140,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The start of the time period over which this metric value's measurement
     /// applies. The time period has different semantics for different metric
     /// types (cumulative, delta, and gauge). See the metric definition
-    /// documentation in the service configuration for details.
+    /// documentation in the service configuration for details. If not specified,
+    /// [google.api.servicecontrol.v1.Operation.start_time][google.api.servicecontrol.v1.Operation.start_time] will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -155,7 +156,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The end of the time period over which this metric value's measurement
-    /// applies.
+    /// applies.  If not specified,
+    /// [google.api.servicecontrol.v1.Operation.end_time][google.api.servicecontrol.v1.Operation.end_time] will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
