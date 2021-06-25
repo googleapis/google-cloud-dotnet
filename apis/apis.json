@@ -505,6 +505,19 @@
       "protoPath": "google/cloud/clouddms/v1"
     },
     {
+      "id": "Google.Cloud.Common",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.0;net461",
+      "type": "other",
+      "description": "Common protos for Cloud APIs.",
+      "tags": [],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.3.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/cloud/common"
+    },
+    {
       "id": "Google.Cloud.Compute.V1",
       "version": "1.0.0-alpha02",
       "type": "regapic",
