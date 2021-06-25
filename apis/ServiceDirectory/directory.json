@@ -143,7 +143,7 @@
       "ServiceDirectory": "google/api/servicecontrol/v1",
       "Name": "servicecontrol.googleapis.com",
       "Title": "Service Control API",
-      "Description": "Provides control plane functionality to managed services, such as logging, monitoring, and status checks.",
+      "Description": "Provides admission control and telemetry reporting for services integrated with Service Infrastructure.",
       "ServiceConfigFile": "google/api/servicecontrol/v1/servicecontrol.yaml",
       "Version": "v1",
       "PackageFromDirectory": "google.api.servicecontrol.v1",
