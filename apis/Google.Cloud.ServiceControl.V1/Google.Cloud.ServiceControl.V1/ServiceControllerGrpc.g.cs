@@ -3,7 +3,7 @@
 //     source: google/api/servicecontrol/v1/service_controller.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
-  /// [Google Service Control API](https://cloud.google.com/service-control/overview)
+  /// [Google Service Control API](/service-control/overview)
   ///
   /// Lets clients check and report operations against a [managed
   /// service](https://cloud.google.com/service-management/reference/rpc/google.api/servicemanagement.v1#google.api.servicemanagement.v1.ManagedService).
@@ -104,7 +104,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// propagation, therefore callers MUST NOT depend on the `Check` method having
       /// the latest policy information.
       ///
-      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.check` permission
       /// on the specified service. For more information, see
@@ -128,8 +129,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// the aggregation time window to avoid data loss risk more than 0.01%
       /// for business and compliance reasons.
       ///
-      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-      /// 1MB.
+      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.report` permission
       /// on the specified service. For more information, see
@@ -180,7 +181,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// propagation, therefore callers MUST NOT depend on the `Check` method having
       /// the latest policy information.
       ///
-      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.check` permission
       /// on the specified service. For more information, see
@@ -207,7 +209,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// propagation, therefore callers MUST NOT depend on the `Check` method having
       /// the latest policy information.
       ///
-      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.check` permission
       /// on the specified service. For more information, see
@@ -232,7 +235,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// propagation, therefore callers MUST NOT depend on the `Check` method having
       /// the latest policy information.
       ///
-      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.check` permission
       /// on the specified service. For more information, see
@@ -259,7 +263,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// propagation, therefore callers MUST NOT depend on the `Check` method having
       /// the latest policy information.
       ///
-      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+      /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.check` permission
       /// on the specified service. For more information, see
@@ -282,8 +287,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// the aggregation time window to avoid data loss risk more than 0.01%
       /// for business and compliance reasons.
       ///
-      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-      /// 1MB.
+      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.report` permission
       /// on the specified service. For more information, see
@@ -308,8 +313,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// the aggregation time window to avoid data loss risk more than 0.01%
       /// for business and compliance reasons.
       ///
-      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-      /// 1MB.
+      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.report` permission
       /// on the specified service. For more information, see
@@ -332,8 +337,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// the aggregation time window to avoid data loss risk more than 0.01%
       /// for business and compliance reasons.
       ///
-      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-      /// 1MB.
+      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.report` permission
       /// on the specified service. For more information, see
@@ -358,8 +363,8 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// the aggregation time window to avoid data loss risk more than 0.01%
       /// for business and compliance reasons.
       ///
-      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-      /// 1MB.
+      /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+      /// the size limit (wire-format byte size) of 1MB.
       ///
       /// This method requires the `servicemanagement.services.report` permission
       /// on the specified service. For more information, see
