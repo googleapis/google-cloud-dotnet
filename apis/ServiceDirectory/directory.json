@@ -1710,6 +1710,44 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.NetworkConnectivity.V1Alpha1"
     },
     {
+      "ServiceDirectory": "google/cloud/networkmanagement/v1",
+      "Name": "networkmanagement.googleapis.com",
+      "Title": "Network Management API",
+      "Description": "The Network Management API provides a collection of network performance monitoring and diagnostic capabilities.",
+      "ServiceConfigFile": "google/cloud/networkmanagement/v1/networkmanagement_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.networkmanagement.v1",
+      "PackageFromProtos": "google.cloud.networkmanagement.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networkmanagement/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkManagement.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/networkmanagement/v1beta1",
+      "Name": "networkmanagement.googleapis.com",
+      "Title": "Network Management API",
+      "Description": "The Network Management API provides a collection of network performance monitoring and diagnostic capabilities.",
+      "ServiceConfigFile": "google/cloud/networkmanagement/v1beta1/networkmanagement_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.networkmanagement.v1beta1",
+      "PackageFromProtos": "google.cloud.networkmanagement.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networkmanagement/v1beta1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkManagement.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/networksecurity/v1beta1",
       "Name": "networksecurity.googleapis.com",
       "Title": "Network Security API",
