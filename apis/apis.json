@@ -996,7 +996,7 @@
     },
     {
       "id": "Google.Cloud.Filestore.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Filestore",
       "description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
