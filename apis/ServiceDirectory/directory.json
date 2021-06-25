@@ -387,7 +387,7 @@
         "google/type"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AIPlatform.V1"
     },
     {
       "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
