@@ -1394,6 +1394,29 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/gkehub/v1alpha",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1alpha/gkehub_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.cloud.gkehub.v1alpha",
+      "PackageFromProtos": "google.cloud.gkehub.v1alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1alpha",
+        "google/cloud/gkehub/v1alpha/cloudauditlogging",
+        "google/cloud/gkehub/v1alpha/configmanagement",
+        "google/cloud/gkehub/v1alpha/metering",
+        "google/cloud/gkehub/v1alpha/multiclusteringress",
+        "google/cloud/gkehub/v1alpha/servicemesh",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/gkehub/v1alpha2",
       "Name": "gkehub.googleapis.com",
       "Title": "GKE Hub",
