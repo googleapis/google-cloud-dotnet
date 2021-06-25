@@ -71,6 +71,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.EssentialContacts.V1](Google.Cloud.EssentialContacts.V1/index.html) | 1.0.0 | [Essential Contacts](https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest) |
 | [Google.Cloud.Eventarc.V1](Google.Cloud.Eventarc.V1/index.html) | 1.0.0-beta01 | [Eventarc](https://cloud.google.com/eventarc/docs) |
+| [Google.Cloud.Filestore.V1](Google.Cloud.Filestore.V1/index.html) | 1.0.0-beta01 | Cloud Filestore |
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.2.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
