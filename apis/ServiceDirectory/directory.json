@@ -1394,6 +1394,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/gkehub/v1",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1/gkehub_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.gkehub.v1",
+      "PackageFromProtos": "google.cloud.gkehub.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1",
+        "google/cloud/gkehub/v1/configmanagement",
+        "google/cloud/gkehub/v1/multiclusteringress",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/gkehub/v1alpha",
       "Name": "gkehub.googleapis.com",
       "Title": "GKE Hub",
@@ -1432,6 +1452,27 @@
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Alpha2"
+    },
+    {
+      "ServiceDirectory": "google/cloud/gkehub/v1beta",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1beta/gkehub_v1beta.yaml",
+      "Version": "v1beta",
+      "PackageFromDirectory": "google.cloud.gkehub.v1beta",
+      "PackageFromProtos": "google.cloud.gkehub.v1beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1beta",
+        "google/cloud/gkehub/v1beta/configmanagement",
+        "google/cloud/gkehub/v1beta/metering",
+        "google/cloud/gkehub/v1beta/multiclusteringress",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Beta"
     },
     {
       "ServiceDirectory": "google/cloud/gkehub/v1beta1",
