@@ -69,43 +69,47 @@ namespace Google.Cloud.DocumentAI.V1 {
             "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkh1bWFuUmV2aWV3U3RhdHVz",
             "InIKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHV0FJVElORxAB",
             "EgsKB1JVTk5JTkcQAhINCglTVUNDRUVERUQQAxIOCgpDQU5DRUxMSU5HEAQS",
-            "DQoJQ0FOQ0VMTEVEEAUSCgoGRkFJTEVEEAYitAEKFVJldmlld0RvY3VtZW50",
+            "DQoJQ0FOQ0VMTEVEEAUSCgoGRkFJTEVEEAYizwIKFVJldmlld0RvY3VtZW50",
             "UmVxdWVzdBI/Cg9pbmxpbmVfZG9jdW1lbnQYBCABKAsyJC5nb29nbGUuY2xv",
             "dWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudEgAElAKE2h1bWFuX3Jldmlld19j",
             "b25maWcYASABKAlCM+BBAvpBLQorZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNv",
-            "bS9IdW1hblJldmlld0NvbmZpZ0IICgZzb3VyY2UiMQoWUmV2aWV3RG9jdW1l",
-            "bnRSZXNwb25zZRIXCg9nY3NfZGVzdGluYXRpb24YASABKAkibwofUmV2aWV3",
-            "RG9jdW1lbnRPcGVyYXRpb25NZXRhZGF0YRJMCg9jb21tb25fbWV0YWRhdGEY",
-            "BSABKAsyMy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Db21tb25PcGVy",
-            "YXRpb25NZXRhZGF0YTKrBgoYRG9jdW1lbnRQcm9jZXNzb3JTZXJ2aWNlErQB",
-            "Cg9Qcm9jZXNzRG9jdW1lbnQSKi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MS5Qcm9jZXNzUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "LlByb2Nlc3NSZXNwb25zZSJIgtPkkwI7IjYvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9wcm9jZXNzb3JzLyp9OnByb2Nlc3M6ASraQQRuYW1l",
-            "EuUBChVCYXRjaFByb2Nlc3NEb2N1bWVudHMSLy5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MS5CYXRjaFByb2Nlc3NSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiJ8gtPkkwJAIjsvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9wcm9jZXNzb3JzLyp9OmJhdGNoUHJvY2VzczoBKtpB",
-            "BG5hbWXKQSwKFEJhdGNoUHJvY2Vzc1Jlc3BvbnNlEhRCYXRjaFByb2Nlc3NN",
-            "ZXRhZGF0YRKgAgoOUmV2aWV3RG9jdW1lbnQSMS5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MS5SZXZpZXdEb2N1bWVudFJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIrsBgtPkkwJjIl4vdjEve2h1bWFuX3Jldmll",
-            "d19jb25maWc9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wcm9jZXNzb3JzLyov",
-            "aHVtYW5SZXZpZXdDb25maWd9OnJldmlld0RvY3VtZW50OgEq2kETaHVtYW5f",
-            "cmV2aWV3X2NvbmZpZ8pBOQoWUmV2aWV3RG9jdW1lbnRSZXNwb25zZRIfUmV2",
-            "aWV3RG9jdW1lbnRPcGVyYXRpb25NZXRhZGF0YRpNykEZZG9jdW1lbnRhaS5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1CyAMKHmNvbS5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MUIaRG9jdW1lbnRBaVByb2Nlc3NvclNlcnZpY2VQAVpEZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVu",
-            "dGFpL3YxO2RvY3VtZW50YWmqAhpHb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5W",
-            "McoCGkdvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYx6gIdR29vZ2xlOjpDbG91",
-            "ZDo6RG9jdW1lbnRBSTo6VjHqQWUKI2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5j",
-            "b20vUHJvY2Vzc29yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfepBfworZG9jdW1lbnRh",
-            "aS5nb29nbGVhcGlzLmNvbS9IdW1hblJldmlld0NvbmZpZxJQcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3By",
-            "b2Nlc3Nvcn0vaHVtYW5SZXZpZXdDb25maWdiBnByb3RvMw=="));
+            "bS9IdW1hblJldmlld0NvbmZpZxIgChhlbmFibGVfc2NoZW1hX3ZhbGlkYXRp",
+            "b24YAyABKAgSTAoIcHJpb3JpdHkYBSABKA4yOi5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MS5SZXZpZXdEb2N1bWVudFJlcXVlc3QuUHJpb3JpdHkiIwoI",
+            "UHJpb3JpdHkSCwoHREVGQVVMVBAAEgoKBlVSR0VOVBABQggKBnNvdXJjZUoE",
+            "CAIQAyIxChZSZXZpZXdEb2N1bWVudFJlc3BvbnNlEhcKD2djc19kZXN0aW5h",
+            "dGlvbhgBIAEoCSJvCh9SZXZpZXdEb2N1bWVudE9wZXJhdGlvbk1ldGFkYXRh",
+            "EkwKD2NvbW1vbl9tZXRhZGF0YRgFIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhMqsGChhEb2N1bWVu",
+            "dFByb2Nlc3NvclNlcnZpY2UStAEKD1Byb2Nlc3NEb2N1bWVudBIqLmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLlByb2Nlc3NSZXF1ZXN0GisuZ29vZ2xl",
+            "LmNsb3VkLmRvY3VtZW50YWkudjEuUHJvY2Vzc1Jlc3BvbnNlIkiC0+STAjsi",
+            "Ni92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2Nlc3NvcnMv",
+            "Kn06cHJvY2VzczoBKtpBBG5hbWUS5QEKFUJhdGNoUHJvY2Vzc0RvY3VtZW50",
+            "cxIvLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkJhdGNoUHJvY2Vzc1Jl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInyC0+STAkAi",
+            "Oy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Byb2Nlc3NvcnMv",
+            "Kn06YmF0Y2hQcm9jZXNzOgEq2kEEbmFtZcpBLAoUQmF0Y2hQcm9jZXNzUmVz",
+            "cG9uc2USFEJhdGNoUHJvY2Vzc01ldGFkYXRhEqACCg5SZXZpZXdEb2N1bWVu",
+            "dBIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLlJldmlld0RvY3VtZW50",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuwGC0+ST",
+            "AmMiXi92MS97aHVtYW5fcmV2aWV3X2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3Byb2Nlc3NvcnMvKi9odW1hblJldmlld0NvbmZpZ306cmV2aWV3",
+            "RG9jdW1lbnQ6ASraQRNodW1hbl9yZXZpZXdfY29uZmlnykE5ChZSZXZpZXdE",
+            "b2N1bWVudFJlc3BvbnNlEh9SZXZpZXdEb2N1bWVudE9wZXJhdGlvbk1ldGFk",
+            "YXRhGk3KQRlkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULIAwoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxQhpEb2N1bWVudEFpUHJvY2Vz",
+            "c29yU2VydmljZVABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL2RvY3VtZW50YWkvdjE7ZG9jdW1lbnRhaaoCGkdvb2ds",
+            "ZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xlXENsb3VkXERvY3VtZW50",
+            "QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMepBZQojZG9j",
+            "dW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3ISPnByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9j",
+            "ZXNzb3J96kF/Citkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL0h1bWFuUmV2",
+            "aWV3Q29uZmlnElBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9odW1hblJldmlld0NvbmZp",
+            "Z2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.OperationMetadataReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +119,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest), global::Google.Cloud.DocumentAI.V1.BatchProcessRequest.Parser, new[]{ "Name", "InputDocuments", "DocumentOutputConfig", "SkipHumanReview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.BatchProcessResponse), global::Google.Cloud.DocumentAI.V1.BatchProcessResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.BatchProcessMetadata), global::Google.Cloud.DocumentAI.V1.BatchProcessMetadata.Parser, new[]{ "State", "StateMessage", "CreateTime", "UpdateTime", "IndividualProcessStatuses" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.BatchProcessMetadata.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.BatchProcessMetadata.Types.IndividualProcessStatus), global::Google.Cloud.DocumentAI.V1.BatchProcessMetadata.Types.IndividualProcessStatus.Parser, new[]{ "InputGcsSource", "Status", "OutputGcsDestination", "HumanReviewStatus" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest), global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Parser, new[]{ "InlineDocument", "HumanReviewConfig" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest), global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Parser, new[]{ "InlineDocument", "HumanReviewConfig", "EnableSchemaValidation", "Priority" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ReviewDocumentResponse), global::Google.Cloud.DocumentAI.V1.ReviewDocumentResponse.Parser, new[]{ "GcsDestination" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.ReviewDocumentOperationMetadata), global::Google.Cloud.DocumentAI.V1.ReviewDocumentOperationMetadata.Parser, new[]{ "CommonMetadata" }, null, null, null, null)
           }));
@@ -2194,6 +2198,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReviewDocumentRequest(ReviewDocumentRequest other) : this() {
       humanReviewConfig_ = other.humanReviewConfig_;
+      enableSchemaValidation_ = other.enableSchemaValidation_;
+      priority_ = other.priority_;
       switch (other.SourceCase) {
         case SourceOneofCase.InlineDocument:
           InlineDocument = other.InlineDocument.Clone();
@@ -2237,6 +2243,34 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
     }
 
+    /// <summary>Field number for the "enable_schema_validation" field.</summary>
+    public const int EnableSchemaValidationFieldNumber = 3;
+    private bool enableSchemaValidation_;
+    /// <summary>
+    /// Whether the validation should be performed on the ad-hoc review request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableSchemaValidation {
+      get { return enableSchemaValidation_; }
+      set {
+        enableSchemaValidation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 5;
+    private global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority priority_ = global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default;
+    /// <summary>
+    /// The priority of the human review task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority Priority {
+      get { return priority_; }
+      set {
+        priority_ = value;
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -2270,6 +2304,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (!object.Equals(InlineDocument, other.InlineDocument)) return false;
       if (HumanReviewConfig != other.HumanReviewConfig) return false;
+      if (EnableSchemaValidation != other.EnableSchemaValidation) return false;
+      if (Priority != other.Priority) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2279,6 +2315,8 @@ namespace Google.Cloud.DocumentAI.V1 {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.InlineDocument) hash ^= InlineDocument.GetHashCode();
       if (HumanReviewConfig.Length != 0) hash ^= HumanReviewConfig.GetHashCode();
+      if (EnableSchemaValidation != false) hash ^= EnableSchemaValidation.GetHashCode();
+      if (Priority != global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default) hash ^= Priority.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2300,9 +2338,17 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(10);
         output.WriteString(HumanReviewConfig);
       }
+      if (EnableSchemaValidation != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(EnableSchemaValidation);
+      }
       if (sourceCase_ == SourceOneofCase.InlineDocument) {
         output.WriteRawTag(34);
         output.WriteMessage(InlineDocument);
+      }
+      if (Priority != global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Priority);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2317,9 +2363,17 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(10);
         output.WriteString(HumanReviewConfig);
       }
+      if (EnableSchemaValidation != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(EnableSchemaValidation);
+      }
       if (sourceCase_ == SourceOneofCase.InlineDocument) {
         output.WriteRawTag(34);
         output.WriteMessage(InlineDocument);
+      }
+      if (Priority != global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Priority);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2336,6 +2390,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       if (HumanReviewConfig.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HumanReviewConfig);
       }
+      if (EnableSchemaValidation != false) {
+        size += 1 + 1;
+      }
+      if (Priority != global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2349,6 +2409,12 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (other.HumanReviewConfig.Length != 0) {
         HumanReviewConfig = other.HumanReviewConfig;
+      }
+      if (other.EnableSchemaValidation != false) {
+        EnableSchemaValidation = other.EnableSchemaValidation;
+      }
+      if (other.Priority != global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority.Default) {
+        Priority = other.Priority;
       }
       switch (other.SourceCase) {
         case SourceOneofCase.InlineDocument:
@@ -2377,6 +2443,10 @@ namespace Google.Cloud.DocumentAI.V1 {
             HumanReviewConfig = input.ReadString();
             break;
           }
+          case 24: {
+            EnableSchemaValidation = input.ReadBool();
+            break;
+          }
           case 34: {
             global::Google.Cloud.DocumentAI.V1.Document subBuilder = new global::Google.Cloud.DocumentAI.V1.Document();
             if (sourceCase_ == SourceOneofCase.InlineDocument) {
@@ -2384,6 +2454,10 @@ namespace Google.Cloud.DocumentAI.V1 {
             }
             input.ReadMessage(subBuilder);
             InlineDocument = subBuilder;
+            break;
+          }
+          case 40: {
+            Priority = (global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority) input.ReadEnum();
             break;
           }
         }
@@ -2404,6 +2478,10 @@ namespace Google.Cloud.DocumentAI.V1 {
             HumanReviewConfig = input.ReadString();
             break;
           }
+          case 24: {
+            EnableSchemaValidation = input.ReadBool();
+            break;
+          }
           case 34: {
             global::Google.Cloud.DocumentAI.V1.Document subBuilder = new global::Google.Cloud.DocumentAI.V1.Document();
             if (sourceCase_ == SourceOneofCase.InlineDocument) {
@@ -2413,10 +2491,36 @@ namespace Google.Cloud.DocumentAI.V1 {
             InlineDocument = subBuilder;
             break;
           }
+          case 40: {
+            Priority = (global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Types.Priority) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReviewDocumentRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The priority level of the human review task.
+      /// </summary>
+      public enum Priority {
+        /// <summary>
+        /// The default priority level.
+        /// </summary>
+        [pbr::OriginalName("DEFAULT")] Default = 0,
+        /// <summary>
+        /// The urgent priority level. The labeling manager should allocate labeler
+        /// resource to the urgent task queue to respect this priority level.
+        /// </summary>
+        [pbr::OriginalName("URGENT")] Urgent = 1,
+      }
+
+    }
+    #endregion
 
   }
 

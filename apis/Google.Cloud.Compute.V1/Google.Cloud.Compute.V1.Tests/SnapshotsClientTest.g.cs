@@ -45,6 +45,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -88,6 +89,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -132,6 +134,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -174,6 +177,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -232,6 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
+                LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
@@ -239,6 +244,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
+                SatisfiesPzs = false,
                 StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
                 Labels =
                 {
@@ -288,6 +294,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
+                LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
@@ -295,6 +302,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
+                SatisfiesPzs = false,
                 StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
                 Labels =
                 {
@@ -346,6 +354,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
+                LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
@@ -353,6 +362,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
+                SatisfiesPzs = false,
                 StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
                 Labels =
                 {
@@ -402,6 +412,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "licensesd1cc2f9d",
                 },
+                LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 StorageBytes = "storage_bytese9aba235",
                 DownloadBytes = "download_bytesa587899a",
@@ -409,6 +420,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
+                SatisfiesPzs = false,
                 StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
                 Labels =
                 {
@@ -771,6 +783,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -814,6 +827,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -859,6 +873,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -902,6 +917,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),

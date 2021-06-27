@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.5.0, released 2021-06-22
+
+- [Commit fbd2e65](https://github.com/googleapis/google-cloud-dotnet/commit/fbd2e65): - feat: Etags - users can now use etags for optimistic concurrency control when modifying Secret or SecretVersion.
+
 # Version 1.4.0, released 2021-05-05
 
 - [Commit 5e2fe40](https://github.com/googleapis/google-cloud-dotnet/commit/5e2fe40): feat: Rotation for Secrets

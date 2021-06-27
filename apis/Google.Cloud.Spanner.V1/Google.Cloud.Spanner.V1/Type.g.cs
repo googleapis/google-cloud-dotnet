@@ -32,15 +32,15 @@ namespace Google.Cloud.Spanner.V1 {
             "C3N0cnVjdF90eXBlGAMgASgLMh0uZ29vZ2xlLnNwYW5uZXIudjEuU3RydWN0",
             "VHlwZSJ/CgpTdHJ1Y3RUeXBlEjMKBmZpZWxkcxgBIAMoCzIjLmdvb2dsZS5z",
             "cGFubmVyLnYxLlN0cnVjdFR5cGUuRmllbGQaPAoFRmllbGQSDAoEbmFtZRgB",
-            "IAEoCRIlCgR0eXBlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZSqb",
+            "IAEoCRIlCgR0eXBlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZSql",
             "AQoIVHlwZUNvZGUSGQoVVFlQRV9DT0RFX1VOU1BFQ0lGSUVEEAASCAoEQk9P",
             "TBABEgkKBUlOVDY0EAISCwoHRkxPQVQ2NBADEg0KCVRJTUVTVEFNUBAEEggK",
             "BERBVEUQBRIKCgZTVFJJTkcQBhIJCgVCWVRFUxAHEgkKBUFSUkFZEAgSCgoG",
-            "U1RSVUNUEAkSCwoHTlVNRVJJQxAKQq8BChVjb20uZ29vZ2xlLnNwYW5uZXIu",
-            "djFCCVR5cGVQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL3NwYW5uZXIvdjE7c3Bhbm5lcqoCF0dvb2dsZS5DbG91ZC5T",
-            "cGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6",
-            "OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJvdG8z"));
+            "U1RSVUNUEAkSCwoHTlVNRVJJQxAKEggKBEpTT04QC0KvAQoVY29tLmdvb2ds",
+            "ZS5zcGFubmVyLnYxQglUeXBlUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9zcGFubmVyL3YxO3NwYW5uZXKqAhdHb29n",
+            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
+            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,6 +126,16 @@ namespace Google.Cloud.Spanner.V1 {
     /// &lt;br>(ExponentIndicator is `"e"` or `"E"`)
     /// </summary>
     [pbr::OriginalName("NUMERIC")] Numeric = 10,
+    /// <summary>
+    /// Encoded as a JSON-formatted 'string' as described in RFC 7159. The
+    /// following rules will be applied when parsing JSON input:
+    /// - Whitespace will be stripped from the document.
+    /// - If a JSON object has duplicate keys, only the first key will be
+    ///   preserved.
+    /// - Members of a JSON object are not guaranteed to have their order
+    ///   preserved. JSON array elements will have their order preserved.
+    /// </summary>
+    [pbr::OriginalName("JSON")] Json = 11,
   }
 
   #endregion

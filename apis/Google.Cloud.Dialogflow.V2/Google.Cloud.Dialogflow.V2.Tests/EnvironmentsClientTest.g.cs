@@ -39,7 +39,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),
@@ -64,7 +64,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),
@@ -93,7 +93,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),
@@ -120,7 +120,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),
@@ -149,7 +149,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),
@@ -176,7 +176,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             {
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 Description = "description2cf9da67",
-                AgentVersion = "agent_versioncd5f59a0",
+                AgentVersionAsVersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
                 State = Environment.Types.State.Loading,
                 UpdateTime = new wkt::Timestamp(),
                 TextToSpeechSettings = new TextToSpeechSettings(),

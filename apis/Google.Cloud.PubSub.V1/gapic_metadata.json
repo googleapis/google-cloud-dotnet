@@ -5,7 +5,7 @@
   "protoPackage": "google.pubsub.v1",
   "libraryPackage": "Google.Cloud.PubSub.V1",
   "services": {
-    "PublisherServiceApi": {
+    "Publisher": {
       "clients": {
         "grpc": {
           "libraryClient": "PublisherServiceApiClient",
@@ -113,7 +113,7 @@
         }
       }
     },
-    "SubscriberServiceApi": {
+    "Subscriber": {
       "clients": {
         "grpc": {
           "libraryClient": "SubscriberServiceApiClient",

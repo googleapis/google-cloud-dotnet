@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
-using System.Collections.Generic;
+using System;
 
 #if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
@@ -26,16 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Provides a hook to augment labels when a log entry is being logged.
     /// </summary>
-    public interface ILogEntryLabelProvider
-    {
-        /// <summary>
-        /// Invokes the provider to augment log entry labels.
-        /// </summary>
-        /// <param name="labels">A dictionary of log entry labels.
-        /// Keys and values added to <paramref name="labels"/> should not be null.
-        /// If they are, an exception will be throw when attempting to log an entry.
-        /// The entry won't be logged and the exception will be propagated depending
-        /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</param>
-        void Invoke(Dictionary<string, string> labels);
-    }
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.ILogEntryLabelProvider instead.")]
+    public interface ILogEntryLabelProvider : Common.ILogEntryLabelProvider
+    { }
 }

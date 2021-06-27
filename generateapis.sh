@@ -149,6 +149,8 @@ generate_microgenerator() {
 
   # Client generation. This needs the common resources proto as a reference,
   # but it won't generate anything for it.
+  # The Cloud Common protos are likewise included so that operation result/metadata
+  # types can use the messages in them, but nothing will be generated.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
     --gapic_opt=metadata \
@@ -157,6 +159,7 @@ generate_microgenerator() {
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
+    $GOOGLEAPIS/google/cloud/common/*.proto \
     $(find $API_SRC_DIR -name '*.proto') \
     $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
@@ -357,15 +360,18 @@ generate_api() {
     fi
   fi
 
-  # Record the commit in synth.metadata
+  # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
+  # depending on the generator.
+  REPO_TO_HASH=$([ "$GENERATOR" == "regapic" ] && echo "$GOOGLEAPIS_DISCOVERY" || echo "$GOOGLEAPIS")
+  REMOTE_NAME=$(basename $REPO_TO_HASH)
   cat > $PACKAGE_DIR/synth.metadata <<END
 {
   "sources": [
     {
       "git": {
         "name": "googleapis",
-        "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"        
+        "remote": "https://github.com/googleapis/$REMOTE_NAME.git",
+        "sha": "$(git -C $REPO_TO_HASH rev-parse HEAD)"
       }
     }
   ]

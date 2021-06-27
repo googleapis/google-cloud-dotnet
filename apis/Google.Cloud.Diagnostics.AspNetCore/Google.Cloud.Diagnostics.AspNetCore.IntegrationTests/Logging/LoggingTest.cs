@@ -160,7 +160,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var message = EntryData.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
-                Assert.Contains("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
+                Assert.Contains("Scope", results.Single().JsonPayload.Fields["scope"].StringValue);
             });
         }
 
@@ -217,6 +217,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     }
                 });
                 Assert.Single(parentScopes, expectedScope);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_AugmentedWithLabels()
+        {
+            string testId = IdGenerator.FromGuid();
+
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/AugmentWithLabels/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var message = EntryData.GetMessage(nameof(MainController.AugmentWithLabels), testId);
+                var entry = results.Single();
+                var json = entry.JsonPayload.Fields;
+                Assert.Equal(message, json["message"].StringValue);
+
+                Assert.Equal(1, entry.Labels.Count);
+                Assert.Equal(testId, entry.Labels["test_id"]);
             });
         }
 
@@ -496,6 +519,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 return new object[][]
                 {
+                    new object[] { GetTestServer<ObsoleteNoBufferWarningLoggerExternalTraceTestApplication>() },
+                    new object[] { GetTestServer<ObsoleteExternalTracingTestApplication>() },
                     new object[] { GetTestServer<NoBufferWarningLoggerExternalTraceTestApplication>() },
                     new object[] { GetTestServer<ExternalTracingTestApplication>() }
                 };
@@ -523,10 +548,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 // And the resource name of the trace associated to it contains the external trace id.
                 Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
-                Assert.Contains("external_trace_id", entry.Trace);
+                Assert.Contains("105445aa7843bc8bf206b12000100f00", entry.Trace);
 
                 // The span associated to our entry is the external span.
-                Assert.Equal("external_span_number1", entry.SpanId);
+                Assert.Equal("0000000000000001", entry.SpanId);
             });
         }
 
@@ -555,12 +580,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.All(results, entry =>
                 {
                     Assert.Contains(projectId, entry.Trace);
-                    Assert.Contains("external_trace_id", entry.Trace);
+                    Assert.Contains("105445aa7843bc8bf206b12000100f00", entry.Trace);
                 });
 
                 // The span associated to our entry is the external span, and is the same span number
                 // as the log entry.
-                Assert.All(results, entry => Assert.Equal($"external_span_number{entry.JsonPayload.Fields["message"].StringValue.Last()}", entry.SpanId));
+                Assert.All(results, entry => Assert.Equal($"{ExpectedSpanId(entry):x16}", entry.SpanId));
+                static ulong ExpectedSpanId(LogEntry entry) =>
+                   Convert.ToUInt64(int.Parse($"{entry.JsonPayload.Fields["message"].StringValue.Last()}"));
             });
         }
 
@@ -645,9 +672,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _fixture.AddValidator(testId, results =>
             {
                 var entry = results.Single();
-                Assert.Equal(3, entry.Labels.Count);
+                Assert.Equal(4, entry.Labels.Count);
                 Assert.Equal("some-value", entry.Labels["some-key"]);
                 Assert.Equal("Hello, World!", entry.Labels["Foo"]);
+                Assert.Equal("Hello, World!", entry.Labels["Bar"]);
                 Assert.NotEmpty(entry.Labels["trace_identifier"]);
             });
         }
@@ -805,16 +833,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
     }
 
+    public class ObsoleteExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services) =>
+#pragma warning disable CS0618 // Type or member is obsolete
+            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
+#pragma warning restore CS0618 // Type or member is obsolete
+    }
+
     public class ExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
+            base.ConfigureServices(services
+                // We start counting at -1 here because of the call we make on the middleware to
+                // try and obtain the context. We don't care about that one.
+                .AddSingleton(new SpanCountingITraceContextFactory(0))
+                .AddTransient(sp => sp.GetRequiredService<SpanCountingITraceContextFactory>().GetCurrentTraceContext()));
     }
 
     public class GoogleTraceAsExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, GoogleTraceProvider>());
+            base.ConfigureServices(services.TryAddGoogleTraceContextProvider());
     }
 
     /// <summary>
@@ -871,10 +911,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         { }
     }
 
+    public class ObsoleteNoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services) =>
+#pragma warning disable CS0618 // Type or member is obsolete
+            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider()));
+#pragma warning restore CS0618 // Type or member is obsolete
+    }
+
     public class NoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider()));
+            base.ConfigureServices(services
+                // We start counting at -1 here because of the call we make on the middleware to
+                // try and obtain the context. We don't care about that one.
+                .AddSingleton(new SpanCountingITraceContextFactory(-1))
+                .AddTransient(sp => sp.GetRequiredService<SpanCountingITraceContextFactory>().GetCurrentTraceContext()));
     }
 
     /// <summary>
@@ -901,7 +953,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
-    /// An application that has a <see cref="GoogleLogger"/> and a <see cref="ILogEntryLabelProvider"/>,
+    /// An application that has a <see cref="GoogleLogger"/> and a <see cref="Common.ILogEntryLabelProvider"/>,
     /// that accept all logs of level warning or above.
     /// </summary>
     public class WarningWithLabelsLoggerTestApplication : LoggerTestApplication
@@ -909,7 +961,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override void ConfigureServices(IServiceCollection services) =>
             base.ConfigureServices(services
                 .AddLogEntryLabelProvider<FooLogEntryLabelProvider>()
-                .AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>());
+                .AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>()
+#pragma warning disable CS0618 // Type or member is obsolete
+                .AddSingleton<ILogEntryLabelProvider, BarLogEntryLabelProvider>());
+#pragma warning restore CS0618 // Type or member is obsolete
 
         public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
             base.Configure(app, loggerFactory.AddGoogle(
@@ -1057,6 +1112,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         }
 
+        public string AugmentWithLabels(string id)
+        {
+            string message = EntryData.GetMessage(nameof(AugmentWithLabels), id);
+            _logger.WithLabels(new KeyValuePair<string, string>("test_id", id)).LogCritical(message);
+            return message;
+        }
+
         public string Exception(string id)
         {
             string message = EntryData.GetMessage(nameof(Exception), id);
@@ -1111,7 +1173,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
     }
 
-    internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
+    internal class FooLogEntryLabelProvider : Common.ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
@@ -1119,10 +1181,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
     }
 
+    [Obsolete("Added to test that we still support the obsolete ILogEntryLabelProvider.")]
+    internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            labels["Bar"] = "Hello, World!";
+        }
+    }
+
+    internal class SpanCountingITraceContextFactory
+    {
+        public SpanCountingITraceContextFactory(int startAt) => _callCount = startAt;
+        private int _callCount = 0;
+        internal ITraceContext GetCurrentTraceContext() =>
+            new SimpleTraceContext("105445aa7843bc8bf206b12000100f00", Convert.ToUInt64(Interlocked.Increment(ref _callCount)), false);
+    }
+
+#pragma warning disable CS0618 // Type or member is obsolete
     internal class SpanCountingExternalTraceProvider : IExternalTraceProvider
     {
         internal int _callCount = 0;
         public TraceContextForLogEntry GetCurrentTraceContext(IServiceProvider serviceProvider) =>
-            new TraceContextForLogEntry("external_trace_id", $"external_span_number{Interlocked.Increment(ref _callCount)}");
+            new TraceContextForLogEntry("105445aa7843bc8bf206b12000100f00", $"{Convert.ToUInt64(Interlocked.Increment(ref _callCount)):x16}");
     }
+#pragma warning restore CS0618 // Type or member is obsolete
 }

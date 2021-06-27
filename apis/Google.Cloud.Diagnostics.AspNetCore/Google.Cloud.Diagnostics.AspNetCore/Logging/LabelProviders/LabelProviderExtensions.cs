@@ -24,40 +24,40 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 #endif
 {
     /// <summary>
-    /// Provides extension methods to register <see cref="ILogEntryLabelProvider"/> implementations.
+    /// Provides extension methods to register <see cref="Common.ILogEntryLabelProvider"/> implementations.
     /// </summary>
     public static class LabelProviderExtensions
     {
         /// <summary>
-        /// Adds a <see cref="ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
+        /// Adds a <see cref="Common.ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
         /// </summary>
-        /// <typeparam name="T">The type of the <see cref="ILogEntryLabelProvider"/> implementation.</typeparam>
+        /// <typeparam name="T">The type of the <see cref="Common.ILogEntryLabelProvider"/> implementation.</typeparam>
         /// <param name="serivces">The <see cref="IServiceCollection"/> instance.</param>
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces)
-            where T : class, ILogEntryLabelProvider
-            => serivces.AddSingleton<ILogEntryLabelProvider, T>();
+            where T : class, Common.ILogEntryLabelProvider
+            => serivces.AddSingleton<Common.ILogEntryLabelProvider, T>();
 
         /// <summary>
-        /// Adds a <see cref="ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
+        /// Adds a <see cref="Common.ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
         /// </summary>
-        /// <typeparam name="T">The type of the <see cref="ILogEntryLabelProvider"/> implementation.</typeparam>
+        /// <typeparam name="T">The type of the <see cref="Common.ILogEntryLabelProvider"/> implementation.</typeparam>
         /// <param name="serivces">The <see cref="IServiceCollection"/> instance.</param>
         /// <param name="implementationFactory">The factory that creates the service.</param>
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces, Func<IServiceProvider, T> implementationFactory)
-            where T : class, ILogEntryLabelProvider
-             => serivces.AddSingleton<ILogEntryLabelProvider, T>(implementationFactory);
+            where T : class, Common.ILogEntryLabelProvider
+             => serivces.AddSingleton<Common.ILogEntryLabelProvider, T>(implementationFactory);
 
         /// <summary>
-        /// Adds a <see cref="ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
+        /// Adds a <see cref="Common.ILogEntryLabelProvider"/> of type <typeparamref name="T"/> to the service collection instance.
         /// </summary>
-        /// <typeparam name="T">The type of the <see cref="ILogEntryLabelProvider"/> implementation.</typeparam>
+        /// <typeparam name="T">The type of the <see cref="Common.ILogEntryLabelProvider"/> implementation.</typeparam>
         /// <param name="serivces">The <see cref="IServiceCollection"/> instance.</param>
         /// <param name="instance">The instance of <typeparamref name="T"/>.</param>
         /// <returns>The <see cref="IServiceCollection"/> instance.</returns>
         public static IServiceCollection AddLogEntryLabelProvider<T>(this IServiceCollection serivces, T instance)
-            where T : class, ILogEntryLabelProvider
-            => serivces.AddSingleton<ILogEntryLabelProvider>(instance);
+            where T : class, Common.ILogEntryLabelProvider
+            => serivces.AddSingleton<Common.ILogEntryLabelProvider>(instance);
     }
 }

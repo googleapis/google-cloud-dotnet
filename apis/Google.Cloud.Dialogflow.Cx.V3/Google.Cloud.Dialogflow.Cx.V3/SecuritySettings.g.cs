@@ -1529,8 +1529,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// If empty, we use the default DLP inspect config.
     ///
     /// The template name will have one of the following formats:
-    /// `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-    /// `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`
+    /// `projects/&lt;Project ID>/inspectTemplates/&lt;Template ID>` OR
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/inspectTemplates/&lt;Template
+    /// ID>` OR
+    /// `organizations/&lt;Organization ID>/inspectTemplates/&lt;Template ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InspectTemplate {

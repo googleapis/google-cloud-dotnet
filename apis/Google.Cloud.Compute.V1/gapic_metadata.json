@@ -413,6 +413,123 @@
         }
       }
     },
+    "FirewallPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FirewallPoliciesClient",
+          "rpcs": {
+            "AddAssociation": {
+              "methods": [
+                "AddAssociation",
+                "AddAssociationAsync"
+              ]
+            },
+            "AddRule": {
+              "methods": [
+                "AddRule",
+                "AddRuleAsync"
+              ]
+            },
+            "CloneRules": {
+              "methods": [
+                "CloneRules",
+                "CloneRulesAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetAssociation": {
+              "methods": [
+                "GetAssociation",
+                "GetAssociationAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "ListAssociations": {
+              "methods": [
+                "ListAssociations",
+                "ListAssociationsAsync"
+              ]
+            },
+            "Move": {
+              "methods": [
+                "Move",
+                "MoveAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
+            "PatchRule": {
+              "methods": [
+                "PatchRule",
+                "PatchRuleAsync"
+              ]
+            },
+            "RemoveAssociation": {
+              "methods": [
+                "RemoveAssociation",
+                "RemoveAssociationAsync"
+              ]
+            },
+            "RemoveRule": {
+              "methods": [
+                "RemoveRule",
+                "RemoveRuleAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Firewalls": {
       "clients": {
         "grpc": {
@@ -499,6 +616,12 @@
                 "PatchAsync"
               ]
             },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
+            },
             "SetTarget": {
               "methods": [
                 "SetTarget",
@@ -575,6 +698,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
               ]
             },
             "SetTarget": {
@@ -698,6 +827,45 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GlobalPublicDelegatedPrefixes": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GlobalPublicDelegatedPrefixesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             }
           }
@@ -1102,6 +1270,12 @@
                 "AttachDiskAsync"
               ]
             },
+            "BulkInsert": {
+              "methods": [
+                "BulkInsert",
+                "BulkInsertAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -1124,6 +1298,12 @@
               "methods": [
                 "Get",
                 "GetAsync"
+              ]
+            },
+            "GetEffectiveFirewalls": {
+              "methods": [
+                "GetEffectiveFirewalls",
+                "GetEffectiveFirewallsAsync"
               ]
             },
             "GetGuestAttributes": {
@@ -1618,6 +1798,12 @@
                 "GetAsync"
               ]
             },
+            "GetEffectiveFirewalls": {
+              "methods": [
+                "GetEffectiveFirewalls",
+                "GetEffectiveFirewallsAsync"
+              ]
+            },
             "Insert": {
               "methods": [
                 "Insert",
@@ -1967,6 +2153,90 @@
               "methods": [
                 "SetUsageExportBucket",
                 "SetUsageExportBucketAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PublicAdvertisedPrefixes": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PublicAdvertisedPrefixesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PublicDelegatedPrefixes": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PublicDelegatedPrefixesClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             }
           }
@@ -2438,6 +2708,21 @@
               "methods": [
                 "SetNamedPorts",
                 "SetNamedPortsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionInstances": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionInstancesClient",
+          "rpcs": {
+            "BulkInsert": {
+              "methods": [
+                "BulkInsert",
+                "BulkInsertAsync"
               ]
             }
           }
@@ -3362,6 +3647,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             },
             "SetQuicOverride": {

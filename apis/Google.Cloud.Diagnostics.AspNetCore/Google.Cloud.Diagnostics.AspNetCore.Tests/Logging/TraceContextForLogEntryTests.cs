@@ -24,6 +24,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 #error unknown target framework
 #endif
 {
+#pragma warning disable CS0618 // Type or member is obsolete
     public class TraceContextForLogEntryTests
     {
         [Fact]
@@ -98,4 +99,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             return tracerMock.Object;
         }
     }
+#pragma warning restore CS0618 // Type or member is obsolete
 }

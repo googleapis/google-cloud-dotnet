@@ -143,7 +143,7 @@
       "ServiceDirectory": "google/api/servicecontrol/v1",
       "Name": "servicecontrol.googleapis.com",
       "Title": "Service Control API",
-      "Description": "Provides control plane functionality to managed services, such as logging, monitoring, and status checks.",
+      "Description": "Provides admission control and telemetry reporting for services integrated with Service Infrastructure.",
       "ServiceConfigFile": "google/api/servicecontrol/v1/servicecontrol.yaml",
       "Version": "v1",
       "PackageFromDirectory": "google.api.servicecontrol.v1",
@@ -387,7 +387,7 @@
         "google/type"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AIPlatform.V1"
     },
     {
       "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
@@ -1243,6 +1243,58 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.EssentialContacts.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/eventarc/v1",
+      "Name": "eventarc.googleapis.com",
+      "Title": "Eventarc API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/eventarc/v1/eventarc_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.eventarc.v1",
+      "PackageFromProtos": "google.cloud.eventarc.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/eventarc/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Eventarc.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/filestore/v1",
+      "Name": "file.googleapis.com",
+      "Title": "Cloud Filestore API",
+      "Description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+      "ServiceConfigFile": "google/cloud/filestore/v1/file_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.filestore.v1",
+      "PackageFromProtos": "google.cloud.filestore.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Filestore.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/filestore/v1beta1",
+      "Name": "file.googleapis.com",
+      "Title": "Cloud Filestore API",
+      "Description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+      "ServiceConfigFile": "google/cloud/filestore/v1beta1/file_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.filestore.v1beta1",
+      "PackageFromProtos": "google.cloud.filestore.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Filestore.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/functions/v1",
       "Name": "cloudfunctions.googleapis.com",
       "Title": "Cloud Functions API",
@@ -1342,6 +1394,49 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeConnect.Gateway.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/gkehub/v1",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1/gkehub_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.gkehub.v1",
+      "PackageFromProtos": "google.cloud.gkehub.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1",
+        "google/cloud/gkehub/v1/configmanagement",
+        "google/cloud/gkehub/v1/multiclusteringress",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/gkehub/v1alpha",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1alpha/gkehub_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.cloud.gkehub.v1alpha",
+      "PackageFromProtos": "google.cloud.gkehub.v1alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1alpha",
+        "google/cloud/gkehub/v1alpha/cloudauditlogging",
+        "google/cloud/gkehub/v1alpha/configmanagement",
+        "google/cloud/gkehub/v1alpha/metering",
+        "google/cloud/gkehub/v1alpha/multiclusteringress",
+        "google/cloud/gkehub/v1alpha/servicemesh",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/gkehub/v1alpha2",
       "Name": "gkehub.googleapis.com",
       "Title": "GKE Hub",
@@ -1357,6 +1452,27 @@
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Alpha2"
+    },
+    {
+      "ServiceDirectory": "google/cloud/gkehub/v1beta",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1beta/gkehub_v1beta.yaml",
+      "Version": "v1beta",
+      "PackageFromDirectory": "google.cloud.gkehub.v1beta",
+      "PackageFromProtos": "google.cloud.gkehub.v1beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gkehub/v1beta",
+        "google/cloud/gkehub/v1beta/configmanagement",
+        "google/cloud/gkehub/v1beta/metering",
+        "google/cloud/gkehub/v1beta/multiclusteringress",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Beta"
     },
     {
       "ServiceDirectory": "google/cloud/gkehub/v1beta1",
@@ -1658,6 +1774,62 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.NetworkConnectivity.V1Alpha1"
     },
     {
+      "ServiceDirectory": "google/cloud/networkmanagement/v1",
+      "Name": "networkmanagement.googleapis.com",
+      "Title": "Network Management API",
+      "Description": "The Network Management API provides a collection of network performance monitoring and diagnostic capabilities.",
+      "ServiceConfigFile": "google/cloud/networkmanagement/v1/networkmanagement_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.networkmanagement.v1",
+      "PackageFromProtos": "google.cloud.networkmanagement.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networkmanagement/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkManagement.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/networkmanagement/v1beta1",
+      "Name": "networkmanagement.googleapis.com",
+      "Title": "Network Management API",
+      "Description": "The Network Management API provides a collection of network performance monitoring and diagnostic capabilities.",
+      "ServiceConfigFile": "google/cloud/networkmanagement/v1beta1/networkmanagement_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.networkmanagement.v1beta1",
+      "PackageFromProtos": "google.cloud.networkmanagement.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networkmanagement/v1beta1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkManagement.V1Beta1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/networksecurity/v1beta1",
+      "Name": "networksecurity.googleapis.com",
+      "Title": "Network Security API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/networksecurity/v1beta1/networksecurity_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.networksecurity.v1beta1",
+      "PackageFromProtos": "google.cloud.networksecurity.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/networksecurity/v1beta1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkSecurity.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/notebooks/v1beta1",
       "Name": "notebooks.googleapis.com",
       "Title": "Notebooks API",
@@ -1914,6 +2086,7 @@
       "ImportDirectories": [
         "google/api",
         "google/cloud/pubsublite/v1",
+        "google/longrunning",
         "google/protobuf"
       ],
       "Stable": true,
@@ -2386,7 +2559,7 @@
       "ServiceDirectory": "google/cloud/servicedirectory/v1beta1",
       "Name": "servicedirectory.googleapis.com",
       "Title": "Service Directory API",
-      "Description": "Allows the registration and lookup of services.",
+      "Description": "Service Directory is a platform for discovering, publishing, and connecting services.",
       "ServiceConfigFile": "google/cloud/servicedirectory/v1beta1/servicedirectory_v1beta1.yaml",
       "Version": "v1beta1",
       "PackageFromDirectory": "google.cloud.servicedirectory.v1beta1",
@@ -3000,6 +3173,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Container.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/dataflow/v1beta3",
+      "Name": "dataflow.googleapis.com",
+      "Title": "Dataflow API",
+      "Description": "Manages Google Cloud Dataflow projects on Google Cloud Platform.",
+      "ServiceConfigFile": "google/dataflow/v1beta3/dataflow_v1beta3.yaml",
+      "Version": "v1beta3",
+      "PackageFromDirectory": "google.dataflow.v1beta3",
+      "PackageFromProtos": "google.dataflow.v1beta3",
+      "ImportDirectories": [
+        "google/api",
+        "google/dataflow/v1beta3",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Dataflow.V1Beta3"
+    },
+    {
       "ServiceDirectory": "google/datastore/admin/v1",
       "Name": "datastore.googleapis.com",
       "Title": "Cloud Datastore API",
@@ -3262,6 +3453,24 @@
       "CSharpNamespaceFromProtos": "Google.Devtools.Resultstore.V2"
     },
     {
+      "ServiceDirectory": "google/devtools/testing/v1",
+      "Name": "testing.googleapis.com",
+      "Title": "Cloud Testing API",
+      "Description": "Allows developers to run automated tests for their mobile applications on Google infrastructure.",
+      "ServiceConfigFile": "google/devtools/testing/v1/testing_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.devtools.testing.v1",
+      "PackageFromProtos": "google.devtools.testing.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/devtools/testing/v1",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Devtools.Testing.V1"
+    },
+    {
       "ServiceDirectory": "google/firestore/admin/v1",
       "Name": "firestore.googleapis.com",
       "Title": "Cloud Firestore API",
@@ -3439,6 +3648,24 @@
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Logging.V2"
+    },
+    {
+      "ServiceDirectory": "google/maps/fleetengine/v1",
+      "Name": "fleetengine.googleapis.com",
+      "Title": "Local Rides and Deliveries API",
+      "Description": "Services for ridesharing providers.",
+      "ServiceConfigFile": "google/maps/fleetengine/v1/fleetengine.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.maps.fleetengine.v1",
+      "PackageFromProtos": "maps.fleetengine.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/maps/fleetengine/v1",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Maps.Fleetengine.V1"
     },
     {
       "ServiceDirectory": "google/maps/playablelocations/v3",

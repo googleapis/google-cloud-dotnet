@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.2.0, released 2021-06-22
+
+- [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
+
 # Version 1.1.0, released 2021-04-29
 
 No API surface changes; minor update due to dependencies

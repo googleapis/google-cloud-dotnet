@@ -188,8 +188,10 @@ namespace Google.Cloud.ServiceControl.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// End time of the operation.
-    /// Required when the operation is used in [ServiceController.Report][google.api.servicecontrol.v1.ServiceController.Report],
-    /// but optional when the operation is used in [ServiceController.Check][google.api.servicecontrol.v1.ServiceController.Check].
+    /// Required when the operation is used in
+    /// [ServiceController.Report][google.api.servicecontrol.v1.ServiceController.Report],
+    /// but optional when the operation is used in
+    /// [ServiceController.Check][google.api.servicecontrol.v1.ServiceController.Check].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -613,14 +615,14 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// </summary>
       public enum Importance {
         /// <summary>
-        /// The API implementation may cache and aggregate the data.
-        /// The data may be lost when rare and unexpected system failures occur.
+        /// Allows data caching, batching, and aggregation. It provides
+        /// higher performance with higher data loss risk.
         /// </summary>
         [pbr::OriginalName("LOW")] Low = 0,
         /// <summary>
-        /// The API implementation doesn't cache and aggregate the data.
-        /// If the method returns successfully, it's guaranteed that the data has
-        /// been persisted in durable storage.
+        /// Disables data aggregation to minimize data loss. It is for operations
+        /// that contains significant monetary value or audit trail. This feature
+        /// only applies to the client libraries.
         /// </summary>
         [pbr::OriginalName("HIGH")] High = 1,
       }

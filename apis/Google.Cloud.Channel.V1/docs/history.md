@@ -1,5 +1,14 @@
 # Version history
 
+# Version 1.2.0, released 2021-06-22
+
+- [Commit 01c154e](https://github.com/googleapis/google-cloud-dotnet/commit/01c154e):
+  - feat: Add/Update API definitions for Cloud Channel API, including
+  - * Update descriptions of APIs.
+  - * Add additional_bindings to HTTP annotations of Customer related APIs (list/create/get/update/delete).
+  - * Add a new LookupOffer RPC and LookupOfferRequest proto.
+  - * Add a new enum value LICENSE_CAP_CHANGED to enum EntitlementEvent.Type.
+
 # Version 1.1.0, released 2021-04-29
 
 - [Commit 8f5a62b](https://github.com/googleapis/google-cloud-dotnet/commit/8f5a62b):

@@ -1,5 +1,16 @@
 # Version history
 
+# Version 1.2.0, released 2021-06-22
+
+- [Commit 9e5afc5](https://github.com/googleapis/google-cloud-dotnet/commit/9e5afc5):
+  - feat!: mark agent.default_language_code as required
+  - feat: add return_partial response to Fulfillment
+  - docs: add notes to train agent before sending queries
+- [Commit 7fb97ab](https://github.com/googleapis/google-cloud-dotnet/commit/7fb97ab): feat: support sentiment analysis in bot testing
+- [Commit f2b218e](https://github.com/googleapis/google-cloud-dotnet/commit/f2b218e): feat: added API for running continuous test
+- [Commit d2778b1](https://github.com/googleapis/google-cloud-dotnet/commit/d2778b1): docs: clarified documentation for security settings docs: clarified documentation for session parameters
+- [Commit e48e2f5](https://github.com/googleapis/google-cloud-dotnet/commit/e48e2f5): feat: add support for service directory webhooks
+
 # Version 1.1.0, released 2021-04-29
 
 - [Commit 4f8b084](https://github.com/googleapis/google-cloud-dotnet/commit/4f8b084):

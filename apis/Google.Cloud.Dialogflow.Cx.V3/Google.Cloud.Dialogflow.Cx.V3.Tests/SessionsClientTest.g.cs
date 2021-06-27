@@ -44,6 +44,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 QueryResult = new QueryResult(),
                 OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseType = DetectIntentResponse.Types.ResponseType.Partial,
+                AllowCancellation = true,
             };
             mockGrpcClient.Setup(x => x.DetectIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);
@@ -69,6 +71,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 QueryResult = new QueryResult(),
                 OutputAudio = proto::ByteString.CopyFromUtf8("output_audio7e712c4b"),
                 OutputAudioConfig = new OutputAudioConfig(),
+                ResponseType = DetectIntentResponse.Types.ResponseType.Partial,
+                AllowCancellation = true,
             };
             mockGrpcClient.Setup(x => x.DetectIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectIntentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SessionsClient client = new SessionsClientImpl(mockGrpcClient.Object, null);

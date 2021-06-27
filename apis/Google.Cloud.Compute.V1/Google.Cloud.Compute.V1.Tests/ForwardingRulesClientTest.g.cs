@@ -198,6 +198,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -242,6 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -287,6 +289,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -330,6 +333,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -372,17 +376,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                IPAddress = "I_p_addressf1537179",
                 Ports = { "ports9860f047", },
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
+                LabelFingerprint = "label_fingerprint06ccff3a",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
+                ServiceDirectoryRegistrations =
+                {
+                    new ForwardingRuleServiceDirectoryRegistration(),
+                },
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
+                PscConnectionId = "psc_connection_idb1ea27b2",
                 IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
-                IPProtocol = ForwardingRule.Types.IPProtocol.Ah,
                 ServiceName = "service_named5df05d5",
                 LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 ServiceLabel = "service_label5f95d0c0",
@@ -393,9 +403,16 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
+                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
                 AllowGlobalAccess = false,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
-                IPAddress = "i_p_addresse3ccbaf7",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -420,17 +437,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                IPAddress = "I_p_addressf1537179",
                 Ports = { "ports9860f047", },
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
+                LabelFingerprint = "label_fingerprint06ccff3a",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
+                ServiceDirectoryRegistrations =
+                {
+                    new ForwardingRuleServiceDirectoryRegistration(),
+                },
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
+                PscConnectionId = "psc_connection_idb1ea27b2",
                 IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
-                IPProtocol = ForwardingRule.Types.IPProtocol.Ah,
                 ServiceName = "service_named5df05d5",
                 LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 ServiceLabel = "service_label5f95d0c0",
@@ -441,9 +464,16 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
+                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
                 AllowGlobalAccess = false,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
-                IPAddress = "i_p_addresse3ccbaf7",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -470,17 +500,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                IPAddress = "I_p_addressf1537179",
                 Ports = { "ports9860f047", },
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
+                LabelFingerprint = "label_fingerprint06ccff3a",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
+                ServiceDirectoryRegistrations =
+                {
+                    new ForwardingRuleServiceDirectoryRegistration(),
+                },
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
+                PscConnectionId = "psc_connection_idb1ea27b2",
                 IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
-                IPProtocol = ForwardingRule.Types.IPProtocol.Ah,
                 ServiceName = "service_named5df05d5",
                 LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 ServiceLabel = "service_label5f95d0c0",
@@ -491,9 +527,16 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
+                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
                 AllowGlobalAccess = false,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
-                IPAddress = "i_p_addresse3ccbaf7",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -518,17 +561,23 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
+                IPAddress = "I_p_addressf1537179",
                 Ports = { "ports9860f047", },
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
+                LabelFingerprint = "label_fingerprint06ccff3a",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
+                ServiceDirectoryRegistrations =
+                {
+                    new ForwardingRuleServiceDirectoryRegistration(),
+                },
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
+                PscConnectionId = "psc_connection_idb1ea27b2",
                 IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
-                IPProtocol = ForwardingRule.Types.IPProtocol.Ah,
                 ServiceName = "service_named5df05d5",
                 LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
                 ServiceLabel = "service_label5f95d0c0",
@@ -539,9 +588,16 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
+                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
                 AllowGlobalAccess = false,
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
-                IPAddress = "i_p_addresse3ccbaf7",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -572,6 +628,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -616,6 +673,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -661,6 +719,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -704,6 +763,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -877,6 +937,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -922,6 +983,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -968,6 +1030,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1012,6 +1075,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1039,6 +1103,192 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void SetLabelsRequestObject()
+        {
+            moq::Mock<ForwardingRules.ForwardingRulesClient> mockGrpcClient = new moq::Mock<ForwardingRules.ForwardingRulesClient>(moq::MockBehavior.Strict);
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                RequestId = "request_id362c8df6",
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLabels(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetLabelsRequestObjectAsync()
+        {
+            moq::Mock<ForwardingRules.ForwardingRulesClient> mockGrpcClient = new moq::Mock<ForwardingRules.ForwardingRulesClient>(moq::MockBehavior.Strict);
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                RequestId = "request_id362c8df6",
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLabelsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetLabels()
+        {
+            moq::Mock<ForwardingRules.ForwardingRulesClient> mockGrpcClient = new moq::Mock<ForwardingRules.ForwardingRulesClient>(moq::MockBehavior.Strict);
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.SetLabels(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetLabelsAsync()
+        {
+            moq::Mock<ForwardingRules.ForwardingRulesClient> mockGrpcClient = new moq::Mock<ForwardingRules.ForwardingRulesClient>(moq::MockBehavior.Strict);
+            SetLabelsForwardingRuleRequest request = new SetLabelsForwardingRuleRequest
+            {
+                Region = "regionedb20d96",
+                Resource = "resource164eab96",
+                Project = "projectaa6ff846",
+                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
+            };
+            Operation expectedResponse = new Operation
+            {
+                Id = "id74b70bb8",
+                Kind = "kindf7aa39d9",
+                Name = "name1c9368b0",
+                User = "userb1cb11ee",
+                Zone = "zone255f4ea8",
+                CreationTimestamp = "creation_timestamp235e59a1",
+                StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
+                TargetLink = "target_link9b435dc0",
+                Progress = 278622268,
+                Error = new Error(),
+                EndTime = "end_time89285d30",
+                Region = "regionedb20d96",
+                OperationType = "operation_typeece9e153",
+                Status = Operation.Types.Status.Pending,
+                HttpErrorMessage = "http_error_messageb5ef3c7f",
+                TargetId = "target_id16dfe255",
+                ClientOperationId = "client_operation_id4e51b631",
+                StatusMessage = "status_message2c618f86",
+                HttpErrorStatusCode = 1766362655,
+                Description = "description2cf9da67",
+                InsertTime = "insert_time7467185a",
+                SelfLink = "self_link7e87f12d",
+                Warnings = { new Warnings(), },
+            };
+            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ForwardingRulesClient client = new ForwardingRulesClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.SetLabelsAsync(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.SetLabelsAsync(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetTargetRequestObject()
         {
             moq::Mock<ForwardingRules.ForwardingRulesClient> mockGrpcClient = new moq::Mock<ForwardingRules.ForwardingRulesClient>(moq::MockBehavior.Strict);
@@ -1059,6 +1309,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1104,6 +1355,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1150,6 +1402,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),
@@ -1194,6 +1447,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 StartTime = "start_timebd8dd9c4",
+                OperationGroupId = "operation_group_idd2040cf0",
                 TargetLink = "target_link9b435dc0",
                 Progress = 278622268,
                 Error = new Error(),

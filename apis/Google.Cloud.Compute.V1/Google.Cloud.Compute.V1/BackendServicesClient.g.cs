@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, backendService, backendServiceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1082,7 +1082,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,7 +1091,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Compute.V1
             SetSecurityPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1144,7 +1144,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1611,7 +1611,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the security policy for the specified backend service.
+        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

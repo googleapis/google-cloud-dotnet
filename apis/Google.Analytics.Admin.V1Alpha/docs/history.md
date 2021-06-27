@@ -1,5 +1,21 @@
 # Version history
 
+# Version 1.0.0-alpha07, released 2021-06-22
+
+- [Commit 1ca49a3](https://github.com/googleapis/google-cloud-dotnet/commit/1ca49a3):
+  - feat: add `GetMeasurementProtocolSecret`, `ListMeasurementProtocolSecrets`, `CreateMeasurementProtocolSecret`, `DeleteMeasurementProtocolSecret`, `UpdateMeasurementProtocolSecret` methods to the API
+  - feat: add `GetGoogleSignalsSettings`, `UpdateGoogleSignalsSettings` methods to the API
+  - feat: add `CreateConversionEvent`, `GetConversionEvent`, `DeleteConversionEvent`, `ListConversionEvents` methods to the API
+  - feat: add `CreateCustomDimension`, `GetCustomDimension`, `UpdateCustomDimension`, `ListCustomDimensions`, `ArchiveCustomDimension` methods to the API
+  - feat: add `CreateCustomMetric`, `GetCustomMetric`, `UpdateCustomMetric`, `ListCustomMetrics`, `ArchiveCustomMetric` methods to the API
+  - feat: add `GoogleSignalsState`, `GoogleSignalsConsent` types
+  - feat: add `GoogleSignalsSettings` type
+  - feat: add `MeasurementProtocolSecret` type
+  - feat: add `ConversionEvent` type
+  - feat: add `CustomDimension` type
+  - feat: add `CustomMetric` type
+  - feat: extend `ChangeHistoryResourceType` enum to support `GOOGLE_SIGNALS_SETTINGS`, `CONVERSION_EVENT`, `MEASUREMENT_PROTOCOL_SECRET`, `CUSTOM_DIMENSION`, `CUSTOM_METRIC` values fix: label `email_address` field of `UserLink` type as immutable fix: label `name` field of `UserLink` type as output only
+
 # Version 1.0.0-alpha06, released 2021-04-28
 
 - [Commit b01d59c](https://github.com/googleapis/google-cloud-dotnet/commit/b01d59c):

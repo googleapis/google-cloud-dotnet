@@ -46,6 +46,7 @@ namespace Google.Cloud.Compute.V1
             AddPeeringSettings = existing.AddPeeringSettings;
             DeleteSettings = existing.DeleteSettings;
             GetSettings = existing.GetSettings;
+            GetEffectiveFirewallsSettings = existing.GetEffectiveFirewallsSettings;
             InsertSettings = existing.InsertSettings;
             ListSettings = existing.ListSettings;
             ListPeeringRoutesSettings = existing.ListPeeringRoutesSettings;
@@ -93,6 +94,18 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworksClient.GetEffectiveFirewalls</c> and <c>NetworksClient.GetEffectiveFirewallsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEffectiveFirewallsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetworksClient.Insert</c>
@@ -563,6 +576,83 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Network> GetAsync(string project, string network, st::CancellationToken cancellationToken) =>
             GetAsync(project, network, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NetworksGetEffectiveFirewallsResponse GetEffectiveFirewalls(GetEffectiveFirewallsNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworksGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworksGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsNetworkRequest request, st::CancellationToken cancellationToken) =>
+            GetEffectiveFirewallsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NetworksGetEffectiveFirewallsResponse GetEffectiveFirewalls(string project, string network, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveFirewalls(new GetEffectiveFirewallsNetworkRequest
+            {
+                Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworksGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(string project, string network, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveFirewallsAsync(new GetEffectiveFirewallsNetworkRequest
+            {
+                Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network for this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworksGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(string project, string network, st::CancellationToken cancellationToken) =>
+            GetEffectiveFirewallsAsync(project, network, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a network in the specified project using the data included in the request.
@@ -1138,6 +1228,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetNetworkRequest, Network> _callGet;
 
+        private readonly gaxgrpc::ApiCall<GetEffectiveFirewallsNetworkRequest, NetworksGetEffectiveFirewallsResponse> _callGetEffectiveFirewalls;
+
         private readonly gaxgrpc::ApiCall<InsertNetworkRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListNetworksRequest, NetworkList> _callList;
@@ -1171,6 +1263,9 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetNetworkRequest, Network>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetEffectiveFirewalls = clientHelper.BuildApiCall<GetEffectiveFirewallsNetworkRequest, NetworksGetEffectiveFirewallsResponse>(grpcClient.GetEffectiveFirewallsAsync, grpcClient.GetEffectiveFirewalls, effectiveSettings.GetEffectiveFirewallsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            Modify_ApiCall(ref _callGetEffectiveFirewalls);
+            Modify_GetEffectiveFirewallsApiCall(ref _callGetEffectiveFirewalls);
             _callInsert = clientHelper.BuildApiCall<InsertNetworkRequest, Operation>(grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -1203,6 +1298,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetNetworkRequest, Network> call);
 
+        partial void Modify_GetEffectiveFirewallsApiCall(ref gaxgrpc::ApiCall<GetEffectiveFirewallsNetworkRequest, NetworksGetEffectiveFirewallsResponse> call);
+
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertNetworkRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListNetworksRequest, NetworkList> call);
@@ -1227,6 +1324,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DeleteNetworkRequest(ref DeleteNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetNetworkRequest(ref GetNetworkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEffectiveFirewallsNetworkRequest(ref GetEffectiveFirewallsNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InsertNetworkRequest(ref InsertNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1312,6 +1411,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetNetworkRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NetworksGetEffectiveFirewallsResponse GetEffectiveFirewalls(GetEffectiveFirewallsNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveFirewallsNetworkRequest(ref request, ref callSettings);
+            return _callGetEffectiveFirewalls.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the effective firewalls on a given network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NetworksGetEffectiveFirewallsResponse> GetEffectiveFirewallsAsync(GetEffectiveFirewallsNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveFirewallsNetworkRequest(ref request, ref callSettings);
+            return _callGetEffectiveFirewalls.Async(request, callSettings);
         }
 
         /// <summary>

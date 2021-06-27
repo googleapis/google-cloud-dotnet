@@ -357,6 +357,74 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabelsRequestObject()
+        {
+            // Snippet: SetLabels(SetLabelsGlobalForwardingRuleRequest, CallSettings)
+            // Create client
+            GlobalForwardingRulesClient globalForwardingRulesClient = GlobalForwardingRulesClient.Create();
+            // Initialize request argument(s)
+            SetLabelsGlobalForwardingRuleRequest request = new SetLabelsGlobalForwardingRuleRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            Operation response = globalForwardingRulesClient.SetLabels(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsRequestObjectAsync()
+        {
+            // Snippet: SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest, CallSettings)
+            // Additional: SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest, CancellationToken)
+            // Create client
+            GlobalForwardingRulesClient globalForwardingRulesClient = await GlobalForwardingRulesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetLabelsGlobalForwardingRuleRequest request = new SetLabelsGlobalForwardingRuleRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
+            };
+            // Make the request
+            Operation response = await globalForwardingRulesClient.SetLabelsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabels</summary>
+        public void SetLabels()
+        {
+            // Snippet: SetLabels(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Create client
+            GlobalForwardingRulesClient globalForwardingRulesClient = GlobalForwardingRulesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            Operation response = globalForwardingRulesClient.SetLabels(project, resource, globalSetLabelsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetLabelsAsync</summary>
+        public async Task SetLabelsAsync()
+        {
+            // Snippet: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CallSettings)
+            // Additional: SetLabelsAsync(string, string, GlobalSetLabelsRequest, CancellationToken)
+            // Create client
+            GlobalForwardingRulesClient globalForwardingRulesClient = await GlobalForwardingRulesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
+            // Make the request
+            Operation response = await globalForwardingRulesClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetTarget</summary>
         public void SetTargetRequestObject()
         {

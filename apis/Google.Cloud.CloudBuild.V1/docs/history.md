@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.2.0, released 2021-06-22
+
+- [Commit 8c80969](https://github.com/googleapis/google-cloud-dotnet/commit/8c80969):
+  - feat: Implementation of Source Manifests
+    - Added message StorageSourceManifest as an option for the Source message
+    - Added StorageSourceManifest field to the SourceProvenance message
+
 # Version 1.1.0, released 2021-04-29
 
 - [Commit f4e1ad2](https://github.com/googleapis/google-cloud-dotnet/commit/f4e1ad2): feat: Add fields for Pub/Sub triggers
