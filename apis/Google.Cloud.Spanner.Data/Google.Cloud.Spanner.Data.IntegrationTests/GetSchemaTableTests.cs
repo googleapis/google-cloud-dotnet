@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     // The table also contains the `K` column that is the primary key.
                     var expectedRowCount = _fixture.RunningOnEmulator ? SchemaTestData.Count() - 1 : SchemaTestData.Count() + 1;
                     Assert.Equal(expectedRowCount, table.Rows.Count);
-                    for (var ordinal = 1; ordinal <= expectedRowCount - 1; ordinal++)
+                    for (var ordinal = 1; ordinal < expectedRowCount; ordinal++)
                     {
                         var row = table.Rows[ordinal];
                         Assert.Equal(ordinal, (int)row["ColumnOrdinal"]);

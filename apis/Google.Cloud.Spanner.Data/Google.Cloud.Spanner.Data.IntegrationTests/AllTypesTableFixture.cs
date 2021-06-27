@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         protected override void CreateTable()
         {
-            // The emulator doesn't yet support the NUMERIC type.
+            // The emulator doesn't yet support the JSON type.
             if (RunningOnEmulator)
             {
                 ExecuteDdl($@"CREATE TABLE {TableName}(
@@ -47,8 +47,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               Int64ArrayValue     ARRAY<INT64>,
                               Float64ArrayValue   ARRAY<FLOAT64>,
                               NumericArrayValue   ARRAY<NUMERIC>,
-                              StringArrayValue    ARRAY < STRING(MAX) >,
-                              BytesArrayValue     ARRAY < BYTES(MAX) >,
+                              StringArrayValue    ARRAY<STRING(MAX)>,
+                              BytesArrayValue     ARRAY<BYTES(MAX)>,
                               TimestampArrayValue ARRAY<TIMESTAMP>,
                               DateArrayValue      ARRAY<DATE>,
                             ) PRIMARY KEY(K)");
@@ -70,8 +70,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               Int64ArrayValue     ARRAY<INT64>,
                               Float64ArrayValue   ARRAY<FLOAT64>,
                               NumericArrayValue   ARRAY<NUMERIC>,
-                              StringArrayValue    ARRAY < STRING(MAX) >,
-                              BytesArrayValue     ARRAY < BYTES(MAX) >,
+                              StringArrayValue    ARRAY<STRING(MAX)>,
+                              BytesArrayValue     ARRAY<BYTES(MAX)>,
                               TimestampArrayValue ARRAY<TIMESTAMP>,
                               DateArrayValue      ARRAY<DATE>,
                               JsonArrayValue      ARRAY<JSON>,

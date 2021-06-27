@@ -110,7 +110,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray }
             };
 
-            // The emulator doesn't yet support the NUMERIC and JSON types.
+            // The emulator doesn't yet support the JSON type.
             if (!_fixture.RunningOnEmulator)
             {
                 parameters.Add("JsonValue", SpannerDbType.Json, "{\"f1\":\"v1\"}");
