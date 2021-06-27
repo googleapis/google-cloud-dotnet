@@ -34,24 +34,23 @@ namespace Google.Cloud.Spanner.Data
         {
             _spannerConnection = spannerConnection;
             _timestampBound = timestampBound;
-            _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransaction, LazyThreadSafetyMode.ExecutionAndPublication);
+            _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransactionAsync, LazyThreadSafetyMode.ExecutionAndPublication);
             _transactionId = transactionId;
         }
 
-        private SpannerTransaction SpannerTransaction { get => SpannerTransactionTask.Result; }
+        private SpannerTransaction SpannerTransaction => SpannerTransactionTask.Result;
 
-        private Task<SpannerTransaction> SpannerTransactionTask
-        {
-            get => _transaction == null ? throw new ObjectDisposedException("The transaction has already been disposed") : _transaction.Value;
-        }
+        private Task<SpannerTransaction> SpannerTransactionTask => _transaction == null
+            ? throw new ObjectDisposedException("The transaction has already been disposed")
+            : _transaction.Value;
 
-        private bool IsTransactionCreated { get => _transaction != null && _transaction.IsValueCreated; }
+        private bool IsTransactionCreated => _transaction != null && _transaction.IsValueCreated;
 
-        private bool HasExecutedDmlOrMutations { get => IsTransactionCreated && (_hasExecutedDml || SpannerTransaction.HasMutations); }
+        private bool HasExecutedDmlOrMutations => IsTransactionCreated && (_hasExecutedDml || SpannerTransaction.HasMutations);
 
         private Logger Logger => _spannerConnection.Logger;
 
-        private Task<SpannerTransaction> CreateTransaction()
+        private Task<SpannerTransaction> CreateTransactionAsync()
         {
             return _timestampBound != null ? _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound)
                 : _transactionId != null ? Task.FromResult(_spannerConnection.BeginReadOnlyTransaction(_transactionId))
@@ -62,7 +61,7 @@ namespace Google.Cloud.Spanner.Data
         {
             try
             {
-                if (_transaction != null && _transaction.IsValueCreated)
+                if (IsTransactionCreated)
                 {
                     SpannerTransaction.Dispose();
                 }
