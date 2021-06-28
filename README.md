@@ -21,7 +21,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.1.0) | 1.1.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](https://googleapis.dev/dotnet/Google.Cloud.ApiGateway.V1/1.0.0) | 1.0.0 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
 | [Google.Cloud.AIPlatform.V1](https://googleapis.dev/dotnet/Google.Cloud.AIPlatform.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud AI Platform](https://cloud.google.com/ai-platform/docs/) |
-| [Google.Cloud.ApigeeConnect.V1](https://googleapis.dev/dotnet/Google.Cloud.ApigeeConnect.V1/1.0.0-beta01) | 1.0.0-beta01 | [Apigee Connect](https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect) |
+| [Google.Cloud.ApigeeConnect.V1](https://googleapis.dev/dotnet/Google.Cloud.ApigeeConnect.V1/1.0.0) | 1.0.0 | [Apigee Connect](https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect) |
 | [Google.Cloud.AppEngine.V1](https://googleapis.dev/dotnet/Google.Cloud.AppEngine.V1/1.1.0) | 1.1.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.ArtifactRegistry.V1Beta2/1.0.0-beta02) | 1.0.0-beta02 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.8.0) | 2.8.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
