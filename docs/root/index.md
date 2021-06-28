@@ -25,6 +25,7 @@ Each package name links to the documentation for that package.
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha03 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](Google.Cloud.AccessApproval.V1/index.html) | 1.1.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](Google.Cloud.ApiGateway.V1/index.html) | 1.0.0 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
+| [Google.Cloud.AIPlatform.V1](Google.Cloud.AIPlatform.V1/index.html) | 1.0.0-beta01 | [Cloud AI Platform](https://cloud.google.com/ai-platform/docs/) |
 | [Google.Cloud.ApigeeConnect.V1](Google.Cloud.ApigeeConnect.V1/index.html) | 1.0.0-beta01 | [Apigee Connect](https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect) |
 | [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.1.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta02 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
