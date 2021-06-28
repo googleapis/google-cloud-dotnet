@@ -1952,7 +1952,7 @@
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Resource Manager",
       "productUrl": "https://cloud.google.com/resource-manager/docs",
@@ -1961,8 +1961,8 @@
         "resources"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.1.0",
-        "Google.LongRunning": "2.1.0"
+        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/resourcemanager/v3"
