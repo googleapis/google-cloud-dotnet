@@ -1971,7 +1971,7 @@
     },
     {
       "id": "Google.Cloud.ResourceSettings.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Resource Settings",
       "productUrl": "https://cloud.google.com/resource-settings/docs",
@@ -1980,7 +1980,10 @@
         "resources",
         "settings"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Grpc.Core": "2.38.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/resourcesettings/v1"
     },
