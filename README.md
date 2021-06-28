@@ -132,11 +132,11 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ServiceManagement.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceManagement.V1/1.2.0) | 1.2.0 | [Service Management](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
 | [Google.Cloud.ServiceUsage.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceUsage.V1/1.0.0) | 1.0.0 | [Service Usage](https://cloud.google.com/service-usage/docs/) |
 | [Google.Cloud.Shell.V1](https://googleapis.dev/dotnet/Google.Cloud.Shell.V1/1.0.0) | 1.0.0 | [Cloud Shell](https://cloud.google.com/shell/) |
-| [Google.Cloud.Spanner.Admin.Database.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Database.V1/3.9.0) | 3.9.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
-| [Google.Cloud.Spanner.Admin.Instance.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Instance.V1/3.9.0) | 3.9.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
-| [Google.Cloud.Spanner.Data](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Data/3.9.0) | 3.9.0 | Google ADO.NET Provider for Google Cloud Spanner |
-| [Google.Cloud.Spanner.Common.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Common.V1/3.9.0) | 3.9.0 | Common resource names used by all Spanner V1 APIs |
-| [Google.Cloud.Spanner.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.V1/3.9.0) | 3.9.0 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Admin.Database.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Database.V1/3.10.0) | 3.10.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Admin.Instance.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Instance.V1/3.10.0) | 3.10.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Data](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Data/3.10.0) | 3.10.0 | Google ADO.NET Provider for Google Cloud Spanner |
+| [Google.Cloud.Spanner.Common.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Common.V1/3.10.0) | 3.10.0 | Common resource names used by all Spanner V1 APIs |
+| [Google.Cloud.Spanner.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.V1/3.10.0) | 3.10.0 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Speech.V1](https://googleapis.dev/dotnet/Google.Cloud.Speech.V1/2.2.0) | 2.2.0 | [Google Cloud Speech (V1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Speech.V1P1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Speech.V1P1Beta1/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud Speech (V1P1Beta1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.Storage.V1/3.5.0) | 3.5.0 | [Google Cloud Storage](https://cloud.google.com/storage/) |
