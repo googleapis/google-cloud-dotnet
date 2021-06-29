@@ -295,9 +295,16 @@ namespace Google.Cloud.CloudBuild.V1
 
             /// <summary>A resource name with pattern <c>projects/{project}/triggers/{trigger}</c>.</summary>
             ProjectTrigger = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/triggers/{trigger}</c>.
+            /// </summary>
+            ProjectLocationTrigger = 2,
         }
 
         private static gax::PathTemplate s_projectTrigger = new gax::PathTemplate("projects/{project}/triggers/{trigger}");
+
+        private static gax::PathTemplate s_projectLocationTrigger = new gax::PathTemplate("projects/{project}/locations/{location}/triggers/{trigger}");
 
         /// <summary>Creates a <see cref="BuildTriggerName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -316,6 +323,17 @@ namespace Google.Cloud.CloudBuild.V1
         /// <returns>A new instance of <see cref="BuildTriggerName"/> constructed from the provided ids.</returns>
         public static BuildTriggerName FromProjectTrigger(string projectId, string triggerId) =>
             new BuildTriggerName(ResourceNameType.ProjectTrigger, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), triggerId: gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)));
+
+        /// <summary>
+        /// Creates a <see cref="BuildTriggerName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/triggers/{trigger}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="triggerId">The <c>Trigger</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="BuildTriggerName"/> constructed from the provided ids.</returns>
+        public static BuildTriggerName FromProjectLocationTrigger(string projectId, string locationId, string triggerId) =>
+            new BuildTriggerName(ResourceNameType.ProjectLocationTrigger, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), triggerId: gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="BuildTriggerName"/> with pattern
@@ -342,11 +360,26 @@ namespace Google.Cloud.CloudBuild.V1
         public static string FormatProjectTrigger(string projectId, string triggerId) =>
             s_projectTrigger.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BuildTriggerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/triggers/{trigger}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="triggerId">The <c>Trigger</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BuildTriggerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/triggers/{trigger}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTrigger(string projectId, string locationId, string triggerId) =>
+            s_projectLocationTrigger.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="BuildTriggerName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/triggers/{trigger}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/triggers/{trigger}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="buildTriggerName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -361,6 +394,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/triggers/{trigger}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/triggers/{trigger}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -381,6 +415,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/triggers/{trigger}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/triggers/{trigger}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="buildTriggerName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -399,6 +434,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/triggers/{trigger}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/triggers/{trigger}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -421,6 +457,11 @@ namespace Google.Cloud.CloudBuild.V1
                 result = FromProjectTrigger(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocationTrigger.TryParseName(buildTriggerName, out resourceName))
+            {
+                result = FromProjectLocationTrigger(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(buildTriggerName, out gax::UnparsedResourceName unparsedResourceName))
@@ -433,10 +474,11 @@ namespace Google.Cloud.CloudBuild.V1
             return false;
         }
 
-        private BuildTriggerName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string triggerId = null)
+        private BuildTriggerName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string triggerId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
             ProjectId = projectId;
             TriggerId = triggerId;
         }
@@ -461,12 +503,17 @@ namespace Google.Cloud.CloudBuild.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Trigger</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Trigger</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string TriggerId { get; }
 
@@ -481,6 +528,7 @@ namespace Google.Cloud.CloudBuild.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectTrigger: return s_projectTrigger.Expand(ProjectId, TriggerId);
+                case ResourceNameType.ProjectLocationTrigger: return s_projectLocationTrigger.Expand(ProjectId, LocationId, TriggerId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -2084,6 +2132,18 @@ namespace Google.Cloud.CloudBuild.V1
         }
     }
 
+    public partial class RunBuildTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::BuildTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::BuildTriggerName BuildTriggerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::BuildTriggerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Build
     {
         /// <summary>
@@ -2281,6 +2341,132 @@ namespace Google.Cloud.CloudBuild.V1
         {
             get => string.IsNullOrEmpty(ServiceAccountEmail) ? null : ServiceAccountName.Parse(ServiceAccountEmail, allowUnparsed: true);
             set => ServiceAccountEmail = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class WebhookConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="Secret"/> resource name property.
+        /// </summary>
+        public SecretVersionName SecretAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(Secret) ? null : SecretVersionName.Parse(Secret, allowUnparsed: true);
+            set => Secret = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateBuildTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBuildTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::BuildTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::BuildTriggerName BuildTriggerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::BuildTriggerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBuildTriggersRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBuildTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::BuildTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::BuildTriggerName BuildTriggerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::BuildTriggerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }
