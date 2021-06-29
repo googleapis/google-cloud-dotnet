@@ -622,6 +622,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.CreateBuildTrigger(request);
@@ -640,6 +641,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(request);
@@ -686,6 +688,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.GetBuildTrigger(request);
@@ -704,6 +707,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(request);
@@ -746,7 +750,11 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            ListBuildTriggersRequest request = new ListBuildTriggersRequest { ProjectId = "", };
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
+            {
+                ProjectId = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
             PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggers(request);
 
@@ -791,7 +799,11 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            ListBuildTriggersRequest request = new ListBuildTriggersRequest { ProjectId = "", };
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
+            {
+                ProjectId = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggersAsync(request);
 
@@ -930,6 +942,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             cloudBuildClient.DeleteBuildTrigger(request);
@@ -948,6 +961,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             await cloudBuildClient.DeleteBuildTriggerAsync(request);
@@ -1063,6 +1077,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RunBuildTrigger(request);
@@ -1098,6 +1113,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RunBuildTriggerAsync(request);
@@ -1196,6 +1212,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 Trigger = "",
                 Secret = "",
+                Name = "",
             };
             // Make the request
             ReceiveTriggerWebhookResponse response = cloudBuildClient.ReceiveTriggerWebhook(request);
@@ -1216,6 +1233,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 Trigger = "",
                 Secret = "",
+                Name = "",
             };
             // Make the request
             ReceiveTriggerWebhookResponse response = await cloudBuildClient.ReceiveTriggerWebhookAsync(request);
