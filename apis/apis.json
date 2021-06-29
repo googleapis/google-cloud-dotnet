@@ -1279,6 +1279,24 @@
       }
     },
     {
+      "id": "Google.Cloud.Iap.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Identity-Aware Proxy",
+      "productUrl": "https://cloud.google.com/iap/docs/",
+      "description": "Recommended Google client library to access the Google Cloud IAP API, which controls access to cloud applications running on Google Cloud Platform.",
+      "tags": [
+        "proxy",
+        "identity",
+        "access"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/iap/v1"
+    },
+    {
       "id": "Google.Cloud.Iot.V1",
       "version": "1.1.0",
       "type": "grpc",
