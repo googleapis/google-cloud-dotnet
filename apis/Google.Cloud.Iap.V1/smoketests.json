@@ -1,0 +1,11 @@
+[
+  {
+    "method": "ListBrands",
+    "client": "IdentityAwareProxyOAuthServiceClient",
+    "arguments": {
+      "request": {
+        "parent": "projects/${PROJECT_ID}"
+      }
+    }
+  }
+]
