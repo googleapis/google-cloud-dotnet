@@ -1064,10 +1064,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ConnectionProfile, OperationMetadata> CreateConnectionProfile(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<ConnectionProfile, OperationMetadata> CreateConnectionProfile(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CreateConnectionProfile(new CreateConnectionProfileRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConnectionProfileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ConnectionProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(connectionProfileId, nameof(connectionProfileId)),
                 ConnectionProfile = gax::GaxPreconditions.CheckNotNull(connectionProfile, nameof(connectionProfile)),
             }, callSettings);
@@ -1086,10 +1086,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CreateConnectionProfileAsync(new CreateConnectionProfileRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConnectionProfileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ConnectionProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(connectionProfileId, nameof(connectionProfileId)),
                 ConnectionProfile = gax::GaxPreconditions.CheckNotNull(connectionProfile, nameof(connectionProfile)),
             }, callSettings);
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, st::CancellationToken cancellationToken) =>
             CreateConnectionProfileAsync(parent, connectionProfile, connectionProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1375,7 +1375,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1387,7 +1387,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1399,7 +1399,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1450,7 +1450,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1468,7 +1468,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the ConnectionProfile type. Must be in the
@@ -1844,10 +1844,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Stream, OperationMetadata> CreateStream(gagr::LocationName parent, Stream stream, string streamId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Stream, OperationMetadata> CreateStream(StreamName parent, Stream stream, string streamId, gaxgrpc::CallSettings callSettings = null) =>
             CreateStream(new CreateStreamRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 StreamId = gax::GaxPreconditions.CheckNotNullOrEmpty(streamId, nameof(streamId)),
                 Stream = gax::GaxPreconditions.CheckNotNull(stream, nameof(stream)),
             }, callSettings);
@@ -1866,10 +1866,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> CreateStreamAsync(gagr::LocationName parent, Stream stream, string streamId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> CreateStreamAsync(StreamName parent, Stream stream, string streamId, gaxgrpc::CallSettings callSettings = null) =>
             CreateStreamAsync(new CreateStreamRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 StreamId = gax::GaxPreconditions.CheckNotNullOrEmpty(streamId, nameof(streamId)),
                 Stream = gax::GaxPreconditions.CheckNotNull(stream, nameof(stream)),
             }, callSettings);
@@ -1888,7 +1888,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> CreateStreamAsync(gagr::LocationName parent, Stream stream, string streamId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Stream, OperationMetadata>> CreateStreamAsync(StreamName parent, Stream stream, string streamId, st::CancellationToken cancellationToken) =>
             CreateStreamAsync(parent, stream, streamId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2193,7 +2193,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2204,7 +2204,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2215,7 +2215,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name resource of the Response type. Must be in the
@@ -2242,7 +2242,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name resource of the Response type. Must be in the
@@ -2269,7 +2269,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name resource of the Response type. Must be in the
@@ -2296,7 +2296,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="name">
         /// Required. The name resource of the Response type. Must be in the
@@ -2570,10 +2570,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual PrivateConnection GetPrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PrivateConnection GetPrivateConnection(gagr::LocationName name, gaxgrpc::CallSettings callSettings = null) =>
             GetPrivateConnection(new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -2584,10 +2584,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(gagr::LocationName name, gaxgrpc::CallSettings callSettings = null) =>
             GetPrivateConnectionAsync(new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -2598,7 +2598,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(gagr::LocationName name, st::CancellationToken cancellationToken) =>
             GetPrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2822,10 +2822,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(gagr::LocationName name, gaxgrpc::CallSettings callSettings = null) =>
             DeletePrivateConnection(new DeletePrivateConnectionRequest
             {
-                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -2836,10 +2836,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(gagr::LocationName name, gaxgrpc::CallSettings callSettings = null) =>
             DeletePrivateConnectionAsync(new DeletePrivateConnectionRequest
             {
-                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LocationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -2850,7 +2850,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(gagr::LocationName name, st::CancellationToken cancellationToken) =>
             DeletePrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3111,10 +3111,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Route GetRoute(RouteName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Route GetRoute(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
             GetRoute(new GetRouteRequest
             {
-                RouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -3125,10 +3125,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Route> GetRouteAsync(RouteName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Route> GetRouteAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
             GetRouteAsync(new GetRouteRequest
             {
-                RouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -3139,7 +3139,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Route> GetRouteAsync(RouteName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Route> GetRouteAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
             GetRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3362,10 +3362,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRoute(RouteName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRoute(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRoute(new DeleteRouteRequest
             {
-                RouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -3376,10 +3376,10 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRouteAsync(RouteName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRouteAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRouteAsync(new DeleteRouteRequest
             {
-                RouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -3390,7 +3390,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRouteAsync(RouteName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRouteAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
             DeleteRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -3755,7 +3755,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3770,7 +3770,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// Use this method to discover a connection profile.
         /// The discover API call exposes the data objects and metadata belonging to
         /// the profile. Typically, a request returns children data objects under a
-        /// parent data object that's optionally supplied in the request.
+        /// parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3940,7 +3940,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3954,7 +3954,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <summary>
         /// The FetchStaticIps API call exposes the static ips used by Datastream.
         /// Typically, a request returns children data objects under
-        /// a parent data object that's optionally supplied in the request.
+        /// a parent data object that’s optionally supplied in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
