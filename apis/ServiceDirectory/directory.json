@@ -1516,6 +1516,39 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.GSuiteAddOns.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/iap/v1",
+      "Name": "iap.googleapis.com",
+      "Title": "Cloud Identity-Aware Proxy API",
+      "Description": "Controls access to cloud applications running on Google Cloud Platform.",
+      "ServiceConfigFile": "google/cloud/iap/v1/iap_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.iap.v1",
+      "PackageFromProtos": "google.cloud.iap.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Iap.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/iap/v1beta1",
+      "Name": "iap.googleapis.com",
+      "Title": "Cloud Identity-Aware Proxy API",
+      "Description": "Controls access to cloud applications running on Google Cloud Platform.",
+      "ServiceConfigFile": "google/cloud/iap/v1beta1/iap_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.iap.v1beta1",
+      "PackageFromProtos": "google.cloud.iap.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Iap.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/iot/v1",
       "Name": "cloudiot.googleapis.com",
       "Title": "Cloud IoT API",
