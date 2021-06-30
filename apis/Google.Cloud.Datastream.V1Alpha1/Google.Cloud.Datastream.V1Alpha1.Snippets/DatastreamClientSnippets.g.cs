@@ -945,60 +945,6 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DiscoverConnectionProfile</summary>
-        public void DiscoverConnectionProfile()
-        {
-            // Snippet: DiscoverConnectionProfile(string, CallSettings)
-            // Create client
-            DatastreamClient datastreamClient = DatastreamClient.Create();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            // Make the request
-            DiscoverConnectionProfileResponse response = datastreamClient.DiscoverConnectionProfile(parent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DiscoverConnectionProfileAsync</summary>
-        public async Task DiscoverConnectionProfileAsync()
-        {
-            // Snippet: DiscoverConnectionProfileAsync(string, CallSettings)
-            // Additional: DiscoverConnectionProfileAsync(string, CancellationToken)
-            // Create client
-            DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            // Make the request
-            DiscoverConnectionProfileResponse response = await datastreamClient.DiscoverConnectionProfileAsync(parent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DiscoverConnectionProfile</summary>
-        public void DiscoverConnectionProfileResourceNames()
-        {
-            // Snippet: DiscoverConnectionProfile(LocationName, CallSettings)
-            // Create client
-            DatastreamClient datastreamClient = DatastreamClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            // Make the request
-            DiscoverConnectionProfileResponse response = datastreamClient.DiscoverConnectionProfile(parent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DiscoverConnectionProfileAsync</summary>
-        public async Task DiscoverConnectionProfileResourceNamesAsync()
-        {
-            // Snippet: DiscoverConnectionProfileAsync(LocationName, CallSettings)
-            // Additional: DiscoverConnectionProfileAsync(LocationName, CancellationToken)
-            // Create client
-            DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            // Make the request
-            DiscoverConnectionProfileResponse response = await datastreamClient.DiscoverConnectionProfileAsync(parent);
-            // End snippet
-        }
-
         /// <summary>Snippet for ListStreams</summary>
         public void ListStreamsRequestObject()
         {
