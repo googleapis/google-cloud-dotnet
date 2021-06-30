@@ -5,10 +5,10 @@
   "protoPackage": "google.pubsub.v1",
   "libraryPackage": "Google.Cloud.PubSub.V1",
   "services": {
-    "Publisher": {
+    "PublisherServiceApiServiceApiServiceApiServiceApi": {
       "clients": {
         "grpc": {
-          "libraryClient": "PublisherServiceApiClient",
+          "libraryClient": "PublisherServiceApiServiceApiServiceApiServiceApiClient",
           "rpcs": {
             "CreateTopic": {
               "methods": [
@@ -113,10 +113,10 @@
         }
       }
     },
-    "Subscriber": {
+    "SubscriberServiceApiServiceApiServiceApiServiceApi": {
       "clients": {
         "grpc": {
-          "libraryClient": "SubscriberServiceApiClient",
+          "libraryClient": "SubscriberServiceApiServiceApiServiceApiServiceApiClient",
           "rpcs": {
             "Acknowledge": {
               "methods": [
