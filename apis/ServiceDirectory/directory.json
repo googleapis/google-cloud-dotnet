@@ -1070,7 +1070,7 @@
     {
       "ServiceDirectory": "google/cloud/datastream/v1alpha1",
       "Name": "datastream.googleapis.com",
-      "Title": "DataStream API",
+      "Title": "Datastream API",
       "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
       "ServiceConfigFile": "google/cloud/datastream/v1alpha1/datastream_v1alpha1.yaml",
       "Version": "v1alpha1",
