@@ -403,7 +403,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             CreateConnectionProfileRequest request = new CreateConnectionProfileRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
@@ -439,7 +439,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             CreateConnectionProfileRequest request = new CreateConnectionProfileRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
@@ -472,7 +472,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/connectionProfiles/[CONNECTIONPROFILE]";
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -504,7 +504,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/connectionProfiles/[CONNECTIONPROFILE]";
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -531,11 +531,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for CreateConnectionProfile</summary>
         public void CreateConnectionProfileResourceNames()
         {
-            // Snippet: CreateConnectionProfile(LocationName, ConnectionProfile, string, CallSettings)
+            // Snippet: CreateConnectionProfile(ConnectionProfileName, ConnectionProfile, string, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -562,12 +562,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for CreateConnectionProfileAsync</summary>
         public async Task CreateConnectionProfileResourceNamesAsync()
         {
-            // Snippet: CreateConnectionProfileAsync(LocationName, ConnectionProfile, string, CallSettings)
-            // Additional: CreateConnectionProfileAsync(LocationName, ConnectionProfile, string, CancellationToken)
+            // Snippet: CreateConnectionProfileAsync(ConnectionProfileName, ConnectionProfile, string, CallSettings)
+            // Additional: CreateConnectionProfileAsync(ConnectionProfileName, ConnectionProfile, string, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -1375,7 +1375,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             CreateStreamRequest request = new CreateStreamRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsStreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
                 StreamId = "",
                 Stream = new Stream(),
                 RequestId = "",
@@ -1413,7 +1413,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             CreateStreamRequest request = new CreateStreamRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsStreamName = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]"),
                 StreamId = "",
                 Stream = new Stream(),
                 RequestId = "",
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/streams/[STREAM]";
             Stream stream = new Stream();
             string streamId = "";
             // Make the request
@@ -1480,7 +1480,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/streams/[STREAM]";
             Stream stream = new Stream();
             string streamId = "";
             // Make the request
@@ -1507,11 +1507,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for CreateStream</summary>
         public void CreateStreamResourceNames()
         {
-            // Snippet: CreateStream(LocationName, Stream, string, CallSettings)
+            // Snippet: CreateStream(StreamName, Stream, string, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            StreamName parent = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]");
             Stream stream = new Stream();
             string streamId = "";
             // Make the request
@@ -1538,12 +1538,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for CreateStreamAsync</summary>
         public async Task CreateStreamResourceNamesAsync()
         {
-            // Snippet: CreateStreamAsync(LocationName, Stream, string, CallSettings)
-            // Additional: CreateStreamAsync(LocationName, Stream, string, CancellationToken)
+            // Snippet: CreateStreamAsync(StreamName, Stream, string, CallSettings)
+            // Additional: CreateStreamAsync(StreamName, Stream, string, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            StreamName parent = StreamName.FromProjectLocationStream("[PROJECT]", "[LOCATION]", "[STREAM]");
             Stream stream = new Stream();
             string streamId = "";
             // Make the request
@@ -2433,7 +2433,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PrivateConnection response = datastreamClient.GetPrivateConnection(request);
@@ -2450,7 +2450,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PrivateConnection response = await datastreamClient.GetPrivateConnectionAsync(request);
@@ -2464,7 +2464,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PrivateConnection response = datastreamClient.GetPrivateConnection(name);
             // End snippet
@@ -2478,7 +2478,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PrivateConnection response = await datastreamClient.GetPrivateConnectionAsync(name);
             // End snippet
@@ -2487,11 +2487,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for GetPrivateConnection</summary>
         public void GetPrivateConnectionResourceNames()
         {
-            // Snippet: GetPrivateConnection(PrivateConnectionName, CallSettings)
+            // Snippet: GetPrivateConnection(LocationName, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PrivateConnection response = datastreamClient.GetPrivateConnection(name);
             // End snippet
@@ -2500,12 +2500,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for GetPrivateConnectionAsync</summary>
         public async Task GetPrivateConnectionResourceNamesAsync()
         {
-            // Snippet: GetPrivateConnectionAsync(PrivateConnectionName, CallSettings)
-            // Additional: GetPrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Snippet: GetPrivateConnectionAsync(LocationName, CallSettings)
+            // Additional: GetPrivateConnectionAsync(LocationName, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PrivateConnection response = await datastreamClient.GetPrivateConnectionAsync(name);
             // End snippet
@@ -2800,7 +2800,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RequestId = "",
                 Force = false,
             };
@@ -2835,7 +2835,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RequestId = "",
                 Force = false,
             };
@@ -2867,7 +2867,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             Operation<Empty, OperationMetadata> response = datastreamClient.DeletePrivateConnection(name);
 
@@ -2897,7 +2897,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             Operation<Empty, OperationMetadata> response = await datastreamClient.DeletePrivateConnectionAsync(name);
 
@@ -2922,11 +2922,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for DeletePrivateConnection</summary>
         public void DeletePrivateConnectionResourceNames()
         {
-            // Snippet: DeletePrivateConnection(PrivateConnectionName, CallSettings)
+            // Snippet: DeletePrivateConnection(LocationName, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<Empty, OperationMetadata> response = datastreamClient.DeletePrivateConnection(name);
 
@@ -2951,12 +2951,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
         public async Task DeletePrivateConnectionResourceNamesAsync()
         {
-            // Snippet: DeletePrivateConnectionAsync(PrivateConnectionName, CallSettings)
-            // Additional: DeletePrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Snippet: DeletePrivateConnectionAsync(LocationName, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(LocationName, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await datastreamClient.DeletePrivateConnectionAsync(name);
 
@@ -3184,7 +3184,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             // Make the request
             Route response = datastreamClient.GetRoute(request);
@@ -3201,7 +3201,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             // Make the request
             Route response = await datastreamClient.GetRouteAsync(request);
@@ -3215,7 +3215,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]/routes/[ROUTE]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
             // Make the request
             Route response = datastreamClient.GetRoute(name);
             // End snippet
@@ -3229,7 +3229,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]/routes/[ROUTE]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
             // Make the request
             Route response = await datastreamClient.GetRouteAsync(name);
             // End snippet
@@ -3238,11 +3238,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for GetRoute</summary>
         public void GetRouteResourceNames()
         {
-            // Snippet: GetRoute(RouteName, CallSettings)
+            // Snippet: GetRoute(PrivateConnectionName, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            RouteName name = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]");
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
             // Make the request
             Route response = datastreamClient.GetRoute(name);
             // End snippet
@@ -3251,12 +3251,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for GetRouteAsync</summary>
         public async Task GetRouteResourceNamesAsync()
         {
-            // Snippet: GetRouteAsync(RouteName, CallSettings)
-            // Additional: GetRouteAsync(RouteName, CancellationToken)
+            // Snippet: GetRouteAsync(PrivateConnectionName, CallSettings)
+            // Additional: GetRouteAsync(PrivateConnectionName, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            RouteName name = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]");
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
             // Make the request
             Route response = await datastreamClient.GetRouteAsync(name);
             // End snippet
@@ -3551,7 +3551,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             DeleteRouteRequest request = new DeleteRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
                 RequestId = "",
             };
             // Make the request
@@ -3585,7 +3585,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Initialize request argument(s)
             DeleteRouteRequest request = new DeleteRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
                 RequestId = "",
             };
             // Make the request
@@ -3616,7 +3616,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]/routes/[ROUTE]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
             // Make the request
             Operation<Empty, OperationMetadata> response = datastreamClient.DeleteRoute(name);
 
@@ -3646,7 +3646,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]/routes/[ROUTE]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATECONNECTION]";
             // Make the request
             Operation<Empty, OperationMetadata> response = await datastreamClient.DeleteRouteAsync(name);
 
@@ -3671,11 +3671,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for DeleteRoute</summary>
         public void DeleteRouteResourceNames()
         {
-            // Snippet: DeleteRoute(RouteName, CallSettings)
+            // Snippet: DeleteRoute(PrivateConnectionName, CallSettings)
             // Create client
             DatastreamClient datastreamClient = DatastreamClient.Create();
             // Initialize request argument(s)
-            RouteName name = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]");
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
             // Make the request
             Operation<Empty, OperationMetadata> response = datastreamClient.DeleteRoute(name);
 
@@ -3700,12 +3700,12 @@ namespace Google.Cloud.Datastream.V1Alpha1.Snippets
         /// <summary>Snippet for DeleteRouteAsync</summary>
         public async Task DeleteRouteResourceNamesAsync()
         {
-            // Snippet: DeleteRouteAsync(RouteName, CallSettings)
-            // Additional: DeleteRouteAsync(RouteName, CancellationToken)
+            // Snippet: DeleteRouteAsync(PrivateConnectionName, CallSettings)
+            // Additional: DeleteRouteAsync(PrivateConnectionName, CancellationToken)
             // Create client
             DatastreamClient datastreamClient = await DatastreamClient.CreateAsync();
             // Initialize request argument(s)
-            RouteName name = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]");
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await datastreamClient.DeleteRouteAsync(name);
 
