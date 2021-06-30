@@ -1919,6 +1919,42 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.OnDemandScanning.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/orchestration/airflow/service/v1",
+      "Name": "composer.googleapis.com",
+      "Title": "Cloud Composer API",
+      "Description": "Manages Apache Airflow environments on Google Cloud Platform.",
+      "ServiceConfigFile": "google/cloud/orchestration/airflow/service/v1/composer_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.orchestration.airflow.service.v1",
+      "PackageFromProtos": "google.cloud.orchestration.airflow.service.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Orchestration.Airflow.Service.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/orchestration/airflow/service/v1beta1",
+      "Name": "composer.googleapis.com",
+      "Title": "Cloud Composer API",
+      "Description": "Manages Apache Airflow environments on Google Cloud Platform.",
+      "ServiceConfigFile": "google/cloud/orchestration/airflow/service/v1beta1/composer_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.orchestration.airflow.service.v1beta1",
+      "PackageFromProtos": "google.cloud.orchestration.airflow.service.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Orchestration.Airflow.Service.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/orgpolicy/v2",
       "Name": "orgpolicy.googleapis.com",
       "Title": "Organization Policy API",
