@@ -592,6 +592,24 @@
       }
     },
     {
+      "id": "Google.Cloud.DataFusion.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Data Fusion",
+      "productUrl": "https://cloud.google.com/data-fusion/docs/",
+      "description": "Recommended Google client library to access the Data Fusion API. Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for quickly building and managing data pipelines.",
+      "tags": [
+        "integration",
+        "pipelines",
+        "data"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/datafusion/v1"
+    },
+    {
       "id": "Google.Cloud.DataLabeling.V1Beta1",
       "version": "1.0.0-beta02",
       "type": "grpc",
