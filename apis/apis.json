@@ -1668,6 +1668,24 @@
       "protoPath": "google/cloud/notebooks/v1beta1"
     },
     {
+      "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Composer",
+      "productUrl": "https://cloud.google.com/composer/docs/",
+      "description": "Recommended Google client library to access the Cloud Composer API, which manages Apache Airflow environments on Google Cloud Platform.",
+      "tags": [
+        "airflow",
+        "composer",
+        "orchestration"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/orchestration/airflow/service/v1"
+    },
+    {
       "id": "Google.Cloud.OrgPolicy.V1",
       "generator": "proto",
       "protoPath": "google/cloud/orgpolicy/v1",
