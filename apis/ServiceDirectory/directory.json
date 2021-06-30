@@ -959,6 +959,42 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.DataCatalog.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/datafusion/v1",
+      "Name": "datafusion.googleapis.com",
+      "Title": "Cloud Data Fusion API",
+      "Description": "Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for     quickly building and managing data pipelines. It provides a graphical interface to increase     time efficiency and reduce complexity, and allows business users, developers, and data scientists to easily and reliably build scalable data integration solutions to cleanse,     prepare, blend, transfer and transform data without having to wrestle with infrastructure.",
+      "ServiceConfigFile": "google/cloud/datafusion/v1/datafusion_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.datafusion.v1",
+      "PackageFromProtos": "google.cloud.datafusion.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.DataFusion.V1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/datafusion/v1beta1",
+      "Name": "datafusion.googleapis.com",
+      "Title": "Cloud Data Fusion API",
+      "Description": "Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for     quickly building and managing data pipelines. It provides a graphical interface to increase     time efficiency and reduce complexity, and allows business users, developers, and data scientists to easily and reliably build scalable data integration solutions to cleanse,     prepare, blend, transfer and transform data without having to wrestle with infrastructure.",
+      "ServiceConfigFile": "google/cloud/datafusion/v1beta1/datafusion_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.datafusion.v1beta1",
+      "PackageFromProtos": "google.cloud.datafusion.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.DataFusion.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/datalabeling/v1beta1",
       "Name": "datalabeling.googleapis.com",
       "Title": "Data Labeling API",
