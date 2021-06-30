@@ -51,6 +51,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Compute.V1](Google.Cloud.Compute.V1/index.html) | 1.0.0-alpha02 | [Compute Engine](https://cloud.google.com/compute) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.4.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
+| [Google.Cloud.DataFusion.V1](Google.Cloud.DataFusion.V1/index.html) | 1.0.0-beta01 | [Cloud Data Fusion](https://cloud.google.com/data-fusion/docs/) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta02 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
 | [Google.Cloud.DataQnA.V1Alpha](Google.Cloud.DataQnA.V1Alpha/index.html) | 1.0.0-alpha02 | [Data QnA](https://cloud.google.com/bigquery/docs/dataqna) |
 | [Google.Cloud.Dataflow.V1Beta3](Google.Cloud.Dataflow.V1Beta3/index.html) | 1.0.0-beta01 | [Dataflow](https://cloud.google.com/dataflow/docs/) |
