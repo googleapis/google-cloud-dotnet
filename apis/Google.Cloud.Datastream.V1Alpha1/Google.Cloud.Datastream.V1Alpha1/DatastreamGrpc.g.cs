@@ -310,7 +310,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Use this method to discover a connection profile.
       /// The discover API call exposes the data objects and metadata belonging to
       /// the profile. Typically, a request returns children data objects under a
-      /// parent data object that’s optionally supplied in the request.
+      /// parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -389,7 +389,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// The FetchStaticIps API call exposes the static ips used by Datastream.
       /// Typically, a request returns children data objects under
-      /// a parent data object that’s optionally supplied in the request.
+      /// a parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -743,7 +743,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Use this method to discover a connection profile.
       /// The discover API call exposes the data objects and metadata belonging to
       /// the profile. Typically, a request returns children data objects under a
-      /// parent data object that’s optionally supplied in the request.
+      /// parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -758,7 +758,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Use this method to discover a connection profile.
       /// The discover API call exposes the data objects and metadata belonging to
       /// the profile. Typically, a request returns children data objects under a
-      /// parent data object that’s optionally supplied in the request.
+      /// parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -771,7 +771,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Use this method to discover a connection profile.
       /// The discover API call exposes the data objects and metadata belonging to
       /// the profile. Typically, a request returns children data objects under a
-      /// parent data object that’s optionally supplied in the request.
+      /// parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -786,7 +786,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Use this method to discover a connection profile.
       /// The discover API call exposes the data objects and metadata belonging to
       /// the profile. Typically, a request returns children data objects under a
-      /// parent data object that’s optionally supplied in the request.
+      /// parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// The FetchStaticIps API call exposes the static ips used by Datastream.
       /// Typically, a request returns children data objects under
-      /// a parent data object that’s optionally supplied in the request.
+      /// a parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// The FetchStaticIps API call exposes the static ips used by Datastream.
       /// Typically, a request returns children data objects under
-      /// a parent data object that’s optionally supplied in the request.
+      /// a parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// The FetchStaticIps API call exposes the static ips used by Datastream.
       /// Typically, a request returns children data objects under
-      /// a parent data object that’s optionally supplied in the request.
+      /// a parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1102,7 +1102,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// The FetchStaticIps API call exposes the static ips used by Datastream.
       /// Typically, a request returns children data objects under
-      /// a parent data object that’s optionally supplied in the request.
+      /// a parent data object that's optionally supplied in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

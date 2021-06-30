@@ -314,94 +314,6 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DiscoverConnectionProfile()
-        {
-            moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
-            {
-                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
-            DiscoverConnectionProfileResponse expectedResponse = new DiscoverConnectionProfileResponse
-            {
-                OracleRdbms = new OracleRdbms(),
-                MysqlRdbms = new MysqlRdbms(),
-            };
-            mockGrpcClient.Setup(x => x.DiscoverConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            DiscoverConnectionProfileResponse response = client.DiscoverConnectionProfile(request.Parent);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DiscoverConnectionProfileAsync()
-        {
-            moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
-            {
-                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
-            DiscoverConnectionProfileResponse expectedResponse = new DiscoverConnectionProfileResponse
-            {
-                OracleRdbms = new OracleRdbms(),
-                MysqlRdbms = new MysqlRdbms(),
-            };
-            mockGrpcClient.Setup(x => x.DiscoverConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiscoverConnectionProfileResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            DiscoverConnectionProfileResponse responseCallSettings = await client.DiscoverConnectionProfileAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DiscoverConnectionProfileResponse responseCancellationToken = await client.DiscoverConnectionProfileAsync(request.Parent, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DiscoverConnectionProfileResourceNames()
-        {
-            moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
-            {
-                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
-            DiscoverConnectionProfileResponse expectedResponse = new DiscoverConnectionProfileResponse
-            {
-                OracleRdbms = new OracleRdbms(),
-                MysqlRdbms = new MysqlRdbms(),
-            };
-            mockGrpcClient.Setup(x => x.DiscoverConnectionProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            DiscoverConnectionProfileResponse response = client.DiscoverConnectionProfile(request.ParentAsLocationName);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DiscoverConnectionProfileResourceNamesAsync()
-        {
-            moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DiscoverConnectionProfileRequest request = new DiscoverConnectionProfileRequest
-            {
-                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
-            DiscoverConnectionProfileResponse expectedResponse = new DiscoverConnectionProfileResponse
-            {
-                OracleRdbms = new OracleRdbms(),
-                MysqlRdbms = new MysqlRdbms(),
-            };
-            mockGrpcClient.Setup(x => x.DiscoverConnectionProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiscoverConnectionProfileResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            DiscoverConnectionProfileResponse responseCallSettings = await client.DiscoverConnectionProfileAsync(request.ParentAsLocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DiscoverConnectionProfileResponse responseCancellationToken = await client.DiscoverConnectionProfileAsync(request.ParentAsLocationName, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetStreamRequestObject()
         {
             moq::Mock<Datastream.DatastreamClient> mockGrpcClient = new moq::Mock<Datastream.DatastreamClient>(moq::MockBehavior.Strict);
@@ -630,7 +542,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -663,7 +575,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -698,7 +610,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -731,7 +643,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -766,7 +678,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -787,7 +699,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            PrivateConnection response = client.GetPrivateConnection(request.LocationName);
+            PrivateConnection response = client.GetPrivateConnection(request.PrivateConnectionName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -799,7 +711,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                LocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
@@ -820,9 +732,9 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             };
             mockGrpcClient.Setup(x => x.GetPrivateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PrivateConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            PrivateConnection responseCallSettings = await client.GetPrivateConnectionAsync(request.LocationName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            PrivateConnection responseCallSettings = await client.GetPrivateConnectionAsync(request.PrivateConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            PrivateConnection responseCancellationToken = await client.GetPrivateConnectionAsync(request.LocationName, st::CancellationToken.None);
+            PrivateConnection responseCancellationToken = await client.GetPrivateConnectionAsync(request.PrivateConnectionName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -834,7 +746,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -866,7 +778,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -900,7 +812,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -932,7 +844,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -966,7 +878,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -986,7 +898,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             };
             mockGrpcClient.Setup(x => x.GetRoute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            Route response = client.GetRoute(request.PrivateConnectionName);
+            Route response = client.GetRoute(request.RouteName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -998,7 +910,7 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
@@ -1018,9 +930,9 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             };
             mockGrpcClient.Setup(x => x.GetRouteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Route>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatastreamClient client = new DatastreamClientImpl(mockGrpcClient.Object, null);
-            Route responseCallSettings = await client.GetRouteAsync(request.PrivateConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            Route responseCallSettings = await client.GetRouteAsync(request.RouteName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Route responseCancellationToken = await client.GetRouteAsync(request.PrivateConnectionName, st::CancellationToken.None);
+            Route responseCancellationToken = await client.GetRouteAsync(request.RouteName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

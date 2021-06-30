@@ -8935,7 +8935,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       }
 
       /// <summary>
-      /// Backfill strategy to automatically backfill the Stream’s objects.
+      /// Backfill strategy to automatically backfill the Stream's objects.
       /// Specific objects can be excluded.
       /// </summary>
       public sealed partial class BackfillAllStrategy : pb::IMessage<BackfillAllStrategy>
@@ -9210,7 +9210,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       }
 
       /// <summary>
-      /// Backfill strategy to disable automatic backfill for the Stream’s objects.
+      /// Backfill strategy to disable automatic backfill for the Stream's objects.
       /// </summary>
       public sealed partial class BackfillNoneStrategy : pb::IMessage<BackfillNoneStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

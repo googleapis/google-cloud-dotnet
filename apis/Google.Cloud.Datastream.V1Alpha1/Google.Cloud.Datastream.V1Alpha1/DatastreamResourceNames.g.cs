@@ -80,11 +80,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
     public partial class CreateConnectionProfileRequest
     {
         /// <summary>
-        /// <see cref="ConnectionProfileName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ConnectionProfileName ParentAsConnectionProfileName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ConnectionProfileName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -127,10 +127,12 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
     public partial class CreateStreamRequest
     {
-        /// <summary><see cref="StreamName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public StreamName ParentAsStreamName
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : StreamName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -174,11 +176,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
     public partial class DeletePrivateConnectionRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gagr::LocationName LocationName
+        public gcdv::PrivateConnectionName PrivateConnectionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::LocationName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -186,11 +188,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
     public partial class GetPrivateConnectionRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gagr::LocationName LocationName
+        public gcdv::PrivateConnectionName PrivateConnectionName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gagr::LocationName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -222,11 +224,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
     public partial class DeleteRouteRequest
     {
         /// <summary>
-        /// <see cref="gcdv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::RouteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::PrivateConnectionName PrivateConnectionName
+        public gcdv::RouteName RouteName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RouteName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -234,11 +236,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
     public partial class GetRouteRequest
     {
         /// <summary>
-        /// <see cref="gcdv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::RouteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::PrivateConnectionName PrivateConnectionName
+        public gcdv::RouteName RouteName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RouteName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
