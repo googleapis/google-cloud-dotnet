@@ -27,9 +27,9 @@ namespace Google.Cloud.PubSub.V1 {
   /// The service that an application uses to manipulate topics, and to send
   /// messages to a topic.
   /// </summary>
-  public static partial class PublisherServiceApiServiceApiServiceApi
+  public static partial class Publisher
   {
-    static readonly string __ServiceName = "google.pubsub.v1.PublisherServiceApiServiceApiServiceApi";
+    static readonly string __ServiceName = "google.pubsub.v1.Publisher";
 
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
@@ -146,9 +146,9 @@ namespace Google.Cloud.PubSub.V1 {
       get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of PublisherServiceApiServiceApiServiceApi</summary>
-    [grpc::BindServiceMethod(typeof(PublisherServiceApiServiceApiServiceApi), "BindService")]
-    public abstract partial class PublisherServiceApiServiceApiServiceApiBase
+    /// <summary>Base class for server-side implementations of Publisher</summary>
+    [grpc::BindServiceMethod(typeof(Publisher), "BindService")]
+    public abstract partial class PublisherBase
     {
       /// <summary>
       /// Creates the given topic with the given name. See the [resource name rules]
@@ -265,26 +265,26 @@ namespace Google.Cloud.PubSub.V1 {
 
     }
 
-    /// <summary>Client for PublisherServiceApiServiceApiServiceApi</summary>
-    public partial class PublisherServiceApiServiceApiServiceApiClient : grpc::ClientBase<PublisherServiceApiServiceApiServiceApiClient>
+    /// <summary>Client for Publisher</summary>
+    public partial class PublisherClient : grpc::ClientBase<PublisherClient>
     {
-      /// <summary>Creates a new client for PublisherServiceApiServiceApiServiceApi</summary>
+      /// <summary>Creates a new client for Publisher</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public PublisherServiceApiServiceApiServiceApiClient(grpc::ChannelBase channel) : base(channel)
+      public PublisherClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for PublisherServiceApiServiceApiServiceApi that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for Publisher that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public PublisherServiceApiServiceApiServiceApiClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public PublisherClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected PublisherServiceApiServiceApiServiceApiClient() : base()
+      protected PublisherClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected PublisherServiceApiServiceApiServiceApiClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -741,15 +741,15 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DetachSubscription, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override PublisherServiceApiServiceApiServiceApiClient NewInstance(ClientBaseConfiguration configuration)
+      protected override PublisherClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new PublisherServiceApiServiceApiServiceApiClient(configuration);
+        return new PublisherClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(PublisherServiceApiServiceApiServiceApiBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(PublisherBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
@@ -767,7 +767,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, PublisherServiceApiServiceApiServiceApiBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, PublisherBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateTopic, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic>(serviceImpl.CreateTopic));
       serviceBinder.AddMethod(__Method_UpdateTopic, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(serviceImpl.UpdateTopic));
@@ -786,9 +786,9 @@ namespace Google.Cloud.PubSub.V1 {
   /// consume messages from a subscription via the `Pull` method or by
   /// establishing a bi-directional stream using the `StreamingPull` method.
   /// </summary>
-  public static partial class SubscriberServiceApiServiceApiServiceApi
+  public static partial class Subscriber
   {
-    static readonly string __ServiceName = "google.pubsub.v1.SubscriberServiceApiServiceApiServiceApi";
+    static readonly string __ServiceName = "google.pubsub.v1.Subscriber";
 
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
@@ -962,9 +962,9 @@ namespace Google.Cloud.PubSub.V1 {
       get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.Services[1]; }
     }
 
-    /// <summary>Base class for server-side implementations of SubscriberServiceApiServiceApiServiceApi</summary>
-    [grpc::BindServiceMethod(typeof(SubscriberServiceApiServiceApiServiceApi), "BindService")]
-    public abstract partial class SubscriberServiceApiServiceApiServiceApiBase
+    /// <summary>Base class for server-side implementations of Subscriber</summary>
+    [grpc::BindServiceMethod(typeof(Subscriber), "BindService")]
+    public abstract partial class SubscriberBase
     {
       /// <summary>
       /// Creates a subscription to a given topic. See the [resource name rules]
@@ -1225,26 +1225,26 @@ namespace Google.Cloud.PubSub.V1 {
 
     }
 
-    /// <summary>Client for SubscriberServiceApiServiceApiServiceApi</summary>
-    public partial class SubscriberServiceApiServiceApiServiceApiClient : grpc::ClientBase<SubscriberServiceApiServiceApiServiceApiClient>
+    /// <summary>Client for Subscriber</summary>
+    public partial class SubscriberClient : grpc::ClientBase<SubscriberClient>
     {
-      /// <summary>Creates a new client for SubscriberServiceApiServiceApiServiceApi</summary>
+      /// <summary>Creates a new client for Subscriber</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SubscriberServiceApiServiceApiServiceApiClient(grpc::ChannelBase channel) : base(channel)
+      public SubscriberClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for SubscriberServiceApiServiceApiServiceApi that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for Subscriber that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public SubscriberServiceApiServiceApiServiceApiClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public SubscriberClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected SubscriberServiceApiServiceApiServiceApiClient() : base()
+      protected SubscriberClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected SubscriberServiceApiServiceApiServiceApiClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected SubscriberClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -2237,15 +2237,15 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Seek, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override SubscriberServiceApiServiceApiServiceApiClient NewInstance(ClientBaseConfiguration configuration)
+      protected override SubscriberClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new SubscriberServiceApiServiceApiServiceApiClient(configuration);
+        return new SubscriberClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(SubscriberServiceApiServiceApiServiceApiBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(SubscriberBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateSubscription, serviceImpl.CreateSubscription)
@@ -2270,7 +2270,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, SubscriberServiceApiServiceApiServiceApiBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SubscriberBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.Subscription, global::Google.Cloud.PubSub.V1.Subscription>(serviceImpl.CreateSubscription));
       serviceBinder.AddMethod(__Method_GetSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.GetSubscriptionRequest, global::Google.Cloud.PubSub.V1.Subscription>(serviceImpl.GetSubscription));
