@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListEnvironments",
+    "client": "EnvironmentsClient",
+    "arguments": {
+      "parent": "projects/jonskeet-integration-tests/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListImageVersions",
+    "client": "ImageVersionsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
