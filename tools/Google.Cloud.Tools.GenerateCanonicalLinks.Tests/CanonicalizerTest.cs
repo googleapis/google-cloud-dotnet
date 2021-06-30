@@ -57,6 +57,8 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks.Tests
         [InlineData("Google.Area120.Tables.V1Alpha1", "api/Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest.html")]
         [InlineData("Google.Analytics.Data.V1Alpha", "api/Google.Analytics.Data.V1Alpha.AlphaAnalyticsData.html")]
         [InlineData("Google.Cloud.Debugger.V2", "api/toc.html")]
+        [InlineData("Google.Apis.Storage.v1", "api/Google.Apis.Storage.v1.html")]
+        [InlineData("Google.Apis.AdSense.v1_4", "api/Google.Apis.AdSense.v1_4.AccountsResource.html")]
         public void GetUrl_NotOnDevsite(string package, string page) =>
             Assert.Null(Canonicalizer.GetUrl(package, page));
     }
