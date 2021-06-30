@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListAvailableVersions",
+    "client": "DataFusionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListInstances",
+    "client": "DataFusionClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
