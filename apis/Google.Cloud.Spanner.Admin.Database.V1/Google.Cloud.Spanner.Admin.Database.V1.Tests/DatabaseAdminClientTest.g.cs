@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -84,6 +85,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -116,6 +118,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -146,6 +149,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -178,6 +182,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -208,6 +213,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 {
                     new EncryptionInfo(),
                 },
+                DefaultLeader = "default_leader08a48e00",
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
