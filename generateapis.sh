@@ -149,9 +149,9 @@ generate_microgenerator() {
   # Add in any common protos that are available. Due to the way autosynth
   # runs, this should not fail if it runs against an older version of googleapis.
   COMMON_PROTOS=
-  if [[ -d $GOOGLE_APIS/google/cloud/common ]]
+  if [[ -d $GOOGLEAPIS/google/cloud/common ]]
   then
-    COMMON_PROTOS=$COMMON_PROTOS $GOOGLEAPIS/google/cloud/common/*.proto
+    COMMON_PROTOS="$COMMON_PROTOS $GOOGLEAPIS/google/cloud/common/*.proto"
   fi
 
   # Client generation. This needs the common resources proto as a reference,
