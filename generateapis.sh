@@ -146,6 +146,13 @@ generate_microgenerator() {
     (cd $API_OUT_DIR/$1; ./midmicrogeneration.sh)
   fi
 
+  # Add in any common protos that are available. Due to the way autosynth
+  # runs, this should not fail if it runs against an older version of googleapis.
+  COMMON_PROTOS=
+  if [[ -d $GOOGLE_APIS/google/cloud/common ]]
+  then
+    COMMON_PROTOS=$COMMON_PROTOS $GOOGLEAPIS/google/cloud/common/*.proto
+  fi
 
   # Client generation. This needs the common resources proto as a reference,
   # but it won't generate anything for it.
@@ -159,7 +166,7 @@ generate_microgenerator() {
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $GOOGLEAPIS/google/cloud/common/*.proto \
+    $COMMON_PROTOS \
     $(find $API_SRC_DIR -name '*.proto') \
     $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
