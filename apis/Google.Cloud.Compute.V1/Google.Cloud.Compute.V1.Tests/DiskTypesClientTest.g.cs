@@ -190,13 +190,13 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DiskType expectedResponse = new DiskType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
-                DefaultDiskSizeGb = "default_disk_size_gbc588dc05",
+                DefaultDiskSizeGb = -2608545772571403259L,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ValidDiskSize = "valid_disk_size58dd558f",
@@ -221,13 +221,13 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DiskType expectedResponse = new DiskType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
-                DefaultDiskSizeGb = "default_disk_size_gbc588dc05",
+                DefaultDiskSizeGb = -2608545772571403259L,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ValidDiskSize = "valid_disk_size58dd558f",
@@ -254,13 +254,13 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DiskType expectedResponse = new DiskType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
-                DefaultDiskSizeGb = "default_disk_size_gbc588dc05",
+                DefaultDiskSizeGb = -2608545772571403259L,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ValidDiskSize = "valid_disk_size58dd558f",
@@ -285,13 +285,13 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             DiskType expectedResponse = new DiskType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
-                DefaultDiskSizeGb = "default_disk_size_gbc588dc05",
+                DefaultDiskSizeGb = -2608545772571403259L,
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 ValidDiskSize = "valid_disk_size58dd558f",

@@ -37,7 +37,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Zone expectedResponse = new Zone
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Zone expectedResponse = new Zone
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
@@ -105,7 +105,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Zone expectedResponse = new Zone
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Zone expectedResponse = new Zone
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",

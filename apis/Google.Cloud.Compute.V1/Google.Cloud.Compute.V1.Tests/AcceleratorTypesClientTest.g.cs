@@ -190,7 +190,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             AcceleratorType expectedResponse = new AcceleratorType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -219,7 +219,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             AcceleratorType expectedResponse = new AcceleratorType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -250,7 +250,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             AcceleratorType expectedResponse = new AcceleratorType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -279,7 +279,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             AcceleratorType expectedResponse = new AcceleratorType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
