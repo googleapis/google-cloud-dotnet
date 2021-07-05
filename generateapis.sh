@@ -8,24 +8,25 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # This script generates all APIs from the googleapis/googleapis github repository,
 # using the code generator from googleapis/gapic-generator-csharp.
 # It will fetch both repositories if necessary.
-
-# Currently it will only work on Windows due to the way nuget packages installed;
-# changing toolversions.sh could mitigate that, if it's ever necessary.
-#
-# Prerequisites
-# - Bash as supplied with Windows git
-# - git
-# - wget
-# - unzip
+# (For REGAPIC APIs, it fetches googleapis/googleapis-discovery)
 
 OUTDIR=tmp
+
+# If there's a preconfig file, we assume it has everything we need. We'll
+# set both GOOGLEAPIs and GOOGLEAPIS_DISCOVERY based on that, using
+# values that will clearly indicate the cause of the failure if a "missing"
+# repo is tried.
 if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
 then
   declare -r GOOGLEAPIS=$(python - <<END
 import json
 with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
   data = json.load(json_file)
-  print(data['preclonedRepos']['https://github.com/googleapis/googleapis.git'])
+  repos = data['preclonedRepos']
+  if 'https://github.com/googleapis/googleapis.git' in repos:
+    print(repos['https://github.com/googleapis/googleapis.git'])
+  else:
+    print('attempt_to_use_googleapis_when_not_configured')
 END
   )
 elif [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
@@ -38,26 +39,46 @@ else
   declare -r GOOGLEAPIS="$PWD/googleapis"
 fi
 
-# TODO: Work out whether we need synthtool handling etc.
-declare -r GOOGLEAPIS_DISCOVERY="$PWD/googleapis-discovery"
+# Handle either a locally-fetched googleapis-discovery, or
+# one specified in a preconfig file.
+if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
+then
+  declare -r GOOGLEAPIS_DISCOVERY=$(python - <<END
+import json
+with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
+  data = json.load(json_file)
+  repos = data['preclonedRepos']
+  if 'https://github.com/googleapis/googleapis-discovery.git' in repos:
+    print(repos['https://github.com/googleapis/googleapis-discovery.git'])
+  else:
+    print('attempt_to_use_googleapis-discovery_when_not_configured')
+END
+  )
+else
+  declare -r GOOGLEAPIS_DISCOVERY="$PWD/googleapis-discovery"
+fi
 
 # Allow pre/post-generation scripts to know where to find the repos
 export GOOGLEAPIS
 export GOOGLEAPIS_DISCOVERY
 
 fetch_github_repos() {
+  # We assume that if there's a preconfig file, we're running in autosynth
+  # and don't need to fetch either.
   if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" && "$SYNTHTOOL_PRECONFIG_FILE" == "" ]]
   then
-    if [ -d "$GOOGLEAPIS" ]
-    then
-      git -C $GOOGLEAPIS pull -q
-    else
-      # Auto-detect whether we're cloning the public or private googleapis repo.
-      git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
-      git clone https://github.com/googleapis/${repo} $GOOGLEAPIS --depth 1
-    fi
+    exit 0
   fi
-  
+
+  if [ -d "$GOOGLEAPIS" ]
+  then
+    git -C $GOOGLEAPIS pull -q
+  else
+    # Auto-detect whether we're cloning the public or private googleapis repo.
+    git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
+    git clone https://github.com/googleapis/${repo} $GOOGLEAPIS --depth 1
+  fi
+
   if [ -d "$GOOGLEAPIS_DISCOVERY" ]
   then
     git -C $GOOGLEAPIS_DISCOVERY pull -q
@@ -376,7 +397,7 @@ generate_api() {
   "sources": [
     {
       "git": {
-        "name": "googleapis",
+        "name": "$REMOTE_NAME",
         "remote": "https://github.com/googleapis/$REMOTE_NAME.git",
         "sha": "$(git -C $REPO_TO_HASH rev-parse HEAD)"
       }

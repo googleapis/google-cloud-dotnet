@@ -2,7 +2,7 @@
   "sources": [
     {
       "git": {
-        "name": "googleapis",
+        "name": "googleapis-discovery",
         "remote": "https://github.com/googleapis/googleapis-discovery.git",
         "sha": "4f5d0604132e93e63330e65e2e6648c75012780c"
       }
