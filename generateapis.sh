@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 source toolversions.sh
 declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
