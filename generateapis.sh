@@ -68,7 +68,7 @@ fetch_github_repos() {
   # environment variable, we're not building discovery.)
   if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" || "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
   then
-    exit 0
+    return 0
   fi
 
   if [ -d "$GOOGLEAPIS" ]
