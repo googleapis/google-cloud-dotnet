@@ -1671,6 +1671,27 @@
       "protoPath": "google/cloud/networkconnectivity/v1alpha1"
     },
     {
+      "id": "Google.Cloud.NetworkManagement.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Management",
+      "productUrl": "https://cloud.google.com/network-intelligence-center/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Network Management API, which provides a collection of network performance monitoring and diagnostic capabilities.",
+      "tags": [
+        "network",
+        "networking",
+        "performance",
+        "monitoring",
+        "management",
+        "diagnostics"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networkmanagement/v1"
+    },
+    {
       "id": "Google.Cloud.Notebooks.V1Beta1",
       "version": "1.0.0-beta03",
       "type": "grpc",
