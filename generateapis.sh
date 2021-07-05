@@ -64,8 +64,9 @@ export GOOGLEAPIS_DISCOVERY
 
 fetch_github_repos() {
   # We assume that if there's a preconfig file, we're running in autosynth
-  # and don't need to fetch either.
-  if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" && "$SYNTHTOOL_PRECONFIG_FILE" == "" ]]
+  # and don't need to fetch either. (And if we're using the old SYNTHTOOL_GOOGLEAPIS
+  # environment variable, we're not building discovery.)
+  if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" || "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
   then
     exit 0
   fi
