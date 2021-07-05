@@ -391,21 +391,43 @@ generate_api() {
 
   # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
   # depending on the generator.
-  REPO_TO_HASH=$([ "$GENERATOR" == "regapic" ] && echo "$GOOGLEAPIS_DISCOVERY" || echo "$GOOGLEAPIS")
-  REMOTE_NAME=$(basename $REPO_TO_HASH)
-  cat > $PACKAGE_DIR/synth.metadata <<END
+  if [[ "$GENERATOR" == "regapic" ]]
+  then
+    cat > $PACKAGE_DIR/synth.metadata <<END
 {
   "sources": [
     {
       "git": {
-        "name": "$REMOTE_NAME",
-        "remote": "https://github.com/googleapis/$REMOTE_NAME.git",
-        "sha": "$(git -C $REPO_TO_HASH rev-parse HEAD)"
+        "name": "googleapis-discovery",
+        "remote": "https://github.com/googleapis/googleapis-discovery.git",
+        "sha": "$(git -C $GOOGLEAPIS_DISCOVERY rev-parse HEAD)"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"
       }
     }
   ]
 }
 END
+  else
+    cat > $PACKAGE_DIR/synth.metadata <<END
+{
+  "sources": [
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"
+      }
+    }
+  ]
+}
+END
+  fi
 }
 
 
