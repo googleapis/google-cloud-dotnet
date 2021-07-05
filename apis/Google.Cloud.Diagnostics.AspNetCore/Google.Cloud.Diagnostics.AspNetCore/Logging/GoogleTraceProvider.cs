@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// If the Tracing component is configured, log entries are automatically associated
     /// to Google traces and spans.
     /// </remarks>
-    [Obsolete("Use CloudTraceExtensions.TryAddGoogleTraceContextProvider instead.")]
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.TryAddGoogleTraceContextProvider instead.")]
     public class GoogleTraceProvider : IExternalTraceProvider
     {
         /// <inheritdoc/>

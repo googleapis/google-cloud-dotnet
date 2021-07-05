@@ -1181,7 +1181,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
     }
 
-    [Obsolete("Added to test that we still support the obsolete ILogEntryLabelProvider.")]
+    [Obsolete("Added to test that we still support the obsolete Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
     internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
