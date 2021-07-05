@@ -975,7 +975,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Port = 0,
                 Zone = "",
                 Instance = "",
-                Start = "",
+                Start = 0L,
                 Project = "",
             };
             // Make the request
@@ -996,7 +996,7 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Port = 0,
                 Zone = "",
                 Instance = "",
-                Start = "",
+                Start = 0L,
                 Project = "",
             };
             // Make the request

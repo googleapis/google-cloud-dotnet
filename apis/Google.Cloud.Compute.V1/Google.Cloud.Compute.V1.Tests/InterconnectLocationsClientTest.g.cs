@@ -37,7 +37,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -74,7 +74,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -113,7 +113,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",

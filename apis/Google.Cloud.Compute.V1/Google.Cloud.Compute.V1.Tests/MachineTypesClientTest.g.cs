@@ -190,14 +190,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -226,14 +226,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -264,14 +264,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -300,14 +300,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
