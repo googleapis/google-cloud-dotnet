@@ -26,32 +26,6 @@
       "CSharpNamespaceFromProtos": "Google.Actions.Sdk.V2"
     },
     {
-      "ServiceDirectory": "google/ads/googleads/v4",
-      "Name": "googleads.googleapis.com",
-      "Title": "Google Ads API",
-      "Description": "Manage your Google Ads accounts, campaigns, and reports with this API.",
-      "ServiceConfigFile": "google/ads/googleads/v4/googleads_v4.yaml",
-      "Version": "v4",
-      "PackageFromDirectory": "google.ads.googleads.v4",
-      "PackageFromProtos": "<UNKNOWN - NO PROTOS WITH PACKAGES>",
-      "ImportDirectories": [],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
-    },
-    {
-      "ServiceDirectory": "google/ads/googleads/v5",
-      "Name": "googleads.googleapis.com",
-      "Title": "Google Ads API",
-      "Description": "Manage your Google Ads accounts, campaigns, and reports with this API.",
-      "ServiceConfigFile": "google/ads/googleads/v5/googleads_v5.yaml",
-      "Version": "v5",
-      "PackageFromDirectory": "google.ads.googleads.v5",
-      "PackageFromProtos": "<UNKNOWN - NO PROTOS WITH PACKAGES>",
-      "ImportDirectories": [],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
-    },
-    {
       "ServiceDirectory": "google/ads/googleads/v6",
       "Name": "googleads.googleapis.com",
       "Title": "Google Ads API",
