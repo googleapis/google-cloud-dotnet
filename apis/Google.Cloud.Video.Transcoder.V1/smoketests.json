@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListJobs",
+    "client": "TranscoderServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListJobTemplates",
+    "client": "TranscoderServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
