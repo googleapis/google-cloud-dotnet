@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.11.0, released 2021-07-09
+
+- [Commit 9dc6f8b](https://github.com/googleapis/google-cloud-dotnet/commit/9dc6f8b): feat(spanner): add leader_options to InstanceConfig
+- [Commit e59ffc5](https://github.com/googleapis/google-cloud-dotnet/commit/e59ffc5): feat(spanner): add default_leader to Database
+
 # Version 3.10.0, released 2021-06-28
 
 - [Commit 10c86e0](https://github.com/googleapis/google-cloud-dotnet/commit/10c86e0): feat: add JSON type (currently only in the low-level API)
