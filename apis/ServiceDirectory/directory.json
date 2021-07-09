@@ -2902,6 +2902,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Translate.V3Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/video/transcoder/v1",
+      "Name": "transcoder.googleapis.com",
+      "Title": "Transcoder API",
+      "Description": "This API converts video files into formats suitable for consumer distribution.",
+      "ServiceConfigFile": "google/cloud/video/transcoder/v1/transcoder_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.video.transcoder.v1",
+      "PackageFromProtos": "google.cloud.video.transcoder.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/video/transcoder/v1",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Video.Transcoder.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/video/transcoder/v1beta1",
       "Name": "transcoder.googleapis.com",
       "Title": "Transcoder API",
