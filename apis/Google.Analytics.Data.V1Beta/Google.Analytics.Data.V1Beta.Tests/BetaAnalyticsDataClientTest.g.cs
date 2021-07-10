@@ -500,6 +500,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 },
                 OrderBys = { new OrderBy(), },
                 ReturnPropertyQuota = true,
+                MinuteRanges = { new MinuteRange(), },
             };
             RunRealtimeReportResponse expectedResponse = new RunRealtimeReportResponse
             {
@@ -541,6 +542,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 },
                 OrderBys = { new OrderBy(), },
                 ReturnPropertyQuota = true,
+                MinuteRanges = { new MinuteRange(), },
             };
             RunRealtimeReportResponse expectedResponse = new RunRealtimeReportResponse
             {
