@@ -96,7 +96,7 @@ namespace Google.Analytics.Data.V1Beta {
             "SwoNcGl2b3RfcmVwb3J0cxgBIAMoCzI0Lmdvb2dsZS5hbmFseXRpY3MuZGF0",
             "YS52MWJldGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZRIMCgRraW5kGAIgASgJ",
             "IlEKEkdldE1ldGFkYXRhUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScK",
-            "JWFuYWx5dGljc2RhdGEuZ29vZ2xlYXBpcy5jb20vTWV0YWRhdGEi5wMKGFJ1",
+            "JWFuYWx5dGljc2RhdGEuZ29vZ2xlYXBpcy5jb20vTWV0YWRhdGEiqQQKGFJ1",
             "blJlYWx0aW1lUmVwb3J0UmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRI7Cgpk",
             "aW1lbnNpb25zGAIgAygLMicuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
             "YS5EaW1lbnNpb24SNQoHbWV0cmljcxgDIAMoCzIkLmdvb2dsZS5hbmFseXRp",
@@ -107,49 +107,50 @@ namespace Google.Analytics.Data.V1Beta {
             "AxJMChNtZXRyaWNfYWdncmVnYXRpb25zGAcgAygOMi8uZ29vZ2xlLmFuYWx5",
             "dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNBZ2dyZWdhdGlvbhI4CglvcmRlcl9i",
             "eXMYCCADKAsyJS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk9yZGVy",
-            "QnkSHQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGAkgASgIIt0DChlSdW5SZWFs",
-            "dGltZVJlcG9ydFJlc3BvbnNlEkgKEWRpbWVuc2lvbl9oZWFkZXJzGAEgAygL",
-            "Mi0uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25IZWFk",
-            "ZXISQgoObWV0cmljX2hlYWRlcnMYAiADKAsyKi5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLk1ldHJpY0hlYWRlchIvCgRyb3dzGAMgAygLMiEuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMQoGdG90YWxzGAQgAygL",
-            "MiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMwoIbWF4aW11",
-            "bXMYBSADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIz",
-            "CghtaW5pbXVtcxgGIAMoCzIhLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
-            "dGEuUm93EhEKCXJvd19jb3VudBgHIAEoBRJDCg5wcm9wZXJ0eV9xdW90YRgI",
-            "IAEoCzIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUHJvcGVydHlR",
-            "dW90YRIMCgRraW5kGAkgASgJMuMJChFCZXRhQW5hbHl0aWNzRGF0YRKiAQoJ",
-            "UnVuUmVwb3J0Ei4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SdW5S",
-            "ZXBvcnRSZXF1ZXN0Gi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5S",
-            "dW5SZXBvcnRSZXNwb25zZSI0gtPkkwIuIikvdjFiZXRhL3twcm9wZXJ0eT1w",
-            "cm9wZXJ0aWVzLyp9OnJ1blJlcG9ydDoBKhK2AQoOUnVuUGl2b3RSZXBvcnQS",
-            "My5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blBpdm90UmVwb3J0",
-            "UmVxdWVzdBo0Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUGl2",
-            "b3RSZXBvcnRSZXNwb25zZSI5gtPkkwIzIi4vdjFiZXRhL3twcm9wZXJ0eT1w",
-            "cm9wZXJ0aWVzLyp9OnJ1blBpdm90UmVwb3J0OgEqEroBCg9CYXRjaFJ1blJl",
-            "cG9ydHMSNC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNoUnVu",
-            "UmVwb3J0c1JlcXVlc3QaNS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkJhdGNoUnVuUmVwb3J0c1Jlc3BvbnNlIjqC0+STAjQiLy92MWJldGEve3By",
-            "b3BlcnR5PXByb3BlcnRpZXMvKn06YmF0Y2hSdW5SZXBvcnRzOgEqEs4BChRC",
-            "YXRjaFJ1blBpdm90UmVwb3J0cxI5Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuQmF0Y2hSdW5QaXZvdFJlcG9ydHNSZXF1ZXN0GjouZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5CYXRjaFJ1blBpdm90UmVwb3J0c1Jlc3Bv",
-            "bnNlIj+C0+STAjkiNC92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06",
-            "YmF0Y2hSdW5QaXZvdFJlcG9ydHM6ASoSnAEKC0dldE1ldGFkYXRhEjAuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5HZXRNZXRhZGF0YVJlcXVlc3Qa",
-            "Ji5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldGFkYXRhIjOC0+ST",
-            "AiYSJC92MWJldGEve25hbWU9cHJvcGVydGllcy8qL21ldGFkYXRhfdpBBG5h",
-            "bWUSwgEKEVJ1blJlYWx0aW1lUmVwb3J0EjYuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYmV0YS5SdW5SZWFsdGltZVJlcG9ydFJlcXVlc3QaNy5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlYWx0aW1lUmVwb3J0UmVzcG9u",
-            "c2UiPILT5JMCNiIxL3YxYmV0YS97cHJvcGVydHk9cHJvcGVydGllcy8qfTpy",
-            "dW5SZWFsdGltZVJlcG9ydDoBKhp+ykEcYW5hbHl0aWNzZGF0YS5nb29nbGVh",
-            "cGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5h",
-            "bHl0aWNzLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5hbHl0",
-            "aWNzLnJlYWRvbmx5Qn0KIGNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhQhVBbmFseXRpY3NEYXRhQXBpUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvZGF0YS92MWJldGE7",
-            "ZGF0YWIGcHJvdG8z"));
+            "QnkSHQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGAkgASgIEkAKDW1pbnV0ZV9y",
+            "YW5nZXMYCiADKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1p",
+            "bnV0ZVJhbmdlIt0DChlSdW5SZWFsdGltZVJlcG9ydFJlc3BvbnNlEkgKEWRp",
+            "bWVuc2lvbl9oZWFkZXJzGAEgAygLMi0uZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5EaW1lbnNpb25IZWFkZXISQgoObWV0cmljX2hlYWRlcnMYAiAD",
+            "KAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY0hlYWRl",
+            "chIvCgRyb3dzGAMgAygLMiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
+            "YS5Sb3cSMQoGdG90YWxzGAQgAygLMiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5Sb3cSMwoIbWF4aW11bXMYBSADKAsyIS5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLlJvdxIzCghtaW5pbXVtcxgGIAMoCzIhLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUm93EhEKCXJvd19jb3VudBgHIAEo",
+            "BRJDCg5wcm9wZXJ0eV9xdW90YRgIIAEoCzIrLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuUHJvcGVydHlRdW90YRIMCgRraW5kGAkgASgJMuMJChFC",
+            "ZXRhQW5hbHl0aWNzRGF0YRKiAQoJUnVuUmVwb3J0Ei4uZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYmV0YS5SdW5SZXBvcnRSZXF1ZXN0Gi8uZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYmV0YS5SdW5SZXBvcnRSZXNwb25zZSI0gtPkkwIu",
+            "IikvdjFiZXRhL3twcm9wZXJ0eT1wcm9wZXJ0aWVzLyp9OnJ1blJlcG9ydDoB",
+            "KhK2AQoOUnVuUGl2b3RSZXBvcnQSMy5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhLlJ1blBpdm90UmVwb3J0UmVxdWVzdBo0Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWJldGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZSI5gtPkkwIz",
+            "Ii4vdjFiZXRhL3twcm9wZXJ0eT1wcm9wZXJ0aWVzLyp9OnJ1blBpdm90UmVw",
+            "b3J0OgEqEroBCg9CYXRjaFJ1blJlcG9ydHMSNC5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLkJhdGNoUnVuUmVwb3J0c1JlcXVlc3QaNS5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNoUnVuUmVwb3J0c1Jlc3BvbnNl",
+            "IjqC0+STAjQiLy92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06YmF0",
+            "Y2hSdW5SZXBvcnRzOgEqEs4BChRCYXRjaFJ1blBpdm90UmVwb3J0cxI5Lmdv",
+            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQmF0Y2hSdW5QaXZvdFJlcG9y",
+            "dHNSZXF1ZXN0GjouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5CYXRj",
+            "aFJ1blBpdm90UmVwb3J0c1Jlc3BvbnNlIj+C0+STAjkiNC92MWJldGEve3By",
+            "b3BlcnR5PXByb3BlcnRpZXMvKn06YmF0Y2hSdW5QaXZvdFJlcG9ydHM6ASoS",
+            "nAEKC0dldE1ldGFkYXRhEjAuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
+            "YS5HZXRNZXRhZGF0YVJlcXVlc3QaJi5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhLk1ldGFkYXRhIjOC0+STAiYSJC92MWJldGEve25hbWU9cHJvcGVy",
+            "dGllcy8qL21ldGFkYXRhfdpBBG5hbWUSwgEKEVJ1blJlYWx0aW1lUmVwb3J0",
+            "EjYuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SdW5SZWFsdGltZVJl",
+            "cG9ydFJlcXVlc3QaNy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1",
+            "blJlYWx0aW1lUmVwb3J0UmVzcG9uc2UiPILT5JMCNiIxL3YxYmV0YS97cHJv",
+            "cGVydHk9cHJvcGVydGllcy8qfTpydW5SZWFsdGltZVJlcG9ydDoBKhp+ykEc",
+            "YW5hbHl0aWNzZGF0YS5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvYW5hbHl0aWNzLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvYW5hbHl0aWNzLnJlYWRvbmx5Qn0KIGNvbS5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhQhVBbmFseXRpY3NEYXRhQXBpUHJv",
+            "dG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
+            "bmFseXRpY3MvZGF0YS92MWJldGE7ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -163,7 +164,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest.Parser, new[]{ "Property", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.GetMetadataRequest), global::Google.Analytics.Data.V1Beta.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "Limit", "MetricAggregations", "OrderBys", "ReturnPropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "Limit", "MetricAggregations", "OrderBys", "ReturnPropertyQuota", "MinuteRanges" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "PropertyQuota", "Kind" }, null, null, null, null)
           }));
     }
@@ -3702,6 +3703,7 @@ namespace Google.Analytics.Data.V1Beta {
       metricAggregations_ = other.metricAggregations_.Clone();
       orderBys_ = other.orderBys_.Clone();
       returnPropertyQuota_ = other.returnPropertyQuota_;
+      minuteRanges_ = other.minuteRanges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3850,6 +3852,23 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "minute_ranges" field.</summary>
+    public const int MinuteRangesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.MinuteRange> _repeated_minuteRanges_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Analytics.Data.V1Beta.MinuteRange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MinuteRange> minuteRanges_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MinuteRange>();
+    /// <summary>
+    /// The minute ranges of event data to read. If unspecified, one minute range
+    /// for the last 30 minutes will be used. If multiple minute ranges are
+    /// requested, each response row will contain a zero based minute range index.
+    /// If two minute ranges overlap, the event data for the overlapping minutes is
+    /// included in the response rows for both minute ranges.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MinuteRange> MinuteRanges {
+      get { return minuteRanges_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunRealtimeReportRequest);
@@ -3872,6 +3891,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!metricAggregations_.Equals(other.metricAggregations_)) return false;
       if(!orderBys_.Equals(other.orderBys_)) return false;
       if (ReturnPropertyQuota != other.ReturnPropertyQuota) return false;
+      if(!minuteRanges_.Equals(other.minuteRanges_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3887,6 +3907,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= metricAggregations_.GetHashCode();
       hash ^= orderBys_.GetHashCode();
       if (ReturnPropertyQuota != false) hash ^= ReturnPropertyQuota.GetHashCode();
+      hash ^= minuteRanges_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3927,6 +3948,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(72);
         output.WriteBool(ReturnPropertyQuota);
       }
+      minuteRanges_.WriteTo(output, _repeated_minuteRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3960,6 +3982,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(72);
         output.WriteBool(ReturnPropertyQuota);
       }
+      minuteRanges_.WriteTo(ref output, _repeated_minuteRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3988,6 +4011,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (ReturnPropertyQuota != false) {
         size += 1 + 1;
       }
+      size += minuteRanges_.CalculateSize(_repeated_minuteRanges_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4024,6 +4048,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (other.ReturnPropertyQuota != false) {
         ReturnPropertyQuota = other.ReturnPropertyQuota;
       }
+      minuteRanges_.Add(other.minuteRanges_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4081,6 +4106,10 @@ namespace Google.Analytics.Data.V1Beta {
             ReturnPropertyQuota = input.ReadBool();
             break;
           }
+          case 82: {
+            minuteRanges_.AddEntriesFrom(input, _repeated_minuteRanges_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4136,6 +4165,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 72: {
             ReturnPropertyQuota = input.ReadBool();
+            break;
+          }
+          case 82: {
+            minuteRanges_.AddEntriesFrom(ref input, _repeated_minuteRanges_codec);
             break;
           }
         }
