@@ -4014,6 +4014,23 @@
       "CSharpNamespaceFromProtos": "Google.Storage.V1"
     },
     {
+      "ServiceDirectory": "google/storage/v2",
+      "Name": "storage.googleapis.com",
+      "Title": "Cloud Storage API",
+      "Description": "Lets you store and retrieve potentially-large, immutable data objects.",
+      "ServiceConfigFile": "google/storage/v2/storage_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.storage.v2",
+      "PackageFromProtos": "google.storage.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Storage.V2"
+    },
+    {
       "ServiceDirectory": "google/streetview/publish/v1",
       "Name": "streetviewpublish.googleapis.com",
       "Title": "Street View Publish API",
