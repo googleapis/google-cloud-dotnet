@@ -526,7 +526,7 @@ shell.run(
             {
                 distribution_name = api.Id,
                 release_level = releaseLevel,
-                client_documentation = $"https://googleapis.dev/dotnet/{api.Id}/latest",
+                client_documentation = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
                 library_type = api.EffectiveMetadataType
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
