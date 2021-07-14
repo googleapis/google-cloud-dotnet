@@ -31,21 +31,22 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             "cm90byKMAQocQXV0b01sVmlkZW9BY3Rpb25SZWNvZ25pdGlvbhJsCgZpbnB1",
             "dHMYASABKAsyXC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEu",
             "dHJhaW5pbmdqb2IuZGVmaW5pdGlvbi5BdXRvTWxWaWRlb0FjdGlvblJlY29n",
-            "bml0aW9uSW5wdXRzIuwBCiJBdXRvTWxWaWRlb0FjdGlvblJlY29nbml0aW9u",
+            "bml0aW9uSW5wdXRzIqoCCiJBdXRvTWxWaWRlb0FjdGlvblJlY29nbml0aW9u",
             "SW5wdXRzEnoKCm1vZGVsX3R5cGUYASABKA4yZi5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlvbi5BdXRv",
-            "TWxWaWRlb0FjdGlvblJlY29nbml0aW9uSW5wdXRzLk1vZGVsVHlwZSJKCglN",
-            "b2RlbFR5cGUSGgoWTU9ERUxfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUNMT1VE",
-            "EAESFgoSTU9CSUxFX1ZFUlNBVElMRV8xEAJC/gIKPGNvbS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlv",
-            "bkIhQXV0b01MVmlkZW9BY3Rpb25SZWNvZ25pdGlvblByb3RvUAFaYmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MS9zY2hlbWEvdHJhaW5pbmdqb2IvZGVmaW5pdGlvbjtkZWZpbml0",
-            "aW9uqgI4R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjEuU2NoZW1hLlRyYWlu",
-            "aW5nSm9iLkRlZmluaXRpb27KAjhHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
-            "MVxTY2hlbWFcVHJhaW5pbmdKb2JcRGVmaW5pdGlvbuoCPkdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYxOjpTY2hlbWE6OlRyYWluaW5nSm9iOjpEZWZp",
-            "bml0aW9uYgZwcm90bzM="));
+            "TWxWaWRlb0FjdGlvblJlY29nbml0aW9uSW5wdXRzLk1vZGVsVHlwZSKHAQoJ",
+            "TW9kZWxUeXBlEhoKFk1PREVMX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVDTE9V",
+            "RBABEhYKEk1PQklMRV9WRVJTQVRJTEVfMRACEh0KGU1PQklMRV9KRVRTT05f",
+            "VkVSU0FUSUxFXzEQAxIcChhNT0JJTEVfQ09SQUxfVkVSU0FUSUxFXzEQBEL+",
+            "Ago8Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFp",
+            "bmluZ2pvYi5kZWZpbml0aW9uQiFBdXRvTUxWaWRlb0FjdGlvblJlY29nbml0",
+            "aW9uUHJvdG9QAVpiZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxL3NjaGVtYS90cmFpbmluZ2pvYi9k",
+            "ZWZpbml0aW9uO2RlZmluaXRpb26qAjhHb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMS5TY2hlbWEuVHJhaW5pbmdKb2IuRGVmaW5pdGlvbsoCOEdvb2dsZVxD",
+            "bG91ZFxBSVBsYXRmb3JtXFYxXFNjaGVtYVxUcmFpbmluZ0pvYlxEZWZpbml0",
+            "aW9u6gI+R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjE6OlNjaGVtYTo6",
+            "VHJhaW5pbmdKb2I6OkRlZmluaXRpb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -435,6 +436,18 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// TensorFlow Lite model and used on a mobile or edge device afterwards.
         /// </summary>
         [pbr::OriginalName("MOBILE_VERSATILE_1")] MobileVersatile1 = 2,
+        /// <summary>
+        /// A model that, in addition to being available within Google Cloud, can
+        /// also be exported (see ModelService.ExportModel) to a Jetson device
+        /// afterwards.
+        /// </summary>
+        [pbr::OriginalName("MOBILE_JETSON_VERSATILE_1")] MobileJetsonVersatile1 = 3,
+        /// <summary>
+        /// A model that, in addition to being available within Google Cloud, can
+        /// also be exported (see ModelService.ExportModel) as a TensorFlow or
+        /// TensorFlow Lite model and used on a Coral device afterwards.
+        /// </summary>
+        [pbr::OriginalName("MOBILE_CORAL_VERSATILE_1")] MobileCoralVersatile1 = 4,
       }
 
     }
