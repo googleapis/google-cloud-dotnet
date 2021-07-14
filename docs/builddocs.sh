@@ -63,8 +63,7 @@ build_api_docs() {
   (! grep --quiet 'Build failed.' errors.txt)
   
   # Add canonical links where appropriate
-  # (Uncomment this when the canonical links are actually published.)
-  # dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateCanonicalLinks -- $api
+  dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateCanonicalLinks -- $api
 
   # Special case root: that should end up in the root of the assembled
   # site.
