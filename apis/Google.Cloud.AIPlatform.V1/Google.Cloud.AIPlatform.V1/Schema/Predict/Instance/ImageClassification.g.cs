@@ -94,7 +94,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     public const int ContentFieldNumber = 1;
     private string content_ = "";
     /// <summary>
-    /// The image bytes or GCS URI to make the prediction on.
+    /// The image bytes or Cloud Storage URI to make the prediction on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {

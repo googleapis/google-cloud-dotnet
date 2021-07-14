@@ -97,8 +97,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         = pb::FieldCodec.ForInt64(10);
     private readonly pbc::RepeatedField<long> ids_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// The resource IDs of the AnnotationSpecs that had been identified, ordered
-    /// by the confidence score descendingly.
+    /// The resource IDs of the AnnotationSpecs that had been identified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> Ids {
