@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.LongRunning",
   "release_level": "ga",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.LongRunning/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest",
   "library_type": "CORE"
 }

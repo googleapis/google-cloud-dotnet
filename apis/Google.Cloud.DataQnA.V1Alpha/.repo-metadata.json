@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.DataQnA.V1Alpha",
   "release_level": "alpha",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.DataQnA.V1Alpha/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataQnA.V1Alpha/latest",
   "library_type": "GAPIC_AUTO"
 }
