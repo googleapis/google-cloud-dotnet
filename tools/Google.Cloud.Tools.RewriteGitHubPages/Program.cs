@@ -30,6 +30,19 @@ namespace Google.Cloud.Tools.RewriteGitHubPages
             { "docs/toc.html", "https://cloud.google.com/dotnet/docs/reference/help/getting-started" },
             { "docs/major-version.html", "https://cloud.google.com/dotnet/docs/reference" },
             { "docs/faq.html", "https://cloud.google.com/dotnet/docs/reference/help/troubleshooting" },
+
+            // Map the guides as best we can
+            { "docs/guides/api-layers.html", "https://cloud.google.com/dotnet/docs/reference/help/api-layers" },
+            { "docs/guides/cleanup.html", "https://cloud.google.com/dotnet/docs/reference/help/cleanup" },
+            { "docs/guides/gax-dependencies.html", "https://cloud.google.com/dotnet/docs/reference/help/getting-started" },
+            { "docs/guides/platforms.html", "https://cloud.google.com/dotnet/docs/reference/help/platforms" },
+            { "docs/guides/versioning.html", "https://cloud.google.com/dotnet/docs/reference/help/versioning" },
+            { "docs/guides/breaking-gax.html", "https://cloud.google.com/dotnet/docs/reference/help/getting-started" },
+            { "docs/guides/package-names.html", "https://cloud.google.com/dotnet/docs/reference/help/package-names" },
+            { "docs/guides/resource-names.html", "https://cloud.google.com/dotnet/docs/reference/help/resource-names" },
+            { "docs/guides/call-settings.html", "https://cloud.google.com/dotnet/docs/reference/help/call-settings" },
+            { "docs/guides/page-streaming.html", "https://cloud.google.com/dotnet/docs/reference/help/page-streaming" },
+            { "docs/guides/toc.html", "https://cloud.google.com/dotnet/docs/reference/help/getting-started" },
         };
 
         private static void Main(string[] args)
