@@ -28,103 +28,110 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2ds",
             "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0",
-            "cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoe",
-            "Z29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvIrcFCgVUcmlhbBIPCgJpZBgCIAEoCUID4EEDEjsK",
-            "BXN0YXRlGAMgASgOMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVHJp",
-            "YWwuU3RhdGVCA+BBAxJECgpwYXJhbWV0ZXJzGAQgAygLMisuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuVHJpYWwuUGFyYW1ldGVyQgPgQQMSRwoRZmlu",
-            "YWxfbWVhc3VyZW1lbnQYBSABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5NZWFzdXJlbWVudEID4EEDEjMKCnN0YXJ0X3RpbWUYByABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYCCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPwoKY3VzdG9t",
-            "X2pvYhgLIAEoCUIr4EED+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
-            "L0N1c3RvbUpvYhpSCglQYXJhbWV0ZXISGQoMcGFyYW1ldGVyX2lkGAEgASgJ",
-            "QgPgQQMSKgoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWVC",
-            "A+BBAyJmCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCVJFUVVF",
-            "U1RFRBABEgoKBkFDVElWRRACEgwKCFNUT1BQSU5HEAMSDQoJU1VDQ0VFREVE",
-            "EAQSDgoKSU5GRUFTSUJMRRAFOmzqQWkKH2FpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vVHJpYWwSRnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9zdHVkaWVzL3tzdHVkeX0vdHJpYWxzL3t0cmlhbH0i9hMKCVN0",
-            "dWR5U3BlYxJGCgdtZXRyaWNzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuU3R1ZHlTcGVjLk1ldHJpY1NwZWNCA+BBAhJMCgpwYXJhbWV0",
-            "ZXJzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlT",
-            "cGVjLlBhcmFtZXRlclNwZWNCA+BBAhJCCglhbGdvcml0aG0YAyABKA4yLy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuQWxnb3JpdGht",
-            "ElEKEW9ic2VydmF0aW9uX25vaXNlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuU3R1ZHlTcGVjLk9ic2VydmF0aW9uTm9pc2USYgoabWVh",
-            "c3VyZW1lbnRfc2VsZWN0aW9uX3R5cGUYByABKA4yPi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWVhc3VyZW1lbnRTZWxlY3Rpb25U",
-            "eXBlGrUBCgpNZXRyaWNTcGVjEhYKCW1ldHJpY19pZBgBIAEoCUID4EECEkwK",
-            "BGdvYWwYAiABKA4yOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVk",
-            "eVNwZWMuTWV0cmljU3BlYy5Hb2FsVHlwZUID4EECIkEKCEdvYWxUeXBlEhkK",
-            "FUdPQUxfVFlQRV9VTlNQRUNJRklFRBAAEgwKCE1BWElNSVpFEAESDAoITUlO",
-            "SU1JWkUQAhqVDQoNUGFyYW1ldGVyU3BlYxJgChFkb3VibGVfdmFsdWVfc3Bl",
-            "YxgCIAEoCzJDLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3Bl",
-            "Yy5QYXJhbWV0ZXJTcGVjLkRvdWJsZVZhbHVlU3BlY0gAEmIKEmludGVnZXJf",
-            "dmFsdWVfc3BlYxgDIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkludGVnZXJWYWx1ZVNwZWNIABJq",
-            "ChZjYXRlZ29yaWNhbF92YWx1ZV9zcGVjGAQgASgLMkguZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ2F0ZWdv",
-            "cmljYWxWYWx1ZVNwZWNIABJkChNkaXNjcmV0ZV92YWx1ZV9zcGVjGAUgASgL",
-            "MkUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFt",
-            "ZXRlclNwZWMuRGlzY3JldGVWYWx1ZVNwZWNIABIZCgxwYXJhbWV0ZXJfaWQY",
-            "ASABKAlCA+BBAhJRCgpzY2FsZV90eXBlGAYgASgOMj0uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuU2NhbGVU",
-            "eXBlEnEKG2NvbmRpdGlvbmFsX3BhcmFtZXRlcl9zcGVjcxgKIAMoCzJMLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJT",
-            "cGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYxpBCg9Eb3VibGVWYWx1ZVNw",
-            "ZWMSFgoJbWluX3ZhbHVlGAEgASgBQgPgQQISFgoJbWF4X3ZhbHVlGAIgASgB",
-            "QgPgQQIaQgoQSW50ZWdlclZhbHVlU3BlYxIWCgltaW5fdmFsdWUYASABKANC",
-            "A+BBAhIWCgltYXhfdmFsdWUYAiABKANCA+BBAhorChRDYXRlZ29yaWNhbFZh",
-            "bHVlU3BlYxITCgZ2YWx1ZXMYASADKAlCA+BBAhooChFEaXNjcmV0ZVZhbHVl",
-            "U3BlYxITCgZ2YWx1ZXMYASADKAFCA+BBAhqkBQoYQ29uZGl0aW9uYWxQYXJh",
-            "bWV0ZXJTcGVjEoUBChZwYXJlbnRfZGlzY3JldGVfdmFsdWVzGAIgASgLMmMu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRl",
-            "clNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjLkRpc2NyZXRlVmFsdWVD",
-            "b25kaXRpb25IABJ7ChFwYXJlbnRfaW50X3ZhbHVlcxgDIAEoCzJeLmdvb2ds",
+            "cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLGBgoFVHJpYWwSEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEg8KAmlkGAIgASgJQgPgQQMSOwoFc3RhdGUYAyABKA4y",
+            "Jy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UcmlhbC5TdGF0ZUID4EED",
+            "EkQKCnBhcmFtZXRlcnMYBCADKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5UcmlhbC5QYXJhbWV0ZXJCA+BBAxJHChFmaW5hbF9tZWFzdXJlbWVu",
+            "dBgFIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1lYXN1cmVt",
+            "ZW50QgPgQQMSQgoMbWVhc3VyZW1lbnRzGAYgAygLMicuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTWVhc3VyZW1lbnRCA+BBAxIzCgpzdGFydF90aW1l",
+            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVu",
+            "ZF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EhYKCWNsaWVudF9pZBgJIAEoCUID4EEDEh4KEWluZmVhc2libGVfcmVhc29u",
+            "GAogASgJQgPgQQMSPwoKY3VzdG9tX2pvYhgLIAEoCUIr4EED+kElCiNhaXBs",
+            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL0N1c3RvbUpvYhpSCglQYXJhbWV0ZXIS",
+            "GQoMcGFyYW1ldGVyX2lkGAEgASgJQgPgQQMSKgoFdmFsdWUYAiABKAsyFi5n",
+            "b29nbGUucHJvdG9idWYuVmFsdWVCA+BBAyJmCgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEg0KCVJFUVVFU1RFRBABEgoKBkFDVElWRRACEgwKCFNU",
+            "T1BQSU5HEAMSDQoJU1VDQ0VFREVEEAQSDgoKSU5GRUFTSUJMRRAFOmzqQWkK",
+            "H2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vVHJpYWwSRnByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zdHVkaWVzL3tzdHVkeX0v",
+            "dHJpYWxzL3t0cmlhbH0irhUKCVN0dWR5U3BlYxJGCgdtZXRyaWNzGAEgAygL",
+            "MjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLk1ldHJp",
+            "Y1NwZWNCA+BBAhJMCgpwYXJhbWV0ZXJzGAIgAygLMjMuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWNCA+BBAhJC",
+            "CglhbGdvcml0aG0YAyABKA4yLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5TdHVkeVNwZWMuQWxnb3JpdGhtElEKEW9ic2VydmF0aW9uX25vaXNlGAYg",
+            "ASgOMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLk9i",
+            "c2VydmF0aW9uTm9pc2USYgoabWVhc3VyZW1lbnRfc2VsZWN0aW9uX3R5cGUY",
+            "ByABKA4yPi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMu",
+            "TWVhc3VyZW1lbnRTZWxlY3Rpb25UeXBlGrUBCgpNZXRyaWNTcGVjEhYKCW1l",
+            "dHJpY19pZBgBIAEoCUID4EECEkwKBGdvYWwYAiABKA4yOS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmljU3BlYy5Hb2FsVHlw",
+            "ZUID4EECIkEKCEdvYWxUeXBlEhkKFUdPQUxfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EgwKCE1BWElNSVpFEAESDAoITUlOSU1JWkUQAhrNDgoNUGFyYW1ldGVyU3Bl",
+            "YxJgChFkb3VibGVfdmFsdWVfc3BlYxgCIAEoCzJDLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkRvdWJsZVZh",
+            "bHVlU3BlY0gAEmIKEmludGVnZXJfdmFsdWVfc3BlYxgDIAEoCzJELmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVj",
-            "LkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5JbnRWYWx1ZUNvbmRpdGlvbkgA",
-            "EosBChlwYXJlbnRfY2F0ZWdvcmljYWxfdmFsdWVzGAQgASgLMmYuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMu",
-            "Q29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjLkNhdGVnb3JpY2FsVmFsdWVDb25k",
-            "aXRpb25IABJQCg5wYXJhbWV0ZXJfc3BlYxgBIAEoCzIzLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjQgPgQQIa",
-            "LQoWRGlzY3JldGVWYWx1ZUNvbmRpdGlvbhITCgZ2YWx1ZXMYASADKAFCA+BB",
-            "AhooChFJbnRWYWx1ZUNvbmRpdGlvbhITCgZ2YWx1ZXMYASADKANCA+BBAhow",
-            "ChlDYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9uEhMKBnZhbHVlcxgBIAMoCUID",
-            "4EECQhgKFnBhcmVudF92YWx1ZV9jb25kaXRpb24ibgoJU2NhbGVUeXBlEhoK",
-            "FlNDQUxFX1RZUEVfVU5TUEVDSUZJRUQQABIVChFVTklUX0xJTkVBUl9TQ0FM",
-            "RRABEhIKDlVOSVRfTE9HX1NDQUxFEAISGgoWVU5JVF9SRVZFUlNFX0xPR19T",
-            "Q0FMRRADQhYKFHBhcmFtZXRlcl92YWx1ZV9zcGVjIkoKCUFsZ29yaXRobRIZ",
-            "ChVBTEdPUklUSE1fVU5TUEVDSUZJRUQQABIPCgtHUklEX1NFQVJDSBACEhEK",
-            "DVJBTkRPTV9TRUFSQ0gQAyJIChBPYnNlcnZhdGlvbk5vaXNlEiEKHU9CU0VS",
-            "VkFUSU9OX05PSVNFX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAESCAoESElHSBAC",
-            "InIKGE1lYXN1cmVtZW50U2VsZWN0aW9uVHlwZRIqCiZNRUFTVVJFTUVOVF9T",
-            "RUxFQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEhQKEExBU1RfTUVBU1VSRU1F",
-            "TlQQARIUChBCRVNUX01FQVNVUkVNRU5UEAIiogEKC01lYXN1cmVtZW50EhcK",
-            "CnN0ZXBfY291bnQYAiABKANCA+BBAxJECgdtZXRyaWNzGAMgAygLMi4uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTWVhc3VyZW1lbnQuTWV0cmljQgPg",
-            "QQMaNAoGTWV0cmljEhYKCW1ldHJpY19pZBgBIAEoCUID4EEDEhIKBXZhbHVl",
-            "GAIgASgBQgPgQQNCzgEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MUIKU3R1ZHlQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdv",
-            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
-            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
-            "dG8z"));
+            "LkludGVnZXJWYWx1ZVNwZWNIABJqChZjYXRlZ29yaWNhbF92YWx1ZV9zcGVj",
+            "GAQgASgLMkguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVj",
+            "LlBhcmFtZXRlclNwZWMuQ2F0ZWdvcmljYWxWYWx1ZVNwZWNIABJkChNkaXNj",
+            "cmV0ZV92YWx1ZV9zcGVjGAUgASgLMkUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRGlzY3JldGVWYWx1ZVNw",
+            "ZWNIABIZCgxwYXJhbWV0ZXJfaWQYASABKAlCA+BBAhJRCgpzY2FsZV90eXBl",
+            "GAYgASgOMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVj",
+            "LlBhcmFtZXRlclNwZWMuU2NhbGVUeXBlEnEKG2NvbmRpdGlvbmFsX3BhcmFt",
+            "ZXRlcl9zcGVjcxgKIAMoCzJMLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVy",
+            "U3BlYxpvCg9Eb3VibGVWYWx1ZVNwZWMSFgoJbWluX3ZhbHVlGAEgASgBQgPg",
+            "QQISFgoJbWF4X3ZhbHVlGAIgASgBQgPgQQISGgoNZGVmYXVsdF92YWx1ZRgE",
+            "IAEoAUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVlGnAKEEludGVnZXJWYWx1ZVNw",
+            "ZWMSFgoJbWluX3ZhbHVlGAEgASgDQgPgQQISFgoJbWF4X3ZhbHVlGAIgASgD",
+            "QgPgQQISGgoNZGVmYXVsdF92YWx1ZRgEIAEoA0gAiAEBQhAKDl9kZWZhdWx0",
+            "X3ZhbHVlGlkKFENhdGVnb3JpY2FsVmFsdWVTcGVjEhMKBnZhbHVlcxgBIAMo",
+            "CUID4EECEhoKDWRlZmF1bHRfdmFsdWUYAyABKAlIAIgBAUIQCg5fZGVmYXVs",
+            "dF92YWx1ZRpWChFEaXNjcmV0ZVZhbHVlU3BlYxITCgZ2YWx1ZXMYASADKAFC",
+            "A+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAMgASgBSACIAQFCEAoOX2RlZmF1bHRf",
+            "dmFsdWUapAUKGENvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYxKFAQoWcGFyZW50",
+            "X2Rpc2NyZXRlX3ZhbHVlcxgCIAEoCzJjLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFy",
+            "YW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVlQ29uZGl0aW9uSAASewoRcGFyZW50",
+            "X2ludF92YWx1ZXMYAyABKAsyXi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5Db25kaXRpb25hbFBhcmFtZXRl",
+            "clNwZWMuSW50VmFsdWVDb25kaXRpb25IABKLAQoZcGFyZW50X2NhdGVnb3Jp",
+            "Y2FsX3ZhbHVlcxgEIAEoCzJmLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVy",
+            "U3BlYy5DYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9uSAASUAoOcGFyYW1ldGVy",
+            "X3NwZWMYASABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVk",
+            "eVNwZWMuUGFyYW1ldGVyU3BlY0ID4EECGi0KFkRpc2NyZXRlVmFsdWVDb25k",
+            "aXRpb24SEwoGdmFsdWVzGAEgAygBQgPgQQIaKAoRSW50VmFsdWVDb25kaXRp",
+            "b24SEwoGdmFsdWVzGAEgAygDQgPgQQIaMAoZQ2F0ZWdvcmljYWxWYWx1ZUNv",
+            "bmRpdGlvbhITCgZ2YWx1ZXMYASADKAlCA+BBAkIYChZwYXJlbnRfdmFsdWVf",
+            "Y29uZGl0aW9uIm4KCVNjYWxlVHlwZRIaChZTQ0FMRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASFQoRVU5JVF9MSU5FQVJfU0NBTEUQARISCg5VTklUX0xPR19TQ0FM",
+            "RRACEhoKFlVOSVRfUkVWRVJTRV9MT0dfU0NBTEUQA0IWChRwYXJhbWV0ZXJf",
+            "dmFsdWVfc3BlYyJKCglBbGdvcml0aG0SGQoVQUxHT1JJVEhNX1VOU1BFQ0lG",
+            "SUVEEAASDwoLR1JJRF9TRUFSQ0gQAhIRCg1SQU5ET01fU0VBUkNIEAMiSAoQ",
+            "T2JzZXJ2YXRpb25Ob2lzZRIhCh1PQlNFUlZBVElPTl9OT0lTRV9VTlNQRUNJ",
+            "RklFRBAAEgcKA0xPVxABEggKBEhJR0gQAiJyChhNZWFzdXJlbWVudFNlbGVj",
+            "dGlvblR5cGUSKgomTUVBU1VSRU1FTlRfU0VMRUNUSU9OX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIUChBMQVNUX01FQVNVUkVNRU5UEAESFAoQQkVTVF9NRUFTVVJF",
+            "TUVOVBACItwBCgtNZWFzdXJlbWVudBI4ChBlbGFwc2VkX2R1cmF0aW9uGAEg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMSFwoKc3RlcF9j",
+            "b3VudBgCIAEoA0ID4EEDEkQKB21ldHJpY3MYAyADKAsyLi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5NZWFzdXJlbWVudC5NZXRyaWNCA+BBAxo0CgZN",
+            "ZXRyaWMSFgoJbWV0cmljX2lkGAEgASgJQgPgQQMSEgoFdmFsdWUYAiABKAFC",
+            "A+BBA0LOAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgpTdHVk",
+            "eVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNs",
+            "b3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Id", "State", "Parameters", "FinalMeasurement", "StartTime", "EndTime", "CustomJob" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Name", "Id", "State", "Parameters", "FinalMeasurement", "Measurements", "StartTime", "EndTime", "ClientId", "InfeasibleReason", "CustomJob" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Parser, new[]{ "DoubleValueSpec", "IntegerValueSpec", "CategoricalValueSpec", "DiscreteValueSpec", "ParameterId", "ScaleType", "ConditionalParameterSpecs" }, new[]{ "ParameterValueSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ScaleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec.Parser, new[]{ "MinValue", "MaxValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec.Parser, new[]{ "MinValue", "MaxValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DiscreteValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DiscreteValueSpec.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Parser, new[]{ "DoubleValueSpec", "IntegerValueSpec", "CategoricalValueSpec", "DiscreteValueSpec", "ParameterId", "ScaleType", "ConditionalParameterSpecs" }, new[]{ "ParameterValueSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ScaleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec.Parser, new[]{ "Values", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DiscreteValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DiscreteValueSpec.Parser, new[]{ "Values", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Parser, new[]{ "ParentDiscreteValues", "ParentIntValues", "ParentCategoricalValues", "ParameterSpec" }, new[]{ "ParentValueCondition" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.DiscreteValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.DiscreteValueCondition.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.IntValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.IntValueCondition.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition.Parser, new[]{ "Values" }, null, null, null, null)})})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement), global::Google.Cloud.AIPlatform.V1.Measurement.Parser, new[]{ "StepCount", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric), global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser, new[]{ "MetricId", "Value" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement), global::Google.Cloud.AIPlatform.V1.Measurement.Parser, new[]{ "ElapsedDuration", "StepCount", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric), global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser, new[]{ "MetricId", "Value" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -165,12 +172,16 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Trial(Trial other) : this() {
+      name_ = other.name_;
       id_ = other.id_;
       state_ = other.state_;
       parameters_ = other.parameters_.Clone();
       finalMeasurement_ = other.finalMeasurement_ != null ? other.finalMeasurement_.Clone() : null;
+      measurements_ = other.measurements_.Clone();
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      clientId_ = other.clientId_;
+      infeasibleReason_ = other.infeasibleReason_;
       customJob_ = other.customJob_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -178,6 +189,20 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Trial Clone() {
       return new Trial(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of the Trial assigned by the service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -235,6 +260,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "measurements" field.</summary>
+    public const int MeasurementsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Measurement> _repeated_measurements_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.AIPlatform.V1.Measurement.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Measurement> measurements_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Measurement>();
+    /// <summary>
+    /// Output only. A list of measurements that are strictly lexicographically
+    /// ordered by their induced tuples (steps, elapsed_duration).
+    /// These are used for early stopping computations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Measurement> Measurements {
+      get { return measurements_; }
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
@@ -260,6 +300,42 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return endTime_; }
       set {
         endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_id" field.</summary>
+    public const int ClientIdFieldNumber = 9;
+    private string clientId_ = "";
+    /// <summary>
+    /// Output only. The identifier of the client that originally requested this Trial.
+    /// Each client is identified by a unique client_id. When a client
+    /// asks for a suggestion, Vizier will assign it a Trial. The client should
+    /// evaluate the Trial, complete it, and report back to Vizier.
+    /// If suggestion is asked again by same client_id before the Trial is
+    /// completed, the same Trial will be returned. Multiple clients with
+    /// different client_ids can ask for suggestions simultaneously, each of them
+    /// will get their own Trial.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "infeasible_reason" field.</summary>
+    public const int InfeasibleReasonFieldNumber = 10;
+    private string infeasibleReason_ = "";
+    /// <summary>
+    /// Output only. A human readable string describing why the Trial is
+    /// infeasible. This is set only if Trial state is `INFEASIBLE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string InfeasibleReason {
+      get { return infeasibleReason_; }
+      set {
+        infeasibleReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -291,12 +367,16 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       if (Id != other.Id) return false;
       if (State != other.State) return false;
       if(!parameters_.Equals(other.parameters_)) return false;
       if (!object.Equals(FinalMeasurement, other.FinalMeasurement)) return false;
+      if(!measurements_.Equals(other.measurements_)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ClientId != other.ClientId) return false;
+      if (InfeasibleReason != other.InfeasibleReason) return false;
       if (CustomJob != other.CustomJob) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -304,12 +384,16 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (State != global::Google.Cloud.AIPlatform.V1.Trial.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= parameters_.GetHashCode();
       if (finalMeasurement_ != null) hash ^= FinalMeasurement.GetHashCode();
+      hash ^= measurements_.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (InfeasibleReason.Length != 0) hash ^= InfeasibleReason.GetHashCode();
       if (CustomJob.Length != 0) hash ^= CustomJob.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -327,6 +411,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Id.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Id);
@@ -340,6 +428,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(FinalMeasurement);
       }
+      measurements_.WriteTo(output, _repeated_measurements_codec);
       if (startTime_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(StartTime);
@@ -347,6 +436,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (endTime_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(EndTime);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ClientId);
+      }
+      if (InfeasibleReason.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(InfeasibleReason);
       }
       if (CustomJob.Length != 0) {
         output.WriteRawTag(90);
@@ -361,6 +458,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Id.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Id);
@@ -374,6 +475,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(FinalMeasurement);
       }
+      measurements_.WriteTo(ref output, _repeated_measurements_codec);
       if (startTime_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(StartTime);
@@ -381,6 +483,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (endTime_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(EndTime);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ClientId);
+      }
+      if (InfeasibleReason.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(InfeasibleReason);
       }
       if (CustomJob.Length != 0) {
         output.WriteRawTag(90);
@@ -395,6 +505,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
@@ -405,11 +518,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (finalMeasurement_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinalMeasurement);
       }
+      size += measurements_.CalculateSize(_repeated_measurements_codec);
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (InfeasibleReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InfeasibleReason);
       }
       if (CustomJob.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomJob);
@@ -425,6 +545,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
@@ -438,6 +561,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         FinalMeasurement.MergeFrom(other.FinalMeasurement);
       }
+      measurements_.Add(other.measurements_);
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -449,6 +573,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.InfeasibleReason.Length != 0) {
+        InfeasibleReason = other.InfeasibleReason;
       }
       if (other.CustomJob.Length != 0) {
         CustomJob = other.CustomJob;
@@ -467,6 +597,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
             Id = input.ReadString();
             break;
@@ -486,6 +620,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(FinalMeasurement);
             break;
           }
+          case 50: {
+            measurements_.AddEntriesFrom(input, _repeated_measurements_codec);
+            break;
+          }
           case 58: {
             if (startTime_ == null) {
               StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -498,6 +636,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 74: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 82: {
+            InfeasibleReason = input.ReadString();
             break;
           }
           case 90: {
@@ -518,6 +664,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
             Id = input.ReadString();
             break;
@@ -537,6 +687,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(FinalMeasurement);
             break;
           }
+          case 50: {
+            measurements_.AddEntriesFrom(ref input, _repeated_measurements_codec);
+            break;
+          }
           case 58: {
             if (startTime_ == null) {
               StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -549,6 +703,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 74: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 82: {
+            InfeasibleReason = input.ReadString();
             break;
           }
           case 90: {
@@ -2001,6 +2163,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           {
             private static readonly pb::MessageParser<DoubleValueSpec> _parser = new pb::MessageParser<DoubleValueSpec>(() => new DoubleValueSpec());
             private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pb::MessageParser<DoubleValueSpec> Parser { get { return _parser; } }
 
@@ -2023,8 +2186,10 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public DoubleValueSpec(DoubleValueSpec other) : this() {
+              _hasBits0 = other._hasBits0;
               minValue_ = other.minValue_;
               maxValue_ = other.maxValue_;
+              defaultValue_ = other.defaultValue_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2061,6 +2226,36 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
             }
 
+            /// <summary>Field number for the "default_value" field.</summary>
+            public const int DefaultValueFieldNumber = 4;
+            private double defaultValue_;
+            /// <summary>
+            /// A default value for a `DOUBLE` parameter that is assumed to be a
+            /// relatively good starting point.  Unset value signals that there is no
+            /// offered starting point.
+            ///
+            /// Currently only supported by the Vizier service. Not supported by
+            /// HyperparamterTuningJob or TrainingPipeline.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public double DefaultValue {
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0D; } }
+              set {
+                _hasBits0 |= 1;
+                defaultValue_ = value;
+              }
+            }
+            /// <summary>Gets whether the "default_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool HasDefaultValue {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "default_value" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void ClearDefaultValue() {
+              _hasBits0 &= ~1;
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as DoubleValueSpec);
@@ -2076,6 +2271,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MinValue, other.MinValue)) return false;
               if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MaxValue, other.MaxValue)) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DefaultValue, other.DefaultValue)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -2084,6 +2280,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               int hash = 1;
               if (MinValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MinValue);
               if (MaxValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MaxValue);
+              if (HasDefaultValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DefaultValue);
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -2108,6 +2305,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(17);
                 output.WriteDouble(MaxValue);
               }
+              if (HasDefaultValue) {
+                output.WriteRawTag(33);
+                output.WriteDouble(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2125,6 +2326,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(17);
                 output.WriteDouble(MaxValue);
               }
+              if (HasDefaultValue) {
+                output.WriteRawTag(33);
+                output.WriteDouble(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2138,6 +2343,9 @@ namespace Google.Cloud.AIPlatform.V1 {
                 size += 1 + 8;
               }
               if (MaxValue != 0D) {
+                size += 1 + 8;
+              }
+              if (HasDefaultValue) {
                 size += 1 + 8;
               }
               if (_unknownFields != null) {
@@ -2156,6 +2364,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (other.MaxValue != 0D) {
                 MaxValue = other.MaxValue;
+              }
+              if (other.HasDefaultValue) {
+                DefaultValue = other.DefaultValue;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -2177,6 +2388,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   }
                   case 17: {
                     MaxValue = input.ReadDouble();
+                    break;
+                  }
+                  case 33: {
+                    DefaultValue = input.ReadDouble();
                     break;
                   }
                 }
@@ -2201,6 +2416,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     MaxValue = input.ReadDouble();
                     break;
                   }
+                  case 33: {
+                    DefaultValue = input.ReadDouble();
+                    break;
+                  }
                 }
               }
             }
@@ -2218,6 +2437,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           {
             private static readonly pb::MessageParser<IntegerValueSpec> _parser = new pb::MessageParser<IntegerValueSpec>(() => new IntegerValueSpec());
             private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pb::MessageParser<IntegerValueSpec> Parser { get { return _parser; } }
 
@@ -2240,8 +2460,10 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public IntegerValueSpec(IntegerValueSpec other) : this() {
+              _hasBits0 = other._hasBits0;
               minValue_ = other.minValue_;
               maxValue_ = other.maxValue_;
+              defaultValue_ = other.defaultValue_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2278,6 +2500,36 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
             }
 
+            /// <summary>Field number for the "default_value" field.</summary>
+            public const int DefaultValueFieldNumber = 4;
+            private long defaultValue_;
+            /// <summary>
+            /// A default value for an `INTEGER` parameter that is assumed to be a
+            /// relatively good starting point.  Unset value signals that there is no
+            /// offered starting point.
+            ///
+            /// Currently only supported by the Vizier service. Not supported by
+            /// HyperparamterTuningJob or TrainingPipeline.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long DefaultValue {
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0L; } }
+              set {
+                _hasBits0 |= 1;
+                defaultValue_ = value;
+              }
+            }
+            /// <summary>Gets whether the "default_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool HasDefaultValue {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "default_value" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void ClearDefaultValue() {
+              _hasBits0 &= ~1;
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as IntegerValueSpec);
@@ -2293,6 +2545,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (MinValue != other.MinValue) return false;
               if (MaxValue != other.MaxValue) return false;
+              if (DefaultValue != other.DefaultValue) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -2301,6 +2554,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               int hash = 1;
               if (MinValue != 0L) hash ^= MinValue.GetHashCode();
               if (MaxValue != 0L) hash ^= MaxValue.GetHashCode();
+              if (HasDefaultValue) hash ^= DefaultValue.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -2325,6 +2579,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(16);
                 output.WriteInt64(MaxValue);
               }
+              if (HasDefaultValue) {
+                output.WriteRawTag(32);
+                output.WriteInt64(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2342,6 +2600,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(16);
                 output.WriteInt64(MaxValue);
               }
+              if (HasDefaultValue) {
+                output.WriteRawTag(32);
+                output.WriteInt64(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2356,6 +2618,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (MaxValue != 0L) {
                 size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxValue);
+              }
+              if (HasDefaultValue) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(DefaultValue);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -2373,6 +2638,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (other.MaxValue != 0L) {
                 MaxValue = other.MaxValue;
+              }
+              if (other.HasDefaultValue) {
+                DefaultValue = other.DefaultValue;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -2396,6 +2664,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     MaxValue = input.ReadInt64();
                     break;
                   }
+                  case 32: {
+                    DefaultValue = input.ReadInt64();
+                    break;
+                  }
                 }
               }
             #endif
@@ -2416,6 +2688,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   }
                   case 16: {
                     MaxValue = input.ReadInt64();
+                    break;
+                  }
+                  case 32: {
+                    DefaultValue = input.ReadInt64();
                     break;
                   }
                 }
@@ -2458,6 +2734,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public CategoricalValueSpec(CategoricalValueSpec other) : this() {
               values_ = other.values_.Clone();
+              defaultValue_ = other.defaultValue_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2479,6 +2756,35 @@ namespace Google.Cloud.AIPlatform.V1 {
               get { return values_; }
             }
 
+            /// <summary>Field number for the "default_value" field.</summary>
+            public const int DefaultValueFieldNumber = 3;
+            private string defaultValue_;
+            /// <summary>
+            /// A default value for a `CATEGORICAL` parameter that is assumed to be a
+            /// relatively good starting point.  Unset value signals that there is no
+            /// offered starting point.
+            ///
+            /// Currently only supported by the Vizier service. Not supported by
+            /// HyperparamterTuningJob or TrainingPipeline.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public string DefaultValue {
+              get { return defaultValue_ ?? ""; }
+              set {
+                defaultValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+            /// <summary>Gets whether the "default_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool HasDefaultValue {
+              get { return defaultValue_ != null; }
+            }
+            /// <summary>Clears the value of the "default_value" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void ClearDefaultValue() {
+              defaultValue_ = null;
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as CategoricalValueSpec);
@@ -2493,6 +2799,7 @@ namespace Google.Cloud.AIPlatform.V1 {
                 return true;
               }
               if(!values_.Equals(other.values_)) return false;
+              if (DefaultValue != other.DefaultValue) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -2500,6 +2807,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             public override int GetHashCode() {
               int hash = 1;
               hash ^= values_.GetHashCode();
+              if (HasDefaultValue) hash ^= DefaultValue.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -2517,6 +2825,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               output.WriteRawMessage(this);
             #else
               values_.WriteTo(output, _repeated_values_codec);
+              if (HasDefaultValue) {
+                output.WriteRawTag(26);
+                output.WriteString(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2527,6 +2839,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               values_.WriteTo(ref output, _repeated_values_codec);
+              if (HasDefaultValue) {
+                output.WriteRawTag(26);
+                output.WriteString(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2537,6 +2853,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             public int CalculateSize() {
               int size = 0;
               size += values_.CalculateSize(_repeated_values_codec);
+              if (HasDefaultValue) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValue);
+              }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -2549,6 +2868,9 @@ namespace Google.Cloud.AIPlatform.V1 {
                 return;
               }
               values_.Add(other.values_);
+              if (other.HasDefaultValue) {
+                DefaultValue = other.DefaultValue;
+              }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -2565,6 +2887,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     break;
                   case 10: {
                     values_.AddEntriesFrom(input, _repeated_values_codec);
+                    break;
+                  }
+                  case 26: {
+                    DefaultValue = input.ReadString();
                     break;
                   }
                 }
@@ -2585,6 +2911,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     values_.AddEntriesFrom(ref input, _repeated_values_codec);
                     break;
                   }
+                  case 26: {
+                    DefaultValue = input.ReadString();
+                    break;
+                  }
                 }
               }
             }
@@ -2602,6 +2932,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           {
             private static readonly pb::MessageParser<DiscreteValueSpec> _parser = new pb::MessageParser<DiscreteValueSpec>(() => new DiscreteValueSpec());
             private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pb::MessageParser<DiscreteValueSpec> Parser { get { return _parser; } }
 
@@ -2624,7 +2955,9 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public DiscreteValueSpec(DiscreteValueSpec other) : this() {
+              _hasBits0 = other._hasBits0;
               values_ = other.values_.Clone();
+              defaultValue_ = other.defaultValue_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -2649,6 +2982,37 @@ namespace Google.Cloud.AIPlatform.V1 {
               get { return values_; }
             }
 
+            /// <summary>Field number for the "default_value" field.</summary>
+            public const int DefaultValueFieldNumber = 3;
+            private double defaultValue_;
+            /// <summary>
+            /// A default value for a `DISCRETE` parameter that is assumed to be a
+            /// relatively good starting point.  Unset value signals that there is no
+            /// offered starting point.  It automatically rounds to the
+            /// nearest feasible discrete point.
+            ///
+            /// Currently only supported by the Vizier service. Not supported by
+            /// HyperparamterTuningJob or TrainingPipeline.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public double DefaultValue {
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0D; } }
+              set {
+                _hasBits0 |= 1;
+                defaultValue_ = value;
+              }
+            }
+            /// <summary>Gets whether the "default_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool HasDefaultValue {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "default_value" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void ClearDefaultValue() {
+              _hasBits0 &= ~1;
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as DiscreteValueSpec);
@@ -2663,6 +3027,7 @@ namespace Google.Cloud.AIPlatform.V1 {
                 return true;
               }
               if(!values_.Equals(other.values_)) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DefaultValue, other.DefaultValue)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -2670,6 +3035,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             public override int GetHashCode() {
               int hash = 1;
               hash ^= values_.GetHashCode();
+              if (HasDefaultValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DefaultValue);
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -2687,6 +3053,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               output.WriteRawMessage(this);
             #else
               values_.WriteTo(output, _repeated_values_codec);
+              if (HasDefaultValue) {
+                output.WriteRawTag(25);
+                output.WriteDouble(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2697,6 +3067,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               values_.WriteTo(ref output, _repeated_values_codec);
+              if (HasDefaultValue) {
+                output.WriteRawTag(25);
+                output.WriteDouble(DefaultValue);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2707,6 +3081,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             public int CalculateSize() {
               int size = 0;
               size += values_.CalculateSize(_repeated_values_codec);
+              if (HasDefaultValue) {
+                size += 1 + 8;
+              }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -2719,6 +3096,9 @@ namespace Google.Cloud.AIPlatform.V1 {
                 return;
               }
               values_.Add(other.values_);
+              if (other.HasDefaultValue) {
+                DefaultValue = other.DefaultValue;
+              }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -2738,6 +3118,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     values_.AddEntriesFrom(input, _repeated_values_codec);
                     break;
                   }
+                  case 25: {
+                    DefaultValue = input.ReadDouble();
+                    break;
+                  }
                 }
               }
             #endif
@@ -2755,6 +3139,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   case 10:
                   case 9: {
                     values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                    break;
+                  }
+                  case 25: {
+                    DefaultValue = input.ReadDouble();
                     break;
                   }
                 }
@@ -3706,6 +4094,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Measurement(Measurement other) : this() {
+      elapsedDuration_ = other.elapsedDuration_ != null ? other.elapsedDuration_.Clone() : null;
       stepCount_ = other.stepCount_;
       metrics_ = other.metrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3714,6 +4103,20 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Measurement Clone() {
       return new Measurement(this);
+    }
+
+    /// <summary>Field number for the "elapsed_duration" field.</summary>
+    public const int ElapsedDurationFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Duration elapsedDuration_;
+    /// <summary>
+    /// Output only. Time that the Trial has been running at the point of this Measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration ElapsedDuration {
+      get { return elapsedDuration_; }
+      set {
+        elapsedDuration_ = value;
+      }
     }
 
     /// <summary>Field number for the "step_count" field.</summary>
@@ -3758,6 +4161,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ElapsedDuration, other.ElapsedDuration)) return false;
       if (StepCount != other.StepCount) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -3766,6 +4170,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (elapsedDuration_ != null) hash ^= ElapsedDuration.GetHashCode();
       if (StepCount != 0L) hash ^= StepCount.GetHashCode();
       hash ^= metrics_.GetHashCode();
       if (_unknownFields != null) {
@@ -3784,6 +4189,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (elapsedDuration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ElapsedDuration);
+      }
       if (StepCount != 0L) {
         output.WriteRawTag(16);
         output.WriteInt64(StepCount);
@@ -3798,6 +4207,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (elapsedDuration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ElapsedDuration);
+      }
       if (StepCount != 0L) {
         output.WriteRawTag(16);
         output.WriteInt64(StepCount);
@@ -3812,6 +4225,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (elapsedDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ElapsedDuration);
+      }
       if (StepCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StepCount);
       }
@@ -3826,6 +4242,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(Measurement other) {
       if (other == null) {
         return;
+      }
+      if (other.elapsedDuration_ != null) {
+        if (elapsedDuration_ == null) {
+          ElapsedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        ElapsedDuration.MergeFrom(other.ElapsedDuration);
       }
       if (other.StepCount != 0L) {
         StepCount = other.StepCount;
@@ -3845,6 +4267,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            if (elapsedDuration_ == null) {
+              ElapsedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ElapsedDuration);
+            break;
+          }
           case 16: {
             StepCount = input.ReadInt64();
             break;
@@ -3867,6 +4296,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            if (elapsedDuration_ == null) {
+              ElapsedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ElapsedDuration);
+            break;
+          }
           case 16: {
             StepCount = input.ReadInt64();
             break;

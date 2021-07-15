@@ -71,6 +71,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CancelTrainingPipelineRequest> __Marshaller_google_cloud_aiplatform_v1_CancelTrainingPipelineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CancelTrainingPipelineRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest> __Marshaller_google_cloud_aiplatform_v1_CreatePipelineJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.PipelineJob> __Marshaller_google_cloud_aiplatform_v1_PipelineJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.PipelineJob.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest> __Marshaller_google_cloud_aiplatform_v1_GetPipelineJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest> __Marshaller_google_cloud_aiplatform_v1_ListPipelineJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse> __Marshaller_google_cloud_aiplatform_v1_ListPipelineJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest> __Marshaller_google_cloud_aiplatform_v1_DeletePipelineJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest> __Marshaller_google_cloud_aiplatform_v1_CancelPipelineJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTrainingPipelineRequest, global::Google.Cloud.AIPlatform.V1.TrainingPipeline> __Method_CreateTrainingPipeline = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTrainingPipelineRequest, global::Google.Cloud.AIPlatform.V1.TrainingPipeline>(
         grpc::MethodType.Unary,
@@ -105,6 +112,41 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "CancelTrainingPipeline",
         __Marshaller_google_cloud_aiplatform_v1_CancelTrainingPipelineRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob> __Method_CreatePipelineJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePipelineJob",
+        __Marshaller_google_cloud_aiplatform_v1_CreatePipelineJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_PipelineJob);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob> __Method_GetPipelineJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPipelineJob",
+        __Marshaller_google_cloud_aiplatform_v1_GetPipelineJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_PipelineJob);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest, global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse> __Method_ListPipelineJobs = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest, global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPipelineJobs",
+        __Marshaller_google_cloud_aiplatform_v1_ListPipelineJobsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListPipelineJobsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest, global::Google.LongRunning.Operation> __Method_DeletePipelineJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePipelineJob",
+        __Marshaller_google_cloud_aiplatform_v1_DeletePipelineJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelPipelineJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelPipelineJob",
+        __Marshaller_google_cloud_aiplatform_v1_CancelPipelineJobRequest,
         __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -178,6 +220,70 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelTrainingPipeline(global::Google.Cloud.AIPlatform.V1.CancelTrainingPipelineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.PipelineJob> CreatePipelineJob(global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.PipelineJob> GetPipelineJob(global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists PipelineJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse> ListPipelineJobs(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePipelineJob(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels a PipelineJob.
+      /// Starts asynchronous cancellation on the PipelineJob. The server
+      /// makes a best effort to cancel the pipeline, but success is not
+      /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// pipeline completed despite cancellation. On successful cancellation,
+      /// the PipelineJob is not deleted; instead it becomes a pipeline with
+      /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelPipelineJob(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -467,6 +573,262 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelTrainingPipeline, null, options, request);
       }
+      /// <summary>
+      /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.PipelineJob CreatePipelineJob(global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePipelineJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.PipelineJob CreatePipelineJob(global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.PipelineJob> CreatePipelineJobAsync(global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePipelineJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.PipelineJob> CreatePipelineJobAsync(global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.PipelineJob GetPipelineJob(global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPipelineJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.PipelineJob GetPipelineJob(global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.PipelineJob> GetPipelineJobAsync(global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPipelineJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.PipelineJob> GetPipelineJobAsync(global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Lists PipelineJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse ListPipelineJobs(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPipelineJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists PipelineJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse ListPipelineJobs(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPipelineJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists PipelineJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse> ListPipelineJobsAsync(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPipelineJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists PipelineJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse> ListPipelineJobsAsync(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPipelineJobs, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeletePipelineJob(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePipelineJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeletePipelineJob(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePipelineJobAsync(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePipelineJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a PipelineJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePipelineJobAsync(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a PipelineJob.
+      /// Starts asynchronous cancellation on the PipelineJob. The server
+      /// makes a best effort to cancel the pipeline, but success is not
+      /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// pipeline completed despite cancellation. On successful cancellation,
+      /// the PipelineJob is not deleted; instead it becomes a pipeline with
+      /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelPipelineJob(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelPipelineJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a PipelineJob.
+      /// Starts asynchronous cancellation on the PipelineJob. The server
+      /// makes a best effort to cancel the pipeline, but success is not
+      /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// pipeline completed despite cancellation. On successful cancellation,
+      /// the PipelineJob is not deleted; instead it becomes a pipeline with
+      /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelPipelineJob(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelPipelineJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a PipelineJob.
+      /// Starts asynchronous cancellation on the PipelineJob. The server
+      /// makes a best effort to cancel the pipeline, but success is not
+      /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// pipeline completed despite cancellation. On successful cancellation,
+      /// the PipelineJob is not deleted; instead it becomes a pipeline with
+      /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelPipelineJobAsync(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelPipelineJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a PipelineJob.
+      /// Starts asynchronous cancellation on the PipelineJob. The server
+      /// makes a best effort to cancel the pipeline, but success is not
+      /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// pipeline completed despite cancellation. On successful cancellation,
+      /// the PipelineJob is not deleted; instead it becomes a pipeline with
+      /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelPipelineJobAsync(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelPipelineJob, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PipelineServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -483,7 +845,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetTrainingPipeline, serviceImpl.GetTrainingPipeline)
           .AddMethod(__Method_ListTrainingPipelines, serviceImpl.ListTrainingPipelines)
           .AddMethod(__Method_DeleteTrainingPipeline, serviceImpl.DeleteTrainingPipeline)
-          .AddMethod(__Method_CancelTrainingPipeline, serviceImpl.CancelTrainingPipeline).Build();
+          .AddMethod(__Method_CancelTrainingPipeline, serviceImpl.CancelTrainingPipeline)
+          .AddMethod(__Method_CreatePipelineJob, serviceImpl.CreatePipelineJob)
+          .AddMethod(__Method_GetPipelineJob, serviceImpl.GetPipelineJob)
+          .AddMethod(__Method_ListPipelineJobs, serviceImpl.ListPipelineJobs)
+          .AddMethod(__Method_DeletePipelineJob, serviceImpl.DeletePipelineJob)
+          .AddMethod(__Method_CancelPipelineJob, serviceImpl.CancelPipelineJob).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -497,6 +864,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListTrainingPipelines, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListTrainingPipelinesRequest, global::Google.Cloud.AIPlatform.V1.ListTrainingPipelinesResponse>(serviceImpl.ListTrainingPipelines));
       serviceBinder.AddMethod(__Method_DeleteTrainingPipeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteTrainingPipelineRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTrainingPipeline));
       serviceBinder.AddMethod(__Method_CancelTrainingPipeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CancelTrainingPipelineRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelTrainingPipeline));
+      serviceBinder.AddMethod(__Method_CreatePipelineJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreatePipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob>(serviceImpl.CreatePipelineJob));
+      serviceBinder.AddMethod(__Method_GetPipelineJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetPipelineJobRequest, global::Google.Cloud.AIPlatform.V1.PipelineJob>(serviceImpl.GetPipelineJob));
+      serviceBinder.AddMethod(__Method_ListPipelineJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest, global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse>(serviceImpl.ListPipelineJobs));
+      serviceBinder.AddMethod(__Method_DeletePipelineJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePipelineJob));
+      serviceBinder.AddMethod(__Method_CancelPipelineJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelPipelineJob));
     }
 
   }

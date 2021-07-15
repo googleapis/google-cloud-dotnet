@@ -26,16 +26,16 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hY2NlbGVyYXRvcl90eXBl",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2Fw",
-            "aS9hbm5vdGF0aW9ucy5wcm90byq5AQoPQWNjZWxlcmF0b3JUeXBlEiAKHEFD",
+            "aS9hbm5vdGF0aW9ucy5wcm90byq4AQoPQWNjZWxlcmF0b3JUeXBlEiAKHEFD",
             "Q0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIUChBOVklESUFfVEVTTEFf",
             "SzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIVChFOVklESUFfVEVTTEFf",
             "VjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMKD05WSURJQV9URVNMQV9U",
-            "NBAFEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHQtgBCh5jb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFCFEFjY2VsZXJhdG9yVHlwZVByb3RvUAFaRGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlw",
-            "bGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "NBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAhC2AEKHmNvbS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MUIUQWNjZWxlcmF0b3JUeXBlUHJvdG9QAVpEZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBs",
+            "YXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpD",
+            "bG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.AcceleratorType), }, null, null));
@@ -73,13 +73,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// </summary>
     [pbr::OriginalName("NVIDIA_TESLA_T4")] NvidiaTeslaT4 = 5,
     /// <summary>
-    /// TPU v2.
+    /// Nvidia Tesla A100 GPU.
     /// </summary>
-    [pbr::OriginalName("TPU_V2")] TpuV2 = 6,
-    /// <summary>
-    /// TPU v3.
-    /// </summary>
-    [pbr::OriginalName("TPU_V3")] TpuV3 = 7,
+    [pbr::OriginalName("NVIDIA_TESLA_A100")] NvidiaTeslaA100 = 8,
   }
 
   #endregion

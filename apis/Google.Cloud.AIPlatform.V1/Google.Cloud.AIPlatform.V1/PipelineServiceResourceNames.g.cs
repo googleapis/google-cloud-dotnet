@@ -78,4 +78,64 @@ namespace Google.Cloud.AIPlatform.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreatePipelineJobRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetPipelineJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::PipelineJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::PipelineJobName PipelineJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::PipelineJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPipelineJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeletePipelineJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::PipelineJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::PipelineJobName PipelineJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::PipelineJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CancelPipelineJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::PipelineJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::PipelineJobName PipelineJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::PipelineJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

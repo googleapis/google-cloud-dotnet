@@ -626,5 +626,608 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             await client.CancelTrainingPipelineAsync(request.TrainingPipelineName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void CreatePipelineJobRequestObject()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.CreatePipelineJob(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreatePipelineJobRequestObjectAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreatePipelineJob()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.CreatePipelineJob(request.Parent, request.PipelineJob, request.PipelineJobId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreatePipelineJobAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request.Parent, request.PipelineJob, request.PipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request.Parent, request.PipelineJob, request.PipelineJobId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreatePipelineJobResourceNames()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.CreatePipelineJob(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreatePipelineJobResourceNamesAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "pipeline_job_id54c2a3dd",
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.CreatePipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.CreatePipelineJobAsync(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.CreatePipelineJobAsync(request.ParentAsLocationName, request.PipelineJob, request.PipelineJobId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetPipelineJobRequestObject()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.GetPipelineJob(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetPipelineJobRequestObjectAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetPipelineJob()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.GetPipelineJob(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetPipelineJobAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetPipelineJobResourceNames()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob response = client.GetPipelineJob(request.PipelineJobName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetPipelineJobResourceNamesAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            PipelineJob expectedResponse = new PipelineJob
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                PipelineSpec = new wkt::Struct(),
+                State = PipelineState.Running,
+                JobDetail = new PipelineJobDetail(),
+                Error = new gr::Status(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                RuntimeConfig = new PipelineJob.Types.RuntimeConfig(),
+                EncryptionSpec = new EncryptionSpec(),
+                ServiceAccount = "service_accounta3c1b923",
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+            };
+            mockGrpcClient.Setup(x => x.GetPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PipelineJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            PipelineJob responseCallSettings = await client.GetPipelineJobAsync(request.PipelineJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PipelineJob responseCancellationToken = await client.GetPipelineJobAsync(request.PipelineJobName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelPipelineJobRequestObject()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            client.CancelPipelineJob(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelPipelineJobRequestObjectAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CancelPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelPipelineJobAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelPipelineJob()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            client.CancelPipelineJob(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelPipelineJobAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CancelPipelineJobAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelPipelineJobAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelPipelineJobResourceNames()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            client.CancelPipelineJob(request.PipelineJobName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelPipelineJobResourceNamesAsync()
+        {
+            moq::Mock<PipelineService.PipelineServiceClient> mockGrpcClient = new moq::Mock<PipelineService.PipelineServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CancelPipelineJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PipelineServiceClient client = new PipelineServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CancelPipelineJobAsync(request.PipelineJobName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CancelPipelineJobAsync(request.PipelineJobName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

@@ -53,6 +53,12 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteTrainingPipelineSettings = existing.DeleteTrainingPipelineSettings;
             DeleteTrainingPipelineOperationsSettings = existing.DeleteTrainingPipelineOperationsSettings.Clone();
             CancelTrainingPipelineSettings = existing.CancelTrainingPipelineSettings;
+            CreatePipelineJobSettings = existing.CreatePipelineJobSettings;
+            GetPipelineJobSettings = existing.GetPipelineJobSettings;
+            ListPipelineJobsSettings = existing.ListPipelineJobsSettings;
+            DeletePipelineJobSettings = existing.DeletePipelineJobSettings;
+            DeletePipelineJobOperationsSettings = existing.DeletePipelineJobOperationsSettings.Clone();
+            CancelPipelineJobSettings = existing.CancelPipelineJobSettings;
             OnCopy(existing);
         }
 
@@ -139,6 +145,84 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CancelTrainingPipelineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.CreatePipelineJob</c> and <c>PipelineServiceClient.CreatePipelineJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.GetPipelineJob</c> and <c>PipelineServiceClient.GetPipelineJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.ListPipelineJobs</c> and <c>PipelineServiceClient.ListPipelineJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPipelineJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.DeletePipelineJob</c> and <c>PipelineServiceClient.DeletePipelineJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PipelineServiceClient.DeletePipelineJob</c> and
+        /// <c>PipelineServiceClient.DeletePipelineJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeletePipelineJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.CancelPipelineJob</c> and <c>PipelineServiceClient.CancelPipelineJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelPipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PipelineServiceSettings"/> object.</returns>
@@ -1003,6 +1087,768 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelTrainingPipelineAsync(TrainingPipelineName name, st::CancellationToken cancellationToken) =>
             CancelTrainingPipelineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob CreatePipelineJob(CreatePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(CreatePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(CreatePipelineJobRequest request, st::CancellationToken cancellationToken) =>
+            CreatePipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob CreatePipelineJob(string parent, PipelineJob pipelineJob, string pipelineJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineJob(new CreatePipelineJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PipelineJob = gax::GaxPreconditions.CheckNotNull(pipelineJob, nameof(pipelineJob)),
+                PipelineJobId = pipelineJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(string parent, PipelineJob pipelineJob, string pipelineJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineJobAsync(new CreatePipelineJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PipelineJob = gax::GaxPreconditions.CheckNotNull(pipelineJob, nameof(pipelineJob)),
+                PipelineJobId = pipelineJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(string parent, PipelineJob pipelineJob, string pipelineJobId, st::CancellationToken cancellationToken) =>
+            CreatePipelineJobAsync(parent, pipelineJob, pipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob CreatePipelineJob(gagr::LocationName parent, PipelineJob pipelineJob, string pipelineJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineJob(new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJob = gax::GaxPreconditions.CheckNotNull(pipelineJob, nameof(pipelineJob)),
+                PipelineJobId = pipelineJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(gagr::LocationName parent, PipelineJob pipelineJob, string pipelineJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePipelineJobAsync(new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJob = gax::GaxPreconditions.CheckNotNull(pipelineJob, nameof(pipelineJob)),
+                PipelineJobId = pipelineJobId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the PipelineJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pipelineJob">
+        /// Required. The PipelineJob to create.
+        /// </param>
+        /// <param name="pipelineJobId">
+        /// The ID to use for the PipelineJob, which will become the final component of
+        /// the PipelineJob name. If not provided, an ID will be automatically
+        /// generated.
+        /// 
+        /// This value should be less than 128 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> CreatePipelineJobAsync(gagr::LocationName parent, PipelineJob pipelineJob, string pipelineJobId, st::CancellationToken cancellationToken) =>
+            CreatePipelineJobAsync(parent, pipelineJob, pipelineJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob GetPipelineJob(GetPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(GetPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(GetPipelineJobRequest request, st::CancellationToken cancellationToken) =>
+            GetPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob GetPipelineJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineJob(new GetPipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineJobAsync(new GetPipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PipelineJob GetPipelineJob(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineJob(new GetPipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPipelineJobAsync(new GetPipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PipelineJob> GetPipelineJobAsync(PipelineJobName name, st::CancellationToken cancellationToken) =>
+            GetPipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(ListPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(ListPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the PipelineJobs from.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPipelineJobs(new ListPipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the PipelineJobs from.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPipelineJobsAsync(new ListPipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the PipelineJobs from.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPipelineJobs(new ListPipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the PipelineJobs from.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPipelineJobsAsync(new ListPipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeletePipelineJob(DeletePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(DeletePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(DeletePipelineJobRequest request, st::CancellationToken cancellationToken) =>
+            DeletePipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeletePipelineJob</c>.</summary>
+        public virtual lro::OperationsClient DeletePipelineJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeletePipelineJob</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeletePipelineJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePipelineJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePipelineJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeletePipelineJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePipelineJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeletePipelineJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineJob(new DeletePipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineJobAsync(new DeletePipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeletePipelineJob(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineJob(new DeletePipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePipelineJobAsync(new DeletePipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(PipelineJobName name, st::CancellationToken cancellationToken) =>
+            DeletePipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelPipelineJob(CancelPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(CancelPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(CancelPipelineJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelPipelineJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelPipelineJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelPipelineJob(new CancelPipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelPipelineJobAsync(new CancelPipelineJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelPipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelPipelineJob(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelPipelineJob(new CancelPipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(PipelineJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelPipelineJobAsync(new CancelPipelineJobRequest
+            {
+                PipelineJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the PipelineJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelPipelineJobAsync(PipelineJobName name, st::CancellationToken cancellationToken) =>
+            CancelPipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PipelineService client wrapper implementation, for convenient use.</summary>
@@ -1023,6 +1869,16 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<CancelTrainingPipelineRequest, wkt::Empty> _callCancelTrainingPipeline;
 
+        private readonly gaxgrpc::ApiCall<CreatePipelineJobRequest, PipelineJob> _callCreatePipelineJob;
+
+        private readonly gaxgrpc::ApiCall<GetPipelineJobRequest, PipelineJob> _callGetPipelineJob;
+
+        private readonly gaxgrpc::ApiCall<ListPipelineJobsRequest, ListPipelineJobsResponse> _callListPipelineJobs;
+
+        private readonly gaxgrpc::ApiCall<DeletePipelineJobRequest, lro::Operation> _callDeletePipelineJob;
+
+        private readonly gaxgrpc::ApiCall<CancelPipelineJobRequest, wkt::Empty> _callCancelPipelineJob;
+
         /// <summary>
         /// Constructs a client wrapper for the PipelineService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1034,6 +1890,7 @@ namespace Google.Cloud.AIPlatform.V1
             PipelineServiceSettings effectiveSettings = settings ?? PipelineServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             DeleteTrainingPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTrainingPipelineOperationsSettings);
+            DeletePipelineJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePipelineJobOperationsSettings);
             _callCreateTrainingPipeline = clientHelper.BuildApiCall<CreateTrainingPipelineRequest, TrainingPipeline>(grpcClient.CreateTrainingPipelineAsync, grpcClient.CreateTrainingPipeline, effectiveSettings.CreateTrainingPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTrainingPipeline);
             Modify_CreateTrainingPipelineApiCall(ref _callCreateTrainingPipeline);
@@ -1049,6 +1906,21 @@ namespace Google.Cloud.AIPlatform.V1
             _callCancelTrainingPipeline = clientHelper.BuildApiCall<CancelTrainingPipelineRequest, wkt::Empty>(grpcClient.CancelTrainingPipelineAsync, grpcClient.CancelTrainingPipeline, effectiveSettings.CancelTrainingPipelineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelTrainingPipeline);
             Modify_CancelTrainingPipelineApiCall(ref _callCancelTrainingPipeline);
+            _callCreatePipelineJob = clientHelper.BuildApiCall<CreatePipelineJobRequest, PipelineJob>(grpcClient.CreatePipelineJobAsync, grpcClient.CreatePipelineJob, effectiveSettings.CreatePipelineJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePipelineJob);
+            Modify_CreatePipelineJobApiCall(ref _callCreatePipelineJob);
+            _callGetPipelineJob = clientHelper.BuildApiCall<GetPipelineJobRequest, PipelineJob>(grpcClient.GetPipelineJobAsync, grpcClient.GetPipelineJob, effectiveSettings.GetPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPipelineJob);
+            Modify_GetPipelineJobApiCall(ref _callGetPipelineJob);
+            _callListPipelineJobs = clientHelper.BuildApiCall<ListPipelineJobsRequest, ListPipelineJobsResponse>(grpcClient.ListPipelineJobsAsync, grpcClient.ListPipelineJobs, effectiveSettings.ListPipelineJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPipelineJobs);
+            Modify_ListPipelineJobsApiCall(ref _callListPipelineJobs);
+            _callDeletePipelineJob = clientHelper.BuildApiCall<DeletePipelineJobRequest, lro::Operation>(grpcClient.DeletePipelineJobAsync, grpcClient.DeletePipelineJob, effectiveSettings.DeletePipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePipelineJob);
+            Modify_DeletePipelineJobApiCall(ref _callDeletePipelineJob);
+            _callCancelPipelineJob = clientHelper.BuildApiCall<CancelPipelineJobRequest, wkt::Empty>(grpcClient.CancelPipelineJobAsync, grpcClient.CancelPipelineJob, effectiveSettings.CancelPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelPipelineJob);
+            Modify_CancelPipelineJobApiCall(ref _callCancelPipelineJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1064,6 +1936,16 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_CancelTrainingPipelineApiCall(ref gaxgrpc::ApiCall<CancelTrainingPipelineRequest, wkt::Empty> call);
 
+        partial void Modify_CreatePipelineJobApiCall(ref gaxgrpc::ApiCall<CreatePipelineJobRequest, PipelineJob> call);
+
+        partial void Modify_GetPipelineJobApiCall(ref gaxgrpc::ApiCall<GetPipelineJobRequest, PipelineJob> call);
+
+        partial void Modify_ListPipelineJobsApiCall(ref gaxgrpc::ApiCall<ListPipelineJobsRequest, ListPipelineJobsResponse> call);
+
+        partial void Modify_DeletePipelineJobApiCall(ref gaxgrpc::ApiCall<DeletePipelineJobRequest, lro::Operation> call);
+
+        partial void Modify_CancelPipelineJobApiCall(ref gaxgrpc::ApiCall<CancelPipelineJobRequest, wkt::Empty> call);
+
         partial void OnConstruction(PipelineService.PipelineServiceClient grpcClient, PipelineServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PipelineService client</summary>
@@ -1078,6 +1960,16 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteTrainingPipelineRequest(ref DeleteTrainingPipelineRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelTrainingPipelineRequest(ref CancelTrainingPipelineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePipelineJobRequest(ref CreatePipelineJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPipelineJobRequest(ref GetPipelineJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPipelineJobsRequest(ref ListPipelineJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePipelineJobRequest(ref DeletePipelineJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelPipelineJobRequest(ref CancelPipelineJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a TrainingPipeline. A created TrainingPipeline right away will be
@@ -1221,9 +2113,154 @@ namespace Google.Cloud.AIPlatform.V1
             Modify_CancelTrainingPipelineRequest(ref request, ref callSettings);
             return _callCancelTrainingPipeline.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PipelineJob CreatePipelineJob(CreatePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePipelineJobRequest(ref request, ref callSettings);
+            return _callCreatePipelineJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a PipelineJob. A PipelineJob will run immediately when created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PipelineJob> CreatePipelineJobAsync(CreatePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePipelineJobRequest(ref request, ref callSettings);
+            return _callCreatePipelineJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PipelineJob GetPipelineJob(GetPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPipelineJobRequest(ref request, ref callSettings);
+            return _callGetPipelineJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PipelineJob> GetPipelineJobAsync(GetPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPipelineJobRequest(ref request, ref callSettings);
+            return _callGetPipelineJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PipelineJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobs(ListPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPipelineJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPipelineJobsRequest, ListPipelineJobsResponse, PipelineJob>(_callListPipelineJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists PipelineJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PipelineJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> ListPipelineJobsAsync(ListPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPipelineJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPipelineJobsRequest, ListPipelineJobsResponse, PipelineJob>(_callListPipelineJobs, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeletePipelineJob</c>.</summary>
+        public override lro::OperationsClient DeletePipelineJobOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeletePipelineJob(DeletePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePipelineJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeletePipelineJob.Sync(request, callSettings), DeletePipelineJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a PipelineJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeletePipelineJobAsync(DeletePipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePipelineJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeletePipelineJob.Async(request, callSettings).ConfigureAwait(false), DeletePipelineJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CancelPipelineJob(CancelPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelPipelineJobRequest(ref request, ref callSettings);
+            _callCancelPipelineJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a PipelineJob.
+        /// Starts asynchronous cancellation on the PipelineJob. The server
+        /// makes a best effort to cancel the pipeline, but success is not
+        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// pipeline completed despite cancellation. On successful cancellation,
+        /// the PipelineJob is not deleted; instead it becomes a pipeline with
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CancelPipelineJobAsync(CancelPipelineJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelPipelineJobRequest(ref request, ref callSettings);
+            return _callCancelPipelineJob.Async(request, callSettings);
+        }
     }
 
     public partial class ListTrainingPipelinesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPipelineJobsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1231,6 +2268,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<TrainingPipeline> GetEnumerator() => TrainingPipelines.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPipelineJobsResponse : gaxgrpc::IPageResponse<PipelineJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PipelineJob> GetEnumerator() => PipelineJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
