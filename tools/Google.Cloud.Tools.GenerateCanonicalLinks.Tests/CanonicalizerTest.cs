@@ -39,11 +39,12 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks.Tests
         [InlineData("Google.Cloud.Firestore", "api/Google.Cloud.Firestore.V1.Firestore.html", "Google.Cloud.Firestore.V1/latest/Google.Cloud.Firestore.V1.Firestore")]
         [InlineData("Google.Cloud.Asset.V1", "api/Google.Cloud.OrgPolicy.V1.Policy.html", "Google.Cloud.OrgPolicy.V1/latest/Google.Cloud.OrgPolicy.V1.Policy")]
         [InlineData("Google.Cloud.Asset.V1", "api/Google.Identity.AccessContextManager.Type.DeviceEncryptionStatus.html", "Google.Identity.AccessContextManager.Type/latest/Google.Identity.AccessContextManager.Type.DeviceEncryptionStatus")]
-        // TODO: Types in Google.Cloud.Diagnostics.AspNetCore (and AspNetCore3) namespaces. Currently not published at all on googleapis.dev...
         [InlineData("Google.Cloud.Diagnostics.AspNetCore", "api/Google.Cloud.Diagnostics.Common.ContextTracerManager.html", "Google.Cloud.Diagnostics.Common/latest/Google.Cloud.Diagnostics.Common.ContextTracerManager")]
         [InlineData("Google.Cloud.Diagnostics.AspNetCore3", "api/Google.Cloud.Diagnostics.Common.ContextTracerManager.html", "Google.Cloud.Diagnostics.Common/latest/Google.Cloud.Diagnostics.Common.ContextTracerManager")]
         [InlineData("Google.Cloud.OsLogin.V1", "api/Google.Cloud.OsLogin.Common.OperatingSystemType.html", "Google.Cloud.OsLogin.Common/latest/Google.Cloud.OsLogin.Common.OperatingSystemType")]
         [InlineData("Google.Cloud.Debugger.V2", "api/Google.Cloud.DevTools.Source.V1.AliasContext.html", "Google.Cloud.DevTools.Common/latest/Google.Cloud.DevTools.Source.V1.AliasContext")]
+        [InlineData("Google.Cloud.Filestore.V1", "api/Google.Cloud.Common.html", "Google.Cloud.Common/latest/Google.Cloud.Common")]
+        [InlineData("Google.Cloud.Filestore.V1", "api/Google.Cloud.Common.OperationMetadata.html", "Google.Cloud.Common/latest/Google.Cloud.Common.OperationMetadata")]
         public void GetUrl(string package, string page, string expectedSuffix)
         {
             var actualUrl = Canonicalizer.GetUrl(package, page);
