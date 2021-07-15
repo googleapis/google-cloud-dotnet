@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using WktValue = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -40,7 +41,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="message">The message to convert. Must not be null.</param>
         /// <returns>The Struct representation of the message.</returns>
-        public static Value ToValue(IMessage message) => Value.ForStruct(ToStruct(message));
+        public static WktValue ToValue(IMessage message) => WktValue.ForStruct(ToStruct(message));
 
         /// <summary>
         /// Converts a <see cref="Struct"/> value to the specified message type.
@@ -61,10 +62,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <typeparam name="T">The message type to convert the struct to.</typeparam>
         /// <param name="structValue">The Struct to convert. Must not be null.</param>
         /// <returns>The message representation of the Struct.</returns>
-        public static T ToMessage<T>(Value structValue) where T : IMessage, new()
+        public static T ToMessage<T>(WktValue structValue) where T : IMessage, new()
         {
             GaxPreconditions.CheckNotNull(structValue, nameof(structValue));
-            GaxPreconditions.CheckArgument(structValue.KindCase == Value.KindOneofCase.StructValue,
+            GaxPreconditions.CheckArgument(structValue.KindCase == WktValue.KindOneofCase.StructValue,
                 nameof(structValue),
                 "The value being converted must represent a Struct");
             return ToMessage<T>(structValue.StructValue);
