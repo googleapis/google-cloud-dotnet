@@ -5,7 +5,7 @@ package for regular Cloud Spanner database access from .NET.
 
 {{version}}
 
-The [Google.Cloud.Spanner.Admin.Instance.V1](../Google.Cloud.Spanner.Admin.Instance.V1/) package
+The [Google.Cloud.Spanner.Admin.Instance.V1](../../Google.Cloud.Spanner.Admin.Instance.V1/latest) package
 should be used for Cloud Spanner instance administration, such as creating or deleting instances.
 
 {{installation}}

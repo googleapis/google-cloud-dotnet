@@ -34,7 +34,6 @@ do
 
     # We need to perform a few fix-ups of the docfx generated site for googleapis.dev:
     # - Remove the "All APIs" link, as that page isn't included on googleapis.dev
-    # - Fix up links from one API to another (e.g. from Google.Cloud.Spanner.Data to Google.Cloud.Spanner.V1)
     # - Add an xrefmap baseUrl
 
     if grep -q "All APIs" toc.html
@@ -45,15 +44,6 @@ do
       echo "No 'All APIs' link to remove"
     fi
     
-    # We assume all non-reference html files are just in the root directory
-    # Regex is nasty due to all the escaping, but we're basically capturing
-    # href="../{foo}/"
-    # and replacing it with
-    # href="../{foo}/latest/
-    # It's slightly annoying to use latest, but otherwise we need
-    # to know the precise API version we're depending on.
-    sed -ie 's/href="\.\.\/\([^\//]*\)\//href="\.\.\/\1\/latest\//g' *.html
-
     if ! head xrefmap.yml | grep -q baseUrl
     then
       sed -i "1s/^/baseUrl: https:\/\/googleapis.dev\/dotnet\/$pkg\/$version\/\n/" xrefmap.yml
