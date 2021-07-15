@@ -4,9 +4,6 @@
 
 {{version}}
 
-If you're looking for the experimental features, you can find them
-in [this separate package](../Google.Cloud.Language.V1.Experimental/index.html).
-
 {{installation}}
 
 {{auth}}
