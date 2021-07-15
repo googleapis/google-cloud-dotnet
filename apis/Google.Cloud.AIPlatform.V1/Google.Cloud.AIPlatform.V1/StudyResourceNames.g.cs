@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gcav = Google.Cloud.AIPlatform.V1;
 using sys = System;
 
 namespace Google.Cloud.AIPlatform.V1
@@ -269,6 +270,15 @@ namespace Google.Cloud.AIPlatform.V1
 
     public partial class Trial
     {
+        /// <summary>
+        /// <see cref="gcav::TrialName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::TrialName TrialName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::TrialName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="CustomJobName"/>-typed view over the <see cref="CustomJob"/> resource name property.
         /// </summary>

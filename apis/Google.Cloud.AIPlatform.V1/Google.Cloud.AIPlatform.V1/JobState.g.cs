@@ -26,17 +26,17 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJvdG8S",
             "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvKuEBCghKb2JTdGF0ZRIZChVKT0JfU1RBVEVfVU5TUEVD",
+            "YXRpb25zLnByb3RvKvgBCghKb2JTdGF0ZRIZChVKT0JfU1RBVEVfVU5TUEVD",
             "SUZJRUQQABIUChBKT0JfU1RBVEVfUVVFVUVEEAESFQoRSk9CX1NUQVRFX1BF",
             "TkRJTkcQAhIVChFKT0JfU1RBVEVfUlVOTklORxADEhcKE0pPQl9TVEFURV9T",
             "VUNDRUVERUQQBBIUChBKT0JfU1RBVEVfRkFJTEVEEAUSGAoUSk9CX1NUQVRF",
             "X0NBTkNFTExJTkcQBhIXChNKT0JfU1RBVEVfQ0FOQ0VMTEVEEAcSFAoQSk9C",
-            "X1NUQVRFX1BBVVNFRBAIQtEBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFCDUpvYlN0YXRlUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZv",
-            "cm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
-            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiBnByb3RvMw=="));
+            "X1NUQVRFX1BBVVNFRBAIEhUKEUpPQl9TVEFURV9FWFBJUkVEEAlC0QEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUINSm9iU3RhdGVQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.JobState), }, null, null));
@@ -86,6 +86,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The job has been stopped, and can be resumed.
     /// </summary>
     [pbr::OriginalName("JOB_STATE_PAUSED")] Paused = 8,
+    /// <summary>
+    /// The job has expired.
+    /// </summary>
+    [pbr::OriginalName("JOB_STATE_EXPIRED")] Expired = 9,
   }
 
   #endregion

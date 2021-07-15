@@ -269,4 +269,16 @@ namespace Google.Cloud.AIPlatform.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CustomJobSpec
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+        /// </summary>
+        public NetworkName NetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+            set => Network = value?.ToString() ?? "";
+        }
+    }
 }

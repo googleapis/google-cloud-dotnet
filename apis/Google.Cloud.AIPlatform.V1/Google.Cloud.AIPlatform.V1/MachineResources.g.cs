@@ -31,11 +31,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3RhdGlvbnMucHJvdG8ijwEKC01hY2hpbmVTcGVjEhkKDG1hY2hpbmVfdHlw",
             "ZRgBIAEoCUID4EEFEkoKEGFjY2VsZXJhdG9yX3R5cGUYAiABKA4yKy5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BY2NlbGVyYXRvclR5cGVCA+BBBRIZ",
-            "ChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBSKeAQoSRGVkaWNhdGVkUmVzb3Vy",
+            "ChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBSL4AQoSRGVkaWNhdGVkUmVzb3Vy",
             "Y2VzEkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxLk1hY2hpbmVTcGVjQgbgQQLgQQUSIQoRbWluX3JlcGxpY2Ff",
             "Y291bnQYAiABKAVCBuBBAuBBBRIeChFtYXhfcmVwbGljYV9jb3VudBgDIAEo",
-            "BUID4EEFIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIeChFtaW5fcmVwbGljYV9j",
+            "BUID4EEFElgKGGF1dG9zY2FsaW5nX21ldHJpY19zcGVjcxgEIAMoCzIxLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9zY2FsaW5nTWV0cmljU3Bl",
+            "Y0ID4EEFIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIeChFtaW5fcmVwbGljYV9j",
             "b3VudBgBIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAIgASgFQgPg",
             "QQUipQEKF0JhdGNoRGVkaWNhdGVkUmVzb3VyY2VzEkUKDG1hY2hpbmVfc3Bl",
             "YxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hpbmVT",
@@ -43,21 +45,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             "4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgFQgPgQQUiLwoRUmVzb3Vy",
             "Y2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgBIAEoAUID4EEDIj0KCERp",
             "c2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJEhkKEWJvb3RfZGlza19z",
-            "aXplX2diGAIgASgFQtkBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFCFU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlw",
-            "bGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
-            "b3JtOjpWMWIGcHJvdG8z"));
+            "aXplX2diGAIgASgFIkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgttZXRy",
+            "aWNfbmFtZRgBIAEoCUID4EECEg4KBnRhcmdldBgCIAEoBULZAQoeY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNYWNoaW5lUmVzb3VyY2VzUHJv",
+            "dG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
+            "bG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQu",
+            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
+            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutomaticResources), global::Google.Cloud.AIPlatform.V1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DiskSpec), global::Google.Cloud.AIPlatform.V1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DiskSpec), global::Google.Cloud.AIPlatform.V1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null)
           }));
     }
     #endregion
@@ -367,6 +371,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       minReplicaCount_ = other.minReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
+      autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -394,12 +399,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     private int minReplicaCount_;
     /// <summary>
     /// Required. Immutable. The minimum number of machine replicas this DeployedModel will be always
-    /// deployed on. If traffic against it increases, it may dynamically be
+    /// deployed on. This value must be greater than or equal to 1.
+    ///
+    /// If traffic against the DeployedModel increases, it may dynamically be
     /// deployed onto more replicas, and as traffic decreases, some of these extra
     /// replicas may be freed.
-    /// Note: if [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count] is
-    /// above 0, currently the model will be always deployed precisely on
-    /// [min_replica_count][google.cloud.aiplatform.v1.DedicatedResources.min_replica_count].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MinReplicaCount {
@@ -430,6 +434,38 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "autoscaling_metric_specs" field.</summary>
+    public const int AutoscalingMetricSpecsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec> _repeated_autoscalingMetricSpecs_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec> autoscalingMetricSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec>();
+    /// <summary>
+    /// Immutable. The metric specifications that overrides a resource
+    /// utilization metric (CPU utilization, accelerator's duty cycle, and so on)
+    /// target value (default to 60 if not set). At most one entry is allowed per
+    /// metric.
+    ///
+    /// If [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count] is
+    /// above 0, the autoscaling will be based on both CPU utilization and
+    /// accelerator's duty cycle metrics and scale up when either metrics exceeds
+    /// its target value while scale down if both metrics are under their target
+    /// value. The default target value is 60 for both metrics.
+    ///
+    /// If [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count] is
+    /// 0, the autoscaling will be based on CPU utilization metric only with
+    /// default target value 60 if not explicitly set.
+    ///
+    /// For example, in the case of Online Prediction, if you want to override
+    /// target CPU utilization to 80, you should set
+    /// [autoscaling_metric_specs.metric_name][google.cloud.aiplatform.v1.AutoscalingMetricSpec.metric_name]
+    /// to `aiplatform.googleapis.com/prediction/online/cpu/utilization` and
+    /// [autoscaling_metric_specs.target][google.cloud.aiplatform.v1.AutoscalingMetricSpec.target] to `80`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec> AutoscalingMetricSpecs {
+      get { return autoscalingMetricSpecs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DedicatedResources);
@@ -446,6 +482,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (MinReplicaCount != other.MinReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
+      if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -455,6 +492,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (MinReplicaCount != 0) hash ^= MinReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
+      hash ^= autoscalingMetricSpecs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -483,6 +521,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(MaxReplicaCount);
       }
+      autoscalingMetricSpecs_.WriteTo(output, _repeated_autoscalingMetricSpecs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -504,6 +543,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(MaxReplicaCount);
       }
+      autoscalingMetricSpecs_.WriteTo(ref output, _repeated_autoscalingMetricSpecs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -522,6 +562,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MaxReplicaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxReplicaCount);
       }
+      size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -545,6 +586,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.MaxReplicaCount != 0) {
         MaxReplicaCount = other.MaxReplicaCount;
       }
+      autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -574,6 +616,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             MaxReplicaCount = input.ReadInt32();
             break;
           }
+          case 34: {
+            autoscalingMetricSpecs_.AddEntriesFrom(input, _repeated_autoscalingMetricSpecs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -601,6 +647,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             MaxReplicaCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            autoscalingMetricSpecs_.AddEntriesFrom(ref input, _repeated_autoscalingMetricSpecs_codec);
             break;
           }
         }
@@ -1500,6 +1550,233 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             BootDiskSizeGb = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The metric specification that defines the target resource utilization
+  /// (CPU utilization, accelerator's duty cycle, and so on) for calculating the
+  /// desired replica count.
+  /// </summary>
+  public sealed partial class AutoscalingMetricSpec : pb::IMessage<AutoscalingMetricSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingMetricSpec> _parser = new pb::MessageParser<AutoscalingMetricSpec>(() => new AutoscalingMetricSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AutoscalingMetricSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingMetricSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingMetricSpec(AutoscalingMetricSpec other) : this() {
+      metricName_ = other.metricName_;
+      target_ = other.target_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AutoscalingMetricSpec Clone() {
+      return new AutoscalingMetricSpec(this);
+    }
+
+    /// <summary>Field number for the "metric_name" field.</summary>
+    public const int MetricNameFieldNumber = 1;
+    private string metricName_ = "";
+    /// <summary>
+    /// Required. The resource metric name.
+    /// Supported metrics:
+    ///
+    /// * For Online Prediction:
+    /// * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle`
+    /// * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MetricName {
+      get { return metricName_; }
+      set {
+        metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 2;
+    private int target_;
+    /// <summary>
+    /// The target resource utilization in percentage (1% - 100%) for the given
+    /// metric; once the real usage deviates from the target by a certain
+    /// percentage, the machine replicas change. The default value is 60
+    /// (representing 60%) if not provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Target {
+      get { return target_; }
+      set {
+        target_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingMetricSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AutoscalingMetricSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MetricName != other.MetricName) return false;
+      if (Target != other.Target) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MetricName.Length != 0) hash ^= MetricName.GetHashCode();
+      if (Target != 0) hash ^= Target.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MetricName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MetricName);
+      }
+      if (Target != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Target);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MetricName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MetricName);
+      }
+      if (Target != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Target);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MetricName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MetricName);
+      }
+      if (Target != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Target);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AutoscalingMetricSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MetricName.Length != 0) {
+        MetricName = other.MetricName;
+      }
+      if (other.Target != 0) {
+        Target = other.Target;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MetricName = input.ReadString();
+            break;
+          }
+          case 16: {
+            Target = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MetricName = input.ReadString();
+            break;
+          }
+          case 16: {
+            Target = input.ReadInt32();
             break;
           }
         }

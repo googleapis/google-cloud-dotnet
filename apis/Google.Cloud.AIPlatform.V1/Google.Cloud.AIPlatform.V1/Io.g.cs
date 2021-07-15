@@ -635,7 +635,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Accepted forms:
     ///
     /// *  BigQuery path. For example:
-    /// `bq://projectId` or `bq://projectId.bqDatasetId.bqTableId`.
+    /// `bq://projectId` or `bq://projectId.bqDatasetId` or
+    /// `bq://projectId.bqDatasetId.bqTableId`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OutputUri {

@@ -240,6 +240,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -251,15 +257,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual PredictResponse Predict(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PredictResponse Predict(string endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, gaxgrpc::CallSettings callSettings = null) =>
             Predict(new PredictRequest
             {
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
@@ -278,6 +278,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -289,15 +295,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PredictResponse> PredictAsync(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PredictResponse> PredictAsync(string endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, gaxgrpc::CallSettings callSettings = null) =>
             PredictAsync(new PredictRequest
             {
                 Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
@@ -316,6 +316,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -327,16 +333,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PredictResponse> PredictAsync(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, st::CancellationToken cancellationToken) =>
-            PredictAsync(endpoint, instances, parameters, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<PredictResponse> PredictAsync(string endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, st::CancellationToken cancellationToken) =>
+            PredictAsync(endpoint, parameters, instances, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Perform an online prediction.
@@ -346,6 +346,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -357,15 +363,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual PredictResponse Predict(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PredictResponse Predict(EndpointName endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, gaxgrpc::CallSettings callSettings = null) =>
             Predict(new PredictRequest
             {
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
@@ -384,6 +384,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -395,15 +401,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PredictResponse> PredictAsync(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PredictResponse> PredictAsync(EndpointName endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, gaxgrpc::CallSettings callSettings = null) =>
             PredictAsync(new PredictRequest
             {
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
@@ -422,6 +422,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// Format:
         /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
         /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
         /// <param name="instances">
         /// Required. The instances that are the input to the prediction call.
         /// A DeployedModel may have an upper limit on the number of instances it
@@ -433,16 +439,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </param>
-        /// <param name="parameters">
-        /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
-        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
-        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
-        /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PredictResponse> PredictAsync(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, st::CancellationToken cancellationToken) =>
-            PredictAsync(endpoint, instances, parameters, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<PredictResponse> PredictAsync(EndpointName endpoint, wkt::Value parameters, scg::IEnumerable<wkt::Value> instances, st::CancellationToken cancellationToken) =>
+            PredictAsync(endpoint, parameters, instances, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PredictionService client wrapper implementation, for convenient use.</summary>
