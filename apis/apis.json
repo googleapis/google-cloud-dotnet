@@ -1317,7 +1317,7 @@
     },
     {
       "id": "Google.Cloud.Iap.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Identity-Aware Proxy",
       "productUrl": "https://cloud.google.com/iap/docs/",
@@ -1328,7 +1328,9 @@
         "access"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.2.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Google.Cloud.Iam.V1": "2.2.0",
+        "Grpc.Core": "2.38.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/iap/v1"
