@@ -584,8 +584,7 @@ shell.run(
                 new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
                 // Package-related properties
                 new XElement("Description", api.Description),
-                new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
-                new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC")
+                new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
             if (dependencies.ContainsKey(GrpcPackage))
             {
