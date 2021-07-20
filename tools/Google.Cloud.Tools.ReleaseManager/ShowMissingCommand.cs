@@ -35,29 +35,29 @@ namespace Google.Cloud.Tools.ReleaseManager
             var catalog = ApiCatalog.Load();
             var root = DirectoryLayout.DetermineRootDirectory();
             var googleapis = Path.Combine(root, "googleapis");
-            var directory = ServiceDirectory.LoadFromGoogleApis(googleapis);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
             var stabilityFilter = BuildStabilityFilter(args[0]);
 
             var ignoredOrGeneratedPaths = new HashSet<string>(catalog.IgnoredPaths.Keys);
             ignoredOrGeneratedPaths.UnionWith(catalog.Apis.Select(api => api.ProtoPath));
 
-            var missingServices = directory.Services
+            var missingApis = apiIndex.Apis
                 .Where(stabilityFilter)
-                .Where(svc => !ignoredOrGeneratedPaths.Contains(svc.ServiceDirectory))
+                .Where(api => !ignoredOrGeneratedPaths.Contains(api.Directory))
                 .ToList();
 
-            Console.WriteLine($"Missing services: {missingServices.Count}");
-            foreach (var service in missingServices)
+            Console.WriteLine($"Missing apis: {missingApis.Count}");
+            foreach (var api in missingApis)
             {
-                Console.WriteLine(service.ServiceDirectory);
+                Console.WriteLine($"{api.Directory} => {api.DeriveCSharpNamespace()}");
             }
         }
 
-        private static Func<ServiceDirectory.Service, bool> BuildStabilityFilter(string minStability) => minStability switch
+        private static Func<Api, bool> BuildStabilityFilter(string minStability) => minStability switch
         {
-            "stable" => service => service.Stable,
-            "beta" => service => service.Stable || service.Version.Contains("beta"),
-            "alpha" => service => true,
+            "stable" => api => api.Stable,
+            "beta" => api => api.Stable || api.Version.Contains("beta"),
+            "alpha" => api => true,
             _ => throw new UserErrorException($"Invalid min-stability specified. Valid values: stable, beta, alpha")
         };
     }
