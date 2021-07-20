@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -31,8 +33,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         protected override void ExecuteImpl(string[] args)
         {
             var catalog = ApiCatalog.Load();
-            // Note: for now, we could actually load it from apis/ServiceDirectory, but hey...
-            var directory = ServiceDirectory.LoadFromGoogleapis();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            var directory = ServiceDirectory.LoadFromGoogleApis(googleapis);
             var stabilityFilter = BuildStabilityFilter(args[0]);
 
             var ignoredOrGeneratedPaths = new HashSet<string>(catalog.IgnoredPaths.Keys);
@@ -50,7 +53,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private static Func<Service, bool> BuildStabilityFilter(string minStability) => minStability switch
+        private static Func<ServiceDirectory.Service, bool> BuildStabilityFilter(string minStability) => minStability switch
         {
             "stable" => service => service.Stable,
             "beta" => service => service.Stable || service.Version.Contains("beta"),

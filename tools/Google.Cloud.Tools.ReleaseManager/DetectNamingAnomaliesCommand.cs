@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using System;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -27,14 +29,16 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override void ExecuteImpl(string[] args)
         {
-            var directory = ServiceDirectory.LoadFromGoogleapis();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            var directory = ServiceDirectory.LoadFromGoogleApis(googleapis);
             foreach (var api in directory.Services)
             {
                 ReportAnomalies(api);
             }
         }
 
-        private static void ReportAnomalies(Service api)
+        private static void ReportAnomalies(ServiceDirectory.Service api)
         {
             var titleWords = GetTitleWords(api);
 
@@ -50,7 +54,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // from the title.
             foreach (var segment in api.PackageFromDirectory.Split('.'))
             {
-                var sequence = FindTitleWordSequence(api, segment, titleWords);
+                var sequence = FindTitleWordSequence(segment, titleWords);
                 if (sequence is null)
                 {
                     continue;
@@ -74,7 +78,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // - google/cloud/managedidentities (Managed Service for Microsoft Active Directory API)
         }
 
-        private static string[] FindTitleWordSequence(Service api, string packageSegment, string[] titleWords)
+        private static string[] FindTitleWordSequence(string packageSegment, string[] titleWords)
         {
             // Look for any sequence of multiple words which (when combined and lower-cased) matches the segment.
             for (int start = 0; start < titleWords.Length - 1; start++)
@@ -92,7 +96,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             return null;
         }
 
-        private static string[] GetTitleWords(Service api)
+        private static string[] GetTitleWords(ServiceDirectory.Service api)
         {
             string title = api.Title;
             if (title.EndsWith(" API"))
