@@ -33,14 +33,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public QueryOptionsTests(ReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [Fact]
+        [SkippableFact]
         public async Task PointReadWithConnectionLevelQueryOptions()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't yet support an optimizer statistics package");
             using (var connection = _fixture.GetConnection())
             {
                 connection.QueryOptions = QueryOptions.Empty
                     .WithOptimizerVersion("1")
-                    .WithOptimizerStatisticsPackage("auto_20191128_14_47_22UTC");
+                    .WithOptimizerStatisticsPackage("latest");
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
@@ -53,15 +54,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task PointReadWithQueryLevelOptions()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't yet support an optimizer statistics package");
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 cmd.QueryOptions = QueryOptions.Empty
                     .WithOptimizerVersion("1")
-                    .WithOptimizerStatisticsPackage("auto_20191128_14_47_22UTC");
+                    .WithOptimizerStatisticsPackage("latest");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
