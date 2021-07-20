@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -42,7 +43,9 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"API {id} already exists in the API catalog.");
             }
-            var serviceDirectory = ServiceDirectory.LoadFromGoogleapis();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            var serviceDirectory = ServiceDirectory.LoadFromGoogleApis(googleapis);
 
             var service = serviceDirectory.Services.FirstOrDefault(service => service.CSharpNamespaceFromProtos == id);
             if (service is null)
