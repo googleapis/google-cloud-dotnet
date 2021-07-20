@@ -31,28 +31,28 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var googleapis = Path.Combine(root, "googleapis");
-            var directory = ServiceDirectory.LoadFromGoogleApis(googleapis);
-            foreach (var api in directory.Services)
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
+            foreach (var api in apiIndex.Apis)
             {
                 ReportAnomalies(api);
             }
         }
 
-        private static void ReportAnomalies(ServiceDirectory.Service api)
+        private static void ReportAnomalies(Api api)
         {
             var titleWords = GetTitleWords(api);
 
-            var csharpNs = api.CSharpNamespaceFromProtos;
+            var csharpNs = api.DeriveCSharpNamespace();
 
             // First detect the occasional problem of misconfiguration to "V1beta1" or "v1beta1" instead of "V1Beta1".
             if (Regex.IsMatch(csharpNs, @"\.V\d+[a-z][^.]*$") || Regex.IsMatch(csharpNs, @"\.v[^.]*"))
             {
-                Console.WriteLine($"{api.PackageFromDirectory} has bad version number in C# namespace {csharpNs}");
+                Console.WriteLine($"{api.Id} has bad version number in C# namespace {csharpNs}");
             }
 
             // Split the protobuf package into segments and see whether any segment matches multiple words
             // from the title.
-            foreach (var segment in api.PackageFromDirectory.Split('.'))
+            foreach (var segment in api.Id.Split('.'))
             {
                 var sequence = FindTitleWordSequence(segment, titleWords);
                 if (sequence is null)
@@ -66,7 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var expectedUnconfiguredSegment = char.ToUpperInvariant(segment[0]) + segment[1..];
                 if (csharpNs.Split('.').Contains(expectedUnconfiguredSegment))
                 {
-                    Console.WriteLine($"{api.PackageFromDirectory} may need configuration: C# namespace is {csharpNs}");
+                    Console.WriteLine($"{api.Id} may need configuration: C# namespace is {csharpNs}");
                 }
             }
 
@@ -96,7 +96,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             return null;
         }
 
-        private static string[] GetTitleWords(ServiceDirectory.Service api)
+        private static string[] GetTitleWords(Api api)
         {
             string title = api.Title;
             if (title.EndsWith(" API"))
