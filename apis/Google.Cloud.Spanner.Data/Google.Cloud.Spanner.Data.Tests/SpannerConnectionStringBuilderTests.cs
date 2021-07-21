@@ -202,21 +202,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void VersionHeader()
-        {
-            var connectionStringBuilder = new SpannerConnectionStringBuilder("VersionHeader=efcore/1.0");
-            Assert.Equal("efcore/1.0", connectionStringBuilder.VersionHeader);
-            Assert.Equal("efcore", connectionStringBuilder.VersionHeaderName);
-            Assert.Equal("1.0", connectionStringBuilder.VersionHeaderVersion);
-            Assert.Equal("versionheader=efcore/1.0", connectionStringBuilder.ToString());
-            
-            connectionStringBuilder = new SpannerConnectionStringBuilder("");
-            Assert.Null(connectionStringBuilder.VersionHeader);
-            Assert.Null(connectionStringBuilder.VersionHeaderName);
-            Assert.Null(connectionStringBuilder.VersionHeaderVersion);
-        }
-
-        [Fact]
         public void WithDatabase()
         {
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");

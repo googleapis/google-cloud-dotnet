@@ -40,8 +40,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new SpannerConnectionStringBuilder { DataSource = dataSource, Host = "h1", Port = 500, MaximumGrpcChannels = 5 },
                 new SpannerConnectionStringBuilder { DataSource = dataSource, Host = "h1", Port = 500, MaxConcurrentStreamsLowWatermark = 25 },
                 new SpannerConnectionStringBuilder { DataSource = dataSource, Host = "h1", Port = 500, CredentialFile = "creds.json" },
-                new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = h1; Port = 500", new ComputeCredential().ToChannelCredentials()),
-                new SpannerConnectionStringBuilder { DataSource = dataSource, Host = "h1", Port = 500, VersionHeader = "efcore/1.0" }
+                new SpannerConnectionStringBuilder($"Data Source={dataSource}; Host = h1; Port = 500", new ComputeCredential().ToChannelCredentials())
             };
 
             var options = new SpannerClientCreationOptions(builder);
@@ -62,8 +61,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var unequalBuilders = new[]
             {
                 new SpannerConnectionStringBuilder { DataSource = dataSource, CredentialFile = "creds.json" },
-                new SpannerConnectionStringBuilder($"Data Source={dataSource}", new ComputeCredential().ToChannelCredentials()),
-                new SpannerConnectionStringBuilder { DataSource = dataSource, VersionHeader = "efcore/1.0" }
+                new SpannerConnectionStringBuilder($"Data Source={dataSource}", new ComputeCredential().ToChannelCredentials())
             };
 
             var options = new SpannerClientCreationOptions(builder);
@@ -107,41 +105,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
             var options = new SpannerClientCreationOptions(builder);
             await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
-        }
-
-        [Theory]
-        [InlineData("efcore/1.0", "efcore", "1.0")]
-        [InlineData("efcore/2.0", "efcore", "2.0")]
-        [InlineData("efcore/1", "efcore", "1")]
-        [InlineData("efcore/1.0.0.0", "efcore", "1.0.0.0")]
-        public void ValidVersionHeader(string header, string name, string version)
-        {
-            var dataSource = "projects/p1/instances/i1/databases/d1";
-            var connectionString = $"DataSource={dataSource};VersionHeader={header}";
-            var builder = new SpannerConnectionStringBuilder(connectionString);
-
-            Assert.Equal(header, builder.VersionHeader);
-            Assert.Equal(name, builder.VersionHeaderName);
-            Assert.Equal(version, builder.VersionHeaderVersion);
-                
-            var options = new SpannerClientCreationOptions(builder);
-            Assert.Equal(name, options.AdditionalVersionHeaderName);
-            Assert.Equal(version, options.AdditionalVersionHeaderVersion);
-        }
-
-        [Theory]
-        [InlineData("some-header/2.0")]
-        [InlineData("some-header")]
-        [InlineData("2.0")]
-        [InlineData("/")]
-        [InlineData("efcore")]
-        [InlineData("efcore/")]
-        [InlineData("/1.0")]
-        public void InvalidVersionHeaderName(string header)
-        {
-            var dataSource = "projects/p1/instances/i1/databases/d1";
-            var connectionString = $"DataSource={dataSource};VersionHeader={header}";
-            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder(connectionString));
         }
     }
 }

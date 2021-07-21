@@ -694,7 +694,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
 
             var sessionPoolManager = new SessionPoolManager(
-                sessionPoolOptions, spannerClient.Settings.Logger,
+                sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger,
                 (_o, _s, _l) =>
                 {
                     Assert.True(_o.UsesEmulator);
@@ -799,7 +799,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 MaintenanceLoopDelay = TimeSpan.Zero
             };
 
-            var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
+            var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
 
