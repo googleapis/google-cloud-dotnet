@@ -86,6 +86,37 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void Create_UsesDefaultLogger()
+        {
+            var manager = SessionPoolManager.Create(new SessionPoolOptions());
+            Assert.Same(Logger.DefaultLogger, manager.Logger);
+        }
+
+        [Fact]
+        public void CreateWithNullSettings_UsesDefaultLogger()
+        {
+            var manager = SessionPoolManager.Create(new SessionPoolOptions(), null, null);
+            Assert.Same(Logger.DefaultLogger, manager.Logger);
+        }
+
+        [Fact]
+        public void CreateWithSettings_UsesLoggerInSettings()
+        {
+            var settings = new SpannerSettings {Logger = new DefaultLogger()};
+            var manager = SessionPoolManager.Create(new SessionPoolOptions(), settings);
+            Assert.Same(settings.Logger, manager.Logger);
+        }
+
+        [Fact]
+        public void CreateWithSettingsAndLogger_UsesLogger()
+        {
+            var settings = new SpannerSettings{Logger = new DefaultLogger()};
+            var logger = new DefaultLogger();
+            var manager = SessionPoolManager.Create(new SessionPoolOptions(), settings, logger);
+            Assert.Same(logger, manager.Logger);
+        }
+
+        [Fact]
         public async Task ReleaseDecreasesCount()
         {
             var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.DefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
@@ -128,7 +159,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private class FailingSpannerClient : SpannerClient
         {
             // A simple non-counting factory.
-            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient());
+            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
 
             public FailingSpannerClient(SpannerSettings settings = null)
             {
