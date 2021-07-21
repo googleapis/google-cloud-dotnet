@@ -1270,7 +1270,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/functions/v1"
+      "protoPath": "google/cloud/functions/v1",
+      "serviceYaml": "cloudfunctions_v1.yaml"
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",

@@ -99,6 +99,7 @@ generate_microgenerator() {
   GRPC_GENERATION_DIR=$API_TMP_DIR/grpc-$PACKAGE_ID
   API_OUT_DIR=apis
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID protoPath)
+  SERVICE_YAML=$API_SRC_DIR/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID serviceYaml)
 
   # Delete previously-generated files
   delete_generated apis/$1/$1
@@ -111,6 +112,12 @@ generate_microgenerator() {
   if [[ -f "$GRPC_SERVICE_CONFIG" ]]
   then
     SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
+  fi
+
+  SERVICE_YAML_OPTION=
+  if [[ -f "$SERVICE_YAML" ]]
+  then
+    SERVICE_YAML_OPTION=--gapic_opt=service-config-yaml="$SERVICE_YAML"
   fi
 
   # Default to "all resources are common" but allow a per-API config file too.
@@ -173,6 +180,7 @@ generate_microgenerator() {
     --gapic_out=$API_TMP_DIR \
     --gapic_opt=metadata \
     $SERVICE_CONFIG_OPTION \
+    $SERVICE_YAML_OPTION \
     $COMMON_RESOURCES_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
