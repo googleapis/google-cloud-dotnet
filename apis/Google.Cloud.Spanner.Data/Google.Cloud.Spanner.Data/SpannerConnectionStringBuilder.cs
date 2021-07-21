@@ -53,7 +53,6 @@ namespace Google.Cloud.Spanner.Data
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
         private const string LogCommitStatsKeyword = "LogCommitStats";
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
-        private const string VersionHeaderKeyword = "VersionHeader";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -335,40 +334,6 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        /// <summary>
-        /// Other known clients may set an additional value for the x-goog-api-client version header. This
-        /// array contains the only valid values.
-        /// </summary>
-        private static readonly string[] s_allowedVersionHeaders = { "efcore" };
-
-        private string ValidateVersionHeader(string header)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(header, nameof(header));
-            GaxPreconditions.CheckArgument(header.Contains('/'), nameof(header), "Invalid header value. It must contain a '/' between the name and version.");
-            var parts = header.Split('/');
-            GaxPreconditions.CheckArgument(
-                s_allowedVersionHeaders.Contains(parts[0]),
-                nameof(header), 
-                "Invalid header value. This property is not for public use and should not be set by end users."
-            );
-            GaxPreconditions.CheckNotNullOrEmpty(parts[1], "version");
-            return header;
-        }
-        
-        /// <summary>
-        /// Sets an additional value for the x-goog-api-client version header.
-        /// End-users should never use this property; it is intended for use in Google libraries which provide
-        /// a higher level abstraction over the normal client library.
-        /// </summary>
-        public string VersionHeader
-        {
-            get => GetValueOrDefault(VersionHeaderKeyword, null);
-            set => this[VersionHeaderKeyword] = ValidateVersionHeader(value);
-        }
-
-        internal string VersionHeaderName => string.IsNullOrEmpty(VersionHeader) ? null : VersionHeader.Split('/')[0];
-        internal string VersionHeaderVersion => string.IsNullOrEmpty(VersionHeader) ? null : VersionHeader.Split('/')[1];
-
         internal ChannelCredentials CredentialOverride { get; }
 
         private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
@@ -490,10 +455,6 @@ namespace Google.Cloud.Spanner.Data
                 if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
                 {
                     value = ValidatedDataSource((string)value);
-                }
-                if (string.Equals(keyword, VersionHeaderKeyword, StringComparison.OrdinalIgnoreCase))
-                {
-                    value = ValidateVersionHeader((string) value);
                 }
                 base[keyword] = value;
             }
