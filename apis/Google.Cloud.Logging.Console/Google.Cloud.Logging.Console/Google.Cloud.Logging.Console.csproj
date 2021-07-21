@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>ConsoleFormatter for Google Cloud Logging.</Description>
     <PackageTags>Logging;Stackdriver;ILogger;Console;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>Latest</LangVersion>

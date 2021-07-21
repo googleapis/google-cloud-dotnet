@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Security Command Center Settings API.</Description>
     <PackageTags>security;data risk;settings;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

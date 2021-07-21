@@ -36,7 +36,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "L21hbnVhbF9iYXRjaF90dW5pbmdfcGFyYW1ldGVycy5wcm90bxocZ29vZ2xl",
             "L3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
             "dGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aHGdvb2dsZS9h",
-            "cGkvYW5ub3RhdGlvbnMucHJvdG8iuw8KEkJhdGNoUHJlZGljdGlvbkpvYhIR",
+            "cGkvYW5ub3RhdGlvbnMucHJvdG8i4A8KEkJhdGNoUHJlZGljdGlvbkpvYhIR",
             "CgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
             "NgoFbW9kZWwYAyABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
             "LmNvbS9Nb2RlbBJVCgxpbnB1dF9jb25maWcYBCABKAsyOi5nb29nbGUuY2xv",
@@ -73,25 +73,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRp",
             "b25IABJPChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgDIAEoCzIvLmdvb2dsZS5j",
             "bG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IABIfChJw",
-            "cmVkaWN0aW9uc19mb3JtYXQYASABKAlCA+BBAkINCgtkZXN0aW5hdGlvbhps",
-            "CgpPdXRwdXRJbmZvEiMKFGdjc19vdXRwdXRfZGlyZWN0b3J5GAEgASgJQgPg",
-            "QQNIABImChdiaWdxdWVyeV9vdXRwdXRfZGF0YXNldBgCIAEoCUID4EEDSABC",
-            "EQoPb3V0cHV0X2xvY2F0aW9uGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAE6hgHqQYIBCixhaXBsYXRmb3JtLmdvb2ds",
-            "ZWFwaXMuY29tL0JhdGNoUHJlZGljdGlvbkpvYhJScHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2JhdGNoUHJlZGljdGlvbkpvYnMv",
-            "e2JhdGNoX3ByZWRpY3Rpb25fam9ifULbAQoeY29tLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxQhdCYXRjaFByZWRpY3Rpb25Kb2JQcm90b1ABWkRnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxh",
-            "dGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "cmVkaWN0aW9uc19mb3JtYXQYASABKAlCA+BBAkINCgtkZXN0aW5hdGlvbhqQ",
+            "AQoKT3V0cHV0SW5mbxIjChRnY3Nfb3V0cHV0X2RpcmVjdG9yeRgBIAEoCUID",
+            "4EEDSAASJgoXYmlncXVlcnlfb3V0cHV0X2RhdGFzZXQYAiABKAlCA+BBA0gA",
+            "EiIKFWJpZ3F1ZXJ5X291dHB1dF90YWJsZRgEIAEoCUID4EEDQhEKD291dHB1",
+            "dF9sb2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBOoYB6kGCAQosYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9CYXRjaFByZWRpY3Rpb25Kb2ISUnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9iYXRjaFByZWRpY3Rpb25Kb2JzL3tiYXRjaF9w",
+            "cmVkaWN0aW9uX2pvYn1C2wEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MUIXQmF0Y2hQcmVkaWN0aW9uSm9iUHJvdG9QAVpEZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3Yx",
+            "O2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
+            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
+            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.CompletionStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParametersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Parser, new[]{ "Name", "DisplayName", "Model", "InputConfig", "ModelParameters", "OutputConfig", "DedicatedResources", "ManualBatchTuningParameters", "OutputInfo", "State", "Error", "PartialFailures", "ResourcesConsumed", "CompletionStats", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig.Parser, new[]{ "GcsSource", "BigquerySource", "InstancesFormat" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination", "PredictionsFormat" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo.Parser, new[]{ "GcsOutputDirectory", "BigqueryOutputDataset" }, new[]{ "OutputLocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo.Parser, new[]{ "GcsOutputDirectory", "BigqueryOutputDataset", "BigqueryOutputTable" }, new[]{ "OutputLocation" }, null, null, null),
             null, })
           }));
     }
@@ -1563,8 +1564,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `errors_N.&lt;extension>` files are created (N depends on total number
         /// of failed predictions). These files contain the failed instances,
         /// as per their schema, followed by an additional `error` field which as
-        /// value has
-        /// [`google.rpc.Status`](Status)
+        /// value has [google.rpc.Status][google.rpc.Status]
         /// containing only `code` and `message` fields.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1595,7 +1595,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// prediction schemata. The `errors` table contains rows for which the
         /// prediction has failed, it has instance columns, as per the
         /// instance schema, followed by a single "errors" column, which as values
-        /// has [`google.rpc.Status`](Status)
+        /// has [google.rpc.Status][google.rpc.Status]
         /// represented as a STRUCT, and containing only `code` and `message`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1877,6 +1877,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public OutputInfo(OutputInfo other) : this() {
+          bigqueryOutputTable_ = other.bigqueryOutputTable_;
           switch (other.OutputLocationCase) {
             case OutputLocationOneofCase.GcsOutputDirectory:
               GcsOutputDirectory = other.GcsOutputDirectory;
@@ -1925,6 +1926,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "bigquery_output_table" field.</summary>
+        public const int BigqueryOutputTableFieldNumber = 4;
+        private string bigqueryOutputTable_ = "";
+        /// <summary>
+        /// Output only. The name of the BigQuery table created, in
+        /// `predictions_&lt;timestamp>`
+        /// format, into which the prediction output is written.
+        /// Can be used by UI to generate the BigQuery output path, for example.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string BigqueryOutputTable {
+          get { return bigqueryOutputTable_; }
+          set {
+            bigqueryOutputTable_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         private object outputLocation_;
         /// <summary>Enum of possible cases for the "output_location" oneof.</summary>
         public enum OutputLocationOneofCase {
@@ -1959,6 +1977,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (GcsOutputDirectory != other.GcsOutputDirectory) return false;
           if (BigqueryOutputDataset != other.BigqueryOutputDataset) return false;
+          if (BigqueryOutputTable != other.BigqueryOutputTable) return false;
           if (OutputLocationCase != other.OutputLocationCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1968,6 +1987,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
           if (outputLocationCase_ == OutputLocationOneofCase.BigqueryOutputDataset) hash ^= BigqueryOutputDataset.GetHashCode();
+          if (BigqueryOutputTable.Length != 0) hash ^= BigqueryOutputTable.GetHashCode();
           hash ^= (int) outputLocationCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1993,6 +2013,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(BigqueryOutputDataset);
           }
+          if (BigqueryOutputTable.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(BigqueryOutputTable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2010,6 +2034,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(BigqueryOutputDataset);
           }
+          if (BigqueryOutputTable.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(BigqueryOutputTable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2025,6 +2053,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (outputLocationCase_ == OutputLocationOneofCase.BigqueryOutputDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(BigqueryOutputDataset);
           }
+          if (BigqueryOutputTable.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(BigqueryOutputTable);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -2035,6 +2066,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         public void MergeFrom(OutputInfo other) {
           if (other == null) {
             return;
+          }
+          if (other.BigqueryOutputTable.Length != 0) {
+            BigqueryOutputTable = other.BigqueryOutputTable;
           }
           switch (other.OutputLocationCase) {
             case OutputLocationOneofCase.GcsOutputDirectory:
@@ -2067,6 +2101,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 BigqueryOutputDataset = input.ReadString();
                 break;
               }
+              case 34: {
+                BigqueryOutputTable = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -2087,6 +2125,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 BigqueryOutputDataset = input.ReadString();
+                break;
+              }
+              case 34: {
+                BigqueryOutputTable = input.ReadString();
                 break;
               }
             }

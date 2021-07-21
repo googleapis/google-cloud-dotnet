@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library for the Recommender API, which provides usage recommendations for Cloud products and services.</Description>
     <PackageTags>Recommender;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

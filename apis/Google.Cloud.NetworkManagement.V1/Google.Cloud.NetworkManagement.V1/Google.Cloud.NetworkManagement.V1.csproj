@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Network Management API, which provides a collection of network performance monitoring and diagnostic capabilities.</Description>
     <PackageTags>network;networking;performance;monitoring;management;diagnostics;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

@@ -1983,6 +1983,136 @@ namespace Google.Cloud.PubSub.V1
             PullAsync(subscription, returnImmediately, maxMessages, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullResponse Pull(string subscription, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
+            Pull(new PullRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNullOrEmpty(subscription, nameof(subscription)),
+                MaxMessages = maxMessages,
+            }, callSettings);
+
+        /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullResponse> PullAsync(string subscription, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
+            PullAsync(new PullRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNullOrEmpty(subscription, nameof(subscription)),
+                MaxMessages = maxMessages,
+            }, callSettings);
+
+        /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullResponse> PullAsync(string subscription, int maxMessages, st::CancellationToken cancellationToken) =>
+            PullAsync(subscription, maxMessages, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullResponse Pull(SubscriptionName subscription, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
+            Pull(new PullRequest
+            {
+                SubscriptionAsSubscriptionName = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                MaxMessages = maxMessages,
+            }, callSettings);
+
+        /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullResponse> PullAsync(SubscriptionName subscription, int maxMessages, gaxgrpc::CallSettings callSettings = null) =>
+            PullAsync(new PullRequest
+            {
+                SubscriptionAsSubscriptionName = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                MaxMessages = maxMessages,
+            }, callSettings);
+
+        /// <summary>
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// </param>
+        /// <param name="maxMessages">
+        /// Required. The maximum number of messages to return for this request. Must
+        /// be a positive integer. The Pub/Sub system may return fewer than the number
+        /// specified.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullResponse> PullAsync(SubscriptionName subscription, int maxMessages, st::CancellationToken cancellationToken) =>
+            PullAsync(subscription, maxMessages, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Bidirectional streaming methods for
         /// <see cref="StreamingPull(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
         /// </summary>

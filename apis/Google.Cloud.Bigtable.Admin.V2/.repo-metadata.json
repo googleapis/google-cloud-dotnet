@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Bigtable.Admin.V2",
   "release_level": "ga",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Admin.V2/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.Admin.V2/latest",
   "library_type": "GAPIC_AUTO"
 }

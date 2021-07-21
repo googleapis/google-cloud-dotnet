@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Builds conversational interfaces (for example, chatbots, and voice-powered apps and devices).</Description>
     <PackageTags>dialogflow;conversation;agents;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

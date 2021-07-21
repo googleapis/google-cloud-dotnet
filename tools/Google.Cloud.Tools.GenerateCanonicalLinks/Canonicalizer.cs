@@ -72,6 +72,10 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             { ("Google.Api", "Google.Api.CommonProtos") },
             { ("Google.Rpc", "Google.Api.CommonProtos") },
             { ("Google.Type", "Google.Api.CommonProtos") },
+
+            // The Google.Cloud.Common package doesn't have a version number after it;
+            // it's easiest to just fix that here.
+            { ("Google.Cloud.Common", "Google.Cloud.Common") },
         };
 
         /// <summary>

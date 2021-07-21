@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the AI Platform API, which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.</Description>
     <PackageTags>ai;ml;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

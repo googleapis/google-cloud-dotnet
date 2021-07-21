@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -62,9 +63,12 @@ namespace Google.Cloud.CloudBuild.V1
             RunBuildTriggerOperationsSettings = existing.RunBuildTriggerOperationsSettings.Clone();
             ReceiveTriggerWebhookSettings = existing.ReceiveTriggerWebhookSettings;
             CreateWorkerPoolSettings = existing.CreateWorkerPoolSettings;
+            CreateWorkerPoolOperationsSettings = existing.CreateWorkerPoolOperationsSettings.Clone();
             GetWorkerPoolSettings = existing.GetWorkerPoolSettings;
             DeleteWorkerPoolSettings = existing.DeleteWorkerPoolSettings;
+            DeleteWorkerPoolOperationsSettings = existing.DeleteWorkerPoolOperationsSettings.Clone();
             UpdateWorkerPoolSettings = existing.UpdateWorkerPoolSettings;
+            UpdateWorkerPoolOperationsSettings = existing.UpdateWorkerPoolOperationsSettings.Clone();
             ListWorkerPoolsSettings = existing.ListWorkerPoolsSettings;
             OnCopy(existing);
         }
@@ -297,6 +301,24 @@ namespace Google.Cloud.CloudBuild.V1
         public gaxgrpc::CallSettings CreateWorkerPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudBuildClient.CreateWorkerPool</c> and
+        /// <c>CloudBuildClient.CreateWorkerPoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateWorkerPoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudBuildClient.GetWorkerPool</c> and <c>CloudBuildClient.GetWorkerPoolAsync</c>.
         /// </summary>
@@ -324,6 +346,24 @@ namespace Google.Cloud.CloudBuild.V1
         public gaxgrpc::CallSettings DeleteWorkerPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudBuildClient.DeleteWorkerPool</c> and
+        /// <c>CloudBuildClient.DeleteWorkerPoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteWorkerPoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudBuildClient.UpdateWorkerPool</c> and <c>CloudBuildClient.UpdateWorkerPoolAsync</c>.
         /// </summary>
@@ -334,6 +374,24 @@ namespace Google.Cloud.CloudBuild.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateWorkerPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudBuildClient.UpdateWorkerPool</c> and
+        /// <c>CloudBuildClient.UpdateWorkerPoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateWorkerPoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1729,42 +1787,212 @@ namespace Google.Cloud.CloudBuild.V1
             ReceiveTriggerWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-        /// 
-        /// This API is experimental.
+        /// Creates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual WorkerPool CreateWorkerPool(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata> CreateWorkerPool(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-        /// 
-        /// This API is experimental.
+        /// Creates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkerPool> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-        /// 
-        /// This API is experimental.
+        /// Creates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkerPool> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
             CreateWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
+        /// <summary>The long-running operations client for <c>CreateWorkerPool</c>.</summary>
+        public virtual lro::OperationsClient CreateWorkerPoolOperationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// Returns information about a `WorkerPool`.
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateWorkerPool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata> PollOnceCreateWorkerPool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWorkerPool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> PollOnceCreateWorkerPoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
         /// 
-        /// This API is experimental.
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata> CreateWorkerPool(string parent, WorkerPool workerPool, string workerPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkerPool(new CreateWorkerPoolRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(string parent, WorkerPool workerPool, string workerPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkerPoolAsync(new CreateWorkerPoolRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(string parent, WorkerPool workerPool, string workerPoolId, st::CancellationToken cancellationToken) =>
+            CreateWorkerPoolAsync(parent, workerPool, workerPoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata> CreateWorkerPool(gagr::LocationName parent, WorkerPool workerPool, string workerPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkerPool(new CreateWorkerPoolRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(gagr::LocationName parent, WorkerPool workerPool, string workerPoolId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkerPoolAsync(new CreateWorkerPoolRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `WorkerPool`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this worker pool will be created.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="workerPool">
+        /// Required. `WorkerPool` resource to create.
+        /// </param>
+        /// <param name="workerPoolId">
+        /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+        /// the final component of the resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters
+        /// are /[a-z][0-9]-/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(gagr::LocationName parent, WorkerPool workerPool, string workerPoolId, st::CancellationToken cancellationToken) =>
+            CreateWorkerPoolAsync(parent, workerPool, workerPoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1773,9 +2001,7 @@ namespace Google.Cloud.CloudBuild.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Returns details of a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1784,9 +2010,7 @@ namespace Google.Cloud.CloudBuild.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Returns details of a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1795,103 +2019,461 @@ namespace Google.Cloud.CloudBuild.V1
             GetWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-        /// 
-        /// This API is experimental.
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkerPool GetWorkerPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkerPool(new GetWorkerPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkerPool> GetWorkerPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkerPoolAsync(new GetWorkerPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkerPool> GetWorkerPoolAsync(string name, st::CancellationToken cancellationToken) =>
+            GetWorkerPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WorkerPool GetWorkerPool(WorkerPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkerPool(new GetWorkerPoolRequest
+            {
+                WorkerPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkerPool> GetWorkerPoolAsync(WorkerPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkerPoolAsync(new GetWorkerPoolRequest
+            {
+                WorkerPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WorkerPool> GetWorkerPoolAsync(WorkerPoolName name, st::CancellationToken cancellationToken) =>
+            GetWorkerPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteWorkerPool(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata> DeleteWorkerPool(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-        /// 
-        /// This API is experimental.
+        /// Deletes a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-        /// 
-        /// This API is experimental.
+        /// Deletes a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
             DeleteWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
+        /// <summary>The long-running operations client for <c>DeleteWorkerPool</c>.</summary>
+        public virtual lro::OperationsClient DeleteWorkerPoolOperationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// Update a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteWorkerPool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata> PollOnceDeleteWorkerPool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteWorkerPool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> PollOnceDeleteWorkerPoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata> DeleteWorkerPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkerPool(new DeleteWorkerPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkerPoolAsync(new DeleteWorkerPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteWorkerPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata> DeleteWorkerPool(WorkerPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkerPool(new DeleteWorkerPoolRequest
+            {
+                WorkerPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(WorkerPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWorkerPoolAsync(new DeleteWorkerPoolRequest
+            {
+                WorkerPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `WorkerPool`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `WorkerPool` to delete.
+        /// Format:
+        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(WorkerPoolName name, st::CancellationToken cancellationToken) =>
+            DeleteWorkerPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual WorkerPool UpdateWorkerPool(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> UpdateWorkerPool(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Updates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkerPool> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Updates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<WorkerPool> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, st::CancellationToken cancellationToken) =>
             UpdateWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
+        /// <summary>The long-running operations client for <c>UpdateWorkerPool</c>.</summary>
+        public virtual lro::OperationsClient UpdateWorkerPoolOperationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// List project's `WorkerPools`.
-        /// 
-        /// This API is experimental.
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateWorkerPool</c>.
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> PollOnceUpdateWorkerPool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateWorkerPool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> PollOnceUpdateWorkerPoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateWorkerPoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a `WorkerPool`.
+        /// </summary>
+        /// <param name="workerPool">
+        /// Required. The `WorkerPool` to update.
+        /// 
+        /// The `name` field is used to identify the `WorkerPool` to update.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// A mask specifying which fields in `worker_pool` to update.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ListWorkerPoolsResponse ListWorkerPools(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
+        public virtual lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> UpdateWorkerPool(WorkerPool workerPool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWorkerPool(new UpdateWorkerPoolRequest
+            {
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                UpdateMask = updateMask,
+            }, callSettings);
 
         /// <summary>
-        /// List project's `WorkerPools`.
+        /// Updates a `WorkerPool`.
+        /// </summary>
+        /// <param name="workerPool">
+        /// Required. The `WorkerPool` to update.
         /// 
-        /// This API is experimental.
+        /// The `name` field is used to identify the `WorkerPool` to update.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// A mask specifying which fields in `worker_pool` to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> UpdateWorkerPoolAsync(WorkerPool workerPool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWorkerPoolAsync(new UpdateWorkerPoolRequest
+            {
+                WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `WorkerPool`.
+        /// </summary>
+        /// <param name="workerPool">
+        /// Required. The `WorkerPool` to update.
+        /// 
+        /// The `name` field is used to identify the `WorkerPool` to update.
+        /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// A mask specifying which fields in `worker_pool` to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> UpdateWorkerPoolAsync(WorkerPool workerPool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateWorkerPoolAsync(workerPool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `WorkerPool`s.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListWorkerPoolsResponse> ListWorkerPoolsAsync(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List project's `WorkerPools`.
-        /// 
-        /// This API is experimental.
+        /// Lists `WorkerPool`s.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListWorkerPoolsResponse> ListWorkerPoolsAsync(ListWorkerPoolsRequest request, st::CancellationToken cancellationToken) =>
-            ListWorkerPoolsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `WorkerPool`s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the collection of `WorkerPools`.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkerPools(new ListWorkerPoolsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `WorkerPool`s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the collection of `WorkerPools`.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkerPoolsAsync(new ListWorkerPoolsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `WorkerPool`s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the collection of `WorkerPools`.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkerPools(new ListWorkerPoolsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `WorkerPool`s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the collection of `WorkerPools`.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkerPoolsAsync(new ListWorkerPoolsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>CloudBuild client wrapper implementation, for convenient use.</summary>
@@ -1931,13 +2513,13 @@ namespace Google.Cloud.CloudBuild.V1
 
         private readonly gaxgrpc::ApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse> _callReceiveTriggerWebhook;
 
-        private readonly gaxgrpc::ApiCall<CreateWorkerPoolRequest, WorkerPool> _callCreateWorkerPool;
+        private readonly gaxgrpc::ApiCall<CreateWorkerPoolRequest, lro::Operation> _callCreateWorkerPool;
 
         private readonly gaxgrpc::ApiCall<GetWorkerPoolRequest, WorkerPool> _callGetWorkerPool;
 
-        private readonly gaxgrpc::ApiCall<DeleteWorkerPoolRequest, wkt::Empty> _callDeleteWorkerPool;
+        private readonly gaxgrpc::ApiCall<DeleteWorkerPoolRequest, lro::Operation> _callDeleteWorkerPool;
 
-        private readonly gaxgrpc::ApiCall<UpdateWorkerPoolRequest, WorkerPool> _callUpdateWorkerPool;
+        private readonly gaxgrpc::ApiCall<UpdateWorkerPoolRequest, lro::Operation> _callUpdateWorkerPool;
 
         private readonly gaxgrpc::ApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse> _callListWorkerPools;
 
@@ -1954,6 +2536,9 @@ namespace Google.Cloud.CloudBuild.V1
             CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings);
             RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings);
             RunBuildTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunBuildTriggerOperationsSettings);
+            CreateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkerPoolOperationsSettings);
+            DeleteWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkerPoolOperationsSettings);
+            UpdateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkerPoolOperationsSettings);
             _callCreateBuild = clientHelper.BuildApiCall<CreateBuildRequest, lro::Operation>(grpcClient.CreateBuildAsync, grpcClient.CreateBuild, effectiveSettings.CreateBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateBuild);
             Modify_CreateBuildApiCall(ref _callCreateBuild);
@@ -1990,19 +2575,19 @@ namespace Google.Cloud.CloudBuild.V1
             _callReceiveTriggerWebhook = clientHelper.BuildApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse>(grpcClient.ReceiveTriggerWebhookAsync, grpcClient.ReceiveTriggerWebhook, effectiveSettings.ReceiveTriggerWebhookSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger", request => request.Trigger);
             Modify_ApiCall(ref _callReceiveTriggerWebhook);
             Modify_ReceiveTriggerWebhookApiCall(ref _callReceiveTriggerWebhook);
-            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, WorkerPool>(grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings);
+            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, lro::Operation>(grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkerPool);
             Modify_CreateWorkerPoolApiCall(ref _callCreateWorkerPool);
-            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>(grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings);
+            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>(grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkerPool);
             Modify_GetWorkerPoolApiCall(ref _callGetWorkerPool);
-            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, wkt::Empty>(grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings);
+            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, lro::Operation>(grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkerPool);
             Modify_DeleteWorkerPoolApiCall(ref _callDeleteWorkerPool);
-            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, WorkerPool>(grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings);
+            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, lro::Operation>(grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings).WithGoogleRequestParam("worker_pool.name", request => request.WorkerPool?.Name);
             Modify_ApiCall(ref _callUpdateWorkerPool);
             Modify_UpdateWorkerPoolApiCall(ref _callUpdateWorkerPool);
-            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>(grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings);
+            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>(grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkerPools);
             Modify_ListWorkerPoolsApiCall(ref _callListWorkerPools);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -2034,13 +2619,13 @@ namespace Google.Cloud.CloudBuild.V1
 
         partial void Modify_ReceiveTriggerWebhookApiCall(ref gaxgrpc::ApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse> call);
 
-        partial void Modify_CreateWorkerPoolApiCall(ref gaxgrpc::ApiCall<CreateWorkerPoolRequest, WorkerPool> call);
+        partial void Modify_CreateWorkerPoolApiCall(ref gaxgrpc::ApiCall<CreateWorkerPoolRequest, lro::Operation> call);
 
         partial void Modify_GetWorkerPoolApiCall(ref gaxgrpc::ApiCall<GetWorkerPoolRequest, WorkerPool> call);
 
-        partial void Modify_DeleteWorkerPoolApiCall(ref gaxgrpc::ApiCall<DeleteWorkerPoolRequest, wkt::Empty> call);
+        partial void Modify_DeleteWorkerPoolApiCall(ref gaxgrpc::ApiCall<DeleteWorkerPoolRequest, lro::Operation> call);
 
-        partial void Modify_UpdateWorkerPoolApiCall(ref gaxgrpc::ApiCall<UpdateWorkerPoolRequest, WorkerPool> call);
+        partial void Modify_UpdateWorkerPoolApiCall(ref gaxgrpc::ApiCall<UpdateWorkerPoolRequest, lro::Operation> call);
 
         partial void Modify_ListWorkerPoolsApiCall(ref gaxgrpc::ApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse> call);
 
@@ -2474,38 +3059,35 @@ namespace Google.Cloud.CloudBuild.V1
             return _callReceiveTriggerWebhook.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>CreateWorkerPool</c>.</summary>
+        public override lro::OperationsClient CreateWorkerPoolOperationsClient { get; }
+
         /// <summary>
-        /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-        /// 
-        /// This API is experimental.
+        /// Creates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override WorkerPool CreateWorkerPool(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata> CreateWorkerPool(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateWorkerPoolRequest(ref request, ref callSettings);
-            return _callCreateWorkerPool.Sync(request, callSettings);
+            return new lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>(_callCreateWorkerPool.Sync(request, callSettings), CreateWorkerPoolOperationsClient);
         }
 
         /// <summary>
-        /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-        /// 
-        /// This API is experimental.
+        /// Creates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<WorkerPool> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>> CreateWorkerPoolAsync(CreateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateWorkerPoolRequest(ref request, ref callSettings);
-            return _callCreateWorkerPool.Async(request, callSettings);
+            return new lro::Operation<WorkerPool, CreateWorkerPoolOperationMetadata>(await _callCreateWorkerPool.Async(request, callSettings).ConfigureAwait(false), CreateWorkerPoolOperationsClient);
         }
 
         /// <summary>
-        /// Returns information about a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Returns details of a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2517,9 +3099,7 @@ namespace Google.Cloud.CloudBuild.V1
         }
 
         /// <summary>
-        /// Returns information about a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Returns details of a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2530,88 +3110,82 @@ namespace Google.Cloud.CloudBuild.V1
             return _callGetWorkerPool.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>DeleteWorkerPool</c>.</summary>
+        public override lro::OperationsClient DeleteWorkerPoolOperationsClient { get; }
+
         /// <summary>
-        /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-        /// 
-        /// This API is experimental.
+        /// Deletes a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void DeleteWorkerPool(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata> DeleteWorkerPool(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteWorkerPoolRequest(ref request, ref callSettings);
-            _callDeleteWorkerPool.Sync(request, callSettings);
+            return new lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>(_callDeleteWorkerPool.Sync(request, callSettings), DeleteWorkerPoolOperationsClient);
         }
 
         /// <summary>
-        /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-        /// 
-        /// This API is experimental.
+        /// Deletes a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>> DeleteWorkerPoolAsync(DeleteWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteWorkerPoolRequest(ref request, ref callSettings);
-            return _callDeleteWorkerPool.Async(request, callSettings);
+            return new lro::Operation<wkt::Empty, DeleteWorkerPoolOperationMetadata>(await _callDeleteWorkerPool.Async(request, callSettings).ConfigureAwait(false), DeleteWorkerPoolOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateWorkerPool</c>.</summary>
+        public override lro::OperationsClient UpdateWorkerPoolOperationsClient { get; }
+
         /// <summary>
-        /// Update a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Updates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override WorkerPool UpdateWorkerPool(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> UpdateWorkerPool(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateWorkerPoolRequest(ref request, ref callSettings);
-            return _callUpdateWorkerPool.Sync(request, callSettings);
+            return new lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>(_callUpdateWorkerPool.Sync(request, callSettings), UpdateWorkerPoolOperationsClient);
         }
 
         /// <summary>
-        /// Update a `WorkerPool`.
-        /// 
-        /// This API is experimental.
+        /// Updates a `WorkerPool`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<WorkerPool> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>> UpdateWorkerPoolAsync(UpdateWorkerPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateWorkerPoolRequest(ref request, ref callSettings);
-            return _callUpdateWorkerPool.Async(request, callSettings);
+            return new lro::Operation<WorkerPool, UpdateWorkerPoolOperationMetadata>(await _callUpdateWorkerPool.Async(request, callSettings).ConfigureAwait(false), UpdateWorkerPoolOperationsClient);
         }
 
         /// <summary>
-        /// List project's `WorkerPools`.
-        /// 
-        /// This API is experimental.
+        /// Lists `WorkerPool`s.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ListWorkerPoolsResponse ListWorkerPools(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListWorkerPoolsRequest(ref request, ref callSettings);
-            return _callListWorkerPools.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWorkerPoolsRequest, ListWorkerPoolsResponse, WorkerPool>(_callListWorkerPools, request, callSettings);
         }
 
         /// <summary>
-        /// List project's `WorkerPools`.
-        /// 
-        /// This API is experimental.
+        /// Lists `WorkerPool`s.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ListWorkerPoolsResponse> ListWorkerPoolsAsync(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(ListWorkerPoolsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListWorkerPoolsRequest(ref request, ref callSettings);
-            return _callListWorkerPools.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkerPoolsRequest, ListWorkerPoolsResponse, WorkerPool>(_callListWorkerPools, request, callSettings);
         }
     }
 
@@ -2620,6 +3194,10 @@ namespace Google.Cloud.CloudBuild.V1
     }
 
     public partial class ListBuildTriggersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListWorkerPoolsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2635,6 +3213,14 @@ namespace Google.Cloud.CloudBuild.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BuildTrigger> GetEnumerator() => Triggers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWorkerPoolsResponse : gaxgrpc::IPageResponse<WorkerPool>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<WorkerPool> GetEnumerator() => WorkerPools.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

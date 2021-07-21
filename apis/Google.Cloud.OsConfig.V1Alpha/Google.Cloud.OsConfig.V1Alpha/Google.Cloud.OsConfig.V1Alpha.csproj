@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library for the Cloud OS Config API (v1 alpha). These are OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.</Description>
     <PackageTags>OsConfig;Management;Patch;Compliance;Configuration;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Error Reporting API, which groups and counts similar errors from cloud services. The Googe Cloud Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.</Description>
     <PackageTags>ErrorReporting;Stackdriver;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>

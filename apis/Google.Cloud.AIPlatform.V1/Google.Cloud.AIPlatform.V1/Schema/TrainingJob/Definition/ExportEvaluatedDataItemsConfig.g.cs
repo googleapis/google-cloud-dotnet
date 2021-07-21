@@ -101,7 +101,6 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     ///
     /// If not specified, then results are exported to the following auto-created
     /// BigQuery table:
-    ///
     /// &lt;project_id>:export_evaluated_examples_&lt;model_name>_&lt;yyyy_MM_dd'T'HH_mm_ss_SSS'Z'>.evaluated_examples
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

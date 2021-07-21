@@ -47,7 +47,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Channel.V1](Google.Cloud.Channel.V1/index.html) | 1.2.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.2.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.CloudDms.V1](Google.Cloud.CloudDms.V1/index.html) | 1.0.0 | [Database Migration](https://cloud.google.com/database-migration) |
-| [Google.Cloud.Common](Google.Cloud.Common/index.html) | 1.0.0-beta01 | Common protos for Cloud APIs |
+| [Google.Cloud.Common](Google.Cloud.Common/index.html) | 1.0.0 | Common protos for Cloud APIs |
 | [Google.Cloud.Compute.V1](Google.Cloud.Compute.V1/index.html) | 1.0.0-alpha02 | [Compute Engine](https://cloud.google.com/compute) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.4.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
@@ -74,7 +74,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.EssentialContacts.V1](Google.Cloud.EssentialContacts.V1/index.html) | 1.0.0 | [Essential Contacts](https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest) |
 | [Google.Cloud.Eventarc.V1](Google.Cloud.Eventarc.V1/index.html) | 1.0.0 | [Eventarc](https://cloud.google.com/eventarc/docs) |
-| [Google.Cloud.Filestore.V1](Google.Cloud.Filestore.V1/index.html) | 1.0.0-beta01 | Cloud Filestore |
+| [Google.Cloud.Filestore.V1](Google.Cloud.Filestore.V1/index.html) | 1.0.0 | Cloud Filestore |
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.2.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
@@ -87,7 +87,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Iam.Admin.V1](Google.Cloud.Iam.Admin.V1/index.html) | 1.0.0 | [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs) |
 | [Google.Cloud.Iam.Credentials.V1](Google.Cloud.Iam.Credentials.V1/index.html) | 1.1.0 | [IAM Service Account Credentials](https://cloud.google.com/iam/docs/reference/credentials/rest) |
 | [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.2.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
-| [Google.Cloud.Iap.V1](Google.Cloud.Iap.V1/index.html) | 1.0.0-beta01 | [Cloud Identity-Aware Proxy](https://cloud.google.com/iap/docs/) |
+| [Google.Cloud.Iap.V1](Google.Cloud.Iap.V1/index.html) | 1.0.0 | [Cloud Identity-Aware Proxy](https://cloud.google.com/iap/docs/) |
 | [Google.Cloud.Iot.V1](Google.Cloud.Iot.V1/index.html) | 1.1.0 | [Cloud IoT](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
 | [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.3.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html) | 2.2.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
@@ -125,13 +125,13 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html) | 2.5.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html) | 2.2.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.ResourceManager.V3](Google.Cloud.ResourceManager.V3/index.html) | 1.0.0-beta01 | [Cloud Resource Manager](https://cloud.google.com/resource-manager/docs) |
+| [Google.Cloud.ResourceManager.V3](Google.Cloud.ResourceManager.V3/index.html) | 1.0.0 | [Cloud Resource Manager](https://cloud.google.com/resource-manager/docs) |
 | [Google.Cloud.ResourceSettings.V1](Google.Cloud.ResourceSettings.V1/index.html) | 1.0.0 | [Resource Settings](https://cloud.google.com/resource-settings/docs) |
 | [Google.Cloud.Retail.V2](Google.Cloud.Retail.V2/index.html) | 1.1.0 | [Retail](https://cloud.google.com/retail/docs) |
 | [Google.Cloud.Scheduler.V1](Google.Cloud.Scheduler.V1/index.html) | 2.2.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.5.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta04 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
-| [Google.Cloud.Security.PrivateCA.V1](Google.Cloud.Security.PrivateCA.V1/index.html) | 1.0.0 | [Certificate Authority (V1 API)](https://cloud.google.com/certificate-authority-service/) |
+| [Google.Cloud.Security.PrivateCA.V1](Google.Cloud.Security.PrivateCA.V1/index.html) | 2.0.0 | [Certificate Authority (V1 API)](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.Security.PrivateCA.V1Beta1](Google.Cloud.Security.PrivateCA.V1Beta1/index.html) | 1.0.0-beta02 | [Certificate Authority (V1Beta1 API)](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta03 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html) | 2.4.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
@@ -142,11 +142,11 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ServiceManagement.V1](Google.Cloud.ServiceManagement.V1/index.html) | 1.2.0 | [Service Management](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
 | [Google.Cloud.ServiceUsage.V1](Google.Cloud.ServiceUsage.V1/index.html) | 1.0.0 | [Service Usage](https://cloud.google.com/service-usage/docs/) |
 | [Google.Cloud.Shell.V1](Google.Cloud.Shell.V1/index.html) | 1.0.0 | [Cloud Shell](https://cloud.google.com/shell/) |
-| [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html) | 3.10.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
-| [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html) | 3.10.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
-| [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html) | 3.10.0 | Google ADO.NET Provider for Google Cloud Spanner |
-| [Google.Cloud.Spanner.Common.V1](Google.Cloud.Spanner.Common.V1/index.html) | 3.10.0 | Common resource names used by all Spanner V1 APIs |
-| [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html) | 3.10.0 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html) | 3.11.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html) | 3.11.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
+| [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html) | 3.11.0 | Google ADO.NET Provider for Google Cloud Spanner |
+| [Google.Cloud.Spanner.Common.V1](Google.Cloud.Spanner.Common.V1/index.html) | 3.11.0 | Common resource names used by all Spanner V1 APIs |
+| [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html) | 3.11.0 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html) | 2.2.0 | [Google Cloud Speech (V1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Speech.V1P1Beta1](Google.Cloud.Speech.V1P1Beta1/index.html) | 2.0.0-beta04 | [Google Cloud Speech (V1P1Beta1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html) | 3.5.0 | [Google Cloud Storage](https://cloud.google.com/storage/) |
@@ -161,7 +161,8 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html) | 2.2.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Translate.V3](Google.Cloud.Translate.V3/index.html) | 2.2.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html) | 2.1.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
-| [Google.Cloud.Video.Transcoder.V1Beta1](Google.Cloud.Video.Transcoder.V1Beta1/index.html) | 1.0.0-beta02 | [Transcoder](https://cloud.google.com/transcoder/docs) |
+| [Google.Cloud.Video.Transcoder.V1](Google.Cloud.Video.Transcoder.V1/index.html) | 1.0.0-beta01 | [Transcoder (V1 API)](https://cloud.google.com/transcoder/docs) |
+| [Google.Cloud.Video.Transcoder.V1Beta1](Google.Cloud.Video.Transcoder.V1Beta1/index.html) | 1.0.0-beta02 | [Transcoder (V1Beta1 API)](https://cloud.google.com/transcoder/docs) |
 | [Google.Cloud.VideoIntelligence.V1](Google.Cloud.VideoIntelligence.V1/index.html) | 2.2.0 | [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence) |
 | [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html) | 2.3.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.VpcAccess.V1](Google.Cloud.VpcAccess.V1/index.html) | 1.0.0 | [Serverless VPC Access](https://cloud.google.com/vpc/docs/) |

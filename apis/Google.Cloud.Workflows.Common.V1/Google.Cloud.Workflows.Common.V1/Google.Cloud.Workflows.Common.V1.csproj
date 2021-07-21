@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Common resource names used by all Workflows V1 APIs</Description>
     <PackageTags>Spanner;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />

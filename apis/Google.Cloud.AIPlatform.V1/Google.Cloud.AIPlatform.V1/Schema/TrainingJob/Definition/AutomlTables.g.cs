@@ -27,79 +27,80 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             "Ckxnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zY2hlbWEvdHJhaW5pbmdq",
             "b2IvZGVmaW5pdGlvbi9hdXRvbWxfdGFibGVzLnByb3RvEjhnb29nbGUuY2xv",
             "dWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlv",
-            "bhphZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1hL3RyYWluaW5n",
-            "am9iL2RlZmluaXRpb24vZXhwb3J0X2V2YWx1YXRlZF9kYXRhX2l0ZW1zX2Nv",
-            "bmZpZy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLOAQoM",
-            "QXV0b01sVGFibGVzElwKBmlucHV0cxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1",
-            "dG9NbFRhYmxlc0lucHV0cxJgCghtZXRhZGF0YRgCIAEoCzJOLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0",
-            "aW9uLkF1dG9NbFRhYmxlc01ldGFkYXRhItQRChJBdXRvTWxUYWJsZXNJbnB1",
-            "dHMSLQojb3B0aW1pemF0aW9uX29iamVjdGl2ZV9yZWNhbGxfdmFsdWUYBSAB",
-            "KAJIABIwCiZvcHRpbWl6YXRpb25fb2JqZWN0aXZlX3ByZWNpc2lvbl92YWx1",
-            "ZRgGIAEoAkgAEhcKD3ByZWRpY3Rpb25fdHlwZRgBIAEoCRIVCg10YXJnZXRf",
-            "Y29sdW1uGAIgASgJEnQKD3RyYW5zZm9ybWF0aW9ucxgDIAMoCzJbLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZp",
-            "bml0aW9uLkF1dG9NbFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlvbhIeChZv",
-            "cHRpbWl6YXRpb25fb2JqZWN0aXZlGAQgASgJEiUKHXRyYWluX2J1ZGdldF9t",
-            "aWxsaV9ub2RlX2hvdXJzGAcgASgDEh4KFmRpc2FibGVfZWFybHlfc3RvcHBp",
-            "bmcYCCABKAgSGgoSd2VpZ2h0X2NvbHVtbl9uYW1lGAkgASgJEoQBCiJleHBv",
-            "cnRfZXZhbHVhdGVkX2RhdGFfaXRlbXNfY29uZmlnGAogASgLMlguZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuc2NoZW1hLnRyYWluaW5nam9iLmRlZmlu",
-            "aXRpb24uRXhwb3J0RXZhbHVhdGVkRGF0YUl0ZW1zQ29uZmlnGoANCg5UcmFu",
-            "c2Zvcm1hdGlvbhJ+CgRhdXRvGAEgASgLMm4uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuc2NoZW1hLnRyYWluaW5nam9iLmRlZmluaXRpb24uQXV0b01s",
-            "VGFibGVzSW5wdXRzLlRyYW5zZm9ybWF0aW9uLkF1dG9UcmFuc2Zvcm1hdGlv",
-            "bkgAEoQBCgdudW1lcmljGAIgASgLMnEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuc2NoZW1hLnRyYWluaW5nam9iLmRlZmluaXRpb24uQXV0b01sVGFi",
-            "bGVzSW5wdXRzLlRyYW5zZm9ybWF0aW9uLk51bWVyaWNUcmFuc2Zvcm1hdGlv",
-            "bkgAEowBCgtjYXRlZ29yaWNhbBgDIAEoCzJ1Lmdvb2dsZS5jbG91ZC5haXBs",
+            "bhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxphZ29vZ2xlL2Ns",
+            "b3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1hL3RyYWluaW5nam9iL2RlZmluaXRp",
+            "b24vZXhwb3J0X2V2YWx1YXRlZF9kYXRhX2l0ZW1zX2NvbmZpZy5wcm90bxoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLOAQoMQXV0b01sVGFibGVz",
+            "ElwKBmlucHV0cxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1dG9NbFRhYmxlc0lu",
+            "cHV0cxJgCghtZXRhZGF0YRgCIAEoCzJOLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1dG9NbFRh",
+            "Ymxlc01ldGFkYXRhIvQRChJBdXRvTWxUYWJsZXNJbnB1dHMSLQojb3B0aW1p",
+            "emF0aW9uX29iamVjdGl2ZV9yZWNhbGxfdmFsdWUYBSABKAJIABIwCiZvcHRp",
+            "bWl6YXRpb25fb2JqZWN0aXZlX3ByZWNpc2lvbl92YWx1ZRgGIAEoAkgAEhcK",
+            "D3ByZWRpY3Rpb25fdHlwZRgBIAEoCRIVCg10YXJnZXRfY29sdW1uGAIgASgJ",
+            "EnQKD3RyYW5zZm9ybWF0aW9ucxgDIAMoCzJbLmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1dG9N",
-            "bFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlvbi5DYXRlZ29yaWNhbFRyYW5z",
-            "Zm9ybWF0aW9uSAASiAEKCXRpbWVzdGFtcBgEIAEoCzJzLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9u",
-            "LkF1dG9NbFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlvbi5UaW1lc3RhbXBU",
-            "cmFuc2Zvcm1hdGlvbkgAEn4KBHRleHQYBSABKAsybi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlvbi5B",
-            "dXRvTWxUYWJsZXNJbnB1dHMuVHJhbnNmb3JtYXRpb24uVGV4dFRyYW5zZm9y",
-            "bWF0aW9uSAASkgEKEHJlcGVhdGVkX251bWVyaWMYBiABKAsydi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5p",
-            "dGlvbi5BdXRvTWxUYWJsZXNJbnB1dHMuVHJhbnNmb3JtYXRpb24uTnVtZXJp",
-            "Y0FycmF5VHJhbnNmb3JtYXRpb25IABKaAQoUcmVwZWF0ZWRfY2F0ZWdvcmlj",
-            "YWwYByABKAsyei5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEu",
-            "dHJhaW5pbmdqb2IuZGVmaW5pdGlvbi5BdXRvTWxUYWJsZXNJbnB1dHMuVHJh",
-            "bnNmb3JtYXRpb24uQ2F0ZWdvcmljYWxBcnJheVRyYW5zZm9ybWF0aW9uSAAS",
-            "jAEKDXJlcGVhdGVkX3RleHQYCCABKAsycy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlvbi5BdXRvTWxU",
-            "YWJsZXNJbnB1dHMuVHJhbnNmb3JtYXRpb24uVGV4dEFycmF5VHJhbnNmb3Jt",
-            "YXRpb25IABopChJBdXRvVHJhbnNmb3JtYXRpb24SEwoLY29sdW1uX25hbWUY",
-            "ASABKAkaTAoVTnVtZXJpY1RyYW5zZm9ybWF0aW9uEhMKC2NvbHVtbl9uYW1l",
-            "GAEgASgJEh4KFmludmFsaWRfdmFsdWVzX2FsbG93ZWQYAiABKAgaMAoZQ2F0",
-            "ZWdvcmljYWxUcmFuc2Zvcm1hdGlvbhITCgtjb2x1bW5fbmFtZRgBIAEoCRpj",
-            "ChdUaW1lc3RhbXBUcmFuc2Zvcm1hdGlvbhITCgtjb2x1bW5fbmFtZRgBIAEo",
-            "CRITCgt0aW1lX2Zvcm1hdBgCIAEoCRIeChZpbnZhbGlkX3ZhbHVlc19hbGxv",
-            "d2VkGAMgASgIGikKElRleHRUcmFuc2Zvcm1hdGlvbhITCgtjb2x1bW5fbmFt",
-            "ZRgBIAEoCRpRChpOdW1lcmljQXJyYXlUcmFuc2Zvcm1hdGlvbhITCgtjb2x1",
-            "bW5fbmFtZRgBIAEoCRIeChZpbnZhbGlkX3ZhbHVlc19hbGxvd2VkGAIgASgI",
-            "GjUKHkNhdGVnb3JpY2FsQXJyYXlUcmFuc2Zvcm1hdGlvbhITCgtjb2x1bW5f",
-            "bmFtZRgBIAEoCRouChdUZXh0QXJyYXlUcmFuc2Zvcm1hdGlvbhITCgtjb2x1",
-            "bW5fbmFtZRgBIAEoCUIXChV0cmFuc2Zvcm1hdGlvbl9kZXRhaWxCKgooYWRk",
-            "aXRpb25hbF9vcHRpbWl6YXRpb25fb2JqZWN0aXZlX2NvbmZpZyI7ChRBdXRv",
-            "TWxUYWJsZXNNZXRhZGF0YRIjCht0cmFpbl9jb3N0X21pbGxpX25vZGVfaG91",
-            "cnMYASABKANC7gIKPGNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5z",
-            "Y2hlbWEudHJhaW5pbmdqb2IuZGVmaW5pdGlvbkIRQXV0b01MVGFibGVzUHJv",
-            "dG9QAVpiZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9haXBsYXRmb3JtL3YxL3NjaGVtYS90cmFpbmluZ2pvYi9kZWZpbml0",
-            "aW9uO2RlZmluaXRpb26qAjhHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMS5T",
-            "Y2hlbWEuVHJhaW5pbmdKb2IuRGVmaW5pdGlvbsoCOEdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYxXFNjaGVtYVxUcmFpbmluZ0pvYlxEZWZpbml0aW9u6gI+",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjE6OlNjaGVtYTo6VHJhaW5p",
-            "bmdKb2I6OkRlZmluaXRpb25iBnByb3RvMw=="));
+            "bFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlvbhIeChZvcHRpbWl6YXRpb25f",
+            "b2JqZWN0aXZlGAQgASgJEiUKHXRyYWluX2J1ZGdldF9taWxsaV9ub2RlX2hv",
+            "dXJzGAcgASgDEh4KFmRpc2FibGVfZWFybHlfc3RvcHBpbmcYCCABKAgSGgoS",
+            "d2VpZ2h0X2NvbHVtbl9uYW1lGAkgASgJEoQBCiJleHBvcnRfZXZhbHVhdGVk",
+            "X2RhdGFfaXRlbXNfY29uZmlnGAogASgLMlguZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuc2NoZW1hLnRyYWluaW5nam9iLmRlZmluaXRpb24uRXhwb3J0",
+            "RXZhbHVhdGVkRGF0YUl0ZW1zQ29uZmlnEh4KFmFkZGl0aW9uYWxfZXhwZXJp",
+            "bWVudHMYCyADKAkagA0KDlRyYW5zZm9ybWF0aW9uEn4KBGF1dG8YASABKAsy",
+            "bi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdq",
+            "b2IuZGVmaW5pdGlvbi5BdXRvTWxUYWJsZXNJbnB1dHMuVHJhbnNmb3JtYXRp",
+            "b24uQXV0b1RyYW5zZm9ybWF0aW9uSAAShAEKB251bWVyaWMYAiABKAsycS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5zY2hlbWEudHJhaW5pbmdqb2Iu",
+            "ZGVmaW5pdGlvbi5BdXRvTWxUYWJsZXNJbnB1dHMuVHJhbnNmb3JtYXRpb24u",
+            "TnVtZXJpY1RyYW5zZm9ybWF0aW9uSAASjAEKC2NhdGVnb3JpY2FsGAMgASgL",
+            "MnUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuc2NoZW1hLnRyYWluaW5n",
+            "am9iLmRlZmluaXRpb24uQXV0b01sVGFibGVzSW5wdXRzLlRyYW5zZm9ybWF0",
+            "aW9uLkNhdGVnb3JpY2FsVHJhbnNmb3JtYXRpb25IABKIAQoJdGltZXN0YW1w",
+            "GAQgASgLMnMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuc2NoZW1hLnRy",
+            "YWluaW5nam9iLmRlZmluaXRpb24uQXV0b01sVGFibGVzSW5wdXRzLlRyYW5z",
+            "Zm9ybWF0aW9uLlRpbWVzdGFtcFRyYW5zZm9ybWF0aW9uSAASfgoEdGV4dBgF",
+            "IAEoCzJuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFp",
+            "bmluZ2pvYi5kZWZpbml0aW9uLkF1dG9NbFRhYmxlc0lucHV0cy5UcmFuc2Zv",
+            "cm1hdGlvbi5UZXh0VHJhbnNmb3JtYXRpb25IABKSAQoQcmVwZWF0ZWRfbnVt",
+            "ZXJpYxgGIAEoCzJ2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVt",
+            "YS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1dG9NbFRhYmxlc0lucHV0cy5U",
+            "cmFuc2Zvcm1hdGlvbi5OdW1lcmljQXJyYXlUcmFuc2Zvcm1hdGlvbkgAEpoB",
+            "ChRyZXBlYXRlZF9jYXRlZ29yaWNhbBgHIAEoCzJ6Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uLkF1",
+            "dG9NbFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlvbi5DYXRlZ29yaWNhbEFy",
+            "cmF5VHJhbnNmb3JtYXRpb25IABKMAQoNcmVwZWF0ZWRfdGV4dBgIIAEoCzJz",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pv",
+            "Yi5kZWZpbml0aW9uLkF1dG9NbFRhYmxlc0lucHV0cy5UcmFuc2Zvcm1hdGlv",
+            "bi5UZXh0QXJyYXlUcmFuc2Zvcm1hdGlvbkgAGikKEkF1dG9UcmFuc2Zvcm1h",
+            "dGlvbhITCgtjb2x1bW5fbmFtZRgBIAEoCRpMChVOdW1lcmljVHJhbnNmb3Jt",
+            "YXRpb24SEwoLY29sdW1uX25hbWUYASABKAkSHgoWaW52YWxpZF92YWx1ZXNf",
+            "YWxsb3dlZBgCIAEoCBowChlDYXRlZ29yaWNhbFRyYW5zZm9ybWF0aW9uEhMK",
+            "C2NvbHVtbl9uYW1lGAEgASgJGmMKF1RpbWVzdGFtcFRyYW5zZm9ybWF0aW9u",
+            "EhMKC2NvbHVtbl9uYW1lGAEgASgJEhMKC3RpbWVfZm9ybWF0GAIgASgJEh4K",
+            "FmludmFsaWRfdmFsdWVzX2FsbG93ZWQYAyABKAgaKQoSVGV4dFRyYW5zZm9y",
+            "bWF0aW9uEhMKC2NvbHVtbl9uYW1lGAEgASgJGlEKGk51bWVyaWNBcnJheVRy",
+            "YW5zZm9ybWF0aW9uEhMKC2NvbHVtbl9uYW1lGAEgASgJEh4KFmludmFsaWRf",
+            "dmFsdWVzX2FsbG93ZWQYAiABKAgaNQoeQ2F0ZWdvcmljYWxBcnJheVRyYW5z",
+            "Zm9ybWF0aW9uEhMKC2NvbHVtbl9uYW1lGAEgASgJGi4KF1RleHRBcnJheVRy",
+            "YW5zZm9ybWF0aW9uEhMKC2NvbHVtbl9uYW1lGAEgASgJQhcKFXRyYW5zZm9y",
+            "bWF0aW9uX2RldGFpbEIqCihhZGRpdGlvbmFsX29wdGltaXphdGlvbl9vYmpl",
+            "Y3RpdmVfY29uZmlnIjsKFEF1dG9NbFRhYmxlc01ldGFkYXRhEiMKG3RyYWlu",
+            "X2Nvc3RfbWlsbGlfbm9kZV9ob3VycxgBIAEoA0LuAgo8Y29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0",
+            "aW9uQhFBdXRvTUxUYWJsZXNQcm90b1ABWmJnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1h",
+            "L3RyYWluaW5nam9iL2RlZmluaXRpb247ZGVmaW5pdGlvbqoCOEdvb2dsZS5D",
+            "bG91ZC5BSVBsYXRmb3JtLlYxLlNjaGVtYS5UcmFpbmluZ0pvYi5EZWZpbml0",
+            "aW9uygI4R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFcU2NoZW1hXFRyYWlu",
+            "aW5nSm9iXERlZmluaXRpb27qAj5Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
+            "OjpWMTo6U2NoZW1hOjpUcmFpbmluZ0pvYjo6RGVmaW5pdGlvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfigReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfigReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTables), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTables.Parser, new[]{ "Inputs", "Metadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Parser, new[]{ "OptimizationObjectiveRecallValue", "OptimizationObjectivePrecisionValue", "PredictionType", "TargetColumn", "Transformations", "OptimizationObjective", "TrainBudgetMilliNodeHours", "DisableEarlyStopping", "WeightColumnName", "ExportEvaluatedDataItemsConfig" }, new[]{ "AdditionalOptimizationObjectiveConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Parser, new[]{ "Auto", "Numeric", "Categorical", "Timestamp", "Text", "RepeatedNumeric", "RepeatedCategorical", "RepeatedText" }, new[]{ "TransformationDetail" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation.Parser, new[]{ "ColumnName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Parser, new[]{ "OptimizationObjectiveRecallValue", "OptimizationObjectivePrecisionValue", "PredictionType", "TargetColumn", "Transformations", "OptimizationObjective", "TrainBudgetMilliNodeHours", "DisableEarlyStopping", "WeightColumnName", "ExportEvaluatedDataItemsConfig", "AdditionalExperiments" }, new[]{ "AdditionalOptimizationObjectiveConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Parser, new[]{ "Auto", "Numeric", "Categorical", "Timestamp", "Text", "RepeatedNumeric", "RepeatedCategorical", "RepeatedText" }, new[]{ "TransformationDetail" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation.Parser, new[]{ "ColumnName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericTransformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericTransformation.Parser, new[]{ "ColumnName", "InvalidValuesAllowed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalTransformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalTransformation.Parser, new[]{ "ColumnName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TimestampTransformation), global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TimestampTransformation.Parser, new[]{ "ColumnName", "TimeFormat", "InvalidValuesAllowed" }, null, null, null, null),
@@ -386,6 +387,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
       disableEarlyStopping_ = other.disableEarlyStopping_;
       weightColumnName_ = other.weightColumnName_;
       exportEvaluatedDataItemsConfig_ = other.exportEvaluatedDataItemsConfig_ != null ? other.exportEvaluatedDataItemsConfig_.Clone() : null;
+      additionalExperiments_ = other.additionalExperiments_.Clone();
       switch (other.AdditionalOptimizationObjectiveConfigCase) {
         case AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue:
           OptimizationObjectiveRecallValue = other.OptimizationObjectiveRecallValue;
@@ -597,6 +599,19 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
       }
     }
 
+    /// <summary>Field number for the "additional_experiments" field.</summary>
+    public const int AdditionalExperimentsFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_additionalExperiments_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> additionalExperiments_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Additional experiment flags for the Tables training pipeline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AdditionalExperiments {
+      get { return additionalExperiments_; }
+    }
+
     private object additionalOptimizationObjectiveConfig_;
     /// <summary>Enum of possible cases for the "additional_optimization_objective_config" oneof.</summary>
     public enum AdditionalOptimizationObjectiveConfigOneofCase {
@@ -639,6 +654,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
       if (DisableEarlyStopping != other.DisableEarlyStopping) return false;
       if (WeightColumnName != other.WeightColumnName) return false;
       if (!object.Equals(ExportEvaluatedDataItemsConfig, other.ExportEvaluatedDataItemsConfig)) return false;
+      if(!additionalExperiments_.Equals(other.additionalExperiments_)) return false;
       if (AdditionalOptimizationObjectiveConfigCase != other.AdditionalOptimizationObjectiveConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -656,6 +672,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
       if (DisableEarlyStopping != false) hash ^= DisableEarlyStopping.GetHashCode();
       if (WeightColumnName.Length != 0) hash ^= WeightColumnName.GetHashCode();
       if (exportEvaluatedDataItemsConfig_ != null) hash ^= ExportEvaluatedDataItemsConfig.GetHashCode();
+      hash ^= additionalExperiments_.GetHashCode();
       hash ^= (int) additionalOptimizationObjectiveConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -710,6 +727,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(82);
         output.WriteMessage(ExportEvaluatedDataItemsConfig);
       }
+      additionalExperiments_.WriteTo(output, _repeated_additionalExperiments_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -756,6 +774,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(82);
         output.WriteMessage(ExportEvaluatedDataItemsConfig);
       }
+      additionalExperiments_.WriteTo(ref output, _repeated_additionalExperiments_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -793,6 +812,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
       if (exportEvaluatedDataItemsConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExportEvaluatedDataItemsConfig);
       }
+      size += additionalExperiments_.CalculateSize(_repeated_additionalExperiments_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -829,6 +849,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
         ExportEvaluatedDataItemsConfig.MergeFrom(other.ExportEvaluatedDataItemsConfig);
       }
+      additionalExperiments_.Add(other.additionalExperiments_);
       switch (other.AdditionalOptimizationObjectiveConfigCase) {
         case AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue:
           OptimizationObjectiveRecallValue = other.OptimizationObjectiveRecallValue;
@@ -895,6 +916,10 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             input.ReadMessage(ExportEvaluatedDataItemsConfig);
             break;
           }
+          case 90: {
+            additionalExperiments_.AddEntriesFrom(input, _repeated_additionalExperiments_codec);
+            break;
+          }
         }
       }
     #endif
@@ -950,6 +975,10 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
               ExportEvaluatedDataItemsConfig = new global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfig();
             }
             input.ReadMessage(ExportEvaluatedDataItemsConfig);
+            break;
+          }
+          case 90: {
+            additionalExperiments_.AddEntriesFrom(ref input, _repeated_additionalExperiments_codec);
             break;
           }
         }

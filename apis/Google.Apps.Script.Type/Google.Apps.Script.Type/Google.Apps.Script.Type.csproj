@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Version-agnostic types for Apps Script APIs.</Description>
     <PackageTags>gsuite;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />

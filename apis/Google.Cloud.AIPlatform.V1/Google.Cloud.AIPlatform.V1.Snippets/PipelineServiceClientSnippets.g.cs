@@ -756,5 +756,739 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             await pipelineServiceClient.CancelTrainingPipelineAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreatePipelineJob</summary>
+        public void CreatePipelineJobRequestObject()
+        {
+            // Snippet: CreatePipelineJob(CreatePipelineJobRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "",
+            };
+            // Make the request
+            PipelineJob response = pipelineServiceClient.CreatePipelineJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineJobAsync</summary>
+        public async Task CreatePipelineJobRequestObjectAsync()
+        {
+            // Snippet: CreatePipelineJobAsync(CreatePipelineJobRequest, CallSettings)
+            // Additional: CreatePipelineJobAsync(CreatePipelineJobRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePipelineJobRequest request = new CreatePipelineJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PipelineJob = new PipelineJob(),
+                PipelineJobId = "",
+            };
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.CreatePipelineJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineJob</summary>
+        public void CreatePipelineJob()
+        {
+            // Snippet: CreatePipelineJob(string, PipelineJob, string, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PipelineJob pipelineJob = new PipelineJob();
+            string pipelineJobId = "";
+            // Make the request
+            PipelineJob response = pipelineServiceClient.CreatePipelineJob(parent, pipelineJob, pipelineJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineJobAsync</summary>
+        public async Task CreatePipelineJobAsync()
+        {
+            // Snippet: CreatePipelineJobAsync(string, PipelineJob, string, CallSettings)
+            // Additional: CreatePipelineJobAsync(string, PipelineJob, string, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PipelineJob pipelineJob = new PipelineJob();
+            string pipelineJobId = "";
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.CreatePipelineJobAsync(parent, pipelineJob, pipelineJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineJob</summary>
+        public void CreatePipelineJobResourceNames()
+        {
+            // Snippet: CreatePipelineJob(LocationName, PipelineJob, string, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PipelineJob pipelineJob = new PipelineJob();
+            string pipelineJobId = "";
+            // Make the request
+            PipelineJob response = pipelineServiceClient.CreatePipelineJob(parent, pipelineJob, pipelineJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePipelineJobAsync</summary>
+        public async Task CreatePipelineJobResourceNamesAsync()
+        {
+            // Snippet: CreatePipelineJobAsync(LocationName, PipelineJob, string, CallSettings)
+            // Additional: CreatePipelineJobAsync(LocationName, PipelineJob, string, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PipelineJob pipelineJob = new PipelineJob();
+            string pipelineJobId = "";
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.CreatePipelineJobAsync(parent, pipelineJob, pipelineJobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJob</summary>
+        public void GetPipelineJobRequestObject()
+        {
+            // Snippet: GetPipelineJob(GetPipelineJobRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            PipelineJob response = pipelineServiceClient.GetPipelineJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJobAsync</summary>
+        public async Task GetPipelineJobRequestObjectAsync()
+        {
+            // Snippet: GetPipelineJobAsync(GetPipelineJobRequest, CallSettings)
+            // Additional: GetPipelineJobAsync(GetPipelineJobRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPipelineJobRequest request = new GetPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.GetPipelineJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJob</summary>
+        public void GetPipelineJob()
+        {
+            // Snippet: GetPipelineJob(string, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            PipelineJob response = pipelineServiceClient.GetPipelineJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJobAsync</summary>
+        public async Task GetPipelineJobAsync()
+        {
+            // Snippet: GetPipelineJobAsync(string, CallSettings)
+            // Additional: GetPipelineJobAsync(string, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.GetPipelineJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJob</summary>
+        public void GetPipelineJobResourceNames()
+        {
+            // Snippet: GetPipelineJob(PipelineJobName, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            PipelineJob response = pipelineServiceClient.GetPipelineJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPipelineJobAsync</summary>
+        public async Task GetPipelineJobResourceNamesAsync()
+        {
+            // Snippet: GetPipelineJobAsync(PipelineJobName, CallSettings)
+            // Additional: GetPipelineJobAsync(PipelineJobName, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            PipelineJob response = await pipelineServiceClient.GetPipelineJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobs</summary>
+        public void ListPipelineJobsRequestObject()
+        {
+            // Snippet: ListPipelineJobs(ListPipelineJobsRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PipelineJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelineJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobsAsync</summary>
+        public async Task ListPipelineJobsRequestObjectAsync()
+        {
+            // Snippet: ListPipelineJobsAsync(ListPipelineJobsRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPipelineJobsRequest request = new ListPipelineJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PipelineJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelineJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobs</summary>
+        public void ListPipelineJobs()
+        {
+            // Snippet: ListPipelineJobs(string, string, int?, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PipelineJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelineJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobsAsync</summary>
+        public async Task ListPipelineJobsAsync()
+        {
+            // Snippet: ListPipelineJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PipelineJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelineJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobs</summary>
+        public void ListPipelineJobsResourceNames()
+        {
+            // Snippet: ListPipelineJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PipelineJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPipelineJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPipelineJobsAsync</summary>
+        public async Task ListPipelineJobsResourceNamesAsync()
+        {
+            // Snippet: ListPipelineJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PipelineJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPipelineJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PipelineJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PipelineJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PipelineJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJob</summary>
+        public void DeletePipelineJobRequestObject()
+        {
+            // Snippet: DeletePipelineJob(DeletePipelineJobRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            DeletePipelineJobRequest request = new DeletePipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = pipelineServiceClient.DeletePipelineJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceDeletePipelineJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJobAsync</summary>
+        public async Task DeletePipelineJobRequestObjectAsync()
+        {
+            // Snippet: DeletePipelineJobAsync(DeletePipelineJobRequest, CallSettings)
+            // Additional: DeletePipelineJobAsync(DeletePipelineJobRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePipelineJobRequest request = new DeletePipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await pipelineServiceClient.DeletePipelineJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceDeletePipelineJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJob</summary>
+        public void DeletePipelineJob()
+        {
+            // Snippet: DeletePipelineJob(string, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = pipelineServiceClient.DeletePipelineJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceDeletePipelineJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJobAsync</summary>
+        public async Task DeletePipelineJobAsync()
+        {
+            // Snippet: DeletePipelineJobAsync(string, CallSettings)
+            // Additional: DeletePipelineJobAsync(string, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await pipelineServiceClient.DeletePipelineJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceDeletePipelineJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJob</summary>
+        public void DeletePipelineJobResourceNames()
+        {
+            // Snippet: DeletePipelineJob(PipelineJobName, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = pipelineServiceClient.DeletePipelineJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = pipelineServiceClient.PollOnceDeletePipelineJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePipelineJobAsync</summary>
+        public async Task DeletePipelineJobResourceNamesAsync()
+        {
+            // Snippet: DeletePipelineJobAsync(PipelineJobName, CallSettings)
+            // Additional: DeletePipelineJobAsync(PipelineJobName, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await pipelineServiceClient.DeletePipelineJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await pipelineServiceClient.PollOnceDeletePipelineJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJob</summary>
+        public void CancelPipelineJobRequestObject()
+        {
+            // Snippet: CancelPipelineJob(CancelPipelineJobRequest, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            pipelineServiceClient.CancelPipelineJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJobAsync</summary>
+        public async Task CancelPipelineJobRequestObjectAsync()
+        {
+            // Snippet: CancelPipelineJobAsync(CancelPipelineJobRequest, CallSettings)
+            // Additional: CancelPipelineJobAsync(CancelPipelineJobRequest, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelPipelineJobRequest request = new CancelPipelineJobRequest
+            {
+                PipelineJobName = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]"),
+            };
+            // Make the request
+            await pipelineServiceClient.CancelPipelineJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJob</summary>
+        public void CancelPipelineJob()
+        {
+            // Snippet: CancelPipelineJob(string, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            pipelineServiceClient.CancelPipelineJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJobAsync</summary>
+        public async Task CancelPipelineJobAsync()
+        {
+            // Snippet: CancelPipelineJobAsync(string, CallSettings)
+            // Additional: CancelPipelineJobAsync(string, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/pipelineJobs/[PIPELINE_JOB]";
+            // Make the request
+            await pipelineServiceClient.CancelPipelineJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJob</summary>
+        public void CancelPipelineJobResourceNames()
+        {
+            // Snippet: CancelPipelineJob(PipelineJobName, CallSettings)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = PipelineServiceClient.Create();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            pipelineServiceClient.CancelPipelineJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelPipelineJobAsync</summary>
+        public async Task CancelPipelineJobResourceNamesAsync()
+        {
+            // Snippet: CancelPipelineJobAsync(PipelineJobName, CallSettings)
+            // Additional: CancelPipelineJobAsync(PipelineJobName, CancellationToken)
+            // Create client
+            PipelineServiceClient pipelineServiceClient = await PipelineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PipelineJobName name = PipelineJobName.FromProjectLocationPipelineJob("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]");
+            // Make the request
+            await pipelineServiceClient.CancelPipelineJobAsync(name);
+            // End snippet
+        }
     }
 }

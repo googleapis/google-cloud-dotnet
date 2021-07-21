@@ -381,7 +381,7 @@
         "google/type"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AIPlatform.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/apigateway/v1",
@@ -1994,7 +1994,8 @@
       "ImportDirectories": [
         "google/api",
         "google/cloud/osconfig/agentendpoint/v1",
-        "google/protobuf"
+        "google/protobuf",
+        "google/type"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Osconfig.Agentendpoint.V1"
@@ -2900,6 +2901,24 @@
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.Translate.V3Beta1"
+    },
+    {
+      "ServiceDirectory": "google/cloud/video/transcoder/v1",
+      "Name": "transcoder.googleapis.com",
+      "Title": "Transcoder API",
+      "Description": "This API converts video files into formats suitable for consumer distribution.",
+      "ServiceConfigFile": "google/cloud/video/transcoder/v1/transcoder_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.video.transcoder.v1",
+      "PackageFromProtos": "google.cloud.video.transcoder.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/video/transcoder/v1",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Video.Transcoder.V1"
     },
     {
       "ServiceDirectory": "google/cloud/video/transcoder/v1beta1",
@@ -3836,7 +3855,7 @@
       "ServiceDirectory": "google/monitoring/dashboard/v1",
       "Name": "monitoring.googleapis.com",
       "Title": "Cloud Monitoring API",
-      "Description": "Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the [Cloud Monitoring documentation](/monitoring/docs).",
+      "Description": "Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the [Cloud Monitoring documentation](https://cloud.google.com/monitoring/docs).",
       "ServiceConfigFile": "google/monitoring/dashboard/v1/monitoring.yaml",
       "Version": "v1",
       "PackageFromDirectory": "google.monitoring.dashboard.v1",
@@ -3994,6 +4013,23 @@
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Storage.V1"
+    },
+    {
+      "ServiceDirectory": "google/storage/v2",
+      "Name": "storage.googleapis.com",
+      "Title": "Cloud Storage API",
+      "Description": "Lets you store and retrieve potentially-large, immutable data objects.",
+      "ServiceConfigFile": "google/storage/v2/storage_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.storage.v2",
+      "PackageFromProtos": "google.storage.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Storage.V2"
     },
     {
       "ServiceDirectory": "google/streetview/publish/v1",

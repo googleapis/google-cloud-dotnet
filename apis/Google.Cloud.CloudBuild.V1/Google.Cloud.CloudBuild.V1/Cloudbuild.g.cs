@@ -75,7 +75,7 @@ namespace Google.Cloud.CloudBuild.V1 {
             "aWZhY3RfdGltaW5nGAcgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVp",
             "bGQudjEuVGltZVNwYW4iYAoOQXJ0aWZhY3RSZXN1bHQSEAoIbG9jYXRpb24Y",
             "ASABKAkSPAoJZmlsZV9oYXNoGAIgAygLMikuZ29vZ2xlLmRldnRvb2xzLmNs",
-            "b3VkYnVpbGQudjEuRmlsZUhhc2hlcyLgDgoFQnVpbGQSEQoEbmFtZRgtIAEo",
+            "b3VkYnVpbGQudjEuRmlsZUhhc2hlcyLOEQoFQnVpbGQSEQoEbmFtZRgtIAEo",
             "CUID4EEDEg8KAmlkGAEgASgJQgPgQQMSFwoKcHJvamVjdF9pZBgQIAEoCUID",
             "4EEDEkAKBnN0YXR1cxgCIAEoDjIrLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1",
             "aWxkLnYxLkJ1aWxkLlN0YXR1c0ID4EEDEhoKDXN0YXR1c19kZXRhaWwYGCAB",
@@ -104,295 +104,352 @@ namespace Google.Cloud.CloudBuild.V1 {
             "cGlzLmNvbS9TZXJ2aWNlQWNjb3VudBJBChFhdmFpbGFibGVfc2VjcmV0cxgv",
             "IAEoCzImLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlNlY3JldHMS",
             "QwoId2FybmluZ3MYMSADKAsyLC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
-            "ZC52MS5CdWlsZC5XYXJuaW5nQgPgQQMaqAEKB1dhcm5pbmcSDAoEdGV4dBgB",
-            "IAEoCRJHCghwcmlvcml0eRgCIAEoDjI1Lmdvb2dsZS5kZXZ0b29scy5jbG91",
-            "ZGJ1aWxkLnYxLkJ1aWxkLldhcm5pbmcuUHJpb3JpdHkiRgoIUHJpb3JpdHkS",
-            "GAoUUFJJT1JJVFlfVU5TUEVDSUZJRUQQABIICgRJTkZPEAESCwoHV0FSTklO",
-            "RxACEgkKBUFMRVJUEAMaNAoSU3Vic3RpdHV0aW9uc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaVgoLVGltaW5nRW50cnkSCwoDa2V5",
-            "GAEgASgJEjYKBXZhbHVlGAIgASgLMicuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
-            "YnVpbGQudjEuVGltZVNwYW46AjgBIowBCgZTdGF0dXMSEgoOU1RBVFVTX1VO",
-            "S05PV04QABIKCgZRVUVVRUQQARILCgdXT1JLSU5HEAISCwoHU1VDQ0VTUxAD",
-            "EgsKB0ZBSUxVUkUQBBISCg5JTlRFUk5BTF9FUlJPUhAFEgsKB1RJTUVPVVQQ",
-            "BhINCglDQU5DRUxMRUQQBxILCgdFWFBJUkVEEAk6f+pBfAofY2xvdWRidWls",
-            "ZC5nb29nbGVhcGlzLmNvbS9CdWlsZBIhcHJvamVjdHMve3Byb2plY3R9L2J1",
-            "aWxkcy97YnVpbGR9EjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vYnVpbGRzL3tidWlsZH0i2AEKCUFydGlmYWN0cxIOCgZpbWFn",
-            "ZXMYASADKAkSSQoHb2JqZWN0cxgCIAEoCzI4Lmdvb2dsZS5kZXZ0b29scy5j",
-            "bG91ZGJ1aWxkLnYxLkFydGlmYWN0cy5BcnRpZmFjdE9iamVjdHMacAoPQXJ0",
-            "aWZhY3RPYmplY3RzEhAKCGxvY2F0aW9uGAEgASgJEg0KBXBhdGhzGAIgAygJ",
-            "EjwKBnRpbWluZxgDIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxk",
-            "LnYxLlRpbWVTcGFuQgPgQQMiaAoIVGltZVNwYW4SLgoKc3RhcnRfdGltZRgB",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk0KFkJ1aWxkT3Bl",
-            "cmF0aW9uTWV0YWRhdGESMwoFYnVpbGQYASABKAsyJC5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRidWlsZC52MS5CdWlsZCLDAwoQU291cmNlUHJvdmVuYW5jZRJN",
-            "ChdyZXNvbHZlZF9zdG9yYWdlX3NvdXJjZRgDIAEoCzIsLmdvb2dsZS5kZXZ0",
-            "b29scy5jbG91ZGJ1aWxkLnYxLlN0b3JhZ2VTb3VyY2USRwoUcmVzb2x2ZWRf",
-            "cmVwb19zb3VyY2UYBiABKAsyKS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
-            "ZC52MS5SZXBvU291cmNlEl4KIHJlc29sdmVkX3N0b3JhZ2Vfc291cmNlX21h",
-            "bmlmZXN0GAkgASgLMjQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEu",
-            "U3RvcmFnZVNvdXJjZU1hbmlmZXN0ElkKC2ZpbGVfaGFzaGVzGAQgAygLMj8u",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuU291cmNlUHJvdmVuYW5j",
-            "ZS5GaWxlSGFzaGVzRW50cnlCA+BBAxpcCg9GaWxlSGFzaGVzRW50cnkSCwoD",
-            "a2V5GAEgASgJEjgKBXZhbHVlGAIgASgLMikuZ29vZ2xlLmRldnRvb2xzLmNs",
-            "b3VkYnVpbGQudjEuRmlsZUhhc2hlczoCOAEiRAoKRmlsZUhhc2hlcxI2Cglm",
-            "aWxlX2hhc2gYASADKAsyIy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52",
-            "MS5IYXNoInwKBEhhc2gSOgoEdHlwZRgBIAEoDjIsLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLkhhc2guSGFzaFR5cGUSDQoFdmFsdWUYAiABKAwi",
-            "KQoISGFzaFR5cGUSCAoETk9ORRAAEgoKBlNIQTI1NhABEgcKA01ENRACIpIB",
-            "CgdTZWNyZXRzEkoKDnNlY3JldF9tYW5hZ2VyGAEgAygLMjIuZ29vZ2xlLmRl",
-            "dnRvb2xzLmNsb3VkYnVpbGQudjEuU2VjcmV0TWFuYWdlclNlY3JldBI7CgZp",
-            "bmxpbmUYAiADKAsyKy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5J",
-            "bmxpbmVTZWNyZXQixQEKDElubGluZVNlY3JldBI8CgxrbXNfa2V5X25hbWUY",
-            "ASABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "EkgKB2Vudl9tYXAYAiADKAsyNy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
-            "ZC52MS5JbmxpbmVTZWNyZXQuRW52TWFwRW50cnkaLQoLRW52TWFwRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgMOgI4ASJpChNTZWNyZXRNYW5h",
-            "Z2VyU2VjcmV0EkUKDHZlcnNpb25fbmFtZRgBIAEoCUIv+kEsCipzZWNyZXRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SCwoDZW52GAIg",
-            "ASgJIpoBCgZTZWNyZXQSFAoMa21zX2tleV9uYW1lGAEgASgJEkgKCnNlY3Jl",
-            "dF9lbnYYAyADKAsyNC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5T",
-            "ZWNyZXQuU2VjcmV0RW52RW50cnkaMAoOU2VjcmV0RW52RW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgMOgI4ASKdAQoSQ3JlYXRlQnVpbGRSZXF1",
-            "ZXN0EjQKBnBhcmVudBgEIAEoCUIk+kEhEh9jbG91ZGJ1aWxkLmdvb2dsZWFw",
-            "aXMuY29tL0J1aWxkEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhI4CgVidWls",
-            "ZBgCIAEoCzIkLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxk",
-            "QgPgQQIibwoPR2V0QnVpbGRSZXF1ZXN0EjIKBG5hbWUYBCABKAlCJPpBIQof",
-            "Y2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBIXCgpwcm9qZWN0X2lk",
-            "GAEgASgJQgPgQQISDwoCaWQYAiABKAlCA+BBAiKZAQoRTGlzdEJ1aWxkc1Jl",
-            "cXVlc3QSNAoGcGFyZW50GAkgASgJQiT6QSESH2Nsb3VkYnVpbGQuZ29vZ2xl",
-            "YXBpcy5jb20vQnVpbGQSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhEKCXBh",
-            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgI",
-            "IAEoCSJjChJMaXN0QnVpbGRzUmVzcG9uc2USNAoGYnVpbGRzGAEgAygLMiQu",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJInIKEkNhbmNlbEJ1aWxkUmVxdWVzdBIyCgRuYW1l",
-            "GAQgASgJQiT6QSEKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGQS",
-            "FwoKcHJvamVjdF9pZBgBIAEoCUID4EECEg8KAmlkGAIgASgJQgPgQQIiqgcK",
-            "DEJ1aWxkVHJpZ2dlchIVCg1yZXNvdXJjZV9uYW1lGCIgASgJEg8KAmlkGAEg",
-            "ASgJQgPgQQMSEwoLZGVzY3JpcHRpb24YCiABKAkSDAoEbmFtZRgVIAEoCRIM",
-            "CgR0YWdzGBMgAygJEkMKEHRyaWdnZXJfdGVtcGxhdGUYByABKAsyKS5nb29n",
-            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5SZXBvU291cmNlEkEKBmdpdGh1",
-            "YhgNIAEoCzIxLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkdpdEh1",
-            "YkV2ZW50c0NvbmZpZxJCCg1wdWJzdWJfY29uZmlnGB0gASgLMisuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjEuUHVic3ViQ29uZmlnEkQKDndlYmhv",
-            "b2tfY29uZmlnGB8gASgLMiwuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQu",
-            "djEuV2ViaG9va0NvbmZpZxIUCgphdXRvZGV0ZWN0GBIgASgISAASNQoFYnVp",
-            "bGQYBCABKAsyJC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWls",
-            "ZEgAEhIKCGZpbGVuYW1lGAggASgJSAASNAoLY3JlYXRlX3RpbWUYBSABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEAoIZGlzYWJsZWQY",
-            "CSABKAgSVQoNc3Vic3RpdHV0aW9ucxgLIAMoCzI+Lmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLkJ1aWxkVHJpZ2dlci5TdWJzdGl0dXRpb25zRW50",
-            "cnkSFQoNaWdub3JlZF9maWxlcxgPIAMoCRIWCg5pbmNsdWRlZF9maWxlcxgQ",
-            "IAMoCRITCgZmaWx0ZXIYHiABKAlCA+BBARo0ChJTdWJzdGl0dXRpb25zRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqiAepBngEKJmNs",
-            "b3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEiVwcm9qZWN0",
-            "cy97cHJvamVjdH0vdHJpZ2dlcnMve3RyaWdnZXJ9Ejpwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdHJpZ2dlcnMve3RyaWdnZXJ9",
-            "Kgh0cmlnZ2VyczIHdHJpZ2dlckIQCg5idWlsZF90ZW1wbGF0ZSLcAQoSR2l0",
-            "SHViRXZlbnRzQ29uZmlnEhsKD2luc3RhbGxhdGlvbl9pZBgBIAEoA0ICGAES",
-            "DQoFb3duZXIYBiABKAkSDAoEbmFtZRgHIAEoCRJICgxwdWxsX3JlcXVlc3QY",
-            "BCABKAsyMC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5QdWxsUmVx",
-            "dWVzdEZpbHRlckgAEjkKBHB1c2gYBSABKAsyKS5nb29nbGUuZGV2dG9vbHMu",
-            "Y2xvdWRidWlsZC52MS5QdXNoRmlsdGVySABCBwoFZXZlbnQi/wIKDFB1YnN1",
-            "YkNvbmZpZxJACgxzdWJzY3JpcHRpb24YASABKAlCKuBBA/pBJAoicHVic3Vi",
-            "Lmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvCgV0b3BpYxgCIAEoCUIg",
-            "+kEdChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSRQoVc2VydmljZV9h",
-            "Y2NvdW50X2VtYWlsGAMgASgJQib6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9T",
-            "ZXJ2aWNlQWNjb3VudBJACgVzdGF0ZRgEIAEoDjIxLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLlB1YnN1YkNvbmZpZy5TdGF0ZSJzCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgYKAk9LEAESGAoUU1VCU0NSSVBUSU9O",
-            "X0RFTEVURUQQAhIRCg1UT1BJQ19ERUxFVEVEEAMSHgoaU1VCU0NSSVBUSU9O",
-            "X01JU0NPTkZJR1VSRUQQBCLjAQoNV2ViaG9va0NvbmZpZxJECgZzZWNyZXQY",
-            "AyABKAlCMuBBAvpBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9T",
-            "ZWNyZXRWZXJzaW9uSAASQQoFc3RhdGUYBCABKA4yMi5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRidWlsZC52MS5XZWJob29rQ29uZmlnLlN0YXRlIjoKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBgoCT0sQARISCg5TRUNSRVRfREVM",
-            "RVRFRBACQg0KC2F1dGhfbWV0aG9kIpQCChFQdWxsUmVxdWVzdEZpbHRlchIQ",
-            "CgZicmFuY2gYAiABKAlIABJYCg9jb21tZW50X2NvbnRyb2wYBSABKA4yPy5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5QdWxsUmVxdWVzdEZpbHRl",
-            "ci5Db21tZW50Q29udHJvbBIUCgxpbnZlcnRfcmVnZXgYBiABKAgicgoOQ29t",
-            "bWVudENvbnRyb2wSFQoRQ09NTUVOVFNfRElTQUJMRUQQABIUChBDT01NRU5U",
-            "U19FTkFCTEVEEAESMwovQ09NTUVOVFNfRU5BQkxFRF9GT1JfRVhURVJOQUxf",
-            "Q09OVFJJQlVUT1JTX09OTFkQAkIJCgdnaXRfcmVmIk4KClB1c2hGaWx0ZXIS",
-            "EAoGYnJhbmNoGAIgASgJSAASDQoDdGFnGAMgASgJSAASFAoMaW52ZXJ0X3Jl",
-            "Z2V4GAQgASgIQgkKB2dpdF9yZWYitAEKGUNyZWF0ZUJ1aWxkVHJpZ2dlclJl",
-            "cXVlc3QSOwoGcGFyZW50GAMgASgJQiv6QSgSJmNsb3VkYnVpbGQuZ29vZ2xl",
-            "YXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQYASABKAlCA+BB",
-            "AhJBCgd0cmlnZ2VyGAIgASgLMisuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVp",
-            "bGQudjEuQnVpbGRUcmlnZ2VyQgPgQQIihQEKFkdldEJ1aWxkVHJpZ2dlclJl",
-            "cXVlc3QSOQoEbmFtZRgDIAEoCUIr+kEoCiZjbG91ZGJ1aWxkLmdvb2dsZWFw",
-            "aXMuY29tL0J1aWxkVHJpZ2dlchIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQIS",
-            "FwoKdHJpZ2dlcl9pZBgCIAEoCUID4EECIpcBChhMaXN0QnVpbGRUcmlnZ2Vy",
-            "c1JlcXVlc3QSOwoGcGFyZW50GAQgASgJQiv6QSgSJmNsb3VkYnVpbGQuZ29v",
-            "Z2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQYASABKAlC",
-            "A+BBAhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJz",
-            "ChlMaXN0QnVpbGRUcmlnZ2Vyc1Jlc3BvbnNlEj0KCHRyaWdnZXJzGAEgAygL",
-            "MisuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRUcmlnZ2Vy",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKIAQoZRGVsZXRlQnVpbGRUcmln",
-            "Z2VyUmVxdWVzdBI5CgRuYW1lGAMgASgJQiv6QSgKJmNsb3VkYnVpbGQuZ29v",
-            "Z2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQYASABKAlC",
-            "A+BBAhIXCgp0cmlnZ2VyX2lkGAIgASgJQgPgQQIikAEKGVVwZGF0ZUJ1aWxk",
-            "VHJpZ2dlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhcKCnRy",
-            "aWdnZXJfaWQYAiABKAlCA+BBAhJBCgd0cmlnZ2VyGAMgASgLMisuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRUcmlnZ2VyQgPgQQIixggK",
-            "DEJ1aWxkT3B0aW9ucxJMChZzb3VyY2VfcHJvdmVuYW5jZV9oYXNoGAEgAygO",
-            "MiwuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuSGFzaC5IYXNoVHlw",
-            "ZRJZChdyZXF1ZXN0ZWRfdmVyaWZ5X29wdGlvbhgCIAEoDjI4Lmdvb2dsZS5k",
-            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxkT3B0aW9ucy5WZXJpZnlPcHRp",
-            "b24STQoMbWFjaGluZV90eXBlGAMgASgOMjcuZ29vZ2xlLmRldnRvb2xzLmNs",
-            "b3VkYnVpbGQudjEuQnVpbGRPcHRpb25zLk1hY2hpbmVUeXBlEhQKDGRpc2tf",
-            "c2l6ZV9nYhgGIAEoAxJbChNzdWJzdGl0dXRpb25fb3B0aW9uGAQgASgOMj4u",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRPcHRpb25zLlN1",
-            "YnN0aXR1dGlvbk9wdGlvbhIdChVkeW5hbWljX3N1YnN0aXR1dGlvbnMYESAB",
-            "KAgSXAoUbG9nX3N0cmVhbWluZ19vcHRpb24YBSABKA4yPi5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZE9wdGlvbnMuTG9nU3RyZWFtaW5n",
-            "T3B0aW9uEhMKC3dvcmtlcl9wb29sGAcgASgJEkgKB2xvZ2dpbmcYCyABKA4y",
-            "Ny5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZE9wdGlvbnMu",
-            "TG9nZ2luZ01vZGUSCwoDZW52GAwgAygJEhIKCnNlY3JldF9lbnYYDSADKAkS",
-            "NgoHdm9sdW1lcxgOIAMoCzIlLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxk",
-            "LnYxLlZvbHVtZSIuCgxWZXJpZnlPcHRpb24SEAoMTk9UX1ZFUklGSUVEEAAS",
-            "DAoIVkVSSUZJRUQQASJoCgtNYWNoaW5lVHlwZRIPCgtVTlNQRUNJRklFRBAA",
-            "EhAKDE4xX0hJR0hDUFVfOBABEhEKDU4xX0hJR0hDUFVfMzIQAhIQCgxFMl9I",
-            "SUdIQ1BVXzgQBRIRCg1FMl9ISUdIQ1BVXzMyEAYiNQoSU3Vic3RpdHV0aW9u",
-            "T3B0aW9uEg4KCk1VU1RfTUFUQ0gQABIPCgtBTExPV19MT09TRRABIkcKEkxv",
-            "Z1N0cmVhbWluZ09wdGlvbhISCg5TVFJFQU1fREVGQVVMVBAAEg0KCVNUUkVB",
-            "TV9PThABEg4KClNUUkVBTV9PRkYQAiJ8CgtMb2dnaW5nTW9kZRIXChNMT0dH",
-            "SU5HX1VOU1BFQ0lGSUVEEAASCgoGTEVHQUNZEAESDAoIR0NTX09OTFkQAhIY",
-            "ChBTVEFDS0RSSVZFUl9PTkxZEAMaAggBEhYKEkNMT1VEX0xPR0dJTkdfT05M",
-            "WRAFEggKBE5PTkUQBCKFAQocUmVjZWl2ZVRyaWdnZXJXZWJob29rUmVxdWVz",
-            "dBIMCgRuYW1lGAUgASgJEiIKBGJvZHkYASABKAsyFC5nb29nbGUuYXBpLkh0",
-            "dHBCb2R5EhIKCnByb2plY3RfaWQYAiABKAkSDwoHdHJpZ2dlchgDIAEoCRIO",
-            "CgZzZWNyZXQYBCABKAkiHwodUmVjZWl2ZVRyaWdnZXJXZWJob29rUmVzcG9u",
-            "c2Ui9AQKCldvcmtlclBvb2wSDAoEbmFtZRgOIAEoCRISCgpwcm9qZWN0X2lk",
-            "GAIgASgJEh0KFXNlcnZpY2VfYWNjb3VudF9lbWFpbBgDIAEoCRIUCgx3b3Jr",
-            "ZXJfY291bnQYBCABKAMSQgoNd29ya2VyX2NvbmZpZxgQIAEoCzIrLmdvb2ds",
-            "ZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLldvcmtlckNvbmZpZxJBCgdyZWdp",
-            "b25zGAkgAygOMjAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuV29y",
-            "a2VyUG9vbC5SZWdpb24SLwoLY3JlYXRlX3RpbWUYCyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGBEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtkZWxldGVfdGltZRgMIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQAoGc3RhdHVzGA0gASgOMjAu",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuV29ya2VyUG9vbC5TdGF0",
-            "dXMiWwoGUmVnaW9uEhYKElJFR0lPTl9VTlNQRUNJRklFRBAAEg8KC1VTX0NF",
-            "TlRSQUwxEAESDAoIVVNfV0VTVDEQAhIMCghVU19FQVNUMRADEgwKCFVTX0VB",
-            "U1Q0EAQiVgoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklFRBAAEgwKCENS",
-            "RUFUSU5HEAESCwoHUlVOTklORxACEgwKCERFTEVUSU5HEAMSCwoHREVMRVRF",
-            "RBAEIoABCgxXb3JrZXJDb25maWcSFAoMbWFjaGluZV90eXBlGAEgASgJEhQK",
-            "DGRpc2tfc2l6ZV9nYhgCIAEoAxI3CgduZXR3b3JrGAMgASgLMiYuZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjEuTmV0d29yaxILCgN0YWcYBCABKAki",
-            "QgoHTmV0d29yaxISCgpwcm9qZWN0X2lkGAEgASgJEg8KB25ldHdvcmsYAiAB",
-            "KAkSEgoKc3VibmV0d29yaxgDIAEoCSJpChdDcmVhdGVXb3JrZXJQb29sUmVx",
-            "dWVzdBIOCgZwYXJlbnQYASABKAkSPgoLd29ya2VyX3Bvb2wYAiABKAsyKS5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5Xb3JrZXJQb29sIiQKFEdl",
-            "dFdvcmtlclBvb2xSZXF1ZXN0EgwKBG5hbWUYASABKAkiJwoXRGVsZXRlV29y",
-            "a2VyUG9vbFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJnChdVcGRhdGVXb3JrZXJQ",
-            "b29sUmVxdWVzdBIMCgRuYW1lGAIgASgJEj4KC3dvcmtlcl9wb29sGAMgASgL",
-            "MikuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuV29ya2VyUG9vbCIo",
-            "ChZMaXN0V29ya2VyUG9vbHNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCSJaChdM",
-            "aXN0V29ya2VyUG9vbHNSZXNwb25zZRI/Cgx3b3JrZXJfcG9vbHMYASADKAsy",
-            "KS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5Xb3JrZXJQb29sMogd",
-            "CgpDbG91ZEJ1aWxkEvsBCgtDcmVhdGVCdWlsZBIxLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLkNyZWF0ZUJ1aWxkUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24imQGC0+STAl4iIC92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH0vYnVpbGRzOgVidWlsZFozIiovdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9idWlsZHM6BWJ1aWxk2kEQcHJvamVjdF9p",
-            "ZCxidWlsZMpBHwoFQnVpbGQSFkJ1aWxkT3BlcmF0aW9uTWV0YWRhdGESzQEK",
-            "CEdldEJ1aWxkEi4uZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuR2V0",
-            "QnVpbGRSZXF1ZXN0GiQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEu",
-            "QnVpbGQia4LT5JMCVRIlL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9idWls",
-            "ZHMve2lkfVosEiovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9i",
-            "dWlsZHMvKn3aQQ1wcm9qZWN0X2lkLGlkEt0BCgpMaXN0QnVpbGRzEjAuZ29v",
-            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuTGlzdEJ1aWxkc1JlcXVlc3Qa",
-            "MS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5MaXN0QnVpbGRzUmVz",
-            "cG9uc2UiaoLT5JMCUBIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9idWls",
-            "ZHNaLBIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYnVp",
-            "bGRz2kERcHJvamVjdF9pZCxmaWx0ZXIS5wEKC0NhbmNlbEJ1aWxkEjEuZ29v",
-            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQ2FuY2VsQnVpbGRSZXF1ZXN0",
-            "GiQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQif4LT5JMC",
-            "aSIsL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9idWlsZHMve2lkfTpjYW5j",
-            "ZWw6ASpaNiIxL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYnVp",
-            "bGRzLyp9OmNhbmNlbDoBKtpBDXByb2plY3RfaWQsaWQS/wEKClJldHJ5QnVp",
-            "bGQSMC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5SZXRyeUJ1aWxk",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwGC0+ST",
-            "AmciKy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vYnVpbGRzL3tpZH06cmV0",
-            "cnk6ASpaNSIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYnVp",
-            "bGRzLyp9OnJldHJ5OgEq2kENcHJvamVjdF9pZCxpZMpBHwoFQnVpbGQSFkJ1",
-            "aWxkT3BlcmF0aW9uTWV0YWRhdGES/wEKEkNyZWF0ZUJ1aWxkVHJpZ2dlchI4",
-            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkNyZWF0ZUJ1aWxkVHJp",
-            "Z2dlclJlcXVlc3QaKy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5C",
-            "dWlsZFRyaWdnZXIigQGC0+STAmYiIi92MS9wcm9qZWN0cy97cHJvamVjdF9p",
-            "ZH0vdHJpZ2dlcnM6B3RyaWdnZXJaNyIsL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vdHJpZ2dlcnM6B3RyaWdnZXLaQRJwcm9qZWN0X2lk",
-            "LHRyaWdnZXIS9gEKD0dldEJ1aWxkVHJpZ2dlchI1Lmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLkdldEJ1aWxkVHJpZ2dlclJlcXVlc3QaKy5nb29n",
-            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZFRyaWdnZXIif4LT5JMC",
-            "YRIvL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS90cmlnZ2Vycy97dHJpZ2dl",
-            "cl9pZH1aLhIsL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdHJp",
-            "Z2dlcnMvKn3aQRVwcm9qZWN0X2lkLHRyaWdnZXJfaWQS7wEKEUxpc3RCdWls",
-            "ZFRyaWdnZXJzEjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuTGlz",
-            "dEJ1aWxkVHJpZ2dlcnNSZXF1ZXN0GjguZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
-            "YnVpbGQudjEuTGlzdEJ1aWxkVHJpZ2dlcnNSZXNwb25zZSJngtPkkwJUEiIv",
-            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3RyaWdnZXJzWi4SLC92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3RyaWdnZXJz2kEKcHJvamVj",
-            "dF9pZBLnAQoSRGVsZXRlQnVpbGRUcmlnZ2VyEjguZ29vZ2xlLmRldnRvb2xz",
-            "LmNsb3VkYnVpbGQudjEuRGVsZXRlQnVpbGRUcmlnZ2VyUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJ/gtPkkwJhKi8vdjEvcHJvamVjdHMve3By",
-            "b2plY3RfaWR9L3RyaWdnZXJzL3t0cmlnZ2VyX2lkfVouKiwvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90cmlnZ2Vycy8qfdpBFXByb2plY3Rf",
-            "aWQsdHJpZ2dlcl9pZBKpAgoSVXBkYXRlQnVpbGRUcmlnZ2VyEjguZ29vZ2xl",
-            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjEuVXBkYXRlQnVpbGRUcmlnZ2VyUmVx",
+            "ZC52MS5CdWlsZC5XYXJuaW5nQgPgQQMSSwoMZmFpbHVyZV9pbmZvGDMgASgL",
+            "MjAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQuRmFpbHVy",
+            "ZUluZm9CA+BBAxqoAQoHV2FybmluZxIMCgR0ZXh0GAEgASgJEkcKCHByaW9y",
+            "aXR5GAIgASgOMjUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVp",
+            "bGQuV2FybmluZy5Qcmlvcml0eSJGCghQcmlvcml0eRIYChRQUklPUklUWV9V",
+            "TlNQRUNJRklFRBAAEggKBElORk8QARILCgdXQVJOSU5HEAISCQoFQUxFUlQQ",
+            "AxqeAgoLRmFpbHVyZUluZm8SSgoEdHlwZRgBIAEoDjI8Lmdvb2dsZS5kZXZ0",
+            "b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxkLkZhaWx1cmVJbmZvLkZhaWx1cmVU",
+            "eXBlEg4KBmRldGFpbBgCIAEoCSKyAQoLRmFpbHVyZVR5cGUSHAoYRkFJTFVS",
+            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLUFVTSF9GQUlMRUQQARIYChRQVVNI",
+            "X0lNQUdFX05PVF9GT1VORBACEhcKE1BVU0hfTk9UX0FVVEhPUklaRUQQAxIT",
+            "Cg9MT0dHSU5HX0ZBSUxVUkUQBBITCg9VU0VSX0JVSUxEX1NURVAQBRIXChNG",
+            "RVRDSF9TT1VSQ0VfRkFJTEVEEAYaNAoSU3Vic3RpdHV0aW9uc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaVgoLVGltaW5nRW50cnkS",
+            "CwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicuZ29vZ2xlLmRldnRvb2xz",
+            "LmNsb3VkYnVpbGQudjEuVGltZVNwYW46AjgBIowBCgZTdGF0dXMSEgoOU1RB",
+            "VFVTX1VOS05PV04QABIKCgZRVUVVRUQQARILCgdXT1JLSU5HEAISCwoHU1VD",
+            "Q0VTUxADEgsKB0ZBSUxVUkUQBBISCg5JTlRFUk5BTF9FUlJPUhAFEgsKB1RJ",
+            "TUVPVVQQBhINCglDQU5DRUxMRUQQBxILCgdFWFBJUkVEEAk6f+pBfAofY2xv",
+            "dWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBIhcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2J1aWxkcy97YnVpbGR9EjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vYnVpbGRzL3tidWlsZH0i2AEKCUFydGlmYWN0cxIO",
+            "CgZpbWFnZXMYASADKAkSSQoHb2JqZWN0cxgCIAEoCzI4Lmdvb2dsZS5kZXZ0",
+            "b29scy5jbG91ZGJ1aWxkLnYxLkFydGlmYWN0cy5BcnRpZmFjdE9iamVjdHMa",
+            "cAoPQXJ0aWZhY3RPYmplY3RzEhAKCGxvY2F0aW9uGAEgASgJEg0KBXBhdGhz",
+            "GAIgAygJEjwKBnRpbWluZxgDIAEoCzInLmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGJ1aWxkLnYxLlRpbWVTcGFuQgPgQQMiaAoIVGltZVNwYW4SLgoKc3RhcnRf",
+            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk0KFkJ1",
+            "aWxkT3BlcmF0aW9uTWV0YWRhdGESMwoFYnVpbGQYASABKAsyJC5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZCLDAwoQU291cmNlUHJvdmVu",
+            "YW5jZRJNChdyZXNvbHZlZF9zdG9yYWdlX3NvdXJjZRgDIAEoCzIsLmdvb2ds",
+            "ZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlN0b3JhZ2VTb3VyY2USRwoUcmVz",
+            "b2x2ZWRfcmVwb19zb3VyY2UYBiABKAsyKS5nb29nbGUuZGV2dG9vbHMuY2xv",
+            "dWRidWlsZC52MS5SZXBvU291cmNlEl4KIHJlc29sdmVkX3N0b3JhZ2Vfc291",
+            "cmNlX21hbmlmZXN0GAkgASgLMjQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVp",
+            "bGQudjEuU3RvcmFnZVNvdXJjZU1hbmlmZXN0ElkKC2ZpbGVfaGFzaGVzGAQg",
+            "AygLMj8uZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuU291cmNlUHJv",
+            "dmVuYW5jZS5GaWxlSGFzaGVzRW50cnlCA+BBAxpcCg9GaWxlSGFzaGVzRW50",
+            "cnkSCwoDa2V5GAEgASgJEjgKBXZhbHVlGAIgASgLMikuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkYnVpbGQudjEuRmlsZUhhc2hlczoCOAEiRAoKRmlsZUhhc2hl",
+            "cxI2CglmaWxlX2hhc2gYASADKAsyIy5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52MS5IYXNoInwKBEhhc2gSOgoEdHlwZRgBIAEoDjIsLmdvb2dsZS5k",
+            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkhhc2guSGFzaFR5cGUSDQoFdmFsdWUY",
+            "AiABKAwiKQoISGFzaFR5cGUSCAoETk9ORRAAEgoKBlNIQTI1NhABEgcKA01E",
+            "NRACIpIBCgdTZWNyZXRzEkoKDnNlY3JldF9tYW5hZ2VyGAEgAygLMjIuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuU2VjcmV0TWFuYWdlclNlY3Jl",
+            "dBI7CgZpbmxpbmUYAiADKAsyKy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
+            "ZC52MS5JbmxpbmVTZWNyZXQixQEKDElubGluZVNlY3JldBI8CgxrbXNfa2V5",
+            "X25hbWUYASABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5",
+            "cHRvS2V5EkgKB2Vudl9tYXAYAiADKAsyNy5nb29nbGUuZGV2dG9vbHMuY2xv",
+            "dWRidWlsZC52MS5JbmxpbmVTZWNyZXQuRW52TWFwRW50cnkaLQoLRW52TWFw",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgMOgI4ASJpChNTZWNy",
+            "ZXRNYW5hZ2VyU2VjcmV0EkUKDHZlcnNpb25fbmFtZRgBIAEoCUIv+kEsCipz",
+            "ZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SCwoD",
+            "ZW52GAIgASgJIpoBCgZTZWNyZXQSFAoMa21zX2tleV9uYW1lGAEgASgJEkgK",
+            "CnNlY3JldF9lbnYYAyADKAsyNC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
+            "ZC52MS5TZWNyZXQuU2VjcmV0RW52RW50cnkaMAoOU2VjcmV0RW52RW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgMOgI4ASKdAQoSQ3JlYXRlQnVp",
+            "bGRSZXF1ZXN0EjQKBnBhcmVudBgEIAEoCUIk+kEhEh9jbG91ZGJ1aWxkLmdv",
+            "b2dsZWFwaXMuY29tL0J1aWxkEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhI4",
+            "CgVidWlsZBgCIAEoCzIkLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYx",
+            "LkJ1aWxkQgPgQQIibwoPR2V0QnVpbGRSZXF1ZXN0EjIKBG5hbWUYBCABKAlC",
+            "JPpBIQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBIXCgpwcm9q",
+            "ZWN0X2lkGAEgASgJQgPgQQISDwoCaWQYAiABKAlCA+BBAiKZAQoRTGlzdEJ1",
+            "aWxkc1JlcXVlc3QSNAoGcGFyZW50GAkgASgJQiT6QSESH2Nsb3VkYnVpbGQu",
+            "Z29vZ2xlYXBpcy5jb20vQnVpbGQSFwoKcHJvamVjdF9pZBgBIAEoCUID4EEC",
+            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZp",
+            "bHRlchgIIAEoCSJjChJMaXN0QnVpbGRzUmVzcG9uc2USNAoGYnVpbGRzGAEg",
+            "AygLMiQuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJInIKEkNhbmNlbEJ1aWxkUmVxdWVzdBIy",
+            "CgRuYW1lGAQgASgJQiT6QSEKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20v",
+            "QnVpbGQSFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEg8KAmlkGAIgASgJQgPg",
+            "QQIiqgcKDEJ1aWxkVHJpZ2dlchIVCg1yZXNvdXJjZV9uYW1lGCIgASgJEg8K",
+            "AmlkGAEgASgJQgPgQQMSEwoLZGVzY3JpcHRpb24YCiABKAkSDAoEbmFtZRgV",
+            "IAEoCRIMCgR0YWdzGBMgAygJEkMKEHRyaWdnZXJfdGVtcGxhdGUYByABKAsy",
+            "KS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5SZXBvU291cmNlEkEK",
+            "BmdpdGh1YhgNIAEoCzIxLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYx",
+            "LkdpdEh1YkV2ZW50c0NvbmZpZxJCCg1wdWJzdWJfY29uZmlnGB0gASgLMisu",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuUHVic3ViQ29uZmlnEkQK",
+            "DndlYmhvb2tfY29uZmlnGB8gASgLMiwuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "YnVpbGQudjEuV2ViaG9va0NvbmZpZxIUCgphdXRvZGV0ZWN0GBIgASgISAAS",
+            "NQoFYnVpbGQYBCABKAsyJC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52",
+            "MS5CdWlsZEgAEhIKCGZpbGVuYW1lGAggASgJSAASNAoLY3JlYXRlX3RpbWUY",
+            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEAoIZGlz",
+            "YWJsZWQYCSABKAgSVQoNc3Vic3RpdHV0aW9ucxgLIAMoCzI+Lmdvb2dsZS5k",
+            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxkVHJpZ2dlci5TdWJzdGl0dXRp",
+            "b25zRW50cnkSFQoNaWdub3JlZF9maWxlcxgPIAMoCRIWCg5pbmNsdWRlZF9m",
+            "aWxlcxgQIAMoCRITCgZmaWx0ZXIYHiABKAlCA+BBARo0ChJTdWJzdGl0dXRp",
+            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqiAepB",
+            "ngEKJmNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEiVw",
+            "cm9qZWN0cy97cHJvamVjdH0vdHJpZ2dlcnMve3RyaWdnZXJ9Ejpwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdHJpZ2dlcnMve3Ry",
+            "aWdnZXJ9Kgh0cmlnZ2VyczIHdHJpZ2dlckIQCg5idWlsZF90ZW1wbGF0ZSLc",
+            "AQoSR2l0SHViRXZlbnRzQ29uZmlnEhsKD2luc3RhbGxhdGlvbl9pZBgBIAEo",
+            "A0ICGAESDQoFb3duZXIYBiABKAkSDAoEbmFtZRgHIAEoCRJICgxwdWxsX3Jl",
+            "cXVlc3QYBCABKAsyMC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5Q",
+            "dWxsUmVxdWVzdEZpbHRlckgAEjkKBHB1c2gYBSABKAsyKS5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRidWlsZC52MS5QdXNoRmlsdGVySABCBwoFZXZlbnQi/wIK",
+            "DFB1YnN1YkNvbmZpZxJACgxzdWJzY3JpcHRpb24YASABKAlCKuBBA/pBJAoi",
+            "cHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvCgV0b3BpYxgC",
+            "IAEoCUIg+kEdChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSRQoVc2Vy",
+            "dmljZV9hY2NvdW50X2VtYWlsGAMgASgJQib6QSMKIWlhbS5nb29nbGVhcGlz",
+            "LmNvbS9TZXJ2aWNlQWNjb3VudBJACgVzdGF0ZRgEIAEoDjIxLmdvb2dsZS5k",
+            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYxLlB1YnN1YkNvbmZpZy5TdGF0ZSJzCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgYKAk9LEAESGAoUU1VCU0NS",
+            "SVBUSU9OX0RFTEVURUQQAhIRCg1UT1BJQ19ERUxFVEVEEAMSHgoaU1VCU0NS",
+            "SVBUSU9OX01JU0NPTkZJR1VSRUQQBCLjAQoNV2ViaG9va0NvbmZpZxJECgZz",
+            "ZWNyZXQYAyABKAlCMuBBAvpBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9TZWNyZXRWZXJzaW9uSAASQQoFc3RhdGUYBCABKA4yMi5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWRidWlsZC52MS5XZWJob29rQ29uZmlnLlN0YXRlIjoK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBgoCT0sQARISCg5TRUNS",
+            "RVRfREVMRVRFRBACQg0KC2F1dGhfbWV0aG9kIpQCChFQdWxsUmVxdWVzdEZp",
+            "bHRlchIQCgZicmFuY2gYAiABKAlIABJYCg9jb21tZW50X2NvbnRyb2wYBSAB",
+            "KA4yPy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5QdWxsUmVxdWVz",
+            "dEZpbHRlci5Db21tZW50Q29udHJvbBIUCgxpbnZlcnRfcmVnZXgYBiABKAgi",
+            "cgoOQ29tbWVudENvbnRyb2wSFQoRQ09NTUVOVFNfRElTQUJMRUQQABIUChBD",
+            "T01NRU5UU19FTkFCTEVEEAESMwovQ09NTUVOVFNfRU5BQkxFRF9GT1JfRVhU",
+            "RVJOQUxfQ09OVFJJQlVUT1JTX09OTFkQAkIJCgdnaXRfcmVmIk4KClB1c2hG",
+            "aWx0ZXISEAoGYnJhbmNoGAIgASgJSAASDQoDdGFnGAMgASgJSAASFAoMaW52",
+            "ZXJ0X3JlZ2V4GAQgASgIQgkKB2dpdF9yZWYitAEKGUNyZWF0ZUJ1aWxkVHJp",
+            "Z2dlclJlcXVlc3QSOwoGcGFyZW50GAMgASgJQiv6QSgSJmNsb3VkYnVpbGQu",
+            "Z29vZ2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQYASAB",
+            "KAlCA+BBAhJBCgd0cmlnZ2VyGAIgASgLMisuZ29vZ2xlLmRldnRvb2xzLmNs",
+            "b3VkYnVpbGQudjEuQnVpbGRUcmlnZ2VyQgPgQQIihQEKFkdldEJ1aWxkVHJp",
+            "Z2dlclJlcXVlc3QSOQoEbmFtZRgDIAEoCUIr+kEoCiZjbG91ZGJ1aWxkLmdv",
+            "b2dsZWFwaXMuY29tL0J1aWxkVHJpZ2dlchIXCgpwcm9qZWN0X2lkGAEgASgJ",
+            "QgPgQQISFwoKdHJpZ2dlcl9pZBgCIAEoCUID4EECIpcBChhMaXN0QnVpbGRU",
+            "cmlnZ2Vyc1JlcXVlc3QSOwoGcGFyZW50GAQgASgJQiv6QSgSJmNsb3VkYnVp",
+            "bGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQY",
+            "ASABKAlCA+BBAhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCSJzChlMaXN0QnVpbGRUcmlnZ2Vyc1Jlc3BvbnNlEj0KCHRyaWdnZXJz",
+            "GAEgAygLMisuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRU",
+            "cmlnZ2VyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKIAQoZRGVsZXRlQnVp",
+            "bGRUcmlnZ2VyUmVxdWVzdBI5CgRuYW1lGAMgASgJQiv6QSgKJmNsb3VkYnVp",
+            "bGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRUcmlnZ2VyEhcKCnByb2plY3RfaWQY",
+            "ASABKAlCA+BBAhIXCgp0cmlnZ2VyX2lkGAIgASgJQgPgQQIikAEKGVVwZGF0",
+            "ZUJ1aWxkVHJpZ2dlclJlcXVlc3QSFwoKcHJvamVjdF9pZBgBIAEoCUID4EEC",
+            "EhcKCnRyaWdnZXJfaWQYAiABKAlCA+BBAhJBCgd0cmlnZ2VyGAMgASgLMisu",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRUcmlnZ2VyQgPg",
+            "QQIi3AkKDEJ1aWxkT3B0aW9ucxJMChZzb3VyY2VfcHJvdmVuYW5jZV9oYXNo",
+            "GAEgAygOMiwuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuSGFzaC5I",
+            "YXNoVHlwZRJZChdyZXF1ZXN0ZWRfdmVyaWZ5X29wdGlvbhgCIAEoDjI4Lmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxkT3B0aW9ucy5WZXJp",
+            "ZnlPcHRpb24STQoMbWFjaGluZV90eXBlGAMgASgOMjcuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkYnVpbGQudjEuQnVpbGRPcHRpb25zLk1hY2hpbmVUeXBlEhQK",
+            "DGRpc2tfc2l6ZV9nYhgGIAEoAxJbChNzdWJzdGl0dXRpb25fb3B0aW9uGAQg",
+            "ASgOMj4uZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRPcHRp",
+            "b25zLlN1YnN0aXR1dGlvbk9wdGlvbhIdChVkeW5hbWljX3N1YnN0aXR1dGlv",
+            "bnMYESABKAgSXAoUbG9nX3N0cmVhbWluZ19vcHRpb24YBSABKA4yPi5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5CdWlsZE9wdGlvbnMuTG9nU3Ry",
+            "ZWFtaW5nT3B0aW9uEhcKC3dvcmtlcl9wb29sGAcgASgJQgIYARJJCgRwb29s",
+            "GBMgASgLMjYuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRP",
+            "cHRpb25zLlBvb2xPcHRpb25CA+BBARJICgdsb2dnaW5nGAsgASgOMjcuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGRPcHRpb25zLkxvZ2dp",
+            "bmdNb2RlEgsKA2VudhgMIAMoCRISCgpzZWNyZXRfZW52GA0gAygJEjYKB3Zv",
+            "bHVtZXMYDiADKAsyJS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5W",
+            "b2x1bWUaRQoKUG9vbE9wdGlvbhI3CgRuYW1lGAEgASgJQin6QSYKJGNsb3Vk",
+            "YnVpbGQuZ29vZ2xlYXBpcy5jb20vV29ya2VyUG9vbCIuCgxWZXJpZnlPcHRp",
+            "b24SEAoMTk9UX1ZFUklGSUVEEAASDAoIVkVSSUZJRUQQASJoCgtNYWNoaW5l",
+            "VHlwZRIPCgtVTlNQRUNJRklFRBAAEhAKDE4xX0hJR0hDUFVfOBABEhEKDU4x",
+            "X0hJR0hDUFVfMzIQAhIQCgxFMl9ISUdIQ1BVXzgQBRIRCg1FMl9ISUdIQ1BV",
+            "XzMyEAYiNQoSU3Vic3RpdHV0aW9uT3B0aW9uEg4KCk1VU1RfTUFUQ0gQABIP",
+            "CgtBTExPV19MT09TRRABIkcKEkxvZ1N0cmVhbWluZ09wdGlvbhISCg5TVFJF",
+            "QU1fREVGQVVMVBAAEg0KCVNUUkVBTV9PThABEg4KClNUUkVBTV9PRkYQAiJ8",
+            "CgtMb2dnaW5nTW9kZRIXChNMT0dHSU5HX1VOU1BFQ0lGSUVEEAASCgoGTEVH",
+            "QUNZEAESDAoIR0NTX09OTFkQAhIYChBTVEFDS0RSSVZFUl9PTkxZEAMaAggB",
+            "EhYKEkNMT1VEX0xPR0dJTkdfT05MWRAFEggKBE5PTkUQBCKFAQocUmVjZWl2",
+            "ZVRyaWdnZXJXZWJob29rUmVxdWVzdBIMCgRuYW1lGAUgASgJEiIKBGJvZHkY",
+            "ASABKAsyFC5nb29nbGUuYXBpLkh0dHBCb2R5EhIKCnByb2plY3RfaWQYAiAB",
+            "KAkSDwoHdHJpZ2dlchgDIAEoCRIOCgZzZWNyZXQYBCABKAkiHwodUmVjZWl2",
+            "ZVRyaWdnZXJXZWJob29rUmVzcG9uc2UiiAYKCldvcmtlclBvb2wSEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQCgN1aWQYAyAB",
+            "KAlCA+BBAxJPCgthbm5vdGF0aW9ucxgEIAMoCzI6Lmdvb2dsZS5kZXZ0b29s",
+            "cy5jbG91ZGJ1aWxkLnYxLldvcmtlclBvb2wuQW5ub3RhdGlvbnNFbnRyeRI0",
+            "CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgHIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJDCgVzdGF0ZRgIIAEoDjIvLmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLldvcmtlclBvb2wuU3RhdGVC",
+            "A+BBAxJUChZwcml2YXRlX3Bvb2xfdjFfY29uZmlnGAwgASgLMjIuZ29vZ2xl",
+            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjEuUHJpdmF0ZVBvb2xWMUNvbmZpZ0gA",
+            "EhEKBGV0YWcYCyABKAlCA+BBAxoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVAoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgsKB1JVTk5JTkcQAhIMCghE",
+            "RUxFVElORxADEgsKB0RFTEVURUQQBDqJAepBhQEKJGNsb3VkYnVpbGQuZ29v",
+            "Z2xlYXBpcy5jb20vV29ya2VyUG9vbBJBcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3dvcmtlclBvb2xzL3t3b3JrZXJfcG9vbH0q",
+            "C3dvcmtlclBvb2xzMgp3b3JrZXJQb29sUgEBQggKBmNvbmZpZyKWBAoTUHJp",
+            "dmF0ZVBvb2xWMUNvbmZpZxJWCg13b3JrZXJfY29uZmlnGAEgASgLMj8uZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuUHJpdmF0ZVBvb2xWMUNvbmZp",
+            "Zy5Xb3JrZXJDb25maWcSWAoObmV0d29ya19jb25maWcYAiABKAsyQC5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5Qcml2YXRlUG9vbFYxQ29uZmln",
+            "Lk5ldHdvcmtDb25maWcaOgoMV29ya2VyQ29uZmlnEhQKDG1hY2hpbmVfdHlw",
+            "ZRgBIAEoCRIUCgxkaXNrX3NpemVfZ2IYAiABKAMakAIKDU5ldHdvcmtDb25m",
+            "aWcSQQoOcGVlcmVkX25ldHdvcmsYASABKAlCKeBBBeBBAvpBIAoeY29tcHV0",
+            "ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEmQKDWVncmVzc19vcHRpb24YAiAB",
+            "KA4yTS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5Qcml2YXRlUG9v",
+            "bFYxQ29uZmlnLk5ldHdvcmtDb25maWcuRWdyZXNzT3B0aW9uIlYKDEVncmVz",
+            "c09wdGlvbhIdChlFR1JFU1NfT1BUSU9OX1VOU1BFQ0lGSUVEEAASFAoQTk9f",
+            "UFVCTElDX0VHUkVTUxABEhEKDVBVQkxJQ19FR1JFU1MQAiLQAQoXQ3JlYXRl",
+            "V29ya2VyUG9vbFJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxv",
+            "Y2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJDCgt3b3JrZXJfcG9v",
+            "bBgCIAEoCzIpLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLldvcmtl",
+            "clBvb2xCA+BBAhIeCg53b3JrZXJfcG9vbF9pZBgDIAEoCUIG4EEF4EECEhUK",
+            "DXZhbGlkYXRlX29ubHkYBCABKAgiUgoUR2V0V29ya2VyUG9vbFJlcXVlc3QS",
+            "OgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMu",
+            "Y29tL1dvcmtlclBvb2wikQEKF0RlbGV0ZVdvcmtlclBvb2xSZXF1ZXN0EjoK",
+            "BG5hbWUYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlzLmNv",
+            "bS9Xb3JrZXJQb29sEgwKBGV0YWcYAiABKAkSFQoNYWxsb3dfbWlzc2luZxgD",
+            "IAEoCBIVCg12YWxpZGF0ZV9vbmx5GAQgASgIIqYBChdVcGRhdGVXb3JrZXJQ",
+            "b29sUmVxdWVzdBJDCgt3b3JrZXJfcG9vbBgBIAEoCzIpLmdvb2dsZS5kZXZ0",
+            "b29scy5jbG91ZGJ1aWxkLnYxLldvcmtlclBvb2xCA+BBAhIvCgt1cGRhdGVf",
+            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSFQoNdmFs",
+            "aWRhdGVfb25seRgEIAEoCCJ6ChZMaXN0V29ya2VyUG9vbHNSZXF1ZXN0EjkK",
+            "BnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5j",
+            "b20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "AyABKAkicwoXTGlzdFdvcmtlclBvb2xzUmVzcG9uc2USPwoMd29ya2VyX3Bv",
+            "b2xzGAEgAygLMikuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuV29y",
+            "a2VyUG9vbBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkixwEKIUNyZWF0ZVdv",
+            "cmtlclBvb2xPcGVyYXRpb25NZXRhZGF0YRI+Cgt3b3JrZXJfcG9vbBgBIAEo",
+            "CUIp+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL1dvcmtlclBvb2wS",
+            "LwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEjEKDWNvbXBsZXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIscBCiFVcGRhdGVXb3JrZXJQb29sT3BlcmF0aW9uTWV0YWRh",
+            "dGESPgoLd29ya2VyX3Bvb2wYASABKAlCKfpBJgokY2xvdWRidWlsZC5nb29n",
+            "bGVhcGlzLmNvbS9Xb3JrZXJQb29sEi8KC2NyZWF0ZV90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1jb21wbGV0ZV90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLHAQohRGVsZXRlV29y",
+            "a2VyUG9vbE9wZXJhdGlvbk1ldGFkYXRhEj4KC3dvcmtlcl9wb29sGAEgASgJ",
+            "Qin6QSYKJGNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vV29ya2VyUG9vbBIv",
+            "CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASMQoNY29tcGxldGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAyrCEKCkNsb3VkQnVpbGQS+wEKC0NyZWF0ZUJ1aWxkEjEuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQ3JlYXRlQnVpbGRSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKZAYLT5JMCXiIgL3Yx",
+            "L3Byb2plY3RzL3twcm9qZWN0X2lkfS9idWlsZHM6BWJ1aWxkWjMiKi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2J1aWxkczoFYnVpbGTa",
+            "QRBwcm9qZWN0X2lkLGJ1aWxkykEfCgVCdWlsZBIWQnVpbGRPcGVyYXRpb25N",
+            "ZXRhZGF0YRLNAQoIR2V0QnVpbGQSLi5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52MS5HZXRCdWlsZFJlcXVlc3QaJC5nb29nbGUuZGV2dG9vbHMuY2xv",
+            "dWRidWlsZC52MS5CdWlsZCJrgtPkkwJVEiUvdjEvcHJvamVjdHMve3Byb2pl",
+            "Y3RfaWR9L2J1aWxkcy97aWR9WiwSKi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2J1aWxkcy8qfdpBDXByb2plY3RfaWQsaWQS3QEKCkxpc3RC",
+            "dWlsZHMSMC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5MaXN0QnVp",
+            "bGRzUmVxdWVzdBoxLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkxp",
+            "c3RCdWlsZHNSZXNwb25zZSJqgtPkkwJQEiAvdjEvcHJvamVjdHMve3Byb2pl",
+            "Y3RfaWR9L2J1aWxkc1osEiovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9idWlsZHPaQRFwcm9qZWN0X2lkLGZpbHRlchLnAQoLQ2FuY2Vs",
+            "QnVpbGQSMS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5DYW5jZWxC",
+            "dWlsZFJlcXVlc3QaJC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5C",
+            "dWlsZCJ/gtPkkwJpIiwvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L2J1aWxk",
+            "cy97aWR9OmNhbmNlbDoBKlo2IjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9idWlsZHMvKn06Y2FuY2VsOgEq2kENcHJvamVjdF9pZCxpZBL/",
+            "AQoKUmV0cnlCdWlsZBIwLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYx",
+            "LlJldHJ5QnVpbGRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiKfAYLT5JMCZyIrL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9idWls",
+            "ZHMve2lkfTpyZXRyeToBKlo1IjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9idWlsZHMvKn06cmV0cnk6ASraQQ1wcm9qZWN0X2lkLGlkykEf",
+            "CgVCdWlsZBIWQnVpbGRPcGVyYXRpb25NZXRhZGF0YRL/AQoSQ3JlYXRlQnVp",
+            "bGRUcmlnZ2VyEjguZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQ3Jl",
+            "YXRlQnVpbGRUcmlnZ2VyUmVxdWVzdBorLmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGJ1aWxkLnYxLkJ1aWxkVHJpZ2dlciKBAYLT5JMCZiIiL3YxL3Byb2plY3Rz",
+            "L3twcm9qZWN0X2lkfS90cmlnZ2VyczoHdHJpZ2dlclo3IiwvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS90cmlnZ2VyczoHdHJpZ2dlctpB",
+            "EnByb2plY3RfaWQsdHJpZ2dlchL2AQoPR2V0QnVpbGRUcmlnZ2VyEjUuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuR2V0QnVpbGRUcmlnZ2VyUmVx",
             "dWVzdBorLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkJ1aWxkVHJp",
-            "Z2dlciKrAYLT5JMChAEyLy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vdHJp",
-            "Z2dlcnMve3RyaWdnZXJfaWR9Ogd0cmlnZ2VyWkgyPS92MS97dHJpZ2dlci5y",
-            "ZXNvdXJjZV9uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdHJpZ2dlcnMv",
-            "Kn06B3RyaWdnZXLaQR1wcm9qZWN0X2lkLHRyaWdnZXJfaWQsdHJpZ2dlchKl",
-            "AgoPUnVuQnVpbGRUcmlnZ2VyEjUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVp",
-            "bGQudjEuUnVuQnVpbGRUcmlnZ2VyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iuwGC0+STAnQiMy92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH0vdHJpZ2dlcnMve3RyaWdnZXJfaWR9OnJ1bjoGc291cmNlWjUiMC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RyaWdnZXJzLyp9OnJ1",
-            "bjoBKtpBHHByb2plY3RfaWQsdHJpZ2dlcl9pZCxzb3VyY2XKQR8KBUJ1aWxk",
-            "EhZCdWlsZE9wZXJhdGlvbk1ldGFkYXRhEpUCChVSZWNlaXZlVHJpZ2dlcldl",
-            "Ymhvb2sSOy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5SZWNlaXZl",
-            "VHJpZ2dlcldlYmhvb2tSZXF1ZXN0GjwuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
-            "YnVpbGQudjEuUmVjZWl2ZVRyaWdnZXJXZWJob29rUmVzcG9uc2UigAGC0+ST",
-            "AnoiNC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vdHJpZ2dlcnMve3RyaWdn",
-            "ZXJ9OndlYmhvb2s6BGJvZHlaPCI0L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovdHJpZ2dlcnMvKn06d2ViaG9vazoEYm9keRJ3ChBDcmVhdGVX",
-            "b3JrZXJQb29sEjYuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQ3Jl",
-            "YXRlV29ya2VyUG9vbFJlcXVlc3QaKS5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
-            "dWlsZC52MS5Xb3JrZXJQb29sIgAScQoNR2V0V29ya2VyUG9vbBIzLmdvb2ds",
-            "ZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLkdldFdvcmtlclBvb2xSZXF1ZXN0",
-            "GikuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuV29ya2VyUG9vbCIA",
-            "EmQKEERlbGV0ZVdvcmtlclBvb2wSNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
-            "dWlsZC52MS5EZWxldGVXb3JrZXJQb29sUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIAEncKEFVwZGF0ZVdvcmtlclBvb2wSNi5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRidWlsZC52MS5VcGRhdGVXb3JrZXJQb29sUmVxdWVzdBop",
-            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYxLldvcmtlclBvb2wiABKC",
+            "Z2dlciJ/gtPkkwJhEi8vdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3RyaWdn",
+            "ZXJzL3t0cmlnZ2VyX2lkfVouEiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi90cmlnZ2Vycy8qfdpBFXByb2plY3RfaWQsdHJpZ2dlcl9pZBLv",
+            "AQoRTGlzdEJ1aWxkVHJpZ2dlcnMSNy5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52MS5MaXN0QnVpbGRUcmlnZ2Vyc1JlcXVlc3QaOC5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRidWlsZC52MS5MaXN0QnVpbGRUcmlnZ2Vyc1Jlc3BvbnNl",
+            "ImeC0+STAlQSIi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vdHJpZ2dlcnNa",
+            "LhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdHJpZ2dl",
+            "cnPaQQpwcm9qZWN0X2lkEucBChJEZWxldGVCdWlsZFRyaWdnZXISOC5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5EZWxldGVCdWlsZFRyaWdnZXJS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5In+C0+STAmEqLy92MS9w",
+            "cm9qZWN0cy97cHJvamVjdF9pZH0vdHJpZ2dlcnMve3RyaWdnZXJfaWR9Wi4q",
+            "LC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RyaWdnZXJzLyp9",
+            "2kEVcHJvamVjdF9pZCx0cmlnZ2VyX2lkEqkCChJVcGRhdGVCdWlsZFRyaWdn",
+            "ZXISOC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52MS5VcGRhdGVCdWls",
+            "ZFRyaWdnZXJSZXF1ZXN0GisuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQu",
+            "djEuQnVpbGRUcmlnZ2VyIqsBgtPkkwKEATIvL3YxL3Byb2plY3RzL3twcm9q",
+            "ZWN0X2lkfS90cmlnZ2Vycy97dHJpZ2dlcl9pZH06B3RyaWdnZXJaSDI9L3Yx",
+            "L3t0cmlnZ2VyLnJlc291cmNlX25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki90cmlnZ2Vycy8qfToHdHJpZ2dlctpBHXByb2plY3RfaWQsdHJpZ2dlcl9p",
+            "ZCx0cmlnZ2VyEqUCCg9SdW5CdWlsZFRyaWdnZXISNS5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRidWlsZC52MS5SdW5CdWlsZFRyaWdnZXJSZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK7AYLT5JMCdCIzL3YxL3Byb2pl",
+            "Y3RzL3twcm9qZWN0X2lkfS90cmlnZ2Vycy97dHJpZ2dlcl9pZH06cnVuOgZz",
+            "b3VyY2VaNSIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdHJp",
+            "Z2dlcnMvKn06cnVuOgEq2kEccHJvamVjdF9pZCx0cmlnZ2VyX2lkLHNvdXJj",
+            "ZcpBHwoFQnVpbGQSFkJ1aWxkT3BlcmF0aW9uTWV0YWRhdGESlQIKFVJlY2Vp",
+            "dmVUcmlnZ2VyV2ViaG9vaxI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxk",
+            "LnYxLlJlY2VpdmVUcmlnZ2VyV2ViaG9va1JlcXVlc3QaPC5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRidWlsZC52MS5SZWNlaXZlVHJpZ2dlcldlYmhvb2tSZXNw",
+            "b25zZSKAAYLT5JMCeiI0L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS90cmln",
+            "Z2Vycy97dHJpZ2dlcn06d2ViaG9vazoEYm9keVo8IjQvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi90cmlnZ2Vycy8qfTp3ZWJob29rOgRib2R5",
+            "EoYCChBDcmVhdGVXb3JrZXJQb29sEjYuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "YnVpbGQudjEuQ3JlYXRlV29ya2VyUG9vbFJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIpoBgtPkkwI+Ii8vdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS93b3JrZXJQb29sczoLd29ya2VyX3Bvb2za",
+            "QSFwYXJlbnQsd29ya2VyX3Bvb2wsd29ya2VyX3Bvb2xfaWTKQS8KCldvcmtl",
+            "clBvb2wSIUNyZWF0ZVdvcmtlclBvb2xPcGVyYXRpb25NZXRhZGF0YRKvAQoN",
+            "R2V0V29ya2VyUG9vbBIzLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYx",
+            "LkdldFdvcmtlclBvb2xSZXF1ZXN0GikuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
+            "YnVpbGQudjEuV29ya2VyUG9vbCI+gtPkkwIxEi8vdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi93b3JrZXJQb29scy8qfdpBBG5hbWUS5gEKEERl",
+            "bGV0ZVdvcmtlclBvb2wSNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52",
+            "MS5EZWxldGVXb3JrZXJQb29sUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24ie4LT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovd29ya2VyUG9vbHMvKn3aQQRuYW1lykE6ChVnb29nbGUucHJv",
+            "dG9idWYuRW1wdHkSIURlbGV0ZVdvcmtlclBvb2xPcGVyYXRpb25NZXRhZGF0",
+            "YRKIAgoQVXBkYXRlV29ya2VyUG9vbBI2Lmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGJ1aWxkLnYxLlVwZGF0ZVdvcmtlclBvb2xSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKcAYLT5JMCSjI7L3YxL3t3b3JrZXJfcG9v",
+            "bC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2VyUG9vbHMvKn06",
+            "C3dvcmtlcl9wb29s2kEXd29ya2VyX3Bvb2wsdXBkYXRlX21hc2vKQS8KCldv",
+            "cmtlclBvb2wSIVVwZGF0ZVdvcmtlclBvb2xPcGVyYXRpb25NZXRhZGF0YRLC",
             "AQoPTGlzdFdvcmtlclBvb2xzEjUuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVp",
             "bGQudjEuTGlzdFdvcmtlclBvb2xzUmVxdWVzdBo2Lmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYxLkxpc3RXb3JrZXJQb29sc1Jlc3BvbnNlIgAaTcpB",
-            "GWNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpIGChhjb20uZ29vZ2xl",
-            "LmNsb3VkYnVpbGQudjFQAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9kZXZ0b29scy9jbG91ZGJ1aWxkL3YxO2Nsb3VkYnVpbGSi",
-            "AgNHQ0KqAhpHb29nbGUuQ2xvdWQuQ2xvdWRCdWlsZC5WMeoCGEdvb2dsZTo6",
-            "Q2xvdWQ6OkJ1aWxkOjpWMepBTgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9O",
-            "ZXR3b3JrEixwcm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tu",
-            "ZXR3b3JrfepBWQohaWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50",
-            "EjRwcm9qZWN0cy97cHJvamVjdH0vc2VydmljZUFjY291bnRzL3tzZXJ2aWNl",
-            "X2FjY291bnR96kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Nl",
-            "Y3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH3qQWQK",
-            "KnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhI2",
-            "cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lvbnMv",
-            "e3ZlcnNpb2596kFwCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
-            "ZXkSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9r",
-            "ZXlSaW5ncy97a2V5cmluZ30vY3J5cHRvS2V5cy97a2V5fepBVQoicHVic3Vi",
-            "Lmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIvcHJvamVjdHMve3Byb2pl",
-            "Y3R9L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbn3qQUAKG3B1YnN1Yi5n",
-            "b29nbGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3RvcGlj",
-            "cy97dG9waWN9YgZwcm90bzM="));
+            "cy5jbG91ZGJ1aWxkLnYxLkxpc3RXb3JrZXJQb29sc1Jlc3BvbnNlIkCC0+ST",
+            "AjESLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3dvcmtl",
+            "clBvb2xz2kEGcGFyZW50Gk3KQRljbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29t",
+            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybUKSBgoYY29tLmdvb2dsZS5jbG91ZGJ1aWxkLnYxUAFaR2dvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRi",
+            "dWlsZC92MTtjbG91ZGJ1aWxkogIDR0NCqgIaR29vZ2xlLkNsb3VkLkNsb3Vk",
+            "QnVpbGQuVjHqAhhHb29nbGU6OkNsb3VkOjpCdWlsZDo6VjHqQU4KHmNvbXB1",
+            "dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIscHJvamVjdHMve3Byb2plY3R9",
+            "L2dsb2JhbC9uZXR3b3Jrcy97bmV0d29ya33qQVkKIWlhbS5nb29nbGVhcGlz",
+            "LmNvbS9TZXJ2aWNlQWNjb3VudBI0cHJvamVjdHMve3Byb2plY3R9L3NlcnZp",
+            "Y2VBY2NvdW50cy97c2VydmljZV9hY2NvdW50fepBSgojc2VjcmV0bWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9TZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0fS9z",
+            "ZWNyZXRzL3tzZWNyZXR96kFkCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL1NlY3JldFZlcnNpb24SNnByb2plY3RzL3twcm9qZWN0fS9zZWNyZXRz",
+            "L3tzZWNyZXR9L3ZlcnNpb25zL3t2ZXJzaW9ufepBcAohY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5Ektwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleXJpbmd9L2NyeXB0b0tl",
+            "eXMve2tleX3qQVUKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRp",
+            "b24SL3Byb2plY3RzL3twcm9qZWN0fS9zdWJzY3JpcHRpb25zL3tzdWJzY3Jp",
+            "cHRpb2596kFAChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2pl",
+            "Y3RzL3twcm9qZWN0fS90b3BpY3Mve3RvcGljfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -407,7 +464,8 @@ namespace Google.Cloud.CloudBuild.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Volume), global::Google.Cloud.CloudBuild.V1.Volume.Parser, new[]{ "Name", "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Results), global::Google.Cloud.CloudBuild.V1.Results.Parser, new[]{ "Images", "BuildStepImages", "ArtifactManifest", "NumArtifacts", "BuildStepOutputs", "ArtifactTiming" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ArtifactResult), global::Google.Cloud.CloudBuild.V1.ArtifactResult.Parser, new[]{ "Location", "FileHash" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Build), global::Google.Cloud.CloudBuild.V1.Build.Parser, new[]{ "Name", "Id", "ProjectId", "Status", "StatusDetail", "Source", "Steps", "Results", "CreateTime", "StartTime", "FinishTime", "Timeout", "Images", "QueueTtl", "Artifacts", "LogsBucket", "SourceProvenance", "BuildTriggerId", "Options", "LogUrl", "Substitutions", "Tags", "Secrets", "Timing", "ServiceAccount", "AvailableSecrets", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Status) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Warning), global::Google.Cloud.CloudBuild.V1.Build.Types.Warning.Parser, new[]{ "Text", "Priority" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Warning.Types.Priority) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Build), global::Google.Cloud.CloudBuild.V1.Build.Parser, new[]{ "Name", "Id", "ProjectId", "Status", "StatusDetail", "Source", "Steps", "Results", "CreateTime", "StartTime", "FinishTime", "Timeout", "Images", "QueueTtl", "Artifacts", "LogsBucket", "SourceProvenance", "BuildTriggerId", "Options", "LogUrl", "Substitutions", "Tags", "Secrets", "Timing", "ServiceAccount", "AvailableSecrets", "Warnings", "FailureInfo" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Status) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Warning), global::Google.Cloud.CloudBuild.V1.Build.Types.Warning.Parser, new[]{ "Text", "Priority" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.Warning.Types.Priority) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo), global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Parser, new[]{ "Type", "Detail" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType) }, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Artifacts), global::Google.Cloud.CloudBuild.V1.Artifacts.Parser, new[]{ "Images", "Objects" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Artifacts.Types.ArtifactObjects), global::Google.Cloud.CloudBuild.V1.Artifacts.Types.ArtifactObjects.Parser, new[]{ "Location", "Paths", "Timing" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.TimeSpan), global::Google.Cloud.CloudBuild.V1.TimeSpan.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
@@ -436,18 +494,21 @@ namespace Google.Cloud.CloudBuild.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse), global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse.Parser, new[]{ "Triggers", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest), global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest.Parser, new[]{ "Name", "ProjectId", "TriggerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest), global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest.Parser, new[]{ "ProjectId", "TriggerId", "Trigger" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions), global::Google.Cloud.CloudBuild.V1.BuildOptions.Parser, new[]{ "SourceProvenanceHash", "RequestedVerifyOption", "MachineType", "DiskSizeGb", "SubstitutionOption", "DynamicSubstitutions", "LogStreamingOption", "WorkerPool", "Logging", "Env", "SecretEnv", "Volumes" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.VerifyOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.MachineType), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.SubstitutionOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LogStreamingOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions), global::Google.Cloud.CloudBuild.V1.BuildOptions.Parser, new[]{ "SourceProvenanceHash", "RequestedVerifyOption", "MachineType", "DiskSizeGb", "SubstitutionOption", "DynamicSubstitutions", "LogStreamingOption", "WorkerPool", "Pool", "Logging", "Env", "SecretEnv", "Volumes" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.VerifyOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.MachineType), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.SubstitutionOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LogStreamingOption), typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption), global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption.Parser, new[]{ "Name" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest), global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest.Parser, new[]{ "Name", "Body", "ProjectId", "Trigger", "Secret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse), global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.WorkerPool), global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser, new[]{ "Name", "ProjectId", "ServiceAccountEmail", "WorkerCount", "WorkerConfig", "Regions", "CreateTime", "UpdateTime", "DeleteTime", "Status" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region), typeof(global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.WorkerConfig), global::Google.Cloud.CloudBuild.V1.WorkerConfig.Parser, new[]{ "MachineType", "DiskSizeGb", "Network", "Tag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.Network), global::Google.Cloud.CloudBuild.V1.Network.Parser, new[]{ "ProjectId", "Network_", "Subnetwork" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest.Parser, new[]{ "Parent", "WorkerPool" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.WorkerPool), global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser, new[]{ "Name", "DisplayName", "Uid", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "State", "PrivatePoolV1Config", "Etag" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config), global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Parser, new[]{ "WorkerConfig", "NetworkConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig), global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig.Parser, new[]{ "MachineType", "DiskSizeGb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig), global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Parser, new[]{ "PeeredNetwork", "EgressOption" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest.Parser, new[]{ "Parent", "WorkerPool", "WorkerPoolId", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest.Parser, new[]{ "Name", "WorkerPool" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest), global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest.Parser, new[]{ "Parent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse), global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse.Parser, new[]{ "WorkerPools" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest.Parser, new[]{ "Name", "Etag", "AllowMissing", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest), global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest.Parser, new[]{ "WorkerPool", "UpdateMask", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest), global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse), global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse.Parser, new[]{ "WorkerPools", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata), global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata.Parser, new[]{ "WorkerPool", "CreateTime", "CompleteTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata), global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata.Parser, new[]{ "WorkerPool", "CreateTime", "CompleteTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata), global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata.Parser, new[]{ "WorkerPool", "CreateTime", "CompleteTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4160,6 +4221,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceAccount_ = other.serviceAccount_;
       availableSecrets_ = other.availableSecrets_ != null ? other.availableSecrets_.Clone() : null;
       warnings_ = other.warnings_.Clone();
+      failureInfo_ = other.failureInfo_ != null ? other.failureInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4583,6 +4645,20 @@ namespace Google.Cloud.CloudBuild.V1 {
       get { return warnings_; }
     }
 
+    /// <summary>Field number for the "failure_info" field.</summary>
+    public const int FailureInfoFieldNumber = 51;
+    private global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo failureInfo_;
+    /// <summary>
+    /// Output only. Contains information about the build when status=FAILURE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo FailureInfo {
+      get { return failureInfo_; }
+      set {
+        failureInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Build);
@@ -4623,6 +4699,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (!object.Equals(AvailableSecrets, other.AvailableSecrets)) return false;
       if(!warnings_.Equals(other.warnings_)) return false;
+      if (!object.Equals(FailureInfo, other.FailureInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4656,6 +4733,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (availableSecrets_ != null) hash ^= AvailableSecrets.GetHashCode();
       hash ^= warnings_.GetHashCode();
+      if (failureInfo_ != null) hash ^= FailureInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4759,6 +4837,10 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteMessage(AvailableSecrets);
       }
       warnings_.WriteTo(output, _repeated_warnings_codec);
+      if (failureInfo_ != null) {
+        output.WriteRawTag(154, 3);
+        output.WriteMessage(FailureInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4855,6 +4937,10 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteMessage(AvailableSecrets);
       }
       warnings_.WriteTo(ref output, _repeated_warnings_codec);
+      if (failureInfo_ != null) {
+        output.WriteRawTag(154, 3);
+        output.WriteMessage(FailureInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4931,6 +5017,9 @@ namespace Google.Cloud.CloudBuild.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AvailableSecrets);
       }
       size += warnings_.CalculateSize(_repeated_warnings_codec);
+      if (failureInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FailureInfo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5042,6 +5131,12 @@ namespace Google.Cloud.CloudBuild.V1 {
         AvailableSecrets.MergeFrom(other.AvailableSecrets);
       }
       warnings_.Add(other.warnings_);
+      if (other.failureInfo_ != null) {
+        if (failureInfo_ == null) {
+          FailureInfo = new global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo();
+        }
+        FailureInfo.MergeFrom(other.FailureInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5197,6 +5292,13 @@ namespace Google.Cloud.CloudBuild.V1 {
             warnings_.AddEntriesFrom(input, _repeated_warnings_codec);
             break;
           }
+          case 410: {
+            if (failureInfo_ == null) {
+              FailureInfo = new global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo();
+            }
+            input.ReadMessage(FailureInfo);
+            break;
+          }
         }
       }
     #endif
@@ -5350,6 +5452,13 @@ namespace Google.Cloud.CloudBuild.V1 {
           }
           case 394: {
             warnings_.AddEntriesFrom(ref input, _repeated_warnings_codec);
+            break;
+          }
+          case 410: {
+            if (failureInfo_ == null) {
+              FailureInfo = new global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo();
+            }
+            input.ReadMessage(FailureInfo);
             break;
           }
         }
@@ -5642,6 +5751,265 @@ namespace Google.Cloud.CloudBuild.V1 {
             /// e.g. alerts that a feature used in the build is pending removal
             /// </summary>
             [pbr::OriginalName("ALERT")] Alert = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// A fatal problem encountered during the execution of the build.
+      /// </summary>
+      public sealed partial class FailureInfo : pb::IMessage<FailureInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FailureInfo> _parser = new pb::MessageParser<FailureInfo>(() => new FailureInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<FailureInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudBuild.V1.Build.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FailureInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FailureInfo(FailureInfo other) : this() {
+          type_ = other.type_;
+          detail_ = other.detail_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FailureInfo Clone() {
+          return new FailureInfo(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType type_ = global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified;
+        /// <summary>
+        /// The name of the failure.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "detail" field.</summary>
+        public const int DetailFieldNumber = 2;
+        private string detail_ = "";
+        /// <summary>
+        /// Explains the failure issue in more detail using hard-coded text.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Detail {
+          get { return detail_; }
+          set {
+            detail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as FailureInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(FailureInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (Detail != other.Detail) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) hash ^= Type.GetHashCode();
+          if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (Detail.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Detail);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (Detail.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Detail);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (Detail.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(FailureInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
+            Type = other.Type;
+          }
+          if (other.Detail.Length != 0) {
+            Detail = other.Detail;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Detail = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Detail = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FailureInfo message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The name of a fatal problem encountered during the execution of the
+          /// build.
+          /// </summary>
+          public enum FailureType {
+            /// <summary>
+            /// Type unspecified
+            /// </summary>
+            [pbr::OriginalName("FAILURE_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Unable to push the image to the repository.
+            /// </summary>
+            [pbr::OriginalName("PUSH_FAILED")] PushFailed = 1,
+            /// <summary>
+            /// Final image not found.
+            /// </summary>
+            [pbr::OriginalName("PUSH_IMAGE_NOT_FOUND")] PushImageNotFound = 2,
+            /// <summary>
+            /// Unauthorized push of the final image.
+            /// </summary>
+            [pbr::OriginalName("PUSH_NOT_AUTHORIZED")] PushNotAuthorized = 3,
+            /// <summary>
+            /// Backend logging failures. Should retry.
+            /// </summary>
+            [pbr::OriginalName("LOGGING_FAILURE")] LoggingFailure = 4,
+            /// <summary>
+            /// A build step has failed.
+            /// </summary>
+            [pbr::OriginalName("USER_BUILD_STEP")] UserBuildStep = 5,
+            /// <summary>
+            /// The source fetching has failed.
+            /// </summary>
+            [pbr::OriginalName("FETCH_SOURCE_FAILED")] FetchSourceFailed = 6,
           }
 
         }
@@ -13620,6 +13988,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       dynamicSubstitutions_ = other.dynamicSubstitutions_;
       logStreamingOption_ = other.logStreamingOption_;
       workerPool_ = other.workerPool_;
+      pool_ = other.pool_ != null ? other.pool_.Clone() : null;
       logging_ = other.logging_;
       env_ = other.env_.Clone();
       secretEnv_ = other.secretEnv_.Clone();
@@ -13747,16 +14116,32 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int WorkerPoolFieldNumber = 7;
     private string workerPool_ = "";
     /// <summary>
-    /// Option to specify a `WorkerPool` for the build.
-    /// Format: projects/{project}/locations/{location}/workerPools/{workerPool}
-    ///
-    /// This field is in beta and is available only to restricted users.
+    /// This field deprecated; please use `pool.name` instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string WorkerPool {
       get { return workerPool_; }
       set {
         workerPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pool" field.</summary>
+    public const int PoolFieldNumber = 19;
+    private global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption pool_;
+    /// <summary>
+    /// Optional. Specification for execution on a `WorkerPool`.
+    ///
+    /// See [running builds in a private
+    /// pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool)
+    /// for more information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption Pool {
+      get { return pool_; }
+      set {
+        pool_ = value;
       }
     }
 
@@ -13851,6 +14236,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (DynamicSubstitutions != other.DynamicSubstitutions) return false;
       if (LogStreamingOption != other.LogStreamingOption) return false;
       if (WorkerPool != other.WorkerPool) return false;
+      if (!object.Equals(Pool, other.Pool)) return false;
       if (Logging != other.Logging) return false;
       if(!env_.Equals(other.env_)) return false;
       if(!secretEnv_.Equals(other.secretEnv_)) return false;
@@ -13869,6 +14255,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (DynamicSubstitutions != false) hash ^= DynamicSubstitutions.GetHashCode();
       if (LogStreamingOption != global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LogStreamingOption.StreamDefault) hash ^= LogStreamingOption.GetHashCode();
       if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
+      if (pool_ != null) hash ^= Pool.GetHashCode();
       if (Logging != global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode.LoggingUnspecified) hash ^= Logging.GetHashCode();
       hash ^= env_.GetHashCode();
       hash ^= secretEnv_.GetHashCode();
@@ -13925,6 +14312,10 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(DynamicSubstitutions);
       }
+      if (pool_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Pool);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13970,6 +14361,10 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(136, 1);
         output.WriteBool(DynamicSubstitutions);
       }
+      if (pool_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Pool);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -14000,6 +14395,9 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (WorkerPool.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
+      }
+      if (pool_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Pool);
       }
       if (Logging != global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode.LoggingUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Logging);
@@ -14039,6 +14437,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (other.WorkerPool.Length != 0) {
         WorkerPool = other.WorkerPool;
+      }
+      if (other.pool_ != null) {
+        if (pool_ == null) {
+          Pool = new global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption();
+        }
+        Pool.MergeFrom(other.Pool);
       }
       if (other.Logging != global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode.LoggingUnspecified) {
         Logging = other.Logging;
@@ -14109,6 +14513,13 @@ namespace Google.Cloud.CloudBuild.V1 {
             DynamicSubstitutions = input.ReadBool();
             break;
           }
+          case 154: {
+            if (pool_ == null) {
+              Pool = new global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption();
+            }
+            input.ReadMessage(Pool);
+            break;
+          }
         }
       }
     #endif
@@ -14170,6 +14581,13 @@ namespace Google.Cloud.CloudBuild.V1 {
           }
           case 136: {
             DynamicSubstitutions = input.ReadBool();
+            break;
+          }
+          case 154: {
+            if (pool_ == null) {
+              Pool = new global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption();
+            }
+            input.ReadMessage(Pool);
             break;
           }
         }
@@ -14288,6 +14706,192 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Turn off all logging. No build logs will be captured.
         /// </summary>
         [pbr::OriginalName("NONE")] None = 4,
+      }
+
+      /// <summary>
+      /// Details about how a build should be executed on a `WorkerPool`.
+      ///
+      /// See [running builds in a private
+      /// pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool)
+      /// for more information.
+      /// </summary>
+      public sealed partial class PoolOption : pb::IMessage<PoolOption>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PoolOption> _parser = new pb::MessageParser<PoolOption>(() => new PoolOption());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PoolOption> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudBuild.V1.BuildOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PoolOption() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PoolOption(PoolOption other) : this() {
+          name_ = other.name_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PoolOption Clone() {
+          return new PoolOption(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The `WorkerPool` resource to execute the build on.
+        /// You must have `cloudbuild.workerpools.use` on the project hosting the
+        /// WorkerPool.
+        ///
+        /// Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PoolOption);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PoolOption other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PoolOption other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -14781,13 +15385,19 @@ namespace Google.Cloud.CloudBuild.V1 {
   }
 
   /// <summary>
-  /// Configuration for a WorkerPool to run the builds.
+  /// Configuration for a `WorkerPool`.
   ///
-  /// Workers are machines that Cloud Build uses to run your builds. By default,
-  /// all workers run in a project owned by Cloud Build. To have full control over
-  /// the workers that execute your builds -- such as enabling them to access
-  /// private resources on your private network -- you can request Cloud Build to
-  /// run the workers in your own project by creating a custom workers pool.
+  /// Cloud Build owns and maintains a pool of workers for general use and have no
+  /// access to a project's private network. By default, builds submitted to
+  /// Cloud Build will use a worker from this pool.
+  ///
+  /// If your build needs access to resources on a private network,
+  /// create and use a `WorkerPool` to run your builds. Private `WorkerPool`s give
+  /// your builds access to any single VPC network that you
+  /// administer, including any on-prem resources connected to that VPC
+  /// network. For an overview of private pools, see
+  /// [Private pools
+  /// overview](https://cloud.google.com/build/docs/private-pools/private-pools-overview).
   /// </summary>
   public sealed partial class WorkerPool : pb::IMessage<WorkerPool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14819,15 +15429,20 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WorkerPool(WorkerPool other) : this() {
       name_ = other.name_;
-      projectId_ = other.projectId_;
-      serviceAccountEmail_ = other.serviceAccountEmail_;
-      workerCount_ = other.workerCount_;
-      workerConfig_ = other.workerConfig_ != null ? other.workerConfig_.Clone() : null;
-      regions_ = other.regions_.Clone();
+      displayName_ = other.displayName_;
+      uid_ = other.uid_;
+      annotations_ = other.annotations_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
-      status_ = other.status_;
+      state_ = other.state_;
+      etag_ = other.etag_;
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.PrivatePoolV1Config:
+          PrivatePoolV1Config = other.PrivatePoolV1Config.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -14837,10 +15452,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 14;
+    public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// User-defined name of the `WorkerPool`.
+    /// Output only. The resource name of the `WorkerPool`, with format
+    /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+    /// The value of `{worker_pool}` is provided by `worker_pool_id` in
+    /// `CreateWorkerPool` request and the value of `{location}` is determined by
+    /// the endpoint accessed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -14850,83 +15469,51 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
     }
 
-    /// <summary>Field number for the "project_id" field.</summary>
-    public const int ProjectIdFieldNumber = 2;
-    private string projectId_ = "";
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
     /// <summary>
-    /// The project ID of the GCP project for which the `WorkerPool` is created.
+    /// A user-specified, human-readable name for the `WorkerPool`. If provided,
+    /// this value must be 1-63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ProjectId {
-      get { return projectId_; }
+    public string DisplayName {
+      get { return displayName_; }
       set {
-        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "service_account_email" field.</summary>
-    public const int ServiceAccountEmailFieldNumber = 3;
-    private string serviceAccountEmail_ = "";
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 3;
+    private string uid_ = "";
     /// <summary>
-    /// Output only. The service account used to manage the `WorkerPool`. The
-    /// service account must have the Compute Instance Admin (Beta) permission at
-    /// the project level.
+    /// Output only. A unique identifier for the `WorkerPool`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ServiceAccountEmail {
-      get { return serviceAccountEmail_; }
+    public string Uid {
+      get { return uid_; }
       set {
-        serviceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "worker_count" field.</summary>
-    public const int WorkerCountFieldNumber = 4;
-    private long workerCount_;
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotations_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Total number of workers to be created across all requested regions.
+    /// User specified annotations. See https://google.aip.dev/128#annotations
+    /// for more details such as format and size limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long WorkerCount {
-      get { return workerCount_; }
-      set {
-        workerCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "worker_config" field.</summary>
-    public const int WorkerConfigFieldNumber = 16;
-    private global::Google.Cloud.CloudBuild.V1.WorkerConfig workerConfig_;
-    /// <summary>
-    /// Configuration to be used for a creating workers in the `WorkerPool`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.CloudBuild.V1.WorkerConfig WorkerConfig {
-      get { return workerConfig_; }
-      set {
-        workerConfig_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "regions" field.</summary>
-    public const int RegionsFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region> _repeated_regions_codec
-        = pb::FieldCodec.ForEnum(74, x => (int) x, x => (global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region) x);
-    private readonly pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region> regions_ = new pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region>();
-    /// <summary>
-    /// List of regions to create the `WorkerPool`. Regions can't be empty.
-    /// If Cloud Build adds a new GCP region in the future, the existing
-    /// `WorkerPool` will not be enabled in the new region automatically;
-    /// you must add the new region to the `regions` field to enable the
-    /// `WorkerPool` in that region.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Region> Regions {
-      get { return regions_; }
+    public pbc::MapField<string, string> Annotations {
+      get { return annotations_; }
     }
 
     /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 11;
+    public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
     /// Output only. Time at which the request to create the `WorkerPool` was
@@ -14941,7 +15528,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 17;
+    public const int UpdateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Output only. Time at which the request to update the `WorkerPool` was
@@ -14956,7 +15543,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     /// <summary>Field number for the "delete_time" field.</summary>
-    public const int DeleteTimeFieldNumber = 12;
+    public const int DeleteTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
     /// Output only. Time at which the request to delete the `WorkerPool` was
@@ -14970,18 +15557,66 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 13;
-    private global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status status_ = global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified;
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 8;
+    private global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State state_ = global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified;
     /// <summary>
-    /// Output only. WorkerPool Status.
+    /// Output only. `WorkerPool` state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status Status {
-      get { return status_; }
+    public global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State State {
+      get { return state_; }
       set {
-        status_ = value;
+        state_ = value;
       }
+    }
+
+    /// <summary>Field number for the "private_pool_v1_config" field.</summary>
+    public const int PrivatePoolV1ConfigFieldNumber = 12;
+    /// <summary>
+    /// Private Pool using a v1 configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config PrivatePoolV1Config {
+      get { return configCase_ == ConfigOneofCase.PrivatePoolV1Config ? (global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config) config_ : null; }
+      set {
+        config_ = value;
+        configCase_ = value == null ? ConfigOneofCase.None : ConfigOneofCase.PrivatePoolV1Config;
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 11;
+    private string etag_ = "";
+    /// <summary>
+    /// Output only. Checksum computed by the server. May be sent on update and
+    /// delete requests to ensure that the client has an up-to-date value before
+    /// proceeding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object config_;
+    /// <summary>Enum of possible cases for the "config" oneof.</summary>
+    public enum ConfigOneofCase {
+      None = 0,
+      PrivatePoolV1Config = 12,
+    }
+    private ConfigOneofCase configCase_ = ConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfigOneofCase ConfigCase {
+      get { return configCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearConfig() {
+      configCase_ = ConfigOneofCase.None;
+      config_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14998,15 +15633,16 @@ namespace Google.Cloud.CloudBuild.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (ProjectId != other.ProjectId) return false;
-      if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
-      if (WorkerCount != other.WorkerCount) return false;
-      if (!object.Equals(WorkerConfig, other.WorkerConfig)) return false;
-      if(!regions_.Equals(other.regions_)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Uid != other.Uid) return false;
+      if (!Annotations.Equals(other.Annotations)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
-      if (Status != other.Status) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(PrivatePoolV1Config, other.PrivatePoolV1Config)) return false;
+      if (Etag != other.Etag) return false;
+      if (ConfigCase != other.ConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -15014,15 +15650,16 @@ namespace Google.Cloud.CloudBuild.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
-      if (WorkerCount != 0L) hash ^= WorkerCount.GetHashCode();
-      if (workerConfig_ != null) hash ^= WorkerConfig.GetHashCode();
-      hash ^= regions_.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      hash ^= Annotations.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
-      if (Status != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified) hash ^= Status.GetHashCode();
+      if (State != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) hash ^= PrivatePoolV1Config.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      hash ^= (int) configCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -15039,42 +15676,42 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ProjectId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ProjectId);
-      }
-      if (ServiceAccountEmail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(ServiceAccountEmail);
-      }
-      if (WorkerCount != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(WorkerCount);
-      }
-      regions_.WriteTo(output, _repeated_regions_codec);
-      if (createTime_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(CreateTime);
-      }
-      if (deleteTime_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(DeleteTime);
-      }
-      if (Status != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified) {
-        output.WriteRawTag(104);
-        output.WriteEnum((int) Status);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (workerConfig_ != null) {
-        output.WriteRawTag(130, 1);
-        output.WriteMessage(WorkerConfig);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Uid);
+      }
+      annotations_.WriteTo(output, _map_annotations_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
       }
       if (updateTime_ != null) {
-        output.WriteRawTag(138, 1);
+        output.WriteRawTag(50);
         output.WriteMessage(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeleteTime);
+      }
+      if (State != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
+      if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PrivatePoolV1Config);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -15085,42 +15722,42 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ProjectId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ProjectId);
-      }
-      if (ServiceAccountEmail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(ServiceAccountEmail);
-      }
-      if (WorkerCount != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(WorkerCount);
-      }
-      regions_.WriteTo(ref output, _repeated_regions_codec);
-      if (createTime_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(CreateTime);
-      }
-      if (deleteTime_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(DeleteTime);
-      }
-      if (Status != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified) {
-        output.WriteRawTag(104);
-        output.WriteEnum((int) Status);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (workerConfig_ != null) {
-        output.WriteRawTag(130, 1);
-        output.WriteMessage(WorkerConfig);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Uid);
+      }
+      annotations_.WriteTo(ref output, _map_annotations_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
       }
       if (updateTime_ != null) {
-        output.WriteRawTag(138, 1);
+        output.WriteRawTag(50);
         output.WriteMessage(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeleteTime);
+      }
+      if (State != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
+      if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PrivatePoolV1Config);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -15134,30 +15771,30 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (ProjectId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (ServiceAccountEmail.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountEmail);
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
-      if (WorkerCount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(WorkerCount);
-      }
-      if (workerConfig_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(WorkerConfig);
-      }
-      size += regions_.CalculateSize(_repeated_regions_codec);
+      size += annotations_.CalculateSize(_map_annotations_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       if (updateTime_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
       }
-      if (Status != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (State != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrivatePoolV1Config);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -15173,22 +15810,13 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.ProjectId.Length != 0) {
-        ProjectId = other.ProjectId;
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
-      if (other.ServiceAccountEmail.Length != 0) {
-        ServiceAccountEmail = other.ServiceAccountEmail;
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
       }
-      if (other.WorkerCount != 0L) {
-        WorkerCount = other.WorkerCount;
-      }
-      if (other.workerConfig_ != null) {
-        if (workerConfig_ == null) {
-          WorkerConfig = new global::Google.Cloud.CloudBuild.V1.WorkerConfig();
-        }
-        WorkerConfig.MergeFrom(other.WorkerConfig);
-      }
-      regions_.Add(other.regions_);
+      annotations_.Add(other.annotations_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -15207,9 +15835,21 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      if (other.Status != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status.Unspecified) {
-        Status = other.Status;
+      if (other.State != global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State.Unspecified) {
+        State = other.State;
       }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.PrivatePoolV1Config:
+          if (PrivatePoolV1Config == null) {
+            PrivatePoolV1Config = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config();
+          }
+          PrivatePoolV1Config.MergeFrom(other.PrivatePoolV1Config);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -15224,57 +15864,58 @@ namespace Google.Cloud.CloudBuild.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
-            ProjectId = input.ReadString();
+            DisplayName = input.ReadString();
             break;
           }
           case 26: {
-            ServiceAccountEmail = input.ReadString();
+            Uid = input.ReadString();
             break;
           }
-          case 32: {
-            WorkerCount = input.ReadInt64();
+          case 34: {
+            annotations_.AddEntriesFrom(input, _map_annotations_codec);
             break;
           }
-          case 74:
-          case 72: {
-            regions_.AddEntriesFrom(input, _repeated_regions_codec);
-            break;
-          }
-          case 90: {
+          case 42: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
             break;
           }
-          case 98: {
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 58: {
             if (deleteTime_ == null) {
               DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DeleteTime);
             break;
           }
-          case 104: {
-            Status = (global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status) input.ReadEnum();
+          case 64: {
+            State = (global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State) input.ReadEnum();
             break;
           }
-          case 114: {
-            Name = input.ReadString();
+          case 90: {
+            Etag = input.ReadString();
             break;
           }
-          case 130: {
-            if (workerConfig_ == null) {
-              WorkerConfig = new global::Google.Cloud.CloudBuild.V1.WorkerConfig();
+          case 98: {
+            global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config subBuilder = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config();
+            if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) {
+              subBuilder.MergeFrom(PrivatePoolV1Config);
             }
-            input.ReadMessage(WorkerConfig);
-            break;
-          }
-          case 138: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
+            input.ReadMessage(subBuilder);
+            PrivatePoolV1Config = subBuilder;
             break;
           }
         }
@@ -15291,57 +15932,58 @@ namespace Google.Cloud.CloudBuild.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
-            ProjectId = input.ReadString();
+            DisplayName = input.ReadString();
             break;
           }
           case 26: {
-            ServiceAccountEmail = input.ReadString();
+            Uid = input.ReadString();
             break;
           }
-          case 32: {
-            WorkerCount = input.ReadInt64();
+          case 34: {
+            annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
             break;
           }
-          case 74:
-          case 72: {
-            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
-            break;
-          }
-          case 90: {
+          case 42: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
             break;
           }
-          case 98: {
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 58: {
             if (deleteTime_ == null) {
               DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DeleteTime);
             break;
           }
-          case 104: {
-            Status = (global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.Status) input.ReadEnum();
+          case 64: {
+            State = (global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State) input.ReadEnum();
             break;
           }
-          case 114: {
-            Name = input.ReadString();
+          case 90: {
+            Etag = input.ReadString();
             break;
           }
-          case 130: {
-            if (workerConfig_ == null) {
-              WorkerConfig = new global::Google.Cloud.CloudBuild.V1.WorkerConfig();
+          case 98: {
+            global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config subBuilder = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config();
+            if (configCase_ == ConfigOneofCase.PrivatePoolV1Config) {
+              subBuilder.MergeFrom(PrivatePoolV1Config);
             }
-            input.ReadMessage(WorkerConfig);
-            break;
-          }
-          case 138: {
-            if (updateTime_ == null) {
-              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(UpdateTime);
+            input.ReadMessage(subBuilder);
+            PrivatePoolV1Config = subBuilder;
             break;
           }
         }
@@ -15354,39 +15996,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Supported GCP regions to create the `WorkerPool`.
+      /// State of the `WorkerPool`.
       /// </summary>
-      public enum Region {
+      public enum State {
         /// <summary>
-        /// no region
+        /// State of the `WorkerPool` is unknown.
         /// </summary>
-        [pbr::OriginalName("REGION_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// us-central1 region
-        /// </summary>
-        [pbr::OriginalName("US_CENTRAL1")] UsCentral1 = 1,
-        /// <summary>
-        /// us-west1 region
-        /// </summary>
-        [pbr::OriginalName("US_WEST1")] UsWest1 = 2,
-        /// <summary>
-        /// us-east1 region
-        /// </summary>
-        [pbr::OriginalName("US_EAST1")] UsEast1 = 3,
-        /// <summary>
-        /// us-east4 region
-        /// </summary>
-        [pbr::OriginalName("US_EAST4")] UsEast4 = 4,
-      }
-
-      /// <summary>
-      /// `WorkerPool` status
-      /// </summary>
-      public enum Status {
-        /// <summary>
-        /// Status of the `WorkerPool` is unknown.
-        /// </summary>
-        [pbr::OriginalName("STATUS_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// `WorkerPool` is being created.
         /// </summary>
@@ -15411,18 +16027,17 @@ namespace Google.Cloud.CloudBuild.V1 {
   }
 
   /// <summary>
-  /// WorkerConfig defines the configuration to be used for a creating workers in
-  /// the pool.
+  /// Configuration for a V1 `PrivatePool`.
   /// </summary>
-  public sealed partial class WorkerConfig : pb::IMessage<WorkerConfig>
+  public sealed partial class PrivatePoolV1Config : pb::IMessage<PrivatePoolV1Config>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<WorkerConfig> _parser = new pb::MessageParser<WorkerConfig>(() => new WorkerConfig());
+    private static readonly pb::MessageParser<PrivatePoolV1Config> _parser = new pb::MessageParser<PrivatePoolV1Config>(() => new PrivatePoolV1Config());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<WorkerConfig> Parser { get { return _parser; } }
+    public static pb::MessageParser<PrivatePoolV1Config> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -15435,127 +16050,75 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public WorkerConfig() {
+    public PrivatePoolV1Config() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public WorkerConfig(WorkerConfig other) : this() {
-      machineType_ = other.machineType_;
-      diskSizeGb_ = other.diskSizeGb_;
-      network_ = other.network_ != null ? other.network_.Clone() : null;
-      tag_ = other.tag_;
+    public PrivatePoolV1Config(PrivatePoolV1Config other) : this() {
+      workerConfig_ = other.workerConfig_ != null ? other.workerConfig_.Clone() : null;
+      networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public WorkerConfig Clone() {
-      return new WorkerConfig(this);
+    public PrivatePoolV1Config Clone() {
+      return new PrivatePoolV1Config(this);
     }
 
-    /// <summary>Field number for the "machine_type" field.</summary>
-    public const int MachineTypeFieldNumber = 1;
-    private string machineType_ = "";
+    /// <summary>Field number for the "worker_config" field.</summary>
+    public const int WorkerConfigFieldNumber = 1;
+    private global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig workerConfig_;
     /// <summary>
-    /// Machine Type of the worker, such as n1-standard-1.
-    /// See https://cloud.google.com/compute/docs/machine-types.
-    /// If left blank, Cloud Build will use a standard unspecified machine to
-    /// create the worker pool.
-    /// `machine_type` is overridden if you specify a different machine type in
-    /// `build_options`. In this case, the VM specified in the `build_options`
-    /// will be created on demand at build time. For more information see
-    /// https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes
+    /// Machine configuration for the workers in the pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MachineType {
-      get { return machineType_; }
+    public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig WorkerConfig {
+      get { return workerConfig_; }
       set {
-        machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        workerConfig_ = value;
       }
     }
 
-    /// <summary>Field number for the "disk_size_gb" field.</summary>
-    public const int DiskSizeGbFieldNumber = 2;
-    private long diskSizeGb_;
+    /// <summary>Field number for the "network_config" field.</summary>
+    public const int NetworkConfigFieldNumber = 2;
+    private global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig networkConfig_;
     /// <summary>
-    /// Size of the disk attached to the worker, in GB.
-    /// See https://cloud.google.com/compute/docs/disks/
-    /// If `0` is specified, Cloud Build will use a standard disk size.
-    /// `disk_size` is overridden if you specify a different disk size in
-    /// `build_options`. In this case, a VM with a disk size specified in the
-    /// `build_options` will be created on demand at build time. For more
-    /// information see
-    /// https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions
+    /// Network configuration for the pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long DiskSizeGb {
-      get { return diskSizeGb_; }
+    public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig NetworkConfig {
+      get { return networkConfig_; }
       set {
-        diskSizeGb_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "network" field.</summary>
-    public const int NetworkFieldNumber = 3;
-    private global::Google.Cloud.CloudBuild.V1.Network network_;
-    /// <summary>
-    /// The network definition used to create the worker.
-    /// If this section is left empty, the workers will be created in
-    /// WorkerPool.project_id on the default network.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.CloudBuild.V1.Network Network {
-      get { return network_; }
-      set {
-        network_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tag" field.</summary>
-    public const int TagFieldNumber = 4;
-    private string tag_ = "";
-    /// <summary>
-    /// The tag applied to the worker, and the same tag used by the firewall rule.
-    /// It is used to identify the Cloud Build workers among other VMs.
-    /// The default value for tag is `worker`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Tag {
-      get { return tag_; }
-      set {
-        tag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        networkConfig_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as WorkerConfig);
+      return Equals(other as PrivatePoolV1Config);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(WorkerConfig other) {
+    public bool Equals(PrivatePoolV1Config other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MachineType != other.MachineType) return false;
-      if (DiskSizeGb != other.DiskSizeGb) return false;
-      if (!object.Equals(Network, other.Network)) return false;
-      if (Tag != other.Tag) return false;
+      if (!object.Equals(WorkerConfig, other.WorkerConfig)) return false;
+      if (!object.Equals(NetworkConfig, other.NetworkConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
-      if (DiskSizeGb != 0L) hash ^= DiskSizeGb.GetHashCode();
-      if (network_ != null) hash ^= Network.GetHashCode();
-      if (Tag.Length != 0) hash ^= Tag.GetHashCode();
+      if (workerConfig_ != null) hash ^= WorkerConfig.GetHashCode();
+      if (networkConfig_ != null) hash ^= NetworkConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -15572,21 +16135,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MachineType.Length != 0) {
+      if (workerConfig_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(MachineType);
+        output.WriteMessage(WorkerConfig);
       }
-      if (DiskSizeGb != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(DiskSizeGb);
-      }
-      if (network_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Network);
-      }
-      if (Tag.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Tag);
+      if (networkConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NetworkConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -15597,21 +16152,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MachineType.Length != 0) {
+      if (workerConfig_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(MachineType);
+        output.WriteMessage(WorkerConfig);
       }
-      if (DiskSizeGb != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(DiskSizeGb);
-      }
-      if (network_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Network);
-      }
-      if (Tag.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Tag);
+      if (networkConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NetworkConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -15622,17 +16169,11 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (MachineType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
+      if (workerConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WorkerConfig);
       }
-      if (DiskSizeGb != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DiskSizeGb);
-      }
-      if (network_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Network);
-      }
-      if (Tag.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
+      if (networkConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NetworkConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -15641,24 +16182,21 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(WorkerConfig other) {
+    public void MergeFrom(PrivatePoolV1Config other) {
       if (other == null) {
         return;
       }
-      if (other.MachineType.Length != 0) {
-        MachineType = other.MachineType;
-      }
-      if (other.DiskSizeGb != 0L) {
-        DiskSizeGb = other.DiskSizeGb;
-      }
-      if (other.network_ != null) {
-        if (network_ == null) {
-          Network = new global::Google.Cloud.CloudBuild.V1.Network();
+      if (other.workerConfig_ != null) {
+        if (workerConfig_ == null) {
+          WorkerConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig();
         }
-        Network.MergeFrom(other.Network);
+        WorkerConfig.MergeFrom(other.WorkerConfig);
       }
-      if (other.Tag.Length != 0) {
-        Tag = other.Tag;
+      if (other.networkConfig_ != null) {
+        if (networkConfig_ == null) {
+          NetworkConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig();
+        }
+        NetworkConfig.MergeFrom(other.NetworkConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -15675,22 +16213,17 @@ namespace Google.Cloud.CloudBuild.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            MachineType = input.ReadString();
-            break;
-          }
-          case 16: {
-            DiskSizeGb = input.ReadInt64();
-            break;
-          }
-          case 26: {
-            if (network_ == null) {
-              Network = new global::Google.Cloud.CloudBuild.V1.Network();
+            if (workerConfig_ == null) {
+              WorkerConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig();
             }
-            input.ReadMessage(Network);
+            input.ReadMessage(WorkerConfig);
             break;
           }
-          case 34: {
-            Tag = input.ReadString();
+          case 18: {
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
             break;
           }
         }
@@ -15708,290 +16241,506 @@ namespace Google.Cloud.CloudBuild.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            MachineType = input.ReadString();
-            break;
-          }
-          case 16: {
-            DiskSizeGb = input.ReadInt64();
-            break;
-          }
-          case 26: {
-            if (network_ == null) {
-              Network = new global::Google.Cloud.CloudBuild.V1.Network();
+            if (workerConfig_ == null) {
+              WorkerConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig();
             }
-            input.ReadMessage(Network);
-            break;
-          }
-          case 34: {
-            Tag = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Network describes the GCP network used to create workers in.
-  /// </summary>
-  public sealed partial class Network : pb::IMessage<Network>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Network> _parser = new pb::MessageParser<Network>(() => new Network());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Network> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[44]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Network() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Network(Network other) : this() {
-      projectId_ = other.projectId_;
-      network_ = other.network_;
-      subnetwork_ = other.subnetwork_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Network Clone() {
-      return new Network(this);
-    }
-
-    /// <summary>Field number for the "project_id" field.</summary>
-    public const int ProjectIdFieldNumber = 1;
-    private string projectId_ = "";
-    /// <summary>
-    /// Project id containing the defined network and subnetwork. For a peered VPC,
-    /// this will be the same as the project_id in which the workers are created.
-    /// For a shared VPC, this will be the project sharing the network with the
-    /// project_id project in which workers will be created. For custom workers
-    /// with no VPC, this will be the same as project_id.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ProjectId {
-      get { return projectId_; }
-      set {
-        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "network" field.</summary>
-    public const int Network_FieldNumber = 2;
-    private string network_ = "";
-    /// <summary>
-    /// Network on which the workers are created.
-    /// "default" network is used if empty.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Network_ {
-      get { return network_; }
-      set {
-        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "subnetwork" field.</summary>
-    public const int SubnetworkFieldNumber = 3;
-    private string subnetwork_ = "";
-    /// <summary>
-    /// Subnetwork on which the workers are created.
-    /// "default" subnetwork is used if empty.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Subnetwork {
-      get { return subnetwork_; }
-      set {
-        subnetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Network);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Network other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (ProjectId != other.ProjectId) return false;
-      if (Network_ != other.Network_) return false;
-      if (Subnetwork != other.Subnetwork) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (Network_.Length != 0) hash ^= Network_.GetHashCode();
-      if (Subnetwork.Length != 0) hash ^= Subnetwork.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (ProjectId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ProjectId);
-      }
-      if (Network_.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Network_);
-      }
-      if (Subnetwork.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Subnetwork);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ProjectId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ProjectId);
-      }
-      if (Network_.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Network_);
-      }
-      if (Subnetwork.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Subnetwork);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (ProjectId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
-      }
-      if (Network_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network_);
-      }
-      if (Subnetwork.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subnetwork);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Network other) {
-      if (other == null) {
-        return;
-      }
-      if (other.ProjectId.Length != 0) {
-        ProjectId = other.ProjectId;
-      }
-      if (other.Network_.Length != 0) {
-        Network_ = other.Network_;
-      }
-      if (other.Subnetwork.Length != 0) {
-        Subnetwork = other.Subnetwork;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            ProjectId = input.ReadString();
+            input.ReadMessage(WorkerConfig);
             break;
           }
           case 18: {
-            Network_ = input.ReadString();
-            break;
-          }
-          case 26: {
-            Subnetwork = input.ReadString();
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
             break;
           }
         }
       }
-    #endif
     }
+    #endif
 
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #region Nested types
+    /// <summary>Container for nested types declared in the PrivatePoolV1Config message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            ProjectId = input.ReadString();
-            break;
-          }
-          case 18: {
-            Network_ = input.ReadString();
-            break;
-          }
-          case 26: {
-            Subnetwork = input.ReadString();
-            break;
+    public static partial class Types {
+      /// <summary>
+      /// Defines the configuration to be used for creating workers in
+      /// the pool.
+      /// </summary>
+      public sealed partial class WorkerConfig : pb::IMessage<WorkerConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WorkerConfig> _parser = new pb::MessageParser<WorkerConfig>(() => new WorkerConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<WorkerConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WorkerConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WorkerConfig(WorkerConfig other) : this() {
+          machineType_ = other.machineType_;
+          diskSizeGb_ = other.diskSizeGb_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WorkerConfig Clone() {
+          return new WorkerConfig(this);
+        }
+
+        /// <summary>Field number for the "machine_type" field.</summary>
+        public const int MachineTypeFieldNumber = 1;
+        private string machineType_ = "";
+        /// <summary>
+        /// Machine type of a worker, such as `e2-medium`.
+        /// See [Worker pool config
+        /// file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
+        /// If left blank, Cloud Build will use a sensible default.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string MachineType {
+          get { return machineType_; }
+          set {
+            machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
+
+        /// <summary>Field number for the "disk_size_gb" field.</summary>
+        public const int DiskSizeGbFieldNumber = 2;
+        private long diskSizeGb_;
+        /// <summary>
+        /// Size of the disk attached to the worker, in GB.
+        /// See [Worker pool config
+        /// file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
+        /// Specify a value of up to 1000. If `0` is specified, Cloud Build will use
+        /// a standard disk size.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long DiskSizeGb {
+          get { return diskSizeGb_; }
+          set {
+            diskSizeGb_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as WorkerConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(WorkerConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MachineType != other.MachineType) return false;
+          if (DiskSizeGb != other.DiskSizeGb) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
+          if (DiskSizeGb != 0L) hash ^= DiskSizeGb.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MachineType);
+          }
+          if (DiskSizeGb != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(DiskSizeGb);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MachineType);
+          }
+          if (DiskSizeGb != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(DiskSizeGb);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (MachineType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
+          }
+          if (DiskSizeGb != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(DiskSizeGb);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(WorkerConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MachineType.Length != 0) {
+            MachineType = other.MachineType;
+          }
+          if (other.DiskSizeGb != 0L) {
+            DiskSizeGb = other.DiskSizeGb;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                MachineType = input.ReadString();
+                break;
+              }
+              case 16: {
+                DiskSizeGb = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MachineType = input.ReadString();
+                break;
+              }
+              case 16: {
+                DiskSizeGb = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
+
+      /// <summary>
+      /// Defines the network configuration for the pool.
+      /// </summary>
+      public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NetworkConfig> _parser = new pb::MessageParser<NetworkConfig>(() => new NetworkConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NetworkConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NetworkConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NetworkConfig(NetworkConfig other) : this() {
+          peeredNetwork_ = other.peeredNetwork_;
+          egressOption_ = other.egressOption_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NetworkConfig Clone() {
+          return new NetworkConfig(this);
+        }
+
+        /// <summary>Field number for the "peered_network" field.</summary>
+        public const int PeeredNetworkFieldNumber = 1;
+        private string peeredNetwork_ = "";
+        /// <summary>
+        /// Required. Immutable. The network definition that the workers are peered
+        /// to. If this section is left empty, the workers will be peered to
+        /// `WorkerPool.project_id` on the service producer network. Must be in the
+        /// format `projects/{project}/global/networks/{network}`, where `{project}`
+        /// is a project number, such as `12345`, and `{network}` is the name of a
+        /// VPC network in the project. See
+        /// [Understanding network configuration
+        /// options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string PeeredNetwork {
+          get { return peeredNetwork_; }
+          set {
+            peeredNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "egress_option" field.</summary>
+        public const int EgressOptionFieldNumber = 2;
+        private global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption egressOption_ = global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified;
+        /// <summary>
+        /// Option to configure network egress for the workers.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption EgressOption {
+          get { return egressOption_; }
+          set {
+            egressOption_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NetworkConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NetworkConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PeeredNetwork != other.PeeredNetwork) return false;
+          if (EgressOption != other.EgressOption) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PeeredNetwork.Length != 0) hash ^= PeeredNetwork.GetHashCode();
+          if (EgressOption != global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified) hash ^= EgressOption.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PeeredNetwork.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PeeredNetwork);
+          }
+          if (EgressOption != global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EgressOption);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PeeredNetwork.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PeeredNetwork);
+          }
+          if (EgressOption != global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EgressOption);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (PeeredNetwork.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PeeredNetwork);
+          }
+          if (EgressOption != global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EgressOption);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NetworkConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PeeredNetwork.Length != 0) {
+            PeeredNetwork = other.PeeredNetwork;
+          }
+          if (other.EgressOption != global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption.Unspecified) {
+            EgressOption = other.EgressOption;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                PeeredNetwork = input.ReadString();
+                break;
+              }
+              case 16: {
+                EgressOption = (global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                PeeredNetwork = input.ReadString();
+                break;
+              }
+              case 16: {
+                EgressOption = (global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the NetworkConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Defines the egress option for the pool.
+          /// </summary>
+          public enum EgressOption {
+            /// <summary>
+            /// If set, defaults to PUBLIC_EGRESS.
+            /// </summary>
+            [pbr::OriginalName("EGRESS_OPTION_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// If set, workers are created without any public address, which prevents
+            /// network egress to public IPs unless a network proxy is configured.
+            /// </summary>
+            [pbr::OriginalName("NO_PUBLIC_EGRESS")] NoPublicEgress = 1,
+            /// <summary>
+            /// If set, workers are created with a public address which allows for
+            /// public internet egress.
+            /// </summary>
+            [pbr::OriginalName("PUBLIC_EGRESS")] PublicEgress = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
-    #endif
+    #endregion
 
   }
 
@@ -16010,7 +16759,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16029,6 +16778,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     public CreateWorkerPoolRequest(CreateWorkerPoolRequest other) : this() {
       parent_ = other.parent_;
       workerPool_ = other.workerPool_ != null ? other.workerPool_.Clone() : null;
+      workerPoolId_ = other.workerPoolId_;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16041,7 +16792,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// ID of the parent project.
+    /// Required. The parent resource where this worker pool will be created.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -16055,13 +16807,46 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int WorkerPoolFieldNumber = 2;
     private global::Google.Cloud.CloudBuild.V1.WorkerPool workerPool_;
     /// <summary>
-    /// `WorkerPool` resource to create.
+    /// Required. `WorkerPool` resource to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.CloudBuild.V1.WorkerPool WorkerPool {
       get { return workerPool_; }
       set {
         workerPool_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "worker_pool_id" field.</summary>
+    public const int WorkerPoolIdFieldNumber = 3;
+    private string workerPoolId_ = "";
+    /// <summary>
+    /// Required. Immutable. The ID to use for the `WorkerPool`, which will become
+    /// the final component of the resource name.
+    ///
+    /// This value should be 1-63 characters, and valid characters
+    /// are /[a-z][0-9]-/.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WorkerPoolId {
+      get { return workerPoolId_; }
+      set {
+        workerPoolId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// If set, validate the request and preview the response, but do not actually
+    /// post it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -16080,6 +16865,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(WorkerPool, other.WorkerPool)) return false;
+      if (WorkerPoolId != other.WorkerPoolId) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -16088,6 +16875,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (workerPool_ != null) hash ^= WorkerPool.GetHashCode();
+      if (WorkerPoolId.Length != 0) hash ^= WorkerPoolId.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16112,6 +16901,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(WorkerPool);
       }
+      if (WorkerPoolId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkerPoolId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16129,6 +16926,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(WorkerPool);
       }
+      if (WorkerPoolId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkerPoolId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16143,6 +16948,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (workerPool_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WorkerPool);
+      }
+      if (WorkerPoolId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPoolId);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16164,6 +16975,12 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
         WorkerPool.MergeFrom(other.WorkerPool);
       }
+      if (other.WorkerPoolId.Length != 0) {
+        WorkerPoolId = other.WorkerPoolId;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -16189,6 +17006,14 @@ namespace Google.Cloud.CloudBuild.V1 {
             input.ReadMessage(WorkerPool);
             break;
           }
+          case 26: {
+            WorkerPoolId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -16212,6 +17037,14 @@ namespace Google.Cloud.CloudBuild.V1 {
               WorkerPool = new global::Google.Cloud.CloudBuild.V1.WorkerPool();
             }
             input.ReadMessage(WorkerPool);
+            break;
+          }
+          case 26: {
+            WorkerPoolId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -16236,7 +17069,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16266,8 +17099,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The field will contain name of the resource requested, for example:
-    /// "projects/project-1/workerPools/workerpool-name"
+    /// Required. The name of the `WorkerPool` to retrieve.
+    /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -16415,7 +17248,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16433,6 +17266,9 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteWorkerPoolRequest(DeleteWorkerPoolRequest other) : this() {
       name_ = other.name_;
+      etag_ = other.etag_;
+      allowMissing_ = other.allowMissing_;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16445,14 +17281,60 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The field will contain name of the resource requested, for example:
-    /// "projects/project-1/workerPools/workerpool-name"
+    /// Required. The name of the `WorkerPool` to delete.
+    /// Format:
+    /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. If this is provided, it must match the server's etag on the
+    /// workerpool for the request to be processed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 3;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the `WorkerPool` is not found, the request will succeed
+    /// but no action will be taken on the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// If set, validate the request and preview the response, but do not actually
+    /// post it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -16470,6 +17352,9 @@ namespace Google.Cloud.CloudBuild.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -16477,6 +17362,9 @@ namespace Google.Cloud.CloudBuild.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16497,6 +17385,18 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16510,6 +17410,18 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16521,6 +17433,15 @@ namespace Google.Cloud.CloudBuild.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16535,6 +17456,15 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -16554,6 +17484,18 @@ namespace Google.Cloud.CloudBuild.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 24: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -16570,6 +17512,18 @@ namespace Google.Cloud.CloudBuild.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 24: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -16594,7 +17548,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16611,8 +17565,9 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateWorkerPoolRequest(UpdateWorkerPoolRequest other) : this() {
-      name_ = other.name_;
       workerPool_ = other.workerPool_ != null ? other.workerPool_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16621,32 +17576,49 @@ namespace Google.Cloud.CloudBuild.V1 {
       return new UpdateWorkerPoolRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    /// <summary>
-    /// The field will contain name of the resource requested, for example:
-    /// "projects/project-1/workerPools/workerpool-name"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "worker_pool" field.</summary>
-    public const int WorkerPoolFieldNumber = 3;
+    public const int WorkerPoolFieldNumber = 1;
     private global::Google.Cloud.CloudBuild.V1.WorkerPool workerPool_;
     /// <summary>
-    /// `WorkerPool` resource to update.
+    /// Required. The `WorkerPool` to update.
+    ///
+    /// The `name` field is used to identify the `WorkerPool` to update.
+    /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.CloudBuild.V1.WorkerPool WorkerPool {
       get { return workerPool_; }
       set {
         workerPool_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// A mask specifying which fields in `worker_pool` to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// If set, validate the request and preview the response, but do not actually
+    /// post it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -16663,16 +17635,18 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
       if (!object.Equals(WorkerPool, other.WorkerPool)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (workerPool_ != null) hash ^= WorkerPool.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16689,13 +17663,17 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
       if (workerPool_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(10);
         output.WriteMessage(WorkerPool);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -16706,13 +17684,17 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
       if (workerPool_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(10);
         output.WriteMessage(WorkerPool);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -16723,11 +17705,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
       if (workerPool_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WorkerPool);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16740,14 +17725,20 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
       if (other.workerPool_ != null) {
         if (workerPool_ == null) {
           WorkerPool = new global::Google.Cloud.CloudBuild.V1.WorkerPool();
         }
         WorkerPool.MergeFrom(other.WorkerPool);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -16763,15 +17754,22 @@ namespace Google.Cloud.CloudBuild.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
+          case 10: {
             if (workerPool_ == null) {
               WorkerPool = new global::Google.Cloud.CloudBuild.V1.WorkerPool();
             }
             input.ReadMessage(WorkerPool);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -16788,15 +17786,22 @@ namespace Google.Cloud.CloudBuild.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
+          case 10: {
             if (workerPool_ == null) {
               WorkerPool = new global::Google.Cloud.CloudBuild.V1.WorkerPool();
             }
             input.ReadMessage(WorkerPool);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -16807,7 +17812,7 @@ namespace Google.Cloud.CloudBuild.V1 {
   }
 
   /// <summary>
-  /// Request to list `WorkerPools`.
+  /// Request to list `WorkerPool`s.
   /// </summary>
   public sealed partial class ListWorkerPoolsRequest : pb::IMessage<ListWorkerPoolsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16821,7 +17826,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16839,6 +17844,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListWorkerPoolsRequest(ListWorkerPoolsRequest other) : this() {
       parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16851,13 +17858,44 @@ namespace Google.Cloud.CloudBuild.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// ID of the parent project.
+    /// Required. The parent of the collection of `WorkerPools`.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of `WorkerPool`s to return. The service may return
+    /// fewer than this value. If omitted, the server will use a sensible default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// A page token, received from a previous `ListWorkerPools` call. Provide this
+    /// to retrieve the subsequent page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -16875,6 +17913,8 @@ namespace Google.Cloud.CloudBuild.V1 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -16882,6 +17922,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16902,6 +17944,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16915,6 +17965,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16926,6 +17984,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16940,6 +18004,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -16959,6 +18029,14 @@ namespace Google.Cloud.CloudBuild.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -16975,6 +18053,14 @@ namespace Google.Cloud.CloudBuild.V1 {
             break;
           case 10: {
             Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
             break;
           }
         }
@@ -16999,7 +18085,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17017,6 +18103,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListWorkerPoolsResponse(ListWorkerPoolsResponse other) : this() {
       workerPools_ = other.workerPools_.Clone();
+      nextPageToken_ = other.nextPageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -17031,11 +18118,27 @@ namespace Google.Cloud.CloudBuild.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool> workerPools_ = new pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool>();
     /// <summary>
-    /// `WorkerPools` for the project.
+    /// `WorkerPools` for the specified project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool> WorkerPools {
       get { return workerPools_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Continuation token used to page through large result sets. Provide this
+    /// value in a subsequent ListWorkerPoolsRequest to return the next page of
+    /// results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17052,6 +18155,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return true;
       }
       if(!workerPools_.Equals(other.workerPools_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -17059,6 +18163,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= workerPools_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -17076,6 +18181,10 @@ namespace Google.Cloud.CloudBuild.V1 {
       output.WriteRawMessage(this);
     #else
       workerPools_.WriteTo(output, _repeated_workerPools_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -17086,6 +18195,10 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       workerPools_.WriteTo(ref output, _repeated_workerPools_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -17096,6 +18209,9 @@ namespace Google.Cloud.CloudBuild.V1 {
     public int CalculateSize() {
       int size = 0;
       size += workerPools_.CalculateSize(_repeated_workerPools_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -17108,6 +18224,9 @@ namespace Google.Cloud.CloudBuild.V1 {
         return;
       }
       workerPools_.Add(other.workerPools_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -17126,6 +18245,10 @@ namespace Google.Cloud.CloudBuild.V1 {
             workerPools_.AddEntriesFrom(input, _repeated_workerPools_codec);
             break;
           }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -17142,6 +18265,838 @@ namespace Google.Cloud.CloudBuild.V1 {
             break;
           case 10: {
             workerPools_.AddEntriesFrom(ref input, _repeated_workerPools_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for the `CreateWorkerPool` operation.
+  /// </summary>
+  public sealed partial class CreateWorkerPoolOperationMetadata : pb::IMessage<CreateWorkerPoolOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateWorkerPoolOperationMetadata> _parser = new pb::MessageParser<CreateWorkerPoolOperationMetadata>(() => new CreateWorkerPoolOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateWorkerPoolOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[50]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateWorkerPoolOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateWorkerPoolOperationMetadata(CreateWorkerPoolOperationMetadata other) : this() {
+      workerPool_ = other.workerPool_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      completeTime_ = other.completeTime_ != null ? other.completeTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateWorkerPoolOperationMetadata Clone() {
+      return new CreateWorkerPoolOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "worker_pool" field.</summary>
+    public const int WorkerPoolFieldNumber = 1;
+    private string workerPool_ = "";
+    /// <summary>
+    /// The resource name of the `WorkerPool` to create.
+    /// Format:
+    /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WorkerPool {
+      get { return workerPool_; }
+      set {
+        workerPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Time the operation was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "complete_time" field.</summary>
+    public const int CompleteTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp completeTime_;
+    /// <summary>
+    /// Time the operation was completed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
+      get { return completeTime_; }
+      set {
+        completeTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateWorkerPoolOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateWorkerPoolOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WorkerPool != other.WorkerPool) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(CompleteTime, other.CompleteTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (completeTime_ != null) hash ^= CompleteTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (WorkerPool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (completeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateWorkerPoolOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WorkerPool.Length != 0) {
+        WorkerPool = other.WorkerPool;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.completeTime_ != null) {
+        if (completeTime_ == null) {
+          CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CompleteTime.MergeFrom(other.CompleteTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for the `UpdateWorkerPool` operation.
+  /// </summary>
+  public sealed partial class UpdateWorkerPoolOperationMetadata : pb::IMessage<UpdateWorkerPoolOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateWorkerPoolOperationMetadata> _parser = new pb::MessageParser<UpdateWorkerPoolOperationMetadata>(() => new UpdateWorkerPoolOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateWorkerPoolOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[51]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateWorkerPoolOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateWorkerPoolOperationMetadata(UpdateWorkerPoolOperationMetadata other) : this() {
+      workerPool_ = other.workerPool_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      completeTime_ = other.completeTime_ != null ? other.completeTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateWorkerPoolOperationMetadata Clone() {
+      return new UpdateWorkerPoolOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "worker_pool" field.</summary>
+    public const int WorkerPoolFieldNumber = 1;
+    private string workerPool_ = "";
+    /// <summary>
+    /// The resource name of the `WorkerPool` being updated.
+    /// Format:
+    /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WorkerPool {
+      get { return workerPool_; }
+      set {
+        workerPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Time the operation was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "complete_time" field.</summary>
+    public const int CompleteTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp completeTime_;
+    /// <summary>
+    /// Time the operation was completed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
+      get { return completeTime_; }
+      set {
+        completeTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateWorkerPoolOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateWorkerPoolOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WorkerPool != other.WorkerPool) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(CompleteTime, other.CompleteTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (completeTime_ != null) hash ^= CompleteTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (WorkerPool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (completeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateWorkerPoolOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WorkerPool.Length != 0) {
+        WorkerPool = other.WorkerPool;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.completeTime_ != null) {
+        if (completeTime_ == null) {
+          CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CompleteTime.MergeFrom(other.CompleteTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for the `DeleteWorkerPool` operation.
+  /// </summary>
+  public sealed partial class DeleteWorkerPoolOperationMetadata : pb::IMessage<DeleteWorkerPoolOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteWorkerPoolOperationMetadata> _parser = new pb::MessageParser<DeleteWorkerPoolOperationMetadata>(() => new DeleteWorkerPoolOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteWorkerPoolOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[52]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteWorkerPoolOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteWorkerPoolOperationMetadata(DeleteWorkerPoolOperationMetadata other) : this() {
+      workerPool_ = other.workerPool_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      completeTime_ = other.completeTime_ != null ? other.completeTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteWorkerPoolOperationMetadata Clone() {
+      return new DeleteWorkerPoolOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "worker_pool" field.</summary>
+    public const int WorkerPoolFieldNumber = 1;
+    private string workerPool_ = "";
+    /// <summary>
+    /// The resource name of the `WorkerPool` being deleted.
+    /// Format:
+    /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WorkerPool {
+      get { return workerPool_; }
+      set {
+        workerPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Time the operation was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "complete_time" field.</summary>
+    public const int CompleteTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp completeTime_;
+    /// <summary>
+    /// Time the operation was completed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
+      get { return completeTime_; }
+      set {
+        completeTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteWorkerPoolOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteWorkerPoolOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WorkerPool != other.WorkerPool) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(CompleteTime, other.CompleteTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (completeTime_ != null) hash ^= CompleteTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WorkerPool);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (completeTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (WorkerPool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (completeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompleteTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteWorkerPoolOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WorkerPool.Length != 0) {
+        WorkerPool = other.WorkerPool;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.completeTime_ != null) {
+        if (completeTime_ == null) {
+          CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CompleteTime.MergeFrom(other.CompleteTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (completeTime_ == null) {
+              CompleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CompleteTime);
             break;
           }
         }
