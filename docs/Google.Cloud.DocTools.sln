@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Generate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.CanonicalLinkFunction", "..\tools\Google.Cloud.Tools.CanonicalLinkFunction\Google.Cloud.Tools.CanonicalLinkFunction.csproj", "{C42A623C-F5C8-43A4-9842-F8D8D6206626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.GenerateCanonicalLinks.Tests", "..\tools\Google.Cloud.Tools.GenerateCanonicalLinks.Tests\Google.Cloud.Tools.GenerateCanonicalLinks.Tests.csproj", "{17CF0C6A-F06E-4FB7-988B-97E6A36571D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateCanonicalLinks.Tests", "..\tools\Google.Cloud.Tools.GenerateCanonicalLinks.Tests\Google.Cloud.Tools.GenerateCanonicalLinks.Tests.csproj", "{17CF0C6A-F06E-4FB7-988B-97E6A36571D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

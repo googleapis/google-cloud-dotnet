@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.</Description>
     <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />

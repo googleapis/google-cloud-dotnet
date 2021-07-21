@@ -70,7 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         // Adapter function to be used to get labels set with the obsolete AspNetCore*.ILogEntryLabelProvider.
         // Will be used to pass these labels from AspNetCore*.GoogleLogger to Common.GoogleLogger because
         // Common.GoogleLogger cannot have a dependecy on the obsolote interface.
-        [Obsolete("Has been added temporarily until we remove AspNetCore.ILogEntryLabelProvider")]
+        [Obsolete("Has been added temporarily until we remove Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
         internal static Action<IServiceProvider, Dictionary<string, string>> ObsoleteLabelsGetter =>
             (serviceProvider, labels) =>
             {
@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         // Adapter function to be used to get trace context from the obsolete AspNetCore*.IExternalTraceProvider.
         // Will be used to "pass" this context from AspNetCore*.GoogleLogger to Common.GoogleLogger because
         // Common.GoogleLogger cannot have a dependecy on the obsolote interface.
-        [Obsolete("Has been added temporarily until we remove AspNetCore.ILogEntryLabelProvider")]
+        [Obsolete("Has been added temporarily until we remove Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
         internal static Action<IServiceProvider, LogEntry, TraceTarget> ObsoleteTraceContextGetter =>
             (serviceProvider, logEntry, traceTarget) =>
             {

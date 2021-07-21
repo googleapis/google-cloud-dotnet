@@ -1,8 +1,18 @@
 # Version history
 
+# Version 3.11.0, released 2021-07-09
+
+- [Commit 9dc6f8b](https://github.com/googleapis/google-cloud-dotnet/commit/9dc6f8b): feat(spanner): add leader_options to InstanceConfig
+- [Commit e59ffc5](https://github.com/googleapis/google-cloud-dotnet/commit/e59ffc5): feat(spanner): add default_leader to Database
+
+# Version 3.10.0, released 2021-06-28
+
+- [Commit 10c86e0](https://github.com/googleapis/google-cloud-dotnet/commit/10c86e0): feat: add JSON type (currently only in the low-level API)
+- [Commit 41094ed](https://github.com/googleapis/google-cloud-dotnet/commit/41094ed): feat: add processing_units to Instance resource
+
 # Version 3.9.0, released 2021-06-09
 
-- [Commit 0fb438e](https://github.com/googleapis/google-cloud-dotnet/commit/0fb438e): feat(spanner): add `query_optimizer_statistics_package` support (see below)
+- [Commit 0fb438e](https://github.com/googleapis/google-cloud-dotnet/commit/0fb438e): feat: add `query_optimizer_statistics_package` support (see below)
 
 The optimizer statistics package can be set through `QueryOptions`, which can be configured through the following mechanisms:
 

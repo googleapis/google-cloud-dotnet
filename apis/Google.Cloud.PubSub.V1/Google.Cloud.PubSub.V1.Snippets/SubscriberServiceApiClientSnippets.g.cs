@@ -864,7 +864,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for Pull</summary>
-        public void Pull()
+        public void Pull1()
         {
             // Snippet: Pull(string, bool, int, CallSettings)
             // Create client
@@ -881,7 +881,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for PullAsync</summary>
-        public async Task PullAsync()
+        public async Task Pull1Async()
         {
             // Snippet: PullAsync(string, bool, int, CallSettings)
             // Additional: PullAsync(string, bool, int, CancellationToken)
@@ -899,7 +899,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for Pull</summary>
-        public void PullResourceNames()
+        public void Pull1ResourceNames()
         {
             // Snippet: Pull(SubscriptionName, bool, int, CallSettings)
             // Create client
@@ -916,7 +916,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         /// <summary>Snippet for PullAsync</summary>
-        public async Task PullResourceNamesAsync()
+        public async Task Pull1ResourceNamesAsync()
         {
             // Snippet: PullAsync(SubscriptionName, bool, int, CallSettings)
             // Additional: PullAsync(SubscriptionName, bool, int, CancellationToken)
@@ -930,6 +930,64 @@ namespace Google.Cloud.PubSub.V1.Snippets
 #pragma warning disable CS0612
             PullResponse response = await subscriberServiceApiClient.PullAsync(subscription, returnImmediately, maxMessages);
 #pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for Pull</summary>
+        public void Pull2()
+        {
+            // Snippet: Pull(string, int, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            string subscription = "projects/[PROJECT]/subscriptions/[SUBSCRIPTION]";
+            int maxMessages = 0;
+            // Make the request
+            PullResponse response = subscriberServiceApiClient.Pull(subscription, maxMessages);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PullAsync</summary>
+        public async Task Pull2Async()
+        {
+            // Snippet: PullAsync(string, int, CallSettings)
+            // Additional: PullAsync(string, int, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string subscription = "projects/[PROJECT]/subscriptions/[SUBSCRIPTION]";
+            int maxMessages = 0;
+            // Make the request
+            PullResponse response = await subscriberServiceApiClient.PullAsync(subscription, maxMessages);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Pull</summary>
+        public void Pull2ResourceNames()
+        {
+            // Snippet: Pull(SubscriptionName, int, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            SubscriptionName subscription = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]");
+            int maxMessages = 0;
+            // Make the request
+            PullResponse response = subscriberServiceApiClient.Pull(subscription, maxMessages);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PullAsync</summary>
+        public async Task Pull2ResourceNamesAsync()
+        {
+            // Snippet: PullAsync(SubscriptionName, int, CallSettings)
+            // Additional: PullAsync(SubscriptionName, int, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriptionName subscription = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]");
+            int maxMessages = 0;
+            // Make the request
+            PullResponse response = await subscriberServiceApiClient.PullAsync(subscription, maxMessages);
             // End snippet
         }
 

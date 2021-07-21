@@ -41,7 +41,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -57,7 +57,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -88,7 +88,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -104,7 +104,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -136,7 +136,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -152,7 +152,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -182,7 +182,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -198,7 +198,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -230,7 +230,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -246,7 +246,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -276,7 +276,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -292,7 +292,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -323,7 +323,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -339,7 +339,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -368,7 +368,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -384,7 +384,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -569,7 +569,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -585,7 +585,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -616,7 +616,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -632,7 +632,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -663,7 +663,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -679,7 +679,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -708,7 +708,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -724,7 +724,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -755,7 +755,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -771,7 +771,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -800,7 +800,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -816,7 +816,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -846,7 +846,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -862,7 +862,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -890,7 +890,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -906,7 +906,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -937,7 +937,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -953,7 +953,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -982,7 +982,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -998,7 +998,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1044,7 +1044,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1137,7 +1137,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1262,7 +1262,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1278,7 +1278,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1310,7 +1310,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1326,7 +1326,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1356,7 +1356,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1372,7 +1372,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1403,7 +1403,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1464,7 +1464,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1494,7 +1494,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Tags = new Tags(),
@@ -1570,7 +1570,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Tags = new Tags(),
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Tags = new Tags(),
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Tags = new Tags(),
@@ -2221,14 +2221,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Port = -78310000,
                 Zone = "zone255f4ea8",
                 Instance = "instance99a62371",
-                Start = "start76262bea",
+                Start = -5616678393427383318L,
                 Project = "projectaa6ff846",
             };
             SerialPortOutput expectedResponse = new SerialPortOutput
             {
                 Kind = "kindf7aa39d9",
-                Next = "next0db9cad0",
-                Start = "start76262bea",
+                Next = 9139246809011047120L,
+                Start = -5616678393427383318L,
                 SelfLink = "self_link7e87f12d",
                 Contents = "contents8c7dbf98",
             };
@@ -2248,14 +2248,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Port = -78310000,
                 Zone = "zone255f4ea8",
                 Instance = "instance99a62371",
-                Start = "start76262bea",
+                Start = -5616678393427383318L,
                 Project = "projectaa6ff846",
             };
             SerialPortOutput expectedResponse = new SerialPortOutput
             {
                 Kind = "kindf7aa39d9",
-                Next = "next0db9cad0",
-                Start = "start76262bea",
+                Next = 9139246809011047120L,
+                Start = -5616678393427383318L,
                 SelfLink = "self_link7e87f12d",
                 Contents = "contents8c7dbf98",
             };
@@ -2281,8 +2281,8 @@ namespace Google.Cloud.Compute.V1.Tests
             SerialPortOutput expectedResponse = new SerialPortOutput
             {
                 Kind = "kindf7aa39d9",
-                Next = "next0db9cad0",
-                Start = "start76262bea",
+                Next = 9139246809011047120L,
+                Start = -5616678393427383318L,
                 SelfLink = "self_link7e87f12d",
                 Contents = "contents8c7dbf98",
             };
@@ -2306,8 +2306,8 @@ namespace Google.Cloud.Compute.V1.Tests
             SerialPortOutput expectedResponse = new SerialPortOutput
             {
                 Kind = "kindf7aa39d9",
-                Next = "next0db9cad0",
-                Start = "start76262bea",
+                Next = 9139246809011047120L,
+                Start = -5616678393427383318L,
                 SelfLink = "self_link7e87f12d",
                 Contents = "contents8c7dbf98",
             };
@@ -2430,7 +2430,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2446,7 +2446,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2476,7 +2476,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2492,7 +2492,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2522,7 +2522,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2538,7 +2538,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2566,7 +2566,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2582,7 +2582,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2846,7 +2846,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2862,7 +2862,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2892,7 +2892,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2908,7 +2908,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2939,7 +2939,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2955,7 +2955,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2984,7 +2984,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3000,7 +3000,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3031,7 +3031,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3047,7 +3047,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3076,7 +3076,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3092,7 +3092,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3122,7 +3122,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3138,7 +3138,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3166,7 +3166,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3182,7 +3182,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3214,7 +3214,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3230,7 +3230,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3260,7 +3260,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3276,7 +3276,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3306,7 +3306,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3322,7 +3322,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3350,7 +3350,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3366,7 +3366,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3399,7 +3399,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3415,7 +3415,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3446,7 +3446,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3462,7 +3462,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3494,7 +3494,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3510,7 +3510,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3540,7 +3540,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3556,7 +3556,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3700,7 +3700,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3716,7 +3716,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3746,7 +3746,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3762,7 +3762,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3793,7 +3793,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3809,7 +3809,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3838,7 +3838,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3854,7 +3854,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3886,7 +3886,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3902,7 +3902,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3932,7 +3932,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3948,7 +3948,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3979,7 +3979,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3995,7 +3995,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4024,7 +4024,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4040,7 +4040,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4072,7 +4072,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4088,7 +4088,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4118,7 +4118,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4134,7 +4134,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4165,7 +4165,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4181,7 +4181,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4210,7 +4210,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4226,7 +4226,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4258,7 +4258,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4274,7 +4274,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4304,7 +4304,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4320,7 +4320,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4351,7 +4351,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4367,7 +4367,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4396,7 +4396,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4412,7 +4412,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4444,7 +4444,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4460,7 +4460,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4490,7 +4490,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4506,7 +4506,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4537,7 +4537,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4553,7 +4553,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4582,7 +4582,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4598,7 +4598,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4630,7 +4630,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4646,7 +4646,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4676,7 +4676,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4692,7 +4692,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4723,7 +4723,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4739,7 +4739,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4768,7 +4768,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4784,7 +4784,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4816,7 +4816,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4832,7 +4832,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4862,7 +4862,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4878,7 +4878,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4909,7 +4909,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4925,7 +4925,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -4954,7 +4954,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -4970,7 +4970,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5002,7 +5002,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5018,7 +5018,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5048,7 +5048,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5064,7 +5064,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5095,7 +5095,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5111,7 +5111,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5140,7 +5140,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5156,7 +5156,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5188,7 +5188,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5204,7 +5204,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5234,7 +5234,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5250,7 +5250,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5281,7 +5281,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5297,7 +5297,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5326,7 +5326,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5342,7 +5342,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5372,7 +5372,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5388,7 +5388,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5416,7 +5416,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5432,7 +5432,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5462,7 +5462,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5478,7 +5478,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5506,7 +5506,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5522,7 +5522,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5553,7 +5553,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5569,7 +5569,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5598,7 +5598,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5614,7 +5614,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5644,7 +5644,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5660,7 +5660,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5688,7 +5688,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5704,7 +5704,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5736,7 +5736,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5752,7 +5752,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5782,7 +5782,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5798,7 +5798,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5829,7 +5829,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5845,7 +5845,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5874,7 +5874,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5890,7 +5890,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5921,7 +5921,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5937,7 +5937,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -5966,7 +5966,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -5982,7 +5982,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6012,7 +6012,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6028,7 +6028,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6056,7 +6056,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6072,7 +6072,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6210,7 +6210,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6226,7 +6226,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6258,7 +6258,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6274,7 +6274,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6305,7 +6305,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6321,7 +6321,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6350,7 +6350,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6366,7 +6366,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6399,7 +6399,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6415,7 +6415,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6446,7 +6446,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6462,7 +6462,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6494,7 +6494,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6510,7 +6510,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6540,7 +6540,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6556,7 +6556,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6588,7 +6588,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6604,7 +6604,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6634,7 +6634,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6650,7 +6650,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6681,7 +6681,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6697,7 +6697,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6726,7 +6726,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6742,7 +6742,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6775,7 +6775,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6791,7 +6791,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6822,7 +6822,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6838,7 +6838,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6870,7 +6870,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6886,7 +6886,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6916,7 +6916,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6932,7 +6932,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -6964,7 +6964,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -6980,7 +6980,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -7010,7 +7010,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -7026,7 +7026,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -7057,7 +7057,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -7073,7 +7073,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -7102,7 +7102,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -7118,7 +7118,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,

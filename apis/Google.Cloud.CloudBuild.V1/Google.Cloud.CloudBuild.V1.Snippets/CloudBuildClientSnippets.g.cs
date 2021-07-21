@@ -20,6 +20,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -622,6 +623,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.CreateBuildTrigger(request);
@@ -640,6 +642,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(request);
@@ -686,6 +689,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.GetBuildTrigger(request);
@@ -704,6 +708,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(request);
@@ -746,7 +751,11 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            ListBuildTriggersRequest request = new ListBuildTriggersRequest { ProjectId = "", };
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
+            {
+                ProjectId = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
             PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggers(request);
 
@@ -791,7 +800,11 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            ListBuildTriggersRequest request = new ListBuildTriggersRequest { ProjectId = "", };
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
+            {
+                ProjectId = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggersAsync(request);
 
@@ -930,6 +943,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             cloudBuildClient.DeleteBuildTrigger(request);
@@ -948,6 +962,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             {
                 ProjectId = "",
                 TriggerId = "",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             await cloudBuildClient.DeleteBuildTriggerAsync(request);
@@ -1063,6 +1078,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RunBuildTrigger(request);
@@ -1098,6 +1114,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RunBuildTriggerAsync(request);
@@ -1196,6 +1213,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 Trigger = "",
                 Secret = "",
+                Name = "",
             };
             // Make the request
             ReceiveTriggerWebhookResponse response = cloudBuildClient.ReceiveTriggerWebhook(request);
@@ -1216,6 +1234,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 ProjectId = "",
                 Trigger = "",
                 Secret = "",
+                Name = "",
             };
             // Make the request
             ReceiveTriggerWebhookResponse response = await cloudBuildClient.ReceiveTriggerWebhookAsync(request);
@@ -1231,11 +1250,29 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Initialize request argument(s)
             CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 WorkerPool = new WorkerPool(),
+                WorkerPoolId = "",
+                ValidateOnly = false,
             };
             // Make the request
-            WorkerPool response = cloudBuildClient.CreateWorkerPool(request);
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = cloudBuildClient.CreateWorkerPool(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1249,11 +1286,155 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Initialize request argument(s)
             CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 WorkerPool = new WorkerPool(),
+                WorkerPoolId = "",
+                ValidateOnly = false,
             };
             // Make the request
-            WorkerPool response = await cloudBuildClient.CreateWorkerPoolAsync(request);
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = await cloudBuildClient.CreateWorkerPoolAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkerPool</summary>
+        public void CreateWorkerPool()
+        {
+            // Snippet: CreateWorkerPool(string, WorkerPool, string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            WorkerPool workerPool = new WorkerPool();
+            string workerPoolId = "";
+            // Make the request
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = cloudBuildClient.CreateWorkerPool(parent, workerPool, workerPoolId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkerPoolAsync</summary>
+        public async Task CreateWorkerPoolAsync()
+        {
+            // Snippet: CreateWorkerPoolAsync(string, WorkerPool, string, CallSettings)
+            // Additional: CreateWorkerPoolAsync(string, WorkerPool, string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            WorkerPool workerPool = new WorkerPool();
+            string workerPoolId = "";
+            // Make the request
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = await cloudBuildClient.CreateWorkerPoolAsync(parent, workerPool, workerPoolId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkerPool</summary>
+        public void CreateWorkerPoolResourceNames()
+        {
+            // Snippet: CreateWorkerPool(LocationName, WorkerPool, string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            WorkerPool workerPool = new WorkerPool();
+            string workerPoolId = "";
+            // Make the request
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = cloudBuildClient.CreateWorkerPool(parent, workerPool, workerPoolId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkerPoolAsync</summary>
+        public async Task CreateWorkerPoolResourceNamesAsync()
+        {
+            // Snippet: CreateWorkerPoolAsync(LocationName, WorkerPool, string, CallSettings)
+            // Additional: CreateWorkerPoolAsync(LocationName, WorkerPool, string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            WorkerPool workerPool = new WorkerPool();
+            string workerPoolId = "";
+            // Make the request
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> response = await cloudBuildClient.CreateWorkerPoolAsync(parent, workerPool, workerPoolId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, CreateWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1264,7 +1445,10 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            GetWorkerPoolRequest request = new GetWorkerPoolRequest { Name = "", };
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
+            {
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+            };
             // Make the request
             WorkerPool response = cloudBuildClient.GetWorkerPool(request);
             // End snippet
@@ -1278,9 +1462,66 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            GetWorkerPoolRequest request = new GetWorkerPoolRequest { Name = "", };
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
+            {
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+            };
             // Make the request
             WorkerPool response = await cloudBuildClient.GetWorkerPoolAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkerPool</summary>
+        public void GetWorkerPool()
+        {
+            // Snippet: GetWorkerPool(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/workerPools/[WORKER_POOL]";
+            // Make the request
+            WorkerPool response = cloudBuildClient.GetWorkerPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkerPoolAsync</summary>
+        public async Task GetWorkerPoolAsync()
+        {
+            // Snippet: GetWorkerPoolAsync(string, CallSettings)
+            // Additional: GetWorkerPoolAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/workerPools/[WORKER_POOL]";
+            // Make the request
+            WorkerPool response = await cloudBuildClient.GetWorkerPoolAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkerPool</summary>
+        public void GetWorkerPoolResourceNames()
+        {
+            // Snippet: GetWorkerPool(WorkerPoolName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            WorkerPoolName name = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]");
+            // Make the request
+            WorkerPool response = cloudBuildClient.GetWorkerPool(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkerPoolAsync</summary>
+        public async Task GetWorkerPoolResourceNamesAsync()
+        {
+            // Snippet: GetWorkerPoolAsync(WorkerPoolName, CallSettings)
+            // Additional: GetWorkerPoolAsync(WorkerPoolName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkerPoolName name = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]");
+            // Make the request
+            WorkerPool response = await cloudBuildClient.GetWorkerPoolAsync(name);
             // End snippet
         }
 
@@ -1291,9 +1532,31 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest { Name = "", };
+            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest
+            {
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
             // Make the request
-            cloudBuildClient.DeleteWorkerPool(request);
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = cloudBuildClient.DeleteWorkerPool(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceDeleteWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1305,9 +1568,149 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest { Name = "", };
+            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest
+            {
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                Etag = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
             // Make the request
-            await cloudBuildClient.DeleteWorkerPoolAsync(request);
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = await cloudBuildClient.DeleteWorkerPoolAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceDeleteWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkerPool</summary>
+        public void DeleteWorkerPool()
+        {
+            // Snippet: DeleteWorkerPool(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/workerPools/[WORKER_POOL]";
+            // Make the request
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = cloudBuildClient.DeleteWorkerPool(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceDeleteWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkerPoolAsync</summary>
+        public async Task DeleteWorkerPoolAsync()
+        {
+            // Snippet: DeleteWorkerPoolAsync(string, CallSettings)
+            // Additional: DeleteWorkerPoolAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/workerPools/[WORKER_POOL]";
+            // Make the request
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = await cloudBuildClient.DeleteWorkerPoolAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceDeleteWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkerPool</summary>
+        public void DeleteWorkerPoolResourceNames()
+        {
+            // Snippet: DeleteWorkerPool(WorkerPoolName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            WorkerPoolName name = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]");
+            // Make the request
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = cloudBuildClient.DeleteWorkerPool(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceDeleteWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkerPoolAsync</summary>
+        public async Task DeleteWorkerPoolResourceNamesAsync()
+        {
+            // Snippet: DeleteWorkerPoolAsync(WorkerPoolName, CallSettings)
+            // Additional: DeleteWorkerPoolAsync(WorkerPoolName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkerPoolName name = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]");
+            // Make the request
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> response = await cloudBuildClient.DeleteWorkerPoolAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceDeleteWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1320,11 +1723,28 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Initialize request argument(s)
             UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
             {
-                Name = "",
                 WorkerPool = new WorkerPool(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
-            WorkerPool response = cloudBuildClient.UpdateWorkerPool(request);
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> response = cloudBuildClient.UpdateWorkerPool(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceUpdateWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1338,11 +1758,89 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Initialize request argument(s)
             UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
             {
-                Name = "",
                 WorkerPool = new WorkerPool(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
-            WorkerPool response = await cloudBuildClient.UpdateWorkerPoolAsync(request);
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> response = await cloudBuildClient.UpdateWorkerPoolAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceUpdateWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkerPool</summary>
+        public void UpdateWorkerPool()
+        {
+            // Snippet: UpdateWorkerPool(WorkerPool, FieldMask, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            WorkerPool workerPool = new WorkerPool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> response = cloudBuildClient.UpdateWorkerPool(workerPool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceUpdateWorkerPool(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkerPoolAsync</summary>
+        public async Task UpdateWorkerPoolAsync()
+        {
+            // Snippet: UpdateWorkerPoolAsync(WorkerPool, FieldMask, CallSettings)
+            // Additional: UpdateWorkerPoolAsync(WorkerPool, FieldMask, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkerPool workerPool = new WorkerPool();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> response = await cloudBuildClient.UpdateWorkerPoolAsync(workerPool, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WorkerPool result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WorkerPool, UpdateWorkerPoolOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceUpdateWorkerPoolAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WorkerPool retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1353,9 +1851,44 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest { Parent = "", };
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
             // Make the request
-            ListWorkerPoolsResponse response = cloudBuildClient.ListWorkerPools(request);
+            PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPools(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkerPool item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkerPoolsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -1363,13 +1896,227 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
         public async Task ListWorkerPoolsRequestObjectAsync()
         {
             // Snippet: ListWorkerPoolsAsync(ListWorkerPoolsRequest, CallSettings)
-            // Additional: ListWorkerPoolsAsync(ListWorkerPoolsRequest, CancellationToken)
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest { Parent = "", };
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
             // Make the request
-            ListWorkerPoolsResponse response = await cloudBuildClient.ListWorkerPoolsAsync(request);
+            PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPoolsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkerPool item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkerPoolsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkerPools</summary>
+        public void ListWorkerPools()
+        {
+            // Snippet: ListWorkerPools(string, string, int?, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPools(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkerPool item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkerPoolsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkerPoolsAsync</summary>
+        public async Task ListWorkerPoolsAsync()
+        {
+            // Snippet: ListWorkerPoolsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPoolsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkerPool item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkerPoolsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkerPools</summary>
+        public void ListWorkerPoolsResourceNames()
+        {
+            // Snippet: ListWorkerPools(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPools(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkerPool item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkerPoolsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkerPoolsAsync</summary>
+        public async Task ListWorkerPoolsResourceNamesAsync()
+        {
+            // Snippet: ListWorkerPoolsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> response = cloudBuildClient.ListWorkerPoolsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkerPool item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkerPoolsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkerPool item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkerPool> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkerPool item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

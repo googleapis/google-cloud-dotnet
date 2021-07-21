@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Version-agnostic types for the Google Cloud Logging API.</Description>
     <PackageTags>Logging;Stackdriver;Google;Cloud</PackageTags>
-    <Copyright>Copyright 2021 Google LLC</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />

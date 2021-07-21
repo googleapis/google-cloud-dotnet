@@ -4,8 +4,8 @@
 
 {{version}}
 
-- Integration with [log4net](https://logging.apache.org/log4net/) is provided by the [Google.Cloud.Logging.Log4Net](../Google.Cloud.Logging.Log4Net/index.html) package.
-- Integration with [NLog](https://nlog-project.org/) is provided by the [Google.Cloud.Logging.NLog](../Google.Cloud.Logging.NLog/index.html) package.
+- Integration with [log4net](https://logging.apache.org/log4net/) is provided by the [Google.Cloud.Logging.Log4Net](../../Google.Cloud.Logging.Log4Net/latest) package.
+- Integration with [NLog](https://nlog-project.org/) is provided by the [Google.Cloud.Logging.NLog](../../Google.Cloud.Logging.NLog/latest) package.
 
 {{installation}}
 

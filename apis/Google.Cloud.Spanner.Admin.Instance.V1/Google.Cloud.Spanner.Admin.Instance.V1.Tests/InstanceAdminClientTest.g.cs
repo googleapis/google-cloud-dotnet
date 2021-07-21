@@ -46,6 +46,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -68,6 +72,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -92,6 +100,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -114,6 +126,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -138,6 +154,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -160,6 +180,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
                 Replicas = { new ReplicaInfo(), },
+                LeaderOptions =
+                {
+                    "leader_optionscedbfd6e",
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);

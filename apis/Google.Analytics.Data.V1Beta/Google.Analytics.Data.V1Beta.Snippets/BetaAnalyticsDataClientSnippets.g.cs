@@ -329,6 +329,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 },
                 OrderBys = { new OrderBy(), },
                 ReturnPropertyQuota = false,
+                MinuteRanges = { new MinuteRange(), },
             };
             // Make the request
             RunRealtimeReportResponse response = betaAnalyticsDataClient.RunRealtimeReport(request);
@@ -357,6 +358,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 },
                 OrderBys = { new OrderBy(), },
                 ReturnPropertyQuota = false,
+                MinuteRanges = { new MinuteRange(), },
             };
             // Make the request
             RunRealtimeReportResponse response = await betaAnalyticsDataClient.RunRealtimeReportAsync(request);

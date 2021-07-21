@@ -27,25 +27,39 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             "Cilnb29nbGUvZGF0YXN0b3JlL2FkbWluL3YxL21pZ3JhdGlvbi5wcm90bxIZ",
             "Z29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MSJPChNNaWdyYXRpb25TdGF0ZUV2",
             "ZW50EjgKBXN0YXRlGAEgASgOMikuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52",
-            "MS5NaWdyYXRpb25TdGF0ZSJQChZNaWdyYXRpb25Qcm9ncmVzc0V2ZW50EjYK",
-            "BHN0ZXAYASABKA4yKC5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLk1pZ3Jh",
-            "dGlvblN0ZXAqWAoOTWlncmF0aW9uU3RhdGUSHwobTUlHUkFUSU9OX1NUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEgoKBlBBVVNFRBACEgwKCENP",
-            "TVBMRVRFEAMqtgEKDU1pZ3JhdGlvblN0ZXASHgoaTUlHUkFUSU9OX1NURVBf",
-            "VU5TUEVDSUZJRUQQABIJCgVTVEFSVBABEhMKD0NPUFlfQU5EX1ZFUklGWRAC",
-            "EigKJFJFRElSRUNUX0VWRU5UVUFMTFlfQ09OU0lTVEVOVF9SRUFEUxADEiYK",
-            "IlJFRElSRUNUX1NUUk9OR0xZX0NPTlNJU1RFTlRfUkVBRFMQBBITCg9SRURJ",
-            "UkVDVF9XUklURVMQBULbAQodY29tLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4u",
-            "djFCDk1pZ3JhdGlvblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL2FkbWluL3YxO2FkbWluqgIfR29v",
-            "Z2xlLkNsb3VkLkRhdGFzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxE",
-            "YXRhc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpEYXRhc3RvcmU6",
-            "OkFkbWluOjpWMWIGcHJvdG8z"));
+            "MS5NaWdyYXRpb25TdGF0ZSL+BAoWTWlncmF0aW9uUHJvZ3Jlc3NFdmVudBI2",
+            "CgRzdGVwGAEgASgOMiguZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5NaWdy",
+            "YXRpb25TdGVwEmQKFHByZXBhcmVfc3RlcF9kZXRhaWxzGAIgASgLMkQuZ29v",
+            "Z2xlLmRhdGFzdG9yZS5hZG1pbi52MS5NaWdyYXRpb25Qcm9ncmVzc0V2ZW50",
+            "LlByZXBhcmVTdGVwRGV0YWlsc0gAEnMKHHJlZGlyZWN0X3dyaXRlc19zdGVw",
+            "X2RldGFpbHMYAyABKAsySy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLk1p",
+            "Z3JhdGlvblByb2dyZXNzRXZlbnQuUmVkaXJlY3RXcml0ZXNTdGVwRGV0YWls",
+            "c0gAGnEKElByZXBhcmVTdGVwRGV0YWlscxJbChBjb25jdXJyZW5jeV9tb2Rl",
+            "GAEgASgOMkEuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5NaWdyYXRpb25Q",
+            "cm9ncmVzc0V2ZW50LkNvbmN1cnJlbmN5TW9kZRp4ChlSZWRpcmVjdFdyaXRl",
+            "c1N0ZXBEZXRhaWxzElsKEGNvbmN1cnJlbmN5X21vZGUYASABKA4yQS5nb29n",
+            "bGUuZGF0YXN0b3JlLmFkbWluLnYxLk1pZ3JhdGlvblByb2dyZXNzRXZlbnQu",
+            "Q29uY3VycmVuY3lNb2RlIlQKD0NvbmN1cnJlbmN5TW9kZRIgChxDT05DVVJS",
+            "RU5DWV9NT0RFX1VOU1BFQ0lGSUVEEAASDwoLUEVTU0lNSVNUSUMQARIOCgpP",
+            "UFRJTUlTVElDEAJCDgoMc3RlcF9kZXRhaWxzKlgKDk1pZ3JhdGlvblN0YXRl",
+            "Eh8KG01JR1JBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQ",
+            "ARIKCgZQQVVTRUQQAhIMCghDT01QTEVURRADKuMBCg1NaWdyYXRpb25TdGVw",
+            "Eh4KGk1JR1JBVElPTl9TVEVQX1VOU1BFQ0lGSUVEEAASCwoHUFJFUEFSRRAG",
+            "EgkKBVNUQVJUEAESHgoaQVBQTFlfV1JJVEVTX1NZTkNIUk9OT1VTTFkQBxIT",
+            "Cg9DT1BZX0FORF9WRVJJRlkQAhIoCiRSRURJUkVDVF9FVkVOVFVBTExZX0NP",
+            "TlNJU1RFTlRfUkVBRFMQAxImCiJSRURJUkVDVF9TVFJPTkdMWV9DT05TSVNU",
+            "RU5UX1JFQURTEAQSEwoPUkVESVJFQ1RfV1JJVEVTEAVC2wEKHWNvbS5nb29n",
+            "bGUuZGF0YXN0b3JlLmFkbWluLnYxQg5NaWdyYXRpb25Qcm90b1ABWj5nb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RhdGFzdG9yZS9h",
+            "ZG1pbi92MTthZG1pbqoCH0dvb2dsZS5DbG91ZC5EYXRhc3RvcmUuQWRtaW4u",
+            "VjHKAh9Hb29nbGVcQ2xvdWRcRGF0YXN0b3JlXEFkbWluXFYx6gIjR29vZ2xl",
+            "OjpDbG91ZDo6RGF0YXN0b3JlOjpBZG1pbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationState), typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationStep), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationStateEvent), global::Google.Cloud.Datastore.Admin.V1.MigrationStateEvent.Parser, new[]{ "State" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent), global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Parser, new[]{ "Step" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent), global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Parser, new[]{ "Step", "PrepareStepDetails", "RedirectWritesStepDetails" }, new[]{ "StepDetails" }, new[]{ typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails), global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails.Parser, new[]{ "ConcurrencyMode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails), global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails.Parser, new[]{ "ConcurrencyMode" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -83,9 +97,17 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// </summary>
     [pbr::OriginalName("MIGRATION_STEP_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
+    /// Pre-migration: the database is prepared for migration.
+    /// </summary>
+    [pbr::OriginalName("PREPARE")] Prepare = 6,
+    /// <summary>
     /// Start of migration.
     /// </summary>
     [pbr::OriginalName("START")] Start = 1,
+    /// <summary>
+    /// Writes are applied synchronously to at least one replica.
+    /// </summary>
+    [pbr::OriginalName("APPLY_WRITES_SYNCHRONOUSLY")] ApplyWritesSynchronously = 7,
     /// <summary>
     /// Data is copied to Cloud Firestore and then verified to match the data in
     /// Cloud Datastore.
@@ -323,6 +345,15 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MigrationProgressEvent(MigrationProgressEvent other) : this() {
       step_ = other.step_;
+      switch (other.StepDetailsCase) {
+        case StepDetailsOneofCase.PrepareStepDetails:
+          PrepareStepDetails = other.PrepareStepDetails.Clone();
+          break;
+        case StepDetailsOneofCase.RedirectWritesStepDetails:
+          RedirectWritesStepDetails = other.RedirectWritesStepDetails.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -348,6 +379,53 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "prepare_step_details" field.</summary>
+    public const int PrepareStepDetailsFieldNumber = 2;
+    /// <summary>
+    /// Details for the `PREPARE` step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails PrepareStepDetails {
+      get { return stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails ? (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails) stepDetails_ : null; }
+      set {
+        stepDetails_ = value;
+        stepDetailsCase_ = value == null ? StepDetailsOneofCase.None : StepDetailsOneofCase.PrepareStepDetails;
+      }
+    }
+
+    /// <summary>Field number for the "redirect_writes_step_details" field.</summary>
+    public const int RedirectWritesStepDetailsFieldNumber = 3;
+    /// <summary>
+    /// Details for the `REDIRECT_WRITES` step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails RedirectWritesStepDetails {
+      get { return stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails ? (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails) stepDetails_ : null; }
+      set {
+        stepDetails_ = value;
+        stepDetailsCase_ = value == null ? StepDetailsOneofCase.None : StepDetailsOneofCase.RedirectWritesStepDetails;
+      }
+    }
+
+    private object stepDetails_;
+    /// <summary>Enum of possible cases for the "step_details" oneof.</summary>
+    public enum StepDetailsOneofCase {
+      None = 0,
+      PrepareStepDetails = 2,
+      RedirectWritesStepDetails = 3,
+    }
+    private StepDetailsOneofCase stepDetailsCase_ = StepDetailsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StepDetailsOneofCase StepDetailsCase {
+      get { return stepDetailsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearStepDetails() {
+      stepDetailsCase_ = StepDetailsOneofCase.None;
+      stepDetails_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MigrationProgressEvent);
@@ -362,6 +440,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         return true;
       }
       if (Step != other.Step) return false;
+      if (!object.Equals(PrepareStepDetails, other.PrepareStepDetails)) return false;
+      if (!object.Equals(RedirectWritesStepDetails, other.RedirectWritesStepDetails)) return false;
+      if (StepDetailsCase != other.StepDetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -369,6 +450,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) hash ^= Step.GetHashCode();
+      if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) hash ^= PrepareStepDetails.GetHashCode();
+      if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) hash ^= RedirectWritesStepDetails.GetHashCode();
+      hash ^= (int) stepDetailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -389,6 +473,14 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Step);
       }
+      if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PrepareStepDetails);
+      }
+      if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RedirectWritesStepDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -402,6 +494,14 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Step);
       }
+      if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PrepareStepDetails);
+      }
+      if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RedirectWritesStepDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -413,6 +513,12 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       int size = 0;
       if (Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Step);
+      }
+      if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrepareStepDetails);
+      }
+      if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RedirectWritesStepDetails);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -428,6 +534,21 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) {
         Step = other.Step;
       }
+      switch (other.StepDetailsCase) {
+        case StepDetailsOneofCase.PrepareStepDetails:
+          if (PrepareStepDetails == null) {
+            PrepareStepDetails = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails();
+          }
+          PrepareStepDetails.MergeFrom(other.PrepareStepDetails);
+          break;
+        case StepDetailsOneofCase.RedirectWritesStepDetails:
+          if (RedirectWritesStepDetails == null) {
+            RedirectWritesStepDetails = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails();
+          }
+          RedirectWritesStepDetails.MergeFrom(other.RedirectWritesStepDetails);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -444,6 +565,24 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             break;
           case 8: {
             Step = (global::Google.Cloud.Datastore.Admin.V1.MigrationStep) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails subBuilder = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails();
+            if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) {
+              subBuilder.MergeFrom(PrepareStepDetails);
+            }
+            input.ReadMessage(subBuilder);
+            PrepareStepDetails = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails subBuilder = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails();
+            if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) {
+              subBuilder.MergeFrom(RedirectWritesStepDetails);
+            }
+            input.ReadMessage(subBuilder);
+            RedirectWritesStepDetails = subBuilder;
             break;
           }
         }
@@ -464,10 +603,410 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             Step = (global::Google.Cloud.Datastore.Admin.V1.MigrationStep) input.ReadEnum();
             break;
           }
+          case 18: {
+            global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails subBuilder = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails();
+            if (stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails) {
+              subBuilder.MergeFrom(PrepareStepDetails);
+            }
+            input.ReadMessage(subBuilder);
+            PrepareStepDetails = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails subBuilder = new global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails();
+            if (stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails) {
+              subBuilder.MergeFrom(RedirectWritesStepDetails);
+            }
+            input.ReadMessage(subBuilder);
+            RedirectWritesStepDetails = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MigrationProgressEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Concurrency modes for transactions in Cloud Firestore.
+      /// </summary>
+      public enum ConcurrencyMode {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("CONCURRENCY_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Pessimistic concurrency.
+        /// </summary>
+        [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 1,
+        /// <summary>
+        /// Optimistic concurrency.
+        /// </summary>
+        [pbr::OriginalName("OPTIMISTIC")] Optimistic = 2,
+      }
+
+      /// <summary>
+      /// Details for the `PREPARE` step.
+      /// </summary>
+      public sealed partial class PrepareStepDetails : pb::IMessage<PrepareStepDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PrepareStepDetails> _parser = new pb::MessageParser<PrepareStepDetails>(() => new PrepareStepDetails());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PrepareStepDetails> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PrepareStepDetails() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PrepareStepDetails(PrepareStepDetails other) : this() {
+          concurrencyMode_ = other.concurrencyMode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PrepareStepDetails Clone() {
+          return new PrepareStepDetails(this);
+        }
+
+        /// <summary>Field number for the "concurrency_mode" field.</summary>
+        public const int ConcurrencyModeFieldNumber = 1;
+        private global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode concurrencyMode_ = global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified;
+        /// <summary>
+        /// The concurrency mode this database will use when it reaches the
+        /// `REDIRECT_WRITES` step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode ConcurrencyMode {
+          get { return concurrencyMode_; }
+          set {
+            concurrencyMode_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PrepareStepDetails);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PrepareStepDetails other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ConcurrencyMode != other.ConcurrencyMode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PrepareStepDetails other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            ConcurrencyMode = other.ConcurrencyMode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ConcurrencyMode = (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ConcurrencyMode = (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Details for the `REDIRECT_WRITES` step.
+      /// </summary>
+      public sealed partial class RedirectWritesStepDetails : pb::IMessage<RedirectWritesStepDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RedirectWritesStepDetails> _parser = new pb::MessageParser<RedirectWritesStepDetails>(() => new RedirectWritesStepDetails());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<RedirectWritesStepDetails> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RedirectWritesStepDetails() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RedirectWritesStepDetails(RedirectWritesStepDetails other) : this() {
+          concurrencyMode_ = other.concurrencyMode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RedirectWritesStepDetails Clone() {
+          return new RedirectWritesStepDetails(this);
+        }
+
+        /// <summary>Field number for the "concurrency_mode" field.</summary>
+        public const int ConcurrencyModeFieldNumber = 1;
+        private global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode concurrencyMode_ = global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified;
+        /// <summary>
+        /// Ths concurrency mode for this database.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode ConcurrencyMode {
+          get { return concurrencyMode_; }
+          set {
+            concurrencyMode_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as RedirectWritesStepDetails);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(RedirectWritesStepDetails other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ConcurrencyMode != other.ConcurrencyMode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConcurrencyMode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(RedirectWritesStepDetails other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
+            ConcurrencyMode = other.ConcurrencyMode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ConcurrencyMode = (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ConcurrencyMode = (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
