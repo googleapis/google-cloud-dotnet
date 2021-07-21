@@ -25,6 +25,7 @@ using System;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Transactions;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -758,6 +759,36 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Verify(client => client.ExecuteStreamingSql(
                 It.IsAny<ExecuteSqlRequest>(),
                 It.IsAny<CallSettings>()), Times.Exactly(3));
+        }
+
+        [Fact]
+        public async Task ParallelMutationCommandsOnAmbientTransaction_OnlyCreateOneSpannerTransactionAsync()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+                var tables = new string[] { "TAB1", "TAB2", "TAB3" };
+                await Task.WhenAll(tables.Select(table =>
+                {
+                    using var cmd = connection.CreateInsertCommand(table);
+                    return cmd.ExecuteNonQueryAsync();
+                }));
+                scope.Complete();
+            }
+
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.IsAny<CommitRequest>(), It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.Mutations.Count == 3),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
