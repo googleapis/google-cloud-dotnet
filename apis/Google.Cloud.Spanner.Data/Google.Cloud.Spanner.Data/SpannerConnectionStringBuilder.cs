@@ -20,7 +20,6 @@ using Grpc.Core;
 using System;
 using System.Data.Common;
 using System.Globalization;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data
