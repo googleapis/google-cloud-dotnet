@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.Data
         /// is specified on construction.
         /// </summary>
         public static SessionPoolManager Default { get; } =
-            new SessionPoolManager(new SessionPoolOptions(), DefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
+            new SessionPoolManager(new SessionPoolOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
 
         private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> _clientFactory;
 
@@ -71,18 +71,17 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The SpannerSettings used by this SessionPoolManager. These are expected to remain unaltered for the lifetime of the manager.
-        /// Currently the default settings are used in all cases, but with the "gccl" version header added to specify the version of Google.Cloud.Spanner.Data
-        /// being used.
+        /// The "gccl" version header is added to the SpannerSettings to specify the version of Google.Cloud.Spanner.Data being used.
         /// </summary>
         internal SpannerSettings SpannerSettings { get; }
 
-        private static SpannerSettings AppendVersionHeader(SpannerSettings settings)
+        private static SpannerSettings AppendAssemblyVersionHeader(SpannerSettings settings)
         {
             settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(SessionPoolManager));
             return settings;
         }
 
-        internal static SpannerSettings DefaultSpannerSettings() => new SpannerSettings();
+        internal static SpannerSettings CreateDefaultSpannerSettings() => new SpannerSettings();
 
         /// <summary>
         /// Constructor for test purposes, allowing the SpannerClient creation to be customized (e.g. for
@@ -99,7 +98,7 @@ namespace Google.Cloud.Spanner.Data
             Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> clientFactory)
         {
             SessionPoolOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
-            SpannerSettings = AppendVersionHeader(GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)));
+            SpannerSettings = AppendAssemblyVersionHeader(GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)));
             Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
             _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
         }
@@ -111,18 +110,16 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
         /// <returns>A <see cref="SessionPoolManager"/> with the given options.</returns>
         public static SessionPoolManager Create(SessionPoolOptions options, Logger logger = null) =>
-            new SessionPoolManager(options, DefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
+            new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         /// <summary>
         /// Creates a <see cref="SessionPoolManager"/> with the specified SpannerSettings and options.
         /// </summary>
-        /// <param name="spannerSettings">The SpannerSettings to use. May be null, in which case the default settings are used.</param>
         /// <param name="options">The options to use. Must not be null.</param>
-        /// <param name="logger">The logger to use. May be null, in which case the logger returned by spannerSettings.Logger will be used.
-        /// If that is also null, the default logger is used.</param>
+        /// <param name="spannerSettings">The SpannerSettings to use. Must not be null.</param>
         /// <returns>A <see cref="SessionPoolManager"/> with the given options.</returns>
-        public static SessionPoolManager Create(SessionPoolOptions options, SpannerSettings spannerSettings, Logger logger = null) =>
-            new SessionPoolManager(options, spannerSettings ?? DefaultSpannerSettings(), logger ?? spannerSettings?.Logger ?? Logger.DefaultLogger, CreateClientAsync);
+        public static SessionPoolManager CreateWithSettings(SessionPoolOptions options, SpannerSettings spannerSettings) =>
+            new SessionPoolManager(options, GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)).Clone(), spannerSettings.Logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         internal Task<SessionPool> AcquireSessionPoolAsync(SpannerClientCreationOptions options)
         {
