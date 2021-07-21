@@ -90,7 +90,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            PredictResponse response = client.Predict(request.Endpoint, request.Parameters, request.Instances);
+            PredictResponse response = client.Predict(request.Endpoint, request.Instances, request.Parameters);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -112,9 +112,9 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            PredictResponse responseCallSettings = await client.PredictAsync(request.Endpoint, request.Parameters, request.Instances, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            PredictResponse responseCallSettings = await client.PredictAsync(request.Endpoint, request.Instances, request.Parameters, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            PredictResponse responseCancellationToken = await client.PredictAsync(request.Endpoint, request.Parameters, request.Instances, st::CancellationToken.None);
+            PredictResponse responseCancellationToken = await client.PredictAsync(request.Endpoint, request.Instances, request.Parameters, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -136,7 +136,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            PredictResponse response = client.Predict(request.EndpointAsEndpointName, request.Parameters, request.Instances);
+            PredictResponse response = client.Predict(request.EndpointAsEndpointName, request.Instances, request.Parameters);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -158,9 +158,9 @@ namespace Google.Cloud.AIPlatform.V1.Tests
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
-            PredictResponse responseCallSettings = await client.PredictAsync(request.EndpointAsEndpointName, request.Parameters, request.Instances, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            PredictResponse responseCallSettings = await client.PredictAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            PredictResponse responseCancellationToken = await client.PredictAsync(request.EndpointAsEndpointName, request.Parameters, request.Instances, st::CancellationToken.None);
+            PredictResponse responseCancellationToken = await client.PredictAsync(request.EndpointAsEndpointName, request.Instances, request.Parameters, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

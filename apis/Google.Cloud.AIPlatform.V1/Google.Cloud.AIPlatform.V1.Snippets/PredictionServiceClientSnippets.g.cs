@@ -63,62 +63,62 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         /// <summary>Snippet for Predict</summary>
         public void Predict()
         {
-            // Snippet: Predict(string, Value, IEnumerable<Value>, CallSettings)
+            // Snippet: Predict(string, IEnumerable<Value>, Value, CallSettings)
             // Create client
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            Value parameters = new Value();
             IEnumerable<Value> instances = new Value[] { new Value(), };
+            Value parameters = new Value();
             // Make the request
-            PredictResponse response = predictionServiceClient.Predict(endpoint, parameters, instances);
+            PredictResponse response = predictionServiceClient.Predict(endpoint, instances, parameters);
             // End snippet
         }
 
         /// <summary>Snippet for PredictAsync</summary>
         public async Task PredictAsync()
         {
-            // Snippet: PredictAsync(string, Value, IEnumerable<Value>, CallSettings)
-            // Additional: PredictAsync(string, Value, IEnumerable<Value>, CancellationToken)
+            // Snippet: PredictAsync(string, IEnumerable<Value>, Value, CallSettings)
+            // Additional: PredictAsync(string, IEnumerable<Value>, Value, CancellationToken)
             // Create client
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            Value parameters = new Value();
             IEnumerable<Value> instances = new Value[] { new Value(), };
+            Value parameters = new Value();
             // Make the request
-            PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, parameters, instances);
+            PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, instances, parameters);
             // End snippet
         }
 
         /// <summary>Snippet for Predict</summary>
         public void PredictResourceNames()
         {
-            // Snippet: Predict(EndpointName, Value, IEnumerable<Value>, CallSettings)
+            // Snippet: Predict(EndpointName, IEnumerable<Value>, Value, CallSettings)
             // Create client
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            Value parameters = new Value();
             IEnumerable<Value> instances = new Value[] { new Value(), };
+            Value parameters = new Value();
             // Make the request
-            PredictResponse response = predictionServiceClient.Predict(endpoint, parameters, instances);
+            PredictResponse response = predictionServiceClient.Predict(endpoint, instances, parameters);
             // End snippet
         }
 
         /// <summary>Snippet for PredictAsync</summary>
         public async Task PredictResourceNamesAsync()
         {
-            // Snippet: PredictAsync(EndpointName, Value, IEnumerable<Value>, CallSettings)
-            // Additional: PredictAsync(EndpointName, Value, IEnumerable<Value>, CancellationToken)
+            // Snippet: PredictAsync(EndpointName, IEnumerable<Value>, Value, CallSettings)
+            // Additional: PredictAsync(EndpointName, IEnumerable<Value>, Value, CancellationToken)
             // Create client
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            Value parameters = new Value();
             IEnumerable<Value> instances = new Value[] { new Value(), };
+            Value parameters = new Value();
             // Make the request
-            PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, parameters, instances);
+            PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, instances, parameters);
             // End snippet
         }
     }
