@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.Data
             return settings;
         }
 
-        private static SpannerSettings DefaultSpannerSettings() => new SpannerSettings();
+        internal static SpannerSettings DefaultSpannerSettings() => new SpannerSettings();
 
         /// <summary>
         /// Constructor for test purposes, allowing the SpannerClient creation to be customized (e.g. for
