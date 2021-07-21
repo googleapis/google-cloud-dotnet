@@ -85,6 +85,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -148,6 +149,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -212,6 +214,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -274,6 +277,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -339,6 +343,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -402,6 +407,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -466,6 +472,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -528,6 +535,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     new Build.Types.Warning(),
                 },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
