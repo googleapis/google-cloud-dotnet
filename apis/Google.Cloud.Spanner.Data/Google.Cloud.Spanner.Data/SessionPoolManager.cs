@@ -118,10 +118,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="spannerSettings">The SpannerSettings to use. May be null, in which case the default settings are used.</param>
         /// <param name="options">The options to use. Must not be null.</param>
-        /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
+        /// <param name="logger">The logger to use. May be null, in which case the logger returned by spannerSettings.Logger will be used.
+        /// If that is also null, the default logger is used.</param>
         /// <returns>A <see cref="SessionPoolManager"/> with the given options.</returns>
         public static SessionPoolManager Create(SessionPoolOptions options, SpannerSettings spannerSettings, Logger logger = null) =>
-            new SessionPoolManager(options, spannerSettings ?? DefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
+            new SessionPoolManager(options, spannerSettings ?? DefaultSpannerSettings(), logger ?? spannerSettings?.Logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         internal Task<SessionPool> AcquireSessionPoolAsync(SpannerClientCreationOptions options)
         {
