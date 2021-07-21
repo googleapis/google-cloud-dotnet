@@ -114,7 +114,7 @@ namespace Google.Cloud.Spanner.Data
             new SessionPoolManager(options, DefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         /// <summary>
-        /// Creates a <see cref="SessionPoolManager"/> with the specified options.
+        /// Creates a <see cref="SessionPoolManager"/> with the specified SpannerSettings and options.
         /// </summary>
         /// <param name="spannerSettings">The SpannerSettings to use. May be null, in which case the default settings are used.</param>
         /// <param name="options">The options to use. Must not be null.</param>
