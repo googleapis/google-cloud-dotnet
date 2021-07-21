@@ -381,7 +381,7 @@
         "google/type"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AIPlatform.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/apigateway/v1",
