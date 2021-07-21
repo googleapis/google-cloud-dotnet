@@ -393,7 +393,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             Assert.True(reader.Read());
             Assert.Equal(keys.Length, reader.GetInt32(0));
-            Assert.False(reader.Read());
         }
 
         private void AssertDisposeThrows(Action<TransactionScope> action)
