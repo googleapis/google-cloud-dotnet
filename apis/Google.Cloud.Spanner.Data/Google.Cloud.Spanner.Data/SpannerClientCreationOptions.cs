@@ -46,13 +46,6 @@ namespace Google.Cloud.Spanner.Data
         internal string Endpoint { get; }
 
         /// <summary>
-        /// Any additional version header to add to the Spanner client.
-        /// This should only be set by frameworks that are developed by Google and not by normal end user applications.
-        /// </summary>
-        internal string AdditionalVersionHeaderName { get; }
-        internal string AdditionalVersionHeaderVersion { get; }
-
-        /// <summary>
         /// The number of gRPC channels to use (passed to Grpc.Gcp)
         /// </summary>
         internal int MaximumGrpcChannels { get; }
@@ -84,8 +77,6 @@ namespace Google.Cloud.Spanner.Data
             // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
             Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
             _credentialsFile = builder.CredentialFile;
-            AdditionalVersionHeaderName = builder.VersionHeaderName;
-            AdditionalVersionHeaderVersion = builder.VersionHeaderVersion;
 
             // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
             _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
@@ -102,9 +93,7 @@ namespace Google.Cloud.Spanner.Data
             Equals(_credentialsOverride, other._credentialsOverride) &&
             UsesEmulator == other.UsesEmulator &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
-            MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
-            AdditionalVersionHeaderName == other.AdditionalVersionHeaderName &&
-            AdditionalVersionHeaderVersion == other.AdditionalVersionHeaderVersion;
+            MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark;
 
         public override int GetHashCode()
         {
@@ -117,8 +106,6 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
-                hash = hash * 23 + (AdditionalVersionHeaderName?.GetHashCode() ?? 0);
-                hash = hash * 23 + (AdditionalVersionHeaderVersion?.GetHashCode() ?? 0);
                 return hash;
             }
         }
@@ -139,10 +126,6 @@ namespace Google.Cloud.Spanner.Data
                 builder.Append($"; CredentialsOverride: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
-            if (!string.IsNullOrEmpty(AdditionalVersionHeaderName))
-            {
-                builder.Append($"; AdditionalVersionHeader: {AdditionalVersionHeaderName}/{AdditionalVersionHeaderVersion}");
-            }
             return builder.ToString();
         }
 
