@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.3.0-beta03, released 2021-07-22
+
+No API surface changes; just publishing docs from 4.3.0-beta02.
+
 # Version 4.3.0-beta02, released 2021-07-22
 
 - [Commit c682904](https://github.com/googleapis/google-cloud-dotnet/commit/c682904):
