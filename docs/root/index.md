@@ -62,9 +62,9 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html) | 2.3.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](Google.Cloud.DevTools.Common/index.html) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html) | 2.2.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
-| [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.AspNetCore3](Google.Cloud.Diagnostics.AspNetCore3/index.html) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
-| [Google.Cloud.Diagnostics.Common](Google.Cloud.Diagnostics.Common/index.html) | 4.3.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
+| [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html) | 4.3.0-beta02 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
+| [Google.Cloud.Diagnostics.AspNetCore3](Google.Cloud.Diagnostics.AspNetCore3/index.html) | 4.3.0-beta02 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
+| [Google.Cloud.Diagnostics.Common](Google.Cloud.Diagnostics.Common/index.html) | 4.3.0-beta02 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.Cx.V3](Google.Cloud.Dialogflow.Cx.V3/index.html) | 1.2.0 | [Dialogflow](https://cloud.google.com/dialogflow/cx/docs) |
 | [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html) | 3.3.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html) | 3.2.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
