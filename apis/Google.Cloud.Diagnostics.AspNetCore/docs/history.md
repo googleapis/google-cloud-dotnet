@@ -1,5 +1,12 @@
 # Version history
 
+# Version 4.3.0-beta02, released 2021-07-22
+
+- [Commit c682904](https://github.com/googleapis/google-cloud-dotnet/commit/c682904):
+  - feat: Adds trace context information to error log entries.
+  - Closes [issue 5360](https://github.com/googleapis/google-cloud-dotnet/issues/5360)
+- [Commit 1245ded](https://github.com/googleapis/google-cloud-dotnet/commit/1245ded): fix: Fully qualifies all alternative types/members for obsolete ones. Fixes [issue 6672](https://github.com/googleapis/google-cloud-dotnet/issues/6672)
+
 # Version 4.3.0-beta01, released 2021-06-24
 
 - [Commit 60e8cd8](https://github.com/googleapis/google-cloud-dotnet/commit/60e8cd8):
