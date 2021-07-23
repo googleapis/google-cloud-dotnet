@@ -285,10 +285,4 @@ Step 8 (Optional): Release the first package for the API
 ---------------------------------------------------------
 
 Follow the [releasing process](PROCESSES.md) to push a package to
-nuget.org. If you do this, also update the root documentation
-(`README.md` and `docs/root/index.md`) to indicate this.
-
-(You *can* combine steps 1-6 above with the release process, so that
-a single PR adds the API package and releases 1.0.0-beta01, but
-that's not recommended unless you're confident in both the process
-and the API in question.)
+nuget.org.
