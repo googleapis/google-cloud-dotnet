@@ -91,7 +91,7 @@ then
 fi
 
 # TODO: Make builddocs.sh cope with being run from any directory.
-(cd docs && ./builddocs.sh root $projects)
+(cd docs && ./builddocs.sh $projects)
 
 echo "Release build and docs complete for the following projects:"
 for project in $projects
