@@ -2561,6 +2561,25 @@
       ]
     },
     {
+      "id": "Google.Cloud.StorageTransfer.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Storage Transfer",
+      "productUrl": "https://cloud.google.com/storage-transfer-service",
+      "description": "Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets.",
+      "tags": [
+        "data",
+        "transfer",
+        "storage",
+        "gcs"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/storagetransfer/v1"
+    },
+    {
       "id": "Google.Cloud.Talent.V4",
       "version": "1.1.0",
       "type": "grpc",
