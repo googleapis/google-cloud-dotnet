@@ -1,0 +1,11 @@
+[
+  {
+    "method": "ListTransferJobs",
+    "client": "StorageTransferServiceClient",
+    "arguments": {
+      "request": {
+        "filter": "{\"projectId\":\"${PROJECT_ID}\"}"
+      }
+    }
+  }
+]

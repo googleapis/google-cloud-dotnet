@@ -146,6 +146,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Speech.V1](https://googleapis.dev/dotnet/Google.Cloud.Speech.V1/2.2.0) | 2.2.0 | [Google Cloud Speech (V1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Speech.V1P1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Speech.V1P1Beta1/2.0.0-beta04) | 2.0.0-beta04 | [Google Cloud Speech (V1P1Beta1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.Storage.V1/3.5.0) | 3.5.0 | [Google Cloud Storage](https://cloud.google.com/storage/) |
+| [Google.Cloud.StorageTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.StorageTransfer.V1/1.0.0-beta01) | 1.0.0-beta01 | [Storage Transfer](https://cloud.google.com/storage-transfer-service) |
 | [Google.Cloud.Talent.V4](https://googleapis.dev/dotnet/Google.Cloud.Talent.V4/1.1.0) | 1.1.0 | [Google Cloud Talent Solution (V4 API)](https://cloud.google.com/talent-solution/) |
 | [Google.Cloud.Talent.V4Beta1](https://googleapis.dev/dotnet/Google.Cloud.Talent.V4Beta1/2.0.0-beta05) | 2.0.0-beta05 | [Google Cloud Talent Solution (V4Beta1 API)](https://cloud.google.com/talent-solution/) |
 | [Google.Cloud.Tasks.V2](https://googleapis.dev/dotnet/Google.Cloud.Tasks.V2/2.2.0) | 2.2.0 | [Google Cloud Tasks (V2 API)](https://cloud.google.com/tasks/) |
