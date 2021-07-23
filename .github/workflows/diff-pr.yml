@@ -7,6 +7,9 @@ on:
 jobs:
 
   diff:
+    # Don't run if a label has changed post-merge
+    if: github.event.pull_request.merged == false
+
     runs-on: ubuntu-latest
     env:
       DOTNET_NOLOGO: true
