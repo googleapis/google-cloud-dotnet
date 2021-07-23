@@ -37,4 +37,4 @@ to `ChannelCredentials.Insecure`.
 
 Example for PubSub:
 
-[!code-cs[](../examples/root.Faq.txt#Emulator)]
+[!code-cs[](../examples/help.Faq.txt#Emulator)]

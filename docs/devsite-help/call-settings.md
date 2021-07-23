@@ -39,19 +39,19 @@ for multiple RPC invocations.
 
 ### Per-RPC (highest priority)
 
-[!code-cs[](../examples/root.CallSettings.txt#PerRpc)]
+[!code-cs[](../examples/help.CallSettings.txt#PerRpc)]
 
 ### Client configuration; client-wide
 
-[!code-cs[](../examples/root.CallSettings.txt#ClientWide)]
+[!code-cs[](../examples/help.CallSettings.txt#ClientWide)]
 
 ### Client configuration; per-RPC-method (lowest priority)
 
-[!code-cs[](../examples/root.CallSettings.txt#ClientPerMethod)]
+[!code-cs[](../examples/help.CallSettings.txt#ClientPerMethod)]
 
 ### Multiple `Callsettings` specified
 
-[!code-cs[](../examples/root.CallSettings.txt#Overrides)]
+[!code-cs[](../examples/help.CallSettings.txt#Overrides)]
 
 ## Defaults
 

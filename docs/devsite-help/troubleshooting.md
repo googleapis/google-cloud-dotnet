@@ -47,7 +47,7 @@ that service, you need to configure the `HttpClient`'s message handler. As a com
 here's a call to the Translation API, listing all the available languages, and logging the request
 headers and the response body:
 
-[!code-cs[](../examples/root.Faq.txt#RestLogging)]
+[!code-cs[](../examples/help.Faq.txt#RestLogging)]
 
 To log *all* events from the message handler, you can set the `LogEvents` property to
 `~LogEventType.None`.
@@ -113,20 +113,20 @@ In the generated C# code, the `Requests` property of
 `BatchAnnotateImagesRequest` is read-only, but you can populate it
 with a collection initializer:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoRepeatedField1)]
+[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField1)]
 
 You don't *have* to use a collection initializer though, and
 sometimes it would be inconvenient to do so. It's perfectly valid to
 add to the repeated field after other initialization:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoRepeatedField2)]
+[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField2)]
 
 Finally, it's worth being aware that `RepeatedField<T>` has an `Add`
 overload accepting an `IEnumerable<T>`. This allows you to use a
 collection initializer to copy items out of another collection, or a
 LINQ query result:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoRepeatedField3)]
+[!code-cs[](../examples/help.Faq.txt#ProtoRepeatedField3)]
 
 Likewise for map fields (which are significantly less common) you
 can use collection initializers, or (from C# 6 onwards) the indexer
@@ -146,15 +146,15 @@ message HttpTarget {
 Again, the `Headers` property in the generated message is read-only,
 but you can populate it with a collection initializer:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoMap1)]
+[!code-cs[](../examples/help.Faq.txt#ProtoMap1)]
 
 Or an indexer in an object initializer:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoMap2)]
+[!code-cs[](../examples/help.Faq.txt#ProtoMap2)]
 
 Or modify it after other initialization steps:
 
-[!code-cs[](../examples/root.Faq.txt#ProtoMap3)]
+[!code-cs[](../examples/help.Faq.txt#ProtoMap3)]
 
 ## Why is System.EntryPointNotFoundException being thrown?
 

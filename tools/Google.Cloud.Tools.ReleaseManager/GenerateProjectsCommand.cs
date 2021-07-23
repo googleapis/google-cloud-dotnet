@@ -150,7 +150,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Now we know we can parse the API catalog, let's reformat it.
             ReformatApiCatalog(catalog);
             RewriteReadme(catalog);
-            RewriteDocsRootIndex(catalog);
             HashSet<string> apiNames = catalog.CreateIdHashSet();
 
             foreach (var api in catalog.Apis)
@@ -181,13 +180,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             var root = DirectoryLayout.DetermineRootDirectory();
             var readmePath = Path.Combine(root, "README.md");
             RewriteApiTable(readmePath, catalog, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
-        }
-
-        public static void RewriteDocsRootIndex(ApiCatalog catalog)
-        {
-            var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
-            var indexPath = Path.Combine(root, "index.md");
-            RewriteApiTable(indexPath, catalog, api => $"{api.Id}/index.html");
         }
 
         /// <summary>

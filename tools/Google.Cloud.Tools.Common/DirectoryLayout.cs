@@ -39,15 +39,15 @@ namespace Google.Cloud.Tools.Common
             DocsSourceDirectory = docsSource;
         }
 
-        public static DirectoryLayout ForRootDocs()
+        public static DirectoryLayout ForHelpSnippets()
         {
             string root = DetermineRootDirectory();
             return new DirectoryLayout(
                 source: Path.Combine(root, "tools"),
-                docsOutput: Path.Combine(root, "docs", "output", "root"),
+                docsOutput: null,
                 metadata: null,
-                snippetOutput: Path.Combine(root, "docs", "output", "root", "obj", "snippets"),
-                docsSource: Path.Combine(root, "docs", "root")
+                snippetOutput: Path.Combine(root, "docs", "output", "help", "obj", "snippets"),
+                docsSource: null
                 );
         }
 
