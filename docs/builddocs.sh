@@ -19,12 +19,7 @@ build_api_docs() {
   log_build_action "Building docs for $1"
   local api=$1
 
-  # Special case "root" where we don't need to generate the sources
-  if [ "$api" == "root" ]
-  then
-    cp -r root output/root
-    mkdir -p output/root/obj/api
-  elif [[ ! -d "../apis/$api/docs" ]]
+  if [[ ! -d "../apis/$api/docs" ]]
   then
     if [[ -d "../apis/$api" ]]
     then
@@ -41,13 +36,11 @@ build_api_docs() {
   $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
-  # Only build metadata for devsite where we have a "real" API (not root)
-  if [[ -f output/$api/docfx-devsite.json ]]
-  then
-    $DOCFX metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
-    (! grep --quiet 'Build failed.' errors.txt)
-  fi
+  # Build metadata for devsite
+  $DOCFX metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
+  (! grep --quiet 'Build failed.' errors.txt)
 
+  # Generate the snippet markdown
   dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
   # Copy external dependency yml files into the API and concatenate toc.yml
@@ -57,7 +50,7 @@ build_api_docs() {
     cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
   done
   
-  # Build for googleapis.dev and GitHub pages
+  # Build for googleapis.dev
   # Note that the devsite build will happen elsewhere.
   $DOCFX build --logLevel Warning --disableGitFeatures output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
@@ -65,22 +58,10 @@ build_api_docs() {
   # Add canonical links where appropriate
   dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateCanonicalLinks -- $api
 
-  # Special case root: that should end up in the root of the assembled
-  # site.
-  if [ "$api" == "root" ]
-  then
-    # We don't want to end up with a "site" directory under assembled...
-    # we want the contents of site directly under assembled.
-    # There may well be a better way of doing this!
-    cp -r -t output/assembled output/$api/site/*
-  else
-    cp -r output/$api/site output/assembled/$api
-    # We need to make some changes to meet DevSite build expectations.
-    dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.PostProcessDevSite -- $api
-  fi
   echo Finished building docs for $api
 }
 
+# TODO: Use dependencies from DevSite instead?
 if [[ ! -d "dependencies" ]]
 then
   log_build_action "Fetching external dependencies repo"
@@ -89,7 +70,6 @@ fi
 
 rm -rf output
 mkdir output
-mkdir output/assembled
 
 # Build the tools once, then we can run them without restoring/building each time
 dotnet build Google.Cloud.DocTools.sln -v quiet -nologo -clp:NoSummary
@@ -97,9 +77,8 @@ dotnet build Google.Cloud.DocTools.sln -v quiet -nologo -clp:NoSummary
 apis=$@
 if [ -z "$apis" ]
 then
-  # Build all APIs, which means every ../apis subdirectory with a "docs" subdirectory,
-  # and "root" which is the special top-level docs.
-  apis="`/usr/bin/find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3` root"
+  # Build all APIs, which means every ../apis subdirectory with a "docs" subdirectory.
+  apis="`/usr/bin/find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3`"
 fi
 
 log_build_action "(Start) Building docs"
