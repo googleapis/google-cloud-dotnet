@@ -83,22 +83,22 @@ in the web results.)
 
 ### Iterate over all resources, ignoring pagination
 
-[!code-cs[](../examples/root.PageStreaming.txt#AllResources)]
+[!code-cs[](../examples/help.PageStreaming.txt#AllResources)]
 
 ### Iterate over all responses, remembering page tokens
 
-[!code-cs[](../examples/root.PageStreaming.txt#Responses)]
+[!code-cs[](../examples/help.PageStreaming.txt#Responses)]
 
 ### Obtain a single "natural" page of results
 
-[!code-cs[](../examples/root.PageStreaming.txt#SingleResponse)]
+[!code-cs[](../examples/help.PageStreaming.txt#SingleResponse)]
 
 ### Display the next fixed-sized page of results
 
 This is typically used in web applications; it will only display a less-than-full
 page if it reaches the end of the data.
 
-[!code-cs[](../examples/root.PageStreaming.txt#ReadPage)]
+[!code-cs[](../examples/help.PageStreaming.txt#ReadPage)]
 
 ## Feedback
 

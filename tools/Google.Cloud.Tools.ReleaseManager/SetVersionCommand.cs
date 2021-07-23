@@ -44,7 +44,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
             GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
             GenerateProjectsCommand.RewriteReadme(catalog);
-            GenerateProjectsCommand.RewriteDocsRootIndex(catalog);
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;

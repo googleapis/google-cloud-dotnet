@@ -18,15 +18,15 @@ fi
 declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
 declare -r VERSION=$1
 
-# Build the "regular" root docs - this processes the snippets.
-./builddocs.sh root
+# Build the snippets for the help docset
+dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- help
 
 rm -rf output/devsite-help
 mkdir -p output/devsite-help/api
 mkdir -p output/devsite-help/examples
 
 cp devsite-help/* output/devsite-help/api
-cp output/root/obj/snippets/* output/devsite-help/examples
+cp output/help/obj/snippets/* output/devsite-help/examples
 
 cd output/devsite-help
 
