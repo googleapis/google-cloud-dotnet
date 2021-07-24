@@ -81,6 +81,8 @@ namespace Google.Cloud.Asset.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest> __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
@@ -165,6 +167,13 @@ namespace Google.Cloud.Asset.V1 {
         "AnalyzeIamPolicyLongrunning",
         __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest,
         __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Method_AnalyzeMove = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnalyzeMove",
+        __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest,
+        __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -330,12 +339,27 @@ namespace Google.Cloud.Asset.V1 {
       /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
       /// status. We recommend intervals of at least 2 seconds with exponential
       /// backoff retry to poll the operation result. The metadata contains the
-      /// request to help callers to map responses to requests.
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AnalyzeIamPolicyLongrunning(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Analyze moving a resource to a specified destination without kicking off
+      /// the actual move. The analysis is best effort depending on the user's
+      /// permissions of viewing different hierarchical policies and configurations.
+      /// The policies and configuration are subject to change before the actual
+      /// resource migration takes place.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -954,7 +978,7 @@ namespace Google.Cloud.Asset.V1 {
       /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
       /// status. We recommend intervals of at least 2 seconds with exponential
       /// backoff retry to poll the operation result. The metadata contains the
-      /// request to help callers to map responses to requests.
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -974,7 +998,7 @@ namespace Google.Cloud.Asset.V1 {
       /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
       /// status. We recommend intervals of at least 2 seconds with exponential
       /// backoff retry to poll the operation result. The metadata contains the
-      /// request to help callers to map responses to requests.
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -992,7 +1016,7 @@ namespace Google.Cloud.Asset.V1 {
       /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
       /// status. We recommend intervals of at least 2 seconds with exponential
       /// backoff retry to poll the operation result. The metadata contains the
-      /// request to help callers to map responses to requests.
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1012,7 +1036,7 @@ namespace Google.Cloud.Asset.V1 {
       /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
       /// status. We recommend intervals of at least 2 seconds with exponential
       /// backoff retry to poll the operation result. The metadata contains the
-      /// request to help callers to map responses to requests.
+      /// metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1020,6 +1044,66 @@ namespace Google.Cloud.Asset.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnalyzeIamPolicyLongrunningAsync(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeIamPolicyLongrunning, null, options, request);
+      }
+      /// <summary>
+      /// Analyze moving a resource to a specified destination without kicking off
+      /// the actual move. The analysis is best effort depending on the user's
+      /// permissions of viewing different hierarchical policies and configurations.
+      /// The policies and configuration are subject to change before the actual
+      /// resource migration takes place.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeMoveResponse AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeMove(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyze moving a resource to a specified destination without kicking off
+      /// the actual move. The analysis is best effort depending on the user's
+      /// permissions of viewing different hierarchical policies and configurations.
+      /// The policies and configuration are subject to change before the actual
+      /// resource migration takes place.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeMoveResponse AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnalyzeMove, null, options, request);
+      }
+      /// <summary>
+      /// Analyze moving a resource to a specified destination without kicking off
+      /// the actual move. The analysis is best effort depending on the user's
+      /// permissions of viewing different hierarchical policies and configurations.
+      /// The policies and configuration are subject to change before the actual
+      /// resource migration takes place.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMoveAsync(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeMoveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyze moving a resource to a specified destination without kicking off
+      /// the actual move. The analysis is best effort depending on the user's
+      /// permissions of viewing different hierarchical policies and configurations.
+      /// The policies and configuration are subject to change before the actual
+      /// resource migration takes place.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMoveAsync(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnalyzeMove, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AssetServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1044,7 +1128,8 @@ namespace Google.Cloud.Asset.V1 {
           .AddMethod(__Method_SearchAllResources, serviceImpl.SearchAllResources)
           .AddMethod(__Method_SearchAllIamPolicies, serviceImpl.SearchAllIamPolicies)
           .AddMethod(__Method_AnalyzeIamPolicy, serviceImpl.AnalyzeIamPolicy)
-          .AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl.AnalyzeIamPolicyLongrunning).Build();
+          .AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl.AnalyzeIamPolicyLongrunning)
+          .AddMethod(__Method_AnalyzeMove, serviceImpl.AnalyzeMove).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1065,6 +1150,7 @@ namespace Google.Cloud.Asset.V1 {
       serviceBinder.AddMethod(__Method_SearchAllIamPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse>(serviceImpl.SearchAllIamPolicies));
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse>(serviceImpl.AnalyzeIamPolicy));
       serviceBinder.AddMethod(__Method_AnalyzeIamPolicyLongrunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest, global::Google.LongRunning.Operation>(serviceImpl.AnalyzeIamPolicyLongrunning));
+      serviceBinder.AddMethod(__Method_AnalyzeMove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse>(serviceImpl.AnalyzeMove));
     }
 
   }

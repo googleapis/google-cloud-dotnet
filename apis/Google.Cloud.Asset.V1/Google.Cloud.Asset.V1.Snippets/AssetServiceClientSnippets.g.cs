@@ -788,6 +788,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 Query = "",
                 AssetTypes = { "", },
                 OrderBy = "",
+                ReadMask = new FieldMask(),
             };
             // Make the request
             PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> response = assetServiceClient.SearchAllResources(request);
@@ -839,6 +840,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 Query = "",
                 AssetTypes = { "", },
                 OrderBy = "",
+                ReadMask = new FieldMask(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> response = assetServiceClient.SearchAllResourcesAsync(request);
@@ -1213,17 +1215,17 @@ namespace Google.Cloud.Asset.V1.Snippets
                 OutputConfig = new IamPolicyAnalysisOutputConfig(),
             };
             // Make the request
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> response = assetServiceClient.AnalyzeIamPolicyLongrunning(request);
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> response = assetServiceClient.AnalyzeIamPolicyLongrunning(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> completedResponse = response.PollUntilCompleted();
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             AnalyzeIamPolicyLongrunningResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> retrievedResponse = assetServiceClient.PollOnceAnalyzeIamPolicyLongrunning(operationName);
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> retrievedResponse = assetServiceClient.PollOnceAnalyzeIamPolicyLongrunning(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1247,23 +1249,60 @@ namespace Google.Cloud.Asset.V1.Snippets
                 OutputConfig = new IamPolicyAnalysisOutputConfig(),
             };
             // Make the request
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> response = await assetServiceClient.AnalyzeIamPolicyLongrunningAsync(request);
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> response = await assetServiceClient.AnalyzeIamPolicyLongrunningAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             AnalyzeIamPolicyLongrunningResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> retrievedResponse = await assetServiceClient.PollOnceAnalyzeIamPolicyLongrunningAsync(operationName);
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningMetadata> retrievedResponse = await assetServiceClient.PollOnceAnalyzeIamPolicyLongrunningAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
                 AnalyzeIamPolicyLongrunningResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeMove</summary>
+        public void AnalyzeMoveRequestObject()
+        {
+            // Snippet: AnalyzeMove(AnalyzeMoveRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeMoveRequest request = new AnalyzeMoveRequest
+            {
+                Resource = "",
+                DestinationParent = "",
+                View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
+            };
+            // Make the request
+            AnalyzeMoveResponse response = assetServiceClient.AnalyzeMove(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeMoveAsync</summary>
+        public async Task AnalyzeMoveRequestObjectAsync()
+        {
+            // Snippet: AnalyzeMoveAsync(AnalyzeMoveRequest, CallSettings)
+            // Additional: AnalyzeMoveAsync(AnalyzeMoveRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeMoveRequest request = new AnalyzeMoveRequest
+            {
+                Resource = "",
+                DestinationParent = "",
+                View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
+            };
+            // Make the request
+            AnalyzeMoveResponse response = await assetServiceClient.AnalyzeMoveAsync(request);
             // End snippet
         }
     }

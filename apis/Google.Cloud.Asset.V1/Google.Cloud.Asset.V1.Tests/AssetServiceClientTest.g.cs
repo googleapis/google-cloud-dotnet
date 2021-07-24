@@ -762,5 +762,51 @@ namespace Google.Cloud.Asset.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void AnalyzeMoveRequestObject()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeMoveRequest request = new AnalyzeMoveRequest
+            {
+                Resource = "resource164eab96",
+                DestinationParent = "destination_parent29fce40d",
+                View = AnalyzeMoveRequest.Types.AnalysisView.Full,
+            };
+            AnalyzeMoveResponse expectedResponse = new AnalyzeMoveResponse
+            {
+                MoveAnalysis = { new MoveAnalysis(), },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeMove(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyzeMoveResponse response = client.AnalyzeMove(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task AnalyzeMoveRequestObjectAsync()
+        {
+            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            AnalyzeMoveRequest request = new AnalyzeMoveRequest
+            {
+                Resource = "resource164eab96",
+                DestinationParent = "destination_parent29fce40d",
+                View = AnalyzeMoveRequest.Types.AnalysisView.Full,
+            };
+            AnalyzeMoveResponse expectedResponse = new AnalyzeMoveResponse
+            {
+                MoveAnalysis = { new MoveAnalysis(), },
+            };
+            mockGrpcClient.Setup(x => x.AnalyzeMoveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeMoveResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
+            AnalyzeMoveResponse responseCallSettings = await client.AnalyzeMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AnalyzeMoveResponse responseCancellationToken = await client.AnalyzeMoveAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
