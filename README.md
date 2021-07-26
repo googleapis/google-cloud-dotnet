@@ -15,7 +15,7 @@ Each package name links to the documentation for that package.
 |---------|----------------|-------------|
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha07) | 1.0.0-alpha07 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha05) | 1.0.0-alpha05 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
-| [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta03) | 1.0.0-beta03 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
+| [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta04) | 1.0.0-beta04 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Apps.Script.Type](https://googleapis.dev/dotnet/Google.Apps.Script.Type/1.0.0) | 1.0.0 | Version-agnostic types for Apps Script APIs |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha03) | 1.0.0-alpha03 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.1.0) | 1.1.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
