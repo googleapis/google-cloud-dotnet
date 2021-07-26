@@ -16,6 +16,9 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -360,15 +363,45 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListNetworksRequest request = new ListNetworksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkList response = networksClient.List(request);
+            PagedEnumerable<NetworkList, Network> response = networksClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Network item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Network item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Network> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Network item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -376,48 +409,140 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListNetworksRequest, CallSettings)
-            // Additional: ListAsync(ListNetworksRequest, CancellationToken)
             // Create client
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             ListNetworksRequest request = new ListNetworksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkList response = await networksClient.ListAsync(request);
+            PagedAsyncEnumerable<NetworkList, Network> response = networksClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Network item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Network item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Network> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Network item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, CallSettings)
+            // Snippet: List(string, string, int?, CallSettings)
             // Create client
             NetworksClient networksClient = NetworksClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NetworkList response = networksClient.List(project);
+            PagedEnumerable<NetworkList, Network> response = networksClient.List(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Network item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Network item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Network> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Network item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, CallSettings)
-            // Additional: ListAsync(string, CancellationToken)
+            // Snippet: ListAsync(string, string, int?, CallSettings)
             // Create client
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NetworkList response = await networksClient.ListAsync(project);
+            PagedAsyncEnumerable<NetworkList, Network> response = networksClient.ListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Network item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Network item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Network> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Network item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -430,8 +555,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Direction = ListPeeringRoutesNetworksRequest.Types.Direction.UndefinedDirection,
                 Region = "",
                 OrderBy = "",
@@ -442,7 +565,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            ExchangedPeeringRoutesList response = networksClient.ListPeeringRoutes(request);
+            PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExchangedPeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ExchangedPeeringRoutesList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExchangedPeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExchangedPeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExchangedPeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -450,14 +605,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListPeeringRoutesRequestObjectAsync()
         {
             // Snippet: ListPeeringRoutesAsync(ListPeeringRoutesNetworksRequest, CallSettings)
-            // Additional: ListPeeringRoutesAsync(ListPeeringRoutesNetworksRequest, CancellationToken)
             // Create client
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Direction = ListPeeringRoutesNetworksRequest.Types.Direction.UndefinedDirection,
                 Region = "",
                 OrderBy = "",
@@ -468,36 +620,131 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            ExchangedPeeringRoutesList response = await networksClient.ListPeeringRoutesAsync(request);
+            PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExchangedPeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ExchangedPeeringRoutesList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExchangedPeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExchangedPeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExchangedPeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListPeeringRoutes</summary>
         public void ListPeeringRoutes()
         {
-            // Snippet: ListPeeringRoutes(string, string, CallSettings)
+            // Snippet: ListPeeringRoutes(string, string, string, int?, CallSettings)
             // Create client
             NetworksClient networksClient = NetworksClient.Create();
             // Initialize request argument(s)
             string project = "";
             string network = "";
             // Make the request
-            ExchangedPeeringRoutesList response = networksClient.ListPeeringRoutes(project, network);
+            PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutes(project, network);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExchangedPeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ExchangedPeeringRoutesList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExchangedPeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExchangedPeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExchangedPeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListPeeringRoutesAsync</summary>
         public async Task ListPeeringRoutesAsync()
         {
-            // Snippet: ListPeeringRoutesAsync(string, string, CallSettings)
-            // Additional: ListPeeringRoutesAsync(string, string, CancellationToken)
+            // Snippet: ListPeeringRoutesAsync(string, string, string, int?, CallSettings)
             // Create client
             NetworksClient networksClient = await NetworksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string network = "";
             // Make the request
-            ExchangedPeeringRoutesList response = await networksClient.ListPeeringRoutesAsync(project, network);
+            PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutesAsync(project, network);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExchangedPeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ExchangedPeeringRoutesList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExchangedPeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExchangedPeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExchangedPeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

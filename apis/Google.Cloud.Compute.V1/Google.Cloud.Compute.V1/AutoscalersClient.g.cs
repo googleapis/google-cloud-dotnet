@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -288,8 +289,10 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AutoscalerAggregatedList AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -297,18 +300,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerAggregatedList> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerAggregatedList> AggregatedListAsync(AggregatedListAutoscalersRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of autoscalers.
@@ -316,12 +312,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AutoscalerAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -330,24 +338,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of autoscalers.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified autoscaler.
@@ -618,8 +627,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AutoscalerList List(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Autoscaler"/> resources.</returns>
+        public virtual gax::PagedEnumerable<AutoscalerList, Autoscaler> List(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -627,18 +636,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerList> ListAsync(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Autoscaler"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<AutoscalerList, Autoscaler> ListAsync(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified zone.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerList> ListAsync(ListAutoscalersRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of autoscalers contained within the specified zone.
@@ -649,13 +649,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// Name of the zone for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual AutoscalerList List(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Autoscaler"/> resources.</returns>
+        public virtual gax::PagedEnumerable<AutoscalerList, Autoscaler> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -667,28 +677,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// Name of the zone for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerList> ListAsync(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Autoscaler"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<AutoscalerList, Autoscaler> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListAutoscalersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified zone.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// Name of the zone for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<AutoscalerList> ListAsync(string project, string zone, st::CancellationToken cancellationToken) =>
-            ListAsync(project, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -961,11 +967,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override AutoscalerAggregatedList AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListAutoscalersRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListAutoscalersRequest, AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -973,11 +981,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<AutoscalerAggregatedList> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListAutoscalersRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListAutoscalersRequest, AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1057,11 +1067,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override AutoscalerList List(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="Autoscaler"/> resources.</returns>
+        public override gax::PagedEnumerable<AutoscalerList, Autoscaler> List(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAutoscalersRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAutoscalersRequest, AutoscalerList, Autoscaler>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1069,11 +1079,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<AutoscalerList> ListAsync(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="Autoscaler"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<AutoscalerList, Autoscaler> ListAsync(ListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAutoscalersRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutoscalersRequest, AutoscalerList, Autoscaler>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1123,5 +1133,39 @@ namespace Google.Cloud.Compute.V1
             Modify_UpdateAutoscalerRequest(ref request, ref callSettings);
             return _callUpdate.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListAutoscalersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListAutoscalersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class AutoscalerAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, AutoscalersScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, AutoscalersScopedList>> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class AutoscalerList : gaxgrpc::IPageResponse<Autoscaler>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Autoscaler> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

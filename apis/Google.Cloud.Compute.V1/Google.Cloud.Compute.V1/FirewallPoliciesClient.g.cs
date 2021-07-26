@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -1048,8 +1049,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FirewallPolicyList List(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FirewallPolicyList, FirewallPolicy> List(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1057,42 +1058,49 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirewallPolicyList> ListAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> ListAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists all the policies that have been configured for the specified project.
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirewallPolicyList> ListAsync(ListFirewallPoliciesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists all the policies that have been configured for the specified project.
-        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FirewallPolicyList List(gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListFirewallPoliciesRequest { }, callSettings);
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FirewallPolicyList, FirewallPolicy> List(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            List(new ListFirewallPoliciesRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Lists all the policies that have been configured for the specified project.
         /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirewallPolicyList> ListAsync(gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListFirewallPoliciesRequest { }, callSettings);
-
-        /// <summary>
-        /// Lists all the policies that have been configured for the specified project.
-        /// </summary>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirewallPolicyList> ListAsync(st::CancellationToken cancellationToken) =>
-            ListAsync(gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> ListAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAsync(new ListFirewallPoliciesRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Lists associations of a specified target, i.e., organization or folder.
@@ -2061,11 +2069,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override FirewallPolicyList List(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<FirewallPolicyList, FirewallPolicy> List(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListFirewallPoliciesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFirewallPoliciesRequest, FirewallPolicyList, FirewallPolicy>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -2073,11 +2081,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<FirewallPolicyList> ListAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> ListAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListFirewallPoliciesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFirewallPoliciesRequest, FirewallPolicyList, FirewallPolicy>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -2271,5 +2279,22 @@ namespace Google.Cloud.Compute.V1
             Modify_TestIamPermissionsFirewallPolicyRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+    }
+
+    public partial class ListFirewallPoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class FirewallPolicyList : gaxgrpc::IPageResponse<FirewallPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FirewallPolicy> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

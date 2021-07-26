@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -289,8 +290,10 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PacketMirroringAggregatedList AggregatedList(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedList(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -298,18 +301,12 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringAggregatedList> AggregatedListAsync(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedListAsync(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of packetMirrorings.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringAggregatedList> AggregatedListAsync(AggregatedListPacketMirroringsRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of packetMirrorings.
@@ -317,12 +314,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PacketMirroringAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListPacketMirroringsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -331,24 +340,26 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListPacketMirroringsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of packetMirrorings.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified PacketMirroring resource.
@@ -619,8 +630,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PacketMirroringList List(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public virtual gax::PagedEnumerable<PacketMirroringList, PacketMirroring> List(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -628,18 +639,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringList> ListAsync(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<PacketMirroringList, PacketMirroring> ListAsync(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of PacketMirroring resources available to the specified project and region.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringList> ListAsync(ListPacketMirroringsRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of PacketMirroring resources available to the specified project and region.
@@ -650,13 +652,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PacketMirroringList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public virtual gax::PagedEnumerable<PacketMirroringList, PacketMirroring> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListPacketMirroringsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -668,28 +680,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<PacketMirroringList, PacketMirroring> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListPacketMirroringsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves a list of PacketMirroring resources available to the specified project and region.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PacketMirroringList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified PacketMirroring resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
@@ -984,11 +992,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override PacketMirroringAggregatedList AggregatedList(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedList(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListPacketMirroringsRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListPacketMirroringsRequest, PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -996,11 +1006,14 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<PacketMirroringAggregatedList> AggregatedListAsync(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,PacketMirroringsScopedList}"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>> AggregatedListAsync(AggregatedListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListPacketMirroringsRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListPacketMirroringsRequest, PacketMirroringAggregatedList, scg::KeyValuePair<string, PacketMirroringsScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1080,11 +1093,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override PacketMirroringList List(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public override gax::PagedEnumerable<PacketMirroringList, PacketMirroring> List(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPacketMirroringsRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPacketMirroringsRequest, PacketMirroringList, PacketMirroring>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1092,11 +1105,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<PacketMirroringList> ListAsync(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="PacketMirroring"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<PacketMirroringList, PacketMirroring> ListAsync(ListPacketMirroringsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPacketMirroringsRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPacketMirroringsRequest, PacketMirroringList, PacketMirroring>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1146,5 +1159,40 @@ namespace Google.Cloud.Compute.V1
             Modify_TestIamPermissionsPacketMirroringRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListPacketMirroringsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListPacketMirroringsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class PacketMirroringAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, PacketMirroringsScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, PacketMirroringsScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class PacketMirroringList : gaxgrpc::IPageResponse<PacketMirroring>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PacketMirroring> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

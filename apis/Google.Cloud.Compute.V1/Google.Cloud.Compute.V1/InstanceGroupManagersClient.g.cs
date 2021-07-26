@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -599,8 +600,10 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagerAggregatedList AggregatedList(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedList(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -608,18 +611,12 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerAggregatedList> AggregatedListAsync(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedListAsync(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of managed instance groups and groups them by zone.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerAggregatedList> AggregatedListAsync(AggregatedListInstanceGroupManagersRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of managed instance groups and groups them by zone.
@@ -627,12 +624,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagerAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -641,24 +650,26 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/>
+        /// resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of managed instance groups and groups them by zone.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Applies changes to selected instances on the managed instance group. This method can be used to apply new overrides and/or new versions.
@@ -1361,8 +1372,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagerList List(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagerList, InstanceGroupManager> List(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1370,18 +1381,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerList> ListAsync(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> ListAsync(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of managed instance groups that are contained within the specified project and zone.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerList> ListAsync(ListInstanceGroupManagersRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of managed instance groups that are contained within the specified project and zone.
@@ -1392,13 +1394,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone where the managed instance group is located.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagerList List(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagerList, InstanceGroupManager> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -1410,36 +1422,32 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone where the managed instance group is located.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerList> ListAsync(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListInstanceGroupManagersRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a list of managed instance groups that are contained within the specified project and zone.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the managed instance group is located.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagerList> ListAsync(string project, string zone, st::CancellationToken cancellationToken) =>
-            ListAsync(project, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListErrorsResponse ListErrors(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrors(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1447,18 +1455,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListErrorsResponse> ListErrorsAsync(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrorsAsync(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListErrorsResponse> ListErrorsAsync(ListErrorsInstanceGroupManagersRequest request, st::CancellationToken cancellationToken) =>
-            ListErrorsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
@@ -1472,14 +1471,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|[1-9][0-9]{0,19}.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListErrorsResponse ListErrors(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrors(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListErrors(new ListErrorsInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -1494,40 +1503,33 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|[1-9][0-9]{0,19}.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListErrorsResponse> ListErrorsAsync(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrorsAsync(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListErrorsAsync(new ListErrorsInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
-        /// </param>
-        /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|[1-9][0-9]{0,19}.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListErrorsResponse> ListErrorsAsync(string project, string zone, string instanceGroupManager, st::CancellationToken cancellationToken) =>
-            ListErrorsAsync(project, zone, instanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListManagedInstancesResponse ListManagedInstances(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstances(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1535,18 +1537,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListManagedInstancesResponse> ListManagedInstancesAsync(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstancesAsync(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListManagedInstancesResponse> ListManagedInstancesAsync(ListManagedInstancesInstanceGroupManagersRequest request, st::CancellationToken cancellationToken) =>
-            ListManagedInstancesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported.
@@ -1560,14 +1553,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListManagedInstancesResponse ListManagedInstances(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstances(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListManagedInstances(new ListManagedInstancesInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -1582,40 +1585,33 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListManagedInstancesResponse> ListManagedInstancesAsync(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstancesAsync(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListManagedInstancesAsync(new ListManagedInstancesInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the managed instance group is located.
-        /// </param>
-        /// <param name="instanceGroupManager">
-        /// The name of the managed instance group.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListManagedInstancesResponse> ListManagedInstancesAsync(string project, string zone, string instanceGroupManager, st::CancellationToken cancellationToken) =>
-            ListManagedInstancesAsync(project, zone, instanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists all of the per-instance configs defined for the managed instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListPerInstanceConfigsResp ListPerInstanceConfigs(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigs(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1623,18 +1619,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListPerInstanceConfigsResp> ListPerInstanceConfigsAsync(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigsAsync(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists all of the per-instance configs defined for the managed instance group. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListPerInstanceConfigsResp> ListPerInstanceConfigsAsync(ListPerInstanceConfigsInstanceGroupManagersRequest request, st::CancellationToken cancellationToken) =>
-            ListPerInstanceConfigsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all of the per-instance configs defined for the managed instance group. The orderBy query parameter is not supported.
@@ -1648,14 +1635,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. It should conform to RFC1035.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InstanceGroupManagersListPerInstanceConfigsResp ListPerInstanceConfigs(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigs(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListPerInstanceConfigs(new ListPerInstanceConfigsInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -1670,32 +1667,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. It should conform to RFC1035.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListPerInstanceConfigsResp> ListPerInstanceConfigsAsync(string project, string zone, string instanceGroupManager, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigsAsync(string project, string zone, string instanceGroupManager, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListPerInstanceConfigsAsync(new ListPerInstanceConfigsInstanceGroupManagersRequest
             {
                 InstanceGroupManager = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroupManager, nameof(instanceGroupManager)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists all of the per-instance configs defined for the managed instance group. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
-        /// </param>
-        /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InstanceGroupManagersListPerInstanceConfigsResp> ListPerInstanceConfigsAsync(string project, string zone, string instanceGroupManager, st::CancellationToken cancellationToken) =>
-            ListPerInstanceConfigsAsync(project, zone, instanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listManagedInstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -2707,11 +2697,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override InstanceGroupManagerAggregatedList AggregatedList(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedList(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListInstanceGroupManagersRequest, InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -2719,11 +2711,14 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<InstanceGroupManagerAggregatedList> AggregatedListAsync(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,InstanceGroupManagersScopedList}"/>
+        /// resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>> AggregatedListAsync(AggregatedListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListInstanceGroupManagersRequest, InstanceGroupManagerAggregatedList, scg::KeyValuePair<string, InstanceGroupManagersScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -2911,11 +2906,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override InstanceGroupManagerList List(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public override gax::PagedEnumerable<InstanceGroupManagerList, InstanceGroupManager> List(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstanceGroupManagersRequest, InstanceGroupManagerList, InstanceGroupManager>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -2923,11 +2918,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<InstanceGroupManagerList> ListAsync(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroupManager"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> ListAsync(ListInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstanceGroupManagersRequest, InstanceGroupManagerList, InstanceGroupManager>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -2935,11 +2930,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override InstanceGroupManagersListErrorsResponse ListErrors(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public override gax::PagedEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrors(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListErrorsInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListErrors.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListErrorsInstanceGroupManagersRequest, InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError>(_callListErrors, request, callSettings);
         }
 
         /// <summary>
@@ -2947,11 +2942,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<InstanceGroupManagersListErrorsResponse> ListErrorsAsync(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceManagedByIgmError"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> ListErrorsAsync(ListErrorsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListErrorsInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListErrors.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListErrorsInstanceGroupManagersRequest, InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError>(_callListErrors, request, callSettings);
         }
 
         /// <summary>
@@ -2959,11 +2954,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override InstanceGroupManagersListManagedInstancesResponse ListManagedInstances(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public override gax::PagedEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstances(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListManagedInstancesInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListManagedInstances.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListManagedInstancesInstanceGroupManagersRequest, InstanceGroupManagersListManagedInstancesResponse, ManagedInstance>(_callListManagedInstances, request, callSettings);
         }
 
         /// <summary>
@@ -2971,11 +2966,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<InstanceGroupManagersListManagedInstancesResponse> ListManagedInstancesAsync(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedInstance"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> ListManagedInstancesAsync(ListManagedInstancesInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListManagedInstancesInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListManagedInstances.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListManagedInstancesInstanceGroupManagersRequest, InstanceGroupManagersListManagedInstancesResponse, ManagedInstance>(_callListManagedInstances, request, callSettings);
         }
 
         /// <summary>
@@ -2983,11 +2978,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override InstanceGroupManagersListPerInstanceConfigsResp ListPerInstanceConfigs(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigs(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPerInstanceConfigsInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListPerInstanceConfigs.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPerInstanceConfigsInstanceGroupManagersRequest, InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig>(_callListPerInstanceConfigs, request, callSettings);
         }
 
         /// <summary>
@@ -2995,11 +2990,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<InstanceGroupManagersListPerInstanceConfigsResp> ListPerInstanceConfigsAsync(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="PerInstanceConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> ListPerInstanceConfigsAsync(ListPerInstanceConfigsInstanceGroupManagersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPerInstanceConfigsInstanceGroupManagersRequest(ref request, ref callSettings);
-            return _callListPerInstanceConfigs.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPerInstanceConfigsInstanceGroupManagersRequest, InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig>(_callListPerInstanceConfigs, request, callSettings);
         }
 
         /// <summary>
@@ -3193,5 +3188,91 @@ namespace Google.Cloud.Compute.V1
             Modify_UpdatePerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
             return _callUpdatePerInstanceConfigs.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListInstanceGroupManagersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListInstanceGroupManagersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListErrorsInstanceGroupManagersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListManagedInstancesInstanceGroupManagersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class ListPerInstanceConfigsInstanceGroupManagersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            set => MaxResults = (uint)value;
+        }
+    }
+
+    public partial class InstanceGroupManagerAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, InstanceGroupManagersScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, InstanceGroupManagersScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class InstanceGroupManagerList : gaxgrpc::IPageResponse<InstanceGroupManager>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstanceGroupManager> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class InstanceGroupManagersListErrorsResponse : gaxgrpc::IPageResponse<InstanceManagedByIgmError>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstanceManagedByIgmError> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class InstanceGroupManagersListManagedInstancesResponse : gaxgrpc::IPageResponse<ManagedInstance>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ManagedInstance> GetEnumerator() => ManagedInstances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class InstanceGroupManagersListPerInstanceConfigsResp : gaxgrpc::IPageResponse<PerInstanceConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PerInstanceConfig> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

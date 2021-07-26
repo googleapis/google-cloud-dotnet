@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Compute.V1.IntegrationTests
@@ -31,10 +32,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         {
             var client = ZonesClient.Create();
             var allZones = client.List(_fixture.ProjectId);
-            Assert.InRange(allZones.Items.Count, 3, int.MaxValue);
+            Assert.InRange(allZones.Count(), 3, int.MaxValue);
 
             var twoZones = client.List(new ListZonesRequest { Project = _fixture.ProjectId, MaxResults = 2 });
-            Assert.Equal(2, twoZones.Items.Count);
+            Assert.Equal(2, twoZones.Count());
         }
     }
 }
