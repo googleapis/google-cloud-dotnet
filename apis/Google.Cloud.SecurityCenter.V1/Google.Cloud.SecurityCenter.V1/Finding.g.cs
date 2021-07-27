@@ -27,40 +27,47 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Cixnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZmluZGluZy5wcm90",
             "bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHlf",
-            "bWFya3MucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8iwwcKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZw",
-            "YXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgE",
-            "IAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5n",
-            "LlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgGIAEo",
-            "CRJYChFzb3VyY2VfcHJvcGVydGllcxgHIAMoCzI9Lmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNvdXJjZVByb3BlcnRpZXNFbnRy",
-            "eRJKCg5zZWN1cml0eV9tYXJrcxgIIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eWNlbnRlci52MS5TZWN1cml0eU1hcmtzQgPgQQMSLgoKZXZlbnRfdGlt",
-            "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRl",
-            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKCHNl",
-            "dmVyaXR5GAwgASgOMjAuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LkZpbmRpbmcuU2V2ZXJpdHkSFgoOY2Fub25pY2FsX25hbWUYDiABKAkaTwoV",
-            "U291cmNlUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgC",
-            "IAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEiOAoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRAC",
-            "IlEKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDAoIQ1JJ",
-            "VElDQUwQARIICgRISUdIEAISCgoGTUVESVVNEAMSBwoDTE9XEAQ62wHqQdcB",
-            "CiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmlu",
-            "ZGluZ3Mve2ZpbmRpbmd9EjRmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMve3Nv",
-            "dXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjZwcm9qZWN0cy97cHJvamVjdH0v",
-            "c291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ31C2gEKImNvbS5n",
-            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRl",
-            "ci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNl",
-            "bnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdv",
-            "b2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "b3RvGi5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvaW5kaWNhdG9y",
+            "LnByb3RvGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJp",
+            "dHlfbWFya3MucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8iwwkKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIO",
+            "CgZwYXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0",
+            "ZRgEIAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5k",
+            "aW5nLlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgG",
+            "IAEoCRJYChFzb3VyY2VfcHJvcGVydGllcxgHIAMoCzI9Lmdvb2dsZS5jbG91",
+            "ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5nLlNvdXJjZVByb3BlcnRpZXNF",
+            "bnRyeRJKCg5zZWN1cml0eV9tYXJrcxgIIAEoCzItLmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eWNlbnRlci52MS5TZWN1cml0eU1hcmtzQgPgQQMSLgoKZXZlbnRf",
+            "dGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3Jl",
+            "YXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIK",
+            "CHNldmVyaXR5GAwgASgOMjAuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
+            "LnYxLkZpbmRpbmcuU2V2ZXJpdHkSFgoOY2Fub25pY2FsX25hbWUYDiABKAkS",
+            "SwoNZmluZGluZ19jbGFzcxgRIAEoDjI0Lmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MS5GaW5kaW5nLkZpbmRpbmdDbGFzcxI8CglpbmRpY2F0b3IY",
+            "EiABKAsyKS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuSW5kaWNh",
+            "dG9yGk8KFVNvdXJjZVByb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSJQoF",
+            "dmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBIjgKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5B",
+            "Q1RJVkUQAiJRCghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAA",
+            "EgwKCENSSVRJQ0FMEAESCAoESElHSBACEgoKBk1FRElVTRADEgcKA0xPVxAE",
+            "InMKDEZpbmRpbmdDbGFzcxIdChlGSU5ESU5HX0NMQVNTX1VOU1BFQ0lGSUVE",
+            "EAASCgoGVEhSRUFUEAESEQoNVlVMTkVSQUJJTElUWRACEhQKEE1JU0NPTkZJ",
+            "R1VSQVRJT04QAxIPCgtPQlNFUlZBVElPThAEOtsB6kHXAQolc2VjdXJpdHlj",
+            "ZW50ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZxJAb3JnYW5pemF0aW9ucy97",
+            "b3JnYW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5k",
+            "aW5nfRI0Zm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRp",
+            "bmdzL3tmaW5kaW5nfRI2cHJvamVjdHMve3Byb2plY3R9L3NvdXJjZXMve3Nv",
+            "dXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9QtoBCiJjb20uZ29vZ2xlLmNsb3Vk",
+            "LnNlY3VyaXR5Y2VudGVyLnYxUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJp",
+            "dHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5H",
+            "b29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3Vk",
+            "OjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "FindingClass", "Indicator" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -117,6 +124,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       severity_ = other.severity_;
       canonicalName_ = other.canonicalName_;
+      findingClass_ = other.findingClass_;
+      indicator_ = other.indicator_ != null ? other.indicator_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -324,6 +333,38 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "finding_class" field.</summary>
+    public const int FindingClassFieldNumber = 17;
+    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass findingClass_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified;
+    /// <summary>
+    /// The class of the finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass FindingClass {
+      get { return findingClass_; }
+      set {
+        findingClass_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "indicator" field.</summary>
+    public const int IndicatorFieldNumber = 18;
+    private global::Google.Cloud.SecurityCenter.V1.Indicator indicator_;
+    /// <summary>
+    /// Represents what's commonly known as an Indicator of compromise (IoC) in
+    /// computer forensics. This is an artifact observed on a network or in an
+    /// operating system that, with high confidence, indicates a computer
+    /// intrusion.
+    /// Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecurityCenter.V1.Indicator Indicator {
+      get { return indicator_; }
+      set {
+        indicator_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Finding);
@@ -349,6 +390,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Severity != other.Severity) return false;
       if (CanonicalName != other.CanonicalName) return false;
+      if (FindingClass != other.FindingClass) return false;
+      if (!object.Equals(Indicator, other.Indicator)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -367,6 +410,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (CanonicalName.Length != 0) hash ^= CanonicalName.GetHashCode();
+      if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) hash ^= FindingClass.GetHashCode();
+      if (indicator_ != null) hash ^= Indicator.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -428,6 +473,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(114);
         output.WriteString(CanonicalName);
       }
+      if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) FindingClass);
+      }
+      if (indicator_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Indicator);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -482,6 +535,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(114);
         output.WriteString(CanonicalName);
       }
+      if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) FindingClass);
+      }
+      if (indicator_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Indicator);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -524,6 +585,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (CanonicalName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalName);
+      }
+      if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FindingClass);
+      }
+      if (indicator_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Indicator);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -578,6 +645,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.CanonicalName.Length != 0) {
         CanonicalName = other.CanonicalName;
+      }
+      if (other.FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
+        FindingClass = other.FindingClass;
+      }
+      if (other.indicator_ != null) {
+        if (indicator_ == null) {
+          Indicator = new global::Google.Cloud.SecurityCenter.V1.Indicator();
+        }
+        Indicator.MergeFrom(other.Indicator);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -650,6 +726,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
             CanonicalName = input.ReadString();
             break;
           }
+          case 136: {
+            FindingClass = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (indicator_ == null) {
+              Indicator = new global::Google.Cloud.SecurityCenter.V1.Indicator();
+            }
+            input.ReadMessage(Indicator);
+            break;
+          }
         }
       }
     #endif
@@ -719,6 +806,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 114: {
             CanonicalName = input.ReadString();
+            break;
+          }
+          case 136: {
+            FindingClass = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (indicator_ == null) {
+              Indicator = new global::Google.Cloud.SecurityCenter.V1.Indicator();
+            }
+            input.ReadMessage(Indicator);
             break;
           }
         }
@@ -814,6 +912,34 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// is not able to access data, execute code, or create resources.
         /// </summary>
         [pbr::OriginalName("LOW")] Low = 4,
+      }
+
+      /// <summary>
+      /// Represents what kind of Finding it is.
+      /// </summary>
+      public enum FindingClass {
+        /// <summary>
+        /// Unspecified finding class.
+        /// </summary>
+        [pbr::OriginalName("FINDING_CLASS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Describes unwanted or malicious activity.
+        /// </summary>
+        [pbr::OriginalName("THREAT")] Threat = 1,
+        /// <summary>
+        /// Describes a potential weakness in software that increases risk to
+        /// Confidentiality &amp; Integrity &amp; Availability.
+        /// </summary>
+        [pbr::OriginalName("VULNERABILITY")] Vulnerability = 2,
+        /// <summary>
+        /// Describes a potential weakness in cloud resource/asset configuration that
+        /// increases risk.
+        /// </summary>
+        [pbr::OriginalName("MISCONFIGURATION")] Misconfiguration = 3,
+        /// <summary>
+        /// Describes a security observation that is for informational purposes.
+        /// </summary>
+        [pbr::OriginalName("OBSERVATION")] Observation = 4,
       }
 
     }
