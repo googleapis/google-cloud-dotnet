@@ -227,6 +227,21 @@
       "protoPath": "google/cloud/assuredworkloads/v1beta1"
     },
     {
+      "id": "Google.Cloud.Audit",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.0;net461",
+      "type": "other",
+      "description": "Protobuf messages for Google Cloud audit logs.",
+      "tags": [
+        "audit"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.3.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/cloud/audit"
+    },
+    {
       "id": "Google.Cloud.AutoML.V1",
       "generator": "micro",
       "protoPath": "google/cloud/automl/v1",
