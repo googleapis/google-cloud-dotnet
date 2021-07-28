@@ -3045,13 +3045,14 @@
       "protoPath": "google/identity/accesscontextmanager/v1",
       "version": "1.2.0",
       "targetFrameworks": "netstandard2.0;net461",
-      "description": "Protocol buffer types for the Google Identity Access Context Manager API V1.",
+      "description": "Recommended Google client library to access the Identity Access Context Manager API V1.",
       "tags": [
         "identity"
       ],
       "dependencies": {
         "Google.Api.CommonProtos": "2.3.0",
-        "Google.Identity.AccessContextManager.Type": "1.1.0"
+        "Google.Identity.AccessContextManager.Type": "1.1.0",
+        "Google.LongRunning": "2.2.0"
       }
     },
     {
