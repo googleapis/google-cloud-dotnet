@@ -1,5 +1,15 @@
 # Version history
 
+# Version 2.0.0-beta05, released 2021-07-28
+
+- [Commit 1b4497f](https://github.com/googleapis/google-cloud-dotnet/commit/1b4497f):
+  - feat: add total_billed_time response field.
+  - fix!: phrase_set_id is required field in CreatePhraseSetRequest.
+  - fix!: custom_class_id is required field in CreateCustomClassRequest.
+
+Note: the breaking changes here are in terms of metadata, not
+breaking changes in the library itself.
+
 # Version 2.0.0-beta04, released 2021-04-29
 
 - [Commit e9b8f84](https://github.com/googleapis/google-cloud-dotnet/commit/e9b8f84): feat: add webm opus support.
