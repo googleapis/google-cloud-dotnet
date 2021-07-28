@@ -179,7 +179,66 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var readmePath = Path.Combine(root, "README.md");
-            RewriteApiTable(readmePath, catalog, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
+
+            var existing = File.ReadAllLines(readmePath).ToList();
+
+            string headerLine = "| Package | Latest version | Description |";
+            string headerNext = "|---------|----------------|-------------|";
+            int headerIndex = existing.IndexOf(headerLine);
+
+            if (headerIndex == -1)
+            {
+                throw new UserErrorException($"Header line for library table not found.");
+            }
+
+            var linesBefore = existing.Take(headerIndex).ToList();
+            var linesAfter = existing.Skip(headerIndex).SkipWhile(line => line.StartsWith("|")).ToList();
+
+            var table = new List<string>();
+            table.Add(headerLine);
+            table.Add(headerNext);
+
+            var ambiguousDescriptions = catalog.Apis
+                .Select(api => api.EffectiveListingDescription)
+                .GroupBy(description => description)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
+            foreach (var api in catalog.Apis)
+            {
+                // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
+                // We can cross that bridge when we come to it.
+                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
+                {
+                    continue;
+                }
+                string url = ApiMetadata.IsCloudPackage(api.Id)
+                    ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest"
+                    : $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}";
+                string packageLink = $"[{api.Id}]({url})";
+
+                // Disambiguate direct API packages for the same product.
+                string description = api.EffectiveListingDescription;
+                if (ambiguousDescriptions.Contains(description) && api.ApiVersion is string apiVersion)
+                {
+                    description += $" ({apiVersion} API)";
+                }
+
+                // TODO: It gets awkward when there are multiple description for the same product (e.g. Spanner).
+                // This is basically caused by conflating "link to product docs" with "package description", but
+                // in most cases that simplifies things. Never mind.
+                string productLink = api.ProductUrl is null
+                    ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
+                    : $"[{description}]({api.ProductUrl})";
+                table.Add($"| {packageLink} | {api.Version} | {productLink} |");
+            }
+
+            var newContent = linesBefore.Concat(table).Concat(linesAfter);
+            if (!existing.SequenceEqual(newContent))
+            {
+                File.WriteAllLines(readmePath, newContent);
+                Console.WriteLine($"Rewrote {Path.GetFileName(readmePath)}");
+            }
         }
 
         /// <summary>
@@ -244,70 +303,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
                 }
-            }
-        }
-
-        /// <summary>
-        /// README.md and docs/root/index.md use the same table, but with slightly different links. This
-        /// method is the common code, with a URL provider to indicate how to link to an API's documentation.
-        /// </summary>
-        private static void RewriteApiTable(string path, ApiCatalog catalog, Func<ApiMetadata, string> urlProvider)
-        {
-            var existing = File.ReadAllLines(path).ToList();
-
-            string headerLine = "| Package | Latest version | Description |";
-            string headerNext = "|---------|----------------|-------------|";
-            int headerIndex = existing.IndexOf(headerLine);
-
-            if (headerIndex == -1)
-            {
-                throw new UserErrorException($"Header line for library table not found.");
-            }
-
-            var linesBefore = existing.Take(headerIndex).ToList();
-            var linesAfter = existing.Skip(headerIndex).SkipWhile(line => line.StartsWith("|")).ToList();
-
-            var table = new List<string>();
-            table.Add(headerLine);
-            table.Add(headerNext);
-
-            var ambiguousDescriptions = catalog.Apis
-                .Select(api => api.EffectiveListingDescription)
-                .GroupBy(description => description)
-                .Where(g => g.Count() > 1)
-                .Select(g => g.Key)
-                .ToList();
-            foreach (var api in catalog.Apis)
-            {
-                // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
-                // We can cross that bridge when we come to it.
-                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
-                {
-                    continue;
-                }
-                string packageLink = $"[{api.Id}]({urlProvider(api)})";
-
-                // Disambiguate direct API packages for the same product.
-                string description = api.EffectiveListingDescription;
-                if (ambiguousDescriptions.Contains(description) && api.ApiVersion is string apiVersion)
-                {
-                    description += $" ({apiVersion} API)";
-                }
-
-                // TODO: It gets awkward when there are multiple description for the same product (e.g. Spanner).
-                // This is basically caused by conflating "link to product docs" with "package description", but
-                // in most cases that simplifies things. Never mind.
-                string productLink = api.ProductUrl is null
-                    ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
-                    : $"[{description}]({api.ProductUrl})";
-                table.Add($"| {packageLink} | {api.Version} | {productLink} |");
-            }
-
-            var newContent = linesBefore.Concat(table).Concat(linesAfter);
-            if (!existing.SequenceEqual(newContent))
-            {
-                File.WriteAllLines(path, newContent);
-                Console.WriteLine($"Rewrote {Path.GetFileName(path)}");
             }
         }
 
