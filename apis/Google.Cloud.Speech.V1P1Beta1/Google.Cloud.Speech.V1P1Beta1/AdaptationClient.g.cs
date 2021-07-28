@@ -370,7 +370,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -382,7 +382,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreatePhraseSet(new CreatePhraseSetRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PhraseSetId = phraseSetId ?? "",
+                PhraseSetId = gax::GaxPreconditions.CheckNotNullOrEmpty(phraseSetId, nameof(phraseSetId)),
                 PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
             }, callSettings);
 
@@ -400,7 +400,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -412,7 +412,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreatePhraseSetAsync(new CreatePhraseSetRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PhraseSetId = phraseSetId ?? "",
+                PhraseSetId = gax::GaxPreconditions.CheckNotNullOrEmpty(phraseSetId, nameof(phraseSetId)),
                 PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
             }, callSettings);
 
@@ -430,7 +430,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -455,7 +455,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -467,7 +467,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreatePhraseSet(new CreatePhraseSetRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PhraseSetId = phraseSetId ?? "",
+                PhraseSetId = gax::GaxPreconditions.CheckNotNullOrEmpty(phraseSetId, nameof(phraseSetId)),
                 PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
             }, callSettings);
 
@@ -485,7 +485,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -497,7 +497,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreatePhraseSetAsync(new CreatePhraseSetRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PhraseSetId = phraseSetId ?? "",
+                PhraseSetId = gax::GaxPreconditions.CheckNotNullOrEmpty(phraseSetId, nameof(phraseSetId)),
                 PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
             }, callSettings);
 
@@ -515,7 +515,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The phrase set to create.
         /// </param>
         /// <param name="phraseSetId">
-        /// The ID to use for the phrase set, which will become the final
+        /// Required. The ID to use for the phrase set, which will become the final
         /// component of the phrase set's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreateCustomClass(new CreateCustomClassRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                CustomClassId = customClassId ?? "",
+                CustomClassId = gax::GaxPreconditions.CheckNotNullOrEmpty(customClassId, nameof(customClassId)),
                 CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
             }, callSettings);
 
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreateCustomClassAsync(new CreateCustomClassRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                CustomClassId = customClassId ?? "",
+                CustomClassId = gax::GaxPreconditions.CheckNotNullOrEmpty(customClassId, nameof(customClassId)),
                 CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
             }, callSettings);
 
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreateCustomClass(new CreateCustomClassRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                CustomClassId = customClassId ?? "",
+                CustomClassId = gax::GaxPreconditions.CheckNotNullOrEmpty(customClassId, nameof(customClassId)),
                 CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
             }, callSettings);
 
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             CreateCustomClassAsync(new CreateCustomClassRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                CustomClassId = customClassId ?? "",
+                CustomClassId = gax::GaxPreconditions.CheckNotNullOrEmpty(customClassId, nameof(customClassId)),
                 CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
             }, callSettings);
 
@@ -1145,7 +1145,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Required. The custom class to create.
         /// </param>
         /// <param name="customClassId">
-        /// The ID to use for the custom class, which will become the final
+        /// Required. The ID to use for the custom class, which will become the final
         /// component of the custom class' resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters

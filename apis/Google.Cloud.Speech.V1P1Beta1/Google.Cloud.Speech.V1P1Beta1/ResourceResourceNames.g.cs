@@ -521,4 +521,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class SpeechAdaptation
+    {
+        /// <summary>
+        /// <see cref="PhraseSetName"/>-typed view over the <see cref="PhraseSetReferences"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PhraseSetName> PhraseSetReferencesAsPhraseSetNames
+        {
+            get => new gax::ResourceNameList<PhraseSetName>(PhraseSetReferences, s => string.IsNullOrEmpty(s) ? null : PhraseSetName.Parse(s, allowUnparsed: true));
+        }
+    }
 }
