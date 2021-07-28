@@ -10,7 +10,7 @@
     <PackageReference Include="Google.Cloud.Bigtable.V2" Version="0.2.0" />
     <PackageReference Include="Google.Cloud.Datastore.V1" Version="2.0.0" />
     <PackageReference Include="Google.Cloud.Debugger.V2" Version="1.0.0-alpha02" />
-    <PackageReference Include="Google.Cloud.Dlp.V2Beta1" Version="1.0.0-alpha03" />
+    <PackageReference Include="Google.Cloud.Dlp.V2Beta1" Version="1.0.0-alpha04" />
     <PackageReference Include="Google.Cloud.ErrorReporting.V1Beta1" Version="1.0.0-beta08" />
     <PackageReference Include="Google.Cloud.Language.V1" Version="1.0.0" />
     <PackageReference Include="Google.Cloud.Logging.V2" Version="1.0.0" />
