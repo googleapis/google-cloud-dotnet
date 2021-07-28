@@ -228,7 +228,7 @@
     },
     {
       "id": "Google.Cloud.Audit",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "targetFrameworks": "netstandard2.0;net461",
       "productName": "Google Cloud Audit",
       "productUrl": "https://cloud.google.com/logging/docs/audit",
