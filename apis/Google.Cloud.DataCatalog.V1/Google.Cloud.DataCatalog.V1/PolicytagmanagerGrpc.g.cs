@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
-  /// Policy Tag Manager API service allows clients to manage their policy tags and
+  /// Policy Tag Manager API service allows you to manage your policy tags and
   /// taxonomies.
   ///
   /// Policy tags are used to tag BigQuery columns and apply additional access
@@ -188,8 +188,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public abstract partial class PolicyTagManagerBase
     {
       /// <summary>
-      /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-      /// i.e., does not contain policy tags.
+      /// Creates a taxonomy in a specified project.
+      ///
+      /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -200,7 +201,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Deletes a taxonomy. This method will also delete all policy tags in this
+      /// Deletes a taxonomy, including all policy tags in this
       /// taxonomy, their associated policies, and the policy tags references from
       /// BigQuery columns.
       /// </summary>
@@ -213,7 +214,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Updates a taxonomy. This method can update the taxonomy's display name,
+      /// Updates a taxonomy, including its display name,
       /// description, and activated policy types.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -225,8 +226,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Lists all taxonomies in a project in a particular location that the caller
-      /// has permission to view.
+      /// Lists all taxonomies in a project in a particular location that you
+      /// have a permission to view.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -259,12 +260,12 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Deletes a policy tag. This method also deletes:
+      /// Deletes a policy tag together with the following:
       ///
-      /// * all of its descendant policy tags, if any
-      /// * the policies associated with the policy tag and its descendants
-      /// * references from BigQuery table schema of the policy tag and its
-      ///   descendants.
+      /// * All of its descendant policy tags, if any
+      /// * Policies associated with the policy tag and its descendants
+      /// * References from BigQuery table schema of the policy tag and its
+      ///   descendants
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -275,7 +276,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Updates a policy tag. This method can update the policy tag's display
+      /// Updates a policy tag, including its display
       /// name, description, and parent policy tag.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -331,7 +332,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Returns the permissions that a caller has on a specified policy tag or
+      /// Returns your permissions on a specified policy tag or
       /// taxonomy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -368,8 +369,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-      /// i.e., does not contain policy tags.
+      /// Creates a taxonomy in a specified project.
+      ///
+      /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -381,8 +383,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CreateTaxonomy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-      /// i.e., does not contain policy tags.
+      /// Creates a taxonomy in a specified project.
+      ///
+      /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -392,8 +395,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-      /// i.e., does not contain policy tags.
+      /// Creates a taxonomy in a specified project.
+      ///
+      /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,8 +409,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CreateTaxonomyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-      /// i.e., does not contain policy tags.
+      /// Creates a taxonomy in a specified project.
+      ///
+      /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -416,7 +421,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Deletes a taxonomy. This method will also delete all policy tags in this
+      /// Deletes a taxonomy, including all policy tags in this
       /// taxonomy, their associated policies, and the policy tags references from
       /// BigQuery columns.
       /// </summary>
@@ -430,7 +435,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return DeleteTaxonomy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a taxonomy. This method will also delete all policy tags in this
+      /// Deletes a taxonomy, including all policy tags in this
       /// taxonomy, their associated policies, and the policy tags references from
       /// BigQuery columns.
       /// </summary>
@@ -442,7 +447,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Deletes a taxonomy. This method will also delete all policy tags in this
+      /// Deletes a taxonomy, including all policy tags in this
       /// taxonomy, their associated policies, and the policy tags references from
       /// BigQuery columns.
       /// </summary>
@@ -456,7 +461,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return DeleteTaxonomyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a taxonomy. This method will also delete all policy tags in this
+      /// Deletes a taxonomy, including all policy tags in this
       /// taxonomy, their associated policies, and the policy tags references from
       /// BigQuery columns.
       /// </summary>
@@ -468,7 +473,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Updates a taxonomy. This method can update the taxonomy's display name,
+      /// Updates a taxonomy, including its display name,
       /// description, and activated policy types.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -481,7 +486,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return UpdateTaxonomy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a taxonomy. This method can update the taxonomy's display name,
+      /// Updates a taxonomy, including its display name,
       /// description, and activated policy types.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -492,7 +497,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Updates a taxonomy. This method can update the taxonomy's display name,
+      /// Updates a taxonomy, including its display name,
       /// description, and activated policy types.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -505,7 +510,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return UpdateTaxonomyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a taxonomy. This method can update the taxonomy's display name,
+      /// Updates a taxonomy, including its display name,
       /// description, and activated policy types.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -516,8 +521,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTaxonomy, null, options, request);
       }
       /// <summary>
-      /// Lists all taxonomies in a project in a particular location that the caller
-      /// has permission to view.
+      /// Lists all taxonomies in a project in a particular location that you
+      /// have a permission to view.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -529,8 +534,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ListTaxonomies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all taxonomies in a project in a particular location that the caller
-      /// has permission to view.
+      /// Lists all taxonomies in a project in a particular location that you
+      /// have a permission to view.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -540,8 +545,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTaxonomies, null, options, request);
       }
       /// <summary>
-      /// Lists all taxonomies in a project in a particular location that the caller
-      /// has permission to view.
+      /// Lists all taxonomies in a project in a particular location that you
+      /// have a permission to view.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -553,8 +558,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ListTaxonomiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all taxonomies in a project in a particular location that the caller
-      /// has permission to view.
+      /// Lists all taxonomies in a project in a particular location that you
+      /// have a permission to view.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -652,12 +657,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePolicyTag, null, options, request);
       }
       /// <summary>
-      /// Deletes a policy tag. This method also deletes:
+      /// Deletes a policy tag together with the following:
       ///
-      /// * all of its descendant policy tags, if any
-      /// * the policies associated with the policy tag and its descendants
-      /// * references from BigQuery table schema of the policy tag and its
-      ///   descendants.
+      /// * All of its descendant policy tags, if any
+      /// * Policies associated with the policy tag and its descendants
+      /// * References from BigQuery table schema of the policy tag and its
+      ///   descendants
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -669,12 +674,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return DeletePolicyTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a policy tag. This method also deletes:
+      /// Deletes a policy tag together with the following:
       ///
-      /// * all of its descendant policy tags, if any
-      /// * the policies associated with the policy tag and its descendants
-      /// * references from BigQuery table schema of the policy tag and its
-      ///   descendants.
+      /// * All of its descendant policy tags, if any
+      /// * Policies associated with the policy tag and its descendants
+      /// * References from BigQuery table schema of the policy tag and its
+      ///   descendants
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -684,12 +689,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePolicyTag, null, options, request);
       }
       /// <summary>
-      /// Deletes a policy tag. This method also deletes:
+      /// Deletes a policy tag together with the following:
       ///
-      /// * all of its descendant policy tags, if any
-      /// * the policies associated with the policy tag and its descendants
-      /// * references from BigQuery table schema of the policy tag and its
-      ///   descendants.
+      /// * All of its descendant policy tags, if any
+      /// * Policies associated with the policy tag and its descendants
+      /// * References from BigQuery table schema of the policy tag and its
+      ///   descendants
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -701,12 +706,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return DeletePolicyTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a policy tag. This method also deletes:
+      /// Deletes a policy tag together with the following:
       ///
-      /// * all of its descendant policy tags, if any
-      /// * the policies associated with the policy tag and its descendants
-      /// * references from BigQuery table schema of the policy tag and its
-      ///   descendants.
+      /// * All of its descendant policy tags, if any
+      /// * Policies associated with the policy tag and its descendants
+      /// * References from BigQuery table schema of the policy tag and its
+      ///   descendants
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -716,7 +721,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePolicyTag, null, options, request);
       }
       /// <summary>
-      /// Updates a policy tag. This method can update the policy tag's display
+      /// Updates a policy tag, including its display
       /// name, description, and parent policy tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -729,7 +734,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return UpdatePolicyTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a policy tag. This method can update the policy tag's display
+      /// Updates a policy tag, including its display
       /// name, description, and parent policy tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -740,7 +745,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdatePolicyTag, null, options, request);
       }
       /// <summary>
-      /// Updates a policy tag. This method can update the policy tag's display
+      /// Updates a policy tag, including its display
       /// name, description, and parent policy tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -753,7 +758,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return UpdatePolicyTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a policy tag. This method can update the policy tag's display
+      /// Updates a policy tag, including its display
       /// name, description, and parent policy tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -940,7 +945,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified policy tag or
+      /// Returns your permissions on a specified policy tag or
       /// taxonomy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -953,7 +958,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified policy tag or
+      /// Returns your permissions on a specified policy tag or
       /// taxonomy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -964,7 +969,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified policy tag or
+      /// Returns your permissions on a specified policy tag or
       /// taxonomy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -977,7 +982,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the permissions that a caller has on a specified policy tag or
+      /// Returns your permissions on a specified policy tag or
       /// taxonomy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

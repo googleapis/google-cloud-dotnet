@@ -99,17 +99,18 @@ namespace Google.Cloud.DataCatalog.V1 {
     private readonly pbc::RepeatedField<string> filePatterns_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. Patterns to identify a set of files in Google Cloud Storage.
-    /// See [Cloud Storage
-    /// documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
-    /// for more information. Note that bucket wildcards are currently not
-    /// supported.
     ///
-    /// Examples of valid file_patterns:
+    /// For more information, see [Wildcard Names]
+    /// (https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames).
     ///
-    ///  * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir`
-    ///                              directory.
+    /// Note: Currently, bucket wildcards are not supported.
+    ///
+    /// Examples of valid `file_patterns`:
+    ///
+    ///  * `gs://bucket_name/dir/*`: matches all files in `bucket_name/dir`
+    ///                              directory
     ///  * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir`
-    ///                               spanning all subdirectories.
+    ///                               and all subdirectories
     ///  * `gs://bucket_name/file*`: matches files prefixed by `file` in
     ///                              `bucket_name`
     ///  * `gs://bucket_name/??.txt`: matches files with two characters followed by
@@ -120,12 +121,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     ///  * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ...
     ///                                  or `m` followed by `.txt` in `bucket_name`
     ///  * `gs://bucket_name/a/*/b`: matches all files in `bucket_name` that match
-    ///                              `a/*/b` pattern, such as `a/c/b`, `a/d/b`
+    ///                              the `a/*/b` pattern, such as `a/c/b`, `a/d/b`
     ///  * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt`
     ///
-    /// You can combine wildcards to provide more powerful matches, for example:
+    /// You can combine wildcards to match complex sets of files, for example:
     ///
-    ///  * `gs://bucket_name/[a-m]??.j*g`
+    /// `gs://bucket_name/[a-m]??.j*g`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FilePatterns {
@@ -274,7 +275,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Specifications of a single file in Cloud Storage.
+  /// Specification of a single file in Cloud Storage.
   /// </summary>
   public sealed partial class GcsFileSpec : pb::IMessage<GcsFileSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -320,7 +321,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int FilePathFieldNumber = 1;
     private string filePath_ = "";
     /// <summary>
-    /// Required. The full file path. Example: `gs://bucket_name/a/b.txt`.
+    /// Required. Full file path. Example: `gs://bucket_name/a/b.txt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FilePath {
@@ -334,7 +335,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int GcsTimestampsFieldNumber = 2;
     private global::Google.Cloud.DataCatalog.V1.SystemTimestamps gcsTimestamps_;
     /// <summary>
-    /// Output only. Timestamps about the Cloud Storage file.
+    /// Output only. Creation, modification, and expiration timestamps of a Cloud Storage file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SystemTimestamps GcsTimestamps {
@@ -348,7 +349,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int SizeBytesFieldNumber = 4;
     private long sizeBytes_;
     /// <summary>
-    /// Output only. The size of the file, in bytes.
+    /// Output only. File size in bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long SizeBytes {

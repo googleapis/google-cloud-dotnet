@@ -39,46 +39,55 @@ namespace Google.Cloud.DataCatalog.V1 {
             "CnBvbGljeV90YWcYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
             "EwoLZGVzY3JpcHRpb24YAyABKAkSSwoRY2hpbGRfcG9saWN5X3RhZ3MYBCAD",
             "KAsyMC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU2VyaWFsaXplZFBv",
-            "bGljeVRhZyL3AQoXSW1wb3J0VGF4b25vbWllc1JlcXVlc3QSOwoGcGFyZW50",
-            "GAEgASgJQivgQQL6QSUSI2RhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1Rh",
-            "eG9ub215EkIKDWlubGluZV9zb3VyY2UYAiABKAsyKS5nb29nbGUuY2xvdWQu",
-            "ZGF0YWNhdGFsb2cudjEuSW5saW5lU291cmNlSAASUQoVY3Jvc3NfcmVnaW9u",
-            "YWxfc291cmNlGAMgASgLMjAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
-            "LkNyb3NzUmVnaW9uYWxTb3VyY2VIAEIICgZzb3VyY2UiWAoMSW5saW5lU291",
-            "cmNlEkgKCnRheG9ub21pZXMYASADKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNh",
-            "dGFsb2cudjEuU2VyaWFsaXplZFRheG9ub215QgPgQQIiVAoTQ3Jvc3NSZWdp",
-            "b25hbFNvdXJjZRI9Cgh0YXhvbm9teRgBIAEoCUIr4EEC+kElCiNkYXRhY2F0",
-            "YWxvZy5nb29nbGVhcGlzLmNvbS9UYXhvbm9teSJVChhJbXBvcnRUYXhvbm9t",
-            "aWVzUmVzcG9uc2USOQoKdGF4b25vbWllcxgBIAMoCzIlLmdvb2dsZS5jbG91",
-            "ZC5kYXRhY2F0YWxvZy52MS5UYXhvbm9teSLHAQoXRXhwb3J0VGF4b25vbWll",
-            "c1JlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI2RhdGFjYXRhbG9n",
-            "Lmdvb2dsZWFwaXMuY29tL1RheG9ub215Ej8KCnRheG9ub21pZXMYAiADKAlC",
-            "K+BBAvpBJQojZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGF4b25vbXkS",
-            "HwoVc2VyaWFsaXplZF90YXhvbm9taWVzGAMgASgISABCDQoLZGVzdGluYXRp",
-            "b24iXwoYRXhwb3J0VGF4b25vbWllc1Jlc3BvbnNlEkMKCnRheG9ub21pZXMY",
-            "ASADKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU2VyaWFsaXpl",
-            "ZFRheG9ub215MvQDCh1Qb2xpY3lUYWdNYW5hZ2VyU2VyaWFsaXphdGlvbhLB",
-            "AQoQSW1wb3J0VGF4b25vbWllcxI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MS5JbXBvcnRUYXhvbm9taWVzUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5k",
-            "YXRhY2F0YWxvZy52MS5JbXBvcnRUYXhvbm9taWVzUmVzcG9uc2UiQILT5JMC",
-            "OiI1L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdGF4b25v",
-            "bWllczppbXBvcnQ6ASoSvgEKEEV4cG9ydFRheG9ub21pZXMSNC5nb29nbGUu",
-            "Y2xvdWQuZGF0YWNhdGFsb2cudjEuRXhwb3J0VGF4b25vbWllc1JlcXVlc3Qa",
-            "NS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRXhwb3J0VGF4b25vbWll",
-            "c1Jlc3BvbnNlIj2C0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L3RheG9ub21pZXM6ZXhwb3J0Gk7KQRpkYXRhY2F0YWxvZy5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1C7wEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNh",
-            "dGFsb2cudjFCIlBvbGljeVRhZ01hbmFnZXJTZXJpYWxpemF0aW9uUHJvdG9Q",
-            "AVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9kYXRhY2F0YWxvZy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91",
-            "ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xW",
-            "MeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "bGljeVRhZyKmAQoWUmVwbGFjZVRheG9ub215UmVxdWVzdBI5CgRuYW1lGAEg",
+            "ASgJQivgQQL6QSUKI2RhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RheG9u",
+            "b215ElEKE3NlcmlhbGl6ZWRfdGF4b25vbXkYAiABKAsyLy5nb29nbGUuY2xv",
+            "dWQuZGF0YWNhdGFsb2cudjEuU2VyaWFsaXplZFRheG9ub215QgPgQQIi9wEK",
+            "F0ltcG9ydFRheG9ub21pZXNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC",
+            "+kElEiNkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYXhvbm9teRJCCg1p",
+            "bmxpbmVfc291cmNlGAIgASgLMikuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
+            "LnYxLklubGluZVNvdXJjZUgAElEKFWNyb3NzX3JlZ2lvbmFsX3NvdXJjZRgD",
+            "IAEoCzIwLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5Dcm9zc1JlZ2lv",
+            "bmFsU291cmNlSABCCAoGc291cmNlIlgKDElubGluZVNvdXJjZRJICgp0YXhv",
+            "bm9taWVzGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNl",
+            "cmlhbGl6ZWRUYXhvbm9teUID4EECIlQKE0Nyb3NzUmVnaW9uYWxTb3VyY2US",
+            "PQoIdGF4b25vbXkYASABKAlCK+BBAvpBJQojZGF0YWNhdGFsb2cuZ29vZ2xl",
+            "YXBpcy5jb20vVGF4b25vbXkiVQoYSW1wb3J0VGF4b25vbWllc1Jlc3BvbnNl",
+            "EjkKCnRheG9ub21pZXMYASADKAsyJS5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
+            "b2cudjEuVGF4b25vbXkixwEKF0V4cG9ydFRheG9ub21pZXNSZXF1ZXN0EjsK",
+            "BnBhcmVudBgBIAEoCUIr4EEC+kElEiNkYXRhY2F0YWxvZy5nb29nbGVhcGlz",
+            "LmNvbS9UYXhvbm9teRI/Cgp0YXhvbm9taWVzGAIgAygJQivgQQL6QSUKI2Rh",
+            "dGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RheG9ub215Eh8KFXNlcmlhbGl6",
+            "ZWRfdGF4b25vbWllcxgDIAEoCEgAQg0KC2Rlc3RpbmF0aW9uIl8KGEV4cG9y",
+            "dFRheG9ub21pZXNSZXNwb25zZRJDCgp0YXhvbm9taWVzGAEgAygLMi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNlcmlhbGl6ZWRUYXhvbm9teTKn",
+            "BQodUG9saWN5VGFnTWFuYWdlclNlcmlhbGl6YXRpb24SsAEKD1JlcGxhY2VU",
+            "YXhvbm9teRIzLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5SZXBsYWNl",
+            "VGF4b25vbXlSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "LlRheG9ub215IkGC0+STAjsiNi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3RheG9ub21pZXMvKn06cmVwbGFjZToBKhLBAQoQSW1wb3J0VGF4",
+            "b25vbWllcxI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbXBvcnRU",
+            "YXhvbm9taWVzUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MS5JbXBvcnRUYXhvbm9taWVzUmVzcG9uc2UiQILT5JMCOiI1L3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdGF4b25vbWllczppbXBvcnQ6",
+            "ASoSvgEKEEV4cG9ydFRheG9ub21pZXMSNC5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjEuRXhwb3J0VGF4b25vbWllc1JlcXVlc3QaNS5nb29nbGUuY2xv",
+            "dWQuZGF0YWNhdGFsb2cudjEuRXhwb3J0VGF4b25vbWllc1Jlc3BvbnNlIj2C",
+            "0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Rh",
+            "eG9ub21pZXM6ZXhwb3J0Gk7KQRpkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1C7wEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFCIlBv",
+            "bGljeVRhZ01hbmFnZXJTZXJpYWxpemF0aW9uUHJvdG9QAVpGZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxv",
+            "Zy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxv",
+            "Zy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6",
+            "Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.PolicytagmanagerReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy), global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy.Parser, new[]{ "DisplayName", "Description", "PolicyTags", "ActivatedPolicyTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SerializedPolicyTag), global::Google.Cloud.DataCatalog.V1.SerializedPolicyTag.Parser, new[]{ "PolicyTag", "DisplayName", "Description", "ChildPolicyTags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest), global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest.Parser, new[]{ "Name", "SerializedTaxonomy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest), global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest.Parser, new[]{ "Parent", "InlineSource", "CrossRegionalSource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.InlineSource), global::Google.Cloud.DataCatalog.V1.InlineSource.Parser, new[]{ "Taxonomies" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.CrossRegionalSource), global::Google.Cloud.DataCatalog.V1.CrossRegionalSource.Parser, new[]{ "Taxonomy" }, null, null, null, null),
@@ -92,8 +101,9 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Messages
   /// <summary>
-  /// Message representing a taxonomy, including its policy tags in hierarchy, as a
-  /// nested proto. Used for taxonomy replacement, import, and export.
+  /// A nested protocol buffer that represents a taxonomy and the hierarchy of its
+  /// policy tags. Used for taxonomy replacement, import, and
+  /// export.
   /// </summary>
   public sealed partial class SerializedTaxonomy : pb::IMessage<SerializedTaxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -154,8 +164,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Description of the serialized taxonomy. At most 2000 bytes when encoded in
-    /// UTF-8. If not set, defaults to an empty description.
+    /// Description of the serialized taxonomy. At most 2000 bytes when
+    /// encoded in UTF-8. If not set, defaults to an empty description.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -369,8 +379,8 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Message representing one policy tag, including all its descendant policy
-  /// tags, as a nested proto.
+  /// A nested protocol buffer that represents a policy tag and all its
+  /// descendants.
   /// </summary>
   public sealed partial class SerializedPolicyTag : pb::IMessage<SerializedPolicyTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -419,7 +429,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Resource name of the policy tag.
     ///
-    /// This field will be ignored when calling ImportTaxonomies.
+    /// This field is ignored when calling `ImportTaxonomies`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PolicyTag {
@@ -433,7 +443,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. Display name of the policy tag. At most 200 bytes when encoded in UTF-8.
+    /// Required. Display name of the policy tag. At most 200 bytes when encoded
+    /// in UTF-8.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -447,8 +458,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Description of the serialized policy tag. The length of the description is
-    /// limited to 2000 bytes when encoded in UTF-8. If not set, defaults to an
+    /// Description of the serialized policy tag. At most
+    /// 2000 bytes when encoded in UTF-8. If not set, defaults to an
     /// empty description.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -659,6 +670,233 @@ namespace Google.Cloud.DataCatalog.V1 {
 
   /// <summary>
   /// Request message for
+  /// [ReplaceTaxonomy][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ReplaceTaxonomy].
+  /// </summary>
+  public sealed partial class ReplaceTaxonomyRequest : pb::IMessage<ReplaceTaxonomyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReplaceTaxonomyRequest> _parser = new pb::MessageParser<ReplaceTaxonomyRequest>(() => new ReplaceTaxonomyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReplaceTaxonomyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceTaxonomyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceTaxonomyRequest(ReplaceTaxonomyRequest other) : this() {
+      name_ = other.name_;
+      serializedTaxonomy_ = other.serializedTaxonomy_ != null ? other.serializedTaxonomy_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceTaxonomyRequest Clone() {
+      return new ReplaceTaxonomyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of the taxonomy to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "serialized_taxonomy" field.</summary>
+    public const int SerializedTaxonomyFieldNumber = 2;
+    private global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy serializedTaxonomy_;
+    /// <summary>
+    /// Required. Taxonomy to update along with its child policy tags.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy SerializedTaxonomy {
+      get { return serializedTaxonomy_; }
+      set {
+        serializedTaxonomy_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReplaceTaxonomyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReplaceTaxonomyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(SerializedTaxonomy, other.SerializedTaxonomy)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (serializedTaxonomy_ != null) hash ^= SerializedTaxonomy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (serializedTaxonomy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SerializedTaxonomy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (serializedTaxonomy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SerializedTaxonomy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (serializedTaxonomy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SerializedTaxonomy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReplaceTaxonomyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.serializedTaxonomy_ != null) {
+        if (serializedTaxonomy_ == null) {
+          SerializedTaxonomy = new global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy();
+        }
+        SerializedTaxonomy.MergeFrom(other.SerializedTaxonomy);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (serializedTaxonomy_ == null) {
+              SerializedTaxonomy = new global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy();
+            }
+            input.ReadMessage(SerializedTaxonomy);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (serializedTaxonomy_ == null) {
+              SerializedTaxonomy = new global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy();
+            }
+            input.ReadMessage(SerializedTaxonomy);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
   /// [ImportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ImportTaxonomies].
   /// </summary>
   public sealed partial class ImportTaxonomiesRequest : pb::IMessage<ImportTaxonomiesRequest>
@@ -673,7 +911,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -725,7 +963,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "inline_source" field.</summary>
     public const int InlineSourceFieldNumber = 2;
     /// <summary>
-    /// Inline source used for taxonomies import.
+    /// Inline source taxonomy to import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.InlineSource InlineSource {
@@ -739,7 +977,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "cross_regional_source" field.</summary>
     public const int CrossRegionalSourceFieldNumber = 3;
     /// <summary>
-    /// Cross-regional source taxonomy to be imported.
+    /// Cross-regional source taxonomy to import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.CrossRegionalSource CrossRegionalSource {
@@ -986,7 +1224,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1018,7 +1256,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy> taxonomies_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy>();
     /// <summary>
-    /// Required. Taxonomies to be imported.
+    /// Required. Taxonomies to import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy> Taxonomies {
@@ -1154,7 +1392,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1184,7 +1422,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int TaxonomyFieldNumber = 1;
     private string taxonomy_ = "";
     /// <summary>
-    /// Required. The resource name of the source taxonomy to be imported.
+    /// Required. The resource name of the source taxonomy to import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Taxonomy {
@@ -1333,7 +1571,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1365,7 +1603,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.V1.Taxonomy.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Taxonomy> taxonomies_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Taxonomy>();
     /// <summary>
-    /// Taxonomies that were imported.
+    /// Imported taxonomies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Taxonomy> Taxonomies {
@@ -1501,7 +1739,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1554,7 +1792,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> taxonomies_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Resource names of the taxonomies to be exported.
+    /// Required. Resource names of the taxonomies to export.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Taxonomies {
@@ -1564,8 +1802,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "serialized_taxonomies" field.</summary>
     public const int SerializedTaxonomiesFieldNumber = 3;
     /// <summary>
-    /// Export taxonomies as serialized taxonomies, which contain all the policy
-    /// tags as nested protos.
+    /// Serialized export taxonomies that contain all the policy
+    /// tags as nested protocol buffers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SerializedTaxonomies {
@@ -1776,7 +2014,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.DataCatalog.V1.PolicytagmanagerserializationReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1808,7 +2046,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy> taxonomies_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy>();
     /// <summary>
-    /// List of taxonomies and policy tags as nested protos.
+    /// List of taxonomies and policy tags as nested protocol buffers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.SerializedTaxonomy> Taxonomies {
