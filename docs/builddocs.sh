@@ -58,6 +58,9 @@ build_api_docs() {
   # Add canonical links where appropriate
   dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateCanonicalLinks -- $api
 
+  # We need to make some changes to meet DevSite build expectations.
+  dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.PostProcessDevSite -- $api
+  
   echo Finished building docs for $api
 }
 
