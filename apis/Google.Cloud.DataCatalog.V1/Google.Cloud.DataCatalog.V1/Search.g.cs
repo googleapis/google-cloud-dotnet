@@ -55,7 +55,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Enums
   /// <summary>
-  /// The different types of resources that can be returned in search.
+  /// The resource types that can be returned in search results.
   /// </summary>
   public enum SearchResultType {
     /// <summary>
@@ -80,8 +80,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
   #region Messages
   /// <summary>
-  /// A result that appears in the response of a search request. Each result
-  /// captures details of one entry that matches the search.
+  /// Result in the response to a search request.
+  ///
+  /// Each result captures details of one entry that matches the search.
   /// </summary>
   public sealed partial class SearchCatalogResult : pb::IMessage<SearchCatalogResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -139,8 +140,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int SearchResultTypeFieldNumber = 1;
     private global::Google.Cloud.DataCatalog.V1.SearchResultType searchResultType_ = global::Google.Cloud.DataCatalog.V1.SearchResultType.Unspecified;
     /// <summary>
-    /// Type of the search result. This field can be used to determine which Get
-    /// method to call to fetch the full resource.
+    /// Type of the search result.
+    ///
+    /// You can use this field to determine which get method to call to fetch the
+    /// full resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SearchResultType SearchResultType {
@@ -154,10 +157,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int SearchResultSubtypeFieldNumber = 2;
     private string searchResultSubtype_ = "";
     /// <summary>
-    /// Sub-type of the search result. This is a dot-delimited description of the
-    /// resource's full type, and is the same as the value callers would provide in
-    /// the "type" search facet.  Examples: `entry.table`, `entry.dataStream`,
-    /// `tagTemplate`.
+    /// Sub-type of the search result.
+    ///
+    /// A dot-delimited full type of the resource. The same type you
+    /// specify in the `type` search predicate.
+    ///
+    /// Examples: `entry.table`, `entry.dataStream`, `tagTemplate`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SearchResultSubtype {
@@ -171,11 +176,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int RelativeResourceNameFieldNumber = 3;
     private string relativeResourceName_ = "";
     /// <summary>
-    /// The relative resource name of the resource in URL format.
+    /// The relative name of the resource in URL format.
+    ///
     /// Examples:
     ///
-    ///  * `projects/{project_id}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
-    ///  * `projects/{project_id}/tagTemplates/{tag_template_id}`
+    ///  * `projects/{PROJECT_ID}/locations/{LOCATION_ID}/entryGroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`
+    ///  * `projects/{PROJECT_ID}/tagTemplates/{TAG_TEMPLATE_ID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RelativeResourceName {
@@ -189,11 +195,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int LinkedResourceFieldNumber = 4;
     private string linkedResource_ = "";
     /// <summary>
-    /// The full name of the cloud resource the entry belongs to. See:
-    /// https://cloud.google.com/apis/design/resource_names#full_resource_name.
+    /// The full name of the Google Cloud resource the entry belongs to.
+    ///
+    /// For more information, see [Full Resource Name]
+    /// (/apis/design/resource_names#full_resource_name).
+    ///
     /// Example:
     ///
-    ///  * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
+    /// `//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LinkedResource {
@@ -207,7 +216,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ModifyTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp modifyTime_;
     /// <summary>
-    /// Last-modified timestamp of the entry from the managing system.
+    /// The last modification timestamp of the entry in the source system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ModifyTime {
@@ -220,8 +229,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "integrated_system" field.</summary>
     public const int IntegratedSystemFieldNumber = 8;
     /// <summary>
-    /// Output only. This field indicates the entry's source system that Data Catalog
-    /// integrates with, such as BigQuery or Cloud Pub/Sub.
+    /// Output only. The source system that Data Catalog automatically integrates  with, such
+    /// as BigQuery, Cloud Pub/Sub, or Dataproc Metastore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.IntegratedSystem IntegratedSystem {
@@ -235,8 +244,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "user_specified_system" field.</summary>
     public const int UserSpecifiedSystemFieldNumber = 9;
     /// <summary>
-    /// This field indicates the entry's source system that Data Catalog does not
-    /// integrate with.
+    /// Custom source system that you can manually integrate Data Catalog with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserSpecifiedSystem {
@@ -251,15 +259,21 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int FullyQualifiedNameFieldNumber = 10;
     private string fullyQualifiedName_ = "";
     /// <summary>
-    /// Fully Qualified Name of the resource.
-    /// There are two main forms of FQNs:
-    /// {system}:{project}.{dot-separated path to resource}
-    ///     for non-regionalized resources
-    /// {system}:{project}.{location id}.{dot-separated path to resource}
-    ///     for regionalized resources
-    /// Examples:
-    /// * dataproc_metastore:projectId.locationId.instanceId.databaseId.tableId
-    /// * bigquery:table.project_id.dataset_id.table_id
+    /// Fully qualified name (FQN) of the resource.
+    ///
+    /// FQNs take two forms:
+    ///
+    /// * For non-regionalized resources:
+    ///
+    ///   `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}`
+    ///
+    /// * For regionalized resources:
+    ///
+    ///   `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}`
+    ///
+    /// Example for a DPMS table:
+    ///
+    /// `dataproc_metastore:PROJECT_ID.LOCATION_ID.INSTANCE_ID.DATABASE_ID.TABLE_ID`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FullyQualifiedName {

@@ -47,7 +47,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Messages
   /// <summary>
-  /// Timestamps about this resource according to a particular system.
+  /// Timestamps associated with this resource in a particular system.
   /// </summary>
   public sealed partial class SystemTimestamps : pb::IMessage<SystemTimestamps>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -93,7 +93,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int CreateTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The creation time of the resource within the given system.
+    /// Creation timestamp of the resource within the given system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -107,7 +107,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int UpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// The last-modified time of the resource within the given system.
+    /// Timestamp of the last modification of the resource or its metadata within
+    /// a given system.
+    ///
+    /// Note: Depending on the source system, not every modification updates this
+    /// timestamp.
+    /// For example, BigQuery timestamps every metadata modification but not data
+    /// or permission changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -121,8 +127,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ExpireTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. The expiration time of the resource within the given system.
-    /// Currently only apllicable to BigQuery resources.
+    /// Output only. Expiration timestamp of the resource within the given system.
+    ///
+    /// Currently only applicable to BigQuery resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {

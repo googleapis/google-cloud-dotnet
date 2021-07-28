@@ -28,298 +28,325 @@ namespace Google.Cloud.DataCatalog.V1 {
             "dG8SG2dvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MRocZ29vZ2xlL2FwaS9h",
             "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
-            "b3VyY2UucHJvdG8aKGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9jb21t",
-            "b24ucHJvdG8aLWdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9kYXRhX3Nv",
-            "dXJjZS5wcm90bxoyZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL2djc19m",
-            "aWxlc2V0X3NwZWMucHJvdG8aKGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92",
-            "MS9zY2hlbWEucHJvdG8aKGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9z",
-            "ZWFyY2gucHJvdG8aLGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS90YWJs",
-            "ZV9zcGVjLnByb3RvGiZnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvdGFn",
-            "cy5wcm90bxosZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL3RpbWVzdGFt",
-            "cHMucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29v",
-            "Z2xlL2lhbS92MS9wb2xpY3kucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0",
-            "eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ivQIKFFNlYXJjaENhdGFs",
-            "b2dSZXF1ZXN0EksKBXNjb3BlGAYgASgLMjcuZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLlNlYXJjaENhdGFsb2dSZXF1ZXN0LlNjb3BlQgPgQQISEgoF",
-            "cXVlcnkYASABKAlCA+BBARIRCglwYWdlX3NpemUYAiABKAUSFwoKcGFnZV90",
-            "b2tlbhgDIAEoCUID4EEBEhAKCG9yZGVyX2J5GAUgASgJGoUBCgVTY29wZRIX",
-            "Cg9pbmNsdWRlX29yZ19pZHMYAiADKAkSGwoTaW5jbHVkZV9wcm9qZWN0X2lk",
-            "cxgDIAMoCRIjChtpbmNsdWRlX2djcF9wdWJsaWNfZGF0YXNldHMYByABKAgS",
-            "IQoUcmVzdHJpY3RlZF9sb2NhdGlvbnMYECADKAlCA+BBASKIAQoVU2VhcmNo",
-            "Q2F0YWxvZ1Jlc3BvbnNlEkEKB3Jlc3VsdHMYASADKAsyMC5nb29nbGUuY2xv",
-            "dWQuZGF0YWNhdGFsb2cudjEuU2VhcmNoQ2F0YWxvZ1Jlc3VsdBIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAyABKAkSEwoLdW5yZWFjaGFibGUYBiADKAkiswEKF0Ny",
-            "ZWF0ZUVudHJ5R3JvdXBSZXF1ZXN0Ej0KBnBhcmVudBgBIAEoCUIt4EEC+kEn",
-            "EiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3VwEhsKDmVu",
-            "dHJ5X2dyb3VwX2lkGAMgASgJQgPgQQISPAoLZW50cnlfZ3JvdXAYAiABKAsy",
-            "Jy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRW50cnlHcm91cCKNAQoX",
-            "VXBkYXRlRW50cnlHcm91cFJlcXVlc3QSQQoLZW50cnlfZ3JvdXAYASABKAsy",
-            "Jy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRW50cnlHcm91cEID4EEC",
-            "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
-            "TWFzayKCAQoUR2V0RW50cnlHcm91cFJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt",
-            "4EEC+kEnCiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3Vw",
-            "Ei0KCXJlYWRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2siagoXRGVsZXRlRW50cnlHcm91cFJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt",
-            "4EEC+kEnCiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3Vw",
-            "EhIKBWZvcmNlGAIgASgIQgPgQQEiiAEKFkxpc3RFbnRyeUdyb3Vwc1JlcXVl",
-            "c3QSPQoGcGFyZW50GAEgASgJQi3gQQL6QScKJWRhdGFjYXRhbG9nLmdvb2ds",
-            "ZWFwaXMuY29tL0VudHJ5R3JvdXASFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBInEKF0xpc3RFbnRyeUdyb3Vwc1Jl",
-            "c3BvbnNlEj0KDGVudHJ5X2dyb3VwcxgBIAMoCzInLmdvb2dsZS5jbG91ZC5k",
-            "YXRhY2F0YWxvZy52MS5FbnRyeUdyb3VwEhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCSKiAQoSQ3JlYXRlRW50cnlSZXF1ZXN0Ej0KBnBhcmVudBgBIAEoCUIt",
-            "4EEC+kEnCiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3Vw",
-            "EhUKCGVudHJ5X2lkGAMgASgJQgPgQQISNgoFZW50cnkYAiABKAsyIi5nb29n",
-            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRW50cnlCA+BBAiJ9ChJVcGRhdGVF",
-            "bnRyeVJlcXVlc3QSNgoFZW50cnkYASABKAsyIi5nb29nbGUuY2xvdWQuZGF0",
-            "YWNhdGFsb2cudjEuRW50cnlCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siTAoSRGVsZXRlRW50cnlSZXF1",
-            "ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogZGF0YWNhdGFsb2cuZ29vZ2xl",
-            "YXBpcy5jb20vRW50cnkiSQoPR2V0RW50cnlSZXF1ZXN0EjYKBG5hbWUYASAB",
-            "KAlCKOBBAvpBIgogZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnki",
-            "dgoSTG9va3VwRW50cnlSZXF1ZXN0EhkKD2xpbmtlZF9yZXNvdXJjZRgBIAEo",
-            "CUgAEhYKDHNxbF9yZXNvdXJjZRgDIAEoCUgAEh4KFGZ1bGx5X3F1YWxpZmll",
-            "ZF9uYW1lGAUgASgJSABCDQoLdGFyZ2V0X25hbWUioggKBUVudHJ5EjsKBG5h",
-            "bWUYASABKAlCLeBBA/pBJwolZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20v",
-            "RW50cnlHcm91cBIXCg9saW5rZWRfcmVzb3VyY2UYCSABKAkSHAoUZnVsbHlf",
-            "cXVhbGlmaWVkX25hbWUYHSABKAkSNgoEdHlwZRgCIAEoDjImLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeVR5cGVIABIdChN1c2VyX3NwZWNp",
-            "ZmllZF90eXBlGBAgASgJSAASTwoRaW50ZWdyYXRlZF9zeXN0ZW0YESABKA4y",
-            "LS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuSW50ZWdyYXRlZFN5c3Rl",
-            "bUID4EEDSAESHwoVdXNlcl9zcGVjaWZpZWRfc3lzdGVtGBIgASgJSAESRwoQ",
-            "Z2NzX2ZpbGVzZXRfc3BlYxgGIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5HY3NGaWxlc2V0U3BlY0gCEk0KE2JpZ3F1ZXJ5X3RhYmxlX3Nw",
-            "ZWMYDCABKAsyLi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQmlnUXVl",
-            "cnlUYWJsZVNwZWNIAhJaChpiaWdxdWVyeV9kYXRlX3NoYXJkZWRfc3BlYxgP",
-            "IAEoCzI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5CaWdRdWVyeURh",
-            "dGVTaGFyZGVkU3BlY0gCEk0KE2RhdGFiYXNlX3RhYmxlX3NwZWMYGCABKAsy",
-            "Li5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRGF0YWJhc2VUYWJsZVNw",
-            "ZWNIAxIUCgxkaXNwbGF5X25hbWUYAyABKAkSEwoLZGVzY3JpcHRpb24YBCAB",
-            "KAkSMwoGc2NoZW1hGAUgASgLMiMuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLlNjaGVtYRJPChhzb3VyY2Vfc3lzdGVtX3RpbWVzdGFtcHMYByABKAsy",
-            "LS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU3lzdGVtVGltZXN0YW1w",
-            "cxJBCgtkYXRhX3NvdXJjZRgUIAEoCzInLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5EYXRhU291cmNlQgPgQQM6eOpBdQogZGF0YWNhdGFsb2cuZ29v",
-            "Z2xlYXBpcy5jb20vRW50cnkSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9lbnRyeUdyb3Vwcy97ZW50cnlfZ3JvdXB9L2VudHJp",
-            "ZXMve2VudHJ5fUIMCgplbnRyeV90eXBlQggKBnN5c3RlbUILCgl0eXBlX3Nw",
-            "ZWNCBgoEc3BlYyKeAQoRRGF0YWJhc2VUYWJsZVNwZWMSRgoEdHlwZRgBIAEo",
-            "DjI4Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5EYXRhYmFzZVRhYmxl",
-            "U3BlYy5UYWJsZVR5cGUiQQoJVGFibGVUeXBlEhoKFlRBQkxFX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIKCgZOQVRJVkUQARIMCghFWFRFUk5BTBACIokCCgpFbnRy",
-            "eUdyb3VwEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhMK",
-            "C2Rlc2NyaXB0aW9uGAMgASgJElMKF2RhdGFfY2F0YWxvZ190aW1lc3RhbXBz",
-            "GAQgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlN5c3RlbVRp",
-            "bWVzdGFtcHNCA+BBAzpt6kFqCiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNv",
-            "bS9FbnRyeUdyb3VwEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vZW50cnlHcm91cHMve2VudHJ5X2dyb3VwfSK9AQoYQ3JlYXRl",
-            "VGFnVGVtcGxhdGVSZXF1ZXN0Ej4KBnBhcmVudBgBIAEoCUIu4EEC+kEoEiZk",
-            "YXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZRIcCg90YWdf",
-            "dGVtcGxhdGVfaWQYAyABKAlCA+BBAhJDCgx0YWdfdGVtcGxhdGUYAiABKAsy",
+            "b3VyY2UucHJvdG8aKmdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9iaWdx",
+            "dWVyeS5wcm90bxooZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL2NvbW1v",
+            "bi5wcm90bxotZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL2RhdGFfc291",
+            "cmNlLnByb3RvGjJnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvZ2NzX2Zp",
+            "bGVzZXRfc3BlYy5wcm90bxooZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3Yx",
+            "L3NjaGVtYS5wcm90bxooZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL3Nl",
+            "YXJjaC5wcm90bxosZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL3RhYmxl",
+            "X3NwZWMucHJvdG8aJmdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS90YWdz",
+            "LnByb3RvGixnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvdGltZXN0YW1w",
+            "cy5wcm90bxonZ29vZ2xlL2Nsb3VkL2RhdGFjYXRhbG9nL3YxL3VzYWdlLnBy",
+            "b3RvGh5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8aGmdvb2dsZS9p",
+            "YW0vdjEvcG9saWN5LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
+            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIugCChRTZWFyY2hDYXRhbG9nUmVx",
+            "dWVzdBJLCgVzY29wZRgGIAEoCzI3Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
+            "Zy52MS5TZWFyY2hDYXRhbG9nUmVxdWVzdC5TY29wZUID4EECEhIKBXF1ZXJ5",
+            "GAEgASgJQgPgQQESEQoJcGFnZV9zaXplGAIgASgFEhcKCnBhZ2VfdG9rZW4Y",
+            "AyABKAlCA+BBARIQCghvcmRlcl9ieRgFIAEoCRqwAQoFU2NvcGUSFwoPaW5j",
+            "bHVkZV9vcmdfaWRzGAIgAygJEhsKE2luY2x1ZGVfcHJvamVjdF9pZHMYAyAD",
+            "KAkSIwobaW5jbHVkZV9nY3BfcHVibGljX2RhdGFzZXRzGAcgASgIEiEKFHJl",
+            "c3RyaWN0ZWRfbG9jYXRpb25zGBAgAygJQgPgQQESKQocaW5jbHVkZV9wdWJs",
+            "aWNfdGFnX3RlbXBsYXRlcxgTIAEoCEID4EEBIogBChVTZWFyY2hDYXRhbG9n",
+            "UmVzcG9uc2USQQoHcmVzdWx0cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5kYXRh",
+            "Y2F0YWxvZy52MS5TZWFyY2hDYXRhbG9nUmVzdWx0EhcKD25leHRfcGFnZV90",
+            "b2tlbhgDIAEoCRITCgt1bnJlYWNoYWJsZRgGIAMoCSKzAQoXQ3JlYXRlRW50",
+            "cnlHcm91cFJlcXVlc3QSPQoGcGFyZW50GAEgASgJQi3gQQL6QScSJWRhdGFj",
+            "YXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASGwoOZW50cnlfZ3Jv",
+            "dXBfaWQYAyABKAlCA+BBAhI8CgtlbnRyeV9ncm91cBgCIAEoCzInLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeUdyb3VwIo0BChdVcGRhdGVF",
+            "bnRyeUdyb3VwUmVxdWVzdBJBCgtlbnRyeV9ncm91cBgBIAEoCzInLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeUdyb3VwQgPgQQISLwoLdXBk",
+            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIoIB",
+            "ChRHZXRFbnRyeUdyb3VwUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScK",
+            "JWRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASLQoJcmVh",
+            "ZF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJqChdE",
+            "ZWxldGVFbnRyeUdyb3VwUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScK",
+            "JWRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASEgoFZm9y",
+            "Y2UYAiABKAhCA+BBASKIAQoWTGlzdEVudHJ5R3JvdXBzUmVxdWVzdBI9CgZw",
+            "YXJlbnQYASABKAlCLeBBAvpBJwolZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5j",
+            "b20vRW50cnlHcm91cBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
+            "X3Rva2VuGAMgASgJQgPgQQEicQoXTGlzdEVudHJ5R3JvdXBzUmVzcG9uc2US",
+            "PQoMZW50cnlfZ3JvdXBzGAEgAygLMicuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLnYxLkVudHJ5R3JvdXASFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqIB",
+            "ChJDcmVhdGVFbnRyeVJlcXVlc3QSPQoGcGFyZW50GAEgASgJQi3gQQL6QScK",
+            "JWRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASFQoIZW50",
+            "cnlfaWQYAyABKAlCA+BBAhI2CgVlbnRyeRgCIAEoCzIiLmdvb2dsZS5jbG91",
+            "ZC5kYXRhY2F0YWxvZy52MS5FbnRyeUID4EECIn0KElVwZGF0ZUVudHJ5UmVx",
+            "dWVzdBI2CgVlbnRyeRgBIAEoCzIiLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
+            "Zy52MS5FbnRyeUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLkZpZWxkTWFzayJMChJEZWxldGVFbnRyeVJlcXVlc3QSNgoE",
+            "bmFtZRgBIAEoCUIo4EEC+kEiCiBkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNv",
+            "bS9FbnRyeSJJCg9HZXRFbnRyeVJlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC",
+            "+kEiCiBkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeSJ2ChJMb29r",
+            "dXBFbnRyeVJlcXVlc3QSGQoPbGlua2VkX3Jlc291cmNlGAEgASgJSAASFgoM",
+            "c3FsX3Jlc291cmNlGAMgASgJSAASHgoUZnVsbHlfcXVhbGlmaWVkX25hbWUY",
+            "BSABKAlIAEINCgt0YXJnZXRfbmFtZSL2CgoFRW50cnkSOwoEbmFtZRgBIAEo",
+            "CUIt4EED+kEnCiVkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9FbnRyeUdy",
+            "b3VwEhcKD2xpbmtlZF9yZXNvdXJjZRgJIAEoCRIcChRmdWxseV9xdWFsaWZp",
+            "ZWRfbmFtZRgdIAEoCRI2CgR0eXBlGAIgASgOMiYuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFjYXRhbG9nLnYxLkVudHJ5VHlwZUgAEh0KE3VzZXJfc3BlY2lmaWVkX3R5",
+            "cGUYECABKAlIABJPChFpbnRlZ3JhdGVkX3N5c3RlbRgRIAEoDjItLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbnRlZ3JhdGVkU3lzdGVtQgPgQQNI",
+            "ARIfChV1c2VyX3NwZWNpZmllZF9zeXN0ZW0YEiABKAlIARJHChBnY3NfZmls",
+            "ZXNldF9zcGVjGAYgASgLMisuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "Lkdjc0ZpbGVzZXRTcGVjSAISTQoTYmlncXVlcnlfdGFibGVfc3BlYxgMIAEo",
+            "CzIuLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5CaWdRdWVyeVRhYmxl",
+            "U3BlY0gCEloKGmJpZ3F1ZXJ5X2RhdGVfc2hhcmRlZF9zcGVjGA8gASgLMjQu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkJpZ1F1ZXJ5RGF0ZVNoYXJk",
+            "ZWRTcGVjSAISTQoTZGF0YWJhc2VfdGFibGVfc3BlYxgYIAEoCzIuLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5EYXRhYmFzZVRhYmxlU3BlY0gDElwK",
+            "G2RhdGFfc291cmNlX2Nvbm5lY3Rpb25fc3BlYxgbIAEoCzI1Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhY2F0YWxvZy52MS5EYXRhU291cmNlQ29ubmVjdGlvblNwZWNI",
+            "AxJACgxyb3V0aW5lX3NwZWMYHCABKAsyKC5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjEuUm91dGluZVNwZWNIAxIUCgxkaXNwbGF5X25hbWUYAyABKAkS",
+            "EwoLZGVzY3JpcHRpb24YBCABKAkSMwoGc2NoZW1hGAUgASgLMiMuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNjaGVtYRJPChhzb3VyY2Vfc3lzdGVt",
+            "X3RpbWVzdGFtcHMYByABKAsyLS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
+            "djEuU3lzdGVtVGltZXN0YW1wcxJDCgx1c2FnZV9zaWduYWwYDSABKAsyKC5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVXNhZ2VTaWduYWxCA+BBAxI+",
+            "CgZsYWJlbHMYDiADKAsyLi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEu",
+            "RW50cnkuTGFiZWxzRW50cnkSQQoLZGF0YV9zb3VyY2UYFCABKAsyJy5nb29n",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRGF0YVNvdXJjZUID4EEDGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6eOpB",
+            "dQogZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkSUXByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbnRyeUdyb3Vwcy97",
+            "ZW50cnlfZ3JvdXB9L2VudHJpZXMve2VudHJ5fUIMCgplbnRyeV90eXBlQggK",
+            "BnN5c3RlbUILCgl0eXBlX3NwZWNCBgoEc3BlYyKeAQoRRGF0YWJhc2VUYWJs",
+            "ZVNwZWMSRgoEdHlwZRgBIAEoDjI4Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
+            "Zy52MS5EYXRhYmFzZVRhYmxlU3BlYy5UYWJsZVR5cGUiQQoJVGFibGVUeXBl",
+            "EhoKFlRBQkxFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZOQVRJVkUQARIMCghF",
+            "WFRFUk5BTBACInEKGERhdGFTb3VyY2VDb25uZWN0aW9uU3BlYxJVChhiaWdx",
+            "dWVyeV9jb25uZWN0aW9uX3NwZWMYASABKAsyMy5nb29nbGUuY2xvdWQuZGF0",
+            "YWNhdGFsb2cudjEuQmlnUXVlcnlDb25uZWN0aW9uU3BlYyLDBAoLUm91dGlu",
+            "ZVNwZWMSSgoMcm91dGluZV90eXBlGAEgASgOMjQuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFjYXRhbG9nLnYxLlJvdXRpbmVTcGVjLlJvdXRpbmVUeXBlEhAKCGxhbmd1",
+            "YWdlGAIgASgJEkwKEXJvdXRpbmVfYXJndW1lbnRzGAMgAygLMjEuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLlJvdXRpbmVTcGVjLkFyZ3VtZW50EhMK",
+            "C3JldHVybl90eXBlGAQgASgJEhcKD2RlZmluaXRpb25fYm9keRgFIAEoCRJR",
+            "ChViaWdxdWVyeV9yb3V0aW5lX3NwZWMYBiABKAsyMC5nb29nbGUuY2xvdWQu",
+            "ZGF0YWNhdGFsb2cudjEuQmlnUXVlcnlSb3V0aW5lU3BlY0gAGqYBCghBcmd1",
+            "bWVudBIMCgRuYW1lGAEgASgJEkQKBG1vZGUYAiABKA4yNi5nb29nbGUuY2xv",
+            "dWQuZGF0YWNhdGFsb2cudjEuUm91dGluZVNwZWMuQXJndW1lbnQuTW9kZRIM",
+            "CgR0eXBlGAMgASgJIjgKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgYK",
+            "AklOEAESBwoDT1VUEAISCQoFSU5PVVQQAyJPCgtSb3V0aW5lVHlwZRIcChhS",
+            "T1VUSU5FX1RZUEVfVU5TUEVDSUZJRUQQABITCg9TQ0FMQVJfRlVOQ1RJT04Q",
+            "ARINCglQUk9DRURVUkUQAkINCgtzeXN0ZW1fc3BlYyKJAgoKRW50cnlHcm91",
+            "cBIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgDIAEoCRJTChdkYXRhX2NhdGFsb2dfdGltZXN0YW1wcxgEIAEo",
+            "CzItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TeXN0ZW1UaW1lc3Rh",
+            "bXBzQgPgQQM6bepBagolZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50",
+            "cnlHcm91cBJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2VudHJ5R3JvdXBzL3tlbnRyeV9ncm91cH0ivQEKGENyZWF0ZVRhZ1Rl",
+            "bXBsYXRlUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBBAvpBKBImZGF0YWNh",
+            "dGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGUSHAoPdGFnX3RlbXBs",
+            "YXRlX2lkGAMgASgJQgPgQQISQwoMdGFnX3RlbXBsYXRlGAIgASgLMiguZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlQgPgQQIiVQoV",
+            "R2V0VGFnVGVtcGxhdGVSZXF1ZXN0EjwKBG5hbWUYASABKAlCLuBBAvpBKAom",
+            "ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGUikAEKGFVw",
+            "ZGF0ZVRhZ1RlbXBsYXRlUmVxdWVzdBJDCgx0YWdfdGVtcGxhdGUYASABKAsy",
             "KC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnVGVtcGxhdGVCA+BB",
-            "AiJVChVHZXRUYWdUZW1wbGF0ZVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC",
-            "+kEoCiZkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZSKQ",
-            "AQoYVXBkYXRlVGFnVGVtcGxhdGVSZXF1ZXN0EkMKDHRhZ190ZW1wbGF0ZRgB",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0",
-            "ZUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzayJsChhEZWxldGVUYWdUZW1wbGF0ZVJlcXVlc3QSPAoEbmFt",
-            "ZRgBIAEoCUIu4EEC+kEoCiZkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9U",
-            "YWdUZW1wbGF0ZRISCgVmb3JjZRgCIAEoCEID4EECIn4KEENyZWF0ZVRhZ1Jl",
-            "cXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSAKHmRhdGFjYXRhbG9nLmdv",
-            "b2dsZWFwaXMuY29tL1RhZxIyCgN0YWcYAiABKAsyIC5nb29nbGUuY2xvdWQu",
-            "ZGF0YWNhdGFsb2cudjEuVGFnQgPgQQIidwoQVXBkYXRlVGFnUmVxdWVzdBIy",
-            "CgN0YWcYASABKAsyIC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFn",
-            "QgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrIkgKEERlbGV0ZVRhZ1JlcXVlc3QSNAoEbmFtZRgBIAEoCUIm",
-            "4EEC+kEgEh5kYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWci0wEKHUNy",
-            "ZWF0ZVRhZ1RlbXBsYXRlRmllbGRSZXF1ZXN0Ej4KBnBhcmVudBgBIAEoCUIu",
-            "4EEC+kEoCiZkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0",
-            "ZRIiChV0YWdfdGVtcGxhdGVfZmllbGRfaWQYAiABKAlCA+BBAhJOChJ0YWdf",
-            "dGVtcGxhdGVfZmllbGQYAyABKAsyLS5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuVGFnVGVtcGxhdGVGaWVsZEID4EECIugBCh1VcGRhdGVUYWdUZW1w",
-            "bGF0ZUZpZWxkUmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2RhdGFj",
-            "YXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSTgoSdGFn",
-            "X3RlbXBsYXRlX2ZpZWxkGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
-            "bG9nLnYxLlRhZ1RlbXBsYXRlRmllbGRCA+BBAhI0Cgt1cGRhdGVfbWFzaxgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASKKAQodUmVu",
-            "YW1lVGFnVGVtcGxhdGVGaWVsZFJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC",
-            "+kEtCitkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZUZp",
-            "ZWxkEiYKGW5ld190YWdfdGVtcGxhdGVfZmllbGRfaWQYAiABKAlCA+BBAiKe",
-            "AQomUmVuYW1lVGFnVGVtcGxhdGVGaWVsZEVudW1WYWx1ZVJlcXVlc3QSSgoE",
-            "bmFtZRgBIAEoCUI84EEC+kE2CjRkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNv",
-            "bS9UYWdUZW1wbGF0ZUZpZWxkRW51bVZhbHVlEigKG25ld19lbnVtX3ZhbHVl",
-            "X2Rpc3BsYXlfbmFtZRgCIAEoCUID4EECInYKHURlbGV0ZVRhZ1RlbXBsYXRl",
-            "RmllbGRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorZGF0YWNhdGFs",
-            "b2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGVGaWVsZBISCgVmb3JjZRgC",
-            "IAEoCEID4EECInAKD0xpc3RUYWdzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlC",
-            "JuBBAvpBIBIeZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnEhEKCXBh",
-            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlsKEExpc3RUYWdz",
-            "UmVzcG9uc2USLgoEdGFncxgBIAMoCzIgLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5UYWcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqkBChJMaXN0",
-            "RW50cmllc1JlcXVlc3QSPQoGcGFyZW50GAEgASgJQi3gQQL6QScKJWRhdGFj",
-            "YXRhbG9nLmdvb2dsZWFwaXMuY29tL0VudHJ5R3JvdXASEQoJcGFnZV9zaXpl",
-            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSLQoJcmVhZF9tYXNrGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJjChNMaXN0RW50cmllc1Jl",
-            "c3BvbnNlEjMKB2VudHJpZXMYASADKAsyIi5nb29nbGUuY2xvdWQuZGF0YWNh",
-            "dGFsb2cudjEuRW50cnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJKnYKCUVu",
-            "dHJ5VHlwZRIaChZFTlRSWV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVEFCTEUQ",
-            "AhIJCgVNT0RFTBAFEg8KC0RBVEFfU1RSRUFNEAMSCwoHRklMRVNFVBAEEgwK",
-            "CERBVEFCQVNFEAcSCwoHU0VSVklDRRAOMsIxCgtEYXRhQ2F0YWxvZxKjAQoN",
-            "U2VhcmNoQ2F0YWxvZxIxLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5T",
-            "ZWFyY2hDYXRhbG9nUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MS5TZWFyY2hDYXRhbG9nUmVzcG9uc2UiK4LT5JMCFyISL3YxL2NhdGFs",
-            "b2c6c2VhcmNoOgEq2kELc2NvcGUscXVlcnkS2wEKEENyZWF0ZUVudHJ5R3Jv",
-            "dXASNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ3JlYXRlRW50cnlH",
-            "cm91cFJlcXVlc3QaJy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRW50",
-            "cnlHcm91cCJogtPkkwI+Ii8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9lbnRyeUdyb3VwczoLZW50cnlfZ3JvdXDaQSFwYXJlbnQsZW50",
-            "cnlfZ3JvdXBfaWQsZW50cnlfZ3JvdXASvAEKDUdldEVudHJ5R3JvdXASMS5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuR2V0RW50cnlHcm91cFJlcXVl",
-            "c3QaJy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRW50cnlHcm91cCJP",
-            "gtPkkwIxEi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRy",
-            "eUdyb3Vwcy8qfdpBBG5hbWXaQQ5uYW1lLHJlYWRfbWFzaxLrAQoQVXBkYXRl",
-            "RW50cnlHcm91cBI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5VcGRh",
-            "dGVFbnRyeUdyb3VwUmVxdWVzdBonLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MS5FbnRyeUdyb3VwIniC0+STAkoyOy92MS97ZW50cnlfZ3JvdXAubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9OgtlbnRy",
-            "eV9ncm91cNpBC2VudHJ5X2dyb3Vw2kEXZW50cnlfZ3JvdXAsdXBkYXRlX21h",
-            "c2sSoAEKEERlbGV0ZUVudHJ5R3JvdXASNC5nb29nbGUuY2xvdWQuZGF0YWNh",
-            "dGFsb2cudjEuRGVsZXRlRW50cnlHcm91cFJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiPoLT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKn3aQQRuYW1lEr4BCg9MaXN0RW50cnlH",
-            "cm91cHMSMy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuTGlzdEVudHJ5",
-            "R3JvdXBzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5M",
-            "aXN0RW50cnlHcm91cHNSZXNwb25zZSJAgtPkkwIxEi8vdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9lbnRyeUdyb3Vwc9pBBnBhcmVudBLE",
-            "AQoLQ3JlYXRlRW50cnkSLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEu",
-            "Q3JlYXRlRW50cnlSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLkVudHJ5ImCC0+STAkIiOS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKn0vZW50cmllczoFZW50cnnaQRVwYXJl",
-            "bnQsZW50cnlfaWQsZW50cnkSzgEKC1VwZGF0ZUVudHJ5Ei8uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLlVwZGF0ZUVudHJ5UmVxdWVzdBoiLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeSJqgtPkkwJIMj8vdjEve2Vu",
-            "dHJ5Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8q",
-            "L2VudHJpZXMvKn06BWVudHJ52kEFZW50cnnaQRFlbnRyeSx1cGRhdGVfbWFz",
-            "axKgAQoLRGVsZXRlRW50cnkSLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
-            "djEuRGVsZXRlRW50cnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IkiC0+STAjsqOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Vu",
-            "dHJ5R3JvdXBzLyovZW50cmllcy8qfdpBBG5hbWUSpgEKCEdldEVudHJ5Eiwu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkdldEVudHJ5UmVxdWVzdBoi",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeSJIgtPkkwI7Ejkv",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8q",
-            "L2VudHJpZXMvKn3aQQRuYW1lEn4KC0xvb2t1cEVudHJ5Ei8uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLkxvb2t1cEVudHJ5UmVxdWVzdBoiLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeSIagtPkkwIUEhIvdjEvZW50",
-            "cmllczpsb29rdXASvAEKC0xpc3RFbnRyaWVzEi8uZ29vZ2xlLmNsb3VkLmRh",
-            "dGFjYXRhbG9nLnYxLkxpc3RFbnRyaWVzUmVxdWVzdBowLmdvb2dsZS5jbG91",
-            "ZC5kYXRhY2F0YWxvZy52MS5MaXN0RW50cmllc1Jlc3BvbnNlIkqC0+STAjsS",
-            "OS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91",
-            "cHMvKn0vZW50cmllc9pBBnBhcmVudBLiAQoRQ3JlYXRlVGFnVGVtcGxhdGUS",
-            "NS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ3JlYXRlVGFnVGVtcGxh",
-            "dGVSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1Rl",
-            "bXBsYXRlImyC0+STAkAiMC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L3RhZ1RlbXBsYXRlczoMdGFnX3RlbXBsYXRl2kEjcGFyZW50LHRh",
-            "Z190ZW1wbGF0ZV9pZCx0YWdfdGVtcGxhdGUSrwEKDkdldFRhZ1RlbXBsYXRl",
-            "EjIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkdldFRhZ1RlbXBsYXRl",
-            "UmVxdWVzdBooLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1w",
-            "bGF0ZSI/gtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki90YWdUZW1wbGF0ZXMvKn3aQQRuYW1lEvMBChFVcGRhdGVUYWdUZW1wbGF0",
-            "ZRI1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5VcGRhdGVUYWdUZW1w",
-            "bGF0ZVJlcXVlc3QaKC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFn",
-            "VGVtcGxhdGUifYLT5JMCTTI9L3YxL3t0YWdfdGVtcGxhdGUubmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3RhZ1RlbXBsYXRlcy8qfToMdGFnX3RlbXBs",
-            "YXRl2kEMdGFnX3RlbXBsYXRl2kEYdGFnX3RlbXBsYXRlLHVwZGF0ZV9tYXNr",
-            "EqkBChFEZWxldGVUYWdUZW1wbGF0ZRI1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5EZWxldGVUYWdUZW1wbGF0ZVJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiRYLT5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovdGFnVGVtcGxhdGVzLyp92kEKbmFtZSxmb3JjZRKNAgoWQ3Jl",
-            "YXRlVGFnVGVtcGxhdGVGaWVsZBI6Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MS5DcmVhdGVUYWdUZW1wbGF0ZUZpZWxkUmVxdWVzdBotLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0ZUZpZWxkIocBgtPkkwJP",
-            "IjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RhZ1RlbXBs",
-            "YXRlcy8qfS9maWVsZHM6EnRhZ190ZW1wbGF0ZV9maWVsZNpBL3BhcmVudCx0",
-            "YWdfdGVtcGxhdGVfZmllbGRfaWQsdGFnX3RlbXBsYXRlX2ZpZWxkEpsCChZV",
-            "cGRhdGVUYWdUZW1wbGF0ZUZpZWxkEjouZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
-            "bG9nLnYxLlVwZGF0ZVRhZ1RlbXBsYXRlRmllbGRSZXF1ZXN0Gi0uZ29vZ2xl",
-            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlRmllbGQilQGC0+ST",
-            "Ak8yOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RhZ1RlbXBs",
-            "YXRlcy8qL2ZpZWxkcy8qfToSdGFnX3RlbXBsYXRlX2ZpZWxk2kEXbmFtZSx0",
-            "YWdfdGVtcGxhdGVfZmllbGTaQSNuYW1lLHRhZ190ZW1wbGF0ZV9maWVsZCx1",
-            "cGRhdGVfbWFzaxLxAQoWUmVuYW1lVGFnVGVtcGxhdGVGaWVsZBI6Lmdvb2ds",
-            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5SZW5hbWVUYWdUZW1wbGF0ZUZpZWxk",
-            "UmVxdWVzdBotLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1w",
-            "bGF0ZUZpZWxkImyC0+STAkUiQC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3RhZ1RlbXBsYXRlcy8qL2ZpZWxkcy8qfTpyZW5hbWU6ASraQR5u",
-            "YW1lLG5ld190YWdfdGVtcGxhdGVfZmllbGRfaWQSkgIKH1JlbmFtZVRhZ1Rl",
-            "bXBsYXRlRmllbGRFbnVtVmFsdWUSQy5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuUmVuYW1lVGFnVGVtcGxhdGVGaWVsZEVudW1WYWx1ZVJlcXVlc3Qa",
-            "LS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnVGVtcGxhdGVGaWVs",
-            "ZCJ7gtPkkwJSIk0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90",
-            "YWdUZW1wbGF0ZXMvKi9maWVsZHMvKi9lbnVtVmFsdWVzLyp9OnJlbmFtZToB",
-            "KtpBIG5hbWUsbmV3X2VudW1fdmFsdWVfZGlzcGxheV9uYW1lErwBChZEZWxl",
-            "dGVUYWdUZW1wbGF0ZUZpZWxkEjouZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLkRlbGV0ZVRhZ1RlbXBsYXRlRmllbGRSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5Ik6C0+STAjsqOS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3RhZ1RlbXBsYXRlcy8qL2ZpZWxkcy8qfdpBCm5hbWUsZm9y",
-            "Y2US+QEKCUNyZWF0ZVRhZxItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
-            "MS5DcmVhdGVUYWdSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLlRhZyKaAYLT5JMChgEiQC92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKi9lbnRyaWVzLyp9L3RhZ3M6A3RhZ1o9",
-            "IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3Jv",
-            "dXBzLyp9L3RhZ3M6A3RhZ9pBCnBhcmVudCx0YWcSjAIKCVVwZGF0ZVRhZxIt",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5VcGRhdGVUYWdSZXF1ZXN0",
-            "GiAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZyKtAYLT5JMCjgEy",
-            "RC92MS97dGFnLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdy",
-            "b3Vwcy8qL2VudHJpZXMvKi90YWdzLyp9OgN0YWdaQTI6L3YxL3t0YWcubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyovdGFncy8q",
-            "fToDdGFn2kEDdGFn2kEPdGFnLHVwZGF0ZV9tYXNrEt4BCglEZWxldGVUYWcS",
-            "LS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRGVsZXRlVGFnUmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSKJAYLT5JMCfCpAL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKi9lbnRyaWVz",
-            "LyovdGFncy8qfVo4KjYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9lbnRyeUdyb3Vwcy8qL3RhZ3MvKn3aQQRuYW1lEvUBCghMaXN0VGFncxIs",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5MaXN0VGFnc1JlcXVlc3Qa",
-            "LS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuTGlzdFRhZ3NSZXNwb25z",
-            "ZSKLAYLT5JMCfBJAL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKn0vdGFnc1o4EjYvdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9L3RhZ3Pa",
-            "QQZwYXJlbnQS8gEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0",
-            "SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IqYBgtPk",
-            "kwKNASJBL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Rh",
-            "Z1RlbXBsYXRlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaRSJAL3YxL3tyZXNvdXJj",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9OnNldElh",
-            "bVBvbGljeToBKtpBD3Jlc291cmNlLHBvbGljeRK8AgoMR2V0SWFtUG9saWN5",
-            "EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xl",
-            "LmlhbS52MS5Qb2xpY3ki8AGC0+STAt4BIkEvdjEve3Jlc291cmNlPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovdGFnVGVtcGxhdGVzLyp9OmdldElhbVBvbGlj",
-            "eToBKlpFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZW50cnlHcm91cHMvKn06Z2V0SWFtUG9saWN5OgEqWk8iSi92MS97cmVzb3Vy",
-            "Y2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJp",
-            "ZXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2US4wIKElRlc3RJYW1Q",
-            "ZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25z",
-            "UmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVz",
-            "cG9uc2Ui9wGC0+STAvABIkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovdGFnVGVtcGxhdGVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
-            "KlpLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZW50",
-            "cnlHcm91cHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlUiUC92MS97cmVz",
-            "b3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2Vu",
-            "dHJpZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGk7KQRpkYXRhY2F0YWxv",
-            "Zy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1CjwMKH2NvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YWNhdGFsb2cudjFQAVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxvZy92MTtkYXRhY2F0YWxvZ/gBAaoC",
-            "G0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxE",
-            "YXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpW",
-            "MepBwAEKNGRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRl",
-            "RmllbGRFbnVtVmFsdWUShwFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9L2ZpZWxk",
-            "cy97dGFnX3RlbXBsYXRlX2ZpZWxkX2lkfS9lbnVtVmFsdWVzL3tlbnVtX3Zh",
-            "bHVlX2Rpc3BsYXlfbmFtZX1iBnByb3RvMw=="));
+            "AhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2sibAoYRGVsZXRlVGFnVGVtcGxhdGVSZXF1ZXN0EjwKBG5hbWUYASAB",
+            "KAlCLuBBAvpBKAomZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVt",
+            "cGxhdGUSEgoFZm9yY2UYAiABKAhCA+BBAiJ+ChBDcmVhdGVUYWdSZXF1ZXN0",
+            "EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgCh5kYXRhY2F0YWxvZy5nb29nbGVh",
+            "cGlzLmNvbS9UYWcSMgoDdGFnGAIgASgLMiAuZ29vZ2xlLmNsb3VkLmRhdGFj",
+            "YXRhbG9nLnYxLlRhZ0ID4EECIncKEFVwZGF0ZVRhZ1JlcXVlc3QSMgoDdGFn",
+            "GAEgASgLMiAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ0ID4EEC",
+            "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFzayJIChBEZWxldGVUYWdSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpB",
+            "IBIeZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnItMBCh1DcmVhdGVU",
+            "YWdUZW1wbGF0ZUZpZWxkUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBBAvpB",
+            "KAomZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGUSIgoV",
+            "dGFnX3RlbXBsYXRlX2ZpZWxkX2lkGAIgASgJQgPgQQISTgoSdGFnX3RlbXBs",
+            "YXRlX2ZpZWxkGAMgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "LlRhZ1RlbXBsYXRlRmllbGRCA+BBAiLoAQodVXBkYXRlVGFnVGVtcGxhdGVG",
+            "aWVsZFJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCitkYXRhY2F0YWxv",
+            "Zy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZUZpZWxkEk4KEnRhZ190ZW1w",
+            "bGF0ZV9maWVsZBgCIAEoCzItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MS5UYWdUZW1wbGF0ZUZpZWxkQgPgQQISNAoLdXBkYXRlX21hc2sYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEiigEKHVJlbmFtZVRh",
+            "Z1RlbXBsYXRlRmllbGRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQor",
+            "ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVtcGxhdGVGaWVsZBIm",
+            "ChluZXdfdGFnX3RlbXBsYXRlX2ZpZWxkX2lkGAIgASgJQgPgQQIingEKJlJl",
+            "bmFtZVRhZ1RlbXBsYXRlRmllbGRFbnVtVmFsdWVSZXF1ZXN0EkoKBG5hbWUY",
+            "ASABKAlCPOBBAvpBNgo0ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFn",
+            "VGVtcGxhdGVGaWVsZEVudW1WYWx1ZRIoChtuZXdfZW51bV92YWx1ZV9kaXNw",
+            "bGF5X25hbWUYAiABKAlCA+BBAiJ2Ch1EZWxldGVUYWdUZW1wbGF0ZUZpZWxk",
+            "UmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2RhdGFjYXRhbG9nLmdv",
+            "b2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSEgoFZm9yY2UYAiABKAhC",
+            "A+BBAiJwCg9MaXN0VGFnc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6",
+            "QSASHmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZxIRCglwYWdlX3Np",
+            "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJbChBMaXN0VGFnc1Jlc3Bv",
+            "bnNlEi4KBHRhZ3MYASADKAsyIC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
+            "djEuVGFnEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKpAQoSTGlzdEVudHJp",
+            "ZXNSZXF1ZXN0Ej0KBnBhcmVudBgBIAEoCUIt4EEC+kEnCiVkYXRhY2F0YWxv",
+            "Zy5nb29nbGVhcGlzLmNvbS9FbnRyeUdyb3VwEhEKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BRISCgpwYWdlX3Rva2VuGAMgASgJEi0KCXJlYWRfbWFzaxgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siYwoTTGlzdEVudHJpZXNSZXNwb25z",
+            "ZRIzCgdlbnRyaWVzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
+            "LnYxLkVudHJ5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSqsAQoJRW50cnlU",
+            "eXBlEhoKFkVOVFJZX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVUQUJMRRACEgkK",
+            "BU1PREVMEAUSDwoLREFUQV9TVFJFQU0QAxILCgdGSUxFU0VUEAQSCwoHQ0xV",
+            "U1RFUhAGEgwKCERBVEFCQVNFEAcSGgoWREFUQV9TT1VSQ0VfQ09OTkVDVElP",
+            "ThAIEgsKB1JPVVRJTkUQCRILCgdTRVJWSUNFEA4ywjEKC0RhdGFDYXRhbG9n",
+            "EqMBCg1TZWFyY2hDYXRhbG9nEjEuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
+            "LnYxLlNlYXJjaENhdGFsb2dSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmRhdGFj",
+            "YXRhbG9nLnYxLlNlYXJjaENhdGFsb2dSZXNwb25zZSIrgtPkkwIXIhIvdjEv",
+            "Y2F0YWxvZzpzZWFyY2g6ASraQQtzY29wZSxxdWVyeRLbAQoQQ3JlYXRlRW50",
+            "cnlHcm91cBI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5DcmVhdGVF",
+            "bnRyeUdyb3VwUmVxdWVzdBonLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MS5FbnRyeUdyb3VwImiC0+STAj4iLy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2VudHJ5R3JvdXBzOgtlbnRyeV9ncm91cNpBIXBhcmVu",
+            "dCxlbnRyeV9ncm91cF9pZCxlbnRyeV9ncm91cBK8AQoNR2V0RW50cnlHcm91",
+            "cBIxLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5HZXRFbnRyeUdyb3Vw",
+            "UmVxdWVzdBonLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FbnRyeUdy",
+            "b3VwIk+C0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2VudHJ5R3JvdXBzLyp92kEEbmFtZdpBDm5hbWUscmVhZF9tYXNrEusBChBV",
+            "cGRhdGVFbnRyeUdyb3VwEjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "LlVwZGF0ZUVudHJ5R3JvdXBSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmRhdGFj",
+            "YXRhbG9nLnYxLkVudHJ5R3JvdXAieILT5JMCSjI7L3YxL3tlbnRyeV9ncm91",
+            "cC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKn06",
+            "C2VudHJ5X2dyb3Vw2kELZW50cnlfZ3JvdXDaQRdlbnRyeV9ncm91cCx1cGRh",
+            "dGVfbWFzaxKgAQoQRGVsZXRlRW50cnlHcm91cBI0Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy52MS5EZWxldGVFbnRyeUdyb3VwUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSI+gtPkkwIxKi8vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfdpBBG5hbWUSvgEKD0xpc3RF",
+            "bnRyeUdyb3VwcxIzLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5MaXN0",
+            "RW50cnlHcm91cHNSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
+            "LnYxLkxpc3RFbnRyeUdyb3Vwc1Jlc3BvbnNlIkCC0+STAjESLy92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VudHJ5R3JvdXBz2kEGcGFy",
+            "ZW50EsQBCgtDcmVhdGVFbnRyeRIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
+            "Zy52MS5DcmVhdGVFbnRyeVJlcXVlc3QaIi5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjEuRW50cnkiYILT5JMCQiI5L3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfS9lbnRyaWVzOgVlbnRyedpB",
+            "FXBhcmVudCxlbnRyeV9pZCxlbnRyeRLOAQoLVXBkYXRlRW50cnkSLy5nb29n",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVXBkYXRlRW50cnlSZXF1ZXN0GiIu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkVudHJ5ImqC0+STAkgyPy92",
+            "MS97ZW50cnkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3Jv",
+            "dXBzLyovZW50cmllcy8qfToFZW50cnnaQQVlbnRyedpBEWVudHJ5LHVwZGF0",
+            "ZV9tYXNrEqABCgtEZWxldGVFbnRyeRIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
+            "YWxvZy52MS5EZWxldGVFbnRyeVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiSILT5JMCOyo5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovZW50cnlHcm91cHMvKi9lbnRyaWVzLyp92kEEbmFtZRKmAQoIR2V0RW50",
+            "cnkSLC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuR2V0RW50cnlSZXF1",
+            "ZXN0GiIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkVudHJ5IkiC0+ST",
+            "AjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3Jv",
+            "dXBzLyovZW50cmllcy8qfdpBBG5hbWUSfgoLTG9va3VwRW50cnkSLy5nb29n",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuTG9va3VwRW50cnlSZXF1ZXN0GiIu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkVudHJ5IhqC0+STAhQSEi92",
+            "MS9lbnRyaWVzOmxvb2t1cBK8AQoLTGlzdEVudHJpZXMSLy5nb29nbGUuY2xv",
+            "dWQuZGF0YWNhdGFsb2cudjEuTGlzdEVudHJpZXNSZXF1ZXN0GjAuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLkxpc3RFbnRyaWVzUmVzcG9uc2UiSoLT",
+            "5JMCOxI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRy",
+            "eUdyb3Vwcy8qfS9lbnRyaWVz2kEGcGFyZW50EuIBChFDcmVhdGVUYWdUZW1w",
+            "bGF0ZRI1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5DcmVhdGVUYWdU",
+            "ZW1wbGF0ZVJlcXVlc3QaKC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEu",
+            "VGFnVGVtcGxhdGUibILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vdGFnVGVtcGxhdGVzOgx0YWdfdGVtcGxhdGXaQSNwYXJl",
+            "bnQsdGFnX3RlbXBsYXRlX2lkLHRhZ190ZW1wbGF0ZRKvAQoOR2V0VGFnVGVt",
+            "cGxhdGUSMi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuR2V0VGFnVGVt",
+            "cGxhdGVSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
+            "Z1RlbXBsYXRlIj+C0+STAjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3RhZ1RlbXBsYXRlcy8qfdpBBG5hbWUS8wEKEVVwZGF0ZVRhZ1Rl",
+            "bXBsYXRlEjUuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlVwZGF0ZVRh",
+            "Z1RlbXBsYXRlUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MS5UYWdUZW1wbGF0ZSJ9gtPkkwJNMj0vdjEve3RhZ190ZW1wbGF0ZS5uYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovdGFnVGVtcGxhdGVzLyp9Ogx0YWdf",
+            "dGVtcGxhdGXaQQx0YWdfdGVtcGxhdGXaQRh0YWdfdGVtcGxhdGUsdXBkYXRl",
+            "X21hc2sSqQEKEURlbGV0ZVRhZ1RlbXBsYXRlEjUuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFjYXRhbG9nLnYxLkRlbGV0ZVRhZ1RlbXBsYXRlUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSJFgtPkkwIyKjAvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi90YWdUZW1wbGF0ZXMvKn3aQQpuYW1lLGZvcmNlEo0C",
+            "ChZDcmVhdGVUYWdUZW1wbGF0ZUZpZWxkEjouZ29vZ2xlLmNsb3VkLmRhdGFj",
+            "YXRhbG9nLnYxLkNyZWF0ZVRhZ1RlbXBsYXRlRmllbGRSZXF1ZXN0Gi0uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlRmllbGQihwGC",
+            "0+STAk8iOS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovdGFn",
+            "VGVtcGxhdGVzLyp9L2ZpZWxkczoSdGFnX3RlbXBsYXRlX2ZpZWxk2kEvcGFy",
+            "ZW50LHRhZ190ZW1wbGF0ZV9maWVsZF9pZCx0YWdfdGVtcGxhdGVfZmllbGQS",
+            "mwIKFlVwZGF0ZVRhZ1RlbXBsYXRlRmllbGQSOi5nb29nbGUuY2xvdWQuZGF0",
+            "YWNhdGFsb2cudjEuVXBkYXRlVGFnVGVtcGxhdGVGaWVsZFJlcXVlc3QaLS5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnVGVtcGxhdGVGaWVsZCKV",
+            "AYLT5JMCTzI5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGFn",
+            "VGVtcGxhdGVzLyovZmllbGRzLyp9OhJ0YWdfdGVtcGxhdGVfZmllbGTaQRdu",
+            "YW1lLHRhZ190ZW1wbGF0ZV9maWVsZNpBI25hbWUsdGFnX3RlbXBsYXRlX2Zp",
+            "ZWxkLHVwZGF0ZV9tYXNrEvEBChZSZW5hbWVUYWdUZW1wbGF0ZUZpZWxkEjou",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlJlbmFtZVRhZ1RlbXBsYXRl",
+            "RmllbGRSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRh",
+            "Z1RlbXBsYXRlRmllbGQibILT5JMCRSJAL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovdGFnVGVtcGxhdGVzLyovZmllbGRzLyp9OnJlbmFtZToB",
+            "KtpBHm5hbWUsbmV3X3RhZ190ZW1wbGF0ZV9maWVsZF9pZBKSAgofUmVuYW1l",
+            "VGFnVGVtcGxhdGVGaWVsZEVudW1WYWx1ZRJDLmdvb2dsZS5jbG91ZC5kYXRh",
+            "Y2F0YWxvZy52MS5SZW5hbWVUYWdUZW1wbGF0ZUZpZWxkRW51bVZhbHVlUmVx",
+            "dWVzdBotLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0",
+            "ZUZpZWxkInuC0+STAlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3RhZ1RlbXBsYXRlcy8qL2ZpZWxkcy8qL2VudW1WYWx1ZXMvKn06cmVu",
+            "YW1lOgEq2kEgbmFtZSxuZXdfZW51bV92YWx1ZV9kaXNwbGF5X25hbWUSvAEK",
+            "FkRlbGV0ZVRhZ1RlbXBsYXRlRmllbGQSOi5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjEuRGVsZXRlVGFnVGVtcGxhdGVGaWVsZFJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiToLT5JMCOyo5L3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovdGFnVGVtcGxhdGVzLyovZmllbGRzLyp92kEKbmFt",
+            "ZSxmb3JjZRL5AQoJQ3JlYXRlVGFnEi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLnYxLkNyZWF0ZVRhZ1JlcXVlc3QaIC5nb29nbGUuY2xvdWQuZGF0YWNh",
+            "dGFsb2cudjEuVGFnIpoBgtPkkwKGASJAL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKn0vdGFnczoD",
+            "dGFnWj0iNi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50",
+            "cnlHcm91cHMvKn0vdGFnczoDdGFn2kEKcGFyZW50LHRhZxKMAgoJVXBkYXRl",
+            "VGFnEi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlVwZGF0ZVRhZ1Jl",
+            "cXVlc3QaIC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGFnIq0BgtPk",
+            "kwKOATJEL3YxL3t0YWcubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Vu",
+            "dHJ5R3JvdXBzLyovZW50cmllcy8qL3RhZ3MvKn06A3RhZ1pBMjovdjEve3Rh",
+            "Zy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKi90",
+            "YWdzLyp9OgN0YWfaQQN0YWfaQQ90YWcsdXBkYXRlX21hc2sS3gEKCURlbGV0",
+            "ZVRhZxItLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5EZWxldGVUYWdS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IokBgtPkkwJ8KkAvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2Vu",
+            "dHJpZXMvKi90YWdzLyp9WjgqNi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2VudHJ5R3JvdXBzLyovdGFncy8qfdpBBG5hbWUS9QEKCExpc3RU",
+            "YWdzEiwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkxpc3RUYWdzUmVx",
+            "dWVzdBotLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5MaXN0VGFnc1Jl",
+            "c3BvbnNlIosBgtPkkwJ8EkAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2VudHJ5R3JvdXBzLyovZW50cmllcy8qfS90YWdzWjgSNi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKn0v",
+            "dGFnc9pBBnBhcmVudBLyAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52",
+            "MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3ki",
+            "pgGC0+STAo0BIkEvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovdGFnVGVtcGxhdGVzLyp9OnNldElhbVBvbGljeToBKlpFIkAvdjEve3Jl",
+            "c291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKn06",
+            "c2V0SWFtUG9saWN5OgEq2kEPcmVzb3VyY2UscG9saWN5ErwCCgxHZXRJYW1Q",
+            "b2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5n",
+            "b29nbGUuaWFtLnYxLlBvbGljeSLwAYLT5JMC3gEiQS92MS97cmVzb3VyY2U9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YWdUZW1wbGF0ZXMvKn06Z2V0SWFt",
+            "UG9saWN5OgEqWkUiQC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9lbnRyeUdyb3Vwcy8qfTpnZXRJYW1Qb2xpY3k6ASpaTyJKL3YxL3ty",
+            "ZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyov",
+            "ZW50cmllcy8qfTpnZXRJYW1Qb2xpY3k6ASraQQhyZXNvdXJjZRLjAgoSVGVz",
+            "dElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlz",
+            "c2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
+            "bnNSZXNwb25zZSL3AYLT5JMC8AEiRy92MS97cmVzb3VyY2U9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi90YWdUZW1wbGF0ZXMvKn06dGVzdElhbVBlcm1pc3Np",
+            "b25zOgEqWksiRi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9lbnRyeUdyb3Vwcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaVSJQL3Yx",
+            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBz",
+            "LyovZW50cmllcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASoaTspBGmRhdGFj",
+            "YXRhbG9nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKPAwofY29tLmdvb2dsZS5jbG91",
+            "ZC5kYXRhY2F0YWxvZy52MVABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFjYXRhbG9nL3YxO2RhdGFjYXRhbG9n",
+            "+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29vZ2xlXENs",
+            "b3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0YUNhdGFs",
+            "b2c6OlYx6kHAAQo0ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGFnVGVt",
+            "cGxhdGVGaWVsZEVudW1WYWx1ZRKHAXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS90YWdUZW1wbGF0ZXMve3RhZ190ZW1wbGF0ZX0v",
+            "ZmllbGRzL3t0YWdfdGVtcGxhdGVfZmllbGRfaWR9L2VudW1WYWx1ZXMve2Vu",
+            "dW1fdmFsdWVfZGlzcGxheV9uYW1lfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.DataSourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.GcsFilesetSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SchemaReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SearchReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TableSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TagsReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TimestampsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.BigqueryReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.DataSourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.GcsFilesetSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SchemaReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SearchReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TableSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TagsReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TimestampsReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.UsageReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.EntryType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest), global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Parser, new[]{ "Scope", "Query", "PageSize", "PageToken", "OrderBy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope), global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope.Parser, new[]{ "IncludeOrgIds", "IncludeProjectIds", "IncludeGcpPublicDatasets", "RestrictedLocations" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest), global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Parser, new[]{ "Scope", "Query", "PageSize", "PageToken", "OrderBy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope), global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope.Parser, new[]{ "IncludeOrgIds", "IncludeProjectIds", "IncludeGcpPublicDatasets", "RestrictedLocations", "IncludePublicTagTemplates" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse), global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse.Parser, new[]{ "Results", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest), global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest.Parser, new[]{ "Parent", "EntryGroupId", "EntryGroup" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest), global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest.Parser, new[]{ "EntryGroup", "UpdateMask" }, null, null, null, null),
@@ -332,8 +359,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest), global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.GetEntryRequest), global::Google.Cloud.DataCatalog.V1.GetEntryRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest), global::Google.Cloud.DataCatalog.V1.LookupEntryRequest.Parser, new[]{ "LinkedResource", "SqlResource", "FullyQualifiedName" }, new[]{ "TargetName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Entry), global::Google.Cloud.DataCatalog.V1.Entry.Parser, new[]{ "Name", "LinkedResource", "FullyQualifiedName", "Type", "UserSpecifiedType", "IntegratedSystem", "UserSpecifiedSystem", "GcsFilesetSpec", "BigqueryTableSpec", "BigqueryDateShardedSpec", "DatabaseTableSpec", "DisplayName", "Description", "Schema", "SourceSystemTimestamps", "DataSource" }, new[]{ "EntryType", "System", "TypeSpec", "Spec" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Entry), global::Google.Cloud.DataCatalog.V1.Entry.Parser, new[]{ "Name", "LinkedResource", "FullyQualifiedName", "Type", "UserSpecifiedType", "IntegratedSystem", "UserSpecifiedSystem", "GcsFilesetSpec", "BigqueryTableSpec", "BigqueryDateShardedSpec", "DatabaseTableSpec", "DataSourceConnectionSpec", "RoutineSpec", "DisplayName", "Description", "Schema", "SourceSystemTimestamps", "UsageSignal", "Labels", "DataSource" }, new[]{ "EntryType", "System", "TypeSpec", "Spec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec), global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec.Types.TableType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec), global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec.Parser, new[]{ "BigqueryConnectionSpec" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.RoutineSpec), global::Google.Cloud.DataCatalog.V1.RoutineSpec.Parser, new[]{ "RoutineType", "Language", "RoutineArguments", "ReturnType", "DefinitionBody", "BigqueryRoutineSpec" }, new[]{ "SystemSpec" }, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument), global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Parser, new[]{ "Name", "Mode", "Type" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.EntryGroup), global::Google.Cloud.DataCatalog.V1.EntryGroup.Parser, new[]{ "Name", "DisplayName", "Description", "DataCatalogTimestamps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest), global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest.Parser, new[]{ "Parent", "TagTemplateId", "TagTemplate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest), global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -358,9 +387,8 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Enums
   /// <summary>
-  /// Entry resources in Data Catalog can be of different types e.g. a BigQuery
-  /// Table entry is of type `TABLE`. This enum describes all the possible types
-  /// Data Catalog contains.
+  /// The enum field that lists all the types of entry resources in Data
+  /// Catalog. For example, a BigQuery table entry has the `TABLE` type.
   /// </summary>
   public enum EntryType {
     /// <summary>
@@ -368,29 +396,43 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// </summary>
     [pbr::OriginalName("ENTRY_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Output only. The type of entry that has a GoogleSQL schema, including
+    /// Output only. The entry type that has a GoogleSQL schema, including
     /// logical views.
     /// </summary>
     [pbr::OriginalName("TABLE")] Table = 2,
     /// <summary>
-    /// Output only. The type of models, examples include
-    /// https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro
+    /// Output only. The type of models.
+    ///
+    /// For more information, see [Supported models in BigQuery ML]
+    /// (https://cloud.google.com/bigquery-ml/docs/introduction#supported_models_in).
     /// </summary>
     [pbr::OriginalName("MODEL")] Model = 5,
     /// <summary>
-    /// An entry type which is used for streaming entries. Example:
-    /// Pub/Sub topic.
+    /// An entry type for streaming entries. For example, a Pub/Sub topic.
     /// </summary>
     [pbr::OriginalName("DATA_STREAM")] DataStream = 3,
     /// <summary>
-    /// An entry type which is a set of files or objects. Example:
+    /// An entry type for a set of files or objects. For example, a
     /// Cloud Storage fileset.
     /// </summary>
     [pbr::OriginalName("FILESET")] Fileset = 4,
     /// <summary>
+    /// A group of servers that work together. For example, a Kafka cluster.
+    /// </summary>
+    [pbr::OriginalName("CLUSTER")] Cluster = 6,
+    /// <summary>
     /// A database.
     /// </summary>
     [pbr::OriginalName("DATABASE")] Database = 7,
+    /// <summary>
+    /// Output only. Connection to a data source. For example, a BigQuery
+    /// connection.
+    /// </summary>
+    [pbr::OriginalName("DATA_SOURCE_CONNECTION")] DataSourceConnection = 8,
+    /// <summary>
+    /// Output only. Routine, for example, a BigQuery routine.
+    /// </summary>
+    [pbr::OriginalName("ROUTINE")] Routine = 9,
     /// <summary>
     /// A service, for example, a Dataproc Metastore service.
     /// </summary>
@@ -450,10 +492,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ScopeFieldNumber = 6;
     private global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope scope_;
     /// <summary>
-    /// Required. The scope of this search request. A `scope` that has empty
-    /// `include_org_ids`, `include_project_ids` AND false
-    /// `include_gcp_public_datasets` is considered invalid. Data Catalog will
-    /// return an error in such a case.
+    /// Required. The scope of this search request.
+    ///
+    /// The `scope` is invalid if `include_org_ids`, `include_project_ids` are
+    /// empty AND `include_gcp_public_datasets` is set to `false`. In this case,
+    /// the request returns an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest.Types.Scope Scope {
@@ -467,19 +510,18 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// Optional. The query string in search query syntax. An empty query string will result
-    /// in all data assets (in the specified scope) that the user has access to.
+    /// Optional. The query string with a minimum of 3 characters and specific syntax.
+    /// For more information, see
+    /// [Data Catalog search syntax](/data-catalog/docs/how-to/search-reference).
     ///
-    /// Query strings can be simple as "x" or more qualified as:
+    /// An empty query string returns all data assets (in the specified scope)
+    /// that you have access to.
     ///
-    /// * name:x
-    /// * column:x
-    /// * description:y
+    /// A query string can be a simple `xyz` or qualified by predicates:
     ///
-    /// Note: Query tokens need to have a minimum of 3 characters for substring
-    /// matching to work correctly. See [Data Catalog Search
-    /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
-    /// for more information.
+    /// * `name:x`
+    /// * `column:y`
+    /// * `description:z`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Query {
@@ -493,8 +535,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Number of results in the search page. If &lt;=0 then defaults to 10. Max limit
-    /// for page_size is 1000. Throws an invalid argument for page_size > 1000.
+    /// Number of results to return in a single search page.
+    ///
+    /// Can't be negative or 0, defaults to 10 in this case.
+    /// The maximum number is 1000. If exceeded, throws an "invalid argument"
+    /// exception.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -508,12 +553,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. Pagination token returned in an earlier
-    /// [SearchCatalogResponse.next_page_token][google.cloud.datacatalog.v1.SearchCatalogResponse.next_page_token], which
-    /// indicates that this is a continuation of a prior
+    /// Optional. Pagination token that, if specified, returns the next page of search
+    /// results. If empty, returns the first page.
+    ///
+    /// This token is returned in the [SearchCatalogResponse.next_page_token][google.cloud.datacatalog.v1.SearchCatalogResponse.next_page_token]
+    /// field of the response to a previous
     /// [SearchCatalogRequest][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog]
-    /// call, and that the system should return the next page of data. If empty,
-    /// the first page is returned.
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -527,14 +573,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Specifies the ordering of results, currently supported case-sensitive
-    /// choices are:
+    /// Specifies the order of results.
     ///
-    ///   * `relevance`, only supports descending
-    ///   * `last_modified_timestamp [asc|desc]`, defaults to descending if not
-    ///     specified
+    /// Currently supported case-sensitive values are:
     ///
-    /// If not specified, defaults to `relevance` descending.
+    /// * `relevance` that can only be descending
+    /// * `last_modified_timestamp [asc|desc]` with descending (`desc`) as default
+    ///
+    /// If this parameter is omitted, it defaults to the descending `relevance`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -810,6 +856,7 @@ namespace Google.Cloud.DataCatalog.V1 {
           includeProjectIds_ = other.includeProjectIds_.Clone();
           includeGcpPublicDatasets_ = other.includeGcpPublicDatasets_;
           restrictedLocations_ = other.restrictedLocations_.Clone();
+          includePublicTagTemplates_ = other.includePublicTagTemplates_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -824,9 +871,11 @@ namespace Google.Cloud.DataCatalog.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> includeOrgIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The list of organization IDs to search within. To find your organization
-        /// ID, follow instructions in
-        /// https://cloud.google.com/resource-manager/docs/creating-managing-organization.
+        /// The list of organization IDs to search within.
+        ///
+        /// To find your organization ID, follow the steps from
+        /// [Creating and managing organizations]
+        /// (/resource-manager/docs/creating-managing-organization).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> IncludeOrgIds {
@@ -839,9 +888,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> includeProjectIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The list of project IDs to search within. To learn more about the
-        /// distinction between project names/IDs/numbers, go to
-        /// https://cloud.google.com/docs/overview/#projects.
+        /// The list of project IDs to search within.
+        ///
+        /// For more information on the distinction between project names, IDs, and
+        /// numbers, see [Projects](/docs/overview/#projects).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> IncludeProjectIds {
@@ -852,10 +902,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         public const int IncludeGcpPublicDatasetsFieldNumber = 7;
         private bool includeGcpPublicDatasets_;
         /// <summary>
-        /// If `true`, include Google Cloud Platform (GCP) public datasets in the
-        /// search results. Info on GCP public datasets is available at
-        /// https://cloud.google.com/public-datasets/. By default, GCP public
-        /// datasets are excluded.
+        /// If `true`, include Google Cloud Platform (GCP) public datasets in
+        /// search results. By default, they are excluded.
+        ///
+        /// See [Google Cloud Public Datasets](/public-datasets) for more
+        /// information.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool IncludeGcpPublicDatasets {
@@ -871,20 +922,42 @@ namespace Google.Cloud.DataCatalog.V1 {
             = pb::FieldCodec.ForString(130);
         private readonly pbc::RepeatedField<string> restrictedLocations_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The list of locations to search within.
-        /// 1. If empty, search will be performed in all locations;
-        /// 2. If any of the locations are NOT [supported
-        /// regions](https://cloud.google.com/data-catalog/docs/concepts/regions#supported_regions),
-        /// error will be returned;
-        /// 3. Otherwise, search only the given locations for matching results.
-        /// Typical usage is to leave this field empty. When a location is
-        /// unreachable as returned in the `SearchCatalogResponse.unreachable` field,
-        /// users can repeat the search request with this parameter set to get
-        /// additional information on the error.
+        /// Optional. The list of locations to search within. If empty, all locations are
+        /// searched.
+        ///
+        /// Returns an error if any location in the list isn't one of the [Supported
+        /// regions](https://cloud.google.com/data-catalog/docs/concepts/regions#supported_regions).
+        ///
+        /// If a location is unreachable, its name is returned in the
+        /// `SearchCatalogResponse.unreachable` field. To get additional information
+        /// on the error, repeat the search request and set the location name as the
+        /// value of this parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> RestrictedLocations {
           get { return restrictedLocations_; }
+        }
+
+        /// <summary>Field number for the "include_public_tag_templates" field.</summary>
+        public const int IncludePublicTagTemplatesFieldNumber = 19;
+        private bool includePublicTagTemplates_;
+        /// <summary>
+        /// Optional. If `true`, include [public tag
+        /// templates][google.cloud.datacatalog.v1.TagTemplate.is_publicly_readable]
+        /// in the search results. By default, they are included only if you have
+        /// explicit permissions on them to view them. For example, if you are the
+        /// owner.
+        ///
+        /// Other scope fields, for example, ``include_org_ids``,
+        /// still restrict the returned public tag templates and at least one of
+        /// them is required.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool IncludePublicTagTemplates {
+          get { return includePublicTagTemplates_; }
+          set {
+            includePublicTagTemplates_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -904,6 +977,7 @@ namespace Google.Cloud.DataCatalog.V1 {
           if(!includeProjectIds_.Equals(other.includeProjectIds_)) return false;
           if (IncludeGcpPublicDatasets != other.IncludeGcpPublicDatasets) return false;
           if(!restrictedLocations_.Equals(other.restrictedLocations_)) return false;
+          if (IncludePublicTagTemplates != other.IncludePublicTagTemplates) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -914,6 +988,7 @@ namespace Google.Cloud.DataCatalog.V1 {
           hash ^= includeProjectIds_.GetHashCode();
           if (IncludeGcpPublicDatasets != false) hash ^= IncludeGcpPublicDatasets.GetHashCode();
           hash ^= restrictedLocations_.GetHashCode();
+          if (IncludePublicTagTemplates != false) hash ^= IncludePublicTagTemplates.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -937,6 +1012,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             output.WriteBool(IncludeGcpPublicDatasets);
           }
           restrictedLocations_.WriteTo(output, _repeated_restrictedLocations_codec);
+          if (IncludePublicTagTemplates != false) {
+            output.WriteRawTag(152, 1);
+            output.WriteBool(IncludePublicTagTemplates);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -953,6 +1032,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             output.WriteBool(IncludeGcpPublicDatasets);
           }
           restrictedLocations_.WriteTo(ref output, _repeated_restrictedLocations_codec);
+          if (IncludePublicTagTemplates != false) {
+            output.WriteRawTag(152, 1);
+            output.WriteBool(IncludePublicTagTemplates);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -968,6 +1051,9 @@ namespace Google.Cloud.DataCatalog.V1 {
             size += 1 + 1;
           }
           size += restrictedLocations_.CalculateSize(_repeated_restrictedLocations_codec);
+          if (IncludePublicTagTemplates != false) {
+            size += 2 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -985,6 +1071,9 @@ namespace Google.Cloud.DataCatalog.V1 {
             IncludeGcpPublicDatasets = other.IncludeGcpPublicDatasets;
           }
           restrictedLocations_.Add(other.restrictedLocations_);
+          if (other.IncludePublicTagTemplates != false) {
+            IncludePublicTagTemplates = other.IncludePublicTagTemplates;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1015,6 +1104,10 @@ namespace Google.Cloud.DataCatalog.V1 {
                 restrictedLocations_.AddEntriesFrom(input, _repeated_restrictedLocations_codec);
                 break;
               }
+              case 152: {
+                IncludePublicTagTemplates = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1043,6 +1136,10 @@ namespace Google.Cloud.DataCatalog.V1 {
               }
               case 130: {
                 restrictedLocations_.AddEntriesFrom(ref input, _repeated_restrictedLocations_codec);
+                break;
+              }
+              case 152: {
+                IncludePublicTagTemplates = input.ReadBool();
                 break;
               }
             }
@@ -1118,7 +1215,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NextPageTokenFieldNumber = 3;
     private string nextPageToken_ = "";
     /// <summary>
-    /// The token that can be used to retrieve the next page of results.
+    /// Pagination token that can be used in subsequent calls to retrieve the next
+    /// page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1134,10 +1232,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Unreachable locations. Search result does not include data from those
-    /// locations. Users can get additional information on the error by repeating
-    /// the search request with a more restrictive parameter -- setting the value
-    /// for `SearchDataCatalogRequest.scope.restricted_locations`.
+    /// Unreachable locations. Search results don't include data from those
+    /// locations.
+    ///
+    /// To get additional information on an error, repeat the search request and
+    /// restrict it to specific locations by setting the
+    /// `SearchCatalogRequest.scope.restricted_locations` parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unreachable {
@@ -1343,9 +1443,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project this entry group belongs to. Example:
-    ///
-    /// `projects/{project_id}/locations/{location}`
+    /// Required. The names of the project and location that the new entry group belongs to.
     ///
     /// Note: The entry group itself and its child resources might not be
     /// stored in the location specified in its name.
@@ -1380,7 +1478,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int EntryGroupFieldNumber = 2;
     private global::Google.Cloud.DataCatalog.V1.EntryGroup entryGroup_;
     /// <summary>
-    /// The entry group to create. Defaults to an empty entry group.
+    /// The entry group to create. Defaults to empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.EntryGroup EntryGroup {
@@ -1617,7 +1715,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int EntryGroupFieldNumber = 1;
     private global::Google.Cloud.DataCatalog.V1.EntryGroup entryGroup_;
     /// <summary>
-    /// Required. The updated entry group. "name" field must be set.
+    /// Required. Updates for the entry group. The `name` field must be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.EntryGroup EntryGroup {
@@ -1857,8 +1955,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the entry group. For example,
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`.
+    /// Required. The name of the entry group to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1872,7 +1969,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ReadMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// The fields to return. If not set or empty, all fields are returned.
+    /// The fields to return. If empty or omitted, all fields are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask ReadMask {
@@ -2085,8 +2182,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the entry group. For example,
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`.
+    /// Required. The name of the entry group to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2305,10 +2401,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the location that contains the entry groups, which can be
-    /// provided in URL format. Example:
+    /// Required. The name of the location that contains the entry groups to list.
     ///
-    /// * projects/{project_id}/locations/{location}
+    /// Can be provided as a URL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2322,8 +2417,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return. Default is 10. Max limit is 1000.
-    /// Throws an invalid argument for `page_size > 1000`.
+    /// Optional. The maximum number of items to return.
+    ///
+    /// Default is 10. Maximum limit is 1000.
+    /// Throws an invalid argument if `page_size` is greater than 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -2337,8 +2434,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. Token that specifies which page is requested. If empty, the first page is
-    /// returned.
+    /// Optional. Pagination token that specifies the next page to return.
+    /// If empty, returns the first page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -2568,7 +2665,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.V1.EntryGroup.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.EntryGroup> entryGroups_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.EntryGroup>();
     /// <summary>
-    /// EntryGroup details.
+    /// Entry group details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.EntryGroup> EntryGroups {
@@ -2579,8 +2676,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results. It is set to empty if no items
-    /// remain in results.
+    /// Pagination token to specify in the next call to retrieve the next page of
+    /// results. Empty if there are no more items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -2775,9 +2872,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the entry group this entry belongs to. Example:
-    ///
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
+    /// Required. The name of the entry group this entry belongs to.
     ///
     /// Note: The entry itself and its child resources might not be stored in
     /// the location specified in its name.
@@ -3049,7 +3144,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int EntryFieldNumber = 1;
     private global::Google.Cloud.DataCatalog.V1.Entry entry_;
     /// <summary>
-    /// Required. The updated entry. The "name" field must be set.
+    /// Required. Updates for the entry. The `name` field must be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.Entry Entry {
@@ -3069,24 +3164,29 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// are overwritten. If such fields are non-required and omitted in the
     /// request body, their values are emptied.
     ///
-    /// The following fields are modifiable:
+    /// You can modify only the fields listed below.
     ///
-    /// * For entries with type `DATA_STREAM`:
-    ///    * `schema`
-    /// * For entries with type `FILESET`:
-    ///    * `schema`
-    ///    * `display_name`
-    ///    * `description`
-    ///    * `gcs_fileset_spec`
-    ///    * `gcs_fileset_spec.file_patterns`
-    /// * For entries with `user_specified_type`:
-    ///    * `schema`
-    ///    * `display_name`
-    ///    * `description`
-    ///    * `user_specified_type`
-    ///    * `user_specified_system`
-    ///    * `linked_resource`
-    ///    * `source_system_timestamps`
+    /// For entries with type `DATA_STREAM`:
+    ///
+    /// * `schema`
+    ///
+    /// For entries with type `FILESET`:
+    ///
+    /// * `schema`
+    /// * `display_name`
+    /// * `description`
+    /// * `gcs_fileset_spec`
+    /// * `gcs_fileset_spec.file_patterns`
+    ///
+    /// For entries with `user_specified_type`:
+    ///
+    /// * `schema`
+    /// * `display_name`
+    /// * `description`
+    /// * `user_specified_type`
+    /// * `user_specified_system`
+    /// * `linked_resource`
+    /// * `source_system_timestamps`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -3307,9 +3407,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the entry. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+    /// Required. The name of the entry to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3488,9 +3586,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the entry. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+    /// Required. The name of the entry to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3680,14 +3776,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int LinkedResourceFieldNumber = 1;
     /// <summary>
     /// The full name of the Google Cloud Platform resource the Data Catalog
-    /// entry represents. See:
-    /// https://cloud.google.com/apis/design/resource_names#full_resource_name.
-    /// Full names are case-sensitive.
+    /// entry represents. For more information, see [Full Resource Name]
+    /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
     ///
-    /// Examples:
+    /// Full names are case-sensitive. For example:
     ///
-    ///  * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
-    ///  * //pubsub.googleapis.com/projects/projectId/topics/topicId
+    ///  * `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+    ///  * `//pubsub.googleapis.com/projects/{PROJECT_ID}/topics/{TOPIC_ID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LinkedResource {
@@ -3705,14 +3800,15 @@ namespace Google.Cloud.DataCatalog.V1 {
     ///
     /// Examples:
     ///
-    ///   * `pubsub.project_id.topic_id`
-    ///   * ``pubsub.project_id.`topic.id.with.dots` ``
-    ///   * `bigquery.table.project_id.dataset_id.table_id`
-    ///   * `bigquery.dataset.project_id.dataset_id`
-    ///   * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
+    /// * `pubsub.topic.{PROJECT_ID}.{TOPIC_ID}`
+    /// * `pubsub.topic.{PROJECT_ID}.`\``{TOPIC.ID.SEPARATED.WITH.DOTS}`\`
+    /// * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
+    /// * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}`
+    /// * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}`
     ///
-    /// `*_id`s should satisfy the standard SQL rules for identifiers.
-    /// https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
+    /// Identifiers (`*_ID`) should comply with the
+    /// [Lexical structure in Standard SQL]
+    /// (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SqlResource {
@@ -3740,7 +3836,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     ///
     /// Example for a DPMS table:
     ///
-    /// `dataproc_metastore:project_id.location_id.instance_id.database_id.table_id`
+    /// `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FullyQualifiedName {
@@ -3948,15 +4044,15 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Entry Metadata.
-  /// A Data Catalog Entry resource represents another resource in Google
+  /// Entry metadata.
+  /// A Data Catalog entry represents another resource in Google
   /// Cloud Platform (such as a BigQuery dataset or a Pub/Sub topic) or
-  /// outside of Google Cloud Platform. Clients can use the `linked_resource` field
-  /// in the Entry resource to refer to the original resource ID of the source
+  /// outside of it. You can use the `linked_resource` field
+  /// in the entry resource to refer to the original resource ID of the source
   /// system.
   ///
-  /// An Entry resource contains resource details, such as its schema. An Entry can
-  /// also be used to attach flexible metadata, such as a
+  /// An entry resource contains resource details, for example, its schema.
+  /// Additionally, you can attach flexible metadata to an entry in the form of a
   /// [Tag][google.cloud.datacatalog.v1.Tag].
   /// </summary>
   public sealed partial class Entry : pb::IMessage<Entry>
@@ -3995,6 +4091,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       description_ = other.description_;
       schema_ = other.schema_ != null ? other.schema_.Clone() : null;
       sourceSystemTimestamps_ = other.sourceSystemTimestamps_ != null ? other.sourceSystemTimestamps_.Clone() : null;
+      usageSignal_ = other.usageSignal_ != null ? other.usageSignal_.Clone() : null;
+      labels_ = other.labels_.Clone();
       dataSource_ = other.dataSource_ != null ? other.dataSource_.Clone() : null;
       switch (other.EntryTypeCase) {
         case EntryTypeOneofCase.Type:
@@ -4030,6 +4128,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         case SpecOneofCase.DatabaseTableSpec:
           DatabaseTableSpec = other.DatabaseTableSpec.Clone();
           break;
+        case SpecOneofCase.DataSourceConnectionSpec:
+          DataSourceConnectionSpec = other.DataSourceConnectionSpec.Clone();
+          break;
+        case SpecOneofCase.RoutineSpec:
+          RoutineSpec = other.RoutineSpec.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4045,9 +4149,6 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of an entry in URL format.
-    /// Example:
-    ///
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
     ///
     /// Note: The entry itself and its child resources might not be
     /// stored in the location specified in its name.
@@ -4066,14 +4167,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// The resource this metadata entry refers to.
     ///
-    /// For Google Cloud Platform resources, `linked_resource` is the [full name of
-    /// the
-    /// resource](https://cloud.google.com/apis/design/resource_names#full_resource_name).
+    /// For Google Cloud Platform resources, `linked_resource` is the
+    /// [Full Resource Name]
+    /// (https://cloud.google.com/apis/design/resource_names#full_resource_name).
     /// For example, the `linked_resource` for a table resource from BigQuery is:
     ///
-    /// `//bigquery.googleapis.com/projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
+    /// `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
     ///
-    /// Output only when entry is one of the types in the `EntryType` enum.
+    /// Output only when the entry is one of the types in the `EntryType` enum.
     ///
     /// For entries with a `user_specified_type`, this field is optional and
     /// defaults to an empty string.
@@ -4111,7 +4212,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     ///
     /// Example for a DPMS table:
     ///
-    /// `dataproc_metastore:project_id.location_id.instance_id.database_id.table_id`
+    /// `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FullyQualifiedName {
@@ -4125,7 +4226,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int TypeFieldNumber = 2;
     /// <summary>
     /// The type of the entry.
-    /// Only used for Entries with types in the EntryType enum.
+    /// Only used for entries with types listed in the `EntryType` enum.
+    ///
+    /// Currently, only `FILESET` enum value is allowed. All other entries
+    /// created in Data Catalog must use the `user_specified_type`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.EntryType Type {
@@ -4139,16 +4243,19 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "user_specified_type" field.</summary>
     public const int UserSpecifiedTypeFieldNumber = 16;
     /// <summary>
-    /// Entry type if it does not fit any of the input-allowed values listed in
-    /// `EntryType` enum above. When creating an entry, users should check the
-    /// enum values first, if nothing matches the entry to be created, then
-    /// provide a custom value, for example "my_special_type".
-    /// `user_specified_type` strings must begin with a letter or underscore and
-    /// can only contain letters, numbers, and underscores; are case insensitive;
-    /// must be at least 1 character and at most 64 characters long.
+    /// Custom entry type that doesn't match any of the values allowed for input
+    /// and listed in the `EntryType` enum.
     ///
-    /// Currently, only FILESET enum value is allowed. All other entries created
-    /// through Data Catalog must use `user_specified_type`.
+    /// When creating an entry, first check the type values in the enum.
+    /// If there are no appropriate types for the new entry,
+    /// provide a custom value, for example, `my_special_type`.
+    ///
+    /// The `user_specified_type` string has the following limitations:
+    ///
+    /// * Is case insensitive.
+    /// * Must begin with a letter or underscore.
+    /// * Can only contain letters, numbers, and underscores.
+    /// * Must be at least 1 character and at most 64 characters long.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserSpecifiedType {
@@ -4162,8 +4269,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "integrated_system" field.</summary>
     public const int IntegratedSystemFieldNumber = 17;
     /// <summary>
-    /// Output only. This field indicates the entry's source system that Data Catalog
-    /// integrates with, such as BigQuery or Pub/Sub.
+    /// Output only. Indicates the entry's source system that Data Catalog
+    /// integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.IntegratedSystem IntegratedSystem {
@@ -4177,11 +4284,15 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "user_specified_system" field.</summary>
     public const int UserSpecifiedSystemFieldNumber = 18;
     /// <summary>
-    /// This field indicates the entry's source system that Data Catalog does not
-    /// integrate with. `user_specified_system` strings must begin with a letter
-    /// or underscore and can only contain letters, numbers, and underscores; are
-    /// case insensitive; must be at least 1 character and at most 64 characters
-    /// long.
+    /// Indicates the entry's source system that Data Catalog doesn't
+    /// automatically integrate with.
+    ///
+    /// The `user_specified_system` string has the following limitations:
+    ///
+    /// * Is case insensitive.
+    /// * Must begin with a letter or underscore.
+    /// * Can only contain letters, numbers, and underscores.
+    /// * Must be at least 1 character and at most 64 characters long.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserSpecifiedSystem {
@@ -4195,8 +4306,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "gcs_fileset_spec" field.</summary>
     public const int GcsFilesetSpecFieldNumber = 6;
     /// <summary>
-    /// Specification that applies to a Cloud Storage fileset. This is only valid
-    /// on entries of type FILESET.
+    /// Specification that applies to a Cloud Storage fileset. Valid only
+    /// for entries with the `FILESET` type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.GcsFilesetSpec GcsFilesetSpec {
@@ -4210,8 +4321,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "bigquery_table_spec" field.</summary>
     public const int BigqueryTableSpecFieldNumber = 12;
     /// <summary>
-    /// Specification that applies to a BigQuery table. This is only valid on
-    /// entries of type `TABLE`.
+    /// Specification that applies to a BigQuery table. Valid only for
+    /// entries with the `TABLE` type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.BigQueryTableSpec BigqueryTableSpec {
@@ -4225,9 +4336,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "bigquery_date_sharded_spec" field.</summary>
     public const int BigqueryDateShardedSpecFieldNumber = 15;
     /// <summary>
-    /// Specification for a group of BigQuery tables with name pattern
-    /// `[prefix]YYYYMMDD`. Context:
-    /// https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
+    /// Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD`
+    /// name pattern.
+    ///
+    /// For more information, see [Introduction to partitioned tables]
+    /// (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec BigqueryDateShardedSpec {
@@ -4241,8 +4354,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "database_table_spec" field.</summary>
     public const int DatabaseTableSpecFieldNumber = 24;
     /// <summary>
-    /// Specification that applies to a table resource. Only valid
-    /// for entries of `TABLE` type.
+    /// Specification that applies to a table resource. Valid only
+    /// for entries with the `TABLE` type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec DatabaseTableSpec {
@@ -4250,6 +4363,36 @@ namespace Google.Cloud.DataCatalog.V1 {
       set {
         spec_ = value;
         specCase_ = value == null ? SpecOneofCase.None : SpecOneofCase.DatabaseTableSpec;
+      }
+    }
+
+    /// <summary>Field number for the "data_source_connection_spec" field.</summary>
+    public const int DataSourceConnectionSpecFieldNumber = 27;
+    /// <summary>
+    /// Specification that applies to a data source connection. Valid only
+    /// for entries with the `DATA_SOURCE_CONNECTION` type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec DataSourceConnectionSpec {
+      get { return specCase_ == SpecOneofCase.DataSourceConnectionSpec ? (global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec) spec_ : null; }
+      set {
+        spec_ = value;
+        specCase_ = value == null ? SpecOneofCase.None : SpecOneofCase.DataSourceConnectionSpec;
+      }
+    }
+
+    /// <summary>Field number for the "routine_spec" field.</summary>
+    public const int RoutineSpecFieldNumber = 28;
+    /// <summary>
+    /// Specification that applies to a user-defined function or procedure. Valid
+    /// only for entries with the `ROUTINE` type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.RoutineSpec RoutineSpec {
+      get { return specCase_ == SpecOneofCase.RoutineSpec ? (global::Google.Cloud.DataCatalog.V1.RoutineSpec) spec_ : null; }
+      set {
+        spec_ = value;
+        specCase_ = value == null ? SpecOneofCase.None : SpecOneofCase.RoutineSpec;
       }
     }
 
@@ -4311,10 +4454,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int SourceSystemTimestampsFieldNumber = 7;
     private global::Google.Cloud.DataCatalog.V1.SystemTimestamps sourceSystemTimestamps_;
     /// <summary>
-    /// Timestamps about the underlying resource, not about this Data Catalog
-    /// entry. Output only when Entry is of type in the EntryType enum. For entries
-    /// with user_specified_type, this field is optional and defaults to an empty
-    /// timestamp.
+    /// Timestamps from the underlying resource, not from the Data Catalog
+    /// entry.
+    ///
+    /// Output only when the entry has a type listed in the `EntryType` enum.
+    /// For entries with `user_specified_type`, this field is optional and defaults
+    /// to an empty timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SystemTimestamps SourceSystemTimestamps {
@@ -4322,6 +4467,37 @@ namespace Google.Cloud.DataCatalog.V1 {
       set {
         sourceSystemTimestamps_ = value;
       }
+    }
+
+    /// <summary>Field number for the "usage_signal" field.</summary>
+    public const int UsageSignalFieldNumber = 13;
+    private global::Google.Cloud.DataCatalog.V1.UsageSignal usageSignal_;
+    /// <summary>
+    /// Output only. Resource usage statistics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.UsageSignal UsageSignal {
+      get { return usageSignal_; }
+      set {
+        usageSignal_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 14;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 114);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Cloud labels attached to the entry.
+    ///
+    /// In Data Catalog, you can create and modify labels attached only to custom
+    /// entries. Synced entries have unmodifiable labels that come from the source
+    /// system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
     }
 
     /// <summary>Field number for the "data_source" field.</summary>
@@ -4401,6 +4577,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public enum SpecOneofCase {
       None = 0,
       DatabaseTableSpec = 24,
+      DataSourceConnectionSpec = 27,
+      RoutineSpec = 28,
     }
     private SpecOneofCase specCase_ = SpecOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4438,10 +4616,14 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (!object.Equals(BigqueryTableSpec, other.BigqueryTableSpec)) return false;
       if (!object.Equals(BigqueryDateShardedSpec, other.BigqueryDateShardedSpec)) return false;
       if (!object.Equals(DatabaseTableSpec, other.DatabaseTableSpec)) return false;
+      if (!object.Equals(DataSourceConnectionSpec, other.DataSourceConnectionSpec)) return false;
+      if (!object.Equals(RoutineSpec, other.RoutineSpec)) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(Schema, other.Schema)) return false;
       if (!object.Equals(SourceSystemTimestamps, other.SourceSystemTimestamps)) return false;
+      if (!object.Equals(UsageSignal, other.UsageSignal)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(DataSource, other.DataSource)) return false;
       if (EntryTypeCase != other.EntryTypeCase) return false;
       if (SystemCase != other.SystemCase) return false;
@@ -4464,10 +4646,14 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (typeSpecCase_ == TypeSpecOneofCase.BigqueryTableSpec) hash ^= BigqueryTableSpec.GetHashCode();
       if (typeSpecCase_ == TypeSpecOneofCase.BigqueryDateShardedSpec) hash ^= BigqueryDateShardedSpec.GetHashCode();
       if (specCase_ == SpecOneofCase.DatabaseTableSpec) hash ^= DatabaseTableSpec.GetHashCode();
+      if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) hash ^= DataSourceConnectionSpec.GetHashCode();
+      if (specCase_ == SpecOneofCase.RoutineSpec) hash ^= RoutineSpec.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (schema_ != null) hash ^= Schema.GetHashCode();
       if (sourceSystemTimestamps_ != null) hash ^= SourceSystemTimestamps.GetHashCode();
+      if (usageSignal_ != null) hash ^= UsageSignal.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (dataSource_ != null) hash ^= DataSource.GetHashCode();
       hash ^= (int) entryTypeCase_;
       hash ^= (int) systemCase_;
@@ -4525,6 +4711,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(BigqueryTableSpec);
       }
+      if (usageSignal_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(UsageSignal);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
       if (typeSpecCase_ == TypeSpecOneofCase.BigqueryDateShardedSpec) {
         output.WriteRawTag(122);
         output.WriteMessage(BigqueryDateShardedSpec);
@@ -4548,6 +4739,14 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (specCase_ == SpecOneofCase.DatabaseTableSpec) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(DatabaseTableSpec);
+      }
+      if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DataSourceConnectionSpec);
+      }
+      if (specCase_ == SpecOneofCase.RoutineSpec) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(RoutineSpec);
       }
       if (FullyQualifiedName.Length != 0) {
         output.WriteRawTag(234, 1);
@@ -4598,6 +4797,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(BigqueryTableSpec);
       }
+      if (usageSignal_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(UsageSignal);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (typeSpecCase_ == TypeSpecOneofCase.BigqueryDateShardedSpec) {
         output.WriteRawTag(122);
         output.WriteMessage(BigqueryDateShardedSpec);
@@ -4621,6 +4825,14 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (specCase_ == SpecOneofCase.DatabaseTableSpec) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(DatabaseTableSpec);
+      }
+      if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DataSourceConnectionSpec);
+      }
+      if (specCase_ == SpecOneofCase.RoutineSpec) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(RoutineSpec);
       }
       if (FullyQualifiedName.Length != 0) {
         output.WriteRawTag(234, 1);
@@ -4668,6 +4880,12 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (specCase_ == SpecOneofCase.DatabaseTableSpec) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DatabaseTableSpec);
       }
+      if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataSourceConnectionSpec);
+      }
+      if (specCase_ == SpecOneofCase.RoutineSpec) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoutineSpec);
+      }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
@@ -4680,6 +4898,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (sourceSystemTimestamps_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceSystemTimestamps);
       }
+      if (usageSignal_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UsageSignal);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (dataSource_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataSource);
       }
@@ -4721,6 +4943,13 @@ namespace Google.Cloud.DataCatalog.V1 {
         }
         SourceSystemTimestamps.MergeFrom(other.SourceSystemTimestamps);
       }
+      if (other.usageSignal_ != null) {
+        if (usageSignal_ == null) {
+          UsageSignal = new global::Google.Cloud.DataCatalog.V1.UsageSignal();
+        }
+        UsageSignal.MergeFrom(other.UsageSignal);
+      }
+      labels_.Add(other.labels_);
       if (other.dataSource_ != null) {
         if (dataSource_ == null) {
           DataSource = new global::Google.Cloud.DataCatalog.V1.DataSource();
@@ -4772,6 +5001,18 @@ namespace Google.Cloud.DataCatalog.V1 {
             DatabaseTableSpec = new global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec();
           }
           DatabaseTableSpec.MergeFrom(other.DatabaseTableSpec);
+          break;
+        case SpecOneofCase.DataSourceConnectionSpec:
+          if (DataSourceConnectionSpec == null) {
+            DataSourceConnectionSpec = new global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec();
+          }
+          DataSourceConnectionSpec.MergeFrom(other.DataSourceConnectionSpec);
+          break;
+        case SpecOneofCase.RoutineSpec:
+          if (RoutineSpec == null) {
+            RoutineSpec = new global::Google.Cloud.DataCatalog.V1.RoutineSpec();
+          }
+          RoutineSpec.MergeFrom(other.RoutineSpec);
           break;
       }
 
@@ -4842,6 +5083,17 @@ namespace Google.Cloud.DataCatalog.V1 {
             BigqueryTableSpec = subBuilder;
             break;
           }
+          case 106: {
+            if (usageSignal_ == null) {
+              UsageSignal = new global::Google.Cloud.DataCatalog.V1.UsageSignal();
+            }
+            input.ReadMessage(UsageSignal);
+            break;
+          }
+          case 114: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
           case 122: {
             global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec();
             if (typeSpecCase_ == TypeSpecOneofCase.BigqueryDateShardedSpec) {
@@ -4878,6 +5130,24 @@ namespace Google.Cloud.DataCatalog.V1 {
             }
             input.ReadMessage(subBuilder);
             DatabaseTableSpec = subBuilder;
+            break;
+          }
+          case 218: {
+            global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec();
+            if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) {
+              subBuilder.MergeFrom(DataSourceConnectionSpec);
+            }
+            input.ReadMessage(subBuilder);
+            DataSourceConnectionSpec = subBuilder;
+            break;
+          }
+          case 226: {
+            global::Google.Cloud.DataCatalog.V1.RoutineSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.RoutineSpec();
+            if (specCase_ == SpecOneofCase.RoutineSpec) {
+              subBuilder.MergeFrom(RoutineSpec);
+            }
+            input.ReadMessage(subBuilder);
+            RoutineSpec = subBuilder;
             break;
           }
           case 234: {
@@ -4951,6 +5221,17 @@ namespace Google.Cloud.DataCatalog.V1 {
             BigqueryTableSpec = subBuilder;
             break;
           }
+          case 106: {
+            if (usageSignal_ == null) {
+              UsageSignal = new global::Google.Cloud.DataCatalog.V1.UsageSignal();
+            }
+            input.ReadMessage(UsageSignal);
+            break;
+          }
+          case 114: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
           case 122: {
             global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec();
             if (typeSpecCase_ == TypeSpecOneofCase.BigqueryDateShardedSpec) {
@@ -4989,6 +5270,24 @@ namespace Google.Cloud.DataCatalog.V1 {
             DatabaseTableSpec = subBuilder;
             break;
           }
+          case 218: {
+            global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.DataSourceConnectionSpec();
+            if (specCase_ == SpecOneofCase.DataSourceConnectionSpec) {
+              subBuilder.MergeFrom(DataSourceConnectionSpec);
+            }
+            input.ReadMessage(subBuilder);
+            DataSourceConnectionSpec = subBuilder;
+            break;
+          }
+          case 226: {
+            global::Google.Cloud.DataCatalog.V1.RoutineSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.RoutineSpec();
+            if (specCase_ == SpecOneofCase.RoutineSpec) {
+              subBuilder.MergeFrom(RoutineSpec);
+            }
+            input.ReadMessage(subBuilder);
+            RoutineSpec = subBuilder;
+            break;
+          }
           case 234: {
             FullyQualifiedName = input.ReadString();
             break;
@@ -5001,8 +5300,8 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Specification that applies to a table resource. Only valid
-  /// for entries of `TABLE` type.
+  /// Specification that applies to a table resource. Valid only
+  /// for entries with the `TABLE` type.
   /// </summary>
   public sealed partial class DatabaseTableSpec : pb::IMessage<DatabaseTableSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5205,8 +5504,918 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// EntryGroup Metadata.
-  /// An EntryGroup resource represents a logical grouping of zero or more
+  /// Specification that applies to a data source connection. Valid only for
+  /// entries with the `DATA_SOURCE_CONNECTION` type.
+  /// </summary>
+  public sealed partial class DataSourceConnectionSpec : pb::IMessage<DataSourceConnectionSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataSourceConnectionSpec> _parser = new pb::MessageParser<DataSourceConnectionSpec>(() => new DataSourceConnectionSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DataSourceConnectionSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataSourceConnectionSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataSourceConnectionSpec(DataSourceConnectionSpec other) : this() {
+      bigqueryConnectionSpec_ = other.bigqueryConnectionSpec_ != null ? other.bigqueryConnectionSpec_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataSourceConnectionSpec Clone() {
+      return new DataSourceConnectionSpec(this);
+    }
+
+    /// <summary>Field number for the "bigquery_connection_spec" field.</summary>
+    public const int BigqueryConnectionSpecFieldNumber = 1;
+    private global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec bigqueryConnectionSpec_;
+    /// <summary>
+    /// Fields specific to BigQuery connections.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec BigqueryConnectionSpec {
+      get { return bigqueryConnectionSpec_; }
+      set {
+        bigqueryConnectionSpec_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DataSourceConnectionSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DataSourceConnectionSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(BigqueryConnectionSpec, other.BigqueryConnectionSpec)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (bigqueryConnectionSpec_ != null) hash ^= BigqueryConnectionSpec.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (bigqueryConnectionSpec_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BigqueryConnectionSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (bigqueryConnectionSpec_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BigqueryConnectionSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (bigqueryConnectionSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryConnectionSpec);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DataSourceConnectionSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.bigqueryConnectionSpec_ != null) {
+        if (bigqueryConnectionSpec_ == null) {
+          BigqueryConnectionSpec = new global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec();
+        }
+        BigqueryConnectionSpec.MergeFrom(other.BigqueryConnectionSpec);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (bigqueryConnectionSpec_ == null) {
+              BigqueryConnectionSpec = new global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec();
+            }
+            input.ReadMessage(BigqueryConnectionSpec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (bigqueryConnectionSpec_ == null) {
+              BigqueryConnectionSpec = new global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec();
+            }
+            input.ReadMessage(BigqueryConnectionSpec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Specification that applies to a routine. Valid only for
+  /// entries with the `ROUTINE` type.
+  /// </summary>
+  public sealed partial class RoutineSpec : pb::IMessage<RoutineSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RoutineSpec> _parser = new pb::MessageParser<RoutineSpec>(() => new RoutineSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RoutineSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutineSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutineSpec(RoutineSpec other) : this() {
+      routineType_ = other.routineType_;
+      language_ = other.language_;
+      routineArguments_ = other.routineArguments_.Clone();
+      returnType_ = other.returnType_;
+      definitionBody_ = other.definitionBody_;
+      switch (other.SystemSpecCase) {
+        case SystemSpecOneofCase.BigqueryRoutineSpec:
+          BigqueryRoutineSpec = other.BigqueryRoutineSpec.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutineSpec Clone() {
+      return new RoutineSpec(this);
+    }
+
+    /// <summary>Field number for the "routine_type" field.</summary>
+    public const int RoutineTypeFieldNumber = 1;
+    private global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType routineType_ = global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified;
+    /// <summary>
+    /// The type of the routine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType RoutineType {
+      get { return routineType_; }
+      set {
+        routineType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language" field.</summary>
+    public const int LanguageFieldNumber = 2;
+    private string language_ = "";
+    /// <summary>
+    /// The language the routine is written in. The exact value depends on the
+    /// source system. For BigQuery routines, possible values are:
+    ///
+    /// * `SQL`
+    /// * `JAVASCRIPT`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Language {
+      get { return language_; }
+      set {
+        language_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "routine_arguments" field.</summary>
+    public const int RoutineArgumentsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument> _repeated_routineArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument> routineArguments_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument>();
+    /// <summary>
+    /// Arguments of the routine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument> RoutineArguments {
+      get { return routineArguments_; }
+    }
+
+    /// <summary>Field number for the "return_type" field.</summary>
+    public const int ReturnTypeFieldNumber = 4;
+    private string returnType_ = "";
+    /// <summary>
+    /// Return type of the argument. The exact value depends on the source system
+    /// and the language.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ReturnType {
+      get { return returnType_; }
+      set {
+        returnType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "definition_body" field.</summary>
+    public const int DefinitionBodyFieldNumber = 5;
+    private string definitionBody_ = "";
+    /// <summary>
+    /// The body of the routine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DefinitionBody {
+      get { return definitionBody_; }
+      set {
+        definitionBody_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bigquery_routine_spec" field.</summary>
+    public const int BigqueryRoutineSpecFieldNumber = 6;
+    /// <summary>
+    /// Fields specific for BigQuery routines.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec BigqueryRoutineSpec {
+      get { return systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec ? (global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec) systemSpec_ : null; }
+      set {
+        systemSpec_ = value;
+        systemSpecCase_ = value == null ? SystemSpecOneofCase.None : SystemSpecOneofCase.BigqueryRoutineSpec;
+      }
+    }
+
+    private object systemSpec_;
+    /// <summary>Enum of possible cases for the "system_spec" oneof.</summary>
+    public enum SystemSpecOneofCase {
+      None = 0,
+      BigqueryRoutineSpec = 6,
+    }
+    private SystemSpecOneofCase systemSpecCase_ = SystemSpecOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SystemSpecOneofCase SystemSpecCase {
+      get { return systemSpecCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSystemSpec() {
+      systemSpecCase_ = SystemSpecOneofCase.None;
+      systemSpec_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RoutineSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RoutineSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoutineType != other.RoutineType) return false;
+      if (Language != other.Language) return false;
+      if(!routineArguments_.Equals(other.routineArguments_)) return false;
+      if (ReturnType != other.ReturnType) return false;
+      if (DefinitionBody != other.DefinitionBody) return false;
+      if (!object.Equals(BigqueryRoutineSpec, other.BigqueryRoutineSpec)) return false;
+      if (SystemSpecCase != other.SystemSpecCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoutineType != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified) hash ^= RoutineType.GetHashCode();
+      if (Language.Length != 0) hash ^= Language.GetHashCode();
+      hash ^= routineArguments_.GetHashCode();
+      if (ReturnType.Length != 0) hash ^= ReturnType.GetHashCode();
+      if (DefinitionBody.Length != 0) hash ^= DefinitionBody.GetHashCode();
+      if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) hash ^= BigqueryRoutineSpec.GetHashCode();
+      hash ^= (int) systemSpecCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RoutineType != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RoutineType);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Language);
+      }
+      routineArguments_.WriteTo(output, _repeated_routineArguments_codec);
+      if (ReturnType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ReturnType);
+      }
+      if (DefinitionBody.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DefinitionBody);
+      }
+      if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) {
+        output.WriteRawTag(50);
+        output.WriteMessage(BigqueryRoutineSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RoutineType != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RoutineType);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Language);
+      }
+      routineArguments_.WriteTo(ref output, _repeated_routineArguments_codec);
+      if (ReturnType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ReturnType);
+      }
+      if (DefinitionBody.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DefinitionBody);
+      }
+      if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) {
+        output.WriteRawTag(50);
+        output.WriteMessage(BigqueryRoutineSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoutineType != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoutineType);
+      }
+      if (Language.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
+      }
+      size += routineArguments_.CalculateSize(_repeated_routineArguments_codec);
+      if (ReturnType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReturnType);
+      }
+      if (DefinitionBody.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefinitionBody);
+      }
+      if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryRoutineSpec);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RoutineSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoutineType != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType.Unspecified) {
+        RoutineType = other.RoutineType;
+      }
+      if (other.Language.Length != 0) {
+        Language = other.Language;
+      }
+      routineArguments_.Add(other.routineArguments_);
+      if (other.ReturnType.Length != 0) {
+        ReturnType = other.ReturnType;
+      }
+      if (other.DefinitionBody.Length != 0) {
+        DefinitionBody = other.DefinitionBody;
+      }
+      switch (other.SystemSpecCase) {
+        case SystemSpecOneofCase.BigqueryRoutineSpec:
+          if (BigqueryRoutineSpec == null) {
+            BigqueryRoutineSpec = new global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec();
+          }
+          BigqueryRoutineSpec.MergeFrom(other.BigqueryRoutineSpec);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoutineType = (global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Language = input.ReadString();
+            break;
+          }
+          case 26: {
+            routineArguments_.AddEntriesFrom(input, _repeated_routineArguments_codec);
+            break;
+          }
+          case 34: {
+            ReturnType = input.ReadString();
+            break;
+          }
+          case 42: {
+            DefinitionBody = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec();
+            if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) {
+              subBuilder.MergeFrom(BigqueryRoutineSpec);
+            }
+            input.ReadMessage(subBuilder);
+            BigqueryRoutineSpec = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RoutineType = (global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.RoutineType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Language = input.ReadString();
+            break;
+          }
+          case 26: {
+            routineArguments_.AddEntriesFrom(ref input, _repeated_routineArguments_codec);
+            break;
+          }
+          case 34: {
+            ReturnType = input.ReadString();
+            break;
+          }
+          case 42: {
+            DefinitionBody = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.BigQueryRoutineSpec();
+            if (systemSpecCase_ == SystemSpecOneofCase.BigqueryRoutineSpec) {
+              subBuilder.MergeFrom(BigqueryRoutineSpec);
+            }
+            input.ReadMessage(subBuilder);
+            BigqueryRoutineSpec = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RoutineSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The fine-grained type of the routine.
+      /// </summary>
+      public enum RoutineType {
+        /// <summary>
+        /// Unspecified type.
+        /// </summary>
+        [pbr::OriginalName("ROUTINE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Non-builtin permanent scalar function.
+        /// </summary>
+        [pbr::OriginalName("SCALAR_FUNCTION")] ScalarFunction = 1,
+        /// <summary>
+        /// Stored procedure.
+        /// </summary>
+        [pbr::OriginalName("PROCEDURE")] Procedure = 2,
+      }
+
+      /// <summary>
+      /// Input or output argument of a function or stored procedure.
+      /// </summary>
+      public sealed partial class Argument : pb::IMessage<Argument>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Argument> _parser = new pb::MessageParser<Argument>(() => new Argument());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Argument> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.V1.RoutineSpec.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Argument() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Argument(Argument other) : this() {
+          name_ = other.name_;
+          mode_ = other.mode_;
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Argument Clone() {
+          return new Argument(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The name of the argument. A return argument of a function might not have
+        /// a name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "mode" field.</summary>
+        public const int ModeFieldNumber = 2;
+        private global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode mode_ = global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified;
+        /// <summary>
+        /// Specifies whether the argument is input or output.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode Mode {
+          get { return mode_; }
+          set {
+            mode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 3;
+        private string type_ = "";
+        /// <summary>
+        /// Type of the argument. The exact value depends on the source system and
+        /// the language.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Type {
+          get { return type_; }
+          set {
+            type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Argument);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Argument other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Mode != other.Mode) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Mode != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+          if (Type.Length != 0) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Mode != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Mode);
+          }
+          if (Type.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Mode != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Mode);
+          }
+          if (Type.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Mode != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+          }
+          if (Type.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Argument other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Mode != global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode.Unspecified) {
+            Mode = other.Mode;
+          }
+          if (other.Type.Length != 0) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 16: {
+                Mode = (global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Type = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 16: {
+                Mode = (global::Google.Cloud.DataCatalog.V1.RoutineSpec.Types.Argument.Types.Mode) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Type = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Argument message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The input or output mode of the argument.
+          /// </summary>
+          public enum Mode {
+            /// <summary>
+            /// Unspecified mode.
+            /// </summary>
+            [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The argument is input-only.
+            /// </summary>
+            [pbr::OriginalName("IN")] In = 1,
+            /// <summary>
+            /// The argument is output-only.
+            /// </summary>
+            [pbr::OriginalName("OUT")] Out = 2,
+            /// <summary>
+            /// The argument is both an input and an output.
+            /// </summary>
+            [pbr::OriginalName("INOUT")] Inout = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Entry group metadata.
+  ///
+  /// An `EntryGroup` resource represents a logical grouping of zero or more
   /// Data Catalog [Entry][google.cloud.datacatalog.v1.Entry] resources.
   /// </summary>
   public sealed partial class EntryGroup : pb::IMessage<EntryGroup>
@@ -5221,7 +6430,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5254,9 +6463,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the entry group in URL format. Example:
-    ///
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
+    /// The resource name of the entry group in URL format.
     ///
     /// Note: The entry group itself and its child resources might not be
     /// stored in the location specified in its name.
@@ -5288,9 +6495,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Entry group description, which can consist of several sentences or
-    /// paragraphs that describe entry group contents. Default value is an empty
-    /// string.
+    /// Entry group description. Can consist of several sentences or
+    /// paragraphs that describe the entry group contents.
+    /// Default value is an empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -5304,7 +6511,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DataCatalogTimestampsFieldNumber = 4;
     private global::Google.Cloud.DataCatalog.V1.SystemTimestamps dataCatalogTimestamps_;
     /// <summary>
-    /// Output only. Timestamps about this EntryGroup. Default value is empty timestamps.
+    /// Output only. Timestamps of the entry group. Default value is empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SystemTimestamps DataCatalogTimestamps {
@@ -5534,7 +6741,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5568,10 +6775,6 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Required. The name of the project and the template location
     /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
-    ///
-    /// Example:
-    ///
-    /// * projects/{project_id}/locations/us-central1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -5809,7 +7012,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5839,9 +7042,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+    /// Required. The name of the tag template to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5990,7 +7191,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6021,7 +7222,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int TagTemplateFieldNumber = 1;
     private global::Google.Cloud.DataCatalog.V1.TagTemplate tagTemplate_;
     /// <summary>
-    /// Required. The template to update. The "name" field must be set.
+    /// Required. The template to update. The `name` field must be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.TagTemplate TagTemplate {
@@ -6038,7 +7239,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Names of fields whose values to overwrite on a tag template. Currently,
     /// only `display_name` can be overwritten.
     ///
-    /// In general, if this parameter is absent or empty, all modifiable fields
+    /// If this parameter is absent or empty, all modifiable fields
     /// are overwritten. If such fields are non-required and omitted in the
     /// request body, their values are emptied.
     /// </summary>
@@ -6231,7 +7432,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6262,9 +7463,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template to delete. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+    /// Required. The name of the tag template to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -6278,9 +7477,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ForceFieldNumber = 2;
     private bool force_;
     /// <summary>
-    /// Required. Currently, this field must always be set to `true`.
-    /// This confirms the deletion of any possible tags using this template.
-    /// `force = false` will be supported in the future.
+    /// Required. If true, deletes all tags that use this template.
+    ///
+    /// Currently, `true` is the only supported value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Force {
@@ -6453,7 +7652,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6484,10 +7683,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the resource to attach this tag to. Tags can be attached to
-    /// entries. An entry can have up to 1000 attached tags. Example:
+    /// Required. The name of the resource to attach this tag to.
     ///
-    /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
+    /// Tags can be attached to entries or entry groups. An entry can have up to
+    /// 1000 attached tags.
     ///
     /// Note: The tag and its child resources might not be stored in
     /// the location specified in its name.
@@ -6686,7 +7885,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6927,7 +8126,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6957,9 +8156,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag to delete. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+    /// Required. The name of the tag to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -7108,7 +8305,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7142,10 +8339,6 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Required. The name of the project and the template location
     /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
-    ///
-    /// Example:
-    ///
-    /// * projects/{project_id}/locations/us-central1/tagTemplates/{tag_template_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -7386,7 +8579,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7418,9 +8611,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template field. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
+    /// Required. The name of the tag template field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -7451,9 +8642,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Optional. Names of fields whose values to overwrite on an individual field of a tag
     /// template. The following fields are modifiable:
     ///
-    ///   * `display_name`
-    ///   * `type.enum_type`
-    ///   * `is_required`
+    /// * `display_name`
+    /// * `type.enum_type`
+    /// * `is_required`
     ///
     /// If this parameter is absent or empty, all modifiable fields
     /// are overwritten. If such fields are non-required and omitted in the request
@@ -7678,7 +8869,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7709,9 +8900,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
+    /// Required. The name of the tag template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -7898,7 +9087,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7929,9 +9118,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the enum field value. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+    /// Required. The name of the enum field value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -8118,7 +9305,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8149,9 +9336,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template field to delete. Example:
-    ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
+    /// Required. The name of the tag template field to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -8165,9 +9350,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ForceFieldNumber = 2;
     private bool force_;
     /// <summary>
-    /// Required. Currently, this field must always be set to `true`.
-    /// This confirms the deletion of this field from any tags using this field.
-    /// `force = false` will be supported in the future.
+    /// Required. If true, deletes this field from any tags that use it.
+    ///
+    /// Currently, `true` is the only supported value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Force {
@@ -8340,7 +9525,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8372,14 +9557,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the Data Catalog resource to list the tags of. The resource
-    /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
-    /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
+    /// Required. The name of the Data Catalog resource to list the tags of.
     ///
-    /// Examples:
-    ///
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+    /// The resource can be an [Entry][google.cloud.datacatalog.v1.Entry]
+    /// or an [EntryGroup][google.cloud.datacatalog.v1.EntryGroup]
+    /// (without `/entries/{entries}` at the end).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8393,7 +9575,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of tags to return. Default is 10. Max limit is 1000.
+    /// The maximum number of tags to return. Default is 10. Maximum limit is 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -8407,8 +9589,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Token that specifies which page is requested. If empty, the first page is
-    /// returned.
+    /// Pagination token that specifies the next page to return. If empty, the
+    /// first page is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -8605,7 +9787,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8649,8 +9831,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results. It is set to empty if no items
-    /// remain in results.
+    /// Pagination token of the next results page. Empty if there are
+    /// no more items in results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -8813,7 +9995,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8846,10 +10028,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the entry group that contains the entries, which can
-    /// be provided in URL format. Example:
+    /// Required. The name of the entry group that contains the entries to list.
     ///
-    /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+    /// Can be provided in URL format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8863,8 +10044,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of items to return. Default is 10. Max limit is 1000.
-    /// Throws an invalid argument for `page_size > 1000`.
+    /// The maximum number of items to return. Default is 10. Maximum limit is
+    /// 1000. Throws an invalid argument if `page_size` is more than 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -8878,8 +10059,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Token that specifies which page is requested. If empty, the first page is
-    /// returned.
+    /// Pagination token that specifies the next page to return. If empty, the
+    /// first page is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -8893,10 +10074,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ReadMaskFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// The fields to return for each Entry. If not set or empty, all
+    /// The fields to return for each entry. If empty or omitted, all
     /// fields are returned.
-    /// For example, setting read_mask to contain only one path "name" will cause
-    /// ListEntries to return a list of Entries with only "name" field.
+    ///
+    /// For example, to return a list of entries with only the `name` field,
+    /// set `read_mask` to only one path with the `name` value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask ReadMask {
@@ -9126,7 +10308,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9170,8 +10352,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results. It is set to empty if no items
-    /// remain in results.
+    /// Pagination token of the next results page. Empty if there are no more items
+    /// in results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {

@@ -45,12 +45,26 @@ namespace Google.Cloud.DataCatalog.V1
         private PolicyTagManagerSerializationSettings(PolicyTagManagerSerializationSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ReplaceTaxonomySettings = existing.ReplaceTaxonomySettings;
             ImportTaxonomiesSettings = existing.ImportTaxonomiesSettings;
             ExportTaxonomiesSettings = existing.ExportTaxonomiesSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(PolicyTagManagerSerializationSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PolicyTagManagerSerializationClient.ReplaceTaxonomy</c> and
+        /// <c>PolicyTagManagerSerializationClient.ReplaceTaxonomyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReplaceTaxonomySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -144,9 +158,10 @@ namespace Google.Cloud.DataCatalog.V1
 
     /// <summary>PolicyTagManagerSerialization client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Policy Tag Manager serialization API service allows clients to manipulate
-    /// their policy tags and taxonomies in serialized format, where taxonomy is a
-    /// hierarchical group of policy tags.
+    /// Policy Tag Manager Serialization API service allows you to manipulate
+    /// your policy tags and taxonomies in a serialized format.
+    /// 
+    /// Taxonomy is a hierarchical group of policy tags.
     /// </remarks>
     public abstract partial class PolicyTagManagerSerializationClient
     {
@@ -229,15 +244,77 @@ namespace Google.Cloud.DataCatalog.V1
         public virtual PolicyTagManagerSerialization.PolicyTagManagerSerializationClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates new taxonomies (including their policy tags) by importing from
-        /// inlined source or cross-regional source. New taxonomies will be created in
-        /// a given parent project.
+        /// Replaces (updates) a taxonomy and all its policy tags.
         /// 
-        /// If using the cross-regional source, a new taxonomy is created by copying
+        /// The taxonomy and its entire hierarchy of policy tags must be
+        /// represented literally by `SerializedTaxonomy` and the nested
+        /// `SerializedPolicyTag` messages.
+        /// 
+        /// This operation automatically does the following:
+        /// 
+        /// - Deletes the existing policy tags that are missing from the
+        /// `SerializedPolicyTag`.
+        /// - Creates policy tags that don't have resource names. They are considered
+        /// new.
+        /// - Updates policy tags with valid resources names accordingly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Taxonomy ReplaceTaxonomy(ReplaceTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Replaces (updates) a taxonomy and all its policy tags.
+        /// 
+        /// The taxonomy and its entire hierarchy of policy tags must be
+        /// represented literally by `SerializedTaxonomy` and the nested
+        /// `SerializedPolicyTag` messages.
+        /// 
+        /// This operation automatically does the following:
+        /// 
+        /// - Deletes the existing policy tags that are missing from the
+        /// `SerializedPolicyTag`.
+        /// - Creates policy tags that don't have resource names. They are considered
+        /// new.
+        /// - Updates policy tags with valid resources names accordingly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Taxonomy> ReplaceTaxonomyAsync(ReplaceTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Replaces (updates) a taxonomy and all its policy tags.
+        /// 
+        /// The taxonomy and its entire hierarchy of policy tags must be
+        /// represented literally by `SerializedTaxonomy` and the nested
+        /// `SerializedPolicyTag` messages.
+        /// 
+        /// This operation automatically does the following:
+        /// 
+        /// - Deletes the existing policy tags that are missing from the
+        /// `SerializedPolicyTag`.
+        /// - Creates policy tags that don't have resource names. They are considered
+        /// new.
+        /// - Updates policy tags with valid resources names accordingly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Taxonomy> ReplaceTaxonomyAsync(ReplaceTaxonomyRequest request, st::CancellationToken cancellationToken) =>
+            ReplaceTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new taxonomies (including their policy tags) in a given project
+        /// by importing from inlined or cross-regional sources.
+        /// 
+        /// For a cross-regional source, new taxonomies are created by copying
         /// from a source in another region.
         /// 
-        /// If using the inlined source, this method provides a way to bulk create
-        /// taxonomies and policy tags using nested proto structure.
+        /// For an inlined source, taxonomies and policy tags are created in bulk using
+        /// nested protocol buffer structures.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -246,15 +323,14 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates new taxonomies (including their policy tags) by importing from
-        /// inlined source or cross-regional source. New taxonomies will be created in
-        /// a given parent project.
+        /// Creates new taxonomies (including their policy tags) in a given project
+        /// by importing from inlined or cross-regional sources.
         /// 
-        /// If using the cross-regional source, a new taxonomy is created by copying
+        /// For a cross-regional source, new taxonomies are created by copying
         /// from a source in another region.
         /// 
-        /// If using the inlined source, this method provides a way to bulk create
-        /// taxonomies and policy tags using nested proto structure.
+        /// For an inlined source, taxonomies and policy tags are created in bulk using
+        /// nested protocol buffer structures.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -263,15 +339,14 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates new taxonomies (including their policy tags) by importing from
-        /// inlined source or cross-regional source. New taxonomies will be created in
-        /// a given parent project.
+        /// Creates new taxonomies (including their policy tags) in a given project
+        /// by importing from inlined or cross-regional sources.
         /// 
-        /// If using the cross-regional source, a new taxonomy is created by copying
+        /// For a cross-regional source, new taxonomies are created by copying
         /// from a source in another region.
         /// 
-        /// If using the inlined source, this method provides a way to bulk create
-        /// taxonomies and policy tags using nested proto structure.
+        /// For an inlined source, taxonomies and policy tags are created in bulk using
+        /// nested protocol buffer structures.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -280,12 +355,12 @@ namespace Google.Cloud.DataCatalog.V1
             ImportTaxonomiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Exports taxonomies as the requested type and returns the taxonomies
-        /// including their policy tags. The requested taxonomies must belong to one
-        /// project.
+        /// Exports taxonomies in the requested type and returns them,
+        /// including their policy tags. The requested taxonomies must belong to the
+        /// same project.
         /// 
-        /// SerializedTaxonomy protos with nested policy tags that are generated by
-        /// this method can be used as input for future ImportTaxonomies calls.
+        /// This method generates `SerializedTaxonomy` protocol buffers with nested
+        /// policy tags that can be used as input for `ImportTaxonomies` calls.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -294,12 +369,12 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Exports taxonomies as the requested type and returns the taxonomies
-        /// including their policy tags. The requested taxonomies must belong to one
-        /// project.
+        /// Exports taxonomies in the requested type and returns them,
+        /// including their policy tags. The requested taxonomies must belong to the
+        /// same project.
         /// 
-        /// SerializedTaxonomy protos with nested policy tags that are generated by
-        /// this method can be used as input for future ImportTaxonomies calls.
+        /// This method generates `SerializedTaxonomy` protocol buffers with nested
+        /// policy tags that can be used as input for `ImportTaxonomies` calls.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -308,12 +383,12 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Exports taxonomies as the requested type and returns the taxonomies
-        /// including their policy tags. The requested taxonomies must belong to one
-        /// project.
+        /// Exports taxonomies in the requested type and returns them,
+        /// including their policy tags. The requested taxonomies must belong to the
+        /// same project.
         /// 
-        /// SerializedTaxonomy protos with nested policy tags that are generated by
-        /// this method can be used as input for future ImportTaxonomies calls.
+        /// This method generates `SerializedTaxonomy` protocol buffers with nested
+        /// policy tags that can be used as input for `ImportTaxonomies` calls.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -324,12 +399,15 @@ namespace Google.Cloud.DataCatalog.V1
 
     /// <summary>PolicyTagManagerSerialization client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Policy Tag Manager serialization API service allows clients to manipulate
-    /// their policy tags and taxonomies in serialized format, where taxonomy is a
-    /// hierarchical group of policy tags.
+    /// Policy Tag Manager Serialization API service allows you to manipulate
+    /// your policy tags and taxonomies in a serialized format.
+    /// 
+    /// Taxonomy is a hierarchical group of policy tags.
     /// </remarks>
     public sealed partial class PolicyTagManagerSerializationClientImpl : PolicyTagManagerSerializationClient
     {
+        private readonly gaxgrpc::ApiCall<ReplaceTaxonomyRequest, Taxonomy> _callReplaceTaxonomy;
+
         private readonly gaxgrpc::ApiCall<ImportTaxonomiesRequest, ImportTaxonomiesResponse> _callImportTaxonomies;
 
         private readonly gaxgrpc::ApiCall<ExportTaxonomiesRequest, ExportTaxonomiesResponse> _callExportTaxonomies;
@@ -347,6 +425,9 @@ namespace Google.Cloud.DataCatalog.V1
             GrpcClient = grpcClient;
             PolicyTagManagerSerializationSettings effectiveSettings = settings ?? PolicyTagManagerSerializationSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callReplaceTaxonomy = clientHelper.BuildApiCall<ReplaceTaxonomyRequest, Taxonomy>(grpcClient.ReplaceTaxonomyAsync, grpcClient.ReplaceTaxonomy, effectiveSettings.ReplaceTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callReplaceTaxonomy);
+            Modify_ReplaceTaxonomyApiCall(ref _callReplaceTaxonomy);
             _callImportTaxonomies = clientHelper.BuildApiCall<ImportTaxonomiesRequest, ImportTaxonomiesResponse>(grpcClient.ImportTaxonomiesAsync, grpcClient.ImportTaxonomies, effectiveSettings.ImportTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportTaxonomies);
             Modify_ImportTaxonomiesApiCall(ref _callImportTaxonomies);
@@ -358,6 +439,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ReplaceTaxonomyApiCall(ref gaxgrpc::ApiCall<ReplaceTaxonomyRequest, Taxonomy> call);
+
         partial void Modify_ImportTaxonomiesApiCall(ref gaxgrpc::ApiCall<ImportTaxonomiesRequest, ImportTaxonomiesResponse> call);
 
         partial void Modify_ExportTaxonomiesApiCall(ref gaxgrpc::ApiCall<ExportTaxonomiesRequest, ExportTaxonomiesResponse> call);
@@ -367,20 +450,69 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>The underlying gRPC PolicyTagManagerSerialization client</summary>
         public override PolicyTagManagerSerialization.PolicyTagManagerSerializationClient GrpcClient { get; }
 
+        partial void Modify_ReplaceTaxonomyRequest(ref ReplaceTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ImportTaxonomiesRequest(ref ImportTaxonomiesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportTaxonomiesRequest(ref ExportTaxonomiesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates new taxonomies (including their policy tags) by importing from
-        /// inlined source or cross-regional source. New taxonomies will be created in
-        /// a given parent project.
+        /// Replaces (updates) a taxonomy and all its policy tags.
         /// 
-        /// If using the cross-regional source, a new taxonomy is created by copying
+        /// The taxonomy and its entire hierarchy of policy tags must be
+        /// represented literally by `SerializedTaxonomy` and the nested
+        /// `SerializedPolicyTag` messages.
+        /// 
+        /// This operation automatically does the following:
+        /// 
+        /// - Deletes the existing policy tags that are missing from the
+        /// `SerializedPolicyTag`.
+        /// - Creates policy tags that don't have resource names. They are considered
+        /// new.
+        /// - Updates policy tags with valid resources names accordingly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Taxonomy ReplaceTaxonomy(ReplaceTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReplaceTaxonomyRequest(ref request, ref callSettings);
+            return _callReplaceTaxonomy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Replaces (updates) a taxonomy and all its policy tags.
+        /// 
+        /// The taxonomy and its entire hierarchy of policy tags must be
+        /// represented literally by `SerializedTaxonomy` and the nested
+        /// `SerializedPolicyTag` messages.
+        /// 
+        /// This operation automatically does the following:
+        /// 
+        /// - Deletes the existing policy tags that are missing from the
+        /// `SerializedPolicyTag`.
+        /// - Creates policy tags that don't have resource names. They are considered
+        /// new.
+        /// - Updates policy tags with valid resources names accordingly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Taxonomy> ReplaceTaxonomyAsync(ReplaceTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReplaceTaxonomyRequest(ref request, ref callSettings);
+            return _callReplaceTaxonomy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates new taxonomies (including their policy tags) in a given project
+        /// by importing from inlined or cross-regional sources.
+        /// 
+        /// For a cross-regional source, new taxonomies are created by copying
         /// from a source in another region.
         /// 
-        /// If using the inlined source, this method provides a way to bulk create
-        /// taxonomies and policy tags using nested proto structure.
+        /// For an inlined source, taxonomies and policy tags are created in bulk using
+        /// nested protocol buffer structures.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -392,15 +524,14 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Creates new taxonomies (including their policy tags) by importing from
-        /// inlined source or cross-regional source. New taxonomies will be created in
-        /// a given parent project.
+        /// Creates new taxonomies (including their policy tags) in a given project
+        /// by importing from inlined or cross-regional sources.
         /// 
-        /// If using the cross-regional source, a new taxonomy is created by copying
+        /// For a cross-regional source, new taxonomies are created by copying
         /// from a source in another region.
         /// 
-        /// If using the inlined source, this method provides a way to bulk create
-        /// taxonomies and policy tags using nested proto structure.
+        /// For an inlined source, taxonomies and policy tags are created in bulk using
+        /// nested protocol buffer structures.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -412,12 +543,12 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Exports taxonomies as the requested type and returns the taxonomies
-        /// including their policy tags. The requested taxonomies must belong to one
-        /// project.
+        /// Exports taxonomies in the requested type and returns them,
+        /// including their policy tags. The requested taxonomies must belong to the
+        /// same project.
         /// 
-        /// SerializedTaxonomy protos with nested policy tags that are generated by
-        /// this method can be used as input for future ImportTaxonomies calls.
+        /// This method generates `SerializedTaxonomy` protocol buffers with nested
+        /// policy tags that can be used as input for `ImportTaxonomies` calls.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -429,12 +560,12 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Exports taxonomies as the requested type and returns the taxonomies
-        /// including their policy tags. The requested taxonomies must belong to one
-        /// project.
+        /// Exports taxonomies in the requested type and returns them,
+        /// including their policy tags. The requested taxonomies must belong to the
+        /// same project.
         /// 
-        /// SerializedTaxonomy protos with nested policy tags that are generated by
-        /// this method can be used as input for future ImportTaxonomies calls.
+        /// This method generates `SerializedTaxonomy` protocol buffers with nested
+        /// policy tags that can be used as input for `ImportTaxonomies` calls.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
