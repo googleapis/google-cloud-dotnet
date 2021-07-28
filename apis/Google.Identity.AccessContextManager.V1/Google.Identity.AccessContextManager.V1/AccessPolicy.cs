@@ -26,21 +26,23 @@ namespace Google.Identity.AccessContextManager.V1 {
           string.Concat(
             "Cjtnb29nbGUvaWRlbnRpdHkvYWNjZXNzY29udGV4dG1hbmFnZXIvdjEvYWNj",
             "ZXNzX3BvbGljeS5wcm90bxInZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRl",
-            "eHRtYW5hZ2VyLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIqsBCgxBY2Nlc3NQb2xp",
-            "Y3kSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSDQoFdGl0bGUYAyAB",
-            "KAkSLwoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIMCgRldGFnGAYgASgJQqECCitjb20uZ29vZ2xlLmlkZW50",
-            "aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxQgtQb2xpY3lQcm90b1ABWltn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lkZW50aXR5",
-            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxO2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
-            "ogIER0FDTaoCJ0dvb2dsZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdl",
-            "ci5WMcoCJ0dvb2dsZVxJZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxW",
-            "MeoCKkdvb2dsZTo6SWRlbnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpW",
-            "MWIGcHJvdG8z"));
+            "eHRtYW5hZ2VyLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29n",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90",
+            "YXRpb25zLnByb3RvIoICCgxBY2Nlc3NQb2xpY3kSDAoEbmFtZRgBIAEoCRIO",
+            "CgZwYXJlbnQYAiABKAkSDQoFdGl0bGUYAyABKAkSLwoLY3JlYXRlX3RpbWUY",
+            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90",
+            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRldGFn",
+            "GAYgASgJOlXqQVIKMGFjY2Vzc2NvbnRleHRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0FjY2Vzc1BvbGljeRIeYWNjZXNzUG9saWNpZXMve2FjY2Vzc19wb2xp",
+            "Y3l9QqECCitjb20uZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5h",
+            "Z2VyLnYxQgtQb2xpY3lQcm90b1ABWltnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
+            "L3YxO2FjY2Vzc2NvbnRleHRtYW5hZ2VyogIER0FDTaoCJ0dvb2dsZS5JZGVu",
+            "dGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdlci5WMcoCJ0dvb2dsZVxJZGVudGl0",
+            "eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxWMeoCKkdvb2dsZTo6SWRlbnRpdHk6",
+            "OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Identity.AccessContextManager.V1.AccessPolicy), global::Google.Identity.AccessContextManager.V1.AccessPolicy.Parser, new[]{ "Name", "Parent", "Title", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
           }));
@@ -104,7 +106,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. Resource name of the `AccessPolicy`. Format:
-    /// `accessPolicies/{policy_id}`
+    /// `accessPolicies/{access_policy}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
