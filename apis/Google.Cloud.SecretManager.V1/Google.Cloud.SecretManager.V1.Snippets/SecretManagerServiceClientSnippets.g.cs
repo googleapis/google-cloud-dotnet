@@ -37,6 +37,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             ListSecretsRequest request = new ListSecretsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecrets(request);
@@ -85,6 +86,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             ListSecretsRequest request = new ListSecretsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(request);
@@ -745,6 +747,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersions(request);
@@ -793,6 +796,7 @@ namespace Google.Cloud.SecretManager.V1.Snippets
             ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> response = secretManagerServiceClient.ListSecretVersionsAsync(request);
