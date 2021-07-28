@@ -150,6 +150,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Now we know we can parse the API catalog, let's reformat it.
             ReformatApiCatalog(catalog);
             RewriteReadme(catalog);
+            RewriteRenovate(catalog);
             HashSet<string> apiNames = catalog.CreateIdHashSet();
 
             foreach (var api in catalog.Apis)
@@ -160,7 +161,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateDocumentationStub(path, api);
                 GenerateSynthConfiguration(path, api);
                 GenerateMetadataFile(path, api);
-            }            
+            }
         }
 
         private static void ReformatApiCatalog(ApiCatalog catalog)
@@ -239,6 +240,20 @@ namespace Google.Cloud.Tools.ReleaseManager
                 File.WriteAllLines(readmePath, newContent);
                 Console.WriteLine($"Rewrote {Path.GetFileName(readmePath)}");
             }
+        }
+
+        public static void RewriteRenovate(ApiCatalog catalog)
+        {
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var config = new JObject
+            {
+                ["extends"] = new JArray { "config:base" },
+                ["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray()),
+                ["schedule"] = new JArray { "before 8am" },
+                ["timezone"] = "Europe/London"
+            };
+            string json = config.ToString(Formatting.Indented);
+            File.WriteAllText(Path.Combine(root, ".github", "renovate.json"), json);
         }
 
         /// <summary>
