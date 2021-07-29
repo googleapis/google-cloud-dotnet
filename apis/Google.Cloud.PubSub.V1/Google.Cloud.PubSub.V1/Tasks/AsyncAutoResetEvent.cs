@@ -18,7 +18,8 @@ using System.Threading.Tasks;
 // This class uses TaskHelper.ConfigureAwait, rather than directly calling .ConfigureAwait().
 // When running in a non-test environment this indirectly calls .ConfigureAwait(false).
 // Disable the ConfigureAwaitChecker warning:
-#pragma warning disable ConfigureAwaitChecker // CAC001
+#pragma warning disable CAC001
+#pragma warning disable CAC002
 
 namespace Google.Cloud.PubSub.V1.Tasks
 {
