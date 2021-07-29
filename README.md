@@ -41,7 +41,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Billing.V1/latest) | 2.2.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.BinaryAuthorization.V1Beta1/latest) | 1.0.0-beta03 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
 | [Google.Cloud.Channel.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Channel.V1/latest) | 1.2.0 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
-| [Google.Cloud.CloudBuild.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudBuild.V1/latest) | 1.2.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
+| [Google.Cloud.CloudBuild.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudBuild.V1/latest) | 1.3.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.CloudDms.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudDms.V1/latest) | 1.0.0 | [Database Migration](https://cloud.google.com/database-migration) |
 | [Google.Cloud.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Common/latest) | 1.0.0 | Common protos for Cloud APIs |
 | [Google.Cloud.Compute.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Compute.V1/latest) | 1.0.0-alpha02 | [Compute Engine](https://cloud.google.com/compute) |
