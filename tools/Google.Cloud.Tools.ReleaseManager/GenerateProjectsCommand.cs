@@ -64,7 +64,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
         private const string DefaultGaxVersion = "3.4.0";
-        private const string GrpcVersion = "2.38.0";
+        private const string GrpcVersion = "2.38.1";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -78,7 +78,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Grpc.Core.Testing", GrpcVersion },
             { "Grpc.Core.Api", GrpcVersion },
             { "Google.Api.CommonProtos", "2.3.0" },
-            { "Google.Protobuf", "3.15.8" }
+            { "Google.Protobuf", "3.17.3" }
         };
 
         // Hard-coded versions for all analyzer projects.
@@ -92,12 +92,12 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "16.2.0" },
+            { "Microsoft.NET.Test.Sdk", "16.10.0" },
             { "xunit", "2.4.1" },
-            { "xunit.runner.visualstudio", "2.4.1" },
-            { "Xunit.SkippableFact", "1.3.12" },
-            { "Moq", "4.12.0" },
-            { "System.Linq.Async", "4.0.0" },
+            { "xunit.runner.visualstudio", "2.4.3" },
+            { "Xunit.SkippableFact", "1.4.13" },
+            { "Moq", "4.16.1" },
+            { "System.Linq.Async", "5.0.0" },
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
@@ -106,13 +106,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
-            { ConfigureAwaitAnalyzer, "1.0.1" },
+            { ConfigureAwaitAnalyzer, "5.0.0" },
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
-            { "CommandLineParser", "2.6.0" },
+            { "CommandLineParser", "2.8.0" },
             { "Google.Cloud.SampleUtil", "project"},
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
@@ -121,7 +121,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
         private const string ReferenceAssembliesPackage = "Microsoft.NETFramework.ReferenceAssemblies";
-        private const string ReferenceAssembliesVersion = "1.0.0";
+        private const string ReferenceAssembliesVersion = "1.0.2";
 
         /// <summary>
         /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
