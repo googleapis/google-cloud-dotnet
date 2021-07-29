@@ -29,4 +29,47 @@ namespace Google.Cloud.Retail.V2
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class SetDefaultBranchRequest
+    {
+        /// <summary>
+        /// <see cref="CatalogName"/>-typed view over the <see cref="Catalog"/> resource name property.
+        /// </summary>
+        public CatalogName CatalogAsCatalogName
+        {
+            get => string.IsNullOrEmpty(Catalog) ? null : CatalogName.Parse(Catalog, allowUnparsed: true);
+            set => Catalog = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="BranchName"/>-typed view over the <see cref="BranchId"/> resource name property.
+        /// </summary>
+        public BranchName BranchIdAsBranchName
+        {
+            get => string.IsNullOrEmpty(BranchId) ? null : BranchName.Parse(BranchId, allowUnparsed: true);
+            set => BranchId = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDefaultBranchRequest
+    {
+        /// <summary>
+        /// <see cref="CatalogName"/>-typed view over the <see cref="Catalog"/> resource name property.
+        /// </summary>
+        public CatalogName CatalogAsCatalogName
+        {
+            get => string.IsNullOrEmpty(Catalog) ? null : CatalogName.Parse(Catalog, allowUnparsed: true);
+            set => Catalog = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDefaultBranchResponse
+    {
+        /// <summary><see cref="BranchName"/>-typed view over the <see cref="Branch"/> resource name property.</summary>
+        public BranchName BranchAsBranchName
+        {
+            get => string.IsNullOrEmpty(Branch) ? null : BranchName.Parse(Branch, allowUnparsed: true);
+            set => Branch = value?.ToString() ?? "";
+        }
+    }
 }

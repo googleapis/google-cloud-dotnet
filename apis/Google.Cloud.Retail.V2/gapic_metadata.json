@@ -10,16 +10,49 @@
         "grpc": {
           "libraryClient": "CatalogServiceClient",
           "rpcs": {
+            "GetDefaultBranch": {
+              "methods": [
+                "GetDefaultBranch",
+                "GetDefaultBranchAsync"
+              ]
+            },
             "ListCatalogs": {
               "methods": [
                 "ListCatalogs",
                 "ListCatalogsAsync"
               ]
             },
+            "SetDefaultBranch": {
+              "methods": [
+                "SetDefaultBranch",
+                "SetDefaultBranchAsync"
+              ]
+            },
             "UpdateCatalog": {
               "methods": [
                 "UpdateCatalog",
                 "UpdateCatalogAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CompletionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompletionServiceClient",
+          "rpcs": {
+            "CompleteQuery": {
+              "methods": [
+                "CompleteQuery",
+                "CompleteQueryAsync"
+              ]
+            },
+            "ImportCompletionData": {
+              "methods": [
+                "ImportCompletionData",
+                "ImportCompletionDataAsync"
               ]
             }
           }
@@ -46,6 +79,12 @@
         "grpc": {
           "libraryClient": "ProductServiceClient",
           "rpcs": {
+            "AddFulfillmentPlaces": {
+              "methods": [
+                "AddFulfillmentPlaces",
+                "AddFulfillmentPlacesAsync"
+              ]
+            },
             "CreateProduct": {
               "methods": [
                 "CreateProduct",
@@ -70,10 +109,43 @@
                 "ImportProductsAsync"
               ]
             },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "RemoveFulfillmentPlaces": {
+              "methods": [
+                "RemoveFulfillmentPlaces",
+                "RemoveFulfillmentPlacesAsync"
+              ]
+            },
+            "SetInventory": {
+              "methods": [
+                "SetInventory",
+                "SetInventoryAsync"
+              ]
+            },
             "UpdateProduct": {
               "methods": [
                 "UpdateProduct",
                 "UpdateProductAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchServiceClient",
+          "rpcs": {
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
               ]
             }
           }

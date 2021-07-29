@@ -175,7 +175,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // Initialize request argument(s)
             ImportUserEventsRequest request = new ImportUserEventsRequest
             {
-                Parent = "",
+                ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
                 InputConfig = new UserEventInputConfig(),
                 ErrorsConfig = new ImportErrorsConfig(),
             };
@@ -210,7 +210,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // Initialize request argument(s)
             ImportUserEventsRequest request = new ImportUserEventsRequest
             {
-                Parent = "",
+                ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
                 InputConfig = new UserEventInputConfig(),
                 ErrorsConfig = new ImportErrorsConfig(),
             };

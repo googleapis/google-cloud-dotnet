@@ -118,5 +118,234 @@ namespace Google.Cloud.Retail.V2.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void SetDefaultBranchRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                BranchIdAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Note = "noteca53d6aa",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            client.SetDefaultBranch(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetDefaultBranchRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                BranchIdAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Note = "noteca53d6aa",
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            await client.SetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SetDefaultBranchAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetDefaultBranch()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            client.SetDefaultBranch(request.Catalog);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetDefaultBranchAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            await client.SetDefaultBranchAsync(request.Catalog, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SetDefaultBranchAsync(request.Catalog, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetDefaultBranchResourceNames()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            client.SetDefaultBranch(request.CatalogAsCatalogName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetDefaultBranchResourceNamesAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.SetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            await client.SetDefaultBranchAsync(request.CatalogAsCatalogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.SetDefaultBranchAsync(request.CatalogAsCatalogName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDefaultBranchRequestObject()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse response = client.GetDefaultBranch(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDefaultBranchRequestObjectAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDefaultBranch()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse response = client.GetDefaultBranch(request.Catalog);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDefaultBranchAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request.Catalog, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request.Catalog, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDefaultBranchResourceNames()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse response = client.GetDefaultBranch(request.CatalogAsCatalogName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDefaultBranchResourceNamesAsync()
+        {
+            moq::Mock<CatalogService.CatalogServiceClient> mockGrpcClient = new moq::Mock<CatalogService.CatalogServiceClient>(moq::MockBehavior.Strict);
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            GetDefaultBranchResponse expectedResponse = new GetDefaultBranchResponse
+            {
+                BranchAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                SetTime = new wkt::Timestamp(),
+                Note = "noteca53d6aa",
+            };
+            mockGrpcClient.Setup(x => x.GetDefaultBranchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetDefaultBranchResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
+            GetDefaultBranchResponse responseCallSettings = await client.GetDefaultBranchAsync(request.CatalogAsCatalogName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetDefaultBranchResponse responseCancellationToken = await client.GetDefaultBranchAsync(request.CatalogAsCatalogName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

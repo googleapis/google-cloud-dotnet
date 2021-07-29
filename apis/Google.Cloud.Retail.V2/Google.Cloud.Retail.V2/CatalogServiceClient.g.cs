@@ -48,6 +48,8 @@ namespace Google.Cloud.Retail.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListCatalogsSettings = existing.ListCatalogsSettings;
             UpdateCatalogSettings = existing.UpdateCatalogSettings;
+            SetDefaultBranchSettings = existing.SetDefaultBranchSettings;
+            GetDefaultBranchSettings = existing.GetDefaultBranchSettings;
             OnCopy(existing);
         }
 
@@ -82,6 +84,36 @@ namespace Google.Cloud.Retail.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateCatalogSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.SetDefaultBranch</c> and <c>CatalogServiceClient.SetDefaultBranchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetDefaultBranchSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetDefaultBranch</c> and <c>CatalogServiceClient.GetDefaultBranchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDefaultBranchSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CatalogServiceSettings"/> object.</returns>
@@ -408,10 +440,7 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided
-        /// [Catalog][google.cloud.retail.v2.Catalog] to update. If not set, will only
-        /// update the
-        /// [Catalog.product_level_config][google.cloud.retail.v2.Catalog.product_level_config]
-        /// field, which is also the only currently supported field to update.
+        /// [Catalog][google.cloud.retail.v2.Catalog] to update.
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
@@ -440,10 +469,7 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided
-        /// [Catalog][google.cloud.retail.v2.Catalog] to update. If not set, will only
-        /// update the
-        /// [Catalog.product_level_config][google.cloud.retail.v2.Catalog.product_level_config]
-        /// field, which is also the only currently supported field to update.
+        /// [Catalog][google.cloud.retail.v2.Catalog] to update.
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
@@ -472,10 +498,7 @@ namespace Google.Cloud.Retail.V2
         /// </param>
         /// <param name="updateMask">
         /// Indicates which fields in the provided
-        /// [Catalog][google.cloud.retail.v2.Catalog] to update. If not set, will only
-        /// update the
-        /// [Catalog.product_level_config][google.cloud.retail.v2.Catalog.product_level_config]
-        /// field, which is also the only currently supported field to update.
+        /// [Catalog][google.cloud.retail.v2.Catalog] to update.
         /// 
         /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
         /// is returned.
@@ -484,6 +507,606 @@ namespace Google.Cloud.Retail.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Catalog> UpdateCatalogAsync(Catalog catalog, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateCatalogAsync(catalog, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void SetDefaultBranch(SetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(SetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(SetDefaultBranchRequest request, st::CancellationToken cancellationToken) =>
+            SetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void SetDefaultBranch(string catalog, gaxgrpc::CallSettings callSettings = null) =>
+            SetDefaultBranch(new SetDefaultBranchRequest
+            {
+                Catalog = catalog ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(string catalog, gaxgrpc::CallSettings callSettings = null) =>
+            SetDefaultBranchAsync(new SetDefaultBranchRequest
+            {
+                Catalog = catalog ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(string catalog, st::CancellationToken cancellationToken) =>
+            SetDefaultBranchAsync(catalog, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void SetDefaultBranch(CatalogName catalog, gaxgrpc::CallSettings callSettings = null) =>
+            SetDefaultBranch(new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = catalog,
+            }, callSettings);
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(CatalogName catalog, gaxgrpc::CallSettings callSettings = null) =>
+            SetDefaultBranchAsync(new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = catalog,
+            }, callSettings);
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// Full resource name of the catalog, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task SetDefaultBranchAsync(CatalogName catalog, st::CancellationToken cancellationToken) =>
+            SetDefaultBranchAsync(catalog, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDefaultBranchResponse GetDefaultBranch(GetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(GetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(GetDefaultBranchRequest request, st::CancellationToken cancellationToken) =>
+            GetDefaultBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDefaultBranchResponse GetDefaultBranch(string catalog, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultBranch(new GetDefaultBranchRequest
+            {
+                Catalog = catalog ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(string catalog, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultBranchAsync(new GetDefaultBranchRequest
+            {
+                Catalog = catalog ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(string catalog, st::CancellationToken cancellationToken) =>
+            GetDefaultBranchAsync(catalog, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDefaultBranchResponse GetDefaultBranch(CatalogName catalog, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultBranch(new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = catalog,
+            }, callSettings);
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(CatalogName catalog, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultBranchAsync(new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = catalog,
+            }, callSettings);
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="catalog">
+        /// The parent catalog resource name, such as
+        /// `projects/*/locations/global/catalogs/default_catalog`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(CatalogName catalog, st::CancellationToken cancellationToken) =>
+            GetDefaultBranchAsync(catalog, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CatalogService client wrapper implementation, for convenient use.</summary>
@@ -495,6 +1118,10 @@ namespace Google.Cloud.Retail.V2
         private readonly gaxgrpc::ApiCall<ListCatalogsRequest, ListCatalogsResponse> _callListCatalogs;
 
         private readonly gaxgrpc::ApiCall<UpdateCatalogRequest, Catalog> _callUpdateCatalog;
+
+        private readonly gaxgrpc::ApiCall<SetDefaultBranchRequest, wkt::Empty> _callSetDefaultBranch;
+
+        private readonly gaxgrpc::ApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse> _callGetDefaultBranch;
 
         /// <summary>
         /// Constructs a client wrapper for the CatalogService service, with the specified gRPC client and settings.
@@ -512,6 +1139,12 @@ namespace Google.Cloud.Retail.V2
             _callUpdateCatalog = clientHelper.BuildApiCall<UpdateCatalogRequest, Catalog>(grpcClient.UpdateCatalogAsync, grpcClient.UpdateCatalog, effectiveSettings.UpdateCatalogSettings).WithGoogleRequestParam("catalog.name", request => request.Catalog?.Name);
             Modify_ApiCall(ref _callUpdateCatalog);
             Modify_UpdateCatalogApiCall(ref _callUpdateCatalog);
+            _callSetDefaultBranch = clientHelper.BuildApiCall<SetDefaultBranchRequest, wkt::Empty>(grpcClient.SetDefaultBranchAsync, grpcClient.SetDefaultBranch, effectiveSettings.SetDefaultBranchSettings).WithGoogleRequestParam("catalog", request => request.Catalog);
+            Modify_ApiCall(ref _callSetDefaultBranch);
+            Modify_SetDefaultBranchApiCall(ref _callSetDefaultBranch);
+            _callGetDefaultBranch = clientHelper.BuildApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse>(grpcClient.GetDefaultBranchAsync, grpcClient.GetDefaultBranch, effectiveSettings.GetDefaultBranchSettings).WithGoogleRequestParam("catalog", request => request.Catalog);
+            Modify_ApiCall(ref _callGetDefaultBranch);
+            Modify_GetDefaultBranchApiCall(ref _callGetDefaultBranch);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -521,6 +1154,10 @@ namespace Google.Cloud.Retail.V2
 
         partial void Modify_UpdateCatalogApiCall(ref gaxgrpc::ApiCall<UpdateCatalogRequest, Catalog> call);
 
+        partial void Modify_SetDefaultBranchApiCall(ref gaxgrpc::ApiCall<SetDefaultBranchRequest, wkt::Empty> call);
+
+        partial void Modify_GetDefaultBranchApiCall(ref gaxgrpc::ApiCall<GetDefaultBranchRequest, GetDefaultBranchResponse> call);
+
         partial void OnConstruction(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CatalogService client</summary>
@@ -529,6 +1166,10 @@ namespace Google.Cloud.Retail.V2
         partial void Modify_ListCatalogsRequest(ref ListCatalogsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateCatalogRequest(ref UpdateCatalogRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetDefaultBranchRequest(ref SetDefaultBranchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDefaultBranchRequest(ref GetDefaultBranchRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all the [Catalog][google.cloud.retail.v2.Catalog]s associated with
@@ -578,6 +1219,138 @@ namespace Google.Cloud.Retail.V2
         {
             Modify_UpdateCatalogRequest(ref request, ref callSettings);
             return _callUpdateCatalog.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void SetDefaultBranch(SetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDefaultBranchRequest(ref request, ref callSettings);
+            _callSetDefaultBranch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Set a specified branch id as default branch. API methods such as
+        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+        /// will treat requests using "default_branch" to the actual branch id set as
+        /// default.
+        /// 
+        /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+        /// default, setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+        /// to setting
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// `projects/*/locations/*/catalogs/*/branches/1`.
+        /// 
+        /// Using multiple branches can be useful when developers would like
+        /// to have a staging branch to test and verify for future usage. When it
+        /// becomes ready, developers switch on the staging branch using this API while
+        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// route the traffic to this staging branch.
+        /// 
+        /// CAUTION: If you have live predict/search traffic, switching the default
+        /// branch could potentially cause outages if the ID space of the new branch is
+        /// very different from the old one.
+        /// 
+        /// More specifically:
+        /// 
+        /// * PredictionService will only return product IDs from branch {newBranch}.
+        /// * SearchService will only return product IDs from branch {newBranch}
+        /// (if branch is not explicitly set).
+        /// * UserEventService will only join events with products from branch
+        /// {newBranch}.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task SetDefaultBranchAsync(SetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetDefaultBranchRequest(ref request, ref callSettings);
+            return _callSetDefaultBranch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetDefaultBranchResponse GetDefaultBranch(GetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDefaultBranchRequest(ref request, ref callSettings);
+            return _callGetDefaultBranch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get which branch is currently default branch set by
+        /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+        /// method under a specified parent catalog.
+        /// 
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Contact Retail Support (retail-search-support@google.com) if you are
+        /// interested in using Retail Search.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetDefaultBranchResponse> GetDefaultBranchAsync(GetDefaultBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDefaultBranchRequest(ref request, ref callSettings);
+            return _callGetDefaultBranch.Async(request, callSettings);
         }
     }
 

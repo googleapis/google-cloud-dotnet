@@ -16,8 +16,11 @@
 
 namespace Google.Cloud.Retail.V2.Snippets
 {
+    using Google.Api.Gax;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -209,6 +212,286 @@ namespace Google.Cloud.Retail.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListProducts</summary>
+        public void ListProductsRequestObject()
+        {
+            // Snippet: ListProducts(ListProductsRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            ListProductsRequest request = new ListProductsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProducts(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Product item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProductsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductsAsync</summary>
+        public async Task ListProductsRequestObjectAsync()
+        {
+            // Snippet: ListProductsAsync(ListProductsRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListProductsRequest request = new ListProductsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProductsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Product item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProducts</summary>
+        public void ListProducts()
+        {
+            // Snippet: ListProducts(string, string, int?, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]";
+            // Make the request
+            PagedEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProducts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Product item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProductsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductsAsync</summary>
+        public async Task ListProductsAsync()
+        {
+            // Snippet: ListProductsAsync(string, string, int?, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]";
+            // Make the request
+            PagedAsyncEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProductsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Product item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProducts</summary>
+        public void ListProductsResourceNames()
+        {
+            // Snippet: ListProducts(BranchName, string, int?, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]");
+            // Make the request
+            PagedEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProducts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Product item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProductsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductsAsync</summary>
+        public async Task ListProductsResourceNamesAsync()
+        {
+            // Snippet: ListProductsAsync(BranchName, string, int?, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]");
+            // Make the request
+            PagedAsyncEnumerable<ListProductsResponse, Product> response = productServiceClient.ListProductsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Product item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProductsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Product item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Product> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Product item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateProduct</summary>
         public void UpdateProductRequestObject()
         {
@@ -220,6 +503,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Product = new Product(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Product response = productServiceClient.UpdateProduct(request);
@@ -238,6 +522,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Product = new Product(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Product response = await productServiceClient.UpdateProductAsync(request);
@@ -369,10 +654,13 @@ namespace Google.Cloud.Retail.V2.Snippets
             // Initialize request argument(s)
             ImportProductsRequest request = new ImportProductsRequest
             {
-                Parent = "",
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
                 InputConfig = new ProductInputConfig(),
                 ErrorsConfig = new ImportErrorsConfig(),
                 UpdateMask = new FieldMask(),
+                ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
+                RequestId = "",
+                NotificationPubsubTopic = "",
             };
             // Make the request
             Operation<ImportProductsResponse, ImportMetadata> response = productServiceClient.ImportProducts(request);
@@ -405,10 +693,13 @@ namespace Google.Cloud.Retail.V2.Snippets
             // Initialize request argument(s)
             ImportProductsRequest request = new ImportProductsRequest
             {
-                Parent = "",
+                ParentAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
                 InputConfig = new ProductInputConfig(),
                 ErrorsConfig = new ImportErrorsConfig(),
                 UpdateMask = new FieldMask(),
+                ReconciliationMode = ImportProductsRequest.Types.ReconciliationMode.Unspecified,
+                RequestId = "",
+                NotificationPubsubTopic = "",
             };
             // Make the request
             Operation<ImportProductsResponse, ImportMetadata> response = await productServiceClient.ImportProductsAsync(request);
@@ -427,6 +718,520 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 // If it has completed, then access the result
                 ImportProductsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetInventory</summary>
+        public void SetInventoryRequestObject()
+        {
+            // Snippet: SetInventory(SetInventoryRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            SetInventoryRequest request = new SetInventoryRequest
+            {
+                Inventory = new Product(),
+                SetMask = new FieldMask(),
+                SetTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<SetInventoryResponse, SetInventoryMetadata> response = productServiceClient.SetInventory(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetInventoryResponse, SetInventoryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SetInventoryResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetInventoryResponse, SetInventoryMetadata> retrievedResponse = productServiceClient.PollOnceSetInventory(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetInventoryResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetInventoryAsync</summary>
+        public async Task SetInventoryRequestObjectAsync()
+        {
+            // Snippet: SetInventoryAsync(SetInventoryRequest, CallSettings)
+            // Additional: SetInventoryAsync(SetInventoryRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetInventoryRequest request = new SetInventoryRequest
+            {
+                Inventory = new Product(),
+                SetMask = new FieldMask(),
+                SetTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<SetInventoryResponse, SetInventoryMetadata> response = await productServiceClient.SetInventoryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetInventoryResponse, SetInventoryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SetInventoryResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetInventoryResponse, SetInventoryMetadata> retrievedResponse = await productServiceClient.PollOnceSetInventoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetInventoryResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetInventory</summary>
+        public void SetInventory()
+        {
+            // Snippet: SetInventory(Product, FieldMask, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            Product inventory = new Product();
+            FieldMask setMask = new FieldMask();
+            // Make the request
+            Operation<SetInventoryResponse, SetInventoryMetadata> response = productServiceClient.SetInventory(inventory, setMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetInventoryResponse, SetInventoryMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SetInventoryResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetInventoryResponse, SetInventoryMetadata> retrievedResponse = productServiceClient.PollOnceSetInventory(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetInventoryResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetInventoryAsync</summary>
+        public async Task SetInventoryAsync()
+        {
+            // Snippet: SetInventoryAsync(Product, FieldMask, CallSettings)
+            // Additional: SetInventoryAsync(Product, FieldMask, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Product inventory = new Product();
+            FieldMask setMask = new FieldMask();
+            // Make the request
+            Operation<SetInventoryResponse, SetInventoryMetadata> response = await productServiceClient.SetInventoryAsync(inventory, setMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetInventoryResponse, SetInventoryMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SetInventoryResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetInventoryResponse, SetInventoryMetadata> retrievedResponse = await productServiceClient.PollOnceSetInventoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetInventoryResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlaces</summary>
+        public void AddFulfillmentPlacesRequestObject()
+        {
+            // Snippet: AddFulfillmentPlaces(AddFulfillmentPlacesRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            AddFulfillmentPlacesRequest request = new AddFulfillmentPlacesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                Type = "",
+                PlaceIds = { "", },
+                AddTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = productServiceClient.AddFulfillmentPlaces(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceAddFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlacesAsync</summary>
+        public async Task AddFulfillmentPlacesRequestObjectAsync()
+        {
+            // Snippet: AddFulfillmentPlacesAsync(AddFulfillmentPlacesRequest, CallSettings)
+            // Additional: AddFulfillmentPlacesAsync(AddFulfillmentPlacesRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AddFulfillmentPlacesRequest request = new AddFulfillmentPlacesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                Type = "",
+                PlaceIds = { "", },
+                AddTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = await productServiceClient.AddFulfillmentPlacesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceAddFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlaces</summary>
+        public void AddFulfillmentPlaces()
+        {
+            // Snippet: AddFulfillmentPlaces(string, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = productServiceClient.AddFulfillmentPlaces(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceAddFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlacesAsync</summary>
+        public async Task AddFulfillmentPlacesAsync()
+        {
+            // Snippet: AddFulfillmentPlacesAsync(string, CallSettings)
+            // Additional: AddFulfillmentPlacesAsync(string, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = await productServiceClient.AddFulfillmentPlacesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceAddFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlaces</summary>
+        public void AddFulfillmentPlacesResourceNames()
+        {
+            // Snippet: AddFulfillmentPlaces(ProductName, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = productServiceClient.AddFulfillmentPlaces(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceAddFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddFulfillmentPlacesAsync</summary>
+        public async Task AddFulfillmentPlacesResourceNamesAsync()
+        {
+            // Snippet: AddFulfillmentPlacesAsync(ProductName, CallSettings)
+            // Additional: AddFulfillmentPlacesAsync(ProductName, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> response = await productServiceClient.AddFulfillmentPlacesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AddFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AddFulfillmentPlacesResponse, AddFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceAddFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AddFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlaces</summary>
+        public void RemoveFulfillmentPlacesRequestObject()
+        {
+            // Snippet: RemoveFulfillmentPlaces(RemoveFulfillmentPlacesRequest, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveFulfillmentPlacesRequest request = new RemoveFulfillmentPlacesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                Type = "",
+                PlaceIds = { "", },
+                RemoveTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = productServiceClient.RemoveFulfillmentPlaces(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlacesAsync</summary>
+        public async Task RemoveFulfillmentPlacesRequestObjectAsync()
+        {
+            // Snippet: RemoveFulfillmentPlacesAsync(RemoveFulfillmentPlacesRequest, CallSettings)
+            // Additional: RemoveFulfillmentPlacesAsync(RemoveFulfillmentPlacesRequest, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveFulfillmentPlacesRequest request = new RemoveFulfillmentPlacesRequest
+            {
+                ProductAsProductName = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]"),
+                Type = "",
+                PlaceIds = { "", },
+                RemoveTime = new Timestamp(),
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = await productServiceClient.RemoveFulfillmentPlacesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlaces</summary>
+        public void RemoveFulfillmentPlaces()
+        {
+            // Snippet: RemoveFulfillmentPlaces(string, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = productServiceClient.RemoveFulfillmentPlaces(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlacesAsync</summary>
+        public async Task RemoveFulfillmentPlacesAsync()
+        {
+            // Snippet: RemoveFulfillmentPlacesAsync(string, CallSettings)
+            // Additional: RemoveFulfillmentPlacesAsync(string, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string product = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/branches/[BRANCH]/products/[PRODUCT]";
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = await productServiceClient.RemoveFulfillmentPlacesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlaces</summary>
+        public void RemoveFulfillmentPlacesResourceNames()
+        {
+            // Snippet: RemoveFulfillmentPlaces(ProductName, CallSettings)
+            // Create client
+            ProductServiceClient productServiceClient = ProductServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = productServiceClient.RemoveFulfillmentPlaces(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = productServiceClient.PollOnceRemoveFulfillmentPlaces(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveFulfillmentPlacesAsync</summary>
+        public async Task RemoveFulfillmentPlacesResourceNamesAsync()
+        {
+            // Snippet: RemoveFulfillmentPlacesAsync(ProductName, CallSettings)
+            // Additional: RemoveFulfillmentPlacesAsync(ProductName, CancellationToken)
+            // Create client
+            ProductServiceClient productServiceClient = await ProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName product = ProductName.FromProjectLocationCatalogBranchProduct("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]", "[PRODUCT]");
+            // Make the request
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> response = await productServiceClient.RemoveFulfillmentPlacesAsync(product);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RemoveFulfillmentPlacesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RemoveFulfillmentPlacesResponse, RemoveFulfillmentPlacesMetadata> retrievedResponse = await productServiceClient.PollOnceRemoveFulfillmentPlacesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RemoveFulfillmentPlacesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

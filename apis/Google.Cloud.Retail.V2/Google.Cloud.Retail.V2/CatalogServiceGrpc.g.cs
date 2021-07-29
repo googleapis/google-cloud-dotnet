@@ -64,6 +64,10 @@ namespace Google.Cloud.Retail.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Marshaller_google_cloud_retail_v2_ListCatalogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ListCatalogsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateCatalogRequest> __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateCatalogRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Catalog> __Marshaller_google_cloud_retail_v2_Catalog = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.Catalog.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest> __Marshaller_google_cloud_retail_v2_SetDefaultBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.SetDefaultBranchRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest> __Marshaller_google_cloud_retail_v2_GetDefaultBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> __Marshaller_google_cloud_retail_v2_GetDefaultBranchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Method_ListCatalogs = new grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(
         grpc::MethodType.Unary,
@@ -78,6 +82,20 @@ namespace Google.Cloud.Retail.V2 {
         "UpdateCatalog",
         __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest,
         __Marshaller_google_cloud_retail_v2_Catalog);
+
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetDefaultBranch = new grpc::Method<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetDefaultBranch",
+        __Marshaller_google_cloud_retail_v2_SetDefaultBranchRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> __Method_GetDefaultBranch = new grpc::Method<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDefaultBranch",
+        __Marshaller_google_cloud_retail_v2_GetDefaultBranchRequest,
+        __Marshaller_google_cloud_retail_v2_GetDefaultBranchResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -108,6 +126,70 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.Catalog> UpdateCatalog(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Set a specified branch id as default branch. API methods such as
+      /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+      /// will treat requests using "default_branch" to the actual branch id set as
+      /// default.
+      ///
+      /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+      /// default, setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+      /// to setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/1`.
+      ///
+      /// Using multiple branches can be useful when developers would like
+      /// to have a staging branch to test and verify for future usage. When it
+      /// becomes ready, developers switch on the staging branch using this API while
+      /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+      /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// route the traffic to this staging branch.
+      ///
+      /// CAUTION: If you have live predict/search traffic, switching the default
+      /// branch could potentially cause outages if the ID space of the new branch is
+      /// very different from the old one.
+      ///
+      /// More specifically:
+      ///
+      /// * PredictionService will only return product IDs from branch {newBranch}.
+      /// * SearchService will only return product IDs from branch {newBranch}
+      ///   (if branch is not explicitly set).
+      /// * UserEventService will only join events with products from branch
+      ///   {newBranch}.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get which branch is currently default branch set by
+      /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+      /// method under a specified parent catalog.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -229,6 +311,262 @@ namespace Google.Cloud.Retail.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCatalog, null, options, request);
       }
+      /// <summary>
+      /// Set a specified branch id as default branch. API methods such as
+      /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+      /// will treat requests using "default_branch" to the actual branch id set as
+      /// default.
+      ///
+      /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+      /// default, setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+      /// to setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/1`.
+      ///
+      /// Using multiple branches can be useful when developers would like
+      /// to have a staging branch to test and verify for future usage. When it
+      /// becomes ready, developers switch on the staging branch using this API while
+      /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+      /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// route the traffic to this staging branch.
+      ///
+      /// CAUTION: If you have live predict/search traffic, switching the default
+      /// branch could potentially cause outages if the ID space of the new branch is
+      /// very different from the old one.
+      ///
+      /// More specifically:
+      ///
+      /// * PredictionService will only return product IDs from branch {newBranch}.
+      /// * SearchService will only return product IDs from branch {newBranch}
+      ///   (if branch is not explicitly set).
+      /// * UserEventService will only join events with products from branch
+      ///   {newBranch}.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetDefaultBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Set a specified branch id as default branch. API methods such as
+      /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+      /// will treat requests using "default_branch" to the actual branch id set as
+      /// default.
+      ///
+      /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+      /// default, setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+      /// to setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/1`.
+      ///
+      /// Using multiple branches can be useful when developers would like
+      /// to have a staging branch to test and verify for future usage. When it
+      /// becomes ready, developers switch on the staging branch using this API while
+      /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+      /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// route the traffic to this staging branch.
+      ///
+      /// CAUTION: If you have live predict/search traffic, switching the default
+      /// branch could potentially cause outages if the ID space of the new branch is
+      /// very different from the old one.
+      ///
+      /// More specifically:
+      ///
+      /// * PredictionService will only return product IDs from branch {newBranch}.
+      /// * SearchService will only return product IDs from branch {newBranch}
+      ///   (if branch is not explicitly set).
+      /// * UserEventService will only join events with products from branch
+      ///   {newBranch}.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetDefaultBranch, null, options, request);
+      }
+      /// <summary>
+      /// Set a specified branch id as default branch. API methods such as
+      /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+      /// will treat requests using "default_branch" to the actual branch id set as
+      /// default.
+      ///
+      /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+      /// default, setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+      /// to setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/1`.
+      ///
+      /// Using multiple branches can be useful when developers would like
+      /// to have a staging branch to test and verify for future usage. When it
+      /// becomes ready, developers switch on the staging branch using this API while
+      /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+      /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// route the traffic to this staging branch.
+      ///
+      /// CAUTION: If you have live predict/search traffic, switching the default
+      /// branch could potentially cause outages if the ID space of the new branch is
+      /// very different from the old one.
+      ///
+      /// More specifically:
+      ///
+      /// * PredictionService will only return product IDs from branch {newBranch}.
+      /// * SearchService will only return product IDs from branch {newBranch}
+      ///   (if branch is not explicitly set).
+      /// * UserEventService will only join events with products from branch
+      ///   {newBranch}.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranchAsync(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetDefaultBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Set a specified branch id as default branch. API methods such as
+      /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search],
+      /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct],
+      /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+      /// will treat requests using "default_branch" to the actual branch id set as
+      /// default.
+      ///
+      /// For example, if `projects/*/locations/*/catalogs/*/branches/1` is set as
+      /// default, setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/default_branch` is equivalent
+      /// to setting
+      /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// `projects/*/locations/*/catalogs/*/branches/1`.
+      ///
+      /// Using multiple branches can be useful when developers would like
+      /// to have a staging branch to test and verify for future usage. When it
+      /// becomes ready, developers switch on the staging branch using this API while
+      /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
+      /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+      /// route the traffic to this staging branch.
+      ///
+      /// CAUTION: If you have live predict/search traffic, switching the default
+      /// branch could potentially cause outages if the ID space of the new branch is
+      /// very different from the old one.
+      ///
+      /// More specifically:
+      ///
+      /// * PredictionService will only return product IDs from branch {newBranch}.
+      /// * SearchService will only return product IDs from branch {newBranch}
+      ///   (if branch is not explicitly set).
+      /// * UserEventService will only join events with products from branch
+      ///   {newBranch}.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranchAsync(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetDefaultBranch, null, options, request);
+      }
+      /// <summary>
+      /// Get which branch is currently default branch set by
+      /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+      /// method under a specified parent catalog.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Retail.V2.GetDefaultBranchResponse GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get which branch is currently default branch set by
+      /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+      /// method under a specified parent catalog.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Retail.V2.GetDefaultBranchResponse GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDefaultBranch, null, options, request);
+      }
+      /// <summary>
+      /// Get which branch is currently default branch set by
+      /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+      /// method under a specified parent catalog.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranchAsync(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get which branch is currently default branch set by
+      /// [CatalogService.SetDefaultBranch][google.cloud.retail.v2.CatalogService.SetDefaultBranch]
+      /// method under a specified parent catalog.
+      ///
+      /// This feature is only available for users who have Retail Search enabled.
+      /// Contact Retail Support (retail-search-support@google.com) if you are
+      /// interested in using Retail Search.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranchAsync(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDefaultBranch, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override CatalogServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -242,7 +580,9 @@ namespace Google.Cloud.Retail.V2 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListCatalogs, serviceImpl.ListCatalogs)
-          .AddMethod(__Method_UpdateCatalog, serviceImpl.UpdateCatalog).Build();
+          .AddMethod(__Method_UpdateCatalog, serviceImpl.UpdateCatalog)
+          .AddMethod(__Method_SetDefaultBranch, serviceImpl.SetDefaultBranch)
+          .AddMethod(__Method_GetDefaultBranch, serviceImpl.GetDefaultBranch).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -253,6 +593,8 @@ namespace Google.Cloud.Retail.V2 {
     {
       serviceBinder.AddMethod(__Method_ListCatalogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(serviceImpl.ListCatalogs));
       serviceBinder.AddMethod(__Method_UpdateCatalog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.UpdateCatalogRequest, global::Google.Cloud.Retail.V2.Catalog>(serviceImpl.UpdateCatalog));
+      serviceBinder.AddMethod(__Method_SetDefaultBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.SetDefaultBranch));
+      serviceBinder.AddMethod(__Method_GetDefaultBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse>(serviceImpl.GetDefaultBranch));
     }
 
   }
