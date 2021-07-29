@@ -18,7 +18,7 @@
     <PackageReference Include="Google.Cloud.PubSub.V1" Version="1.0.0-beta13" />
     <PackageReference Include="Google.Cloud.Spanner.Admin.Database.V1" Version="1.0.0-beta07" />
     <PackageReference Include="Google.Cloud.Spanner.Admin.Instance.V1" Version="1.0.0-beta07" />
-    <PackageReference Include="Google.Cloud.Spanner.V1" Version="1.0.0-beta07" />
+    <PackageReference Include="Google.Cloud.Spanner.V1" Version="1.0.0" />
     <PackageReference Include="Google.Cloud.Speech.V1" Version="1.0.0" />
     <PackageReference Include="Google.Cloud.Trace.V1" Version="1.0.0" />
     <PackageReference Include="Google.Cloud.VideoIntelligence.V1Beta1" Version="1.0.0-beta06" />
