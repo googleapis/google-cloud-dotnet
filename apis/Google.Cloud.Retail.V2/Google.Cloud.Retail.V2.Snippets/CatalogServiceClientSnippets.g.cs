@@ -365,5 +365,183 @@ namespace Google.Cloud.Retail.V2.Snippets
             Catalog response = await catalogServiceClient.UpdateCatalogAsync(catalog, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for SetDefaultBranch</summary>
+        public void SetDefaultBranchRequestObject()
+        {
+            // Snippet: SetDefaultBranch(SetDefaultBranchRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                BranchIdAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Note = "",
+            };
+            // Make the request
+            catalogServiceClient.SetDefaultBranch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetDefaultBranchAsync</summary>
+        public async Task SetDefaultBranchRequestObjectAsync()
+        {
+            // Snippet: SetDefaultBranchAsync(SetDefaultBranchRequest, CallSettings)
+            // Additional: SetDefaultBranchAsync(SetDefaultBranchRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetDefaultBranchRequest request = new SetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+                BranchIdAsBranchName = BranchName.FromProjectLocationCatalogBranch("[PROJECT]", "[LOCATION]", "[CATALOG]", "[BRANCH]"),
+                Note = "",
+            };
+            // Make the request
+            await catalogServiceClient.SetDefaultBranchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetDefaultBranch</summary>
+        public void SetDefaultBranch()
+        {
+            // Snippet: SetDefaultBranch(string, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string catalog = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]";
+            // Make the request
+            catalogServiceClient.SetDefaultBranch(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetDefaultBranchAsync</summary>
+        public async Task SetDefaultBranchAsync()
+        {
+            // Snippet: SetDefaultBranchAsync(string, CallSettings)
+            // Additional: SetDefaultBranchAsync(string, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string catalog = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]";
+            // Make the request
+            await catalogServiceClient.SetDefaultBranchAsync(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetDefaultBranch</summary>
+        public void SetDefaultBranchResourceNames()
+        {
+            // Snippet: SetDefaultBranch(CatalogName, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            CatalogName catalog = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            catalogServiceClient.SetDefaultBranch(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetDefaultBranchAsync</summary>
+        public async Task SetDefaultBranchResourceNamesAsync()
+        {
+            // Snippet: SetDefaultBranchAsync(CatalogName, CallSettings)
+            // Additional: SetDefaultBranchAsync(CatalogName, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CatalogName catalog = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            await catalogServiceClient.SetDefaultBranchAsync(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranch</summary>
+        public void GetDefaultBranchRequestObject()
+        {
+            // Snippet: GetDefaultBranch(GetDefaultBranchRequest, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            GetDefaultBranchResponse response = catalogServiceClient.GetDefaultBranch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranchAsync</summary>
+        public async Task GetDefaultBranchRequestObjectAsync()
+        {
+            // Snippet: GetDefaultBranchAsync(GetDefaultBranchRequest, CallSettings)
+            // Additional: GetDefaultBranchAsync(GetDefaultBranchRequest, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDefaultBranchRequest request = new GetDefaultBranchRequest
+            {
+                CatalogAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
+            };
+            // Make the request
+            GetDefaultBranchResponse response = await catalogServiceClient.GetDefaultBranchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranch</summary>
+        public void GetDefaultBranch()
+        {
+            // Snippet: GetDefaultBranch(string, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string catalog = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]";
+            // Make the request
+            GetDefaultBranchResponse response = catalogServiceClient.GetDefaultBranch(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranchAsync</summary>
+        public async Task GetDefaultBranchAsync()
+        {
+            // Snippet: GetDefaultBranchAsync(string, CallSettings)
+            // Additional: GetDefaultBranchAsync(string, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string catalog = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]";
+            // Make the request
+            GetDefaultBranchResponse response = await catalogServiceClient.GetDefaultBranchAsync(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranch</summary>
+        public void GetDefaultBranchResourceNames()
+        {
+            // Snippet: GetDefaultBranch(CatalogName, CallSettings)
+            // Create client
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            CatalogName catalog = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            GetDefaultBranchResponse response = catalogServiceClient.GetDefaultBranch(catalog);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultBranchAsync</summary>
+        public async Task GetDefaultBranchResourceNamesAsync()
+        {
+            // Snippet: GetDefaultBranchAsync(CatalogName, CallSettings)
+            // Additional: GetDefaultBranchAsync(CatalogName, CancellationToken)
+            // Create client
+            CatalogServiceClient catalogServiceClient = await CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CatalogName catalog = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]");
+            // Make the request
+            GetDefaultBranchResponse response = await catalogServiceClient.GetDefaultBranchAsync(catalog);
+            // End snippet
+        }
     }
 }

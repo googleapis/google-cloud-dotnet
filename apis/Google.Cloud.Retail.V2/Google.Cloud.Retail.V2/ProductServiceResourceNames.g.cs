@@ -51,4 +51,38 @@ namespace Google.Cloud.Retail.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListProductsRequest
+    {
+        /// <summary><see cref="BranchName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BranchName ParentAsBranchName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddFulfillmentPlacesRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public ProductName ProductAsProductName
+        {
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
+            set => Product = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoveFulfillmentPlacesRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public ProductName ProductAsProductName
+        {
+            get => string.IsNullOrEmpty(Product) ? null : ProductName.Parse(Product, allowUnparsed: true);
+            set => Product = value?.ToString() ?? "";
+        }
+    }
 }

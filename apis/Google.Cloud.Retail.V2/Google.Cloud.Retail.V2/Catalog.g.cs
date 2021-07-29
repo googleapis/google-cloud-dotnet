@@ -27,21 +27,23 @@ namespace Google.Cloud.Retail.V2 {
             "CiRnb29nbGUvY2xvdWQvcmV0YWlsL3YyL2NhdGFsb2cucHJvdG8SFmdvb2ds",
             "ZS5jbG91ZC5yZXRhaWwudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmlnEh4KFmlu",
-            "Z2VzdGlvbl9wcm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRfY2VudGVy",
-            "X3Byb2R1Y3RfaWRfZmllbGQYAiABKAki7AEKB0NhdGFsb2cSFAoEbmFtZRgB",
-            "IAEoCUIG4EEC4EEFEhwKDGRpc3BsYXlfbmFtZRgCIAEoCUIG4EEC4EEFEk0K",
-            "FHByb2R1Y3RfbGV2ZWxfY29uZmlnGAQgASgLMiouZ29vZ2xlLmNsb3VkLnJl",
-            "dGFpbC52Mi5Qcm9kdWN0TGV2ZWxDb25maWdCA+BBAjpe6kFbCh1yZXRhaWwu",
-            "Z29vZ2xlYXBpcy5jb20vQ2F0YWxvZxI6cHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfULBAQoaY29t",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCDENhdGFsb2dQcm90b1ABWjxnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFp",
-            "bC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYy",
-            "ygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJl",
-            "dGFpbDo6VjJiBnByb3RvMw=="));
+            "cGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29t",
+            "bW9uLnByb3RvGipnb29nbGUvY2xvdWQvcmV0YWlsL3YyL2ltcG9ydF9jb25m",
+            "aWcucHJvdG8iXgoSUHJvZHVjdExldmVsQ29uZmlnEh4KFmluZ2VzdGlvbl9w",
+            "cm9kdWN0X3R5cGUYASABKAkSKAogbWVyY2hhbnRfY2VudGVyX3Byb2R1Y3Rf",
+            "aWRfZmllbGQYAiABKAki7AEKB0NhdGFsb2cSFAoEbmFtZRgBIAEoCUIG4EEC",
+            "4EEFEhwKDGRpc3BsYXlfbmFtZRgCIAEoCUIG4EEC4EEFEk0KFHByb2R1Y3Rf",
+            "bGV2ZWxfY29uZmlnGAQgASgLMiouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Q",
+            "cm9kdWN0TGV2ZWxDb25maWdCA+BBAjpe6kFbCh1yZXRhaWwuZ29vZ2xlYXBp",
+            "cy5jb20vQ2F0YWxvZxI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfULBAQoaY29tLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjJCDENhdGFsb2dQcm90b1ABWjxnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRh",
+            "aWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xl",
+            "XENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductLevelConfig), global::Google.Cloud.Retail.V2.ProductLevelConfig.Parser, new[]{ "IngestionProductType", "MerchantCenterProductIdField" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Catalog), global::Google.Cloud.Retail.V2.Catalog.Parser, new[]{ "Name", "DisplayName", "ProductLevelConfig" }, null, null, null, null)
@@ -121,9 +123,9 @@ namespace Google.Cloud.Retail.V2 {
     /// [merchant_center_product_id_field][google.cloud.retail.v2.ProductLevelConfig.merchant_center_product_id_field]
     /// is `itemGroupId`, an INVALID_ARGUMENT error is returned.
     ///
-    /// See [Using catalog
-    /// levels](/retail/recommendations-ai/docs/catalog#catalog-levels) for more
-    /// details.
+    /// See [Using product
+    /// levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels)
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string IngestionProductType {
@@ -154,9 +156,9 @@ namespace Google.Cloud.Retail.V2 {
     /// [ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
     /// is `variant`, an INVALID_ARGUMENT error is returned.
     ///
-    /// See [Using catalog
-    /// levels](/retail/recommendations-ai/docs/catalog#catalog-levels) for more
-    /// details.
+    /// See [Using product
+    /// levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels)
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MerchantCenterProductIdField {
