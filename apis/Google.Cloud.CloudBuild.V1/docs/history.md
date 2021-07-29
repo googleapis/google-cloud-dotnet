@@ -1,5 +1,18 @@
 # Version history
 
+# Version 1.3.0, released 2021-07-29
+
+- [Commit 0ded664](https://github.com/googleapis/google-cloud-dotnet/commit/0ded664): docs: Add a new build phase `SETUPBUILD` for timing information
+- [Commit cf7e645](https://github.com/googleapis/google-cloud-dotnet/commit/cf7e645): feat: Implementation of Build Failure Info
+- [Commit ae27ce0](https://github.com/googleapis/google-cloud-dotnet/commit/ae27ce0): feat!: add a WorkerPools API
+- [Commit 48b5b1d](https://github.com/googleapis/google-cloud-dotnet/commit/48b5b1d): Synchronize new proto/yaml changes.
+
+Note that the new WorkerPools API is a technically-breaking change,
+as there was a previous, similar API in earlier releases. However,
+as that API wasn't implemented on the back-end, we're not bumping
+the major version: we don't expect customers were actually referring
+to the old messages in their code.
+
 # Version 1.2.0, released 2021-06-22
 
 - [Commit 8c80969](https://github.com/googleapis/google-cloud-dotnet/commit/8c80969):
