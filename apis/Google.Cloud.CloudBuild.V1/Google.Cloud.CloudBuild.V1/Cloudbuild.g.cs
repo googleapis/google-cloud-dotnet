@@ -4589,9 +4589,10 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Stores timing information for phases of the build. Valid keys
     /// are:
     ///
-    /// * BUILD: time to execute all build steps
+    /// * BUILD: time to execute all build steps.
     /// * PUSH: time to push all specified images.
     /// * FETCHSOURCE: time to fetch source.
+    /// * SETUPBUILD: time to set up build.
     ///
     /// If the build does not specify source or images,
     /// these keys will not be included.
