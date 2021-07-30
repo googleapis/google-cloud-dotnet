@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.2" />
     <PackageReference Include="Moq" Version="4.7.145" />
     <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
     <ProjectReference Include="..\BreakingChangesDetector\BreakingChangesDetector.csproj" />
     <ProjectReference Include="..\UnitTestComparisonProjects\NamespaceRenamedAttributeNew\NamespaceRenamedAttributeNew.csproj" />
     <ProjectReference Include="..\UnitTestComparisonProjects\NamespaceRenamedAttributeOld\NamespaceRenamedAttributeOld.csproj" />
