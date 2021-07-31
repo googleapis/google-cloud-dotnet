@@ -38,6 +38,8 @@ namespace Google.Cloud.Spanner.Data
         //TODO(benwu): verify if whitespace between CREATE/DROP and DB is allowed.
         private const string CreateDatabaseCommand = "CREATE DATABASE ";
         private const string DropDatabaseCommand = "DROP DATABASE ";
+        private static readonly HashSet<string> QueryAndDmlStatements = new HashSet<string>
+            { SelectCommand, WithCommand, InsertCommand, UpdateCommand, DeleteCommand };
 
         private static readonly Dictionary<string, SpannerCommandType> s_commandToCommandType = new Dictionary<string, SpannerCommandType>
         {
@@ -218,9 +220,9 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder FromCommandText(string commandText)
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            commandText = commandText.Trim();
+            var trimmedCommandText = RemoveCommentsAndStatementHint(commandText).Trim();
             // Split(new char[0]) splits the string using all whitespace characters.
-            var commandSections = commandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
+            var commandSections = trimmedCommandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
             {
                 throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
@@ -275,6 +277,191 @@ namespace Google.Cloud.Spanner.Data
                 throw new ArgumentException($"Table names must consist of letters, numbers or underscores", parameterName);
             }
             return table;
+        }
+
+        private static readonly char s_singleQuote = '\'';
+        private static readonly char s_doubleQuote = '"';
+        private static readonly char s_backtickQuote = '`';
+        private static readonly char s_hyphen = '-';
+        private static readonly char s_dash = '#';
+        private static readonly char s_slash = '/';
+        private static readonly char s_asterisk = '*';
+
+        /// <summary>
+        /// Removes any comments from the given sql string.
+        /// </summary>
+        /// <param name="sql">The sql string to strip for comments</param>
+        /// <returns>The sql string without any comments</returns>
+        /// <exception cref="SpannerException">
+        /// Throws SpannerException if the sql string contains an unclosed
+        /// literal or unclosed quoted identifier
+        /// </exception>
+        internal static string RemoveComments(string sql)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            bool isInQuoted = false;
+            bool isInSingleLineComment = false;
+            bool isInMultiLineComment = false;
+            char startQuote = '\0';
+            bool lastCharWasEscapeChar = false;
+            bool isTripleQuoted = false;
+            StringBuilder res = new StringBuilder(sql.Length);
+            int index = 0;
+            while (index < sql.Length)
+            {
+                char c = sql[index];
+                if (isInQuoted)
+                {
+                    if ((c == '\n' || c == '\r') && !isTripleQuoted)
+                    {
+                        throw new SpannerException(
+                            ErrorCode.InvalidArgument,
+                            $"SQL statement contains an unclosed literal: {sql}");
+                    }
+                    else if (c == startQuote)
+                    {
+                        if (lastCharWasEscapeChar)
+                        {
+                            lastCharWasEscapeChar = false;
+                        }
+                        else if (isTripleQuoted)
+                        {
+                            if (sql.Length > index + 2
+                                && sql[index + 1] == startQuote
+                                && sql[index + 2] == startQuote)
+                            {
+                                isInQuoted = false;
+                                startQuote = '\0';
+                                isTripleQuoted = false;
+                                res.Append(c).Append(c);
+                                index += 2;
+                            }
+                        }
+                        else
+                        {
+                            isInQuoted = false;
+                            startQuote = '\0';
+                        }
+                    }
+                    else if (c == '\\')
+                    {
+                        lastCharWasEscapeChar = true;
+                    }
+                    else
+                    {
+                        lastCharWasEscapeChar = false;
+                    }
+
+                    res.Append(c);
+                }
+                else
+                {
+                    // We are not in a quoted string.
+                    if (isInSingleLineComment)
+                    {
+                        if (c == '\n')
+                        {
+                            isInSingleLineComment = false;
+                            // Include the line feed in the result.
+                            res.Append(c);
+                        }
+                    }
+                    else if (isInMultiLineComment)
+                    {
+                        if (sql.Length > index + 1 && c == s_asterisk && sql[index + 1] == s_slash)
+                        {
+                            isInMultiLineComment = false;
+                            index++;
+                        }
+                    }
+                    else
+                    {
+                        if (c == s_dash
+                            || (sql.Length > index + 1 && c == s_hyphen && sql[index + 1] == s_hyphen))
+                        {
+                            // This is a single line comment.
+                            isInSingleLineComment = true;
+                        }
+                        else if (sql.Length > index + 1 && c == s_slash && sql[index + 1] == s_asterisk)
+                        {
+                            isInMultiLineComment = true;
+                            index++;
+                        }
+                        else
+                        {
+                            if (c == s_singleQuote || c == s_doubleQuote || c == s_backtickQuote)
+                            {
+                                isInQuoted = true;
+                                startQuote = c;
+                                // Check whether it is a triple-quote.
+                                if (sql.Length > index + 2
+                                    && sql[index + 1] == startQuote
+                                    && sql[index + 2] == startQuote)
+                                {
+                                    isTripleQuoted = true;
+                                    res.Append(c).Append(c);
+                                    index += 2;
+                                }
+                            }
+                            res.Append(c);
+                        }
+                    }
+                }
+                index++;
+            }
+            if (isInQuoted)
+            {
+                throw new SpannerException(
+                    ErrorCode.InvalidArgument, $"SQL statement contains an unclosed literal: {sql}");
+            }
+            if (res.Length > 0 && res[res.Length - 1] == ';')
+            {
+                res.Remove(res.Length - 1, 1);
+            }
+            return res.ToString();
+        }
+
+        /// <summary>
+        /// First removes all comments from the entire sql string, and then removes any statement hints
+        /// at the start of the sql statement. The returned statement should only be used to determine the
+        /// type of statement. The original statement should always be passed on to Cloud Spanner.
+        /// </summary>
+        /// <param name="sql">The sql statement to strip for comments and statement hints</param>
+        /// <returns>The sql statement without comments and statement hints</returns>
+        internal static string RemoveCommentsAndStatementHint(string sql)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            // First remove all comments from the statement.
+            sql = RemoveComments(sql);
+
+            // Valid statement hints at the beginning of a query statement can only contain a fixed set of
+            // possible values. Although it is possible to add a @{FORCE_INDEX=...} as a statement hint, the
+            // only allowed value is _BASE_TABLE. This means that we can safely assume that the statement
+            // hint will not contain any special characters, for example a closing curly brace or one of the
+            // keywords SELECT, UPDATE, DELETE, WITH, and that we can keep the check simple by just
+            // searching for the first occurrence of a keyword that should be preceded by a closing curly
+            // brace at the end of the statement hint.
+            int startStatementHintIndex = sql.IndexOf('{');
+            // Statement hints are allowed for both queries and DML statements.
+            int startQueryIndex = -1;
+            string upperCaseSql = sql.ToUpperInvariant();
+            foreach (string keyword in QueryAndDmlStatements) {
+                startQueryIndex = upperCaseSql.IndexOf(keyword);
+                if (startQueryIndex > -1) {
+                    break;
+                }
+            }
+            if (startQueryIndex > -1) {
+                int endStatementHintIndex = sql.Substring(0, startQueryIndex).LastIndexOf('}');
+                if (startStatementHintIndex == -1 || startStatementHintIndex > endStatementHintIndex) {
+                    // Looks like an invalid statement hint. Just ignore at this point and let the caller handle
+                    // the invalid query.
+                    return sql;
+                }
+                return sql.Substring(endStatementHintIndex + 1);
+            }
+            // Seems invalid, just return the original statement.
+            return sql;
         }
     }
 }
