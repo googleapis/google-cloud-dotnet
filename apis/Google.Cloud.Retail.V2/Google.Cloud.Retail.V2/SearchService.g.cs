@@ -1444,172 +1444,35 @@ namespace Google.Cloud.Retail.V2 {
             /// [FacetKey.query][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.query]
             /// is not specified:
             ///
-            /// * textual_field =&lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Product.brands][google.cloud.retail.v2.Product.brands].&lt;br>*
-            ///     &lt;/font>
-            ///     "brands";
-            ///     &lt;br>
-            ///     &lt;font color='categories'>
-            ///     *# The
-            ///     [Product.categories][google.cloud.retail.v2.Product.categories].&lt;br>*
-            ///     &lt;/font>
-            ///     "categories";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Audience.genders][google.cloud.retail.v2.Audience.genders].&lt;br>*
-            ///     &lt;/font>
-            ///     | "genders";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Audience.age_groups][google.cloud.retail.v2.Audience.age_groups].&lt;br>*
-            ///     &lt;/font>
-            ///     | "ageGroups";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Product.availability][google.cloud.retail.v2.Product.availability].
-            ///     Value is one of&lt;br>*
-            ///     *# "IN_STOCK", "OUT_OF_STOCK", PREORDER", "BACKORDER".&lt;br>*
-            ///     &lt;/font>
-            ///     | "availability";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [ColorInfo.color_families][google.cloud.retail.v2.ColorInfo.color_families].&lt;br>*
-            ///     &lt;/font>
-            ///     | "colorFamilies";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [ColorInfo.colors][google.cloud.retail.v2.ColorInfo.colors].&lt;br>*
-            ///     &lt;/font>
-            ///     | "colors";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [Product.sizes][google.cloud.retail.v2.Product.sizes].&lt;br>*
-            ///     &lt;/font>
-            ///     | "sizes";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Product.materials][google.cloud.retail.v2.Product.materials].&lt;br>*
-            ///     &lt;/font>
-            ///     | "materials";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Product.patterns][google.cloud.retail.v2.Product.patterns].&lt;br>*
-            ///     &lt;/font>
-            ///     | "patterns";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Product.conditions][google.cloud.retail.v2.Product.conditions].&lt;br>*
-            ///     &lt;/font>
-            ///     | "conditions";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The textual custom attribute in
-            ///     [Product][google.cloud.retail.v2.Product] object. Key can&lt;br>*
-            ///     *# be any key in the
-            ///     [Product.attributes][google.cloud.retail.v2.Product.attributes]
-            ///     map&lt;br>*
-            ///     *# if the attribute values are textual.&lt;br>*
-            ///     *# map.&lt;br>*
-            ///     &lt;/font>
-            ///     | "attributes.key";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.PICKUP_IN_STORE][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "pickupInStore";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.SHIP_TO_STORE][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "shipToStore";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.SAME_DAY_DELIVERY][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "sameDayDelivery";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.NEXT_DAY_DELIVERY][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "nextDayDelivery";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.CUSTOM_TYPE_1][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "customFulfillment1";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.CUSTOM_TYPE_2][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "customFulfillment2";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.CUSTOM_TYPE_3][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "customFulfillment3";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.CUSTOM_TYPE_4][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "customFulfillment4";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The [FulfillmentInfo.ids][] for type
-            ///     *# [FulfillmentInfo.Type.CUSTOM_TYPE_5][].&lt;br>*
-            ///     &lt;/font>
-            ///     | "customFulfillment5";
+            /// Textual facet keys:
+            /// * brands
+            /// * categories
+            /// * genders
+            /// * ageGroups
+            /// * availability
+            /// * colorFamilies
+            /// * colors
+            /// * sizes
+            /// * materials
+            /// * patterns
+            /// * conditions
+            /// * attributes.key
+            /// * pickupInStore
+            /// * shipToStore
+            /// * sameDayDelivery
+            /// * nextDayDelivery
+            /// * customFulfillment1
+            /// * customFulfillment2
+            /// * customFulfillment3
+            /// * customFulfillment4
+            /// * customFulfillment5
             ///
-            /// * numerical_field =&lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [PriceInfo.price][google.cloud.retail.v2.PriceInfo.price].&lt;br>*
-            ///     &lt;/font>
-            ///     "price";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The discount. Computed by (original_price-price)/price &lt;br>*
-            ///     &lt;/font>
-            ///     "discount";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Rating.average_rating][google.cloud.retail.v2.Rating.average_rating].&lt;br>*
-            ///     &lt;/font>
-            ///     "rating";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The
-            ///     [Rating.rating_count][google.cloud.retail.v2.Rating.rating_count].&lt;br>*
-            ///     &lt;/font>
-            ///     "ratingCount";
-            ///     &lt;br>
-            ///     &lt;font color='grey'>
-            ///     *# The numerical custom attribute in
-            ///     [Product][google.cloud.retail.v2.Product] object. Key can&lt;br>*
-            ///     *# be any key in the
-            ///     [Product.attributes][google.cloud.retail.v2.Product.attributes]
-            ///     map&lt;br>*
-            ///     *# if the attribute values are numerical.&lt;br>*
-            ///     &lt;/font>
-            ///     | "attributes.key";
+            /// Numeric facet keys:
+            /// * price
+            /// * discount
+            /// * rating
+            /// * ratingCount
+            /// * attributes.key
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Key {
@@ -2432,11 +2295,12 @@ namespace Google.Cloud.Retail.V2 {
             /// Examples:
             ///
             /// * To boost products with product ID "product_1" or "product_2", and
-            /// color
-            ///   "Red" or "Blue":&lt;br>
-            ///   *(id: ANY("product_1", "product_2"))&lt;br>*
-            ///   *AND&lt;br>*
-            ///   *(colorFamilies: ANY("Red", "Blue"))&lt;br>*
+            /// color "Red" or "Blue":
+            ///   ```
+            ///   (id: ANY("product_1", "product_2"))
+            ///   AND
+            ///   (colorFamilies: ANY("Red", "Blue"))
+            ///   ```
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Condition {
