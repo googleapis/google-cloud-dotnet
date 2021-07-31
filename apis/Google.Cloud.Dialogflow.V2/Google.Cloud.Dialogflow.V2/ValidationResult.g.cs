@@ -136,7 +136,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ErrorMessageFieldNumber = 4;
     private string errorMessage_ = "";
     /// <summary>
-    /// The detailed error messsage.
+    /// The detailed error message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ErrorMessage {
