@@ -49,6 +49,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -78,6 +79,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -109,6 +111,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -138,6 +141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -169,6 +173,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -198,6 +203,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.CreateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -228,6 +234,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -256,6 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -286,6 +294,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -314,6 +323,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -344,6 +354,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -372,6 +383,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.GetSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -403,6 +415,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -432,6 +445,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -463,6 +477,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -492,6 +507,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     SecuritySettings.Types.PurgeDataType.Unspecified,
                 },
                 InspectTemplate = "inspect_template78566a15",
+                InsightsExportSettings = new SecuritySettings.Types.InsightsExportSettings(),
             };
             mockGrpcClient.Setup(x => x.UpdateSecuritySettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecuritySettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecuritySettingsServiceClient client = new SecuritySettingsServiceClientImpl(mockGrpcClient.Object, null);
