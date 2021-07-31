@@ -331,8 +331,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The filter syntax consists of an expression language for constructing a
     /// predicate from one or more fields of the products being filtered. Filter
-    /// expression is case-sensitive. See more details at this [user
-    /// guide](/retail/private/docs/filter-and-order#filter).
+    /// expression is case-sensitive.
     ///
     /// If this field is unrecognizable, an INVALID_ARGUMENT is returned.
     /// </summary>
@@ -372,9 +371,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The order in which products are returned. Products can be ordered by
     /// a field in an [Product][google.cloud.retail.v2.Product] object. Leave it
-    /// unset if ordered by relevance. OrderBy expression is case-sensitive. See
-    /// more details at this [user
-    /// guide](/retail/private/docs/filter-and-order#order).
+    /// unset if ordered by relevance. OrderBy expression is case-sensitive.
     ///
     /// If this field is unrecognizable, an INVALID_ARGUMENT is returned.
     /// </summary>
@@ -425,8 +422,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int BoostSpecFieldNumber = 13;
     private global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec boostSpec_;
     /// <summary>
-    /// Boost specification to boost certain products. See more details at this
-    /// [user guide](/retail/private/docs/boosting).
+    /// Boost specification to boost certain products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec BoostSpec {
@@ -441,8 +437,7 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Cloud.Retail.V2.SearchRequest.Types.QueryExpansionSpec queryExpansionSpec_;
     /// <summary>
     /// The query expansion specification that specifies the conditions under which
-    /// query expansion will occur. See more details at this [user
-    /// guide](/retail/private/docs/result-size#query_expansion).
+    /// query expansion will occur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.SearchRequest.Types.QueryExpansionSpec QueryExpansionSpec {
