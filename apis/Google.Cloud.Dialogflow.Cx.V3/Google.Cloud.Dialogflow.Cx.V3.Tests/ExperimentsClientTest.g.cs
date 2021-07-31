@@ -40,7 +40,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -52,6 +52,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -73,7 +76,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -85,6 +88,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -108,7 +114,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -120,6 +126,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -141,7 +150,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -153,6 +162,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -176,7 +188,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -188,6 +200,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -209,7 +224,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -221,6 +236,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.GetExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -245,7 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -257,6 +275,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -279,7 +300,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -291,6 +312,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -315,7 +339,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -327,6 +351,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -349,7 +376,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -361,6 +388,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -385,7 +415,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -397,6 +427,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -419,7 +452,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -431,6 +464,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.CreateExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -455,7 +491,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -467,6 +503,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.UpdateExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -489,7 +528,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -501,6 +540,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.UpdateExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -525,7 +567,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -537,6 +579,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.UpdateExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -559,7 +604,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -571,6 +616,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.UpdateExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -687,7 +735,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -699,6 +747,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -720,7 +771,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -732,6 +783,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -755,7 +809,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -767,6 +821,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -788,7 +845,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -800,6 +857,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -823,7 +883,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -835,6 +895,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -856,7 +919,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -868,6 +931,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StartExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -891,7 +957,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -903,6 +969,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -924,7 +993,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -936,6 +1005,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -959,7 +1031,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -971,6 +1043,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -992,7 +1067,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -1004,6 +1079,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -1027,7 +1105,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -1039,6 +1117,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);
@@ -1060,7 +1141,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 ExperimentName = ExperimentName.FromProjectLocationAgentEnvironmentExperiment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]", "[EXPERIMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                State = Experiment.Types.State.Running,
+                State = Experiment.Types.State.Done,
                 Definition = new Experiment.Types.Definition(),
                 Result = new Experiment.Types.Result(),
                 CreateTime = new wkt::Timestamp(),
@@ -1072,6 +1153,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new VariantsHistory(),
                 },
+                RolloutConfig = new RolloutConfig(),
+                RolloutState = new RolloutState(),
+                RolloutFailureReason = "rollout_failure_reason2f2db6d3",
             };
             mockGrpcClient.Setup(x => x.StopExperimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Experiment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExperimentsClient client = new ExperimentsClientImpl(mockGrpcClient.Object, null);

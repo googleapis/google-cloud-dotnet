@@ -372,6 +372,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(CurrentPage) ? null : PageName.Parse(CurrentPage, allowUnparsed: true);
             set => CurrentPage = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="FlowVersions"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<VersionName> FlowVersionsAsVersionNames
+        {
+            get => new gax::ResourceNameList<VersionName>(FlowVersions, s => string.IsNullOrEmpty(s) ? null : VersionName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class QueryResult
