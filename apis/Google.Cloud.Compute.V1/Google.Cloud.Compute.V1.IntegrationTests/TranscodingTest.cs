@@ -32,10 +32,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         {
             var client = ZonesClient.Create();
             var allZones = client.List(_fixture.ProjectId);
-            Assert.InRange(allZones.Count(), 3, int.MaxValue);
+            Assert.InRange(allZones.AsRawResponses().First().Count(), 3, int.MaxValue);
 
             var twoZones = client.List(new ListZonesRequest { Project = _fixture.ProjectId, MaxResults = 2 });
-            Assert.Equal(2, twoZones.Count());
+            Assert.Equal(2, twoZones.AsRawResponses().First().Count());
         }
     }
 }

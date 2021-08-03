@@ -289,9 +289,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -301,7 +299,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
@@ -321,9 +319,7 @@ namespace Google.Cloud.Compute.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListAutoscalersRequest
             {
@@ -348,7 +344,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListAutoscalersRequest
@@ -967,9 +963,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public override gax::PagedEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedList(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListAutoscalersRequest(ref request, ref callSettings);
@@ -982,7 +976,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,AutoscalersScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public override gax::PagedAsyncEnumerable<AutoscalerAggregatedList, scg::KeyValuePair<string, AutoscalersScopedList>> AggregatedListAsync(AggregatedListAutoscalersRequest request, gaxgrpc::CallSettings callSettings = null)
         {

@@ -239,9 +239,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedList(AggregatedListDiskTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -251,7 +249,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedListAsync(AggregatedListDiskTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
@@ -271,9 +269,7 @@ namespace Google.Cloud.Compute.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListDiskTypesRequest
             {
@@ -298,7 +294,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListDiskTypesRequest
@@ -529,9 +525,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public override gax::PagedEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedList(AggregatedListDiskTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListDiskTypesRequest(ref request, ref callSettings);
@@ -544,7 +538,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,DiskTypesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public override gax::PagedAsyncEnumerable<DiskTypeAggregatedList, scg::KeyValuePair<string, DiskTypesScopedList>> AggregatedListAsync(AggregatedListDiskTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {

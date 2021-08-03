@@ -333,9 +333,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedList(AggregatedListTargetHttpsProxiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -345,8 +343,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedListAsync(AggregatedListTargetHttpsProxiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
@@ -366,9 +363,7 @@ namespace Google.Cloud.Compute.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListTargetHttpsProxiesRequest
             {
@@ -393,8 +388,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListTargetHttpsProxiesRequest
@@ -1263,9 +1257,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public override gax::PagedEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedList(AggregatedListTargetHttpsProxiesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListTargetHttpsProxiesRequest(ref request, ref callSettings);
@@ -1278,8 +1270,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetHttpsProxiesScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public override gax::PagedAsyncEnumerable<TargetHttpsProxyAggregatedList, scg::KeyValuePair<string, TargetHttpsProxiesScopedList>> AggregatedListAsync(AggregatedListTargetHttpsProxiesRequest request, gaxgrpc::CallSettings callSettings = null)
         {

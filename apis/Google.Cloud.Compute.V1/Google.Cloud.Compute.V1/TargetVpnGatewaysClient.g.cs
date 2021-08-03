@@ -264,9 +264,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedList(AggregatedListTargetVpnGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -276,8 +274,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedListAsync(AggregatedListTargetVpnGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
@@ -297,9 +294,7 @@ namespace Google.Cloud.Compute.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListTargetVpnGatewaysRequest
             {
@@ -324,8 +319,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListTargetVpnGatewaysRequest
@@ -750,9 +744,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public override gax::PagedEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedList(AggregatedListTargetVpnGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListTargetVpnGatewaysRequest(ref request, ref callSettings);
@@ -765,8 +757,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{string,TargetVpnGatewaysScopedList}"/>
-        /// resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public override gax::PagedAsyncEnumerable<TargetVpnGatewayAggregatedList, scg::KeyValuePair<string, TargetVpnGatewaysScopedList>> AggregatedListAsync(AggregatedListTargetVpnGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
         {

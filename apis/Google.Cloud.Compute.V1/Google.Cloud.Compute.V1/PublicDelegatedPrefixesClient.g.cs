@@ -283,9 +283,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedList(AggregatedListPublicDelegatedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -295,8 +293,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of
-        /// <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedListAsync(AggregatedListPublicDelegatedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
@@ -316,9 +313,7 @@ namespace Google.Cloud.Compute.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public virtual gax::PagedEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListPublicDelegatedPrefixesRequest
             {
@@ -343,8 +338,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of
-        /// <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListPublicDelegatedPrefixesRequest
@@ -880,9 +874,7 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable sequence of <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
-        /// </returns>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
         public override gax::PagedEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedList(AggregatedListPublicDelegatedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListPublicDelegatedPrefixesRequest(ref request, ref callSettings);
@@ -895,8 +887,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>
-        /// A pageable asynchronous sequence of
-        /// <see cref="scg::KeyValuePair{string,PublicDelegatedPrefixesScopedList}"/> resources.
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
         public override gax::PagedAsyncEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedListAsync(AggregatedListPublicDelegatedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
