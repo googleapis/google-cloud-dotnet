@@ -67,18 +67,18 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 (Cause.MethodGenericConstraintChanged, Cause.MethodGenericVarianceChanged);
             foreach (var (o, n) in oGenericParameters.Zip(nGenericParameters))
             {
-                // TODO: Check `unmanaged` constaint.
+                // TODO: Check `unmanaged` constraint.
                 if ((!o.HasReferenceTypeConstraint && n.HasReferenceTypeConstraint) ||
                     (!o.HasNotNullableValueTypeConstraint && n.HasNotNullableValueTypeConstraint) ||
                     (!o.HasDefaultConstructorConstraint && n.HasDefaultConstructorConstraint) ||
-                    !n.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(o.Constraints))
+                    !n.Constraints.ToImmutableHashSet(SameGenericParameterConstraintComparer.Instance).IsSubsetOf(o.Constraints))
                 {
                     yield return Diff.Major(causeConstraint, $"{prefix} changed constraint on generic parameter '{n}'");
                 }
                 if ((!n.HasReferenceTypeConstraint && o.HasReferenceTypeConstraint) ||
                     (!n.HasNotNullableValueTypeConstraint && o.HasNotNullableValueTypeConstraint) ||
                     (!n.HasDefaultConstructorConstraint && o.HasDefaultConstructorConstraint) ||
-                    !o.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(n.Constraints))
+                    !o.Constraints.ToImmutableHashSet(SameGenericParameterConstraintComparer.Instance).IsSubsetOf(n.Constraints))
                 {
                     yield return Diff.Minor(causeConstraint, $"{prefix} changed constraint on generic parameter '{n}'");
                 }

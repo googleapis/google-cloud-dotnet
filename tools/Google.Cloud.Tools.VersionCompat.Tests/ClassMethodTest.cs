@@ -84,6 +84,13 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     namespace GenericConstraintChanged3.A { public class C { public void A<T, U>() where T : IList<T> where U : IList<T> { } } }
     namespace GenericConstraintChanged3.B { public class C { public void A<T, U>() where T : IList<U> where U : IList<T> { } } }
 
+// TODO: Shouldn't this be enable?
+#nullable disable
+    namespace GenericConstraintChanged4.A { public class C { public void A<T>() where T : IList<T> { } } }
+    namespace GenericConstraintChanged4.B { public class C { public void A<T>() where T : IList<T>? { } } }
+
+#nullable restore
+
     namespace MethodModiferChanged1.A { public abstract class C { public virtual int A() => 0; } }
     namespace MethodModiferChanged1.B { public abstract class C { public int A() => 0; } }
 
@@ -136,6 +143,9 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
         [Fact] public void GenericConstraintChanged2() => Test()
             ((Level.Major, Cause.MethodGenericConstraintChanged), (Level.Minor, Cause.MethodGenericConstraintChanged));
         [Fact] public void GenericConstraintChanged3() => Test()
+            ((Level.Major, Cause.MethodGenericConstraintChanged), (Level.Minor, Cause.MethodGenericConstraintChanged));
+        [Fact]
+        public void GenericConstraintChanged4() => Test()
             ((Level.Major, Cause.MethodGenericConstraintChanged), (Level.Minor, Cause.MethodGenericConstraintChanged));
         [Fact] public void MethodModiferChanged1() => TestMajor(Cause.MethodModifierChanged);
         [Fact] public void MethodModiferChanged2() => TestMajor(Cause.MethodModifierChanged);
