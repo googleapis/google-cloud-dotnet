@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Compute.V1
         /// <inheritdoc/>
         public int PageSize
         {
-            set => MaxResults = (uint)value;
+            set => MaxResults = checked((uint)value);
         }
     }
 
@@ -1102,7 +1102,7 @@ namespace Google.Cloud.Compute.V1
         /// <inheritdoc/>
         public int PageSize
         {
-            set => MaxResults = (uint)value;
+            set => MaxResults = checked((uint)value);
         }
     }
 
