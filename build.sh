@@ -143,7 +143,7 @@ fi
 log_build_action "(Start) build.sh"
 log_build_action "Building analyzers"
 
-dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
+dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard2.0 tools/Google.Cloud.Tools.Analyzers
 
 # Then build the requested APIs, working out the test projects as we go.
 > AllTests.txt
