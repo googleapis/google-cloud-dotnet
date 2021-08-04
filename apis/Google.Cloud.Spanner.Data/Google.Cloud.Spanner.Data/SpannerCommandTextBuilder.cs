@@ -220,12 +220,13 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder FromCommandText(string commandText)
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
+            commandText = commandText.Trim();
             var trimmedCommandText = RemoveCommentsAndStatementHint(commandText).Trim();
             // Split(new char[0]) splits the string using all whitespace characters.
             var commandSections = trimmedCommandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
             {
-                throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
+                throw new ArgumentException($"'{trimmedCommandText}' is not a recognized Spanner command.", nameof(commandText));
             }
 
             string commandName = commandSections[0].ToUpperInvariant();
@@ -283,7 +284,7 @@ namespace Google.Cloud.Spanner.Data
         private static readonly char s_doubleQuote = '"';
         private static readonly char s_backtickQuote = '`';
         private static readonly char s_hyphen = '-';
-        private static readonly char s_dash = '#';
+        private static readonly char s_hash = '#';
         private static readonly char s_slash = '/';
         private static readonly char s_asterisk = '*';
 
@@ -292,8 +293,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="sql">The sql string to strip for comments</param>
         /// <returns>The sql string without any comments</returns>
-        /// <exception cref="SpannerException">
-        /// Throws SpannerException if the sql string contains an unclosed
+        /// <exception cref="ArgumentException">
+        /// Throws ArgumentException if the sql string contains an unclosed
         /// literal or unclosed quoted identifier
         /// </exception>
         internal static string RemoveComments(string sql)
@@ -314,9 +315,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     if ((c == '\n' || c == '\r') && !isTripleQuoted)
                     {
-                        throw new SpannerException(
-                            ErrorCode.InvalidArgument,
-                            $"SQL statement contains an unclosed literal: {sql}");
+                        throw new ArgumentException($"SQL statement contains an unclosed literal: {sql}");
                     }
                     else if (c == startQuote)
                     {
@@ -376,7 +375,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     else
                     {
-                        if (c == s_dash
+                        if (c == s_hash
                             || (sql.Length > index + 1 && c == s_hyphen && sql[index + 1] == s_hyphen))
                         {
                             // This is a single line comment.
@@ -411,8 +410,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (isInQuoted)
             {
-                throw new SpannerException(
-                    ErrorCode.InvalidArgument, $"SQL statement contains an unclosed literal: {sql}");
+                throw new ArgumentException($"SQL statement contains an unclosed literal: {sql}");
             }
             if (res.Length > 0 && res[res.Length - 1] == ';')
             {
@@ -452,6 +450,13 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
             if (startQueryIndex > -1) {
+                if (startQueryIndex < startStatementHintIndex)
+                {
+                    // The first opening curly brace is after the first keyword.
+                    // That means that the curly brace is not part of a statement hint
+                    // and we can safely return the original sql string.
+                    return sql;
+                }
                 int endStatementHintIndex = sql.Substring(0, startQueryIndex).LastIndexOf('}');
                 if (startStatementHintIndex == -1 || startStatementHintIndex > endStatementHintIndex) {
                     // Looks like an invalid statement hint. Just ignore at this point and let the caller handle
