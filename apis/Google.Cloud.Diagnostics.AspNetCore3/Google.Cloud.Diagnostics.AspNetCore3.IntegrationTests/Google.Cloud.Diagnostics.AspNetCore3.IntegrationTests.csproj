@@ -16,7 +16,6 @@
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore3\Google.Cloud.Diagnostics.AspNetCore3.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.17" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
     <PackageReference Include="Moq" Version="4.16.1" />
@@ -28,6 +27,7 @@
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.8" />
     <Compile Include="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.IntegrationTests\**\*.cs" />
     <Compile Remove="..\..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.IntegrationTests\obj\**" />
     <Compile Remove="obj\**" />

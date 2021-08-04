@@ -47,7 +47,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         // Sample: Configure
         public static IHostBuilder CreateHostBuilder() =>
-            Host.CreateDefaultBuilder()
+            new HostBuilder()
                 .ConfigureServices(services =>
                 {
                     services.AddGoogleTrace(options => options.ProjectId = ProjectId);
