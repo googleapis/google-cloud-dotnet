@@ -3,20 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Grpc" Version="3.4.0" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.4.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.10.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="3.10.0" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />

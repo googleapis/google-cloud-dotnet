@@ -392,7 +392,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     {
                         node = node.WithReturnType(ParseTypeName(customStreamMethodInfo.TypeName));
                     }
-                    else if (Method.ReturnType.ContainingType == Method.ContainingType)
+                    else if (SymbolEqualityComparer.Default.Equals(Method.ReturnType.ContainingType, Method.ContainingType))
                     {
                         // If the method's return type is defined in the underlying client's class, qualify the return type.
                         node = node.WithReturnType(
