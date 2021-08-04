@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFrameworks>netstandard1.5</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
