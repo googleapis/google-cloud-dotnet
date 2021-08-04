@@ -249,6 +249,21 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 ["extends"] = new JArray { "config:base" },
                 ["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray()),
+                ["packageRules"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore/Google.Cloud.Diagnostics.AspNetCore.**/**" },
+                        ["matchPackageNames"] = new JArray { "Microsoft.AspNetCore.**", "Microsoft.Extensions.**" },
+                        ["allowedVersions"] = "<2.2.0"
+                    },
+                    new JObject
+                    {
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3.**/**" },
+                        ["matchPackageNames"] = new JArray { "Microsoft.AspNetCore.TestHost" },
+                        ["allowedVersions"] = "<3.2.0"
+                    },
+                },
                 ["schedule"] = new JArray { "before 8am" },
                 ["timezone"] = "Europe/London"
             };

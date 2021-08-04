@@ -170,6 +170,27 @@
     "apis/Google.LongRunning/Google.LongRunning/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
+  "packageRules": [
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Diagnostics.AspNetCore/Google.Cloud.Diagnostics.AspNetCore.**/**"
+      ],
+      "matchPackageNames": [
+        "Microsoft.AspNetCore.**",
+        "Microsoft.Extensions.**"
+      ],
+      "allowedVersions": "<2.2.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3.**/**"
+      ],
+      "matchPackageNames": [
+        "Microsoft.AspNetCore.TestHost"
+      ],
+      "allowedVersions": "<3.2.0"
+    }
+  ],
   "schedule": [
     "before 8am"
   ],
