@@ -172,6 +172,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Output only. The unique identifier of this agent version.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent/versions/{Version ID}`
     /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
     ///   ID>`
@@ -549,6 +550,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The agent to list all versions from.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent`
     /// - `projects/{Project ID}/locations/{Location ID}/agent`
     /// </summary>
@@ -1015,6 +1017,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the version.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent/versions/{Version ID}`
     /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
     ///   ID>`
@@ -1198,6 +1201,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The agent to create a version for.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent`
     /// - `projects/{Project ID}/locations/{Location ID}/agent`
     /// </summary>
@@ -1427,6 +1431,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The version to update.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent/versions/{Version ID}`
     /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
     ///   ID>`
@@ -1665,6 +1670,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the version to delete.
     /// Supported formats:
+    ///
     /// - `projects/{Project ID}/agent/versions/{Version ID}`
     /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
     ///   ID>`
