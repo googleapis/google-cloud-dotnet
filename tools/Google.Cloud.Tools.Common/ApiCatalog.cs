@@ -99,7 +99,7 @@ namespace Google.Cloud.Tools.Common
         public static ApiCatalog FromJson(string json)
         {
             JToken parsed = JToken.Parse(json);
-            var catalog = parsed.ToObject<ApiCatalog>();
+            var catalog = parsed.ToObject<ApiCatalog>(new JsonSerializer { MissingMemberHandling = MissingMemberHandling.Error });
             catalog.Json = parsed;
             foreach (var apiJson in parsed["apis"].Children().OfType<JObject>())
             {

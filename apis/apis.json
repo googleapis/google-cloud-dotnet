@@ -833,10 +833,6 @@
         "Google.Api.Gax.Testing": "3.4.0",
         "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
         "Google.Cloud.Diagnostics.Common.Tests": "project"
-      },
-      "additionalAnalyzerTestDependencies": {
-        "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
-        "Microsoft.AspNetCore.Routing": "1.0.4"
       }
     },
     {
