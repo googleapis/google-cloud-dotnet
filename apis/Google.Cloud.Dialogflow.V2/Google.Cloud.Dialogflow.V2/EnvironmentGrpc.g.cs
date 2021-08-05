@@ -124,7 +124,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public abstract partial class EnvironmentsBase
     {
       /// <summary>
-      /// Returns the list of all non-draft environments of the specified agent.
+      /// Returns the list of all non-default environments of the specified agent.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -162,13 +162,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// This method allows you to deploy new agent versions into the environment.
       /// When an environment is pointed to a new agent version by setting
       /// `environment.agent_version`, the environment is temporarily set to the
-      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// `LOADING` state. During that time, the environment continues serving the
       /// previous version of the agent. After the new agent version is done loading,
       /// the environment is set back to the `RUNNING` state.
-      /// You can use "-" as Environment ID in environment name to update version
-      /// in "draft" environment. WARNING: this will negate all recent changes to
-      /// draft and can't be undone. You may want to save the draft to a version
-      /// before calling this function.
+      /// You can use "-" as Environment ID in environment name to update an agent
+      /// version in the default environment. WARNING: this will negate all recent
+      /// changes to the draft agent and can't be undone. You may want to save the
+      /// draft agent to a version before calling this method.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -226,7 +226,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Returns the list of all non-draft environments of the specified agent.
+      /// Returns the list of all non-default environments of the specified agent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -238,7 +238,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return ListEnvironments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all non-draft environments of the specified agent.
+      /// Returns the list of all non-default environments of the specified agent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -248,7 +248,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEnvironments, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all non-draft environments of the specified agent.
+      /// Returns the list of all non-default environments of the specified agent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -260,7 +260,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return ListEnvironmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all non-draft environments of the specified agent.
+      /// Returns the list of all non-default environments of the specified agent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -363,13 +363,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// This method allows you to deploy new agent versions into the environment.
       /// When an environment is pointed to a new agent version by setting
       /// `environment.agent_version`, the environment is temporarily set to the
-      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// `LOADING` state. During that time, the environment continues serving the
       /// previous version of the agent. After the new agent version is done loading,
       /// the environment is set back to the `RUNNING` state.
-      /// You can use "-" as Environment ID in environment name to update version
-      /// in "draft" environment. WARNING: this will negate all recent changes to
-      /// draft and can't be undone. You may want to save the draft to a version
-      /// before calling this function.
+      /// You can use "-" as Environment ID in environment name to update an agent
+      /// version in the default environment. WARNING: this will negate all recent
+      /// changes to the draft agent and can't be undone. You may want to save the
+      /// draft agent to a version before calling this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -386,13 +386,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// This method allows you to deploy new agent versions into the environment.
       /// When an environment is pointed to a new agent version by setting
       /// `environment.agent_version`, the environment is temporarily set to the
-      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// `LOADING` state. During that time, the environment continues serving the
       /// previous version of the agent. After the new agent version is done loading,
       /// the environment is set back to the `RUNNING` state.
-      /// You can use "-" as Environment ID in environment name to update version
-      /// in "draft" environment. WARNING: this will negate all recent changes to
-      /// draft and can't be undone. You may want to save the draft to a version
-      /// before calling this function.
+      /// You can use "-" as Environment ID in environment name to update an agent
+      /// version in the default environment. WARNING: this will negate all recent
+      /// changes to the draft agent and can't be undone. You may want to save the
+      /// draft agent to a version before calling this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -407,13 +407,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// This method allows you to deploy new agent versions into the environment.
       /// When an environment is pointed to a new agent version by setting
       /// `environment.agent_version`, the environment is temporarily set to the
-      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// `LOADING` state. During that time, the environment continues serving the
       /// previous version of the agent. After the new agent version is done loading,
       /// the environment is set back to the `RUNNING` state.
-      /// You can use "-" as Environment ID in environment name to update version
-      /// in "draft" environment. WARNING: this will negate all recent changes to
-      /// draft and can't be undone. You may want to save the draft to a version
-      /// before calling this function.
+      /// You can use "-" as Environment ID in environment name to update an agent
+      /// version in the default environment. WARNING: this will negate all recent
+      /// changes to the draft agent and can't be undone. You may want to save the
+      /// draft agent to a version before calling this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -430,13 +430,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// This method allows you to deploy new agent versions into the environment.
       /// When an environment is pointed to a new agent version by setting
       /// `environment.agent_version`, the environment is temporarily set to the
-      /// `LOADING` state. During that time, the environment keeps on serving the
+      /// `LOADING` state. During that time, the environment continues serving the
       /// previous version of the agent. After the new agent version is done loading,
       /// the environment is set back to the `RUNNING` state.
-      /// You can use "-" as Environment ID in environment name to update version
-      /// in "draft" environment. WARNING: this will negate all recent changes to
-      /// draft and can't be undone. You may want to save the draft to a version
-      /// before calling this function.
+      /// You can use "-" as Environment ID in environment name to update an agent
+      /// version in the default environment. WARNING: this will negate all recent
+      /// changes to the draft agent and can't be undone. You may want to save the
+      /// draft agent to a version before calling this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
