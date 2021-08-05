@@ -1977,7 +1977,7 @@
       },
       "testDependencies": {
         "Google.Apis.CloudResourceManager.v1": "1.52.0.2281",
-        "System.ValueTuple": "4.4.0"
+        "System.ValueTuple": "4.5.0"
       },
       "tags": [
         "PubSub"
