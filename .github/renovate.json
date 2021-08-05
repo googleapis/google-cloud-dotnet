@@ -173,20 +173,20 @@
   "packageRules": [
     {
       "matchPaths": [
-        "apis/Google.Cloud.Diagnostics.AspNetCore/Google.Cloud.Diagnostics.AspNetCore.**/**"
+        "apis/Google.Cloud.Diagnostics.AspNetCore/**"
       ],
-      "matchPackageNames": [
-        "Microsoft.AspNetCore.**",
-        "Microsoft.Extensions.**"
+      "matchPackagePrefixes": [
+        "Microsoft.AspNetCore.",
+        "Microsoft.Extensions."
       ],
       "allowedVersions": "<2.2.0"
     },
     {
       "matchPaths": [
-        "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3.**/**"
+        "apis/Google.Cloud.Diagnostics.AspNetCore3/**"
       ],
-      "matchPackageNames": [
-        "Microsoft.AspNetCore.TestHost"
+      "matchPackagePrefixes": [
+        "Microsoft.AspNetCore."
       ],
       "allowedVersions": "<3.2.0"
     }
