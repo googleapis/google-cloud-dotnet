@@ -2508,6 +2508,9 @@
         "Google.Cloud.Spanner.Common.V1": "project",
         "Grpc.Core": "2.38.0"
       },
+      "testDependencies": {
+        "Xunit.Combinatorial": "1.4.1"
+      },
       "noVersionHistory": true
     },
     {
