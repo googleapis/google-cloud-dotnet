@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" Version="[3.3.0, 4.0.0)" />
-    <PackageReference Include="Google.Apis.Iam.v1" Version="[1.52.0.2330, 2.0.0.0)" />
+    <PackageReference Include="Google.Apis.Iam.v1" Version="[1.53.0.2394, 2.0.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj" />

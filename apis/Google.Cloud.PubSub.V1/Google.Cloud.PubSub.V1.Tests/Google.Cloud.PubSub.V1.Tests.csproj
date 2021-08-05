@@ -11,7 +11,7 @@
     <DebugSymbols>True</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Apis.CloudResourceManager.v1" Version="[1.52.0.2281, 2.0.0.0)" />
+    <PackageReference Include="Google.Apis.CloudResourceManager.v1" Version="[1.53.0.2281, 2.0.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
