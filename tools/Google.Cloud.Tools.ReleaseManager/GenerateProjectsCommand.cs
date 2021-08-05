@@ -253,14 +253,14 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     new JObject
                     {
-                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore/Google.Cloud.Diagnostics.AspNetCore.**/**" },
-                        ["matchPackageNames"] = new JArray { "Microsoft.AspNetCore.**", "Microsoft.Extensions.**" },
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore/**" },
+                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore.", "Microsoft.Extensions." },
                         ["allowedVersions"] = "<2.2.0"
                     },
                     new JObject
                     {
-                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3.**/**" },
-                        ["matchPackageNames"] = new JArray { "Microsoft.AspNetCore.TestHost" },
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore3/**" },
+                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore." },
                         ["allowedVersions"] = "<3.2.0"
                     },
                 },
