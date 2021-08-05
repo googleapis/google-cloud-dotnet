@@ -559,8 +559,6 @@ namespace Google.Cloud.PubSub.V1
         private readonly Queue<ReadyBatch> _batchesReady;
         // For each ordering-key (including empty), the OrderingKeyState and batch(es) of messages.
         private readonly Dictionary<string, KeyState> _keyedState;
-        private long _queueElementCount;
-        private long _queueByteCount;
         private int _batchesInFlightCount;
         // Cancellation/shutdown state
         private bool _shutdownStarted;
@@ -593,9 +591,6 @@ namespace Google.Cloud.PubSub.V1
                 {
                     throw new OrderingKeyInErrorStateException(orderingKey);
                 }
-                // Update flow-control counts.
-                _queueElementCount += 1;
-                _queueByteCount += messageByteCount;
 
                 // Possible states:
                 // * No existing batches with the given ordering-key.
@@ -826,9 +821,6 @@ namespace Google.Cloud.PubSub.V1
             var batch = readyBatch.Batch;
             var state = readyBatch.State;
             _batchesInFlightCount += 1;
-            // Update flow-control counts.
-            _queueElementCount -= batch.Messages.Count;
-            _queueByteCount -= batch.ByteCount;
             // Send the batch
             _taskHelper.Run(Send);
 
