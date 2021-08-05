@@ -931,7 +931,7 @@
         "Grpc.Core": "2.38.0"
       },
       "testDependencies": {
-        "Microsoft.AspNetCore.Mvc.Core": "1.0.4"
+        "Microsoft.AspNetCore.Mvc.Core": "2.1.16"
       }
     },
     {
