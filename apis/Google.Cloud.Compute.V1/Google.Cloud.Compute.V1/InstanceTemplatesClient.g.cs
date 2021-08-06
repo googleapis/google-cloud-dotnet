@@ -1184,7 +1184,7 @@ namespace Google.Cloud.Compute.V1
             /// TODO: Documentation
             /// </summary>
             /// <returns></returns>
-            public virtual GlobalOperations.GlobalOperationsClient CreateGlobalOperationsClient() =>
+            internal virtual GlobalOperations.GlobalOperationsClient CreateGlobalOperationsClient() =>
                 new GlobalOperations.GlobalOperationsClient(CallInvoker);
         }
     }

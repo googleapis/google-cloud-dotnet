@@ -6238,7 +6238,7 @@ namespace Google.Cloud.Compute.V1
             /// TODO: Documentation
             /// </summary>
             /// <returns></returns>
-            public virtual ZoneOperations.ZoneOperationsClient CreateZoneOperationsClient() =>
+            internal virtual ZoneOperations.ZoneOperationsClient CreateZoneOperationsClient() =>
                 new ZoneOperations.ZoneOperationsClient(CallInvoker);
         }
     }

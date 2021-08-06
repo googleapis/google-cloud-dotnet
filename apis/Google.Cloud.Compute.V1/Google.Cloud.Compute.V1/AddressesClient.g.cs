@@ -948,7 +948,7 @@ namespace Google.Cloud.Compute.V1
             /// TODO: Documentation
             /// </summary>
             /// <returns></returns>
-            public virtual RegionOperations.RegionOperationsClient CreateRegionOperationsClient() =>
+            internal virtual RegionOperations.RegionOperationsClient CreateRegionOperationsClient() =>
                 new RegionOperations.RegionOperationsClient(CallInvoker);
         }
     }
