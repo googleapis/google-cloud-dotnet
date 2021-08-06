@@ -49,6 +49,9 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 _output.WriteLine($"Retrieving address with the name: {addressName}");
                 var exc = Assert.Throws<RpcException>(() => addressesClient.Get(projectId, region, addressName));
                 Assert.Equal(StatusCode.NotFound, exc.StatusCode);
+                // Make sure we are surfacing meaningful error messages.
+                string expectedErrorMessage = $"The resource 'projects/{projectId}/regions/{region}/addresses/{addressName}' was not found";
+                Assert.Contains(expectedErrorMessage, exc.Status.Detail);
             }
 
             void CreateAddress()
@@ -84,7 +87,5 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 _output.WriteLine($"Operation to delete address completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
             }
         }
-
-        
     }
 }
