@@ -16,7 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -47,6 +47,7 @@ namespace Google.Cloud.Compute.V1
             DeleteSettings = existing.DeleteSettings;
             GetSettings = existing.GetSettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings;
             ListSettings = existing.ListSettings;
             OnCopy(existing);
         }
@@ -100,6 +101,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AddressesClient.Insert</c> and
+        /// <c>AddressesClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AddressesClient.List</c>
@@ -505,6 +524,64 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an address resource in the specified project by using the data included in the request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an address resource in the specified project by using the data included in the request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertAddressRequest request, st::CancellationToken cancellationToken) =>
+            InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>LongRunningRecognize</c>.</summary>
+        public virtual lro::OperationsClient LongRunningRecognizeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /* Original methods
+        /// <summary>
+        /// Creates an address resource in the specified project by using the data included in the request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual Operation Insert(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -525,6 +602,7 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Operation> InsertAsync(InsertAddressRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        */
 
         /// <summary>
         /// Creates an address resource in the specified project by using the data included in the request.
@@ -540,7 +618,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, string region, Address addressResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, string region, Address addressResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertAddressRequest
             {
                 AddressResource = gax::GaxPreconditions.CheckNotNull(addressResource, nameof(addressResource)),
@@ -562,7 +640,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string region, Address addressResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string region, Address addressResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertAddressRequest
             {
                 AddressResource = gax::GaxPreconditions.CheckNotNull(addressResource, nameof(addressResource)),
@@ -584,7 +662,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string region, Address addressResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string region, Address addressResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, region, addressResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -691,6 +769,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             AddressesSettings effectiveSettings = settings ?? AddressesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            InsertOperationsClient = new RegionalLroClient(grpcClient.CreateRegionOperationsClient(), effectiveSettings.InsertOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListAddressesRequest, AddressAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -808,28 +887,32 @@ namespace Google.Cloud.Compute.V1
             return _callGet.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
+
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an instance resource in the specified project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Insert(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertAddressRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
+            return OperationAdapter.CreateRegionalOperation(_callInsert.Sync(request, callSettings), request.Project, request.Region, InsertOperationsClient);
         }
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an instance resource in the specified project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        public async override stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertAddressRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            var operation = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            return OperationAdapter.CreateRegionalOperation(operation, request.Project, request.Region, InsertOperationsClient);
         }
 
         /// <summary>
@@ -854,6 +937,19 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListAddressesRequest(ref request, ref callSettings);
             return _callList.Async(request, callSettings);
+        }
+    }
+
+    public static partial class Addresses
+    {
+        public partial class AddressesClient
+        {
+            /// <summary>
+            /// TODO: Documentation
+            /// </summary>
+            /// <returns></returns>
+            public virtual RegionOperations.RegionOperationsClient CreateRegionOperationsClient() =>
+                new RegionOperations.RegionOperationsClient(CallInvoker);
         }
     }
 }

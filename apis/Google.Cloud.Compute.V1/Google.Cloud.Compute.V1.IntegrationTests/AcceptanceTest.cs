@@ -61,10 +61,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     NetworkTier = Address.Types.NetworkTier.Premium
                 };
 
-                Operation insertOperation = addressesClient.Insert(projectId, region, addressResource);
-                _output.WriteLine($"Operation to create address: {insertOperation.Name} status {insertOperation.Status}; start time {insertOperation.StartTime}");
-                insertOperation = _fixture.PollUntilCompleted(insertOperation, "create", _output);
-                _output.WriteLine($"Operation to create address completed: status {insertOperation.Status}; start time {insertOperation.StartTime}; end time {insertOperation.EndTime}");
+                var insertOperation = addressesClient.Insert(projectId, region, addressResource);
+                _output.WriteLine($"Operation to create address: {insertOperation.Metadata.Name} status {insertOperation.Metadata.Status}; start time {insertOperation.Metadata.StartTime}");
+                var completed = insertOperation.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
 
             void FetchNewAddress()
