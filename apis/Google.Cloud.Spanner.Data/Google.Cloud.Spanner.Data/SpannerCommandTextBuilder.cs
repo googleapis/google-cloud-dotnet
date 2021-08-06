@@ -221,7 +221,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
             commandText = commandText.Trim();
-            var trimmedCommandText = RemoveCommentsAndStatementHint(commandText).Trim();
+            var trimmedCommandText = RemoveCommentsAndStatementHint(commandText);
             // Split(new char[0]) splits the string using all whitespace characters.
             var commandSections = trimmedCommandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
@@ -425,48 +425,36 @@ namespace Google.Cloud.Spanner.Data
         /// type of statement. The original statement should always be passed on to Cloud Spanner.
         /// </summary>
         /// <param name="sql">The sql statement to strip for comments and statement hints</param>
-        /// <returns>The sql statement without comments and statement hints</returns>
+        /// <returns>The sql statement without comments, statement hints, and leading and trailing spaces</returns>
         internal static string RemoveCommentsAndStatementHint(string sql)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            // First remove all comments from the statement.
-            sql = RemoveComments(sql);
-
+            // First remove all comments from the statement and trim it.
+            sql = RemoveComments(sql).Trim();
+            if (sql == "")
+            {
+                return sql;
+            }
+            // Statement hints take the form '@{key1=value1, key2=value2, ...}'.
+            // If the sql string does not start with an @, it does not have a (valid) statement hint.
+            if (sql[0] != '@')
+            {
+                return sql;
+            }
             // Valid statement hints at the beginning of a query statement can only contain a fixed set of
             // possible values. Although it is possible to add a @{FORCE_INDEX=...} as a statement hint, the
             // only allowed value is _BASE_TABLE. This means that we can safely assume that the statement
-            // hint will not contain any special characters, for example a closing curly brace or one of the
-            // keywords SELECT, UPDATE, DELETE, WITH, and that we can keep the check simple by just
-            // searching for the first occurrence of a keyword that should be preceded by a closing curly
-            // brace at the end of the statement hint.
-            int startStatementHintIndex = sql.IndexOf('{');
-            // Statement hints are allowed for both queries and DML statements.
-            int startQueryIndex = -1;
-            string upperCaseSql = sql.ToUpperInvariant();
-            foreach (string keyword in QueryAndDmlStatements) {
-                startQueryIndex = upperCaseSql.IndexOf(keyword);
-                if (startQueryIndex > -1) {
-                    break;
-                }
+            // hint will not contain any special characters, for example a closing curly brace and that
+            // we can keep the check simple by just stripping everything up until and including the first
+            // closing curly brace '}'.
+            int endStatementHintIndex = sql.IndexOf('}');
+            if (endStatementHintIndex == -1)
+            {
+                // Seems like an invalid statement (hint). Ignore and return the original sql statement
+                // and let the caller handle the failure.
+                return sql;
             }
-            if (startQueryIndex > -1) {
-                if (startQueryIndex < startStatementHintIndex)
-                {
-                    // The first opening curly brace is after the first keyword.
-                    // That means that the curly brace is not part of a statement hint
-                    // and we can safely return the original sql string.
-                    return sql;
-                }
-                int endStatementHintIndex = sql.Substring(0, startQueryIndex).LastIndexOf('}');
-                if (startStatementHintIndex == -1 || startStatementHintIndex > endStatementHintIndex) {
-                    // Looks like an invalid statement hint. Just ignore at this point and let the caller handle
-                    // the invalid query.
-                    return sql;
-                }
-                return sql.Substring(endStatementHintIndex + 1);
-            }
-            // Seems invalid, just return the original statement.
-            return sql;
+            return sql.Substring(endStatementHintIndex + 1).TrimStart();
         }
     }
 }

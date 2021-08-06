@@ -220,14 +220,16 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Theory]
         [InlineData("", "")]
         [InlineData("SELECT 1", "SELECT 1")]
-        [InlineData("@{FORCE_INDEX=_BASE_TABLE} SELECT 1", " SELECT 1")]
-        [InlineData("@{FORCE_INDEX=_BASE_TABLE}\nSELECT 1", "\nSELECT 1")]
-        [InlineData("@{FORCE_INDEX=_BASE_TABLE}\tSELECT 1", "\tSELECT 1")]
+        [InlineData("@{FORCE_INDEX=_BASE_TABLE} SELECT 1", "SELECT 1")]
+        [InlineData("@{FORCE_INDEX=_BASE_TABLE}\nSELECT 1", "SELECT 1")]
+        [InlineData("@{FORCE_INDEX=_BASE_TABLE}\tSELECT 1", "SELECT 1")]
         [InlineData("@{FORCE_INDEX=_BASE_TABLE}SELECT 1", "SELECT 1")]
-        [InlineData("@{FORCE_INDEX=_BASE_TABLE, OPTIMIZER_VERSION=2} SELECT 1", " SELECT 1")]
+        [InlineData("@{FORCE_INDEX=_BASE_TABLE, OPTIMIZER_VERSION=2} SELECT 1", "SELECT 1")]
         [InlineData("SELECT '@{OPTIMIZER_VERSION=1}'", "SELECT '@{OPTIMIZER_VERSION=1}'")]
         [InlineData("SELECT '@{OPTIMIZER_VERSION=1} SELECT 1'", "SELECT '@{OPTIMIZER_VERSION=1} SELECT 1'")]
         [InlineData("SELECT * FROM Foo@{FORCE_INDEX=`INDEX FOR SELECT`}", "SELECT * FROM Foo@{FORCE_INDEX=`INDEX FOR SELECT`}")]
+        [InlineData("@{OPTIMIZER_VERSION=1 SELECT 1", "@{OPTIMIZER_VERSION=1 SELECT 1")]
+        [InlineData("{OPTIMIZER_VERSION=1} SELECT 1", "{OPTIMIZER_VERSION=1} SELECT 1")]
         public void RemoveStatementHintAndComments(string sql, string sqlWithoutHintsAndComments)
         {
             Assert.Equal(sqlWithoutHintsAndComments, SpannerCommandTextBuilder.RemoveCommentsAndStatementHint(sql));
