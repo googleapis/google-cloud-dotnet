@@ -14,6 +14,7 @@
 
 using Xunit;
 using Xunit.Abstractions;
+using lro = Google.LongRunning;
 
 namespace Google.Cloud.Compute.V1.IntegrationTests
 {
@@ -63,8 +64,9 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     },
                     NetworkInterfaces = {new NetworkInterface {Name = "default"}}
                 };
-                Operation insertOp = instancesClient.Insert(projectId, zone, instanceResource);
-                _fixture.PollUntilCompleted(insertOp, "create", _output);
+                var insertOp = instancesClient.Insert(projectId, zone, instanceResource);
+                var completed = insertOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
 
             void FetchInstance()
