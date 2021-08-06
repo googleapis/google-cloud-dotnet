@@ -27,7 +27,7 @@ namespace Google.Cloud.Compute.V1
             CreateOperation(computeOperation, RegionalLroClient.NameTemplate.Expand(project, region, computeOperation.Name), client);
 
         internal static lro::Operation<Operation, Operation> CreateGlobalOperation(Operation computeOperation, string project, lro::OperationsClient client) =>
-            CreateOperation(computeOperation, $"projects/{project}/operations/{computeOperation.Name}", client);
+            CreateOperation(computeOperation, GlobalLroClient.NameTemplate.Expand(project, computeOperation.Name), client);
 
         internal static lro::Operation<Operation, Operation> CreateOperation(Operation computeOperation, string name, lro::OperationsClient client)
         {

@@ -20,6 +20,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using sys = System;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
@@ -47,6 +48,7 @@ namespace Google.Cloud.Compute.V1
             GetSettings = existing.GetSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings;
             ListSettings = existing.ListSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -102,6 +104,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceTemplatesClient.Insert</c> and
+        /// <c>InstanceTemplatesClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -522,6 +542,62 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceTemplateRequest request, st::CancellationToken cancellationToken) =>
+            InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /* ORIGINAL GENERATED METHODS
+         
+        /// <summary>
+        /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual Operation Insert(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -542,6 +618,7 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Operation> InsertAsync(InsertInstanceTemplateRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        */
 
         /// <summary>
         /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
@@ -554,7 +631,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, InstanceTemplate instanceTemplateResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, InstanceTemplate instanceTemplateResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertInstanceTemplateRequest
             {
                 InstanceTemplateResource = gax::GaxPreconditions.CheckNotNull(instanceTemplateResource, nameof(instanceTemplateResource)),
@@ -572,7 +649,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, InstanceTemplate instanceTemplateResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, InstanceTemplate instanceTemplateResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertInstanceTemplateRequest
             {
                 InstanceTemplateResource = gax::GaxPreconditions.CheckNotNull(instanceTemplateResource, nameof(instanceTemplateResource)),
@@ -590,7 +667,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, InstanceTemplate instanceTemplateResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, InstanceTemplate instanceTemplateResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, instanceTemplateResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -866,6 +943,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             InstanceTemplatesSettings effectiveSettings = settings ?? InstanceTemplatesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            InsertOperationsClient = new GlobalLroClient(grpcClient.CreateGlobalOperationsClient(), effectiveSettings.InsertOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteInstanceTemplateRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance_template", request => request.InstanceTemplate);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -986,7 +1064,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -997,28 +1075,32 @@ namespace Google.Cloud.Compute.V1
             return _callGetIamPolicy.Async(request, callSettings);
         }
 
-        /// <summary>
-        /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_InsertInstanceTemplateRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
-        }
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
         /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Insert(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceTemplateRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            return OperationAdapter.CreateGlobalOperation(_callInsert.Sync(request, callSettings), request.Project,InsertOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an instance resource in the specified project using the data included in the request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public async override stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InsertInstanceTemplateRequest(ref request, ref callSettings);
+            var operation = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            return OperationAdapter.CreateGlobalOperation(operation, request.Project, InsertOperationsClient);
         }
 
         /// <summary>
@@ -1091,6 +1173,19 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_TestIamPermissionsInstanceTemplateRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+    }
+
+    public static partial class InstanceTemplates
+    {
+        public partial class InstanceTemplatesClient
+        {
+            /// <summary>
+            /// TODO: Documentation
+            /// </summary>
+            /// <returns></returns>
+            public virtual GlobalOperations.GlobalOperationsClient CreateGlobalOperationsClient() =>
+                new GlobalOperations.GlobalOperationsClient(CallInvoker);
         }
     }
 }

@@ -163,12 +163,13 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             };
             try
             {
-                Operation insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
-                _fixture.PollUntilCompleted(insertTemplateOp, "insert template", _output);
+                var insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
+                var completed = insertTemplateOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
 
                 InstanceGroupManager instanceGroupManager = new InstanceGroupManager
                 {
-                    InstanceTemplate = insertTemplateOp.TargetLink,
+                    InstanceTemplate = completed.Result.TargetLink,
                     TargetSize = 0,
                     Name = instanceGroupManagerName,
                     BaseInstanceName = "dotnetgapic"
