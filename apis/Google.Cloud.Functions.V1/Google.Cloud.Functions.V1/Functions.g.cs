@@ -359,7 +359,11 @@ namespace Google.Cloud.Functions.V1 {
     public const int SourceUploadUrlFieldNumber = 16;
     /// <summary>
     /// The Google Cloud Storage signed URL used for source uploading, generated
-    /// by [google.cloud.functions.v1.GenerateUploadUrl][]
+    /// by calling [google.cloud.functions.v1.GenerateUploadUrl].
+    ///
+    /// The signature is validated on write methods {Create, Update}
+    /// The signature is stripped from the Function object on read methods {Get,
+    /// List}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SourceUploadUrl {
