@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -784,8 +785,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ProjectsGetXpnResources GetXpnResources(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -793,18 +794,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectsGetXpnResources> GetXpnResourcesAsync(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectsGetXpnResources> GetXpnResourcesAsync(GetXpnResourcesProjectsRequest request, st::CancellationToken cancellationToken) =>
-            GetXpnResourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets service resources (a.k.a service project) associated with this host project.
@@ -812,12 +804,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ProjectsGetXpnResources GetXpnResources(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             GetXpnResources(new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -826,32 +828,31 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectsGetXpnResources> GetXpnResourcesAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             GetXpnResourcesAsync(new GetXpnResourcesProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectsGetXpnResources> GetXpnResourcesAsync(string project, st::CancellationToken cancellationToken) =>
-            GetXpnResourcesAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual XpnHostList ListXpnHosts(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
+        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -859,18 +860,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<XpnHostList> ListXpnHostsAsync(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists all shared VPC host projects visible to the user in an organization.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<XpnHostList> ListXpnHostsAsync(ListXpnHostsProjectsRequest request, st::CancellationToken cancellationToken) =>
-            ListXpnHostsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all shared VPC host projects visible to the user in an organization.
@@ -881,13 +873,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="projectsListXpnHostsRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual XpnHostList ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
+        public virtual gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListXpnHosts(new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -899,28 +901,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="projectsListXpnHostsRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<XpnHostList> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListXpnHostsAsync(new ListXpnHostsProjectsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 ProjectsListXpnHostsRequestResource = gax::GaxPreconditions.CheckNotNull(projectsListXpnHostsRequestResource, nameof(projectsListXpnHostsRequestResource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists all shared VPC host projects visible to the user in an organization.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="projectsListXpnHostsRequestResource">
-        /// The body resource for this request
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<XpnHostList> ListXpnHostsAsync(string project, ProjectsListXpnHostsRequest projectsListXpnHostsRequestResource, st::CancellationToken cancellationToken) =>
-            ListXpnHostsAsync(project, projectsListXpnHostsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Moves a persistent disk from one zone to another.
@@ -1600,11 +1598,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ProjectsGetXpnResources GetXpnResources(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public override gax::PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResources(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetXpnResourcesProjectsRequest(ref request, ref callSettings);
-            return _callGetXpnResources.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<GetXpnResourcesProjectsRequest, ProjectsGetXpnResources, XpnResourceId>(_callGetXpnResources, request, callSettings);
         }
 
         /// <summary>
@@ -1612,11 +1610,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ProjectsGetXpnResources> GetXpnResourcesAsync(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="XpnResourceId"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> GetXpnResourcesAsync(GetXpnResourcesProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetXpnResourcesProjectsRequest(ref request, ref callSettings);
-            return _callGetXpnResources.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<GetXpnResourcesProjectsRequest, ProjectsGetXpnResources, XpnResourceId>(_callGetXpnResources, request, callSettings);
         }
 
         /// <summary>
@@ -1624,11 +1622,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override XpnHostList ListXpnHosts(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
+        public override gax::PagedEnumerable<XpnHostList, Project> ListXpnHosts(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListXpnHostsProjectsRequest(ref request, ref callSettings);
-            return _callListXpnHosts.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListXpnHostsProjectsRequest, XpnHostList, Project>(_callListXpnHosts, request, callSettings);
         }
 
         /// <summary>
@@ -1636,11 +1634,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<XpnHostList> ListXpnHostsAsync(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<XpnHostList, Project> ListXpnHostsAsync(ListXpnHostsProjectsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListXpnHostsProjectsRequest(ref request, ref callSettings);
-            return _callListXpnHosts.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListXpnHostsProjectsRequest, XpnHostList, Project>(_callListXpnHosts, request, callSettings);
         }
 
         /// <summary>
@@ -1762,5 +1760,41 @@ namespace Google.Cloud.Compute.V1
             Modify_SetUsageExportBucketProjectRequest(ref request, ref callSettings);
             return _callSetUsageExportBucket.Async(request, callSettings);
         }
+    }
+
+    public partial class GetXpnResourcesProjectsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListXpnHostsProjectsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ProjectsGetXpnResources : gaxgrpc::IPageResponse<XpnResourceId>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<XpnResourceId> GetEnumerator() => Resources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class XpnHostList : gaxgrpc::IPageResponse<Project>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Project> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

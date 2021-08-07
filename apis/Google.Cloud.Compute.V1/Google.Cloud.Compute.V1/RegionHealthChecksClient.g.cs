@@ -543,8 +543,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HealthCheckList List(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="HealthCheck"/> resources.</returns>
+        public virtual gax::PagedEnumerable<HealthCheckList, HealthCheck> List(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -552,18 +552,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HealthCheckList> ListAsync(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="HealthCheck"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<HealthCheckList, HealthCheck> ListAsync(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of HealthCheck resources available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HealthCheckList> ListAsync(ListRegionHealthChecksRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of HealthCheck resources available to the specified project.
@@ -574,13 +565,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual HealthCheckList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="HealthCheck"/> resources.</returns>
+        public virtual gax::PagedEnumerable<HealthCheckList, HealthCheck> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListRegionHealthChecksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -592,28 +593,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HealthCheckList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="HealthCheck"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<HealthCheckList, HealthCheck> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListRegionHealthChecksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of HealthCheck resources available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region scoping this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<HealthCheckList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a HealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -971,11 +968,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override HealthCheckList List(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="HealthCheck"/> resources.</returns>
+        public override gax::PagedEnumerable<HealthCheckList, HealthCheck> List(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionHealthChecksRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRegionHealthChecksRequest, HealthCheckList, HealthCheck>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -983,11 +980,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<HealthCheckList> ListAsync(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="HealthCheck"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<HealthCheckList, HealthCheck> ListAsync(ListRegionHealthChecksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionHealthChecksRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRegionHealthChecksRequest, HealthCheckList, HealthCheck>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1036,6 +1033,16 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_UpdateRegionHealthCheckRequest(ref request, ref callSettings);
             return _callUpdate.Async(request, callSettings);
+        }
+    }
+
+    public partial class ListRegionHealthChecksRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
         }
     }
 }

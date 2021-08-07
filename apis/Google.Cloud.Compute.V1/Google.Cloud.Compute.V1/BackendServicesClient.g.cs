@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -429,8 +430,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BackendServiceAggregatedList AggregatedList(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedList(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -438,18 +439,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceAggregatedList> AggregatedListAsync(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedListAsync(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceAggregatedList> AggregatedListAsync(AggregatedListBackendServicesRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
@@ -457,12 +451,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Name of the project scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BackendServiceAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -471,24 +475,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Name of the project scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Name of the project scoping this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified BackendService resource.
@@ -923,8 +928,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BackendServiceList List(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceList, BackendService> List(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -932,18 +937,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceList> ListAsync(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceList, BackendService> ListAsync(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceList> ListAsync(ListBackendServicesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of BackendService resources available to the specified project.
@@ -951,12 +947,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BackendServiceList List(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendServiceList, BackendService> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -965,24 +971,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceList> ListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendServiceList, BackendService> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListBackendServicesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BackendServiceList> ListAsync(string project, st::CancellationToken cancellationToken) =>
-            ListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -1403,11 +1408,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override BackendServiceAggregatedList AggregatedList(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedList(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListBackendServicesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListBackendServicesRequest, BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1415,11 +1420,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<BackendServiceAggregatedList> AggregatedListAsync(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>> AggregatedListAsync(AggregatedListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListBackendServicesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListBackendServicesRequest, BackendServiceAggregatedList, scg::KeyValuePair<string, BackendServicesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1555,11 +1562,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override BackendServiceList List(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="BackendService"/> resources.</returns>
+        public override gax::PagedEnumerable<BackendServiceList, BackendService> List(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListBackendServicesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackendServicesRequest, BackendServiceList, BackendService>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1567,11 +1574,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<BackendServiceList> ListAsync(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendService"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<BackendServiceList, BackendService> ListAsync(ListBackendServicesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListBackendServicesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackendServicesRequest, BackendServiceList, BackendService>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1645,5 +1652,42 @@ namespace Google.Cloud.Compute.V1
             Modify_UpdateBackendServiceRequest(ref request, ref callSettings);
             return _callUpdate.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListBackendServicesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListBackendServicesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class BackendServiceAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, BackendServicesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, BackendServicesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class BackendServiceList : gaxgrpc::IPageResponse<BackendService>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackendService> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

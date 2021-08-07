@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -354,8 +355,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual SubnetworkAggregatedList AggregatedList(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedList(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -363,18 +364,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkAggregatedList> AggregatedListAsync(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedListAsync(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of subnetworks.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkAggregatedList> AggregatedListAsync(AggregatedListSubnetworksRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of subnetworks.
@@ -382,12 +376,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual SubnetworkAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -396,24 +400,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of subnetworks.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified subnetwork.
@@ -871,8 +876,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual SubnetworkList List(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Subnetwork"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SubnetworkList, Subnetwork> List(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -880,18 +885,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkList> ListAsync(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subnetwork"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SubnetworkList, Subnetwork> ListAsync(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkList> ListAsync(ListSubnetworksRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of subnetworks available to the specified project.
@@ -902,13 +898,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual SubnetworkList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Subnetwork"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SubnetworkList, Subnetwork> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -920,36 +926,32 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subnetwork"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SubnetworkList, Subnetwork> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region scoping this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SubnetworkList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Retrieves an aggregated list of all usable subnetworks in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual UsableSubnetworksAggregatedList ListUsable(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public virtual gax::PagedEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsable(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -957,18 +959,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UsableSubnetworksAggregatedList> ListUsableAsync(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsableAsync(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of all usable subnetworks in the project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UsableSubnetworksAggregatedList> ListUsableAsync(ListUsableSubnetworksRequest request, st::CancellationToken cancellationToken) =>
-            ListUsableAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of all usable subnetworks in the project.
@@ -976,12 +969,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual UsableSubnetworksAggregatedList ListUsable(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public virtual gax::PagedEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsable(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListUsable(new ListUsableSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -990,24 +993,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UsableSubnetworksAggregatedList> ListUsableAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsableAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListUsableAsync(new ListUsableSubnetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of all usable subnetworks in the project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UsableSubnetworksAggregatedList> ListUsableAsync(string project, st::CancellationToken cancellationToken) =>
-            ListUsableAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
@@ -1545,11 +1547,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override SubnetworkAggregatedList AggregatedList(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedList(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListSubnetworksRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListSubnetworksRequest, SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1557,11 +1559,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<SubnetworkAggregatedList> AggregatedListAsync(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>> AggregatedListAsync(AggregatedListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListSubnetworksRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListSubnetworksRequest, SubnetworkAggregatedList, scg::KeyValuePair<string, SubnetworksScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1689,11 +1693,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override SubnetworkList List(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="Subnetwork"/> resources.</returns>
+        public override gax::PagedEnumerable<SubnetworkList, Subnetwork> List(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSubnetworksRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubnetworksRequest, SubnetworkList, Subnetwork>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1701,11 +1705,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<SubnetworkList> ListAsync(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="Subnetwork"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SubnetworkList, Subnetwork> ListAsync(ListSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListSubnetworksRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubnetworksRequest, SubnetworkList, Subnetwork>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1713,11 +1717,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override UsableSubnetworksAggregatedList ListUsable(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public override gax::PagedEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsable(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListUsableSubnetworksRequest(ref request, ref callSettings);
-            return _callListUsable.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUsableSubnetworksRequest, UsableSubnetworksAggregatedList, UsableSubnetwork>(_callListUsable, request, callSettings);
         }
 
         /// <summary>
@@ -1725,11 +1729,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<UsableSubnetworksAggregatedList> ListUsableAsync(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> ListUsableAsync(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListUsableSubnetworksRequest(ref request, ref callSettings);
-            return _callListUsable.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsableSubnetworksRequest, UsableSubnetworksAggregatedList, UsableSubnetwork>(_callListUsable, request, callSettings);
         }
 
         /// <summary>
@@ -1827,5 +1831,59 @@ namespace Google.Cloud.Compute.V1
             Modify_TestIamPermissionsSubnetworkRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListSubnetworksRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListSubnetworksRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListUsableSubnetworksRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class SubnetworkAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, SubnetworksScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, SubnetworksScopedList>> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SubnetworkList : gaxgrpc::IPageResponse<Subnetwork>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Subnetwork> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class UsableSubnetworksAggregatedList : gaxgrpc::IPageResponse<UsableSubnetwork>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UsableSubnetwork> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
