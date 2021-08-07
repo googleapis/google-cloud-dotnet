@@ -16,6 +16,10 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -30,8 +34,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AggregatedListAddressesRequest request = new AggregatedListAddressesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -39,7 +41,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            AddressAggregatedList response = addressesClient.AggregatedList(request);
+            PagedEnumerable<AddressAggregatedList, KeyValuePair<string, AddressesScopedList>> response = addressesClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, AddressesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AddressAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, AddressesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, AddressesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, AddressesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -47,14 +81,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task AggregatedListRequestObjectAsync()
         {
             // Snippet: AggregatedListAsync(AggregatedListAddressesRequest, CallSettings)
-            // Additional: AggregatedListAsync(AggregatedListAddressesRequest, CancellationToken)
             // Create client
             AddressesClient addressesClient = await AddressesClient.CreateAsync();
             // Initialize request argument(s)
             AggregatedListAddressesRequest request = new AggregatedListAddressesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -62,34 +93,129 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            AddressAggregatedList response = await addressesClient.AggregatedListAsync(request);
+            PagedAsyncEnumerable<AddressAggregatedList, KeyValuePair<string, AddressesScopedList>> response = addressesClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, AddressesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AddressAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, AddressesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, AddressesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, AddressesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedList()
         {
-            // Snippet: AggregatedList(string, CallSettings)
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
             // Create client
             AddressesClient addressesClient = AddressesClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            AddressAggregatedList response = addressesClient.AggregatedList(project);
+            PagedEnumerable<AddressAggregatedList, KeyValuePair<string, AddressesScopedList>> response = addressesClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, AddressesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AddressAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, AddressesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, AddressesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, AddressesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedListAsync</summary>
         public async Task AggregatedListAsync()
         {
-            // Snippet: AggregatedListAsync(string, CallSettings)
-            // Additional: AggregatedListAsync(string, CancellationToken)
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
             // Create client
             AddressesClient addressesClient = await AddressesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            AddressAggregatedList response = await addressesClient.AggregatedListAsync(project);
+            PagedAsyncEnumerable<AddressAggregatedList, KeyValuePair<string, AddressesScopedList>> response = addressesClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, AddressesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AddressAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, AddressesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, AddressesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, AddressesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -310,8 +436,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListAddressesRequest request = new ListAddressesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -319,7 +443,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            AddressList response = addressesClient.List(request);
+            PagedEnumerable<AddressList, Address> response = addressesClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Address item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AddressList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Address item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Address> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Address item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -327,14 +483,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListAddressesRequest, CallSettings)
-            // Additional: ListAsync(ListAddressesRequest, CancellationToken)
             // Create client
             AddressesClient addressesClient = await AddressesClient.CreateAsync();
             // Initialize request argument(s)
             ListAddressesRequest request = new ListAddressesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -342,36 +495,131 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            AddressList response = await addressesClient.ListAsync(request);
+            PagedAsyncEnumerable<AddressList, Address> response = addressesClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Address item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AddressList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Address item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Address> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Address item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, string, CallSettings)
+            // Snippet: List(string, string, string, int?, CallSettings)
             // Create client
             AddressesClient addressesClient = AddressesClient.Create();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            AddressList response = addressesClient.List(project, region);
+            PagedEnumerable<AddressList, Address> response = addressesClient.List(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Address item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AddressList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Address item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Address> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Address item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, string, CallSettings)
-            // Additional: ListAsync(string, string, CancellationToken)
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
             // Create client
             AddressesClient addressesClient = await AddressesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            AddressList response = await addressesClient.ListAsync(project, region);
+            PagedAsyncEnumerable<AddressList, Address> response = addressesClient.ListAsync(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Address item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AddressList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Address item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Address> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Address item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

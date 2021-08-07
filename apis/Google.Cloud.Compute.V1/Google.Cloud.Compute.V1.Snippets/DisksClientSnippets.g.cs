@@ -16,6 +16,10 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -104,8 +108,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AggregatedListDisksRequest request = new AggregatedListDisksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -113,7 +115,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            DiskAggregatedList response = disksClient.AggregatedList(request);
+            PagedEnumerable<DiskAggregatedList, KeyValuePair<string, DisksScopedList>> response = disksClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, DisksScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (DiskAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, DisksScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, DisksScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, DisksScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -121,14 +155,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task AggregatedListRequestObjectAsync()
         {
             // Snippet: AggregatedListAsync(AggregatedListDisksRequest, CallSettings)
-            // Additional: AggregatedListAsync(AggregatedListDisksRequest, CancellationToken)
             // Create client
             DisksClient disksClient = await DisksClient.CreateAsync();
             // Initialize request argument(s)
             AggregatedListDisksRequest request = new AggregatedListDisksRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -136,34 +167,129 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            DiskAggregatedList response = await disksClient.AggregatedListAsync(request);
+            PagedAsyncEnumerable<DiskAggregatedList, KeyValuePair<string, DisksScopedList>> response = disksClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, DisksScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((DiskAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, DisksScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, DisksScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, DisksScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedList()
         {
-            // Snippet: AggregatedList(string, CallSettings)
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
             // Create client
             DisksClient disksClient = DisksClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            DiskAggregatedList response = disksClient.AggregatedList(project);
+            PagedEnumerable<DiskAggregatedList, KeyValuePair<string, DisksScopedList>> response = disksClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, DisksScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (DiskAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, DisksScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, DisksScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, DisksScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedListAsync</summary>
         public async Task AggregatedListAsync()
         {
-            // Snippet: AggregatedListAsync(string, CallSettings)
-            // Additional: AggregatedListAsync(string, CancellationToken)
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
             // Create client
             DisksClient disksClient = await DisksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            DiskAggregatedList response = await disksClient.AggregatedListAsync(project);
+            PagedAsyncEnumerable<DiskAggregatedList, KeyValuePair<string, DisksScopedList>> response = disksClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, DisksScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((DiskAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, DisksScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, DisksScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, DisksScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -533,15 +659,45 @@ namespace Google.Cloud.Compute.V1.Snippets
             ListDisksRequest request = new ListDisksRequest
             {
                 Zone = "",
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            DiskList response = disksClient.List(request);
+            PagedEnumerable<DiskList, Disk> response = disksClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Disk item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (DiskList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Disk item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Disk> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Disk item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -549,51 +705,143 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListDisksRequest, CallSettings)
-            // Additional: ListAsync(ListDisksRequest, CancellationToken)
             // Create client
             DisksClient disksClient = await DisksClient.CreateAsync();
             // Initialize request argument(s)
             ListDisksRequest request = new ListDisksRequest
             {
                 Zone = "",
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            DiskList response = await disksClient.ListAsync(request);
+            PagedAsyncEnumerable<DiskList, Disk> response = disksClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Disk item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((DiskList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Disk item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Disk> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Disk item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, string, CallSettings)
+            // Snippet: List(string, string, string, int?, CallSettings)
             // Create client
             DisksClient disksClient = DisksClient.Create();
             // Initialize request argument(s)
             string project = "";
             string zone = "";
             // Make the request
-            DiskList response = disksClient.List(project, zone);
+            PagedEnumerable<DiskList, Disk> response = disksClient.List(project, zone);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Disk item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (DiskList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Disk item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Disk> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Disk item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, string, CallSettings)
-            // Additional: ListAsync(string, string, CancellationToken)
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
             // Create client
             DisksClient disksClient = await DisksClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string zone = "";
             // Make the request
-            DiskList response = await disksClient.ListAsync(project, zone);
+            PagedAsyncEnumerable<DiskList, Disk> response = disksClient.ListAsync(project, zone);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Disk item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((DiskList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Disk item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Disk> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Disk item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

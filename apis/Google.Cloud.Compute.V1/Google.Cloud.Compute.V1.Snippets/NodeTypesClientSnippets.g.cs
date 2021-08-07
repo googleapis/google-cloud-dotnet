@@ -16,6 +16,10 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -30,8 +34,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AggregatedListNodeTypesRequest request = new AggregatedListNodeTypesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -39,7 +41,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NodeTypeAggregatedList response = nodeTypesClient.AggregatedList(request);
+            PagedEnumerable<NodeTypeAggregatedList, KeyValuePair<string, NodeTypesScopedList>> response = nodeTypesClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NodeTypeAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NodeTypesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NodeTypesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -47,14 +81,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task AggregatedListRequestObjectAsync()
         {
             // Snippet: AggregatedListAsync(AggregatedListNodeTypesRequest, CallSettings)
-            // Additional: AggregatedListAsync(AggregatedListNodeTypesRequest, CancellationToken)
             // Create client
             NodeTypesClient nodeTypesClient = await NodeTypesClient.CreateAsync();
             // Initialize request argument(s)
             AggregatedListNodeTypesRequest request = new AggregatedListNodeTypesRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -62,34 +93,129 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NodeTypeAggregatedList response = await nodeTypesClient.AggregatedListAsync(request);
+            PagedAsyncEnumerable<NodeTypeAggregatedList, KeyValuePair<string, NodeTypesScopedList>> response = nodeTypesClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, NodeTypesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NodeTypeAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NodeTypesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NodeTypesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedList()
         {
-            // Snippet: AggregatedList(string, CallSettings)
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
             // Create client
             NodeTypesClient nodeTypesClient = NodeTypesClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NodeTypeAggregatedList response = nodeTypesClient.AggregatedList(project);
+            PagedEnumerable<NodeTypeAggregatedList, KeyValuePair<string, NodeTypesScopedList>> response = nodeTypesClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NodeTypeAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NodeTypesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NodeTypesScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedListAsync</summary>
         public async Task AggregatedListAsync()
         {
-            // Snippet: AggregatedListAsync(string, CallSettings)
-            // Additional: AggregatedListAsync(string, CancellationToken)
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
             // Create client
             NodeTypesClient nodeTypesClient = await NodeTypesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NodeTypeAggregatedList response = await nodeTypesClient.AggregatedListAsync(project);
+            PagedAsyncEnumerable<NodeTypeAggregatedList, KeyValuePair<string, NodeTypesScopedList>> response = nodeTypesClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, NodeTypesScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NodeTypeAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, NodeTypesScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, NodeTypesScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, NodeTypesScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -171,15 +297,45 @@ namespace Google.Cloud.Compute.V1.Snippets
             ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Zone = "",
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NodeTypeList response = nodeTypesClient.List(request);
+            PagedEnumerable<NodeTypeList, NodeType> response = nodeTypesClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NodeTypeList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -187,51 +343,143 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListNodeTypesRequest, CallSettings)
-            // Additional: ListAsync(ListNodeTypesRequest, CancellationToken)
             // Create client
             NodeTypesClient nodeTypesClient = await NodeTypesClient.CreateAsync();
             // Initialize request argument(s)
             ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Zone = "",
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NodeTypeList response = await nodeTypesClient.ListAsync(request);
+            PagedAsyncEnumerable<NodeTypeList, NodeType> response = nodeTypesClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NodeType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NodeTypeList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, string, CallSettings)
+            // Snippet: List(string, string, string, int?, CallSettings)
             // Create client
             NodeTypesClient nodeTypesClient = NodeTypesClient.Create();
             // Initialize request argument(s)
             string project = "";
             string zone = "";
             // Make the request
-            NodeTypeList response = nodeTypesClient.List(project, zone);
+            PagedEnumerable<NodeTypeList, NodeType> response = nodeTypesClient.List(project, zone);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NodeTypeList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, string, CallSettings)
-            // Additional: ListAsync(string, string, CancellationToken)
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
             // Create client
             NodeTypesClient nodeTypesClient = await NodeTypesClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string zone = "";
             // Make the request
-            NodeTypeList response = await nodeTypesClient.ListAsync(project, zone);
+            PagedAsyncEnumerable<NodeTypeList, NodeType> response = nodeTypesClient.ListAsync(project, zone);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NodeType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NodeTypeList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

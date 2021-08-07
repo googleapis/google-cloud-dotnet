@@ -16,6 +16,10 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -30,8 +34,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             AggregatedListRoutersRequest request = new AggregatedListRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -39,7 +41,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RouterAggregatedList response = routersClient.AggregatedList(request);
+            PagedEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, RoutersScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RouterAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, RoutersScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, RoutersScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, RoutersScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -47,14 +81,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task AggregatedListRequestObjectAsync()
         {
             // Snippet: AggregatedListAsync(AggregatedListRoutersRequest, CallSettings)
-            // Additional: AggregatedListAsync(AggregatedListRoutersRequest, CancellationToken)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
             AggregatedListRoutersRequest request = new AggregatedListRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -62,34 +93,129 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RouterAggregatedList response = await routersClient.AggregatedListAsync(request);
+            PagedAsyncEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, RoutersScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RouterAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, RoutersScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, RoutersScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, RoutersScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedList</summary>
         public void AggregatedList()
         {
-            // Snippet: AggregatedList(string, CallSettings)
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = RoutersClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            RouterAggregatedList response = routersClient.AggregatedList(project);
+            PagedEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, RoutersScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RouterAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, RoutersScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, RoutersScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, RoutersScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for AggregatedListAsync</summary>
         public async Task AggregatedListAsync()
         {
-            // Snippet: AggregatedListAsync(string, CallSettings)
-            // Additional: AggregatedListAsync(string, CancellationToken)
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            RouterAggregatedList response = await routersClient.AggregatedListAsync(project);
+            PagedAsyncEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((KeyValuePair<string, RoutersScopedList> item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RouterAggregatedList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, RoutersScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, RoutersScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, RoutersScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -240,8 +366,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             GetNatMappingInfoRoutersRequest request = new GetNatMappingInfoRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 Router = "",
                 OrderBy = "",
@@ -250,7 +374,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            VmEndpointNatMappingsList response = routersClient.GetNatMappingInfo(request);
+            PagedEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfo(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VmEndpointNatMappings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (VmEndpointNatMappingsList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VmEndpointNatMappings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VmEndpointNatMappings> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VmEndpointNatMappings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -258,14 +414,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task GetNatMappingInfoRequestObjectAsync()
         {
             // Snippet: GetNatMappingInfoAsync(GetNatMappingInfoRoutersRequest, CallSettings)
-            // Additional: GetNatMappingInfoAsync(GetNatMappingInfoRoutersRequest, CancellationToken)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
             GetNatMappingInfoRoutersRequest request = new GetNatMappingInfoRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 Router = "",
                 OrderBy = "",
@@ -274,14 +427,46 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            VmEndpointNatMappingsList response = await routersClient.GetNatMappingInfoAsync(request);
+            PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfoAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VmEndpointNatMappings item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((VmEndpointNatMappingsList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VmEndpointNatMappings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VmEndpointNatMappings> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VmEndpointNatMappings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetNatMappingInfo</summary>
         public void GetNatMappingInfo()
         {
-            // Snippet: GetNatMappingInfo(string, string, string, CallSettings)
+            // Snippet: GetNatMappingInfo(string, string, string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = RoutersClient.Create();
             // Initialize request argument(s)
@@ -289,15 +474,46 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string router = "";
             // Make the request
-            VmEndpointNatMappingsList response = routersClient.GetNatMappingInfo(project, region, router);
+            PagedEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfo(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VmEndpointNatMappings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (VmEndpointNatMappingsList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VmEndpointNatMappings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VmEndpointNatMappings> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VmEndpointNatMappings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for GetNatMappingInfoAsync</summary>
         public async Task GetNatMappingInfoAsync()
         {
-            // Snippet: GetNatMappingInfoAsync(string, string, string, CallSettings)
-            // Additional: GetNatMappingInfoAsync(string, string, string, CancellationToken)
+            // Snippet: GetNatMappingInfoAsync(string, string, string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
@@ -305,7 +521,39 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string router = "";
             // Make the request
-            VmEndpointNatMappingsList response = await routersClient.GetNatMappingInfoAsync(project, region, router);
+            PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfoAsync(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VmEndpointNatMappings item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((VmEndpointNatMappingsList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VmEndpointNatMappings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VmEndpointNatMappings> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VmEndpointNatMappings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -456,8 +704,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListRoutersRequest request = new ListRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -465,7 +711,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RouterList response = routersClient.List(request);
+            PagedEnumerable<RouterList, Router> response = routersClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Router item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RouterList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Router item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Router> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Router item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -473,14 +751,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListRoutersRequest, CallSettings)
-            // Additional: ListAsync(ListRoutersRequest, CancellationToken)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
             ListRoutersRequest request = new ListRoutersRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -488,36 +763,131 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RouterList response = await routersClient.ListAsync(request);
+            PagedAsyncEnumerable<RouterList, Router> response = routersClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Router item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RouterList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Router item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Router> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Router item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, string, CallSettings)
+            // Snippet: List(string, string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = RoutersClient.Create();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            RouterList response = routersClient.List(project, region);
+            PagedEnumerable<RouterList, Router> response = routersClient.List(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Router item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RouterList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Router item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Router> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Router item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, string, CallSettings)
-            // Additional: ListAsync(string, string, CancellationToken)
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
             // Create client
             RoutersClient routersClient = await RoutersClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            RouterList response = await routersClient.ListAsync(project, region);
+            PagedAsyncEnumerable<RouterList, Router> response = routersClient.ListAsync(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Router item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RouterList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Router item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Router> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Router item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

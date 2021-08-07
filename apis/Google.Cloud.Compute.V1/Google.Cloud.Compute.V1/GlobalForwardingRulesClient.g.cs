@@ -525,8 +525,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ForwardingRuleList List(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ForwardingRuleList, ForwardingRule> List(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -534,18 +534,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ForwardingRuleList> ListAsync(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ForwardingRuleList, ForwardingRule> ListAsync(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ForwardingRuleList> ListAsync(ListGlobalForwardingRulesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
@@ -553,12 +544,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ForwardingRuleList List(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ForwardingRuleList, ForwardingRule> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListGlobalForwardingRulesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -567,24 +568,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ForwardingRuleList> ListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ForwardingRuleList, ForwardingRule> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListGlobalForwardingRulesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ForwardingRuleList> ListAsync(string project, st::CancellationToken cancellationToken) =>
-            ListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
@@ -1018,11 +1018,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ForwardingRuleList List(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ForwardingRuleList, ForwardingRule> List(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGlobalForwardingRulesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGlobalForwardingRulesRequest, ForwardingRuleList, ForwardingRule>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1030,11 +1030,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ForwardingRuleList> ListAsync(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="ForwardingRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ForwardingRuleList, ForwardingRule> ListAsync(ListGlobalForwardingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGlobalForwardingRulesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGlobalForwardingRulesRequest, ForwardingRuleList, ForwardingRule>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1107,6 +1107,16 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_SetTargetGlobalForwardingRuleRequest(ref request, ref callSettings);
             return _callSetTarget.Async(request, callSettings);
+        }
+    }
+
+    public partial class ListGlobalForwardingRulesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
         }
     }
 }

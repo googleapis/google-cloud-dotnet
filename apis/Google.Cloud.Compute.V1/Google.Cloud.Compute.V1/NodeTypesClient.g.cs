@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -238,8 +239,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NodeTypeAggregatedList AggregatedList(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedList(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -247,18 +248,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeAggregatedList> AggregatedListAsync(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedListAsync(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of node types.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeAggregatedList> AggregatedListAsync(AggregatedListNodeTypesRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of node types.
@@ -266,12 +260,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NodeTypeAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListNodeTypesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -280,24 +284,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListNodeTypesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of node types.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the specified node type. Gets a list of available node types by making a list() request.
@@ -392,8 +397,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NodeTypeList List(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NodeTypeList, NodeType> List(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -401,18 +406,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeList> ListAsync(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<NodeTypeList, NodeType> ListAsync(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves a list of node types available to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeList> ListAsync(ListNodeTypesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of node types available to the specified project.
@@ -423,13 +419,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NodeTypeList List(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NodeTypeList, NodeType> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListNodeTypesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -441,28 +447,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeList> ListAsync(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<NodeTypeList, NodeType> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListNodeTypesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves a list of node types available to the specified project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NodeTypeList> ListAsync(string project, string zone, st::CancellationToken cancellationToken) =>
-            ListAsync(project, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NodeTypes client wrapper implementation, for convenient use.</summary>
@@ -523,11 +525,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NodeTypeAggregatedList AggregatedList(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedList(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListNodeTypesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListNodeTypesRequest, NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -535,11 +537,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NodeTypeAggregatedList> AggregatedListAsync(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>> AggregatedListAsync(AggregatedListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListNodeTypesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListNodeTypesRequest, NodeTypeAggregatedList, scg::KeyValuePair<string, NodeTypesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -571,11 +575,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NodeTypeList List(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public override gax::PagedEnumerable<NodeTypeList, NodeType> List(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNodeTypesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNodeTypesRequest, NodeTypeList, NodeType>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -583,11 +587,47 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NodeTypeList> ListAsync(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<NodeTypeList, NodeType> ListAsync(ListNodeTypesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNodeTypesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNodeTypesRequest, NodeTypeList, NodeType>(_callList, request, callSettings);
         }
+    }
+
+    public partial class AggregatedListNodeTypesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListNodeTypesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class NodeTypeAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, NodeTypesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, NodeTypesScopedList>> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class NodeTypeList : gaxgrpc::IPageResponse<NodeType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NodeType> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

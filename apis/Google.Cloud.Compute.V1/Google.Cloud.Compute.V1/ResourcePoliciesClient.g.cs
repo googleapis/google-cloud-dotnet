@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -302,8 +303,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ResourcePolicyAggregatedList AggregatedList(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedList(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -311,18 +312,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyAggregatedList> AggregatedListAsync(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedListAsync(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves an aggregated list of resource policies.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyAggregatedList> AggregatedListAsync(AggregatedListResourcePoliciesRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves an aggregated list of resource policies.
@@ -330,12 +324,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ResourcePolicyAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListResourcePoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -344,24 +348,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListResourcePoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves an aggregated list of resource policies.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified resource policy.
@@ -720,8 +725,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ResourcePolicyList List(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ResourcePolicyList, ResourcePolicy> List(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -729,18 +734,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyList> ListAsync(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ResourcePolicyList, ResourcePolicy> ListAsync(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// A list all the resource policies that have been configured for the specified project in specified region.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyList> ListAsync(ListResourcePoliciesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// A list all the resource policies that have been configured for the specified project in specified region.
@@ -751,13 +747,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ResourcePolicyList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ResourcePolicyList, ResourcePolicy> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListResourcePoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -769,28 +775,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ResourcePolicyList, ResourcePolicy> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListResourcePoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// A list all the resource policies that have been configured for the specified project in specified region.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ResourcePolicyList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -1094,11 +1096,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ResourcePolicyAggregatedList AggregatedList(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedList(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListResourcePoliciesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListResourcePoliciesRequest, ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1106,11 +1108,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ResourcePolicyAggregatedList> AggregatedListAsync(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>> AggregatedListAsync(AggregatedListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListResourcePoliciesRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListResourcePoliciesRequest, ResourcePolicyAggregatedList, scg::KeyValuePair<string, ResourcePoliciesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1214,11 +1218,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ResourcePolicyList List(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ResourcePolicyList, ResourcePolicy> List(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListResourcePoliciesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListResourcePoliciesRequest, ResourcePolicyList, ResourcePolicy>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1226,11 +1230,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ResourcePolicyList> ListAsync(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourcePolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ResourcePolicyList, ResourcePolicy> ListAsync(ListResourcePoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListResourcePoliciesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListResourcePoliciesRequest, ResourcePolicyList, ResourcePolicy>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1280,5 +1284,42 @@ namespace Google.Cloud.Compute.V1
             Modify_TestIamPermissionsResourcePolicyRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListResourcePoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListResourcePoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ResourcePolicyAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, ResourcePoliciesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, ResourcePoliciesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ResourcePolicyList : gaxgrpc::IPageResponse<ResourcePolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ResourcePolicy> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
