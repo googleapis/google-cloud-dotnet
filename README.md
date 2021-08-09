@@ -44,7 +44,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.CloudBuild.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudBuild.V1/latest) | 1.3.0 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.CloudDms.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudDms.V1/latest) | 1.0.0 | [Database Migration](https://cloud.google.com/database-migration) |
 | [Google.Cloud.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Common/latest) | 1.0.0 | Common protos for Cloud APIs |
-| [Google.Cloud.Compute.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Compute.V1/latest) | 1.0.0-alpha02 | [Compute Engine](https://cloud.google.com/compute) |
+| [Google.Cloud.Compute.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Compute.V1/latest) | 1.0.0-beta01 | [Compute Engine](https://cloud.google.com/compute) |
 | [Google.Cloud.Container.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Container.V1/latest) | 2.4.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataFusion.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataFusion.V1/latest) | 1.0.0-beta01 | [Cloud Data Fusion](https://cloud.google.com/data-fusion/docs/) |
