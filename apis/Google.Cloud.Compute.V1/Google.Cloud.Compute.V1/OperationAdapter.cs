@@ -12,29 +12,78 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Grpc.Core;
 using System.Linq;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Compute.V1
 {
+    /// <summary>
+    /// Methods to adapt between "standard" LROs and Compute LROs.
+    /// </summary>
     internal static class OperationAdapter
     {
-        internal static lro::Operation<Operation, Operation> CreateZonalOperation(Operation computeOperation, string project, string zone, lro::OperationsClient client) =>
-            CreateOperation(computeOperation, ZonalLroClient.NameTemplate.Expand(project, zone, computeOperation.Name), client);
+        private const string LroGetMethodName = "/google.longrunning.Operations/GetOperation";
+        private static PathTemplate ZonalNameTemplate { get; } = new PathTemplate("projects/{project}/zones/{zone}/operations/{operation}");
+        private static PathTemplate RegionalNameTemplate { get; } = new PathTemplate("projects/{project}/regions/{region}/operations/{operation}");
+        private static PathTemplate GlobalNameTemplate { get; } = new PathTemplate("projects/{project}/operations/{operation}");
 
-        internal static lro::Operation<Operation, Operation> CreateRegionalOperation(Operation computeOperation, string project, string region, lro::OperationsClient client) =>
-            CreateOperation(computeOperation, RegionalLroClient.NameTemplate.Expand(project, region, computeOperation.Name), client);
+        internal static lro::Operation ToZonalOperation(this Operation computeOperation, string project, string zone) =>
+            CreateRawOperation(computeOperation, ZonalNameTemplate.Expand(project, zone, computeOperation.Name));
 
-        internal static lro::Operation<Operation, Operation> CreateGlobalOperation(Operation computeOperation, string project, lro::OperationsClient client) =>
-            CreateOperation(computeOperation, GlobalLroClient.NameTemplate.Expand(project, computeOperation.Name), client);
+        internal static lro::Operation ToRegionalOperation(this Operation computeOperation, string project, string region) =>
+            CreateRawOperation(computeOperation, RegionalNameTemplate.Expand(project, region, computeOperation.Name));
 
-        internal static lro::Operation<Operation, Operation> CreateOperation(Operation computeOperation, string name, lro::OperationsClient client)
+        internal static lro::Operation ToGlobalOperation(this Operation computeOperation, string project) =>
+            CreateRawOperation(computeOperation, GlobalNameTemplate.Expand(project, computeOperation.Name));
+
+        // TODO: adapt the cancel, list, wait and delete methods too.
+        internal static CallInvoker CreateZonalCallInvoker(CallInvoker callInvoker) =>
+            ForwardingCallInvoker<lro::GetOperationRequest>.Create(callInvoker, LroGetMethodName, ZoneOperations.GetMethod, ConvertZoneRequest, ConvertResponse);
+
+        internal static CallInvoker CreateRegionalCallInvoker(CallInvoker callInvoker) =>
+            ForwardingCallInvoker<lro::GetOperationRequest>.Create(callInvoker, LroGetMethodName, RegionOperations.GetMethod, ConvertRegionalRequest, ConvertResponse);
+
+        internal static CallInvoker CreateGlobalCallInvoker(CallInvoker callInvoker) =>
+            ForwardingCallInvoker<lro::GetOperationRequest>.Create(callInvoker, LroGetMethodName, GlobalOperations.GetMethod, ConvertGlobalRequest, ConvertResponse);
+
+        private static lro::Operation ConvertResponse(lro::GetOperationRequest lroRequest, Operation computeResponse) => CreateRawOperation(computeResponse, lroRequest.Name);
+
+        private static GetZoneOperationRequest ConvertZoneRequest(lro::GetOperationRequest lroRequest)
         {
-            return new lro.Operation<Operation, Operation>(CreateRawOperation(computeOperation, name), client);
+            var parsedName = ZonalNameTemplate.ParseName(lroRequest.Name);
+            return new GetZoneOperationRequest
+            {
+                Project = parsedName[0],
+                Zone = parsedName[1],
+                Operation = parsedName[2]
+            };
         }
 
-        internal static lro::Operation CreateRawOperation(Operation computeOperation, string name)
+        private static GetRegionOperationRequest ConvertRegionalRequest(lro::GetOperationRequest lroRequest)
+        {
+            var parsedName = RegionalNameTemplate.ParseName(lroRequest.Name);
+            return new GetRegionOperationRequest
+            {
+                Project = parsedName[0],
+                Region = parsedName[1],
+                Operation = parsedName[2]
+            };
+        }
+
+        private static GetGlobalOperationRequest ConvertGlobalRequest(lro::GetOperationRequest lroRequest)
+        {
+            var parsedName = GlobalNameTemplate.ParseName(lroRequest.Name);
+            return new GetGlobalOperationRequest
+            {
+                Project = parsedName[0],
+                Operation = parsedName[1]
+            };
+        }
+
+        private static lro::Operation CreateRawOperation(Operation computeOperation, string name)
         {
             // TODO: Work this out much more carefully. In particular, consider whether a Compute LRO can complete successfully with errors...
             var proto = new lro::Operation
@@ -53,5 +102,22 @@ namespace Google.Cloud.Compute.V1
             }
             return proto;
         }
+    }
+
+    // Partial classes to give us access to the underlying gRPC Method abstractions.
+
+    partial class ZoneOperations
+    {
+        internal static Method<GetZoneOperationRequest, Operation> GetMethod => __Method_Get;
+    }
+
+    partial class RegionOperations
+    {
+        internal static Method<GetRegionOperationRequest, Operation> GetMethod => __Method_Get;
+    }
+
+    partial class GlobalOperations
+    {
+        internal static Method<GetGlobalOperationRequest, Operation> GetMethod => __Method_Get;
     }
 }

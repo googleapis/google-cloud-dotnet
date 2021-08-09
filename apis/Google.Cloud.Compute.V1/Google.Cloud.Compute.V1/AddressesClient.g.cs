@@ -769,7 +769,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             AddressesSettings effectiveSettings = settings ?? AddressesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            InsertOperationsClient = new RegionalLroClient(grpcClient.CreateRegionOperationsClient(), effectiveSettings.InsertOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListAddressesRequest, AddressAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -891,7 +891,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an address resource in the specified project by using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -899,11 +899,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertAddressRequest(ref request, ref callSettings);
-            return OperationAdapter.CreateRegionalOperation(_callInsert.Sync(request, callSettings), request.Project, request.Region, InsertOperationsClient);
+            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
         }
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an address resource in the specified project by using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -911,8 +911,7 @@ namespace Google.Cloud.Compute.V1
         public async override stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertAddressRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertAddressRequest(ref request, ref callSettings);
-            var operation = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
-            return OperationAdapter.CreateRegionalOperation(operation, request.Project, request.Region, InsertOperationsClient);
+            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
         }
 
         /// <summary>
@@ -944,12 +943,15 @@ namespace Google.Cloud.Compute.V1
     {
         public partial class AddressesClient
         {
+            // TODO: This design assumes that every client is exactly one of zonal, regional or global.
+            // If that turns out not to be true, we'd need to give different names for different methods.
+
             /// <summary>
             /// TODO: Documentation
             /// </summary>
             /// <returns></returns>
-            internal virtual RegionOperations.RegionOperationsClient CreateRegionOperationsClient() =>
-                new RegionOperations.RegionOperationsClient(CallInvoker);
+            internal virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
         }
     }
 }

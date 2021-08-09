@@ -4912,7 +4912,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             InstancesSettings effectiveSettings = settings ?? InstancesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            InsertOperationsClient = new ZonalLroClient(grpcClient.CreateZoneOperationsClient(), effectiveSettings.InsertOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
             _callAddAccessConfig = clientHelper.BuildApiCall<AddAccessConfigInstanceRequest, Operation>(grpcClient.AddAccessConfigAsync, grpcClient.AddAccessConfig, effectiveSettings.AddAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddAccessConfig);
             Modify_AddAccessConfigApiCall(ref _callAddAccessConfig);
@@ -5589,7 +5589,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceRequest(ref request, ref callSettings);
-            return OperationAdapter.CreateZonalOperation(_callInsert.Sync(request, callSettings), request.Project, request.Zone, InsertOperationsClient);
+            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
         }
 
         /// <summary>
@@ -5601,8 +5601,7 @@ namespace Google.Cloud.Compute.V1
         public async override stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceRequest(ref request, ref callSettings);
-            var operation = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
-            return OperationAdapter.CreateZonalOperation(operation, request.Project, request.Zone, InsertOperationsClient);
+            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
         }
 
         /// <summary>
@@ -6234,12 +6233,15 @@ namespace Google.Cloud.Compute.V1
     {
         public partial class InstancesClient
         {
+            // TODO: This design assumes that every client is exactly one of zonal, regional or global.
+            // If that turns out not to be true, we'd need to give different names for different methods.
+
             /// <summary>
             /// TODO: Documentation
             /// </summary>
             /// <returns></returns>
-            internal virtual ZoneOperations.ZoneOperationsClient CreateZoneOperationsClient() =>
-                new ZoneOperations.ZoneOperationsClient(CallInvoker);
+            internal virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(OperationAdapter.CreateZonalCallInvoker(CallInvoker));
         }
     }
 }
