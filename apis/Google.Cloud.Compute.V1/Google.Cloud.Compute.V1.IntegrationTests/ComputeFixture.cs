@@ -68,7 +68,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             // all addresses easily.
             var client = AddressesClient.Create();
             var list = client.List(ProjectId, Region);
-            var fixtureAddresses = list.Items
+            var fixtureAddresses = list
                 .Select(addr => addr.Name)
                 .Where(name => name.StartsWith(ResourcePrefix));
 
@@ -84,7 +84,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         {
             var client = InstancesClient.Create();
             var list = client.List(ProjectId, Zone);
-            var fixtureInstances = list.Items
+            var fixtureInstances = list
                 .Select(instance => instance.Name)
                 .Where(name => name.StartsWith(ResourcePrefix));
             foreach (var instanceToDelete in fixtureInstances)
