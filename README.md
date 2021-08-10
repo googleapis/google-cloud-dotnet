@@ -161,7 +161,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Translate.V3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Translate.V3/latest) | 2.2.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Translation.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Translation.V2/latest) | 2.1.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Video.Transcoder.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Transcoder.V1/latest) | 1.0.0-beta01 | [Transcoder (V1 API)](https://cloud.google.com/transcoder/docs) |
-| [Google.Cloud.Video.Transcoder.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Transcoder.V1Beta1/latest) | 1.0.0-beta02 | [Transcoder (V1Beta1 API)](https://cloud.google.com/transcoder/docs) |
+| [Google.Cloud.Video.Transcoder.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Video.Transcoder.V1Beta1/latest) | 1.0.0-beta03 | [Transcoder (V1Beta1 API)](https://cloud.google.com/transcoder/docs) |
 | [Google.Cloud.VideoIntelligence.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.VideoIntelligence.V1/latest) | 2.2.0 | [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence) |
 | [Google.Cloud.Vision.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Vision.V1/latest) | 2.3.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.VpcAccess.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.VpcAccess.V1/latest) | 1.0.0 | [Serverless VPC Access](https://cloud.google.com/vpc/docs/) |
