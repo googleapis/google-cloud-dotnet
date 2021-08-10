@@ -30,113 +30,118 @@ namespace Google.Cloud.Speech.V1 {
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
             "YXRpb25zLnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGh5nb29n",
             "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIpABChBS",
-            "ZWNvZ25pemVSZXF1ZXN0Ej4KBmNvbmZpZxgBIAEoCzIpLmdvb2dsZS5jbG91",
-            "ZC5zcGVlY2gudjEuUmVjb2duaXRpb25Db25maWdCA+BBAhI8CgVhdWRpbxgC",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuUmVjb2duaXRpb25BdWRp",
-            "b0ID4EECIpsBChtMb25nUnVubmluZ1JlY29nbml6ZVJlcXVlc3QSPgoGY29u",
-            "ZmlnGAEgASgLMikuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlv",
-            "bkNvbmZpZ0ID4EECEjwKBWF1ZGlvGAIgASgLMiguZ29vZ2xlLmNsb3VkLnNw",
-            "ZWVjaC52MS5SZWNvZ25pdGlvbkF1ZGlvQgPgQQIimQEKGVN0cmVhbWluZ1Jl",
-            "Y29nbml6ZVJlcXVlc3QSTgoQc3RyZWFtaW5nX2NvbmZpZxgBIAEoCzIyLmdv",
-            "b2dsZS5jbG91ZC5zcGVlY2gudjEuU3RyZWFtaW5nUmVjb2duaXRpb25Db25m",
-            "aWdIABIXCg1hdWRpb19jb250ZW50GAIgASgMSABCEwoRc3RyZWFtaW5nX3Jl",
-            "cXVlc3QijwEKGlN0cmVhbWluZ1JlY29nbml0aW9uQ29uZmlnEj4KBmNvbmZp",
-            "ZxgBIAEoCzIpLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuUmVjb2duaXRpb25D",
-            "b25maWdCA+BBAhIYChBzaW5nbGVfdXR0ZXJhbmNlGAIgASgIEhcKD2ludGVy",
-            "aW1fcmVzdWx0cxgDIAEoCCLfBQoRUmVjb2duaXRpb25Db25maWcSSQoIZW5j",
-            "b2RpbmcYASABKA4yNy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0",
-            "aW9uQ29uZmlnLkF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoY",
-            "AiABKAUSGwoTYXVkaW9fY2hhbm5lbF9jb3VudBgHIAEoBRIvCidlbmFibGVf",
-            "c2VwYXJhdGVfcmVjb2duaXRpb25fcGVyX2NoYW5uZWwYDCABKAgSGgoNbGFu",
-            "Z3VhZ2VfY29kZRgDIAEoCUID4EECEhgKEG1heF9hbHRlcm5hdGl2ZXMYBCAB",
-            "KAUSGAoQcHJvZmFuaXR5X2ZpbHRlchgFIAEoCBI+Cg9zcGVlY2hfY29udGV4",
-            "dHMYBiADKAsyJS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlNwZWVjaENvbnRl",
-            "eHQSIAoYZW5hYmxlX3dvcmRfdGltZV9vZmZzZXRzGAggASgIEiQKHGVuYWJs",
-            "ZV9hdXRvbWF0aWNfcHVuY3R1YXRpb24YCyABKAgSTAoSZGlhcml6YXRpb25f",
-            "Y29uZmlnGBMgASgLMjAuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVha2Vy",
-            "RGlhcml6YXRpb25Db25maWcSPQoIbWV0YWRhdGEYCSABKAsyKy5nb29nbGUu",
-            "Y2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRhdGESDQoFbW9kZWwY",
-            "DSABKAkSFAoMdXNlX2VuaGFuY2VkGA4gASgIIosBCg1BdWRpb0VuY29kaW5n",
-            "EhgKFEVOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIICgRG",
-            "TEFDEAISCQoFTVVMQVcQAxIHCgNBTVIQBBIKCgZBTVJfV0IQBRIMCghPR0df",
-            "T1BVUxAGEhoKFlNQRUVYX1dJVEhfSEVBREVSX0JZVEUQByKQAQoYU3BlYWtl",
-            "ckRpYXJpemF0aW9uQ29uZmlnEiIKGmVuYWJsZV9zcGVha2VyX2RpYXJpemF0",
-            "aW9uGAEgASgIEhkKEW1pbl9zcGVha2VyX2NvdW50GAIgASgFEhkKEW1heF9z",
-            "cGVha2VyX2NvdW50GAMgASgFEhoKC3NwZWFrZXJfdGFnGAUgASgFQgUYAeBB",
-            "AyKgCAoTUmVjb2duaXRpb25NZXRhZGF0YRJVChBpbnRlcmFjdGlvbl90eXBl",
-            "GAEgASgOMjsuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlvbk1l",
-            "dGFkYXRhLkludGVyYWN0aW9uVHlwZRIkChxpbmR1c3RyeV9uYWljc19jb2Rl",
-            "X29mX2F1ZGlvGAMgASgNElsKE21pY3JvcGhvbmVfZGlzdGFuY2UYBCABKA4y",
-            "Pi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRhdGEu",
-            "TWljcm9waG9uZURpc3RhbmNlEloKE29yaWdpbmFsX21lZGlhX3R5cGUYBSAB",
-            "KA4yPS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRh",
-            "dGEuT3JpZ2luYWxNZWRpYVR5cGUSXgoVcmVjb3JkaW5nX2RldmljZV90eXBl",
-            "GAYgASgOMj8uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlvbk1l",
-            "dGFkYXRhLlJlY29yZGluZ0RldmljZVR5cGUSHQoVcmVjb3JkaW5nX2Rldmlj",
-            "ZV9uYW1lGAcgASgJEhoKEm9yaWdpbmFsX21pbWVfdHlwZRgIIAEoCRITCgth",
-            "dWRpb190b3BpYxgKIAEoCSLFAQoPSW50ZXJhY3Rpb25UeXBlEiAKHElOVEVS",
-            "QUNUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpESVNDVVNTSU9OEAESEAoM",
-            "UFJFU0VOVEFUSU9OEAISDgoKUEhPTkVfQ0FMTBADEg0KCVZPSUNFTUFJTBAE",
-            "EhsKF1BST0ZFU1NJT05BTExZX1BST0RVQ0VEEAUSEAoMVk9JQ0VfU0VBUkNI",
-            "EAYSEQoNVk9JQ0VfQ09NTUFORBAHEg0KCURJQ1RBVElPThAIImQKEk1pY3Jv",
-            "cGhvbmVEaXN0YW5jZRIjCh9NSUNST1BIT05FX0RJU1RBTkNFX1VOU1BFQ0lG",
-            "SUVEEAASDQoJTkVBUkZJRUxEEAESDAoITUlERklFTEQQAhIMCghGQVJGSUVM",
-            "RBADIk4KEU9yaWdpbmFsTWVkaWFUeXBlEiMKH09SSUdJTkFMX01FRElBX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIJCgVBVURJTxABEgkKBVZJREVPEAIipAEKE1Jl",
-            "Y29yZGluZ0RldmljZVR5cGUSJQohUkVDT1JESU5HX0RFVklDRV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDgoKU01BUlRQSE9ORRABEgYKAlBDEAISDgoKUEhPTkVf",
-            "TElORRADEgsKB1ZFSElDTEUQBBIYChRPVEhFUl9PVVRET09SX0RFVklDRRAF",
-            "EhcKE09USEVSX0lORE9PUl9ERVZJQ0UQBiIgCg1TcGVlY2hDb250ZXh0Eg8K",
-            "B3BocmFzZXMYASADKAkiRAoQUmVjb2duaXRpb25BdWRpbxIRCgdjb250ZW50",
-            "GAEgASgMSAASDQoDdXJpGAIgASgJSABCDgoMYXVkaW9fc291cmNlIlUKEVJl",
-            "Y29nbml6ZVJlc3BvbnNlEkAKB3Jlc3VsdHMYAiADKAsyLy5nb29nbGUuY2xv",
-            "dWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uUmVzdWx0ImAKHExvbmdS",
-            "dW5uaW5nUmVjb2duaXplUmVzcG9uc2USQAoHcmVzdWx0cxgCIAMoCzIvLmdv",
-            "b2dsZS5jbG91ZC5zcGVlY2gudjEuU3BlZWNoUmVjb2duaXRpb25SZXN1bHQi",
-            "ngEKHExvbmdSdW5uaW5nUmVjb2duaXplTWV0YWRhdGESGAoQcHJvZ3Jlc3Nf",
-            "cGVyY2VudBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKxAgoaU3RyZWFtaW5nUmVjb2du",
-            "aXplUmVzcG9uc2USIQoFZXJyb3IYASABKAsyEi5nb29nbGUucnBjLlN0YXR1",
-            "cxJDCgdyZXN1bHRzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5T",
-            "dHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdBJdChFzcGVlY2hfZXZlbnRfdHlw",
-            "ZRgEIAEoDjJCLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuU3RyZWFtaW5nUmVj",
-            "b2duaXplUmVzcG9uc2UuU3BlZWNoRXZlbnRUeXBlIkwKD1NwZWVjaEV2ZW50",
-            "VHlwZRIcChhTUEVFQ0hfRVZFTlRfVU5TUEVDSUZJRUQQABIbChdFTkRfT0Zf",
-            "U0lOR0xFX1VUVEVSQU5DRRABIvIBChpTdHJlYW1pbmdSZWNvZ25pdGlvblJl",
-            "c3VsdBJKCgxhbHRlcm5hdGl2ZXMYASADKAsyNC5nb29nbGUuY2xvdWQuc3Bl",
-            "ZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRpdmUSEAoIaXNfZmlu",
-            "YWwYAiABKAgSEQoJc3RhYmlsaXR5GAMgASgCEjIKD3Jlc3VsdF9lbmRfdGlt",
-            "ZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhITCgtjaGFubmVs",
-            "X3RhZxgFIAEoBRIaCg1sYW5ndWFnZV9jb2RlGAYgASgJQgPgQQMiegoXU3Bl",
-            "ZWNoUmVjb2duaXRpb25SZXN1bHQSSgoMYWx0ZXJuYXRpdmVzGAEgAygLMjQu",
-            "Z29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hSZWNvZ25pdGlvbkFsdGVy",
-            "bmF0aXZlEhMKC2NoYW5uZWxfdGFnGAIgASgFIncKHFNwZWVjaFJlY29nbml0",
-            "aW9uQWx0ZXJuYXRpdmUSEgoKdHJhbnNjcmlwdBgBIAEoCRISCgpjb25maWRl",
-            "bmNlGAIgASgCEi8KBXdvcmRzGAMgAygLMiAuZ29vZ2xlLmNsb3VkLnNwZWVj",
-            "aC52MS5Xb3JkSW5mbyKOAQoIV29yZEluZm8SLQoKc3RhcnRfdGltZRgBIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIrCghlbmRfdGltZRgCIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIMCgR3b3JkGAMgASgJEhgK",
-            "C3NwZWFrZXJfdGFnGAUgASgFQgPgQQMy0QQKBlNwZWVjaBKQAQoJUmVjb2du",
-            "aXplEiguZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pemVSZXF1ZXN0",
-            "GikuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pemVSZXNwb25zZSIu",
-            "gtPkkwIZIhQvdjEvc3BlZWNoOnJlY29nbml6ZToBKtpBDGNvbmZpZyxhdWRp",
-            "bxLkAQoUTG9uZ1J1bm5pbmdSZWNvZ25pemUSMy5nb29nbGUuY2xvdWQuc3Bl",
-            "ZWNoLnYxLkxvbmdSdW5uaW5nUmVjb2duaXplUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ieILT5JMCJCIfL3YxL3NwZWVjaDpsb25n",
-            "cnVubmluZ3JlY29nbml6ZToBKtpBDGNvbmZpZyxhdWRpb8pBPAocTG9uZ1J1",
-            "bm5pbmdSZWNvZ25pemVSZXNwb25zZRIcTG9uZ1J1bm5pbmdSZWNvZ25pemVN",
-            "ZXRhZGF0YRKBAQoSU3RyZWFtaW5nUmVjb2duaXplEjEuZ29vZ2xlLmNsb3Vk",
-            "LnNwZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pemVSZXF1ZXN0GjIuZ29vZ2xl",
-            "LmNsb3VkLnNwZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pemVSZXNwb25zZSIA",
-            "KAEwARpJykEVc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJyChpjb20uZ29v",
-            "Z2xlLmNsb3VkLnNwZWVjaC52MUILU3BlZWNoUHJvdG9QAVo8Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zcGVlY2gvdjE7",
-            "c3BlZWNo+AEBogIDR0NTYgZwcm90bzM="));
+            "aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90",
+            "bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ikAEKEFJlY29nbml6ZVJlcXVl",
+            "c3QSPgoGY29uZmlnGAEgASgLMikuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5S",
+            "ZWNvZ25pdGlvbkNvbmZpZ0ID4EECEjwKBWF1ZGlvGAIgASgLMiguZ29vZ2xl",
+            "LmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlvbkF1ZGlvQgPgQQIimwEKG0xv",
+            "bmdSdW5uaW5nUmVjb2duaXplUmVxdWVzdBI+CgZjb25maWcYASABKAsyKS5n",
+            "b29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uQ29uZmlnQgPgQQIS",
+            "PAoFYXVkaW8YAiABKAsyKC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29n",
+            "bml0aW9uQXVkaW9CA+BBAiKZAQoZU3RyZWFtaW5nUmVjb2duaXplUmVxdWVz",
+            "dBJOChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjIuZ29vZ2xlLmNsb3VkLnNw",
+            "ZWVjaC52MS5TdHJlYW1pbmdSZWNvZ25pdGlvbkNvbmZpZ0gAEhcKDWF1ZGlv",
+            "X2NvbnRlbnQYAiABKAxIAEITChFzdHJlYW1pbmdfcmVxdWVzdCKPAQoaU3Ry",
+            "ZWFtaW5nUmVjb2duaXRpb25Db25maWcSPgoGY29uZmlnGAEgASgLMikuZ29v",
+            "Z2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlvbkNvbmZpZ0ID4EECEhgK",
+            "EHNpbmdsZV91dHRlcmFuY2UYAiABKAgSFwoPaW50ZXJpbV9yZXN1bHRzGAMg",
+            "ASgIIt8FChFSZWNvZ25pdGlvbkNvbmZpZxJJCghlbmNvZGluZxgBIAEoDjI3",
+            "Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuUmVjb2duaXRpb25Db25maWcuQXVk",
+            "aW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRIbChNhdWRp",
+            "b19jaGFubmVsX2NvdW50GAcgASgFEi8KJ2VuYWJsZV9zZXBhcmF0ZV9yZWNv",
+            "Z25pdGlvbl9wZXJfY2hhbm5lbBgMIAEoCBIaCg1sYW5ndWFnZV9jb2RlGAMg",
+            "ASgJQgPgQQISGAoQbWF4X2FsdGVybmF0aXZlcxgEIAEoBRIYChBwcm9mYW5p",
+            "dHlfZmlsdGVyGAUgASgIEj4KD3NwZWVjaF9jb250ZXh0cxgGIAMoCzIlLmdv",
+            "b2dsZS5jbG91ZC5zcGVlY2gudjEuU3BlZWNoQ29udGV4dBIgChhlbmFibGVf",
+            "d29yZF90aW1lX29mZnNldHMYCCABKAgSJAocZW5hYmxlX2F1dG9tYXRpY19w",
+            "dW5jdHVhdGlvbhgLIAEoCBJMChJkaWFyaXphdGlvbl9jb25maWcYEyABKAsy",
+            "MC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlNwZWFrZXJEaWFyaXphdGlvbkNv",
+            "bmZpZxI9CghtZXRhZGF0YRgJIAEoCzIrLmdvb2dsZS5jbG91ZC5zcGVlY2gu",
+            "djEuUmVjb2duaXRpb25NZXRhZGF0YRINCgVtb2RlbBgNIAEoCRIUCgx1c2Vf",
+            "ZW5oYW5jZWQYDiABKAgiiwEKDUF1ZGlvRW5jb2RpbmcSGAoURU5DT0RJTkdf",
+            "VU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEggKBEZMQUMQAhIJCgVNVUxB",
+            "VxADEgcKA0FNUhAEEgoKBkFNUl9XQhAFEgwKCE9HR19PUFVTEAYSGgoWU1BF",
+            "RVhfV0lUSF9IRUFERVJfQllURRAHIpABChhTcGVha2VyRGlhcml6YXRpb25D",
+            "b25maWcSIgoaZW5hYmxlX3NwZWFrZXJfZGlhcml6YXRpb24YASABKAgSGQoR",
+            "bWluX3NwZWFrZXJfY291bnQYAiABKAUSGQoRbWF4X3NwZWFrZXJfY291bnQY",
+            "AyABKAUSGgoLc3BlYWtlcl90YWcYBSABKAVCBRgB4EEDIqAIChNSZWNvZ25p",
+            "dGlvbk1ldGFkYXRhElUKEGludGVyYWN0aW9uX3R5cGUYASABKA4yOy5nb29n",
+            "bGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRhdGEuSW50ZXJh",
+            "Y3Rpb25UeXBlEiQKHGluZHVzdHJ5X25haWNzX2NvZGVfb2ZfYXVkaW8YAyAB",
+            "KA0SWwoTbWljcm9waG9uZV9kaXN0YW5jZRgEIAEoDjI+Lmdvb2dsZS5jbG91",
+            "ZC5zcGVlY2gudjEuUmVjb2duaXRpb25NZXRhZGF0YS5NaWNyb3Bob25lRGlz",
+            "dGFuY2USWgoTb3JpZ2luYWxfbWVkaWFfdHlwZRgFIAEoDjI9Lmdvb2dsZS5j",
+            "bG91ZC5zcGVlY2gudjEuUmVjb2duaXRpb25NZXRhZGF0YS5PcmlnaW5hbE1l",
+            "ZGlhVHlwZRJeChVyZWNvcmRpbmdfZGV2aWNlX3R5cGUYBiABKA4yPy5nb29n",
+            "bGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uTWV0YWRhdGEuUmVjb3Jk",
+            "aW5nRGV2aWNlVHlwZRIdChVyZWNvcmRpbmdfZGV2aWNlX25hbWUYByABKAkS",
+            "GgoSb3JpZ2luYWxfbWltZV90eXBlGAggASgJEhMKC2F1ZGlvX3RvcGljGAog",
+            "ASgJIsUBCg9JbnRlcmFjdGlvblR5cGUSIAocSU5URVJBQ1RJT05fVFlQRV9V",
+            "TlNQRUNJRklFRBAAEg4KCkRJU0NVU1NJT04QARIQCgxQUkVTRU5UQVRJT04Q",
+            "AhIOCgpQSE9ORV9DQUxMEAMSDQoJVk9JQ0VNQUlMEAQSGwoXUFJPRkVTU0lP",
+            "TkFMTFlfUFJPRFVDRUQQBRIQCgxWT0lDRV9TRUFSQ0gQBhIRCg1WT0lDRV9D",
+            "T01NQU5EEAcSDQoJRElDVEFUSU9OEAgiZAoSTWljcm9waG9uZURpc3RhbmNl",
+            "EiMKH01JQ1JPUEhPTkVfRElTVEFOQ0VfVU5TUEVDSUZJRUQQABINCglORUFS",
+            "RklFTEQQARIMCghNSURGSUVMRBACEgwKCEZBUkZJRUxEEAMiTgoRT3JpZ2lu",
+            "YWxNZWRpYVR5cGUSIwofT1JJR0lOQUxfTUVESUFfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgkKBUFVRElPEAESCQoFVklERU8QAiKkAQoTUmVjb3JkaW5nRGV2aWNl",
+            "VHlwZRIlCiFSRUNPUkRJTkdfREVWSUNFX1RZUEVfVU5TUEVDSUZJRUQQABIO",
+            "CgpTTUFSVFBIT05FEAESBgoCUEMQAhIOCgpQSE9ORV9MSU5FEAMSCwoHVkVI",
+            "SUNMRRAEEhgKFE9USEVSX09VVERPT1JfREVWSUNFEAUSFwoTT1RIRVJfSU5E",
+            "T09SX0RFVklDRRAGIiAKDVNwZWVjaENvbnRleHQSDwoHcGhyYXNlcxgBIAMo",
+            "CSJEChBSZWNvZ25pdGlvbkF1ZGlvEhEKB2NvbnRlbnQYASABKAxIABINCgN1",
+            "cmkYAiABKAlIAEIOCgxhdWRpb19zb3VyY2UiiwEKEVJlY29nbml6ZVJlc3Bv",
+            "bnNlEkAKB3Jlc3VsdHMYAiADKAsyLy5nb29nbGUuY2xvdWQuc3BlZWNoLnYx",
+            "LlNwZWVjaFJlY29nbml0aW9uUmVzdWx0EjQKEXRvdGFsX2JpbGxlZF90aW1l",
+            "GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIpYBChxMb25nUnVu",
+            "bmluZ1JlY29nbml6ZVJlc3BvbnNlEkAKB3Jlc3VsdHMYAiADKAsyLy5nb29n",
+            "bGUuY2xvdWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uUmVzdWx0EjQK",
+            "EXRvdGFsX2JpbGxlZF90aW1lGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uIrABChxMb25nUnVubmluZ1JlY29nbml6ZU1ldGFkYXRhEhgKEHBy",
+            "b2dyZXNzX3BlcmNlbnQYASABKAUSLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEAoDdXJpGAQgASgJ",
+            "QgPgQQMi5wIKGlN0cmVhbWluZ1JlY29nbml6ZVJlc3BvbnNlEiEKBWVycm9y",
+            "GAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSQwoHcmVzdWx0cxgCIAMoCzIy",
+            "Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuU3RyZWFtaW5nUmVjb2duaXRpb25S",
+            "ZXN1bHQSXQoRc3BlZWNoX2V2ZW50X3R5cGUYBCABKA4yQi5nb29nbGUuY2xv",
+            "dWQuc3BlZWNoLnYxLlN0cmVhbWluZ1JlY29nbml6ZVJlc3BvbnNlLlNwZWVj",
+            "aEV2ZW50VHlwZRI0ChF0b3RhbF9iaWxsZWRfdGltZRgFIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbiJMCg9TcGVlY2hFdmVudFR5cGUSHAoYU1BF",
+            "RUNIX0VWRU5UX1VOU1BFQ0lGSUVEEAASGwoXRU5EX09GX1NJTkdMRV9VVFRF",
+            "UkFOQ0UQASLyAQoaU3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQSSgoMYWx0",
+            "ZXJuYXRpdmVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVl",
+            "Y2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlEhAKCGlzX2ZpbmFsGAIgASgIEhEK",
+            "CXN0YWJpbGl0eRgDIAEoAhIyCg9yZXN1bHRfZW5kX3RpbWUYBCABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SEwoLY2hhbm5lbF90YWcYBSABKAUS",
+            "GgoNbGFuZ3VhZ2VfY29kZRgGIAEoCUID4EEDInoKF1NwZWVjaFJlY29nbml0",
+            "aW9uUmVzdWx0EkoKDGFsdGVybmF0aXZlcxgBIAMoCzI0Lmdvb2dsZS5jbG91",
+            "ZC5zcGVlY2gudjEuU3BlZWNoUmVjb2duaXRpb25BbHRlcm5hdGl2ZRITCgtj",
+            "aGFubmVsX3RhZxgCIAEoBSJ3ChxTcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0",
+            "aXZlEhIKCnRyYW5zY3JpcHQYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhIv",
+            "CgV3b3JkcxgDIAMoCzIgLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuV29yZElu",
+            "Zm8ijgEKCFdvcmRJbmZvEi0KCnN0YXJ0X3RpbWUYASABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SKwoIZW5kX3RpbWUYAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SDAoEd29yZBgDIAEoCRIYCgtzcGVha2VyX3Rh",
+            "ZxgFIAEoBUID4EEDMtEECgZTcGVlY2gSkAEKCVJlY29nbml6ZRIoLmdvb2ds",
+            "ZS5jbG91ZC5zcGVlY2gudjEuUmVjb2duaXplUmVxdWVzdBopLmdvb2dsZS5j",
+            "bG91ZC5zcGVlY2gudjEuUmVjb2duaXplUmVzcG9uc2UiLoLT5JMCGSIUL3Yx",
+            "L3NwZWVjaDpyZWNvZ25pemU6ASraQQxjb25maWcsYXVkaW8S5AEKFExvbmdS",
+            "dW5uaW5nUmVjb2duaXplEjMuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5Mb25n",
+            "UnVubmluZ1JlY29nbml6ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uIniC0+STAiQiHy92MS9zcGVlY2g6bG9uZ3J1bm5pbmdyZWNv",
+            "Z25pemU6ASraQQxjb25maWcsYXVkaW/KQTwKHExvbmdSdW5uaW5nUmVjb2du",
+            "aXplUmVzcG9uc2USHExvbmdSdW5uaW5nUmVjb2duaXplTWV0YWRhdGESgQEK",
+            "ElN0cmVhbWluZ1JlY29nbml6ZRIxLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEu",
+            "U3RyZWFtaW5nUmVjb2duaXplUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5zcGVl",
+            "Y2gudjEuU3RyZWFtaW5nUmVjb2duaXplUmVzcG9uc2UiACgBMAEaScpBFXNw",
+            "ZWVjaC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CcgoaY29tLmdvb2dsZS5jbG91ZC5z",
+            "cGVlY2gudjFCC1NwZWVjaFByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc3BlZWNoL3YxO3NwZWVjaPgBAaIC",
+            "A0dDU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeRequest), global::Google.Cloud.Speech.V1.RecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null, null),
@@ -147,10 +152,10 @@ namespace Google.Cloud.Speech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata), global::Google.Cloud.Speech.V1.RecognitionMetadata.Parser, new[]{ "InteractionType", "IndustryNaicsCodeOfAudio", "MicrophoneDistance", "OriginalMediaType", "RecordingDeviceType", "RecordingDeviceName", "OriginalMimeType", "AudioTopic" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.InteractionType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.MicrophoneDistance), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.OriginalMediaType), typeof(global::Google.Cloud.Speech.V1.RecognitionMetadata.Types.RecordingDeviceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechContext), global::Google.Cloud.Speech.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionAudio), global::Google.Cloud.Speech.V1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeResponse), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser, new[]{ "Results" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse), global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Parser, new[]{ "Results" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata), global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "SpeechEventType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeResponse), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser, new[]{ "Results", "TotalBilledTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse), global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Parser, new[]{ "Results", "TotalBilledTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata), global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime", "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "SpeechEventType", "TotalBilledTime" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability", "ResultEndTime", "ChannelTag", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives", "ChannelTag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null, null),
@@ -982,6 +987,16 @@ namespace Google.Cloud.Speech.V1 {
     /// `END_OF_SINGLE_UTTERANCE` event and cease recognition. It will return no
     /// more than one `StreamingRecognitionResult` with the `is_final` flag set to
     /// `true`.
+    ///
+    /// The `single_utterance` field can only be used with specified models,
+    /// otherwise an error is thrown. The `model` field in [`RecognitionConfig`][]
+    /// must be set to:
+    ///
+    /// * `command_and_search`
+    /// * `phone_call` AND additional field `useEnhanced`=`true`
+    /// * The `model` field is left undefined. In this case the API auto-selects
+    ///   a model based on any other parameters that you set in
+    ///   `RecognitionConfig`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleUtterance {
@@ -1385,7 +1400,7 @@ namespace Google.Cloud.Speech.V1 {
     /// A means to provide context to assist the speech recognition. For more
     /// information, see
     /// [speech
-    /// adaptation](https://cloud.google.com/speech-to-text/docs/context-strength).
+    /// adaptation](https://cloud.google.com/speech-to-text/docs/adaptation).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechContext> SpeechContexts {
@@ -1417,9 +1432,6 @@ namespace Google.Cloud.Speech.V1 {
     /// This feature is only available in select languages. Setting this for
     /// requests in other languages has no effect at all.
     /// The default 'false' value does not add punctuation to result hypotheses.
-    /// Note: This is currently offered as an experimental service, complimentary
-    /// to all users. In the future this may be exclusively available as a
-    /// premium feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool EnableAutomaticPunctuation {
@@ -1488,7 +1500,7 @@ namespace Google.Cloud.Speech.V1 {
     ///   &lt;/tr>
     ///   &lt;tr>
     ///     &lt;td>&lt;code>video&lt;/code>&lt;/td>
-    ///     &lt;td>Best for audio that originated from from video or includes multiple
+    ///     &lt;td>Best for audio that originated from video or includes multiple
     ///         speakers. Ideally the audio is recorded at a 16khz or greater
     ///         sampling rate. This is a premium model that costs more than the
     ///         standard rate.&lt;/td>
@@ -1986,7 +1998,7 @@ namespace Google.Cloud.Speech.V1 {
       /// a lossless encoding (`FLAC` or `LINEAR16`). The accuracy of the speech
       /// recognition can be reduced if lossy codecs are used to capture or transmit
       /// audio, particularly if background noise is present. Lossy codecs include
-      /// `MULAW`, `AMR`, `AMR_WB`, `OGG_OPUS`, `SPEEX_WITH_HEADER_BYTE`, and `MP3`.
+      /// `MULAW`, `AMR`, `AMR_WB`, `OGG_OPUS`, `SPEEX_WITH_HEADER_BYTE`, `MP3`.
       ///
       /// The `FLAC` and `WAV` audio file formats include a header that describes the
       /// included audio content. You can request recognition for `WAV` files that
@@ -2154,7 +2166,7 @@ namespace Google.Cloud.Speech.V1 {
     public const int SpeakerTagFieldNumber = 5;
     private int speakerTag_;
     /// <summary>
-    /// Unused.
+    /// Output only. Unused.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3426,6 +3438,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RecognizeResponse(RecognizeResponse other) : this() {
       results_ = other.results_.Clone();
+      totalBilledTime_ = other.totalBilledTime_ != null ? other.totalBilledTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3448,6 +3461,20 @@ namespace Google.Cloud.Speech.V1 {
       get { return results_; }
     }
 
+    /// <summary>Field number for the "total_billed_time" field.</summary>
+    public const int TotalBilledTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration totalBilledTime_;
+    /// <summary>
+    /// When available, billed audio seconds for the corresponding request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration TotalBilledTime {
+      get { return totalBilledTime_; }
+      set {
+        totalBilledTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RecognizeResponse);
@@ -3462,6 +3489,7 @@ namespace Google.Cloud.Speech.V1 {
         return true;
       }
       if(!results_.Equals(other.results_)) return false;
+      if (!object.Equals(TotalBilledTime, other.TotalBilledTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3469,6 +3497,7 @@ namespace Google.Cloud.Speech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= results_.GetHashCode();
+      if (totalBilledTime_ != null) hash ^= TotalBilledTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3486,6 +3515,10 @@ namespace Google.Cloud.Speech.V1 {
       output.WriteRawMessage(this);
     #else
       results_.WriteTo(output, _repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3496,6 +3529,10 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       results_.WriteTo(ref output, _repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3506,6 +3543,9 @@ namespace Google.Cloud.Speech.V1 {
     public int CalculateSize() {
       int size = 0;
       size += results_.CalculateSize(_repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3518,6 +3558,12 @@ namespace Google.Cloud.Speech.V1 {
         return;
       }
       results_.Add(other.results_);
+      if (other.totalBilledTime_ != null) {
+        if (totalBilledTime_ == null) {
+          TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TotalBilledTime.MergeFrom(other.TotalBilledTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3536,6 +3582,13 @@ namespace Google.Cloud.Speech.V1 {
             results_.AddEntriesFrom(input, _repeated_results_codec);
             break;
           }
+          case 26: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
+            break;
+          }
         }
       }
     #endif
@@ -3552,6 +3605,13 @@ namespace Google.Cloud.Speech.V1 {
             break;
           case 18: {
             results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+          case 26: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
             break;
           }
         }
@@ -3598,6 +3658,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LongRunningRecognizeResponse(LongRunningRecognizeResponse other) : this() {
       results_ = other.results_.Clone();
+      totalBilledTime_ = other.totalBilledTime_ != null ? other.totalBilledTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3620,6 +3681,20 @@ namespace Google.Cloud.Speech.V1 {
       get { return results_; }
     }
 
+    /// <summary>Field number for the "total_billed_time" field.</summary>
+    public const int TotalBilledTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration totalBilledTime_;
+    /// <summary>
+    /// When available, billed audio seconds for the corresponding request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration TotalBilledTime {
+      get { return totalBilledTime_; }
+      set {
+        totalBilledTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LongRunningRecognizeResponse);
@@ -3634,6 +3709,7 @@ namespace Google.Cloud.Speech.V1 {
         return true;
       }
       if(!results_.Equals(other.results_)) return false;
+      if (!object.Equals(TotalBilledTime, other.TotalBilledTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3641,6 +3717,7 @@ namespace Google.Cloud.Speech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= results_.GetHashCode();
+      if (totalBilledTime_ != null) hash ^= TotalBilledTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3658,6 +3735,10 @@ namespace Google.Cloud.Speech.V1 {
       output.WriteRawMessage(this);
     #else
       results_.WriteTo(output, _repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3668,6 +3749,10 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       results_.WriteTo(ref output, _repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3678,6 +3763,9 @@ namespace Google.Cloud.Speech.V1 {
     public int CalculateSize() {
       int size = 0;
       size += results_.CalculateSize(_repeated_results_codec);
+      if (totalBilledTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3690,6 +3778,12 @@ namespace Google.Cloud.Speech.V1 {
         return;
       }
       results_.Add(other.results_);
+      if (other.totalBilledTime_ != null) {
+        if (totalBilledTime_ == null) {
+          TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TotalBilledTime.MergeFrom(other.TotalBilledTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3708,6 +3802,13 @@ namespace Google.Cloud.Speech.V1 {
             results_.AddEntriesFrom(input, _repeated_results_codec);
             break;
           }
+          case 26: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
+            break;
+          }
         }
       }
     #endif
@@ -3724,6 +3825,13 @@ namespace Google.Cloud.Speech.V1 {
             break;
           case 18: {
             results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+          case 26: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
             break;
           }
         }
@@ -3770,6 +3878,7 @@ namespace Google.Cloud.Speech.V1 {
       progressPercent_ = other.progressPercent_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
+      uri_ = other.uri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3821,6 +3930,21 @@ namespace Google.Cloud.Speech.V1 {
       }
     }
 
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 4;
+    private string uri_ = "";
+    /// <summary>
+    /// Output only. The URI of the audio file being transcribed. Empty if the audio was sent
+    /// as byte content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LongRunningRecognizeMetadata);
@@ -3837,6 +3961,7 @@ namespace Google.Cloud.Speech.V1 {
       if (ProgressPercent != other.ProgressPercent) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+      if (Uri != other.Uri) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3846,6 +3971,7 @@ namespace Google.Cloud.Speech.V1 {
       if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3874,6 +4000,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(LastUpdateTime);
       }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3895,6 +4025,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(LastUpdateTime);
       }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3912,6 +4046,9 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (lastUpdateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+      }
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3938,6 +4075,9 @@ namespace Google.Cloud.Speech.V1 {
           LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastUpdateTime.MergeFrom(other.LastUpdateTime);
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3969,6 +4109,10 @@ namespace Google.Cloud.Speech.V1 {
               LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastUpdateTime);
+            break;
+          }
+          case 34: {
+            Uri = input.ReadString();
             break;
           }
         }
@@ -4003,6 +4147,10 @@ namespace Google.Cloud.Speech.V1 {
             input.ReadMessage(LastUpdateTime);
             break;
           }
+          case 34: {
+            Uri = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4017,8 +4165,8 @@ namespace Google.Cloud.Speech.V1 {
   /// audio, and `single_utterance` is set to false, then no messages are streamed
   /// back to the client.
   ///
-  /// Here's an example of a series of ten `StreamingRecognizeResponse`s that might
-  /// be returned while processing audio:
+  /// Here's an example of a series of `StreamingRecognizeResponse`s that might be
+  /// returned while processing audio:
   ///
   /// 1. results { alternatives { transcript: "tube" } stability: 0.01 }
   ///
@@ -4093,6 +4241,7 @@ namespace Google.Cloud.Speech.V1 {
       error_ = other.error_ != null ? other.error_.Clone() : null;
       results_ = other.results_.Clone();
       speechEventType_ = other.speechEventType_;
+      totalBilledTime_ = other.totalBilledTime_ != null ? other.totalBilledTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4146,6 +4295,21 @@ namespace Google.Cloud.Speech.V1 {
       }
     }
 
+    /// <summary>Field number for the "total_billed_time" field.</summary>
+    public const int TotalBilledTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Duration totalBilledTime_;
+    /// <summary>
+    /// When available, billed audio seconds for the stream.
+    /// Set only if this is the last response in the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration TotalBilledTime {
+      get { return totalBilledTime_; }
+      set {
+        totalBilledTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StreamingRecognizeResponse);
@@ -4162,6 +4326,7 @@ namespace Google.Cloud.Speech.V1 {
       if (!object.Equals(Error, other.Error)) return false;
       if(!results_.Equals(other.results_)) return false;
       if (SpeechEventType != other.SpeechEventType) return false;
+      if (!object.Equals(TotalBilledTime, other.TotalBilledTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4171,6 +4336,7 @@ namespace Google.Cloud.Speech.V1 {
       if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= results_.GetHashCode();
       if (SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) hash ^= SpeechEventType.GetHashCode();
+      if (totalBilledTime_ != null) hash ^= TotalBilledTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4196,6 +4362,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) SpeechEventType);
       }
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4214,6 +4384,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) SpeechEventType);
       }
+      if (totalBilledTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TotalBilledTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4229,6 +4403,9 @@ namespace Google.Cloud.Speech.V1 {
       size += results_.CalculateSize(_repeated_results_codec);
       if (SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpeechEventType);
+      }
+      if (totalBilledTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalBilledTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4250,6 +4427,12 @@ namespace Google.Cloud.Speech.V1 {
       results_.Add(other.results_);
       if (other.SpeechEventType != global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
         SpeechEventType = other.SpeechEventType;
+      }
+      if (other.totalBilledTime_ != null) {
+        if (totalBilledTime_ == null) {
+          TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TotalBilledTime.MergeFrom(other.TotalBilledTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4280,6 +4463,13 @@ namespace Google.Cloud.Speech.V1 {
             SpeechEventType = (global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) input.ReadEnum();
             break;
           }
+          case 42: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
+            break;
+          }
         }
       }
     #endif
@@ -4307,6 +4497,13 @@ namespace Google.Cloud.Speech.V1 {
           }
           case 32: {
             SpeechEventType = (global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (totalBilledTime_ == null) {
+              TotalBilledTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalBilledTime);
             break;
           }
         }
@@ -5295,7 +5492,7 @@ namespace Google.Cloud.Speech.V1 {
     public const int SpeakerTagFieldNumber = 5;
     private int speakerTag_;
     /// <summary>
-    /// A distinct integer value is assigned for every speaker within
+    /// Output only. A distinct integer value is assigned for every speaker within
     /// the audio. This field specifies which one of those speakers was detected to
     /// have spoken this word. Value ranges from '1' to diarization_speaker_count.
     /// speaker_tag is set if enable_speaker_diarization = 'true' and only in the
