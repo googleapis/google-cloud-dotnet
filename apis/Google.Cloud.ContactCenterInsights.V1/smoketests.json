@@ -1,0 +1,30 @@
+[
+  {
+    "method": "ListPhraseMatchers",
+    "client": "ContactCenterInsightsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "CalculateStats",
+    "client": "ContactCenterInsightsClient",
+    "arguments": {
+      "location": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListConversations",
+    "client": "ContactCenterInsightsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListIssueModels",
+    "client": "ContactCenterInsightsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
