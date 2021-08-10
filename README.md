@@ -45,6 +45,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.CloudDms.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudDms.V1/latest) | 1.0.0 | [Database Migration](https://cloud.google.com/database-migration) |
 | [Google.Cloud.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Common/latest) | 1.0.0 | Common protos for Cloud APIs |
 | [Google.Cloud.Compute.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Compute.V1/latest) | 1.0.0-beta01 | [Compute Engine](https://cloud.google.com/compute) |
+| [Google.Cloud.ContactCenterInsights.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ContactCenterInsights.V1/latest) | 1.0.0-beta01 | [Contact Center AI Insights](https://cloud.google.com/contact-center/insights/docs) |
 | [Google.Cloud.Container.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Container.V1/latest) | 2.4.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest) | 1.2.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataFusion.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataFusion.V1/latest) | 1.0.0-beta01 | [Cloud Data Fusion](https://cloud.google.com/data-fusion/docs/) |
