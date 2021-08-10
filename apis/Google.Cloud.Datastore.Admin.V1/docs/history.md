@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.2.0, released 2021-08-10
+
+- [Commit c13f1e3](https://github.com/googleapis/google-cloud-dotnet/commit/c13f1e3): feat: Publish message definitions for new Cloud Datastore migration logging steps.
+
 # Version 1.1.0, released 2021-04-29
 
 - [Commit 1313ce6](https://github.com/googleapis/google-cloud-dotnet/commit/1313ce6): feat: Added methods for creating and deleting composite indexes
