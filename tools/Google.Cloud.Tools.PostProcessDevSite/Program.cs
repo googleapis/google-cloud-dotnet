@@ -134,7 +134,6 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 {
                     continue;
                 }
-                Console.WriteLine($"Rewriting {yamlFile}");
                 var yaml = new YamlStream();
                 using (var reader = File.OpenText(yamlFile))
                 {
