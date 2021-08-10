@@ -1,5 +1,14 @@
 # Version history
 
+# Version 1.3.0, released 2021-08-10
+
+- [Commit c2e92a3](https://github.com/googleapis/google-cloud-dotnet/commit/c2e92a3):
+  - feat: add advanced settings for agent level
+  - feat: add rollout config, state and failure reason for experiment
+  - feat: add insights export settings for security setting
+  - feat: add language code for streaming recognition result and flow versions for query parameters
+  - docs: deprecate legacy logging settings
+
 # Version 1.2.0, released 2021-06-22
 
 - [Commit 9e5afc5](https://github.com/googleapis/google-cloud-dotnet/commit/9e5afc5):
