@@ -63,7 +63,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Diagnostics.AspNetCore3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.AspNetCore3/latest) | 4.3.0-beta03 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
 | [Google.Cloud.Diagnostics.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.Common/latest) | 4.3.0-beta03 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.Cx.V3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dialogflow.Cx.V3/latest) | 1.3.0 | [Dialogflow](https://cloud.google.com/dialogflow/cx/docs) |
-| [Google.Cloud.Dialogflow.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dialogflow.V2/latest) | 3.3.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
+| [Google.Cloud.Dialogflow.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dialogflow.V2/latest) | 3.4.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dlp.V2/latest) | 3.2.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.DocumentAI.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DocumentAI.V1/latest) | 1.1.0 | [Cloud Document AI (V1 API)](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.DocumentAI.V1Beta3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DocumentAI.V1Beta3/latest) | 1.0.0-beta01 | [Cloud Document AI (V1Beta3 API)](https://cloud.google.com/solutions/document-ai) |
