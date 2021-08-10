@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.2.0, released 2021-08-10
+
+- [Commit 574bc96](https://github.com/googleapis/google-cloud-dotnet/commit/574bc96):
+  - feat: Added the gRPC service config for the Service Controller v1 API
+  - docs: Updated some comments.
+
 # Version 1.1.0, released 2021-04-29
 
 No API surface changes, but a minor version bump for dependency updates.
