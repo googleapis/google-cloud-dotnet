@@ -1,5 +1,21 @@
 # Version history
 
+# Version 2.9.0, released 2021-08-10
+
+- [Commit ba29ee0](https://github.com/googleapis/google-cloud-dotnet/commit/ba29ee0):
+  - feat!: Change metadata field for the AnalyzeIamPolicyLongrunning.
+  - feat: Add AnalyzeMove API.
+  - feat: Add read_mask field for SearchAllResourcesRequest
+  - feat: Add VersionedResource/AttachedResource fields for ResourceSearchResult.
+- [Commit bf524b6](https://github.com/googleapis/google-cloud-dotnet/commit/bf524b6): feat: add new searchable fields (memberTypes, roles, project, folders and organization), new request fields (assetTypes and orderBy) and new response fields (assetType, folders and organization) in SearchAllIamPolicies
+
+The metadata field change for AnalyzeIamPolicyLongrunning is
+BACKWARD INCOMPATIBLE. Adding this change expands our ability to
+return richer metadata information for the longrunning operation.
+Due to the small usage of this API, we've contacted all the
+customers to make sure they are not using the metadata field and
+hence won't be broken by this change.
+
 # Version 2.8.0, released 2021-05-27
 
 - [Commit 2722d51](https://github.com/googleapis/google-cloud-dotnet/commit/2722d51):
