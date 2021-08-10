@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-08-10
+
+- [Commit d51544c](https://github.com/googleapis/google-cloud-dotnet/commit/d51544c): In GetOrCreate methods, retry "get" operation if "create" fails due to conflict. Fixes [issue 6902](https://github.com/googleapis/google-cloud-dotnet/issues/6902)
+
 # Version 2.2.0, released 2021-05-05
 
 - [Commit a07ebae](https://github.com/googleapis/google-cloud-dotnet/commit/a07ebae): feat: Model extract jobs.
