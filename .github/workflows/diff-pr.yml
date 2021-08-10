@@ -2,17 +2,11 @@ name: Detect differences (PR only)
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, labeled, unlabeled]
+    types: [opened, synchronize, reopened]
 
 jobs:
 
   diff:
-    # Don't run if a label has changed post-merge, or if a label other than "allow breaking changes"
-    # has been added or removed.
-    if: |
-      (github.event.pull_request.merged == false) &&
-      !(contains(fromJson('["labeled", "unlabeled"]'), github.event.action) && github.event.label.name != 'allow breaking changes')
-
     runs-on: ubuntu-latest
     env:
       DOTNET_NOLOGO: true
