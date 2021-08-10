@@ -459,3 +459,7 @@ for package in $packages
 do
   generate_api $package
 done
+
+echo "Regenerating projects"
+./generateprojects.sh
+echo "Done."

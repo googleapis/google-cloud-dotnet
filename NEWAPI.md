@@ -166,22 +166,20 @@ First, run `generateapis.sh`, specifying the ID of the package:
 ./generateapis.sh Google.Cloud.Dialogflow.Cx.V3
 ```
 
-If all goes well, this should just write (after a few seconds):
+If all goes well, this should just write something like this (after a few seconds):
 
 ```text
 Generating Google.Cloud.Dialogflow.Cx.V3
+Regenerating projects
+API catalog contains 167 entries
+Reformatted apis.json
+Created project file Google.Cloud.Dialogflow.Cx.V3.csproj
+Created project file Google.Cloud.Dialogflow.Cx.V3.Snippets.csproj
+Created project file Google.Cloud.Dialogflow.Cx.V3.Tests.csproj
+Created solution file for Google.Cloud.Dialogflow.Cx.V3
+Generated documentation stub for Google.Cloud.Dialogflow.Cx.V3
+Done.
 ```
-
-That step generates just the C# source code. Next, generate the
-project files:
-
-```sh
-./generateprojects.sh
-```
-
-(Note that you don't need to specify the package name here - it
-regenerates *all* the projects - as well as a few other files, if
-necessary.)
 
 Use `git status` to check that a new directory has been created
 (`apis/Google.Cloud.Dialogflow.Cx.V3` in this example).
