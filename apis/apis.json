@@ -574,6 +574,24 @@
       "protoPath": "google/cloud/compute/v1"
     },
     {
+      "id": "Google.Cloud.ContactCenterInsights.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Contact Center AI Insights",
+      "productUrl": "https://cloud.google.com/contact-center/insights/docs",
+      "description": "Recommended Google client library to access the Google Contact Center AI Insights API, which helps users detect and visualize patterns in their contact center data. Understanding conversational data drives business value, improves operational efficiency, and provides a voice for customer feedback.",
+      "tags": [
+        "ai",
+        "customers",
+        "feedback"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/contactcenterinsights/v1"
+    },
+    {
       "id": "Google.Cloud.Container.V1",
       "generator": "micro",
       "protoPath": "google/container/v1",
