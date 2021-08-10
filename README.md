@@ -25,7 +25,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AppEngine.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AppEngine.V1/latest) | 1.1.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ArtifactRegistry.V1Beta2/latest) | 1.0.0-beta02 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Asset.V1/latest) | 2.8.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
-| [Google.Cloud.AssuredWorkloads.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AssuredWorkloads.V1Beta1/latest) | 1.0.0-beta04 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
+| [Google.Cloud.AssuredWorkloads.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AssuredWorkloads.V1Beta1/latest) | 1.0.0-beta05 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.Audit](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Audit/latest) | 1.0.0-beta02 | [Google Cloud Audit](https://cloud.google.com/logging/docs/audit) |
 | [Google.Cloud.AutoML.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AutoML.V1/latest) | 2.2.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.BigQuery.Connection.V1/latest) | 1.2.0 | [BigQuery Connection](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
