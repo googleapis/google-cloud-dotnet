@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.5.0, released 2021-08-10
+
+- [Commit f8b1856](https://github.com/googleapis/google-cloud-dotnet/commit/f8b1856):
+  - feat: add finding_class and indicator fields in Finding
+
 # Version 2.4.0, released 2021-06-22
 
 - [Commit 16f75f9](https://github.com/googleapis/google-cloud-dotnet/commit/16f75f9): docs: update currently supported Finding filter fields.
