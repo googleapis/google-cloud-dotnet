@@ -175,7 +175,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Workflows.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Workflows.V1/latest) | 1.0.0 | [Workflows (V1 API)](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Cloud.Workflows.V1Beta](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Workflows.V1Beta/latest) | 1.0.0-beta02 | [Workflows (V1Beta API)](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Identity.AccessContextManager.Type](https://cloud.google.com/dotnet/docs/reference/Google.Identity.AccessContextManager.Type/latest) | 1.1.0 | Version-agnostic types for the Google Identity Access Context Manager API |
-| [Google.Identity.AccessContextManager.V1](https://cloud.google.com/dotnet/docs/reference/Google.Identity.AccessContextManager.V1/latest) | 1.2.0 | Recommended Google client library to access the Identity Access Context Manager API V1 |
+| [Google.Identity.AccessContextManager.V1](https://cloud.google.com/dotnet/docs/reference/Google.Identity.AccessContextManager.V1/latest) | 1.3.0 | Recommended Google client library to access the Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest) | 2.2.0 | Support for the Long-Running Operations API pattern |
 | [Grafeas.V1](https://cloud.google.com/dotnet/docs/reference/Grafeas.V1/latest) | 2.2.0 | [Grafeas](https://grafeas.io/) |
 
