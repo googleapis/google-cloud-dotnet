@@ -125,7 +125,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Redis.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Redis.V1Beta1/latest) | 2.0.0-beta04 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.ResourceManager.V3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ResourceManager.V3/latest) | 1.0.0 | [Cloud Resource Manager](https://cloud.google.com/resource-manager/docs) |
 | [Google.Cloud.ResourceSettings.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ResourceSettings.V1/latest) | 1.1.0 | [Resource Settings](https://cloud.google.com/resource-settings/docs) |
-| [Google.Cloud.Retail.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Retail.V2/latest) | 1.1.0 | [Retail](https://cloud.google.com/retail/docs) |
+| [Google.Cloud.Retail.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Retail.V2/latest) | 1.2.0 | [Retail](https://cloud.google.com/retail/docs) |
 | [Google.Cloud.Scheduler.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Scheduler.V1/latest) | 2.2.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.SecretManager.V1/latest) | 1.6.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.SecretManager.V1Beta1/latest) | 2.0.0-beta04 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
