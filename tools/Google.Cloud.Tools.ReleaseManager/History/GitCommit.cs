@@ -13,9 +13,11 @@
 // limitations under the License.
 
 using LibGit2Sharp;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseManager.History
@@ -57,18 +59,20 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             // Use the override if one has been provided for this commit, or the commit message otherwise.
             string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(Hash, _libGit2Commit.Message);
 
-            var messageLines = message.Replace("\r", "").Split('\n')
-                // Blank lines aren't helpful. It's slightly annoying that if the commit originally
-                // contained multiple consecutive lines that were intended to be a single paragraph,
-                // that won't come out nicely - we may want to try to detect that later.
-                .Where(line => !string.IsNullOrWhiteSpace(line))
-                .Select(AddIssueLink)
-                .ToList();
+            var messageLines = SplitCommitMessage(message);
 
             // Autosynth includes helpful metadata about the original internal and googleapis commit.
-            // We don't need that in release notes though. Likewise any "Committer" lines can be skipped.
+            // The googleapis commit can be useful in terms of having better formatting of release notes,
+            // but either way, we should skip "Committer" lines and anything after "PiperOrigin-RevId".
             if (_libGit2Commit.Author.Email == AutosynthEmail)
             {
+                var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis"));
+                // Work around autosynth putting everything on one line
+                if (sourceLink is object)
+                {
+                    var commit = sourceLink.Split('/').Last();
+                    messageLines = GetGoogleApisCommitLines(commit);
+                }
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Committer: @"))
                     .TakeWhile(line => !line.StartsWith("PiperOrigin-RevId"))
@@ -116,9 +120,33 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     yield return line.TrimStart().StartsWith("-") ? $"  {line}" : $"  - {line}";
                 }
             }
+        }
+
+        private List<string> SplitCommitMessage(string message)
+        {
+            return message.Replace("\r", "").Split('\n')
+               // Blank lines aren't helpful. It's slightly annoying that if the commit originally
+               // contained multiple consecutive lines that were intended to be a single paragraph,
+               // that won't come out nicely - we may want to try to detect that later.
+               .Where(line => !string.IsNullOrWhiteSpace(line))
+               .Select(AddIssueLink)
+               .ToList();
 
             string AddIssueLink(string line) =>
                 IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
+        }
+
+        private List<string> GetGoogleApisCommitLines(string hash)
+        {
+            // We could use Octokit etc, but we don't really need to, and it's simpler not to plumb it through.
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
+            var url = $"https://api.github.com/repos/googleapis/googleapis/git/commits/{hash}";
+            Console.WriteLine("Fetching " + url);
+            // Note: waiting in a console app should be fine.
+            string json = client.GetStringAsync(url).GetAwaiter().GetResult();
+            string message = (string) JObject.Parse(json)["message"];
+            return SplitCommitMessage(message);
         }
     }
 }
