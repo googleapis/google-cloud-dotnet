@@ -142,7 +142,6 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             var client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
             var url = $"https://api.github.com/repos/googleapis/googleapis/git/commits/{hash}";
-            Console.WriteLine("Fetching " + url);
             // Note: waiting in a console app should be fine.
             string json = client.GetStringAsync(url).GetAwaiter().GetResult();
             string message = (string) JObject.Parse(json)["message"];
