@@ -2,7 +2,7 @@ name: Detect differences (PR only)
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, labeled, unlabeled]
+    types: [opened, synchronize, reopened]
 
 jobs:
 
