@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.3.0, released 2021-08-10
+
+- [Commit e425177](https://github.com/googleapis/google-cloud-dotnet/commit/e425177): feat: add cloud spanner connection support
+
 # Version 1.2.0, released 2021-05-25
 
 No API surface changes; just dependency updates.
