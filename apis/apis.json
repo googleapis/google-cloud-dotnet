@@ -1704,6 +1704,24 @@
       }
     },
     {
+      "id": "Google.Cloud.NetworkConnectivity.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Connectivity",
+      "productUrl": "https://cloud.google.com/network-connectivity/docs/",
+      "description": "Recommended Google client library to access the Network Connectivity API, which provides access to Network Connectivity Center.",
+      "tags": [
+        "network",
+        "connectivity",
+        "vpc"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networkconnectivity/v1"
+    },
+    {
       "id": "Google.Cloud.NetworkConnectivity.V1Alpha1",
       "version": "1.0.0-alpha02",
       "type": "grpc",
