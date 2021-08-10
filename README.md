@@ -87,7 +87,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Iam.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Iam.V1/latest) | 2.2.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Iap.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Iap.V1/latest) | 1.0.0 | [Cloud Identity-Aware Proxy](https://cloud.google.com/iap/docs/) |
 | [Google.Cloud.Iot.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Iot.V1/latest) | 1.1.0 | [Cloud IoT](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
-| [Google.Cloud.Kms.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Kms.V1/latest) | 2.3.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
+| [Google.Cloud.Kms.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Kms.V1/latest) | 2.4.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Language.V1/latest) | 2.2.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.LifeSciences.V2Beta](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.LifeSciences.V2Beta/latest) | 1.0.0-beta01 | [Cloud Life Sciences](https://cloud.google.com/life-sciences/docs/) |
 | [Google.Cloud.Logging.Log4Net](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Logging.Log4Net/latest) | 3.3.0 | Log4Net client library for the Google Cloud Logging API |
