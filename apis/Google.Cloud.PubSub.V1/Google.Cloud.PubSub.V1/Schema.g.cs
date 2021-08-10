@@ -1840,6 +1840,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Response for the `ValidateSchema` method.
+  /// Empty for now.
   /// </summary>
   public sealed partial class ValidateSchemaResponse : pb::IMessage<ValidateSchemaResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2360,6 +2361,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Response for the `ValidateMessage` method.
+  /// Empty for now.
   /// </summary>
   public sealed partial class ValidateMessageResponse : pb::IMessage<ValidateMessageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

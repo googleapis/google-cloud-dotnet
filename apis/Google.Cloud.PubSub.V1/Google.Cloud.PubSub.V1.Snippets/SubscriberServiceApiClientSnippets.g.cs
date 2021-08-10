@@ -50,6 +50,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new Duration(),
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -79,6 +80,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new Duration(),
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
