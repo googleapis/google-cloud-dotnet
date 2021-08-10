@@ -326,7 +326,7 @@
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
         "Google.Api.Gax.Rest": "3.3.0",
-        "Google.Apis.Bigquery.v2": "1.53.0.2359"
+        "Google.Apis.Bigquery.v2": "1.54.0.2397"
       },
       "testDependencies": {
         "Google.Cloud.Storage.V1": "project",
