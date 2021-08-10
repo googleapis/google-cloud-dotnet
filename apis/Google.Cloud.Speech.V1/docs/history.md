@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2021-08-10
+
+- [Commit 73a4ba0](https://github.com/googleapis/google-cloud-dotnet/commit/73a4ba0): feat: add total_billed_time response field
+
 # Version 2.2.0, released 2021-05-26
 
 No API surface changes; just dependency updates.

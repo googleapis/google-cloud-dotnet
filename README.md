@@ -145,7 +145,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Spanner.Data](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Data/latest) | 3.11.0 | Google ADO.NET Provider for Google Cloud Spanner |
 | [Google.Cloud.Spanner.Common.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Common.V1/latest) | 3.11.0 | Common resource names used by all Spanner V1 APIs |
 | [Google.Cloud.Spanner.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest) | 3.11.0 | [Google Cloud Spanner](https://cloud.google.com/spanner/) |
-| [Google.Cloud.Speech.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Speech.V1/latest) | 2.2.0 | [Google Cloud Speech (V1 API)](https://cloud.google.com/speech) |
+| [Google.Cloud.Speech.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Speech.V1/latest) | 2.3.0 | [Google Cloud Speech (V1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Speech.V1P1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Speech.V1P1Beta1/latest) | 2.0.0-beta05 | [Google Cloud Speech (V1P1Beta1 API)](https://cloud.google.com/speech) |
 | [Google.Cloud.Storage.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Storage.V1/latest) | 3.5.0 | [Google Cloud Storage](https://cloud.google.com/storage/) |
 | [Google.Cloud.StorageTransfer.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.StorageTransfer.V1/latest) | 1.0.0-beta01 | [Storage Transfer](https://cloud.google.com/storage-transfer-service) |
