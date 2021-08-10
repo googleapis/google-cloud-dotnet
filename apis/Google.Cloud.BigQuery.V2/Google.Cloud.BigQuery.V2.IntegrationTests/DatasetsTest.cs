@@ -14,7 +14,10 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Collections.Concurrent;
+using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -87,6 +90,16 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var created = client.CreateDataset(id, new Dataset { Description = "Description1", FriendlyName = "FriendlyName1" });
             var fetched = client.GetDataset(id);
             Assert.Equal(created.Resource.ETag, fetched.Resource.ETag);
+        }
+
+        [Fact]
+        public void CreateDataset_AlreadyExists()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = client.GetDatasetReference(_fixture.CreateDatasetId());
+            client.CreateDataset(id);
+            var exception = Assert.Throws<GoogleApiException>(() => client.CreateDataset(id));
+            Assert.Equal(HttpStatusCode.Conflict, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -293,6 +306,68 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
 
             Assert.Throws<ArgumentException>(() => client.GetOrCreateDataset(id, resource: dataset));
+        }
+
+        /// <summary>
+        /// Calls GetOrCreateDataset with multiple concurrent requests. We create 5 threads all trying
+        /// to GetOrCreate the same dataset at the same time, to check that
+        /// "get (not found) -> create (conflict) -> get (ok)" works appropriately.
+        /// We use 5 threads as that's the quota limit for updates to a single dataset's metadata within 10
+        /// seconds. We can't actually tell for sure whether any of the calls went through all three RPCs,
+        /// but the test does fail without the final "get".
+        /// 
+        /// We could potentially detect the create request failing due to lack of quota and perform
+        /// a second "get", but the quota check happens early - leading to "not found" errors while the dataset
+        /// is being created. Rather than get into polling intervals etc, we just let it fail in that case;
+        /// users will need to write higher-level retry if they're in that very niche situation.
+        /// 
+        /// (Threads are used rather than tasks to ensure that the requests really are pretty much "all at
+        /// the same time"; we don't want the normal slow task warm-up to skew this, although they're used
+        /// in the async test for convenience.)
+        /// </summary>
+        [Fact]
+        public void GetOrCreateDataset_HighContention()
+        {
+            
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = client.GetDatasetReference(_fixture.CreateDatasetId());
+            int successes = 0;
+            ConcurrentBag<Exception> exceptions = new ConcurrentBag<Exception>();
+            var threads = Enumerable.Range(0, 5).Select(_ => new Thread(() =>
+            {
+                try
+                {
+                    client.GetOrCreateDataset(id);
+                    Interlocked.Increment(ref successes);
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            })).ToList();
+
+            // Start all the threads at roughly the same time
+            threads.ForEach(t => t.Start());
+            
+            // ... and wait for them all to finish
+            threads.ForEach(t => t.Join(5000));
+
+            Assert.Empty(exceptions);
+            // If any threads timed out, we won't have enough successes.
+            Assert.Equal(threads.Count, successes);
+        }
+
+        /// <summary>
+        /// See <see cref="GetOrCreateDataset_HighContention"/> for commentary on the test.
+        /// </summary>
+        [Fact]
+        public async Task GetOrCreateDatasetAsync_HighContention()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = client.GetDatasetReference(_fixture.CreateDatasetId());
+
+            var tasks = Enumerable.Range(0, 5).Select(_ => client.GetOrCreateDatasetAsync(id)).ToList();
+            await Task.WhenAll(tasks);
         }
 
         [Fact]

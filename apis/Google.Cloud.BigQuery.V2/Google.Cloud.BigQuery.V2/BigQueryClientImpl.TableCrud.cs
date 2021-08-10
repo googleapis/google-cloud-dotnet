@@ -148,7 +148,14 @@ namespace Google.Cloud.BigQuery.V2
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateTable(tableReference, resource, createOptions);
+                try
+                {
+                    return CreateTable(tableReference, resource, createOptions);
+                }
+                catch (GoogleApiException ex2) when (ex2.HttpStatusCode == HttpStatusCode.Conflict)
+                {
+                    return GetTable(tableReference, getOptions);
+                }
             }
         }
 
@@ -164,7 +171,14 @@ namespace Google.Cloud.BigQuery.V2
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return await CreateTableAsync(tableReference, resource, createOptions, cancellationToken).ConfigureAwait(false);
+                try
+                {
+                    return await CreateTableAsync(tableReference, resource, createOptions, cancellationToken).ConfigureAwait(false);
+                }
+                catch (GoogleApiException ex2) when (ex2.HttpStatusCode == HttpStatusCode.Conflict)
+                {
+                    return await GetTableAsync(tableReference, getOptions, cancellationToken).ConfigureAwait(false);
+                }
             }
         }
 
