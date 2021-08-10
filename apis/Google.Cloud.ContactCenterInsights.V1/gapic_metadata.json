@@ -1,0 +1,150 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.contactcenterinsights.v1",
+  "libraryPackage": "Google.Cloud.ContactCenterInsights.V1",
+  "services": {
+    "ContactCenterInsights": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ContactCenterInsightsClient",
+          "rpcs": {
+            "CalculateIssueModelStats": {
+              "methods": [
+                "CalculateIssueModelStats",
+                "CalculateIssueModelStatsAsync"
+              ]
+            },
+            "CalculateStats": {
+              "methods": [
+                "CalculateStats",
+                "CalculateStatsAsync"
+              ]
+            },
+            "CreateAnalysis": {
+              "methods": [
+                "CreateAnalysis",
+                "CreateAnalysisAsync"
+              ]
+            },
+            "CreateConversation": {
+              "methods": [
+                "CreateConversation",
+                "CreateConversationAsync"
+              ]
+            },
+            "CreatePhraseMatcher": {
+              "methods": [
+                "CreatePhraseMatcher",
+                "CreatePhraseMatcherAsync"
+              ]
+            },
+            "DeleteAnalysis": {
+              "methods": [
+                "DeleteAnalysis",
+                "DeleteAnalysisAsync"
+              ]
+            },
+            "DeleteConversation": {
+              "methods": [
+                "DeleteConversation",
+                "DeleteConversationAsync"
+              ]
+            },
+            "DeletePhraseMatcher": {
+              "methods": [
+                "DeletePhraseMatcher",
+                "DeletePhraseMatcherAsync"
+              ]
+            },
+            "ExportInsightsData": {
+              "methods": [
+                "ExportInsightsData",
+                "ExportInsightsDataAsync"
+              ]
+            },
+            "GetAnalysis": {
+              "methods": [
+                "GetAnalysis",
+                "GetAnalysisAsync"
+              ]
+            },
+            "GetConversation": {
+              "methods": [
+                "GetConversation",
+                "GetConversationAsync"
+              ]
+            },
+            "GetIssue": {
+              "methods": [
+                "GetIssue",
+                "GetIssueAsync"
+              ]
+            },
+            "GetIssueModel": {
+              "methods": [
+                "GetIssueModel",
+                "GetIssueModelAsync"
+              ]
+            },
+            "GetPhraseMatcher": {
+              "methods": [
+                "GetPhraseMatcher",
+                "GetPhraseMatcherAsync"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
+            "ListAnalyses": {
+              "methods": [
+                "ListAnalyses",
+                "ListAnalysesAsync"
+              ]
+            },
+            "ListConversations": {
+              "methods": [
+                "ListConversations",
+                "ListConversationsAsync"
+              ]
+            },
+            "ListIssueModels": {
+              "methods": [
+                "ListIssueModels",
+                "ListIssueModelsAsync"
+              ]
+            },
+            "ListIssues": {
+              "methods": [
+                "ListIssues",
+                "ListIssuesAsync"
+              ]
+            },
+            "ListPhraseMatchers": {
+              "methods": [
+                "ListPhraseMatchers",
+                "ListPhraseMatchersAsync"
+              ]
+            },
+            "UpdateConversation": {
+              "methods": [
+                "UpdateConversation",
+                "UpdateConversationAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
