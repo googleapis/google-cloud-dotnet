@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.0" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
     <ProjectReference Include="../Google.Cloud.Firestore/Google.Cloud.Firestore.csproj" />
   </ItemGroup>
 
