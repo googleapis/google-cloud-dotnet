@@ -151,6 +151,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
     }
 
+    public partial class CreateIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListIssueModelsRequest
     {
         /// <summary>
@@ -164,6 +176,42 @@ namespace Google.Cloud.ContactCenterInsights.V1
     }
 
     public partial class GetIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::IssueModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::IssueModelName IssueModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::IssueModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::IssueModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::IssueModelName IssueModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::IssueModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeployIssueModelRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::IssueModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::IssueModelName IssueModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::IssueModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UndeployIssueModelRequest
     {
         /// <summary>
         /// <see cref="gccv::IssueModelName"/>-typed view over the <see cref="Name"/> resource name property.

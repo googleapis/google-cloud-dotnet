@@ -1478,6 +1478,259 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateIssueModel</summary>
+        public void CreateIssueModelRequestObject()
+        {
+            // Snippet: CreateIssueModel(CreateIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateIssueModelRequest request = new CreateIssueModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                IssueModel = new IssueModel(),
+            };
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = contactCenterInsightsClient.CreateIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceCreateIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIssueModelAsync</summary>
+        public async Task CreateIssueModelRequestObjectAsync()
+        {
+            // Snippet: CreateIssueModelAsync(CreateIssueModelRequest, CallSettings)
+            // Additional: CreateIssueModelAsync(CreateIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateIssueModelRequest request = new CreateIssueModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                IssueModel = new IssueModel(),
+            };
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = await contactCenterInsightsClient.CreateIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceCreateIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIssueModel</summary>
+        public void CreateIssueModel()
+        {
+            // Snippet: CreateIssueModel(string, IssueModel, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IssueModel issueModel = new IssueModel();
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = contactCenterInsightsClient.CreateIssueModel(parent, issueModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceCreateIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIssueModelAsync</summary>
+        public async Task CreateIssueModelAsync()
+        {
+            // Snippet: CreateIssueModelAsync(string, IssueModel, CallSettings)
+            // Additional: CreateIssueModelAsync(string, IssueModel, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IssueModel issueModel = new IssueModel();
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = await contactCenterInsightsClient.CreateIssueModelAsync(parent, issueModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceCreateIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIssueModel</summary>
+        public void CreateIssueModelResourceNames()
+        {
+            // Snippet: CreateIssueModel(LocationName, IssueModel, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IssueModel issueModel = new IssueModel();
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = contactCenterInsightsClient.CreateIssueModel(parent, issueModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceCreateIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIssueModelAsync</summary>
+        public async Task CreateIssueModelResourceNamesAsync()
+        {
+            // Snippet: CreateIssueModelAsync(LocationName, IssueModel, CallSettings)
+            // Additional: CreateIssueModelAsync(LocationName, IssueModel, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IssueModel issueModel = new IssueModel();
+            // Make the request
+            Operation<IssueModel, CreateIssueModelMetadata> response = await contactCenterInsightsClient.CreateIssueModelAsync(parent, issueModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<IssueModel, CreateIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            IssueModel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<IssueModel, CreateIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceCreateIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                IssueModel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueModel</summary>
+        public void UpdateIssueModelRequestObject()
+        {
+            // Snippet: UpdateIssueModel(UpdateIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            IssueModel response = contactCenterInsightsClient.UpdateIssueModel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueModelAsync</summary>
+        public async Task UpdateIssueModelRequestObjectAsync()
+        {
+            // Snippet: UpdateIssueModelAsync(UpdateIssueModelRequest, CallSettings)
+            // Additional: UpdateIssueModelAsync(UpdateIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            IssueModel response = await contactCenterInsightsClient.UpdateIssueModelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueModel</summary>
+        public void UpdateIssueModel()
+        {
+            // Snippet: UpdateIssueModel(IssueModel, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueModel issueModel = new IssueModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IssueModel response = contactCenterInsightsClient.UpdateIssueModel(issueModel, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueModelAsync</summary>
+        public async Task UpdateIssueModelAsync()
+        {
+            // Snippet: UpdateIssueModelAsync(IssueModel, FieldMask, CallSettings)
+            // Additional: UpdateIssueModelAsync(IssueModel, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueModel issueModel = new IssueModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IssueModel response = await contactCenterInsightsClient.UpdateIssueModelAsync(issueModel, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIssueModel</summary>
         public void GetIssueModelRequestObject()
         {
@@ -1652,6 +1905,555 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteIssueModel</summary>
+        public void DeleteIssueModelRequestObject()
+        {
+            // Snippet: DeleteIssueModel(DeleteIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteIssueModelRequest request = new DeleteIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = contactCenterInsightsClient.DeleteIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeleteIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueModelAsync</summary>
+        public async Task DeleteIssueModelRequestObjectAsync()
+        {
+            // Snippet: DeleteIssueModelAsync(DeleteIssueModelRequest, CallSettings)
+            // Additional: DeleteIssueModelAsync(DeleteIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteIssueModelRequest request = new DeleteIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = await contactCenterInsightsClient.DeleteIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeleteIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueModel</summary>
+        public void DeleteIssueModel()
+        {
+            // Snippet: DeleteIssueModel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = contactCenterInsightsClient.DeleteIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeleteIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueModelAsync</summary>
+        public async Task DeleteIssueModelAsync()
+        {
+            // Snippet: DeleteIssueModelAsync(string, CallSettings)
+            // Additional: DeleteIssueModelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = await contactCenterInsightsClient.DeleteIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeleteIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueModel</summary>
+        public void DeleteIssueModelResourceNames()
+        {
+            // Snippet: DeleteIssueModel(IssueModelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = contactCenterInsightsClient.DeleteIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeleteIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIssueModelAsync</summary>
+        public async Task DeleteIssueModelResourceNamesAsync()
+        {
+            // Snippet: DeleteIssueModelAsync(IssueModelName, CallSettings)
+            // Additional: DeleteIssueModelAsync(IssueModelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<Empty, DeleteIssueModelMetadata> response = await contactCenterInsightsClient.DeleteIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeleteIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModel</summary>
+        public void DeployIssueModelRequestObject()
+        {
+            // Snippet: DeployIssueModel(DeployIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeployIssueModelRequest request = new DeployIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = contactCenterInsightsClient.DeployIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModelAsync</summary>
+        public async Task DeployIssueModelRequestObjectAsync()
+        {
+            // Snippet: DeployIssueModelAsync(DeployIssueModelRequest, CallSettings)
+            // Additional: DeployIssueModelAsync(DeployIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployIssueModelRequest request = new DeployIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = await contactCenterInsightsClient.DeployIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModel</summary>
+        public void DeployIssueModel()
+        {
+            // Snippet: DeployIssueModel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = contactCenterInsightsClient.DeployIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModelAsync</summary>
+        public async Task DeployIssueModelAsync()
+        {
+            // Snippet: DeployIssueModelAsync(string, CallSettings)
+            // Additional: DeployIssueModelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = await contactCenterInsightsClient.DeployIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModel</summary>
+        public void DeployIssueModelResourceNames()
+        {
+            // Snippet: DeployIssueModel(IssueModelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = contactCenterInsightsClient.DeployIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceDeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployIssueModelAsync</summary>
+        public async Task DeployIssueModelResourceNamesAsync()
+        {
+            // Snippet: DeployIssueModelAsync(IssueModelName, CallSettings)
+            // Additional: DeployIssueModelAsync(IssueModelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> response = await contactCenterInsightsClient.DeployIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployIssueModelResponse, DeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceDeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModel</summary>
+        public void UndeployIssueModelRequestObject()
+        {
+            // Snippet: UndeployIssueModel(UndeployIssueModelRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UndeployIssueModelRequest request = new UndeployIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = contactCenterInsightsClient.UndeployIssueModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceUndeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModelAsync</summary>
+        public async Task UndeployIssueModelRequestObjectAsync()
+        {
+            // Snippet: UndeployIssueModelAsync(UndeployIssueModelRequest, CallSettings)
+            // Additional: UndeployIssueModelAsync(UndeployIssueModelRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UndeployIssueModelRequest request = new UndeployIssueModelRequest
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+            };
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = await contactCenterInsightsClient.UndeployIssueModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceUndeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModel</summary>
+        public void UndeployIssueModel()
+        {
+            // Snippet: UndeployIssueModel(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = contactCenterInsightsClient.UndeployIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceUndeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModelAsync</summary>
+        public async Task UndeployIssueModelAsync()
+        {
+            // Snippet: UndeployIssueModelAsync(string, CallSettings)
+            // Additional: UndeployIssueModelAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/issueModels/[ISSUE_MODEL]";
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = await contactCenterInsightsClient.UndeployIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceUndeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModel</summary>
+        public void UndeployIssueModelResourceNames()
+        {
+            // Snippet: UndeployIssueModel(IssueModelName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = contactCenterInsightsClient.UndeployIssueModel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceUndeployIssueModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeployIssueModelAsync</summary>
+        public async Task UndeployIssueModelResourceNamesAsync()
+        {
+            // Snippet: UndeployIssueModelAsync(IssueModelName, CallSettings)
+            // Additional: UndeployIssueModelAsync(IssueModelName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            IssueModelName name = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
+            // Make the request
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> response = await contactCenterInsightsClient.UndeployIssueModelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UndeployIssueModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceUndeployIssueModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UndeployIssueModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIssue</summary>
         public void GetIssueRequestObject()
         {
@@ -1823,6 +2625,70 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             IssueModelName parent = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]");
             // Make the request
             ListIssuesResponse response = await contactCenterInsightsClient.ListIssuesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssue</summary>
+        public void UpdateIssueRequestObject()
+        {
+            // Snippet: UpdateIssue(UpdateIssueRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Issue response = contactCenterInsightsClient.UpdateIssue(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueAsync</summary>
+        public async Task UpdateIssueRequestObjectAsync()
+        {
+            // Snippet: UpdateIssueAsync(UpdateIssueRequest, CallSettings)
+            // Additional: UpdateIssueAsync(UpdateIssueRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Issue response = await contactCenterInsightsClient.UpdateIssueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssue</summary>
+        public void UpdateIssue()
+        {
+            // Snippet: UpdateIssue(Issue, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            Issue issue = new Issue();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Issue response = contactCenterInsightsClient.UpdateIssue(issue, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateIssueAsync</summary>
+        public async Task UpdateIssueAsync()
+        {
+            // Snippet: UpdateIssueAsync(Issue, FieldMask, CallSettings)
+            // Additional: UpdateIssueAsync(Issue, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            Issue issue = new Issue();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Issue response = await contactCenterInsightsClient.UpdateIssueAsync(issue, updateMask);
             // End snippet
         }
 

@@ -61,10 +61,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeleteAnalysisSettings = existing.DeleteAnalysisSettings;
             ExportInsightsDataSettings = existing.ExportInsightsDataSettings;
             ExportInsightsDataOperationsSettings = existing.ExportInsightsDataOperationsSettings.Clone();
+            CreateIssueModelSettings = existing.CreateIssueModelSettings;
+            CreateIssueModelOperationsSettings = existing.CreateIssueModelOperationsSettings.Clone();
+            UpdateIssueModelSettings = existing.UpdateIssueModelSettings;
             GetIssueModelSettings = existing.GetIssueModelSettings;
             ListIssueModelsSettings = existing.ListIssueModelsSettings;
+            DeleteIssueModelSettings = existing.DeleteIssueModelSettings;
+            DeleteIssueModelOperationsSettings = existing.DeleteIssueModelOperationsSettings.Clone();
+            DeployIssueModelSettings = existing.DeployIssueModelSettings;
+            DeployIssueModelOperationsSettings = existing.DeployIssueModelOperationsSettings.Clone();
+            UndeployIssueModelSettings = existing.UndeployIssueModelSettings;
+            UndeployIssueModelOperationsSettings = existing.UndeployIssueModelOperationsSettings.Clone();
             GetIssueSettings = existing.GetIssueSettings;
             ListIssuesSettings = existing.ListIssuesSettings;
+            UpdateIssueSettings = existing.UpdateIssueSettings;
             CalculateIssueModelStatsSettings = existing.CalculateIssueModelStatsSettings;
             CreatePhraseMatcherSettings = existing.CreatePhraseMatcherSettings;
             GetPhraseMatcherSettings = existing.GetPhraseMatcherSettings;
@@ -274,6 +284,56 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateIssueModel</c> and <c>ContactCenterInsightsClient.CreateIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.CreateIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.CreateIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateIssueModel</c> and <c>ContactCenterInsightsClient.UpdateIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.GetIssueModel</c> and <c>ContactCenterInsightsClient.GetIssueModelAsync</c>.
         /// </summary>
         /// <remarks>
@@ -305,6 +365,108 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteIssueModel</c> and <c>ContactCenterInsightsClient.DeleteIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.DeleteIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.DeleteIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeployIssueModel</c> and <c>ContactCenterInsightsClient.DeployIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeployIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.DeployIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.DeployIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeployIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UndeployIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.UndeployIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UndeployIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.UndeployIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.UndeployIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UndeployIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.GetIssue</c> and <c>ContactCenterInsightsClient.GetIssueAsync</c>.
         /// </summary>
         /// <remarks>
@@ -332,6 +494,21 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListIssuesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateIssue</c> and <c>ContactCenterInsightsClient.UpdateIssueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateIssueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1805,6 +1982,236 @@ namespace Google.Cloud.ContactCenterInsights.V1
             ExportInsightsDataAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IssueModel, CreateIssueModelMetadata> CreateIssueModel(CreateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(CreateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(CreateIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            CreateIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateIssueModel</c>.</summary>
+        public virtual lro::OperationsClient CreateIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<IssueModel, CreateIssueModelMetadata> PollOnceCreateIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<IssueModel, CreateIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> PollOnceCreateIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<IssueModel, CreateIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IssueModel, CreateIssueModelMetadata> CreateIssueModel(string parent, IssueModel issueModel, gaxgrpc::CallSettings callSettings = null) =>
+            CreateIssueModel(new CreateIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(string parent, IssueModel issueModel, gaxgrpc::CallSettings callSettings = null) =>
+            CreateIssueModelAsync(new CreateIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(string parent, IssueModel issueModel, st::CancellationToken cancellationToken) =>
+            CreateIssueModelAsync(parent, issueModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<IssueModel, CreateIssueModelMetadata> CreateIssueModel(gagr::LocationName parent, IssueModel issueModel, gaxgrpc::CallSettings callSettings = null) =>
+            CreateIssueModel(new CreateIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(gagr::LocationName parent, IssueModel issueModel, gaxgrpc::CallSettings callSettings = null) =>
+            CreateIssueModelAsync(new CreateIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="issueModel">
+        /// Required. The issue model to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(gagr::LocationName parent, IssueModel issueModel, st::CancellationToken cancellationToken) =>
+            CreateIssueModelAsync(parent, issueModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IssueModel UpdateIssueModel(UpdateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IssueModel> UpdateIssueModelAsync(UpdateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IssueModel> UpdateIssueModelAsync(UpdateIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            UpdateIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="issueModel">
+        /// Required. The new values for the issue model.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IssueModel UpdateIssueModel(IssueModel issueModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIssueModel(new UpdateIssueModelRequest
+            {
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="issueModel">
+        /// Required. The new values for the issue model.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IssueModel> UpdateIssueModelAsync(IssueModel issueModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIssueModelAsync(new UpdateIssueModelRequest
+            {
+                IssueModel = gax::GaxPreconditions.CheckNotNull(issueModel, nameof(issueModel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="issueModel">
+        /// Required. The new values for the issue model.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IssueModel> UpdateIssueModelAsync(IssueModel issueModel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateIssueModelAsync(issueModel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an issue model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2015,6 +2422,418 @@ namespace Google.Cloud.ContactCenterInsights.V1
             ListIssueModelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteIssueModelMetadata> DeleteIssueModel(DeleteIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(DeleteIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(DeleteIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            DeleteIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteIssueModel</c>.</summary>
+        public virtual lro::OperationsClient DeleteIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteIssueModelMetadata> PollOnceDeleteIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> PollOnceDeleteIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteIssueModelMetadata> DeleteIssueModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueModel(new DeleteIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueModelAsync(new DeleteIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteIssueModelMetadata> DeleteIssueModel(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueModel(new DeleteIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteIssueModelAsync(new DeleteIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the issue model to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(IssueModelName name, st::CancellationToken cancellationToken) =>
+            DeleteIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata> DeployIssueModel(DeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(DeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(DeployIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            DeployIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeployIssueModel</c>.</summary>
+        public virtual lro::OperationsClient DeployIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeployIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata> PollOnceDeployIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeployIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> PollOnceDeployIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata> DeployIssueModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployIssueModel(new DeployIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployIssueModelAsync(new DeployIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata> DeployIssueModel(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployIssueModel(new DeployIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeployIssueModelAsync(new DeployIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to deploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(IssueModelName name, st::CancellationToken cancellationToken) =>
+            DeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> UndeployIssueModel(UndeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(UndeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(UndeployIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            UndeployIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UndeployIssueModel</c>.</summary>
+        public virtual lro::OperationsClient UndeployIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UndeployIssueModel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> PollOnceUndeployIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeployIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UndeployIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> PollOnceUndeployIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeployIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> UndeployIssueModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployIssueModel(new UndeployIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployIssueModelAsync(new UndeployIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(string name, st::CancellationToken cancellationToken) =>
+            UndeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> UndeployIssueModel(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployIssueModel(new UndeployIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            UndeployIssueModelAsync(new UndeployIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to undeploy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(IssueModelName name, st::CancellationToken cancellationToken) =>
+            UndeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an issue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2223,6 +3042,83 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ListIssuesResponse> ListIssuesAsync(IssueModelName parent, st::CancellationToken cancellationToken) =>
             ListIssuesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Issue UpdateIssue(UpdateIssueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Issue> UpdateIssueAsync(UpdateIssueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Issue> UpdateIssueAsync(UpdateIssueRequest request, st::CancellationToken cancellationToken) =>
+            UpdateIssueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="issue">
+        /// Required. The new values for the issue.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Issue UpdateIssue(Issue issue, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIssue(new UpdateIssueRequest
+            {
+                Issue = gax::GaxPreconditions.CheckNotNull(issue, nameof(issue)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="issue">
+        /// Required. The new values for the issue.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Issue> UpdateIssueAsync(Issue issue, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateIssueAsync(new UpdateIssueRequest
+            {
+                Issue = gax::GaxPreconditions.CheckNotNull(issue, nameof(issue)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="issue">
+        /// Required. The new values for the issue.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Issue> UpdateIssueAsync(Issue issue, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateIssueAsync(issue, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets an issue model's statistics.
@@ -3112,13 +4008,25 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> _callExportInsightsData;
 
+        private readonly gaxgrpc::ApiCall<CreateIssueModelRequest, lro::Operation> _callCreateIssueModel;
+
+        private readonly gaxgrpc::ApiCall<UpdateIssueModelRequest, IssueModel> _callUpdateIssueModel;
+
         private readonly gaxgrpc::ApiCall<GetIssueModelRequest, IssueModel> _callGetIssueModel;
 
         private readonly gaxgrpc::ApiCall<ListIssueModelsRequest, ListIssueModelsResponse> _callListIssueModels;
 
+        private readonly gaxgrpc::ApiCall<DeleteIssueModelRequest, lro::Operation> _callDeleteIssueModel;
+
+        private readonly gaxgrpc::ApiCall<DeployIssueModelRequest, lro::Operation> _callDeployIssueModel;
+
+        private readonly gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> _callUndeployIssueModel;
+
         private readonly gaxgrpc::ApiCall<GetIssueRequest, Issue> _callGetIssue;
 
         private readonly gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> _callListIssues;
+
+        private readonly gaxgrpc::ApiCall<UpdateIssueRequest, Issue> _callUpdateIssue;
 
         private readonly gaxgrpc::ApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse> _callCalculateIssueModelStats;
 
@@ -3149,6 +4057,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings);
             ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings);
+            CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings);
+            DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings);
+            DeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIssueModelOperationsSettings);
+            UndeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIssueModelOperationsSettings);
             _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>(grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
             Modify_CreateConversationApiCall(ref _callCreateConversation);
@@ -3179,18 +4091,36 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callExportInsightsData = clientHelper.BuildApiCall<ExportInsightsDataRequest, lro::Operation>(grpcClient.ExportInsightsDataAsync, grpcClient.ExportInsightsData, effectiveSettings.ExportInsightsDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportInsightsData);
             Modify_ExportInsightsDataApiCall(ref _callExportInsightsData);
+            _callCreateIssueModel = clientHelper.BuildApiCall<CreateIssueModelRequest, lro::Operation>(grpcClient.CreateIssueModelAsync, grpcClient.CreateIssueModel, effectiveSettings.CreateIssueModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateIssueModel);
+            Modify_CreateIssueModelApiCall(ref _callCreateIssueModel);
+            _callUpdateIssueModel = clientHelper.BuildApiCall<UpdateIssueModelRequest, IssueModel>(grpcClient.UpdateIssueModelAsync, grpcClient.UpdateIssueModel, effectiveSettings.UpdateIssueModelSettings).WithGoogleRequestParam("issue_model.name", request => request.IssueModel?.Name);
+            Modify_ApiCall(ref _callUpdateIssueModel);
+            Modify_UpdateIssueModelApiCall(ref _callUpdateIssueModel);
             _callGetIssueModel = clientHelper.BuildApiCall<GetIssueModelRequest, IssueModel>(grpcClient.GetIssueModelAsync, grpcClient.GetIssueModel, effectiveSettings.GetIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssueModel);
             Modify_GetIssueModelApiCall(ref _callGetIssueModel);
             _callListIssueModels = clientHelper.BuildApiCall<ListIssueModelsRequest, ListIssueModelsResponse>(grpcClient.ListIssueModelsAsync, grpcClient.ListIssueModels, effectiveSettings.ListIssueModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIssueModels);
             Modify_ListIssueModelsApiCall(ref _callListIssueModels);
+            _callDeleteIssueModel = clientHelper.BuildApiCall<DeleteIssueModelRequest, lro::Operation>(grpcClient.DeleteIssueModelAsync, grpcClient.DeleteIssueModel, effectiveSettings.DeleteIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteIssueModel);
+            Modify_DeleteIssueModelApiCall(ref _callDeleteIssueModel);
+            _callDeployIssueModel = clientHelper.BuildApiCall<DeployIssueModelRequest, lro::Operation>(grpcClient.DeployIssueModelAsync, grpcClient.DeployIssueModel, effectiveSettings.DeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeployIssueModel);
+            Modify_DeployIssueModelApiCall(ref _callDeployIssueModel);
+            _callUndeployIssueModel = clientHelper.BuildApiCall<UndeployIssueModelRequest, lro::Operation>(grpcClient.UndeployIssueModelAsync, grpcClient.UndeployIssueModel, effectiveSettings.UndeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUndeployIssueModel);
+            Modify_UndeployIssueModelApiCall(ref _callUndeployIssueModel);
             _callGetIssue = clientHelper.BuildApiCall<GetIssueRequest, Issue>(grpcClient.GetIssueAsync, grpcClient.GetIssue, effectiveSettings.GetIssueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssue);
             Modify_GetIssueApiCall(ref _callGetIssue);
             _callListIssues = clientHelper.BuildApiCall<ListIssuesRequest, ListIssuesResponse>(grpcClient.ListIssuesAsync, grpcClient.ListIssues, effectiveSettings.ListIssuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIssues);
             Modify_ListIssuesApiCall(ref _callListIssues);
+            _callUpdateIssue = clientHelper.BuildApiCall<UpdateIssueRequest, Issue>(grpcClient.UpdateIssueAsync, grpcClient.UpdateIssue, effectiveSettings.UpdateIssueSettings).WithGoogleRequestParam("issue.name", request => request.Issue?.Name);
+            Modify_ApiCall(ref _callUpdateIssue);
+            Modify_UpdateIssueApiCall(ref _callUpdateIssue);
             _callCalculateIssueModelStats = clientHelper.BuildApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse>(grpcClient.CalculateIssueModelStatsAsync, grpcClient.CalculateIssueModelStats, effectiveSettings.CalculateIssueModelStatsSettings).WithGoogleRequestParam("issue_model", request => request.IssueModel);
             Modify_ApiCall(ref _callCalculateIssueModelStats);
             Modify_CalculateIssueModelStatsApiCall(ref _callCalculateIssueModelStats);
@@ -3240,13 +4170,25 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_ExportInsightsDataApiCall(ref gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> call);
 
+        partial void Modify_CreateIssueModelApiCall(ref gaxgrpc::ApiCall<CreateIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_UpdateIssueModelApiCall(ref gaxgrpc::ApiCall<UpdateIssueModelRequest, IssueModel> call);
+
         partial void Modify_GetIssueModelApiCall(ref gaxgrpc::ApiCall<GetIssueModelRequest, IssueModel> call);
 
         partial void Modify_ListIssueModelsApiCall(ref gaxgrpc::ApiCall<ListIssueModelsRequest, ListIssueModelsResponse> call);
 
+        partial void Modify_DeleteIssueModelApiCall(ref gaxgrpc::ApiCall<DeleteIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_DeployIssueModelApiCall(ref gaxgrpc::ApiCall<DeployIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_UndeployIssueModelApiCall(ref gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> call);
+
         partial void Modify_GetIssueApiCall(ref gaxgrpc::ApiCall<GetIssueRequest, Issue> call);
 
         partial void Modify_ListIssuesApiCall(ref gaxgrpc::ApiCall<ListIssuesRequest, ListIssuesResponse> call);
+
+        partial void Modify_UpdateIssueApiCall(ref gaxgrpc::ApiCall<UpdateIssueRequest, Issue> call);
 
         partial void Modify_CalculateIssueModelStatsApiCall(ref gaxgrpc::ApiCall<CalculateIssueModelStatsRequest, CalculateIssueModelStatsResponse> call);
 
@@ -3289,13 +4231,25 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_ExportInsightsDataRequest(ref ExportInsightsDataRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateIssueModelRequest(ref CreateIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateIssueModelRequest(ref UpdateIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetIssueModelRequest(ref GetIssueModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListIssueModelsRequest(ref ListIssueModelsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteIssueModelRequest(ref DeleteIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeployIssueModelRequest(ref DeployIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UndeployIssueModelRequest(ref UndeployIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetIssueRequest(ref GetIssueRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListIssuesRequest(ref ListIssuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateIssueRequest(ref UpdateIssueRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CalculateIssueModelStatsRequest(ref CalculateIssueModelStatsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3561,6 +4515,57 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return new lro::Operation<ExportInsightsDataResponse, ExportInsightsDataMetadata>(await _callExportInsightsData.Async(request, callSettings).ConfigureAwait(false), ExportInsightsDataOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>CreateIssueModel</c>.</summary>
+        public override lro::OperationsClient CreateIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<IssueModel, CreateIssueModelMetadata> CreateIssueModel(CreateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<IssueModel, CreateIssueModelMetadata>(_callCreateIssueModel.Sync(request, callSettings), CreateIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<IssueModel, CreateIssueModelMetadata>> CreateIssueModelAsync(CreateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<IssueModel, CreateIssueModelMetadata>(await _callCreateIssueModel.Async(request, callSettings).ConfigureAwait(false), CreateIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IssueModel UpdateIssueModel(UpdateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIssueModelRequest(ref request, ref callSettings);
+            return _callUpdateIssueModel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IssueModel> UpdateIssueModelAsync(UpdateIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIssueModelRequest(ref request, ref callSettings);
+            return _callUpdateIssueModel.Async(request, callSettings);
+        }
+
         /// <summary>
         /// Gets an issue model.
         /// </summary>
@@ -3609,6 +4614,91 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return _callListIssueModels.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>DeleteIssueModel</c>.</summary>
+        public override lro::OperationsClient DeleteIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteIssueModelMetadata> DeleteIssueModel(DeleteIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteIssueModelMetadata>(_callDeleteIssueModel.Sync(request, callSettings), DeleteIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an issue model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteIssueModelMetadata>> DeleteIssueModelAsync(DeleteIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteIssueModelMetadata>(await _callDeleteIssueModel.Async(request, callSettings).ConfigureAwait(false), DeleteIssueModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeployIssueModel</c>.</summary>
+        public override lro::OperationsClient DeployIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata> DeployIssueModel(DeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>(_callDeployIssueModel.Sync(request, callSettings), DeployIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deploys an issue model. Returns an error if a model is already deployed.
+        /// An issue model can only be used in analysis after it has been deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>> DeployIssueModelAsync(DeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployIssueModelResponse, DeployIssueModelMetadata>(await _callDeployIssueModel.Async(request, callSettings).ConfigureAwait(false), DeployIssueModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UndeployIssueModel</c>.</summary>
+        public override lro::OperationsClient UndeployIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata> UndeployIssueModel(UndeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>(_callUndeployIssueModel.Sync(request, callSettings), UndeployIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Undeploys an issue model.
+        /// An issue model can not be used in analysis after it has been undeployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>> UndeployIssueModelAsync(UndeployIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>(await _callUndeployIssueModel.Async(request, callSettings).ConfigureAwait(false), UndeployIssueModelOperationsClient);
+        }
+
         /// <summary>
         /// Gets an issue.
         /// </summary>
@@ -3655,6 +4745,30 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_ListIssuesRequest(ref request, ref callSettings);
             return _callListIssues.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Issue UpdateIssue(UpdateIssueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIssueRequest(ref request, ref callSettings);
+            return _callUpdateIssue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Issue> UpdateIssueAsync(UpdateIssueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateIssueRequest(ref request, ref callSettings);
+            return _callUpdateIssue.Async(request, callSettings);
         }
 
         /// <summary>
