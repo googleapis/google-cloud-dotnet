@@ -1862,4 +1862,17 @@ namespace Google.Cloud.ContactCenterInsights.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ConversationParticipant
+    {
+        /// <summary>
+        /// <see cref="ParticipantName"/>-typed view over the <see cref="DialogflowParticipantName"/> resource name
+        /// property.
+        /// </summary>
+        public ParticipantName DialogflowParticipantNameAsParticipantName
+        {
+            get => string.IsNullOrEmpty(DialogflowParticipantName) ? null : ParticipantName.Parse(DialogflowParticipantName, allowUnparsed: true);
+            set => DialogflowParticipantName = value?.ToString() ?? "";
+        }
+    }
 }

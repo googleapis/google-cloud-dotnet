@@ -1240,6 +1240,118 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdateIssueModelRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            IssueModel expectedResponse = new IssueModel
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
+                TrainingStats = new IssueModelLabelStats(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            IssueModel response = client.UpdateIssueModel(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIssueModelRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            IssueModel expectedResponse = new IssueModel
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
+                TrainingStats = new IssueModelLabelStats(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            IssueModel responseCallSettings = await client.UpdateIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            IssueModel responseCancellationToken = await client.UpdateIssueModelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateIssueModel()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            IssueModel expectedResponse = new IssueModel
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
+                TrainingStats = new IssueModelLabelStats(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            IssueModel response = client.UpdateIssueModel(request.IssueModel, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIssueModelAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueModelRequest request = new UpdateIssueModelRequest
+            {
+                IssueModel = new IssueModel(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            IssueModel expectedResponse = new IssueModel
+            {
+                IssueModelName = IssueModelName.FromProjectLocationIssueModel("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
+                TrainingStats = new IssueModelLabelStats(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            IssueModel responseCallSettings = await client.UpdateIssueModelAsync(request.IssueModel, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            IssueModel responseCancellationToken = await client.UpdateIssueModelAsync(request.IssueModel, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIssueModelRequestObject()
         {
             moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
@@ -1255,6 +1367,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1280,6 +1393,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1307,6 +1421,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1332,6 +1447,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1359,6 +1475,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1384,6 +1501,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 State = IssueModel.Types.State.Unspecified,
+                InputDataConfig = new IssueModel.Types.InputDataConfig(),
                 TrainingStats = new IssueModelLabelStats(),
             };
             mockGrpcClient.Setup(x => x.GetIssueModelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IssueModel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1787,6 +1905,106 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             ListIssuesResponse responseCallSettings = await client.ListIssuesAsync(request.ParentAsIssueModelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ListIssuesResponse responseCancellationToken = await client.ListIssuesAsync(request.ParentAsIssueModelName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateIssueRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Issue expectedResponse = new Issue
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            Issue response = client.UpdateIssue(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIssueRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Issue expectedResponse = new Issue
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            Issue responseCallSettings = await client.UpdateIssueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Issue responseCancellationToken = await client.UpdateIssueAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateIssue()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Issue expectedResponse = new Issue
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            Issue response = client.UpdateIssue(request.Issue, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateIssueAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateIssueRequest request = new UpdateIssueRequest
+            {
+                Issue = new Issue(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Issue expectedResponse = new Issue
+            {
+                IssueName = IssueName.FromProjectLocationIssueModelIssue("[PROJECT]", "[LOCATION]", "[ISSUE_MODEL]", "[ISSUE]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateIssueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Issue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            Issue responseCallSettings = await client.UpdateIssueAsync(request.Issue, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Issue responseCancellationToken = await client.UpdateIssueAsync(request.Issue, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
