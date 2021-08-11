@@ -218,15 +218,17 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder FromCommandText(string commandText)
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            commandText = commandText.Trim();
-            // Split(new char[0]) splits the string using all whitespace characters.
-            var commandSections = commandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
+
+            var strippedCommandText = RemoveLeadingCommentsAndHints(commandText, out bool removedCommentOrHint);
+            // Split((char[]) null) splits the string using all whitespace characters.
+            var commandSections = strippedCommandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
             {
                 throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
             }
 
-            string commandName = commandSections[0].ToUpperInvariant();
+            // Split on '-', '/', '#' to account for valid commands like 'select/* comment */ from...'
+            string commandName = commandSections[0].Split('-', '/', '#')[0].ToUpperInvariant();
             if (!s_commandToCommandType.TryGetValue(commandName, out var commandType))
             {
                 throw new ArgumentException($"'{commandName}' is not a recognized Spanner command.", nameof(commandText));
@@ -255,13 +257,137 @@ namespace Google.Cloud.Spanner.Data
                     }
                     else
                     {
+                        if (removedCommentOrHint)
+                        {
+                            throw new ArgumentException(
+                                $"Spanner {commandName} commands may be specified as '{commandName} <table>' with " +
+                                "parameters added to customize the command with filtering or updated values. " +
+                                "In that case, the commands are sent to Spanner as mutations which don't support comments " +
+                                "or hints, or any other SQL syntax feature. If you need to use comments or hints, " +
+                                "please use DML commands. You can read more about this topic in " +
+                                "https://cloud.google.com/spanner/docs/dml-versus-mutations.");
+                        }
                         targetTable = ValidateTableName(commandSections[1], nameof(commandText));
                         // This just normalizes the command text.
                         commandText = $"{commandName} {targetTable}";
                     }
                     break;
             }
-            return new SpannerCommandTextBuilder(commandText, commandType, targetTable, extraStatements: null);
+            return new SpannerCommandTextBuilder(commandText.Trim(), commandType, targetTable, extraStatements: null);
+        }
+
+        private static string RemoveLeadingCommentsAndHints(string commandText, out bool removedCommentOrHint)
+        {
+            int commandStartIndex = IndexOfCommandStart(commandText, out removedCommentOrHint);
+            if (commandStartIndex == commandText.Length)
+            {
+                throw new ArgumentException($"Unrecognized command '{commandText}'. " +
+                            $"It contains only comments, hints and/or white spaces.");
+            }
+            return commandText.Substring(commandStartIndex);
+        }
+
+        private static int IndexOfCommandStart(string command, out bool removedCommentOrHint)
+        {
+            int currentIndex = 0;
+            int loops = 0;
+            do
+            {
+                loops++;
+                SkipWhiteSpaces();
+            }
+            while (currentIndex < command.Length && (SkipLineComment() || SkipBlockComment() || SkipHint()));
+
+            removedCommentOrHint = loops > 1;
+            return currentIndex;
+
+            void SkipWhiteSpaces()
+            {
+                while (currentIndex < command.Length && char.IsWhiteSpace(command[currentIndex]))
+                {
+                    currentIndex++;
+                }
+            }
+
+            bool SkipLineComment()
+            {
+                if (ContainsAtIndex(command, "#", currentIndex) ||
+                    ContainsAtIndex(command, "--", currentIndex))
+                {
+                    int endOfLineIndex = SafeIndexOf(command, "\n", currentIndex + 1);
+                    if (endOfLineIndex < 0)
+                    {
+                        throw new ArgumentException($"Unrecognized command '{command}'. " +
+                            $"A line comment was started at position {currentIndex} but no end of line was found after.");
+                    }
+
+                    currentIndex = endOfLineIndex + 1;
+                    return true;
+
+                }
+                return false;
+            }
+
+            bool SkipBlockComment()
+            {
+                if (ContainsAtIndex(command, "/*", currentIndex))
+                {
+                    int endOfBLockIndex = SafeIndexOf(command, "*/", currentIndex + 2);
+                    if (endOfBLockIndex < 0)
+                    {
+                        throw new ArgumentException($"Unrecognized command '{command}'. " +
+                            $"A block comment was started at position {currentIndex} but no end of block comment was found after.");
+                    }
+                    else
+                    {
+                        currentIndex = endOfBLockIndex + 2;
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            bool SkipHint()
+            {
+                if (ContainsAtIndex(command, "@", currentIndex))
+                {
+                    int hintStartIndex = currentIndex;
+                    currentIndex++; // Skip @
+
+                    // There might be comments inside a hint, and there might be a }
+                    // inside a comment, so we need to skip the comments.
+                    while(currentIndex < command.Length && command[currentIndex] != '}')
+                    {
+                        // The char we are at may either be a comment start or
+                        // a char we don't care about. If it's a comment, we skip
+                        // the whole thing, else, we skip the char.
+                        if (!SkipLineComment() && !SkipBlockComment())
+                        {
+                            currentIndex++;
+                        }
+                    }
+
+                    if (currentIndex == command.Length)
+                    {
+                        throw new ArgumentException($"Unrecognized command '{command}'. " +
+                            $"A hint was started at position {hintStartIndex} but no end of hint was found after.");
+                    }
+
+                    currentIndex++; // Skip } which broke the loop.
+                    return true;
+                }
+
+                return false;
+            }
+
+            static int SafeIndexOf(string text, string value, int index) =>
+                // IndexOf will throw (instead of returning -1) if there are not enough characters
+                // left for value to be contained starting at index.
+                index + value.Length <= text.Length ? text.IndexOf(value, index) : -1;
+
+            static bool ContainsAtIndex(string text, string value, int index) =>
+                index + value.Length <= text.Length && text.IndexOf(value, index, value.Length) >= 0;
         }
 
         /// <inheritdoc />
