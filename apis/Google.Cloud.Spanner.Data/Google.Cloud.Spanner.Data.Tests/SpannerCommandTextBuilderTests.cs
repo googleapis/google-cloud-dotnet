@@ -230,9 +230,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("SELECT * FROM Foo@{FORCE_INDEX=`INDEX FOR SELECT`}", "SELECT * FROM Foo@{FORCE_INDEX=`INDEX FOR SELECT`}")]
         [InlineData("@{OPTIMIZER_VERSION=1 SELECT 1", "@{OPTIMIZER_VERSION=1 SELECT 1")]
         [InlineData("{OPTIMIZER_VERSION=1} SELECT 1", "{OPTIMIZER_VERSION=1} SELECT 1")]
-        public void RemoveStatementHintAndComments(string sql, string sqlWithoutHintsAndComments)
+        public void RemoveStatementHints(string sql, string sqlWithoutHints)
         {
-            Assert.Equal(sqlWithoutHintsAndComments, SpannerCommandTextBuilder.RemoveCommentsAndStatementHint(sql));
+            Assert.Equal(sqlWithoutHints, SpannerCommandTextBuilder.RemoveCommentsAndStatementHints(sql));
         }
     }
 }

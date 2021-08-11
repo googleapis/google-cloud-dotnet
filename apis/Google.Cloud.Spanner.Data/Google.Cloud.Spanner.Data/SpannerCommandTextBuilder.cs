@@ -221,7 +221,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
             commandText = commandText.Trim();
-            var trimmedCommandText = RemoveCommentsAndStatementHint(commandText);
+            var trimmedCommandText = RemoveCommentsAndStatementHints(commandText);
             // Split(new char[0]) splits the string using all whitespace characters.
             var commandSections = trimmedCommandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
@@ -426,7 +426,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="sql">The sql statement to strip for comments and statement hints</param>
         /// <returns>The sql statement without comments, statement hints, and leading and trailing spaces</returns>
-        internal static string RemoveCommentsAndStatementHint(string sql)
+        internal static string RemoveCommentsAndStatementHints(string sql)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             // First remove all comments from the statement and trim it.
