@@ -63,8 +63,9 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     },
                     NetworkInterfaces = {new NetworkInterface {Name = "default"}}
                 };
-                Operation insertOp = instancesClient.Insert(projectId, zone, instanceResource);
-                _fixture.PollUntilCompleted(insertOp, "create", _output);
+                var insertOp = instancesClient.Insert(projectId, zone, instanceResource);
+                var completed = insertOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
 
             void FetchInstance()
@@ -88,8 +89,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 Assert.Equal("тест", instance.Description);
                 Assert.Equal(0, instance.Scheduling.MinNodeCpus);
                 instance.Description = "";
-                Operation updateOp = instancesClient.Update(projectId, zone, instanceName, instance);
-                _fixture.PollUntilCompleted(updateOp, "update instance", _output);
+                var updateOp = instancesClient.Update(projectId, zone, instanceName, instance);
+                updateOp.PollUntilCompleted();
                 var fetched = instancesClient.Get(projectId, zone, instanceName);
                 Assert.Equal("", fetched.Description);
                 Assert.Equal(0, instance.Scheduling.MinNodeCpus);
@@ -98,10 +99,11 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             void DeleteInstance()
             {
                 _output.WriteLine($"Deleting instance with the name: {instanceName}");
-                Operation deleteOp = instancesClient.Delete(projectId, zone, instanceName);
-                deleteOp = _fixture.PollUntilCompleted(deleteOp, "delete", _output);
+                var deleteOp = instancesClient.Delete(projectId, zone, instanceName);
+                deleteOp = deleteOp.PollUntilCompleted();
+                var result = deleteOp.Result;
                 _output.WriteLine(
-                    $"Operation to delete instance completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
+                    $"Operation to delete instance completed: status {result.Status}; start time {result.StartTime}; end time {result.EndTime}");
             }
 
             void PatchInstance()
@@ -110,14 +112,14 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 {
                     EnableSecureBoot = true
                 };
-                Operation stopOp = instancesClient.Stop(projectId, zone, instanceName);
-                _fixture.PollUntilCompleted(stopOp, "stop", _output);
-                Operation patchOp = instancesClient.UpdateShieldedInstanceConfig(
+                var stopOp = instancesClient.Stop(projectId, zone, instanceName);
+                stopOp.PollUntilCompleted();
+                var patchOp = instancesClient.UpdateShieldedInstanceConfig(
                     projectId,
                     zone,
                     instanceName,
                     shieldedInstanceConfigResource);
-                _fixture.PollUntilCompleted(patchOp, "patch", _output);
+                patchOp.PollUntilCompleted();
                 Instance instance = instancesClient.Get(projectId, zone, instanceName);
                 Assert.Equal(true, instance.ShieldedInstanceConfig.EnableSecureBoot);
             }
@@ -161,40 +163,41 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             };
             try
             {
-                Operation insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
-                _fixture.PollUntilCompleted(insertTemplateOp, "insert template", _output);
+                var insertTemplateOp = instanceTemplatesClient.Insert(projectId, instanceTemplate);
+                var completed = insertTemplateOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
 
                 InstanceGroupManager instanceGroupManager = new InstanceGroupManager
                 {
-                    InstanceTemplate = insertTemplateOp.TargetLink,
+                    InstanceTemplate = completed.Result.TargetLink,
                     TargetSize = 0,
                     Name = instanceGroupManagerName,
                     BaseInstanceName = "dotnetgapic"
                 };
 
-                Operation insertIgmOp = instanceGroupManagersClient.Insert(projectId, zone, instanceGroupManager);
-                _fixture.PollUntilCompleted(insertIgmOp, "insert group manager with 0 size", _output);
+                var insertIgmOp = instanceGroupManagersClient.Insert(projectId, zone, instanceGroupManager);
+                insertIgmOp.PollUntilCompleted();
                 var inserted = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
                 Assert.Equal(0, inserted.TargetSize);
 
-                Operation resizeOp = instanceGroupManagersClient.Resize(
+                var resizeOp = instanceGroupManagersClient.Resize(
                     projectId,
                     zone,
                     instanceGroupManagerName,
                     1
                 );
-                _fixture.PollUntilCompleted(resizeOp, "resize to 1", _output);
+                resizeOp.PollUntilCompleted();
 
                 var resizedTo1 = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
                 Assert.Equal(1, resizedTo1.TargetSize);
 
-                Operation resizeToZeroOp = instanceGroupManagersClient.Resize(
+                var resizeToZeroOp = instanceGroupManagersClient.Resize(
                     projectId,
                     zone,
                     instanceGroupManagerName,
                     0
                 );
-                _fixture.PollUntilCompleted(resizeToZeroOp, "resize to 0", _output);
+                resizeToZeroOp.PollUntilCompleted();
 
                 var fetched = instanceGroupManagersClient.Get(projectId, zone, instanceGroupManagerName);
                 _output.WriteLine($"fetched target size is {fetched.TargetSize} ");
@@ -202,13 +205,11 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             }
             finally
             {
-                Operation deleteOp = instanceGroupManagersClient.Delete(projectId, zone, instanceGroupManagerName);
+                var deleteOp = instanceGroupManagersClient.Delete(projectId, zone, instanceGroupManagerName);
+                deleteOp.PollUntilCompleted();
 
-                _fixture.PollUntilCompleted(deleteOp, "delete igm", _output);
-
-                Operation deleteTemplateOp = instanceTemplatesClient.Delete(projectId, instanceTemplateName);
-
-                _fixture.PollUntilCompleted(deleteTemplateOp, "delete template", _output);
+                var deleteTemplateOp = instanceTemplatesClient.Delete(projectId, instanceTemplateName);
+                deleteTemplateOp.PollUntilCompleted();
             }
         }
     }
