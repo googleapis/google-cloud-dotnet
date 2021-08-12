@@ -212,6 +212,12 @@ namespace Google.Cloud.Shell.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CloudShellServiceClient> task);
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public CloudShellServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = CloudShellServiceClient.UseJwtAccessWithScopes;
+        }
+
         /// <summary>Builds the resulting client.</summary>
         public override CloudShellServiceClient Build()
         {
@@ -287,7 +293,19 @@ namespace Google.Cloud.Shell.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudShellServiceClient"/> using the default credentials, endpoint and

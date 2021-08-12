@@ -130,6 +130,12 @@ namespace Google.Cloud.Speech.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SpeechClient> task);
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public SpeechClientBuilder()
+        {
+            UseJwtAccessWithScopes = SpeechClient.UseJwtAccessWithScopes;
+        }
+
         /// <summary>Builds the resulting client.</summary>
         public override SpeechClient Build()
         {
@@ -198,7 +204,19 @@ namespace Google.Cloud.Speech.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="SpeechClient"/> using the default credentials, endpoint and settings. To
