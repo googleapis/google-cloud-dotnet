@@ -64,10 +64,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     NetworkTier = Address.Types.NetworkTier.Premium
                 };
 
-                Operation insertOperation = addressesClient.Insert(projectId, region, addressResource);
-                _output.WriteLine($"Operation to create address: {insertOperation.Name} status {insertOperation.Status}; start time {insertOperation.StartTime}");
-                insertOperation = _fixture.PollUntilCompleted(insertOperation, "create", _output);
-                _output.WriteLine($"Operation to create address completed: status {insertOperation.Status}; start time {insertOperation.StartTime}; end time {insertOperation.EndTime}");
+                var insertOperation = addressesClient.Insert(projectId, region, addressResource);
+                _output.WriteLine($"Operation to create address: {insertOperation.Metadata.Name} status {insertOperation.Metadata.Status}; start time {insertOperation.Metadata.StartTime}");
+                var completed = insertOperation.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
 
             void FetchNewAddress()
@@ -81,10 +81,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             void DeleteAddress()
             {
                 _output.WriteLine($"Deleting address with the name: {addressName}");
-                Operation deleteOp = addressesClient.Delete(projectId, region, addressName);
-                _output.WriteLine($"Operation to delete address: {deleteOp.Name} status {deleteOp.Status}; start time {deleteOp.StartTime}");
-                deleteOp = _fixture.PollUntilCompleted(deleteOp, "delete", _output);
-                _output.WriteLine($"Operation to delete address completed: status {deleteOp.Status}; start time {deleteOp.StartTime}; end time {deleteOp.EndTime}");
+                var deleteOp = addressesClient.Delete(projectId, region, addressName);
+                deleteOp = deleteOp.PollUntilCompleted();
+                var result = deleteOp.Result;
+                _output.WriteLine($"Operation to delete address completed: status {result.Status}; start time {result.StartTime}; end time {result.EndTime}");
             }
         }
     }
