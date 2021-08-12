@@ -13,9 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Google.Cloud.Tools.ReleaseManager.History;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
@@ -26,5 +24,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
     {
         public StructuredVersion NewVersion { get; set; }
         public string NewHistoryText { get; set; }
+        public HistoryFile HistoryFile { get; set; }
     }
 }

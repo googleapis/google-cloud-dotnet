@@ -29,13 +29,9 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             _apis = apis.ToList();
         }
 
-        public ReleaseProposal GetProposal(ApiMetadata api)
+        public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog)
         {
-            if (!_apis.Contains(api.Id))
-            {
-                return null;
-            }
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

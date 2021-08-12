@@ -30,7 +30,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public HashSet<string> Commits { get; set; }
 
-        ReleaseProposal IBatchCriterion.GetProposal(ApiMetadata api)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog)
         {
             return null;
         }
