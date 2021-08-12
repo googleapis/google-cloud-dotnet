@@ -221,6 +221,25 @@ generate_microgenerator_regapic() {
     $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
+  # Allow protos to be changed after proto/gRPC generation but before the
+  # GAPIC microgenerator. This is pretty extreme, but is used for service renaming.
+  if [[ -f $API_OUT_DIR/$1/midmicrogeneration.sh ]]
+  then
+    echo "Running mid-micro-generation script for $1"
+    (cd $API_OUT_DIR/$1; ./midmicrogeneration.sh)
+  fi
+
+  # Change extension of gRPC-generated files
+  if compgen -G "$GRPC_GENERATION_DIR/*.cs" > /dev/null
+  then
+    for grpc_output in $GRPC_GENERATION_DIR/*.cs
+    do
+      mv $grpc_output $(echo $grpc_output | sed -E 's/.cs$/.g.cs/g')
+    done
+    mv $GRPC_GENERATION_DIR/* $PRODUCTION_PACKAGE_DIR
+  fi
+  rm -rf $GRPC_GENERATION_DIR    
+
   # Client generation.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
