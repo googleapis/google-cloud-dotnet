@@ -27,6 +27,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal sealed class HistoryFile
     {
+        private static readonly string[] PreambleLines = new[] { "# Version history", "", "" };
         private const string MarkdownFile = "history.md";
         private static readonly Regex SectionHeader = new Regex(@"# Version (.*), released \d{4}-\d{2}-\d{2}");
 
@@ -42,6 +43,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         public static HistoryFile Load(string file)
         {
             var sections = new List<Section>();
+            if (!File.Exists(file))
+            {
+                sections.Add(new Section(null, PreambleLines.ToList()));
+                return new HistoryFile(sections);
+            }
+
             var lines = File.ReadAllLines(file);
 
             StructuredVersion currentVersion = null;

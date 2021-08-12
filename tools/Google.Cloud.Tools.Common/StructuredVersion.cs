@@ -119,6 +119,37 @@ namespace Google.Cloud.Tools.Common
         public override int GetHashCode() =>
             Major ^ Minor ^ Patch ^ (Build ?? 0) ^ (Prerelease ?? "").GetHashCode();
 
+        /// <summary>
+        /// Returns this structured version, after a "normal" version increment:
+        /// - Any GA release has its minor version bumped, and patch set to 0
+        /// - Any pre-release has the prerelease part bumped
+        /// </summary>
+        public StructuredVersion AfterIncrement()
+        {
+            // Any GA version just increments the minor version.
+            if (Prerelease is null)
+            {
+                return FromMajorMinorPatch(Major, Minor + 1, 0, null);
+            }
+
+            // For prereleases, expect something like "beta01" which should be incremented to "beta02".
+            var prereleasePattern = new Regex(@"^([^\d]*)(\d+)$");
+            var match = prereleasePattern.Match(Prerelease);
+            if (!match.Success)
+            {
+                throw new UserErrorException($"Don't know how to auto-increment version '{this}'");
+            }
+            var prefix = match.Groups[1].Value;
+            var suffix = match.Groups[2].Value;
+            if (!int.TryParse(suffix, out var counter))
+            {
+                throw new UserErrorException($"Don't know how to auto-increment version '{this}'");
+            }
+            counter++;
+            var newSuffix = counter.ToString().PadLeft(suffix.Length, '0');
+            return FromMajorMinorPatch(Major, Minor, Patch, $"{prefix}{newSuffix}");
+        }
+
         public override string ToString() => new StringBuilder($"{Major}.{Minor}.{Patch}")
             .Append(Build is null ? "" : $".{Build}")
             .Append(Prerelease is null ? "" : $"-{Prerelease}")

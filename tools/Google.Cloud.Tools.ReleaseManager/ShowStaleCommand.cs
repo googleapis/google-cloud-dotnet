@@ -13,11 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -35,41 +32,21 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
-            using (var repo = new Repository(root))
+            using var repo = new Repository(root);
+            var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
+
+            // TODO: Work out what to do with unreleased APIs. Do we want to show them or not?
+            foreach (var api in catalog.Apis)
             {
-                var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
-                foreach (var api in catalog.Apis)
+                var release = pendingChangesByApi[api];
+                var commits = release.Commits;
+                if (commits.Count == 0)
                 {
-                    MaybeShowStale(repo, allTags, catalog, api);
+                    continue;
                 }
+                string changes = commits.Count == 1 ? "change" : "changes";
+                Console.WriteLine($"{api.Id,-50} {release.ReleaseDate:yyyy-MM-dd}: {release.Version} + {commits.Count} {changes}");
             }
-        }
-
-        private static void MaybeShowStale(Repository repo, List<Tag> allTags, ApiCatalog catalog, ApiMetadata api)
-        {
-            string expectedTagName = $"{api.Id}-{api.Version}";
-            var latestRelease = allTags.FirstOrDefault(tag => tag.FriendlyName == expectedTagName);
-
-            // If we don't have any releases for the API (or couldn't find the tag), skip it.
-            if (latestRelease is null)
-            {
-                return;
-            }
-
-            var laterCommits = repo.Commits.TakeWhile(commit => commit.Sha != latestRelease.Target.Sha);
-            var relevantCommits = laterCommits
-                .Where(GitHelpers.CreateCommitPredicate(repo, catalog, api))
-                .Where(commit => !CommitOverrides.IsSkipped(commit))
-                .ToList();
-
-            // No changes
-            if (relevantCommits.Count == 0)
-            {
-                return;
-            }
-
-            string changes = relevantCommits.Count == 1 ? "change" : "changes";
-            Console.WriteLine($"{api.Id,-50} {latestRelease.GetDate():yyyy-MM-dd}: {api.Version} + {relevantCommits.Count} {changes}");
         }
     }
 }
