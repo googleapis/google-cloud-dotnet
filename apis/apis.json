@@ -1285,7 +1285,7 @@
     },
     {
       "id": "Google.Cloud.GkeHub.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "GKE Hub",
       "productUrl": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
@@ -1296,7 +1296,9 @@
         "anthos"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.4.0",
+        "Google.LongRunning": "2.2.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/gkehub/v1"
