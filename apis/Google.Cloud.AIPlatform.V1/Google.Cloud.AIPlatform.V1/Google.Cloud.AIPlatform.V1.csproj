@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.4.0, 4.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="[3.5.0, 4.0.0)" />
     <PackageReference Include="Google.Cloud.AutoML.V1" Version="[2.2.0, 3.0.0)" />
     <PackageReference Include="Google.Cloud.DataLabeling.V1Beta1" Version="[1.0.0-beta02, 2.0.0)" />
     <PackageReference Include="Google.LongRunning" Version="[2.2.0, 3.0.0)" />
