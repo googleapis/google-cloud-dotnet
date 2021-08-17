@@ -42,8 +42,12 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_namese42cd316",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 ReadTimeWindow = new TimeWindow(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse
             {
@@ -71,8 +75,12 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_namese42cd316",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 ReadTimeWindow = new TimeWindow(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             BatchGetAssetsHistoryResponse expectedResponse = new BatchGetAssetsHistoryResponse
             {
@@ -112,9 +120,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,9 +157,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -178,9 +194,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -209,9 +229,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -242,9 +266,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -273,9 +301,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -306,9 +338,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -337,9 +373,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -370,9 +410,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -401,9 +445,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -507,9 +555,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -539,9 +591,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -569,9 +625,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -597,9 +657,13 @@ namespace Google.Cloud.Asset.V1.Tests
                 {
                     "asset_types44c0f429",
                 },
-                ContentType = ContentType.IamPolicy,
+                ContentType = ContentType.AccessPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
                 Condition = new gt::Expr(),
+                RelationshipTypes =
+                {
+                    "relationship_typesfb911a9b",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);

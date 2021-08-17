@@ -41,6 +41,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
                 OutputConfig = new OutputConfig(),
+                RelationshipTypes = { "", },
             };
             // Make the request
             Operation<ExportAssetsResponse, ExportAssetsRequest> response = assetServiceClient.ExportAssets(request);
@@ -78,6 +79,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
                 OutputConfig = new OutputConfig(),
+                RelationshipTypes = { "", },
             };
             // Make the request
             Operation<ExportAssetsResponse, ExportAssetsRequest> response = await assetServiceClient.ExportAssetsAsync(request);
@@ -113,6 +115,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
+                RelationshipTypes = { "", },
             };
             // Make the request
             PagedEnumerable<ListAssetsResponse, Asset> response = assetServiceClient.ListAssets(request);
@@ -164,6 +167,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 ReadTime = new Timestamp(),
                 AssetTypes = { "", },
                 ContentType = ContentType.Unspecified,
+                RelationshipTypes = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<ListAssetsResponse, Asset> response = assetServiceClient.ListAssetsAsync(request);
@@ -395,6 +399,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
+                RelationshipTypes = { "", },
             };
             // Make the request
             BatchGetAssetsHistoryResponse response = assetServiceClient.BatchGetAssetsHistory(request);
@@ -415,6 +420,7 @@ namespace Google.Cloud.Asset.V1.Snippets
                 AssetNames = { "", },
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
+                RelationshipTypes = { "", },
             };
             // Make the request
             BatchGetAssetsHistoryResponse response = await assetServiceClient.BatchGetAssetsHistoryAsync(request);
