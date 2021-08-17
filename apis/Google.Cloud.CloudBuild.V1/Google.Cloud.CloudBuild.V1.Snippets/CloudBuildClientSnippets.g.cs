@@ -612,6 +612,134 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ApproveBuild</summary>
+        public void ApproveBuildRequestObject()
+        {
+            // Snippet: ApproveBuild(ApproveBuildRequest, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            ApproveBuildRequest request = new ApproveBuildRequest
+            {
+                Name = "",
+                ApprovalResult = new ApprovalResult(),
+            };
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.ApproveBuild(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceApproveBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveBuildAsync</summary>
+        public async Task ApproveBuildRequestObjectAsync()
+        {
+            // Snippet: ApproveBuildAsync(ApproveBuildRequest, CallSettings)
+            // Additional: ApproveBuildAsync(ApproveBuildRequest, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            ApproveBuildRequest request = new ApproveBuildRequest
+            {
+                Name = "",
+                ApprovalResult = new ApprovalResult(),
+            };
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.ApproveBuildAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceApproveBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveBuild</summary>
+        public void ApproveBuild()
+        {
+            // Snippet: ApproveBuild(string, ApprovalResult, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            ApprovalResult approvalResult = new ApprovalResult();
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.ApproveBuild(name, approvalResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceApproveBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveBuildAsync</summary>
+        public async Task ApproveBuildAsync()
+        {
+            // Snippet: ApproveBuildAsync(string, ApprovalResult, CallSettings)
+            // Additional: ApproveBuildAsync(string, ApprovalResult, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            ApprovalResult approvalResult = new ApprovalResult();
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.ApproveBuildAsync(name, approvalResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceApproveBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBuildTrigger</summary>
         public void CreateBuildTriggerRequestObject()
         {
