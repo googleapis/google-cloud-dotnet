@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxgrpcgcp = Google.Api.Gax.Grpc.Gcp;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
@@ -187,6 +186,9 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
 
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
+        protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableServiceApiClient.ChannelPool;
+
         /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
@@ -225,7 +227,7 @@ namespace Google.Cloud.Bigtable.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        internal static gaxgrpcgcp::GcpCallInvokerPool CallInvokerPool { get; } = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
 
         internal static bool UseJwtAccessWithScopes
         {

@@ -30,6 +30,12 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public BigtableServiceApiSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public BigtableClientBuilder()
+        {
+            UseJwtAccessWithScopes = BigtableServiceApiClient.UseJwtAccessWithScopes;
+        }
+
         /// <inheritdoc/>
         public override BigtableClient Build()
         {
