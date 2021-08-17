@@ -44,7 +44,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -79,6 +79,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -108,7 +109,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -143,6 +144,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -173,7 +175,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -208,6 +210,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -236,7 +239,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -271,6 +274,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -302,7 +306,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -337,6 +341,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -366,7 +371,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -401,6 +406,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -431,7 +437,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -466,6 +472,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =
@@ -494,7 +501,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -529,6 +536,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
                 Warnings =

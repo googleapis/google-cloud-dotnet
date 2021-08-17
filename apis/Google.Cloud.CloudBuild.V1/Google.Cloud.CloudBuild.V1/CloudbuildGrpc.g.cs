@@ -75,6 +75,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> __Marshaller_google_devtools_cloudbuild_v1_ListBuildsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_CancelBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CancelBuildRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.RetryBuildRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.BuildTrigger.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_GetBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest.Parser));
@@ -127,6 +128,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         __ServiceName,
         "RetryBuild",
         __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation> __Method_ApproveBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApproveBuild",
+        __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Method_CreateBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(
@@ -310,6 +318,22 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RetryBuild(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -845,6 +869,70 @@ namespace Google.Cloud.CloudBuild.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RetryBuildAsync(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RetryBuild, null, options, request);
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApproveBuild, null, options, request);
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApproveBuild, null, options, request);
       }
       /// <summary>
       /// Creates a new `BuildTrigger`.
@@ -1435,6 +1523,7 @@ namespace Google.Cloud.CloudBuild.V1 {
           .AddMethod(__Method_ListBuilds, serviceImpl.ListBuilds)
           .AddMethod(__Method_CancelBuild, serviceImpl.CancelBuild)
           .AddMethod(__Method_RetryBuild, serviceImpl.RetryBuild)
+          .AddMethod(__Method_ApproveBuild, serviceImpl.ApproveBuild)
           .AddMethod(__Method_CreateBuildTrigger, serviceImpl.CreateBuildTrigger)
           .AddMethod(__Method_GetBuildTrigger, serviceImpl.GetBuildTrigger)
           .AddMethod(__Method_ListBuildTriggers, serviceImpl.ListBuildTriggers)
@@ -1460,6 +1549,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceBinder.AddMethod(__Method_ListBuilds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListBuildsRequest, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse>(serviceImpl.ListBuilds));
       serviceBinder.AddMethod(__Method_CancelBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest, global::Google.Cloud.CloudBuild.V1.Build>(serviceImpl.CancelBuild));
       serviceBinder.AddMethod(__Method_RetryBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest, global::Google.LongRunning.Operation>(serviceImpl.RetryBuild));
+      serviceBinder.AddMethod(__Method_ApproveBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation>(serviceImpl.ApproveBuild));
       serviceBinder.AddMethod(__Method_CreateBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.CreateBuildTrigger));
       serviceBinder.AddMethod(__Method_GetBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.GetBuildTrigger));
       serviceBinder.AddMethod(__Method_ListBuildTriggers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse>(serviceImpl.ListBuildTriggers));

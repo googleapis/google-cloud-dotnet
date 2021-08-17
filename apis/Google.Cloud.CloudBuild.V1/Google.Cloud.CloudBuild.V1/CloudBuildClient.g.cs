@@ -54,6 +54,8 @@ namespace Google.Cloud.CloudBuild.V1
             CancelBuildSettings = existing.CancelBuildSettings;
             RetryBuildSettings = existing.RetryBuildSettings;
             RetryBuildOperationsSettings = existing.RetryBuildOperationsSettings.Clone();
+            ApproveBuildSettings = existing.ApproveBuildSettings;
+            ApproveBuildOperationsSettings = existing.ApproveBuildOperationsSettings.Clone();
             CreateBuildTriggerSettings = existing.CreateBuildTriggerSettings;
             GetBuildTriggerSettings = existing.GetBuildTriggerSettings;
             ListBuildTriggersSettings = existing.ListBuildTriggersSettings;
@@ -173,6 +175,36 @@ namespace Google.Cloud.CloudBuild.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RetryBuildOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudBuildClient.ApproveBuild</c> and <c>CloudBuildClient.ApproveBuildAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ApproveBuildSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudBuildClient.ApproveBuild</c> and
+        /// <c>CloudBuildClient.ApproveBuildAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ApproveBuildOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1200,6 +1232,142 @@ namespace Google.Cloud.CloudBuild.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RetryBuildAsync(string projectId, string id, st::CancellationToken cancellationToken) =>
             RetryBuildAsync(projectId, id, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> ApproveBuild(ApproveBuildRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> ApproveBuildAsync(ApproveBuildRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> ApproveBuildAsync(ApproveBuildRequest request, st::CancellationToken cancellationToken) =>
+            ApproveBuildAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ApproveBuild</c>.</summary>
+        public virtual lro::OperationsClient ApproveBuildOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ApproveBuild</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> PollOnceApproveBuild(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Build, BuildOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ApproveBuildOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ApproveBuild</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> PollOnceApproveBuildAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Build, BuildOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ApproveBuildOperationsClient, callSettings);
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the target build.
+        /// For example: "projects/{$project_id}/builds/{$build_id}"
+        /// </param>
+        /// <param name="approvalResult">
+        /// Approval decision and metadata.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> ApproveBuild(string name, ApprovalResult approvalResult, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveBuild(new ApproveBuildRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ApprovalResult = approvalResult,
+            }, callSettings);
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the target build.
+        /// For example: "projects/{$project_id}/builds/{$build_id}"
+        /// </param>
+        /// <param name="approvalResult">
+        /// Approval decision and metadata.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> ApproveBuildAsync(string name, ApprovalResult approvalResult, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveBuildAsync(new ApproveBuildRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ApprovalResult = approvalResult,
+            }, callSettings);
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the target build.
+        /// For example: "projects/{$project_id}/builds/{$build_id}"
+        /// </param>
+        /// <param name="approvalResult">
+        /// Approval decision and metadata.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> ApproveBuildAsync(string name, ApprovalResult approvalResult, st::CancellationToken cancellationToken) =>
+            ApproveBuildAsync(name, approvalResult, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
@@ -2499,6 +2667,8 @@ namespace Google.Cloud.CloudBuild.V1
 
         private readonly gaxgrpc::ApiCall<RetryBuildRequest, lro::Operation> _callRetryBuild;
 
+        private readonly gaxgrpc::ApiCall<ApproveBuildRequest, lro::Operation> _callApproveBuild;
+
         private readonly gaxgrpc::ApiCall<CreateBuildTriggerRequest, BuildTrigger> _callCreateBuildTrigger;
 
         private readonly gaxgrpc::ApiCall<GetBuildTriggerRequest, BuildTrigger> _callGetBuildTrigger;
@@ -2535,6 +2705,7 @@ namespace Google.Cloud.CloudBuild.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings);
             RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings);
+            ApproveBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApproveBuildOperationsSettings);
             RunBuildTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunBuildTriggerOperationsSettings);
             CreateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkerPoolOperationsSettings);
             DeleteWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkerPoolOperationsSettings);
@@ -2554,6 +2725,9 @@ namespace Google.Cloud.CloudBuild.V1
             _callRetryBuild = clientHelper.BuildApiCall<RetryBuildRequest, lro::Operation>(grpcClient.RetryBuildAsync, grpcClient.RetryBuild, effectiveSettings.RetryBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
             Modify_ApiCall(ref _callRetryBuild);
             Modify_RetryBuildApiCall(ref _callRetryBuild);
+            _callApproveBuild = clientHelper.BuildApiCall<ApproveBuildRequest, lro::Operation>(grpcClient.ApproveBuildAsync, grpcClient.ApproveBuild, effectiveSettings.ApproveBuildSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callApproveBuild);
+            Modify_ApproveBuildApiCall(ref _callApproveBuild);
             _callCreateBuildTrigger = clientHelper.BuildApiCall<CreateBuildTriggerRequest, BuildTrigger>(grpcClient.CreateBuildTriggerAsync, grpcClient.CreateBuildTrigger, effectiveSettings.CreateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callCreateBuildTrigger);
             Modify_CreateBuildTriggerApiCall(ref _callCreateBuildTrigger);
@@ -2605,6 +2779,8 @@ namespace Google.Cloud.CloudBuild.V1
 
         partial void Modify_RetryBuildApiCall(ref gaxgrpc::ApiCall<RetryBuildRequest, lro::Operation> call);
 
+        partial void Modify_ApproveBuildApiCall(ref gaxgrpc::ApiCall<ApproveBuildRequest, lro::Operation> call);
+
         partial void Modify_CreateBuildTriggerApiCall(ref gaxgrpc::ApiCall<CreateBuildTriggerRequest, BuildTrigger> call);
 
         partial void Modify_GetBuildTriggerApiCall(ref gaxgrpc::ApiCall<GetBuildTriggerRequest, BuildTrigger> call);
@@ -2643,6 +2819,8 @@ namespace Google.Cloud.CloudBuild.V1
         partial void Modify_CancelBuildRequest(ref CancelBuildRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RetryBuildRequest(ref RetryBuildRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ApproveBuildRequest(ref ApproveBuildRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBuildTriggerRequest(ref CreateBuildTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2864,6 +3042,43 @@ namespace Google.Cloud.CloudBuild.V1
         {
             Modify_RetryBuildRequest(ref request, ref callSettings);
             return new lro::Operation<Build, BuildOperationMetadata>(await _callRetryBuild.Async(request, callSettings).ConfigureAwait(false), RetryBuildOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ApproveBuild</c>.</summary>
+        public override lro::OperationsClient ApproveBuildOperationsClient { get; }
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Build, BuildOperationMetadata> ApproveBuild(ApproveBuildRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveBuildRequest(ref request, ref callSettings);
+            return new lro::Operation<Build, BuildOperationMetadata>(_callApproveBuild.Sync(request, callSettings), ApproveBuildOperationsClient);
+        }
+
+        /// <summary>
+        /// Approves or rejects a pending build.
+        /// 
+        /// If approved, the returned LRO will be analogous to the LRO returned from
+        /// a CreateBuild call.
+        /// 
+        /// If rejected, the returned LRO will be immediately done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Build, BuildOperationMetadata>> ApproveBuildAsync(ApproveBuildRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveBuildRequest(ref request, ref callSettings);
+            return new lro::Operation<Build, BuildOperationMetadata>(await _callApproveBuild.Async(request, callSettings).ConfigureAwait(false), ApproveBuildOperationsClient);
         }
 
         /// <summary>
