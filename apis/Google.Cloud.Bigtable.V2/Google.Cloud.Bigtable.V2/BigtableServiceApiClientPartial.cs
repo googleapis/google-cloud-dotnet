@@ -177,13 +177,6 @@ namespace Google.Cloud.Bigtable.V2
 
     public sealed partial class BigtableServiceApiClientBuilder : ClientBuilderBase<BigtableServiceApiClient>
     {
-        /// <summary>
-        /// Creates a new instance with no settings.
-        /// </summary>
-        public BigtableServiceApiClientBuilder()
-        {
-        }
-
         internal BigtableServiceApiClientBuilder(BigtableClientBuilder builder)
         {
             Settings = builder.Settings;
@@ -234,17 +227,19 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
 
-        /// <inheritdoc />
-        protected override bool CanUseChannelPool => false;
+        // Note: GetChannelPool() will still be called by base.CanUseChannelPool,
+        // so we do *have* a regular channel pool, but it's never asked to create any channels.
 
         /// <inheritdoc />
-        protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
+        protected override bool CanUseChannelPool => false;
 
         private GcpCallInvokerPool CallInvokerPool => BigtableServiceApiClient.CallInvokerPool;
     }
 
     public partial class BigtableServiceApiClient
     {
+        internal static GcpCallInvokerPool CallInvokerPool { get; } = new GcpCallInvokerPool(DefaultScopes, UseJwtAccessWithScopes);
+
         /// <summary>
         /// Gets the value which specifies routing for replication.
         /// If null or empty, the "default" application profile will be used by the server.
