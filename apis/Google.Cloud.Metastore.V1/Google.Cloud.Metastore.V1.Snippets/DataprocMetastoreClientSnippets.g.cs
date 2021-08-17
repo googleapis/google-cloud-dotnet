@@ -1670,5 +1670,947 @@ namespace Google.Cloud.Metastore.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for RestoreService</summary>
+        public void RestoreServiceRequestObject()
+        {
+            // Snippet: RestoreService(RestoreServiceRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            RestoreServiceRequest request = new RestoreServiceRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                RestoreType = Restore.Types.RestoreType.Unspecified,
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Restore, OperationMetadata> response = dataprocMetastoreClient.RestoreService(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceRestoreService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreServiceAsync</summary>
+        public async Task RestoreServiceRequestObjectAsync()
+        {
+            // Snippet: RestoreServiceAsync(RestoreServiceRequest, CallSettings)
+            // Additional: RestoreServiceAsync(RestoreServiceRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreServiceRequest request = new RestoreServiceRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                RestoreType = Restore.Types.RestoreType.Unspecified,
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Restore, OperationMetadata> response = await dataprocMetastoreClient.RestoreServiceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceRestoreServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreService</summary>
+        public void RestoreService()
+        {
+            // Snippet: RestoreService(string, string, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            string service = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            string backup = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Restore, OperationMetadata> response = dataprocMetastoreClient.RestoreService(service, backup);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceRestoreService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreServiceAsync</summary>
+        public async Task RestoreServiceAsync()
+        {
+            // Snippet: RestoreServiceAsync(string, string, CallSettings)
+            // Additional: RestoreServiceAsync(string, string, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string service = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            string backup = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Restore, OperationMetadata> response = await dataprocMetastoreClient.RestoreServiceAsync(service, backup);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceRestoreServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreService</summary>
+        public void RestoreServiceResourceNames()
+        {
+            // Snippet: RestoreService(ServiceName, BackupName, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            ServiceName service = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            BackupName backup = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Operation<Restore, OperationMetadata> response = dataprocMetastoreClient.RestoreService(service, backup);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceRestoreService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreServiceAsync</summary>
+        public async Task RestoreServiceResourceNamesAsync()
+        {
+            // Snippet: RestoreServiceAsync(ServiceName, BackupName, CallSettings)
+            // Additional: RestoreServiceAsync(ServiceName, BackupName, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceName service = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            BackupName backup = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Operation<Restore, OperationMetadata> response = await dataprocMetastoreClient.RestoreServiceAsync(service, backup);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Restore, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Restore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Restore, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceRestoreServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Restore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsRequestObject()
+        {
+            // Snippet: ListBackups(ListBackupsRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsRequestObjectAsync()
+        {
+            // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackups()
+        {
+            // Snippet: ListBackups(string, string, int?, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsAsync()
+        {
+            // Snippet: ListBackupsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsResourceNames()
+        {
+            // Snippet: ListBackups(ServiceName, string, int?, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsResourceNamesAsync()
+        {
+            // Snippet: ListBackupsAsync(ServiceName, string, int?, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = dataprocMetastoreClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupRequestObject()
+        {
+            // Snippet: GetBackup(GetBackupRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = dataprocMetastoreClient.GetBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupRequestObjectAsync()
+        {
+            // Snippet: GetBackupAsync(GetBackupRequest, CallSettings)
+            // Additional: GetBackupAsync(GetBackupRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = await dataprocMetastoreClient.GetBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackup()
+        {
+            // Snippet: GetBackup(string, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Backup response = dataprocMetastoreClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupAsync()
+        {
+            // Snippet: GetBackupAsync(string, CallSettings)
+            // Additional: GetBackupAsync(string, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Backup response = await dataprocMetastoreClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupResourceNames()
+        {
+            // Snippet: GetBackup(BackupName, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Backup response = dataprocMetastoreClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupResourceNamesAsync()
+        {
+            // Snippet: GetBackupAsync(BackupName, CallSettings)
+            // Additional: GetBackupAsync(BackupName, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Backup response = await dataprocMetastoreClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackupRequestObject()
+        {
+            // Snippet: CreateBackup(CreateBackupRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                BackupId = "",
+                Backup = new Backup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = dataprocMetastoreClient.CreateBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupRequestObjectAsync()
+        {
+            // Snippet: CreateBackupAsync(CreateBackupRequest, CallSettings)
+            // Additional: CreateBackupAsync(CreateBackupRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                BackupId = "",
+                Backup = new Backup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await dataprocMetastoreClient.CreateBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackup()
+        {
+            // Snippet: CreateBackup(string, Backup, string, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = dataprocMetastoreClient.CreateBackup(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupAsync()
+        {
+            // Snippet: CreateBackupAsync(string, Backup, string, CallSettings)
+            // Additional: CreateBackupAsync(string, Backup, string, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await dataprocMetastoreClient.CreateBackupAsync(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackupResourceNames()
+        {
+            // Snippet: CreateBackup(ServiceName, Backup, string, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = dataprocMetastoreClient.CreateBackup(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupResourceNamesAsync()
+        {
+            // Snippet: CreateBackupAsync(ServiceName, Backup, string, CallSettings)
+            // Additional: CreateBackupAsync(ServiceName, Backup, string, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await dataprocMetastoreClient.CreateBackupAsync(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupRequestObject()
+        {
+            // Snippet: DeleteBackup(DeleteBackupRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataprocMetastoreClient.DeleteBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupAsync(DeleteBackupRequest, CallSettings)
+            // Additional: DeleteBackupAsync(DeleteBackupRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataprocMetastoreClient.DeleteBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackup()
+        {
+            // Snippet: DeleteBackup(string, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataprocMetastoreClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupAsync()
+        {
+            // Snippet: DeleteBackupAsync(string, CallSettings)
+            // Additional: DeleteBackupAsync(string, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataprocMetastoreClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupResourceNames()
+        {
+            // Snippet: DeleteBackup(BackupName, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataprocMetastoreClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupAsync(BackupName, CallSettings)
+            // Additional: DeleteBackupAsync(BackupName, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataprocMetastoreClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

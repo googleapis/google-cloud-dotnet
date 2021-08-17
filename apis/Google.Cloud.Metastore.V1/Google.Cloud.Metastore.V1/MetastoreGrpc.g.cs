@@ -25,8 +25,8 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Metastore.V1 {
   /// <summary>
   /// Configures and manages metastore services.
-  /// Metastore services are fully managed, highly available, auto-scaled,
-  /// auto-healing, OSS-native deployments of technical metadata management
+  /// Metastore services are fully managed, highly available, autoscaled,
+  /// autohealing, OSS-native deployments of technical metadata management
   /// software. Each metastore service exposes a network endpoint through which
   /// metadata queries are served. Metadata queries can originate from a variety
   /// of sources, including Apache Hive, Apache Presto, and Apache Spark.
@@ -91,6 +91,13 @@ namespace Google.Cloud.Metastore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_CreateMetadataImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest> __Marshaller_google_cloud_metastore_v1_UpdateMetadataImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ExportMetadataRequest> __Marshaller_google_cloud_metastore_v1_ExportMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ExportMetadataRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.RestoreServiceRequest> __Marshaller_google_cloud_metastore_v1_RestoreServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.RestoreServiceRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListBackupsRequest> __Marshaller_google_cloud_metastore_v1_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListBackupsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.ListBackupsResponse> __Marshaller_google_cloud_metastore_v1_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.ListBackupsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.GetBackupRequest> __Marshaller_google_cloud_metastore_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.GetBackupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.Backup> __Marshaller_google_cloud_metastore_v1_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.Backup.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.CreateBackupRequest> __Marshaller_google_cloud_metastore_v1_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.CreateBackupRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Metastore.V1.DeleteBackupRequest> __Marshaller_google_cloud_metastore_v1_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Metastore.V1.DeleteBackupRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.Metastore.V1.ListServicesRequest, global::Google.Cloud.Metastore.V1.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.Metastore.V1.ListServicesRequest, global::Google.Cloud.Metastore.V1.ListServicesResponse>(
         grpc::MethodType.Unary,
@@ -160,6 +167,41 @@ namespace Google.Cloud.Metastore.V1 {
         __ServiceName,
         "ExportMetadata",
         __Marshaller_google_cloud_metastore_v1_ExportMetadataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1.RestoreServiceRequest, global::Google.LongRunning.Operation> __Method_RestoreService = new grpc::Method<global::Google.Cloud.Metastore.V1.RestoreServiceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreService",
+        __Marshaller_google_cloud_metastore_v1_RestoreServiceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1.ListBackupsRequest, global::Google.Cloud.Metastore.V1.ListBackupsResponse> __Method_ListBackups = new grpc::Method<global::Google.Cloud.Metastore.V1.ListBackupsRequest, global::Google.Cloud.Metastore.V1.ListBackupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackups",
+        __Marshaller_google_cloud_metastore_v1_ListBackupsRequest,
+        __Marshaller_google_cloud_metastore_v1_ListBackupsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1.GetBackupRequest, global::Google.Cloud.Metastore.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.Metastore.V1.GetBackupRequest, global::Google.Cloud.Metastore.V1.Backup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackup",
+        __Marshaller_google_cloud_metastore_v1_GetBackupRequest,
+        __Marshaller_google_cloud_metastore_v1_Backup);
+
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1.CreateBackupRequest, global::Google.LongRunning.Operation> __Method_CreateBackup = new grpc::Method<global::Google.Cloud.Metastore.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackup",
+        __Marshaller_google_cloud_metastore_v1_CreateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Metastore.V1.DeleteBackupRequest, global::Google.LongRunning.Operation> __Method_DeleteBackup = new grpc::Method<global::Google.Cloud.Metastore.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackup",
+        __Marshaller_google_cloud_metastore_v1_DeleteBackupRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -279,6 +321,61 @@ namespace Google.Cloud.Metastore.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportMetadata(global::Google.Cloud.Metastore.V1.ExportMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Restores a service from a backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreService(global::Google.Cloud.Metastore.V1.RestoreServiceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists backups in a service.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Metastore.V1.ListBackupsResponse> ListBackups(global::Google.Cloud.Metastore.V1.ListBackupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Metastore.V1.Backup> GetBackup(global::Google.Cloud.Metastore.V1.GetBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new backup in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackup(global::Google.Cloud.Metastore.V1.CreateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackup(global::Google.Cloud.Metastore.V1.DeleteBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -752,6 +849,226 @@ namespace Google.Cloud.Metastore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportMetadata, null, options, request);
       }
+      /// <summary>
+      /// Restores a service from a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RestoreService(global::Google.Cloud.Metastore.V1.RestoreServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restores a service from a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation RestoreService(global::Google.Cloud.Metastore.V1.RestoreServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreService, null, options, request);
+      }
+      /// <summary>
+      /// Restores a service from a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreServiceAsync(global::Google.Cloud.Metastore.V1.RestoreServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restores a service from a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreServiceAsync(global::Google.Cloud.Metastore.V1.RestoreServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreService, null, options, request);
+      }
+      /// <summary>
+      /// Lists backups in a service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Metastore.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Metastore.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists backups in a service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Metastore.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Metastore.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Lists backups in a service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Metastore.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists backups in a service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Metastore.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Metastore.V1.Backup GetBackup(global::Google.Cloud.Metastore.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Metastore.V1.Backup GetBackup(global::Google.Cloud.Metastore.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1.Backup> GetBackupAsync(global::Google.Cloud.Metastore.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Metastore.V1.Backup> GetBackupAsync(global::Google.Cloud.Metastore.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new backup in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Metastore.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Metastore.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new backup in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Metastore.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Metastore.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteBackup(global::Google.Cloud.Metastore.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteBackup(global::Google.Cloud.Metastore.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupAsync(global::Google.Cloud.Metastore.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupAsync(global::Google.Cloud.Metastore.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DataprocMetastoreClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -773,7 +1090,12 @@ namespace Google.Cloud.Metastore.V1 {
           .AddMethod(__Method_GetMetadataImport, serviceImpl.GetMetadataImport)
           .AddMethod(__Method_CreateMetadataImport, serviceImpl.CreateMetadataImport)
           .AddMethod(__Method_UpdateMetadataImport, serviceImpl.UpdateMetadataImport)
-          .AddMethod(__Method_ExportMetadata, serviceImpl.ExportMetadata).Build();
+          .AddMethod(__Method_ExportMetadata, serviceImpl.ExportMetadata)
+          .AddMethod(__Method_RestoreService, serviceImpl.RestoreService)
+          .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
+          .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
+          .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
+          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -792,6 +1114,11 @@ namespace Google.Cloud.Metastore.V1 {
       serviceBinder.AddMethod(__Method_CreateMetadataImport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.CreateMetadataImportRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMetadataImport));
       serviceBinder.AddMethod(__Method_UpdateMetadataImport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.UpdateMetadataImportRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMetadataImport));
       serviceBinder.AddMethod(__Method_ExportMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.ExportMetadataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportMetadata));
+      serviceBinder.AddMethod(__Method_RestoreService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.RestoreServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreService));
+      serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.ListBackupsRequest, global::Google.Cloud.Metastore.V1.ListBackupsResponse>(serviceImpl.ListBackups));
+      serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.GetBackupRequest, global::Google.Cloud.Metastore.V1.Backup>(serviceImpl.GetBackup));
+      serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
+      serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Metastore.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
     }
 
   }
