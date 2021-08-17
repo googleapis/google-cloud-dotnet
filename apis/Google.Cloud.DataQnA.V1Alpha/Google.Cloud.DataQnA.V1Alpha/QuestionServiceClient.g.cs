@@ -135,6 +135,12 @@ namespace Google.Cloud.DataQnA.V1Alpha
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public QuestionServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public QuestionServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = QuestionServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref QuestionServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<QuestionServiceClient> task);
@@ -222,7 +228,19 @@ namespace Google.Cloud.DataQnA.V1Alpha
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="QuestionServiceClient"/> using the default credentials, endpoint and

@@ -139,6 +139,12 @@ namespace Google.Cloud.Talent.V4
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TenantServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public TenantServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = TenantServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref TenantServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TenantServiceClient> task);
@@ -214,7 +220,19 @@ namespace Google.Cloud.Talent.V4
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TenantServiceClient"/> using the default credentials, endpoint and

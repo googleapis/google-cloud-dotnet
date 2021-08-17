@@ -144,6 +144,12 @@ namespace Google.Analytics.Data.V1Beta
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public BetaAnalyticsDataSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public BetaAnalyticsDataClientBuilder()
+        {
+            UseJwtAccessWithScopes = BetaAnalyticsDataClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref BetaAnalyticsDataClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<BetaAnalyticsDataClient> task);
@@ -219,7 +225,19 @@ namespace Google.Analytics.Data.V1Beta
             "https://www.googleapis.com/auth/analytics.readonly",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BetaAnalyticsDataClient"/> using the default credentials, endpoint and

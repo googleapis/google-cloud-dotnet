@@ -198,6 +198,12 @@ namespace Google.Cloud.StorageTransfer.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public StorageTransferServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public StorageTransferServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = StorageTransferServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref StorageTransferServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<StorageTransferServiceClient> task);
@@ -273,7 +279,19 @@ namespace Google.Cloud.StorageTransfer.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="StorageTransferServiceClient"/> using the default credentials, endpoint

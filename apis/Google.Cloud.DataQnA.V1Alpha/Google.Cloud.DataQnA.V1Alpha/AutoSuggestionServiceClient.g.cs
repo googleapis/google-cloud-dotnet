@@ -78,6 +78,12 @@ namespace Google.Cloud.DataQnA.V1Alpha
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public AutoSuggestionServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public AutoSuggestionServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = AutoSuggestionServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref AutoSuggestionServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<AutoSuggestionServiceClient> task);
@@ -216,7 +222,19 @@ namespace Google.Cloud.DataQnA.V1Alpha
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AutoSuggestionServiceClient"/> using the default credentials, endpoint

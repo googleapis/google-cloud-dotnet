@@ -76,6 +76,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public MessagesV1Beta3Settings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public MessagesV1Beta3ClientBuilder()
+        {
+            UseJwtAccessWithScopes = MessagesV1Beta3Client.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref MessagesV1Beta3Client client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<MessagesV1Beta3Client> task);
@@ -156,7 +162,19 @@ namespace Google.Cloud.Dataflow.V1Beta3
             "https://www.googleapis.com/auth/userinfo.email",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MessagesV1Beta3Client"/> using the default credentials, endpoint and

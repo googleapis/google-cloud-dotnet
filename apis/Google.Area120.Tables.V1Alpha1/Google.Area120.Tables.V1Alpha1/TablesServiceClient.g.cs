@@ -220,6 +220,12 @@ namespace Google.Area120.Tables.V1Alpha1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TablesServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public TablesServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = TablesServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref TablesServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TablesServiceClient> task);
@@ -314,7 +320,19 @@ namespace Google.Area120.Tables.V1Alpha1
             "https://www.googleapis.com/auth/tables",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TablesServiceClient"/> using the default credentials, endpoint and

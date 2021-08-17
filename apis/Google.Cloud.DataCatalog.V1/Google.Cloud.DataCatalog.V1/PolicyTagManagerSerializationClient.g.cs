@@ -106,6 +106,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public PolicyTagManagerSerializationSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public PolicyTagManagerSerializationClientBuilder()
+        {
+            UseJwtAccessWithScopes = PolicyTagManagerSerializationClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref PolicyTagManagerSerializationClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<PolicyTagManagerSerializationClient> task);
@@ -183,7 +189,19 @@ namespace Google.Cloud.DataCatalog.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PolicyTagManagerSerializationClient"/> using the default credentials,

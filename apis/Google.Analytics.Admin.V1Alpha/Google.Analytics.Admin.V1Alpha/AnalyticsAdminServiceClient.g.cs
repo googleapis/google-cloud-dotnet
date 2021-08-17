@@ -1086,6 +1086,12 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public AnalyticsAdminServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public AnalyticsAdminServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = AnalyticsAdminServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref AnalyticsAdminServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<AnalyticsAdminServiceClient> task);
@@ -1165,7 +1171,19 @@ namespace Google.Analytics.Admin.V1Alpha
             "https://www.googleapis.com/auth/analytics.readonly",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="AnalyticsAdminServiceClient"/> using the default credentials, endpoint
