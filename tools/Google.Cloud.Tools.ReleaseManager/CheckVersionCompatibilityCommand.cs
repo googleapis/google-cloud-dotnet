@@ -61,6 +61,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 if (lastVersion is null)
                 {
                     Console.WriteLine("No previous versions released; ignoring.");
+                    continue;
                 }
 
                 var newVersion = api.StructuredVersion;
