@@ -269,6 +269,12 @@ namespace Grafeas.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public GrafeasSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public GrafeasClientBuilder()
+        {
+            UseJwtAccessWithScopes = GrafeasClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref GrafeasClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GrafeasClient> task);
@@ -335,6 +341,18 @@ namespace Grafeas.V1
         /// <summary>The default Grafeas scopes.</summary>
         /// <remarks>The default Grafeas scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Creates a <see cref="GrafeasClient"/> which uses the specified call invoker for remote operations.

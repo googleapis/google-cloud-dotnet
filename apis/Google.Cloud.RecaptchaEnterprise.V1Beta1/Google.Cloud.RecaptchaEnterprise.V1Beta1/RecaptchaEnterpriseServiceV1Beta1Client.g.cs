@@ -168,6 +168,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public RecaptchaEnterpriseServiceV1Beta1Settings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public RecaptchaEnterpriseServiceV1Beta1ClientBuilder()
+        {
+            UseJwtAccessWithScopes = RecaptchaEnterpriseServiceV1Beta1Client.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref RecaptchaEnterpriseServiceV1Beta1Client client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<RecaptchaEnterpriseServiceV1Beta1Client> task);
@@ -242,7 +248,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RecaptchaEnterpriseServiceV1Beta1Client"/> using the default

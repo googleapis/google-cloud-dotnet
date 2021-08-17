@@ -297,6 +297,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public FirewallPoliciesSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public FirewallPoliciesClientBuilder()
+        {
+            UseJwtAccessWithScopes = FirewallPoliciesClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref FirewallPoliciesClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<FirewallPoliciesClient> task);
@@ -372,7 +378,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="FirewallPoliciesClient"/> using the default credentials, endpoint and

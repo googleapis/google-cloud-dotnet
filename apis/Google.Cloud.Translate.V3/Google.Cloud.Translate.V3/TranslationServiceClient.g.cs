@@ -240,6 +240,12 @@ namespace Google.Cloud.Translate.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TranslationServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public TranslationServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = TranslationServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref TranslationServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TranslationServiceClient> task);
@@ -315,7 +321,19 @@ namespace Google.Cloud.Translate.V3
             "https://www.googleapis.com/auth/cloud-translation",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TranslationServiceClient"/> using the default credentials, endpoint and

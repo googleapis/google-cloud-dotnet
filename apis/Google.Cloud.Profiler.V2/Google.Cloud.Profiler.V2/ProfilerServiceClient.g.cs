@@ -102,6 +102,12 @@ namespace Google.Cloud.Profiler.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ProfilerServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public ProfilerServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = ProfilerServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref ProfilerServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ProfilerServiceClient> task);
@@ -184,7 +190,19 @@ namespace Google.Cloud.Profiler.V2
             "https://www.googleapis.com/auth/monitoring.write",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProfilerServiceClient"/> using the default credentials, endpoint and

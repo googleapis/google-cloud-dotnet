@@ -106,6 +106,12 @@ namespace Google.Cloud.Debugger.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public Controller2Settings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public Controller2ClientBuilder()
+        {
+            UseJwtAccessWithScopes = Controller2Client.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref Controller2Client client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<Controller2Client> task);
@@ -200,7 +206,19 @@ namespace Google.Cloud.Debugger.V2
             "https://www.googleapis.com/auth/cloud_debugger",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="Controller2Client"/> using the default credentials, endpoint and

@@ -140,6 +140,12 @@ namespace Google.LongRunning
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public OperationsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public OperationsClientBuilder()
+        {
+            UseJwtAccessWithScopes = OperationsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref OperationsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OperationsClient> task);
@@ -213,7 +219,19 @@ namespace Google.LongRunning
         /// <remarks>The default Operations scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OperationsClient"/> using the default credentials, endpoint and

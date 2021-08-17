@@ -301,6 +301,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ClusterControllerSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public ClusterControllerClientBuilder()
+        {
+            UseJwtAccessWithScopes = ClusterControllerClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref ClusterControllerClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ClusterControllerClient> task);
@@ -375,7 +381,19 @@ namespace Google.Cloud.Dataproc.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ClusterControllerClient"/> using the default credentials, endpoint and

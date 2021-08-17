@@ -142,6 +142,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ExternalVpnGatewaysSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public ExternalVpnGatewaysClientBuilder()
+        {
+            UseJwtAccessWithScopes = ExternalVpnGatewaysClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref ExternalVpnGatewaysClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ExternalVpnGatewaysClient> task);
@@ -217,7 +223,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ExternalVpnGatewaysClient"/> using the default credentials, endpoint and

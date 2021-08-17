@@ -139,6 +139,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public BigtableServiceApiSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public BigtableServiceApiClientBuilder()
+        {
+            UseJwtAccessWithScopes = BigtableServiceApiClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref BigtableServiceApiClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<BigtableServiceApiClient> task);
@@ -220,6 +226,18 @@ namespace Google.Cloud.Bigtable.V2
         });
 
         internal static gaxgrpcgcp::GcpCallInvokerPool CallInvokerPool { get; } = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/> using the default credentials, endpoint and

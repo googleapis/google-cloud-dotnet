@@ -142,6 +142,12 @@ namespace Google.Cloud.Logging.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public MetricsServiceV2Settings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public MetricsServiceV2ClientBuilder()
+        {
+            UseJwtAccessWithScopes = MetricsServiceV2Client.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref MetricsServiceV2Client client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<MetricsServiceV2Client> task);
@@ -223,7 +229,19 @@ namespace Google.Cloud.Logging.V2
             "https://www.googleapis.com/auth/logging.write",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetricsServiceV2Client"/> using the default credentials, endpoint and
