@@ -327,7 +327,7 @@ namespace Google.Cloud.Functions.V1 {
     /// <summary>Field number for the "source_archive_url" field.</summary>
     public const int SourceArchiveUrlFieldNumber = 3;
     /// <summary>
-    /// The Google Cloud Storage URL, starting with gs://, pointing to the zip
+    /// The Google Cloud Storage URL, starting with `gs://`, pointing to the zip
     /// archive which contains the function.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -361,9 +361,9 @@ namespace Google.Cloud.Functions.V1 {
     /// The Google Cloud Storage signed URL used for source uploading, generated
     /// by calling [google.cloud.functions.v1.GenerateUploadUrl].
     ///
-    /// The signature is validated on write methods {Create, Update}
-    /// The signature is stripped from the Function object on read methods {Get,
-    /// List}
+    /// The signature is validated on write methods (Create, Update)
+    /// The signature is stripped from the Function object on read methods (Get,
+    /// List)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SourceUploadUrl {
@@ -443,7 +443,7 @@ namespace Google.Cloud.Functions.V1 {
     /// function, optional when updating an existing function. For a complete
     /// list of possible choices, see the
     /// [`gcloud` command
-    /// reference](/sdk/gcloud/reference/functions/deploy#--runtime).
+    /// reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Runtime {
@@ -564,8 +564,8 @@ namespace Google.Cloud.Functions.V1 {
     /// project. Otherwise, it must belong to a project within the same
     /// organization. The format of this field is either
     /// `projects/{project}/global/networks/{network}` or `{network}`, where
-    /// {project} is a project id where the network is defined, and {network} is
-    /// the short name of the network.
+    /// `{project}` is a project id where the network is defined, and `{network}`
+    /// is the short name of the network.
     ///
     /// This field is mutually exclusive with `vpc_connector` and will be replaced
     /// by it.
