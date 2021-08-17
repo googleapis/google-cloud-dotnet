@@ -568,7 +568,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "3.5.0"
+        "Google.Api.Gax.Grpc": "3.6.0-beta01"
       },
       "generator": "regapic",
       "protoPath": "google/cloud/compute/v1"
