@@ -50,65 +50,38 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
                 var prefix = api.Id + "-";
-                var previousVersions = tags
+                var lastVersion = tags
                     .Where(tag => tag.StartsWith(prefix))
                     .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
                     .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
                     .Select(StructuredVersion.FromString)
                     .OrderBy(v => v)
-                    .ToList();
+                    .LastOrDefault();
+
+                if (lastVersion is null)
+                {
+                    Console.WriteLine("No previous versions released; ignoring.");
+                }
 
                 var newVersion = api.StructuredVersion;
 
-                // First perform a "strict" check, where necessary, failing the build if the difference
-                // is inappropriate.
-                var (requiredVersion, requiredLevel) = GetRequiredCompatibility(api.StructuredVersion);
-                if (requiredVersion != null)
+                // If we're releasing a new version, we should check against the previous one.
+                // (For example, if this PR creates 1.2.0, then check against 1.1.0.)
+                // Otherwise, just expect minor changes.
+                Level requiredLevel = Level.Minor;
+                if (!lastVersion.Equals(newVersion))
                 {
-                    if (!previousVersions.Contains(requiredVersion))
-                    {
-                        throw new UserErrorException($"Expected to check compatibility with {requiredVersion}, but no corresponding tag found");
-                    }
-                    var actualLevel = CheckCompatibility(api, requiredVersion);
-                    if (actualLevel < requiredLevel)
-                    {
-                        throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
-                    }
+                    requiredLevel =
+                        lastVersion.Major != newVersion.Major ? Level.Major   // Major version bump: anything goes
+                        : lastVersion.Minor != newVersion.Minor ? Level.Minor // Minor version bump: minor changes are okay
+                        : Level.Identical;                                    // Patch version bump: API should be identical
                 }
 
-                // Next log the changes compared with the previous release (if we haven't already diffed it)
-                // in an informational way. (This can be used to improve or check release notes.)
-                var lastRelease = previousVersions.LastOrDefault();
-                if (lastRelease != null && !lastRelease.Equals(requiredVersion))
+                var actualLevel = CheckCompatibility(api, lastVersion);
+                if (actualLevel < requiredLevel)
                 {
-                    CheckCompatibility(api, lastRelease);
+                    throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
                 }
-            }
-        }
-
-        /// <summary>
-        /// Returns the previous version that the given new version *must* be compatible with,
-        /// and the required level of compatibility. The version part is null if no compatibility
-        /// check is required.
-        /// </summary>
-        private static (StructuredVersion version, Level level) GetRequiredCompatibility(StructuredVersion newVersion)
-        {
-            if (newVersion.Patch != 0)
-            {
-                // A patch version must be identical to major.minor.0.
-                var oldVersion = StructuredVersion.FromMajorMinorPatch(newVersion.Major, newVersion.Minor, 0, null);
-                return (oldVersion, Level.Identical);
-            }
-            else if (newVersion.Minor == 0)
-            {
-                // A new major version doesn't need to check anything.
-                return (null, Level.Identical);
-            }
-            else
-            {
-                // A new minor version must be compatible with the previous minor version
-                var oldVersion = StructuredVersion.FromMajorMinorPatch(newVersion.Major, newVersion.Minor - 1, 0, null);
-                return (oldVersion, Level.Minor);
             }
         }
 
