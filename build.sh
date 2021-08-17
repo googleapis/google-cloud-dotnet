@@ -151,14 +151,16 @@ for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
-  # ServiceDirectory is in apis/ for the sake of autosynth, but doesn't really build.
-  if [[ "$api" == "ServiceDirectory" ]]
-  then
-    continue
-  fi
-
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
+  
+  # The tools directory contains projects in the docs solution as well.
+  # If we're not careful, we end up trying to run tests that haven't
+  # been built.
+  if [[ "$api" == "tools" ]]
+  then
+    dotnet build -nologo -clp:NoSummary -v quiet -c Release docs
+  fi
 
   # On Linux, we don't have desktop .NET, so any projects which only
   # support desktop .NET are going to be broken. Just don't add them.
