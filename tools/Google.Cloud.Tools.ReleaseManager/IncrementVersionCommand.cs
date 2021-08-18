@@ -32,34 +32,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             // is annoying too, but it's insignficant really - and at least the code is simple.
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
-            var version = IncrementStructuredVersion(api.StructuredVersion).ToString();
+            var version = api.StructuredVersion.AfterIncrement().ToString();
             new SetVersionCommand().Execute(new[] { id, version });
-
-            StructuredVersion IncrementStructuredVersion(StructuredVersion originalVersion)
-            {
-                // Any GA version just increments the minor version.
-                if (originalVersion.Prerelease is null)
-                {
-                    return StructuredVersion.FromMajorMinorPatch(originalVersion.Major, originalVersion.Minor + 1, 0, null);
-                }
-
-                // For prereleases, expect something like "beta01" which should be incremented to "beta02".
-                var prereleasePattern = new Regex(@"^([^\d]*)(\d+)$");
-                var match = prereleasePattern.Match(originalVersion.Prerelease);
-                if (!match.Success)
-                {
-                    throw new UserErrorException($"Don't know how to auto-increment version '{originalVersion}'");
-                }
-                var prefix = match.Groups[1].Value;
-                var suffix = match.Groups[2].Value;
-                if (!int.TryParse(suffix, out var counter))
-                {
-                    throw new UserErrorException($"Don't know how to auto-increment version '{originalVersion}'");
-                }
-                counter++;
-                var newSuffix = counter.ToString().PadLeft(suffix.Length, '0');
-                return StructuredVersion.FromMajorMinorPatch(originalVersion.Major, originalVersion.Minor, originalVersion.Patch, $"{prefix}{newSuffix}");
-            }
         }
     }
 }
