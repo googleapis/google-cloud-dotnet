@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0-alpha04, released 2021-08-18
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.0.0-alpha03, released 2021-04-28
 
 - [Commit 294f56e](https://github.com/googleapis/google-cloud-dotnet/commit/294f56e): feat: Added ListWorkspaces, GetWorkspace, BatchDeleteRows APIs.
