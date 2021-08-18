@@ -1,0 +1,7 @@
+{
+  "ShowHistory": false,
+  "KnownCommits": {
+    "Commits": ["ac367e2"],
+    "HistoryOverride": "Enables support for self-signed JWTs\nSecond line"
+  }
+}

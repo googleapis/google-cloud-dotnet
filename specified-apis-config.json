@@ -1,0 +1,4 @@
+{
+  "DryRun": false,
+  "SpecifiedApis": ["Google.Cloud.Firestore.V1","Google.Cloud.Datastore.V1"]
+}

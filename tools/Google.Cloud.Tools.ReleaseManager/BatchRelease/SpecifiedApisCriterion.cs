@@ -13,25 +13,35 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using System;
+using LibGit2Sharp;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
     internal sealed class SpecifiedApisCriterion : IBatchCriterion
     {
-        private readonly List<string> _apis;
+        private readonly HashSet<string> _apis;
 
         internal SpecifiedApisCriterion(IEnumerable<string> apis)
         {
-            _apis = apis.ToList();
+            _apis = new HashSet<string>(apis);
         }
 
         public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog)
         {
-            throw new NotImplementedException();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            using var repo = new Repository(root);
+
+            foreach (var api in catalog.Apis)
+            {
+                if (!_apis.Contains(api.Id))
+                {
+                    continue;
+                }
+                var newVersion = api.StructuredVersion.AfterIncrement();
+
+                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion);
+            }
         }
     }
 }

@@ -38,7 +38,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override void ExecuteImpl(string[] args) => InternalExecute();
+
+        internal void InternalExecute()
         {
             string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
             if (string.IsNullOrEmpty(gitHubToken))

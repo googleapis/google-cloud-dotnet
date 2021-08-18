@@ -37,6 +37,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public bool DryRun { get; set; } = true;
 
+        /// <summary>
+        /// When true, display the new history text (both in dry-run mode and "do it" mode).
+        /// Defaults to true. Typically this is only disabled when everything will have the same history.
+        /// </summary>
+        public bool ShowHistory { get; set; } = true;
+
         // Library selection criteria. These properties are effectively mutually exclusive.
 
         /// <summary>

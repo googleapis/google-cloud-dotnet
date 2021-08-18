@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using LibGit2Sharp;
 using Newtonsoft.Json;
 using System.IO;
 using System.Linq;
@@ -38,12 +39,26 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 throw new UserErrorException("Batch release config must specify exactly one criterion.");
             }
 
-            var catalog = ApiCatalog.Load();
-            foreach (var api in catalog.Apis)
+            if (!config.DryRun)
             {
+                var root = DirectoryLayout.DetermineRootDirectory();
+                using var repo = new Repository(root);
 
+                if (repo.RetrieveStatus().IsDirty)
+                {
+                    throw new UserErrorException("In non-dry-run mode, the current branch must not have changes.");
+                }
+            }
+
+            var catalog = ApiCatalog.Load();
+            var criterion = criteria[0];
+            var proposals = criterion.GetProposals(catalog);
+
+            foreach (var proposal in proposals)
+            {
+                // Note: This takes into account the dry-run flag.
+                proposal.Execute(config);
             }
         }
     }
-
 }

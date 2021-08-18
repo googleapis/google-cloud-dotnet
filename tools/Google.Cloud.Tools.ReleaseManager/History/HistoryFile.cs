@@ -32,7 +32,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         private static readonly Regex SectionHeader = new Regex(@"# Version (.*), released \d{4}-\d{2}-\d{2}");
 
         /// <summary>
-        /// The sections within the history file.
+        /// The sections within the history file, in file order (reverse chronological).
         /// </summary>
         public List<Section> Sections { get; }
 

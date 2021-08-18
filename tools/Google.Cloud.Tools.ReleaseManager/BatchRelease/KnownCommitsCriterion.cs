@@ -13,7 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Cloud.Tools.ReleaseManager.History;
+using LibGit2Sharp;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
@@ -21,6 +24,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
     {
         /// <summary>
         /// If set, override the natural history with this text.
+        /// (The "header" from the natural history is preserved.)
         /// </summary>
         public string HistoryOverride { get; set; }
 
@@ -32,7 +36,33 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
         IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog)
         {
-            return null;
+            var root = DirectoryLayout.DetermineRootDirectory();
+            using var repo = new Repository(root);
+            var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
+
+            foreach (var api in catalog.Apis)
+            {
+                var pendingChanges = pendingChangesByApi[api];
+                var pendingCommits = pendingChanges.Commits.Select(commit => commit.Hash);
+                if (!Commits.SetEquals(pendingCommits))
+                {
+                    continue;
+                }
+                var newVersion = api.StructuredVersion.AfterIncrement();
+                var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion);
+
+                // Potentially replace the natural history with an override
+                if (!string.IsNullOrEmpty(HistoryOverride) && proposal.NewHistorySection is HistoryFile.Section newSection)
+                {
+                    var naturalLines = newSection.Lines;
+                    var overrideLines = HistoryOverride.Split('\n');
+                    var lines = naturalLines.Take(2).Concat(overrideLines).ToList();
+                    // We always add a blank line at the end of each section.
+                    lines.Add("");
+                    proposal.NewHistorySection = new HistoryFile.Section(newVersion, lines);
+                }
+                yield return proposal;
+            }
         }
     }
 }
