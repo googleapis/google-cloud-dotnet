@@ -74,7 +74,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Filestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Filestore.V1/latest) | 1.0.0 | Cloud Filestore |
 | [Google.Cloud.Firestore.Admin.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.Admin.V1/latest) | 2.2.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore/latest) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
-| [Google.Cloud.Firestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.V1/latest) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
+| [Google.Cloud.Firestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.V1/latest) | 2.4.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Functions.V1/latest) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
 | [Google.Cloud.GSuiteAddOns.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.GSuiteAddOns.V1/latest) | 1.0.0 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Gaming.V1/latest) | 1.1.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
