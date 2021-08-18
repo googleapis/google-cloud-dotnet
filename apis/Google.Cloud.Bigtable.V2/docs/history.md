@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.3.0, released 2021-08-18
+
+- [Commit b58fa0b](https://github.com/googleapis/google-cloud-dotnet/commit/b58fa0b): Fix Bigtable for self-signed JWTs
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): Regenerate all APIs with self-signed JWT support
+
+This release fixes a subtle bug that would cause BigtableServiceApiClient.Create() to fail when used with GAX 3.5.0, as well as enabling self-signed JWT support.
+
 # Version 2.2.0, released 2021-05-05
 
 - [Commit 9f5f0aa](https://github.com/googleapis/google-cloud-dotnet/commit/9f5f0aa): fix: Regenerate server-streaming calls with Google request params. Fixes [issue 6310](https://github.com/googleapis/google-cloud-dotnet/issues/6310).
