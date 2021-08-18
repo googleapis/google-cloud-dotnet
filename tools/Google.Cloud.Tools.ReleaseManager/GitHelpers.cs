@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
@@ -95,5 +96,38 @@ namespace Google.Cloud.Tools.ReleaseManager
             (commit.Author ?? commit.Committer).When;
 
         internal static string GetHashPrefix(this Commit commit) => commit.Sha.Substring(0, 7);
+
+        /// <summary>
+        /// Gets the set of pending changes for each API. Note that the release in the dictionary value
+        /// has the current version and date, but the pending changes (not the list of changes *in* that release).
+        /// </summary>
+        internal static Dictionary<ApiMetadata, Release> GetPendingChangesByApi(Repository repo, ApiCatalog catalog)
+        {
+            var allTags = repo.Tags.OrderByDescending(GetDate).ToList();
+            return catalog.Apis.ToDictionary(api => api, api => GetPendingChanges(api));
+
+            Release GetPendingChanges(ApiMetadata api)
+            {
+                string expectedTagName = $"{api.Id}-{api.Version}";
+                var latestRelease = allTags.FirstOrDefault(tag => tag.FriendlyName == expectedTagName);
+
+                if (latestRelease is null)
+                {
+                    // TODO: Work out what to do for unreleased APIs.
+                    // We should potentially go back to "the commit that first added the API" but that
+                    // may be tricky to work out.
+                    return new Release(api.StructuredVersion, tag: null, new GitCommit[0]);
+                }
+
+                var laterCommits = repo.Commits.TakeWhile(commit => commit.Sha != latestRelease?.Target.Sha);
+                var relevantCommits = laterCommits
+                    .Where(CreateCommitPredicate(repo, catalog, api))
+                    .Where(commit => !CommitOverrides.IsSkipped(commit))
+                    .Select(commit => new GitCommit(commit))
+                    .ToList();
+
+                return new Release(api.StructuredVersion, latestRelease, relevantCommits);
+            }
+        }
     }
 }
