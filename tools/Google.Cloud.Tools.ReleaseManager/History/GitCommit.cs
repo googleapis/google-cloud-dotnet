@@ -38,7 +38,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         private readonly Commit _libGit2Commit;
 
-        private string Hash { get; }
+        public string Hash { get; }
         private string Url { get; }
 
         internal GitCommit(Commit libGit2Commit)

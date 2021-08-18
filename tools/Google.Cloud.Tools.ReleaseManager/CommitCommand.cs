@@ -29,7 +29,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override void ExecuteImpl(string[] args) => InternalExecute();
+
+        internal void InternalExecute()
         {
             var diffs = FindChangedVersions();
             if (diffs.Count != 1)

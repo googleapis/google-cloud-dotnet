@@ -7,6 +7,8 @@
   "6bde7a3": "docs: Regenerate all APIs with service comments in client documentation",
   "f83bdf1": "fix: Apply timeouts to RPCs without retry",
   "947a573": "docs: Regenerate all clients with more explicit documentation",
+  "d9a3648": "fix: Fix Firestore and Datastore for self-signed JWTs",
+  "ac367e2": "feat: Regenerate all APIs to support self-signed JWTs",
   "0b0773d": "skip", // Enum generation change
   "5c05159": "skip", // Update copyright year
   "dfc101f": "skip", // Rename generated files to .g.cs
