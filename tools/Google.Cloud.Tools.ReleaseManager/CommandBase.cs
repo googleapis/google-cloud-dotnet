@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     {
         // The branch we're thinking of as primary (e.g. master). It may actually be some other branch for occasional
         // releases, but fundamentally it's "the current source of truth we're basing this release on".
-        private const string PrimaryBranch = "master";
+        internal const string PrimaryBranch = "master";
 
         private readonly int _expectedArgCount;
 

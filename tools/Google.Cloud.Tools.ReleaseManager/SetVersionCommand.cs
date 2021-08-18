@@ -29,7 +29,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             string id = args[0];
             string version = args[1];
+            InternalExecute(id, version);
+        }
 
+        internal void InternalExecute(string id, string version)
+        {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
 
