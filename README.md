@@ -13,7 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha07) | 1.0.0-alpha07 | [Analytics Admin](https://developers.google.com/analytics) |
+| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha07) | 1.0.0-alpha08 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha06) | 1.0.0-alpha06 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta04) | 1.0.0-beta04 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Apps.Script.Type](https://cloud.google.com/dotnet/docs/reference/Google.Apps.Script.Type/latest) | 1.0.0 | Version-agnostic types for Apps Script APIs |
@@ -54,7 +54,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Dataflow.V1Beta3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest) | 1.0.0-beta01 | [Dataflow](https://cloud.google.com/dataflow/docs/) |
 | [Google.Cloud.Dataproc.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataproc.V1/latest) | 3.1.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
 | [Google.Cloud.Datastore.Admin.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.Admin.V1/latest) | 1.2.0 | Cloud Datastore |
-| [Google.Cloud.Datastore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.V1/latest) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
+| [Google.Cloud.Datastore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.V1/latest) | 3.3.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Datastream.V1Alpha1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastream.V1Alpha1/latest) | 1.0.0-beta01 | [DataStream](https://cloud.google.com/datastream/docs) |
 | [Google.Cloud.Debugger.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Debugger.V2/latest) | 2.3.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DevTools.Common/latest) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
@@ -74,7 +74,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Filestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Filestore.V1/latest) | 1.0.0 | Cloud Filestore |
 | [Google.Cloud.Firestore.Admin.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.Admin.V1/latest) | 2.2.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore/latest) | 2.4.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
-| [Google.Cloud.Firestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.V1/latest) | 2.3.0 | [Firestore low-level API access](https://firebase.google.com) |
+| [Google.Cloud.Firestore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.V1/latest) | 2.4.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Functions.V1/latest) | 1.1.0 | [Cloud Functions](https://cloud.google.com/functions) |
 | [Google.Cloud.GSuiteAddOns.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.GSuiteAddOns.V1/latest) | 1.0.0 | [Google Workspace Add-ons](https://developers.google.com/gsuite/add-ons/overview) |
 | [Google.Cloud.Gaming.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Gaming.V1/latest) | 1.1.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
