@@ -14,7 +14,7 @@ Each package name links to the documentation for that package.
 | Package | Latest version | Description |
 |---------|----------------|-------------|
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha08) | 1.0.0-alpha08 | [Analytics Admin](https://developers.google.com/analytics) |
-| [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha05) | 1.0.0-alpha05 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
+| [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha06) | 1.0.0-alpha06 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta05) | 1.0.0-beta05 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Apps.Script.Type](https://cloud.google.com/dotnet/docs/reference/Google.Apps.Script.Type/latest) | 1.0.0 | Version-agnostic types for Apps Script APIs |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha04) | 1.0.0-alpha04 | Google Area 120 Tables |
