@@ -35,7 +35,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.BigQuery.Storage.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.BigQuery.Storage.V1/latest) | 2.3.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
 | [Google.Cloud.Bigtable.Admin.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.Admin.V2/latest) | 2.4.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.Common.V2/latest) | 2.1.0 | Common code used by Bigtable V2 APIs |
-| [Google.Cloud.Bigtable.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.V2/latest) | 2.2.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
+| [Google.Cloud.Bigtable.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.V2/latest) | 2.3.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Billing.Budgets.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Billing.Budgets.V1/latest) | 1.1.0 | [Cloud Billing Budget (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.Budgets.V1Beta1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Billing.Budgets.V1Beta1/latest) | 1.0.0-beta03 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Billing.V1/latest) | 2.2.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
