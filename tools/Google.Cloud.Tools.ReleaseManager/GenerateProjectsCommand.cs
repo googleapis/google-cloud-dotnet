@@ -231,6 +231,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 string productLink = api.ProductUrl is null
                     ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
                     : $"[{description}]({api.ProductUrl})";
+                // Add a version-neutral comment for the row. This avoids merge conflicts when two adjacent
+                // packages are released concurrently.
+                table.Add($"|<!-- Row for {api.Id} -->|||");
                 table.Add($"| {packageLink} | {api.Version} | {productLink} |");
             }
 
