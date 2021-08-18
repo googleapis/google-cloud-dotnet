@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.3.0, released 2021-08-18
+
+- [Commit d9a3648](https://github.com/googleapis/google-cloud-dotnet/commit/d9a3648): Fix Firestore and Datastore for self-signed JWTs
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): Regenerate all APIs to support self-signed JWTs
+
 # Version 3.2.0, released 2021-05-05
 
 - [Commit 8bb2981](https://github.com/googleapis/google-cloud-dotnet/commit/8bb2981): Use CopySettingsForEmulator in DatastoreDbBuilder
