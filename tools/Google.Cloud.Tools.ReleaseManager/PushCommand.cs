@@ -28,17 +28,21 @@ namespace Google.Cloud.Tools.ReleaseManager
     public sealed class PushCommand : CommandBase
     {
         private const string AccessTokenEnvironmentVariable = "GITHUB_ACCESS_TOKEN";
+        private const string AssigneeEnvironmentVariable = "RELEASE_PR_ASSIGNEE";
         private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
         private const string ApplicationName = "google-cloud-dotnet-release-manager";
         private const string AutoreleasePendingLabel = "autorelease: pending";
+        private const string AutomergeExactLabel = "automerge: exact";
 
         public PushCommand()
             : base("push", "Push the current branch to GitHub and create a pull request with an autorelease tag")
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override void ExecuteImpl(string[] args) => InternalExecute();
+
+        internal void InternalExecute()
         {
             string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
             if (string.IsNullOrEmpty(gitHubToken))
@@ -116,8 +120,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private string PushBranch(Repository repo, Remote origin, string gitHubToken)
         {
             var currentBranch = repo.Head;
-            var remoteBranchName = $"release-pr-{DateTime.UtcNow:yyyyMMddTHHmm'Z'}";
-            Console.WriteLine($"Pushing {currentBranch.FriendlyName} to {remoteBranchName} on origin");
+            var remoteBranchName = $"release-pr-{DateTime.UtcNow:yyyyMMddTHHmmss'Z'}";
             CredentialsHandler credentials = (url, user, cred) => new UsernamePasswordCredentials { Username = gitHubToken, Password = "" };
             // TODO: Work out why I can't pass currentBranch.FriendlyName in as the src.
             repo.Network.Push(origin, $"HEAD:refs/heads/{remoteBranchName}", new PushOptions { CredentialsProvider = credentials });
@@ -144,18 +147,21 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Body = string.Join('\n', pullRequestLines.Skip(1))
                 };
                 var pullRequest = await gitHubClient.PullRequest.Create(RepositoryOwner, RepositoryName, request);
-                Console.WriteLine($"Created pull request {pullRequest.Number}");
 
                 // Note: using a collection initializer looks reasonable, but fails with an NRE, because the Labels
                 // property is lazily initialized :(
                 var issueUpdate = new IssueUpdate();
                 issueUpdate.AddLabel(AutoreleasePendingLabel);
+                issueUpdate.AddLabel(AutomergeExactLabel);
+                string assignee = Environment.GetEnvironmentVariable(AssigneeEnvironmentVariable);
+                if (!string.IsNullOrEmpty(assignee))
+                {
+                    issueUpdate.AddAssignee(assignee);
+                }
                 await gitHubClient.Issue.Update(RepositoryOwner, RepositoryName, pullRequest.Number, issueUpdate);
 
-                Console.WriteLine($"Applied '{AutoreleasePendingLabel}' label to pull request.");
-                Console.WriteLine($"Done! When the following pull request is reviewed and merged, it will be automatically released:");
                 // We put the pull request URL on a line on its own to make it easier to copy/paste. 
-                Console.WriteLine(pullRequest.HtmlUrl);
+                Console.WriteLine($"Created release PR: {pullRequest.HtmlUrl} with remote branch {branch}");
             }
         }
 
