@@ -54,7 +54,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Dataflow.V1Beta3](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataflow.V1Beta3/latest) | 1.0.0-beta01 | [Dataflow](https://cloud.google.com/dataflow/docs/) |
 | [Google.Cloud.Dataproc.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Dataproc.V1/latest) | 3.1.0 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
 | [Google.Cloud.Datastore.Admin.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.Admin.V1/latest) | 1.2.0 | Cloud Datastore |
-| [Google.Cloud.Datastore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.V1/latest) | 3.2.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
+| [Google.Cloud.Datastore.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.V1/latest) | 3.3.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Datastream.V1Alpha1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastream.V1Alpha1/latest) | 1.0.0-beta01 | [DataStream](https://cloud.google.com/datastream/docs) |
 | [Google.Cloud.Debugger.V2](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Debugger.V2/latest) | 2.3.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DevTools.Common/latest) | 2.1.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
