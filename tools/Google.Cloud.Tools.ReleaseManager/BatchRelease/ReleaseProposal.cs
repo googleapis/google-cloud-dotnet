@@ -83,10 +83,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
             if (config.ShowHistory)
             {
-                if (ModifiedHistoryFile.Sections.Count > 1)
+                if (NewHistorySection is HistoryFile.Section section)
                 {
                     Console.WriteLine("New history text:");
-                    foreach (var line in NewHistorySection.Lines)
+                    foreach (var line in section.Lines)
                     {
                         Console.WriteLine($"  {line}");
                     }
@@ -105,6 +105,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             {
                 if (!ConfirmRelease())
                 {
+                    Console.WriteLine();
                     return;
                 }
             }
@@ -122,12 +123,11 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             new SetVersionCommand().InternalExecute(Id, NewVersion.ToString());
             ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(Id));
             new CommitCommand().InternalExecute();
-            //new PushCommand().InternalExecute();
+            new PushCommand().InternalExecute();
 
             // Go back to our current branch
             Commands.Checkout(repo, original);
-
-            Console.WriteLine("At this point I'd create a new branch, set the version, update the history file, commit and push");
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -163,13 +163,18 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         private void EditNewHistory()
         {
+            if (NewHistorySection is null)
+            {
+                Console.WriteLine("No history to edit.");
+                return;
+            }
             var editor = Environment.GetEnvironmentVariable("VISUAL");
             if (string.IsNullOrEmpty(editor))
             {
                 throw new UserErrorException("Unable to determine text editor. Please set the VISUAL environment variable");
             }
             string tempFile = Path.GetTempFileName();
-            File.WriteAllLines(tempFile, ModifiedHistoryFile.Sections[1].Lines);
+            File.WriteAllLines(tempFile, NewHistorySection.Lines);
             var process = Process.Start(editor, tempFile);
             process.WaitForExit();
 
@@ -179,6 +184,11 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             }
             var lines = File.ReadAllLines(tempFile).ToList();
             NewHistorySection = new HistoryFile.Section(NewVersion, lines);
+            Console.WriteLine("New history text:");
+            foreach (var line in lines)
+            {
+                Console.WriteLine($"  {line}");
+            }
         }
     }
 }
