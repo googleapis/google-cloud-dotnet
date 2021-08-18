@@ -30,7 +30,7 @@
     },
     {
       "id": "Google.Analytics.Data.V1Beta",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "Google Analytics Data",
       "productUrl": "https://developers.google.com/analytics",
