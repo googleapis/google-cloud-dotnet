@@ -970,7 +970,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
