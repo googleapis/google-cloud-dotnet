@@ -1279,7 +1279,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1288,7 +1289,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1297,7 +1299,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1323,7 +1326,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1349,7 +1353,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1375,7 +1380,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1401,7 +1407,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1427,7 +1434,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -2662,7 +2670,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2674,7 +2683,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
