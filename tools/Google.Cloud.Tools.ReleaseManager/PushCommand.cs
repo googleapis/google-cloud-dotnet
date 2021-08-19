@@ -160,8 +160,8 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 await gitHubClient.Issue.Update(RepositoryOwner, RepositoryName, pullRequest.Number, issueUpdate);
 
-                // We put the pull request URL on a line on its own to make it easier to copy/paste. 
-                Console.WriteLine($"Created release PR: {pullRequest.HtmlUrl} with remote branch {branch}");
+                // The PR link is useful to be able to click on, and occasionally the release branch is useful.
+                Console.WriteLine($"Created branch {branch} and PR {pullRequest.HtmlUrl}");
             }
         }
 
