@@ -147,7 +147,7 @@
     },
     {
       "id": "Google.Cloud.AppEngine.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "App Engine Audit Data",
       "productUrl": "https://cloud.google.com/appengine",
