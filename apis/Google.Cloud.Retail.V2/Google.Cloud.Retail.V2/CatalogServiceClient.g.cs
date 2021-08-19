@@ -562,8 +562,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -607,8 +607,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -652,8 +652,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -697,8 +697,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -748,8 +748,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -799,8 +799,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -847,8 +847,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -898,8 +898,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -949,8 +949,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// Full resource name of the catalog, such as
@@ -967,8 +967,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,8 +982,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -997,8 +997,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1012,8 +1012,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1033,8 +1033,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1054,8 +1054,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1072,8 +1072,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1093,8 +1093,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1114,8 +1114,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="catalog">
         /// The parent catalog resource name, such as
@@ -1275,8 +1275,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1323,8 +1323,8 @@ namespace Google.Cloud.Retail.V2
         /// {newBranch}.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1341,8 +1341,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1359,8 +1359,8 @@ namespace Google.Cloud.Retail.V2
         /// method under a specified parent catalog.
         /// 
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

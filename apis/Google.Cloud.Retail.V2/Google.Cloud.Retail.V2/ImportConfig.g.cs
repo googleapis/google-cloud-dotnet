@@ -1820,13 +1820,13 @@ namespace Google.Cloud.Retail.V2 {
         /// Can only be while using
         /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource].
         ///
-        /// Add the IAM permission “BigQuery Data Viewer” for
+        /// Add the IAM permission "BigQuery Data Viewer" for
         /// cloud-retail-customer-data-access@system.gserviceaccount.com before
         /// using this feature otherwise an error is thrown.
         ///
         /// This feature is only available for users who have Retail Search enabled.
-        /// Contact Retail Support (retail-search-support@google.com) if you are
-        /// interested in using Retail Search.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
@@ -3091,7 +3091,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. BigQuery input source.
     ///
-    /// Add the IAM permission “BigQuery Data Viewer” for
+    /// Add the IAM permission "BigQuery Data Viewer" for
     /// cloud-retail-customer-data-access@system.gserviceaccount.com before
     /// using this feature otherwise an error is thrown.
     /// </summary>

@@ -238,8 +238,8 @@ namespace Google.Cloud.Retail.V2 {
     /// * user-data
     ///
     /// * cloud-retail
-    ///   This option is not automatically enabled. Before using cloud-retail,
-    ///   contact retail-search-support@google.com first.
+    ///   This option requires additional allowlisting. Before using cloud-retail,
+    ///   contact Cloud Retail support team first.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Dataset {
@@ -253,9 +253,11 @@ namespace Google.Cloud.Retail.V2 {
     public const int MaxSuggestionsFieldNumber = 5;
     private int maxSuggestions_;
     /// <summary>
-    /// Completion max suggestions.
+    /// Completion max suggestions. If left unset or set to 0, then will fallback
+    /// to the configured value [CompletionConfig.max_suggestions][].
     ///
-    /// The maximum allowed max suggestions is 20. The default value is 20.
+    /// The maximum allowed max suggestions is 20. If it is set higher, it will be
+    /// capped by 20.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxSuggestions {
@@ -602,9 +604,9 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Retail.V2.CompleteQueryResponse.Types.RecentSearchResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.CompleteQueryResponse.Types.RecentSearchResult> recentSearchResults_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.CompleteQueryResponse.Types.RecentSearchResult>();
     /// <summary>
-    /// Matched recent searches of this user. This field is a restricted feature.
-    /// Contact Retail Support (retail-search-support@google.com) if you are
-    /// interested in enabling it.
+    /// Matched recent searches of this user. The maximum number of recent searches
+    /// is 10. This field is a restricted feature. Contact Retail Search support
+    /// team if you are interested in enabling it.
     ///
     /// This feature is only available when
     /// [CompleteQueryRequest.visitor_id][google.cloud.retail.v2.CompleteQueryRequest.visitor_id]
