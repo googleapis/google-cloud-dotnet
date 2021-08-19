@@ -50,7 +50,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             "cXVlc3QilgEKGlN0cmVhbWluZ1JlY29nbml0aW9uQ29uZmlnEkUKBmNvbmZp",
             "ZxgBIAEoCzIwLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLlJlY29n",
             "bml0aW9uQ29uZmlnQgPgQQISGAoQc2luZ2xlX3V0dGVyYW5jZRgCIAEoCBIX",
-            "Cg9pbnRlcmltX3Jlc3VsdHMYAyABKAgi5AgKEVJlY29nbml0aW9uQ29uZmln",
+            "Cg9pbnRlcmltX3Jlc3VsdHMYAyABKAgivgkKEVJlY29nbml0aW9uQ29uZmln",
             "ElAKCGVuY29kaW5nGAEgASgOMj4uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAx",
             "YmV0YTEuUmVjb2duaXRpb25Db25maWcuQXVkaW9FbmNvZGluZxIZChFzYW1w",
             "bGVfcmF0ZV9oZXJ0ehgCIAEoBRIbChNhdWRpb19jaGFubmVsX2NvdW50GAcg",
@@ -59,7 +59,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             "YXRpdmVfbGFuZ3VhZ2VfY29kZXMYEiADKAkSGAoQbWF4X2FsdGVybmF0aXZl",
             "cxgEIAEoBRIYChBwcm9mYW5pdHlfZmlsdGVyGAUgASgIEkMKCmFkYXB0YXRp",
             "b24YFCABKAsyLy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5TcGVl",
-            "Y2hBZGFwdGF0aW9uEkUKD3NwZWVjaF9jb250ZXh0cxgGIAMoCzIsLmdvb2ds",
+            "Y2hBZGFwdGF0aW9uElgKGHRyYW5zY3JpcHRfbm9ybWFsaXphdGlvbhgYIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLlRyYW5zY3JpcHRO",
+            "b3JtYWxpemF0aW9uEkUKD3NwZWVjaF9jb250ZXh0cxgGIAMoCzIsLmdvb2ds",
             "ZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLlNwZWVjaENvbnRleHQSIAoYZW5h",
             "YmxlX3dvcmRfdGltZV9vZmZzZXRzGAggASgIEh4KFmVuYWJsZV93b3JkX2Nv",
             "bmZpZGVuY2UYDyABKAgSJAocZW5hYmxlX2F1dG9tYXRpY19wdW5jdHVhdGlv",
@@ -172,7 +174,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.TranscriptOutputConfig), global::Google.Cloud.Speech.V1P1Beta1.TranscriptOutputConfig.Parser, new[]{ "GcsUri" }, new[]{ "OutputType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig), global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "AudioChannelCount", "EnableSeparateRecognitionPerChannel", "LanguageCode", "AlternativeLanguageCodes", "MaxAlternatives", "ProfanityFilter", "Adaptation", "SpeechContexts", "EnableWordTimeOffsets", "EnableWordConfidence", "EnableAutomaticPunctuation", "EnableSpokenPunctuation", "EnableSpokenEmojis", "EnableSpeakerDiarization", "DiarizationSpeakerCount", "DiarizationConfig", "Metadata", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig), global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "AudioChannelCount", "EnableSeparateRecognitionPerChannel", "LanguageCode", "AlternativeLanguageCodes", "MaxAlternatives", "ProfanityFilter", "Adaptation", "TranscriptNormalization", "SpeechContexts", "EnableWordTimeOffsets", "EnableWordConfidence", "EnableAutomaticPunctuation", "EnableSpokenPunctuation", "EnableSpokenEmojis", "EnableSpeakerDiarization", "DiarizationSpeakerCount", "DiarizationConfig", "Metadata", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeakerDiarizationConfig), global::Google.Cloud.Speech.V1P1Beta1.SpeakerDiarizationConfig.Parser, new[]{ "EnableSpeakerDiarization", "MinSpeakerCount", "MaxSpeakerCount", "SpeakerTag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata), global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Parser, new[]{ "InteractionType", "IndustryNaicsCodeOfAudio", "MicrophoneDistance", "OriginalMediaType", "RecordingDeviceType", "RecordingDeviceName", "OriginalMimeType", "ObfuscatedId", "AudioTopic" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType), typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.MicrophoneDistance), typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.OriginalMediaType), typeof(global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.RecordingDeviceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechContext), global::Google.Cloud.Speech.V1P1Beta1.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
@@ -1526,6 +1528,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       maxAlternatives_ = other.maxAlternatives_;
       profanityFilter_ = other.profanityFilter_;
       adaptation_ = other.adaptation_ != null ? other.adaptation_.Clone() : null;
+      transcriptNormalization_ = other.transcriptNormalization_ != null ? other.transcriptNormalization_.Clone() : null;
       speechContexts_ = other.speechContexts_.Clone();
       enableWordTimeOffsets_ = other.enableWordTimeOffsets_;
       enableWordConfidence_ = other.enableWordConfidence_;
@@ -1717,6 +1720,23 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       get { return adaptation_; }
       set {
         adaptation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transcript_normalization" field.</summary>
+    public const int TranscriptNormalizationFieldNumber = 24;
+    private global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization transcriptNormalization_;
+    /// <summary>
+    /// Use transcription normalization to automatically replace parts of the
+    /// transcript with phrases of your choosing. For StreamingRecognize, this
+    /// normalization only applies to stable partial transcripts (stability > 0.8)
+    /// and final transcripts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization TranscriptNormalization {
+      get { return transcriptNormalization_; }
+      set {
+        transcriptNormalization_ = value;
       }
     }
 
@@ -1987,6 +2007,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (MaxAlternatives != other.MaxAlternatives) return false;
       if (ProfanityFilter != other.ProfanityFilter) return false;
       if (!object.Equals(Adaptation, other.Adaptation)) return false;
+      if (!object.Equals(TranscriptNormalization, other.TranscriptNormalization)) return false;
       if(!speechContexts_.Equals(other.speechContexts_)) return false;
       if (EnableWordTimeOffsets != other.EnableWordTimeOffsets) return false;
       if (EnableWordConfidence != other.EnableWordConfidence) return false;
@@ -2014,6 +2035,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (MaxAlternatives != 0) hash ^= MaxAlternatives.GetHashCode();
       if (ProfanityFilter != false) hash ^= ProfanityFilter.GetHashCode();
       if (adaptation_ != null) hash ^= Adaptation.GetHashCode();
+      if (transcriptNormalization_ != null) hash ^= TranscriptNormalization.GetHashCode();
       hash ^= speechContexts_.GetHashCode();
       if (EnableWordTimeOffsets != false) hash ^= EnableWordTimeOffsets.GetHashCode();
       if (EnableWordConfidence != false) hash ^= EnableWordConfidence.GetHashCode();
@@ -2118,6 +2140,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (enableSpokenEmojis_ != null) {
         _single_enableSpokenEmojis_codec.WriteTagAndValue(output, EnableSpokenEmojis);
       }
+      if (transcriptNormalization_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(TranscriptNormalization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2203,6 +2229,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (enableSpokenEmojis_ != null) {
         _single_enableSpokenEmojis_codec.WriteTagAndValue(ref output, EnableSpokenEmojis);
       }
+      if (transcriptNormalization_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(TranscriptNormalization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2236,6 +2266,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
       if (adaptation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Adaptation);
+      }
+      if (transcriptNormalization_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TranscriptNormalization);
       }
       size += speechContexts_.CalculateSize(_repeated_speechContexts_codec);
       if (EnableWordTimeOffsets != false) {
@@ -2309,6 +2342,12 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           Adaptation = new global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation();
         }
         Adaptation.MergeFrom(other.Adaptation);
+      }
+      if (other.transcriptNormalization_ != null) {
+        if (transcriptNormalization_ == null) {
+          TranscriptNormalization = new global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization();
+        }
+        TranscriptNormalization.MergeFrom(other.TranscriptNormalization);
       }
       speechContexts_.Add(other.speechContexts_);
       if (other.EnableWordTimeOffsets != false) {
@@ -2467,6 +2506,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             }
             break;
           }
+          case 194: {
+            if (transcriptNormalization_ == null) {
+              TranscriptNormalization = new global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization();
+            }
+            input.ReadMessage(TranscriptNormalization);
+            break;
+          }
         }
       }
     #endif
@@ -2578,6 +2624,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             if (enableSpokenEmojis_ == null || value != false) {
               EnableSpokenEmojis = value;
             }
+            break;
+          }
+          case 194: {
+            if (transcriptNormalization_ == null) {
+              TranscriptNormalization = new global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization();
+            }
+            input.ReadMessage(TranscriptNormalization);
             break;
           }
         }
