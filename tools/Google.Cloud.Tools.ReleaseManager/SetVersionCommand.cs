@@ -29,10 +29,10 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             string id = args[0];
             string version = args[1];
-            InternalExecute(id, version, rewriteReadme: true);
+            InternalExecute(id, version);
         }
 
-        internal void InternalExecute(string id, string version, bool rewriteReadme)
+        internal void InternalExecute(string id, string version)
         {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
@@ -47,10 +47,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var apiNames = catalog.CreateIdHashSet();
             GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
             GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            if (rewriteReadme)
-            {
-                GenerateProjectsCommand.RewriteReadme(catalog);
-            }
+            GenerateProjectsCommand.RewriteReadme(catalog);
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;

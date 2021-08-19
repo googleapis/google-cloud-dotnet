@@ -32,16 +32,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         public bool ConfirmRelease { get; set; } = true;
 
         /// <summary>
-        /// Whether or not to rewrite the root README.md file for each release.
-        /// This is normally a good idea, but if you're releasing APIs which are adjacent
-        /// to each other in the README, the README file (and only that) will cause
-        /// conflicts. In such cases, it's simpler to create a single PR regenerating the README
-        /// after all the release PRs have been merged.
-        /// Defaults to true.
-        /// </summary>
-        public bool RewriteReadme { get; set; } = true;
-
-        /// <summary>
         /// When true, indicates which libraries would be released and what the history update would
         /// look like, but doesn't make any changes or release anything. Defaults to true.
         /// </summary>
