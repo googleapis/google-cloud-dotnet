@@ -629,7 +629,7 @@
     },
     {
       "id": "Google.Cloud.DataFusion.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Cloud Data Fusion",
       "productUrl": "https://cloud.google.com/data-fusion/docs/",
