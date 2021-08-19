@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.3.0, released 2021-08-19
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.2.0, released 2021-08-10
 
 - [Commit c13f1e3](https://github.com/googleapis/google-cloud-dotnet/commit/c13f1e3): feat: Publish message definitions for new Cloud Datastore migration logging steps.
