@@ -25,7 +25,7 @@ the deployed code.
 # Note
 When running on environments that limit or disable CPU usage for background activities, for instance
 [Google Cloud Run](https://cloud.google.com/run/docs/tips/general#avoiding_background_activities), take care
-not to use the timed buffer options for any of Logging, Tracing or Error Reporting. Take into account
+not to use the timed buffer options for any of Logging, Tracing or Error Reporting unless you deploy your container using Cloud Run's `--no-cpu-throttling` flag. Take into account
 that the timed buffer is used for all of these components by default so you will need to explicitly
 configure the buffers by using the `Google.Cloud.Diagnostics.AspNetCore.LoggerOptions`,
 `Google.Cloud.Diagnostics.Common.TraceOptions` and `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
