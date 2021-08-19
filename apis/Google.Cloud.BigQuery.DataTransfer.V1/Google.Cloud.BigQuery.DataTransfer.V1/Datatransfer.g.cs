@@ -1950,9 +1950,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         /// </summary>
         [pbr::OriginalName("GOOGLE_PLUS_AUTHORIZATION_CODE")] GooglePlusAuthorizationCode = 2,
         /// <summary>
-        /// Use First Party Client OAuth. First Party Client OAuth doesn't require a
-        /// refresh token to get an offline access token. Instead, it uses a
-        /// client-signed JWT assertion to retrieve an access token.
+        /// Use First Party OAuth.
         /// </summary>
         [pbr::OriginalName("FIRST_PARTY_OAUTH")] FirstPartyOauth = 3,
       }
@@ -6847,8 +6845,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         /// <summary>
         /// Start time of the range of transfer runs. For example,
         /// `"2017-05-25T00:00:00+00:00"`. The start_time must be strictly less than
-        /// the end_time. Creates transfer runs where run_time is in the range betwen
-        /// start_time (inclusive) and end_time (exlusive).
+        /// the end_time. Creates transfer runs where run_time is in the range
+        /// between start_time (inclusive) and end_time (exclusive).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -6864,8 +6862,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         /// <summary>
         /// End time of the range of transfer runs. For example,
         /// `"2017-05-30T00:00:00+00:00"`. The end_time must not be in the future.
-        /// Creates transfer runs where run_time is in the range betwen start_time
-        /// (inclusive) and end_time (exlusive).
+        /// Creates transfer runs where run_time is in the range between start_time
+        /// (inclusive) and end_time (exclusive).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
