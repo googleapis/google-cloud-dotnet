@@ -33,13 +33,6 @@ The following JSON shows the general options, with their default values.
   // When true, each release (and history) is confirmed manually at the console.
   "ConfirmRelease": true,
 
-  // Whether or not to rewrite the root README.md file for each release.
-  // This is normally a good idea, but if you're releasing APIs which are adjacent
-  // to each other in the README, the README file (and only that) will cause
-  // conflicts. In such cases, it's simpler to create a single PR regenerating the README
-  // after all the release PRs have been merged.
-  "RewriteReadme": true,
-
   // When true, indicates which libraries would be released and what the history update would
   // look like, but doesn't make any changes or release anything.
   "DryRun": true,
