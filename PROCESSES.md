@@ -207,13 +207,15 @@ you need to.
 
 
 6. Run `./prepare-release.sh push` to push the current branch and
-create a pull request with the `autorelease: pending` tag. Note that
-this checks that there are no project references from
-APIs being released now to APIs that *aren't* being released.
-Without this check, it's possible for a released version to depend
-on unreleased changes. This uses the `GITHUB_ACCESS_TOKEN`
-environment variable to authenticate with the API, so make this is
-set beforehand. The access token should include the `repo` scope.
+create a pull request with the `autorelease: pending` and
+`automerge: exact` labels. If the `RELEASE_PR_ASSIGNEE` environment
+variable is set, the PR is created with that assignee. Note that
+this command checks that there are no project references from APIs
+being released now to APIs that *aren't* being released. Without
+this check, it's possible for a released version to depend on
+unreleased changes. This uses the `GITHUB_ACCESS_TOKEN` environment
+variable to authenticate with the API, so make sure this is set
+beforehand. The access token should include the `repo` scope.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
@@ -264,3 +266,14 @@ The Kokoro build will:
   - Push packages to nuget.org
   - Push documentation to GitHub packages
   - Push documentation to googelapis.dev
+
+## Batch releasing
+
+Occasionally (e.g. after regenerating all libraries with a generator
+change, or after a GAX release) it can be useful to perform many
+releases in quick succession.
+
+The release manager tool has a batch release command for this
+purpose. This is a relatively advanced usage scenario, and is
+documented [alongside the source
+code](tools/Google.Cloud.Tools.ReleaseManager/BatchRelease/README.md).

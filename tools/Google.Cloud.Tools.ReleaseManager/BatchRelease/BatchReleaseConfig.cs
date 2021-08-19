@@ -18,6 +18,8 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
+    // Please update README.md when modifying this file.
+
     /// <summary>
     /// Configuration for the BatchReleaseCommand.
     /// </summary>
@@ -31,7 +33,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
         /// <summary>
         /// Whether or not to rewrite the root README.md file for each release.
-        /// This is normally a good idea, but if you're releasing a APIs which are adjacent
+        /// This is normally a good idea, but if you're releasing APIs which are adjacent
         /// to each other in the README, the README file (and only that) will cause
         /// conflicts. In such cases, it's simpler to create a single PR regenerating the README
         /// after all the release PRs have been merged.
