@@ -120,7 +120,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             var releaseBranch = repo.CreateBranch(branchName, CommandBase.PrimaryBranch);
             Commands.Checkout(repo, releaseBranch);
 
-            new SetVersionCommand().InternalExecute(Id, NewVersion.ToString());
+            new SetVersionCommand().InternalExecute(Id, NewVersion.ToString(), rewriteReadme: config.RewriteReadme);
             ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(Id));
             new CommitCommand().InternalExecute();
             new PushCommand().InternalExecute();
