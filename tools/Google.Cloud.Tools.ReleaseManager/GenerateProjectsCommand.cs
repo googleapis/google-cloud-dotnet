@@ -215,8 +215,10 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 string url = ApiMetadata.IsCloudPackage(api.Id)
                     ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest"
-                    : $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}";
-                string packageLink = $"[{api.Id}]({url})";
+                    : $"https://googleapis.dev/dotnet/{api.Id}/latest";
+                string referenceDocsLink = $"[{api.Id}]({url})";
+
+                string packageLinkAndBadge = $"[![NuGet](https://img.shields.io/nuget/v/{api.Id})](https://nuget.org/packages/{api.Id})";
 
                 // Disambiguate direct API packages for the same product.
                 string description = api.EffectiveListingDescription;
@@ -231,7 +233,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 string productLink = api.ProductUrl is null
                     ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
                     : $"[{description}]({api.ProductUrl})";
-                table.Add($"| {packageLink} | {api.Version} | {productLink} |");
+                table.Add($"| {referenceDocsLink} | {packageLinkAndBadge} | {productLink} |");
             }
 
             var newContent = linesBefore.Concat(table).Concat(linesAfter);
