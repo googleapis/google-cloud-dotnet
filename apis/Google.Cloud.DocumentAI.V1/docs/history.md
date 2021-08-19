@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.2.0, released 2021-08-19
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.1.0, released 2021-06-22
 
 - [Commit 1a7f5e6](https://github.com/googleapis/google-cloud-dotnet/commit/1a7f5e6): feat: update ReviewDocumentRequest to allow set priority and enable validation.
