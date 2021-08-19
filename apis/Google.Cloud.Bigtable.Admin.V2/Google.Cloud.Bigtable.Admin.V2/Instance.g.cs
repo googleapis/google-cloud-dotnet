@@ -51,32 +51,32 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "S05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAISDAoIUkVTSVpJTkcQ",
             "AxIMCghESVNBQkxFRBAEOmDqQV0KH2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29t",
             "L0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
-            "bmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0i7gMKCkFwcFByb2ZpbGUSDAoEbmFt",
+            "bmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0igwQKCkFwcFByb2ZpbGUSDAoEbmFt",
             "ZRgBIAEoCRIMCgRldGFnGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEmcK",
             "HW11bHRpX2NsdXN0ZXJfcm91dGluZ191c2VfYW55GAUgASgLMj4uZ29vZ2xl",
             "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuTXVsdGlDbHVzdGVyUm91",
             "dGluZ1VzZUFueUgAElsKFnNpbmdsZV9jbHVzdGVyX3JvdXRpbmcYBiABKAsy",
             "OS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5TaW5nbGVD",
-            "bHVzdGVyUm91dGluZ0gAGhsKGU11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnka",
-            "TgoUU2luZ2xlQ2x1c3RlclJvdXRpbmcSEgoKY2x1c3Rlcl9pZBgBIAEoCRIi",
-            "ChphbGxvd190cmFuc2FjdGlvbmFsX3dyaXRlcxgCIAEoCDpq6kFnCiJiaWd0",
-            "YWJsZS5nb29nbGVhcGlzLmNvbS9BcHBQcm9maWxlEkFwcm9qZWN0cy97cHJv",
-            "amVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vYXBwUHJvZmlsZXMve2FwcF9w",
-            "cm9maWxlfUIQCg5yb3V0aW5nX3BvbGljeULQAgocY29tLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2Fk",
-            "bWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xl",
-            "XENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6Qmln",
-            "dGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
-            "a2V5fWIGcHJvdG8z"));
+            "bHVzdGVyUm91dGluZ0gAGjAKGU11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnkS",
+            "EwoLY2x1c3Rlcl9pZHMYASADKAkaTgoUU2luZ2xlQ2x1c3RlclJvdXRpbmcS",
+            "EgoKY2x1c3Rlcl9pZBgBIAEoCRIiChphbGxvd190cmFuc2FjdGlvbmFsX3dy",
+            "aXRlcxgCIAEoCDpq6kFnCiJiaWd0YWJsZS5nb29nbGVhcGlzLmNvbS9BcHBQ",
+            "cm9maWxlEkFwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5j",
+            "ZX0vYXBwUHJvZmlsZXMve2FwcF9wcm9maWxlfUIQCg5yb3V0aW5nX3BvbGlj",
+            "eULQAgocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQ",
+            "cm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3Rh",
+            "YmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy",
+            "6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBeAohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
+            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType", "EncryptionConfig" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
           }));
     }
@@ -1535,12 +1535,27 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public MultiClusterRoutingUseAny(MultiClusterRoutingUseAny other) : this() {
+          clusterIds_ = other.clusterIds_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public MultiClusterRoutingUseAny Clone() {
           return new MultiClusterRoutingUseAny(this);
+        }
+
+        /// <summary>Field number for the "cluster_ids" field.</summary>
+        public const int ClusterIdsFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_clusterIds_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> clusterIds_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The set of clusters to route to. The order is ignored; clusters will be
+        /// tried in order of distance. If left empty, all clusters are eligible.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<string> ClusterIds {
+          get { return clusterIds_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1556,12 +1571,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if(!clusterIds_.Equals(other.clusterIds_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
+          hash ^= clusterIds_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1578,6 +1595,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          clusterIds_.WriteTo(output, _repeated_clusterIds_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1587,6 +1605,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          clusterIds_.WriteTo(ref output, _repeated_clusterIds_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1596,6 +1615,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
+          size += clusterIds_.CalculateSize(_repeated_clusterIds_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1607,6 +1627,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (other == null) {
             return;
           }
+          clusterIds_.Add(other.clusterIds_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1621,6 +1642,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 10: {
+                clusterIds_.AddEntriesFrom(input, _repeated_clusterIds_codec);
+                break;
+              }
             }
           }
         #endif
@@ -1635,6 +1660,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 10: {
+                clusterIds_.AddEntriesFrom(ref input, _repeated_clusterIds_codec);
+                break;
+              }
             }
           }
         }
