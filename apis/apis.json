@@ -437,7 +437,7 @@
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1Beta1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Cloud Billing Budget",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
