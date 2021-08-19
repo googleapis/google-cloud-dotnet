@@ -26,33 +26,39 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc3BlZWNoL3YxcDFiZXRhMS9yZXNvdXJjZS5wcm90",
             "bxIdZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEaGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
-            "gwIKC0N1c3RvbUNsYXNzEgwKBG5hbWUYASABKAkSFwoPY3VzdG9tX2NsYXNz",
-            "X2lkGAIgASgJEkMKBWl0ZW1zGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVj",
-            "aC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MuQ2xhc3NJdGVtGhoKCUNsYXNzSXRl",
-            "bRINCgV2YWx1ZRgBIAEoCTps6kFpCiFzcGVlY2guZ29vZ2xlYXBpcy5jb20v",
-            "Q3VzdG9tQ2xhc3MSRHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9jdXN0b21DbGFzc2VzL3tjdXN0b21fY2xhc3N9IvkBCglQaHJh",
-            "c2VTZXQSDAoEbmFtZRgBIAEoCRJACgdwaHJhc2VzGAIgAygLMi8uZ29vZ2xl",
-            "LmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuUGhyYXNlU2V0LlBocmFzZRINCgVi",
-            "b29zdBgEIAEoAhomCgZQaHJhc2USDQoFdmFsdWUYASABKAkSDQoFYm9vc3QY",
-            "AiABKAI6ZepBYgofc3BlZWNoLmdvb2dsZWFwaXMuY29tL1BocmFzZVNldBI/",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BocmFz",
-            "ZVNldHMve3BocmFzZV9zZXR9ItoBChBTcGVlY2hBZGFwdGF0aW9uEj0KC3Bo",
-            "cmFzZV9zZXRzGAEgAygLMiguZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0",
-            "YTEuUGhyYXNlU2V0EkMKFXBocmFzZV9zZXRfcmVmZXJlbmNlcxgCIAMoCUIk",
-            "+kEhCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0EkIKDmN1c3Rv",
-            "bV9jbGFzc2VzGAMgAygLMiouZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0",
-            "YTEuQ3VzdG9tQ2xhc3NCiAEKIWNvbS5nb29nbGUuY2xvdWQuc3BlZWNoLnYx",
-            "cDFiZXRhMUITU3BlZWNoUmVzb3VyY2VQcm90b1ABWkNnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92MXAxYmV0",
-            "YTE7c3BlZWNo+AEBogIDR0NTYgZwcm90bzM="));
+            "cmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8igwIKC0N1c3RvbUNs",
+            "YXNzEgwKBG5hbWUYASABKAkSFwoPY3VzdG9tX2NsYXNzX2lkGAIgASgJEkMK",
+            "BWl0ZW1zGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEu",
+            "Q3VzdG9tQ2xhc3MuQ2xhc3NJdGVtGhoKCUNsYXNzSXRlbRINCgV2YWx1ZRgB",
+            "IAEoCTps6kFpCiFzcGVlY2guZ29vZ2xlYXBpcy5jb20vQ3VzdG9tQ2xhc3MS",
+            "RHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jdXN0",
+            "b21DbGFzc2VzL3tjdXN0b21fY2xhc3N9IvkBCglQaHJhc2VTZXQSDAoEbmFt",
+            "ZRgBIAEoCRJACgdwaHJhc2VzGAIgAygLMi8uZ29vZ2xlLmNsb3VkLnNwZWVj",
+            "aC52MXAxYmV0YTEuUGhyYXNlU2V0LlBocmFzZRINCgVib29zdBgEIAEoAhom",
+            "CgZQaHJhc2USDQoFdmFsdWUYASABKAkSDQoFYm9vc3QYAiABKAI6ZepBYgof",
+            "c3BlZWNoLmdvb2dsZWFwaXMuY29tL1BocmFzZVNldBI/cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BocmFzZVNldHMve3BocmFz",
+            "ZV9zZXR9ItoBChBTcGVlY2hBZGFwdGF0aW9uEj0KC3BocmFzZV9zZXRzGAEg",
+            "AygLMiguZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuUGhyYXNlU2V0",
+            "EkMKFXBocmFzZV9zZXRfcmVmZXJlbmNlcxgCIAMoCUIk+kEhCh9zcGVlY2gu",
+            "Z29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0EkIKDmN1c3RvbV9jbGFzc2VzGAMg",
+            "AygLMiouZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xh",
+            "c3MiqgEKF1RyYW5zY3JpcHROb3JtYWxpemF0aW9uEk0KB2VudHJpZXMYASAD",
+            "KAsyPC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5UcmFuc2NyaXB0",
+            "Tm9ybWFsaXphdGlvbi5FbnRyeRpACgVFbnRyeRIOCgZzZWFyY2gYASABKAkS",
+            "DwoHcmVwbGFjZRgCIAEoCRIWCg5jYXNlX3NlbnNpdGl2ZRgDIAEoCEKIAQoh",
+            "Y29tLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExQhNTcGVlY2hSZXNv",
+            "dXJjZVByb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvc3BlZWNoL3YxcDFiZXRhMTtzcGVlY2j4AQGiAgNHQ1Ni",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization), global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry), global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry.Parser, new[]{ "Search", "Replace", "CaseSensitive" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1222,6 +1228,442 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Transcription normalization configuration. Use transcription normalization
+  /// to automatically replace parts of the transcript with phrases of your
+  /// choosing. For StreamingRecognize, this normalization only applies to stable
+  /// partial transcripts (stability > 0.8) and final transcripts.
+  /// </summary>
+  public sealed partial class TranscriptNormalization : pb::IMessage<TranscriptNormalization>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TranscriptNormalization> _parser = new pb::MessageParser<TranscriptNormalization>(() => new TranscriptNormalization());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TranscriptNormalization> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Speech.V1P1Beta1.ResourceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranscriptNormalization() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranscriptNormalization(TranscriptNormalization other) : this() {
+      entries_ = other.entries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranscriptNormalization Clone() {
+      return new TranscriptNormalization(this);
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry>();
+    /// <summary>
+    /// A list of replacement entries. We will perform replacement with one entry
+    /// at a time. For example, the second entry in ["cat" => "dog", "mountain cat"
+    /// => "mountain dog"] will never be applied because we will always process the
+    /// first entry before it. At most 100 entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry> Entries {
+      get { return entries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TranscriptNormalization);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TranscriptNormalization other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entries_.Equals(other.entries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entries_.WriteTo(output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entries_.WriteTo(ref output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TranscriptNormalization other) {
+      if (other == null) {
+        return;
+      }
+      entries_.Add(other.entries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TranscriptNormalization message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A single replacement configuration.
+      /// </summary>
+      public sealed partial class Entry : pb::IMessage<Entry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry(Entry other) : this() {
+          search_ = other.search_;
+          replace_ = other.replace_;
+          caseSensitive_ = other.caseSensitive_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry Clone() {
+          return new Entry(this);
+        }
+
+        /// <summary>Field number for the "search" field.</summary>
+        public const int SearchFieldNumber = 1;
+        private string search_ = "";
+        /// <summary>
+        /// What to replace. Max length is 100 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Search {
+          get { return search_; }
+          set {
+            search_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "replace" field.</summary>
+        public const int ReplaceFieldNumber = 2;
+        private string replace_ = "";
+        /// <summary>
+        /// What to replace with. Max length is 100 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Replace {
+          get { return replace_; }
+          set {
+            replace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "case_sensitive" field.</summary>
+        public const int CaseSensitiveFieldNumber = 3;
+        private bool caseSensitive_;
+        /// <summary>
+        /// Whether the search is case sensitive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool CaseSensitive {
+          get { return caseSensitive_; }
+          set {
+            caseSensitive_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Entry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Entry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Search != other.Search) return false;
+          if (Replace != other.Replace) return false;
+          if (CaseSensitive != other.CaseSensitive) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Search.Length != 0) hash ^= Search.GetHashCode();
+          if (Replace.Length != 0) hash ^= Replace.GetHashCode();
+          if (CaseSensitive != false) hash ^= CaseSensitive.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Search.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Search);
+          }
+          if (Replace.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Replace);
+          }
+          if (CaseSensitive != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Search.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Search);
+          }
+          if (Replace.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Replace);
+          }
+          if (CaseSensitive != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Search.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Search);
+          }
+          if (Replace.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Replace);
+          }
+          if (CaseSensitive != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Entry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Search.Length != 0) {
+            Search = other.Search;
+          }
+          if (other.Replace.Length != 0) {
+            Replace = other.Replace;
+          }
+          if (other.CaseSensitive != false) {
+            CaseSensitive = other.CaseSensitive;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Search = input.ReadString();
+                break;
+              }
+              case 18: {
+                Replace = input.ReadString();
+                break;
+              }
+              case 24: {
+                CaseSensitive = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Search = input.ReadString();
+                break;
+              }
+              case 18: {
+                Replace = input.ReadString();
+                break;
+              }
+              case 24: {
+                CaseSensitive = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
