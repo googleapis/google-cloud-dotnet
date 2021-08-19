@@ -489,7 +489,7 @@
     },
     {
       "id": "Google.Cloud.Channel.V1",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "type": "grpc",
       "productName": "Cloud Channel",
       "productUrl": "https://cloud.google.com/channel/docs/",
