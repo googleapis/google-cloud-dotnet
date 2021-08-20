@@ -258,7 +258,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Routine routine = new Routine
             {
                 DefinitionBody = "SELECT 1;",
-                Description = "test routine",
             };
             routine.SetRoutineLanguage(RoutineLanguage.Sql);
             routine.SetRoutineType(RoutineType.StoredProcedure);

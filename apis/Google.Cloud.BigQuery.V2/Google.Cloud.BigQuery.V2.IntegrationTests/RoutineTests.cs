@@ -225,13 +225,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture.CreateRoutine(routineId, dataset);
 
             var fetched = client.GetRoutine(datasetId, routineId);
-            fetched.Resource.Description = "updated description";
             fetched.Resource.DefinitionBody = "SELECT 2;";
 
             var updated = fetched.Update();
 
             Assert.Equal(routineId, updated.Reference.RoutineId);
-            Assert.Equal("updated description", updated.Resource.Description);
             Assert.Equal("SELECT 2;", updated.Resource.DefinitionBody);
         }
 
@@ -245,13 +243,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture.CreateRoutine(routineId, dataset);
 
             var fetched = client.GetRoutine(datasetId, routineId);
-            fetched.Resource.Description = "updated description";
             fetched.Resource.DefinitionBody = "SELECT 2;";
 
             var updated = await fetched.UpdateAsync();
 
             Assert.Equal(routineId, updated.Reference.RoutineId);
-            Assert.Equal("updated description", updated.Resource.Description);
             Assert.Equal("SELECT 2;", updated.Resource.DefinitionBody);
         }
 
@@ -268,11 +264,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetRoutine(datasetId, routineId);
-            sneaky.Resource.Description = "Sneak attack!";
+            sneaky.Resource.DefinitionBody = "SELECT 'sneak attack!';";
             sneaky.Update();
 
             // Fails due to the conflict.
-            original.Resource.Description = "Description";
+            original.Resource.DefinitionBody = "SELECT 2;";
             
             var exception = Assert.Throws<GoogleApiException>(() => original.Update());
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
@@ -283,7 +279,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Routine routine = new Routine
             {
                 DefinitionBody = "SELECT 1;",
-                Description = "test routine",
             };
             routine.SetRoutineLanguage(RoutineLanguage.Sql);
             routine.SetRoutineType(RoutineType.StoredProcedure);
