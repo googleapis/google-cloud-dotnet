@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -129,6 +130,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public PublicAdvertisedPrefixesSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public PublicAdvertisedPrefixesClientBuilder()
+        {
+            UseJwtAccessWithScopes = PublicAdvertisedPrefixesClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref PublicAdvertisedPrefixesClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<PublicAdvertisedPrefixesClient> task);
@@ -204,7 +211,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PublicAdvertisedPrefixesClient"/> using the default credentials,
@@ -499,8 +518,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PublicAdvertisedPrefixList List(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public virtual gax::PagedEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> List(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -508,18 +527,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PublicAdvertisedPrefixList> ListAsync(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> ListAsync(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists the PublicAdvertisedPrefixes for a project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PublicAdvertisedPrefixList> ListAsync(ListPublicAdvertisedPrefixesRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the PublicAdvertisedPrefixes for a project.
@@ -527,12 +537,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual PublicAdvertisedPrefixList List(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public virtual gax::PagedEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListPublicAdvertisedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -541,24 +561,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PublicAdvertisedPrefixList> ListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListPublicAdvertisedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists the PublicAdvertisedPrefixes for a project.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<PublicAdvertisedPrefixList> ListAsync(string project, st::CancellationToken cancellationToken) =>
-            ListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
@@ -800,11 +819,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override PublicAdvertisedPrefixList List(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public override gax::PagedEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> List(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPublicAdvertisedPrefixesRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPublicAdvertisedPrefixesRequest, PublicAdvertisedPrefixList, PublicAdvertisedPrefix>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -812,11 +831,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<PublicAdvertisedPrefixList> ListAsync(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="PublicAdvertisedPrefix"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<PublicAdvertisedPrefixList, PublicAdvertisedPrefix> ListAsync(ListPublicAdvertisedPrefixesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListPublicAdvertisedPrefixesRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPublicAdvertisedPrefixesRequest, PublicAdvertisedPrefixList, PublicAdvertisedPrefix>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -842,5 +861,23 @@ namespace Google.Cloud.Compute.V1
             Modify_PatchPublicAdvertisedPrefixeRequest(ref request, ref callSettings);
             return _callPatch.Async(request, callSettings);
         }
+    }
+
+    public partial class ListPublicAdvertisedPrefixesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class PublicAdvertisedPrefixList : gaxgrpc::IPageResponse<PublicAdvertisedPrefix>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PublicAdvertisedPrefix> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

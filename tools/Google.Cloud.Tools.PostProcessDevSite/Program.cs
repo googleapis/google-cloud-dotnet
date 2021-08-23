@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using YamlDotNet.RepresentationModel;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -42,8 +43,6 @@ namespace Google.Cloud.Tools.PostProcessDevSite
     /// </summary>
     class Program
     {
-
-
         /// <summary>
         /// The package/API ID
         /// </summary>
@@ -98,6 +97,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             Directory.CreateDirectory(_devSiteRoot);
 
             CopyApiDirectory();
+            FixExternalReferences();
             RegenerateToc();
             CopyGuides();
             AddGuidesToToc();
@@ -114,6 +114,87 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             {
                 File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
             }
+        }
+
+        /// <summary>
+        /// If we have project references (e.g. from Google.Cloud.Spanner.V1 to Google.Cloud.Spanner.Common.V1)
+        /// the references within the docfx aren't labeled as "isExternal", so they aren't resolved against
+        /// xrefmaps. This method fixes that, rewriting the YAML files.
+        /// </summary>
+        private void FixExternalReferences()
+        {
+            var dir = Path.Combine(_devSiteRoot, "api");
+            var manifest = File.ReadAllText(Path.Combine(dir, ".manifest"));
+            var packageUids = new HashSet<string>(JsonConvert.DeserializeObject<Dictionary<string, string>>(manifest).Keys);
+
+            Console.WriteLine($"Loaded {packageUids.Count} manifest entries");
+            foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
+            {
+                if (Path.GetFileName(yamlFile) == "toc.yml")
+                {
+                    continue;
+                }
+                var yaml = new YamlStream();
+                using (var reader = File.OpenText(yamlFile))
+                {
+                    yaml.Load(reader);
+                }
+
+                var doc = (YamlMappingNode) yaml.Documents[0].RootNode;
+                var references = GetChildByName(doc, "references");
+                if (references is object)
+                {
+                    FixExternalReferences(references);
+                }
+
+                // Note: this rewriting adds a "..." at the end of each file.
+                // That indicates the end of a YAML document, and is fine.
+                // We have to add the YamlMime header line ourselves as that isn't
+                // preserved otherwise.
+                using (var writer = File.CreateText(yamlFile))
+                {
+                    writer.WriteLine("### YamlMime:ManagedReference");
+                    yaml.Save(writer, assignAnchors: false);
+                }
+            }
+
+            void FixExternalReferences(YamlNode node)
+            {
+                switch (node)
+                {
+                    case YamlMappingNode mappingNode:
+                        // Main part... find any nodes with a UID that isn't in this package, and no "isExternal" node,
+                        // and no "definition" node (used for constructed types), and set that to be explicitly external.
+                        // We trim any stars from the end of the name, as those
+                        // are used for method overloads, and aren't included in the manifest.
+                        var uidNode = GetChildByName(mappingNode, "uid");
+                        var isExternalNode = GetChildByName(mappingNode, "isExternal");
+                        var definitionNode = GetChildByName(mappingNode, "definition");
+                        if (uidNode is YamlScalarNode { Value: string uid } &&
+                            !packageUids.Contains(uid.TrimEnd('*')) &&
+                            isExternalNode is null &&
+                            definitionNode is null)
+                        {
+                            mappingNode.Add("isExternal", "true");
+                        }
+                        // Recurse
+                        foreach (var pair in mappingNode.Children)
+                        {
+                            FixExternalReferences(pair.Value);
+                        }
+                        break;
+                    case YamlSequenceNode sequenceNode:
+                        // Recurse
+                        foreach (var child in sequenceNode.Children)
+                        {
+                            FixExternalReferences(child);
+                        }
+                        break;
+                }
+            }
+
+            YamlNode GetChildByName(YamlMappingNode parent, string name) =>
+                parent.Children.FirstOrDefault(node => node.Key is YamlScalarNode key && key.Value == name).Value;
         }
 
         private void RegenerateToc()

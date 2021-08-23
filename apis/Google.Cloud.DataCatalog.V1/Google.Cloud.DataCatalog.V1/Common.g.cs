@@ -42,8 +42,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Enums
   /// <summary>
-  /// This enum describes all the possible systems that Data Catalog integrates
-  /// with.
+  /// This enum lists all the systems that Data Catalog integrates with.
   /// </summary>
   public enum IntegratedSystem {
     /// <summary>

@@ -28,7 +28,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the <see cref="IHostingEnvironment.EnvironmentName"/> to the log entry labels.
     /// </summary>
-    public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider
+#pragma warning disable CS0618 // Type or member is obsolete
+    public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider, Common.ILogEntryLabelProvider
+#pragma warning restore CS0618 // Type or member is obsolete
     {
 #if NETCOREAPP3_1
         private readonly IWebHostEnvironment _hostingEnvironment;

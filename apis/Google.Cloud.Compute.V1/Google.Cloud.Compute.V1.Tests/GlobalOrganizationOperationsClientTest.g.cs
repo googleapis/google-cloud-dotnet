@@ -107,7 +107,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -123,7 +123,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -166,7 +166,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -194,7 +194,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -210,7 +210,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -236,7 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -252,7 +252,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -266,110 +266,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Operation responseCallSettings = await client.GetAsync(request.Operation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.GetAsync(request.Operation, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient> mockGrpcClient = new moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient>(moq::MockBehavior.Strict);
-            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Filter = "filtere47ac9b2",
-                ParentId = "parent_id8279e36b",
-                ReturnPartialSuccess = false,
-            };
-            OperationList expectedResponse = new OperationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Operation(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
-            OperationList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient> mockGrpcClient = new moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient>(moq::MockBehavior.Strict);
-            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Filter = "filtere47ac9b2",
-                ParentId = "parent_id8279e36b",
-                ReturnPartialSuccess = false,
-            };
-            OperationList expectedResponse = new OperationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Operation(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OperationList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
-            OperationList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            OperationList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient> mockGrpcClient = new moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient>(moq::MockBehavior.Strict);
-            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest { };
-            OperationList expectedResponse = new OperationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Operation(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
-            OperationList response = client.List();
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient> mockGrpcClient = new moq::Mock<GlobalOrganizationOperations.GlobalOrganizationOperationsClient>(moq::MockBehavior.Strict);
-            ListGlobalOrganizationOperationsRequest request = new ListGlobalOrganizationOperationsRequest { };
-            OperationList expectedResponse = new OperationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Operation(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<OperationList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            GlobalOrganizationOperationsClient client = new GlobalOrganizationOperationsClientImpl(mockGrpcClient.Object, null);
-            OperationList responseCallSettings = await client.ListAsync(gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            OperationList responseCancellationToken = await client.ListAsync(st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

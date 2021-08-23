@@ -105,7 +105,14 @@ namespace Google.Cloud.BigQuery.V2
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateDataset(datasetReference, resource, createOptions);
+                try
+                {
+                    return CreateDataset(datasetReference, resource, createOptions);
+                }
+                catch (GoogleApiException ex2) when (ex2.HttpStatusCode == HttpStatusCode.Conflict)
+                {
+                    return GetDataset(datasetReference, getOptions);
+                }
             }
         }
 
@@ -123,7 +130,14 @@ namespace Google.Cloud.BigQuery.V2
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return await CreateDatasetAsync(datasetReference, resource, createOptions, cancellationToken).ConfigureAwait(false); ;
+                try
+                {
+                    return await CreateDatasetAsync(datasetReference, resource, createOptions, cancellationToken).ConfigureAwait(false);
+                }
+                catch (GoogleApiException ex2) when (ex2.HttpStatusCode == HttpStatusCode.Conflict)
+                {
+                    return await GetDatasetAsync(datasetReference, getOptions, cancellationToken).ConfigureAwait(false);
+                }
             }
         }
 

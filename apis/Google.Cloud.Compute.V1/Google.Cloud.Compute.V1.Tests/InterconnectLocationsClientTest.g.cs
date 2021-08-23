@@ -37,7 +37,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -74,7 +74,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -113,7 +113,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InterconnectLocation expectedResponse = new InterconnectLocation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 City = "cityead2d54e",
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
@@ -174,128 +174,6 @@ namespace Google.Cloud.Compute.V1.Tests
             InterconnectLocation responseCallSettings = await client.GetAsync(request.Project, request.InterconnectLocation, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectLocation responseCancellationToken = await client.GetAsync(request.Project, request.InterconnectLocation, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
-            ListInterconnectLocationsRequest request = new ListInterconnectLocationsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InterconnectLocationList expectedResponse = new InterconnectLocationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InterconnectLocation(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
-            InterconnectLocationList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
-            ListInterconnectLocationsRequest request = new ListInterconnectLocationsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InterconnectLocationList expectedResponse = new InterconnectLocationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InterconnectLocation(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectLocationList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
-            InterconnectLocationList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InterconnectLocationList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
-            ListInterconnectLocationsRequest request = new ListInterconnectLocationsRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            InterconnectLocationList expectedResponse = new InterconnectLocationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InterconnectLocation(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
-            InterconnectLocationList response = client.List(request.Project);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<InterconnectLocations.InterconnectLocationsClient> mockGrpcClient = new moq::Mock<InterconnectLocations.InterconnectLocationsClient>(moq::MockBehavior.Strict);
-            ListInterconnectLocationsRequest request = new ListInterconnectLocationsRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            InterconnectLocationList expectedResponse = new InterconnectLocationList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InterconnectLocation(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InterconnectLocationList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectLocationsClient client = new InterconnectLocationsClientImpl(mockGrpcClient.Object, null);
-            InterconnectLocationList responseCallSettings = await client.ListAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InterconnectLocationList responseCancellationToken = await client.ListAsync(request.Project, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

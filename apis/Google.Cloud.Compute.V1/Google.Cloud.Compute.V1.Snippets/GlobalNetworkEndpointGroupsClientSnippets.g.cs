@@ -16,6 +16,9 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -366,15 +369,45 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListGlobalNetworkEndpointGroupsRequest request = new ListGlobalNetworkEndpointGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkEndpointGroupList response = globalNetworkEndpointGroupsClient.List(request);
+            PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = globalNetworkEndpointGroupsClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkEndpointGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkEndpointGroupList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -382,48 +415,140 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListGlobalNetworkEndpointGroupsRequest, CallSettings)
-            // Additional: ListAsync(ListGlobalNetworkEndpointGroupsRequest, CancellationToken)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = await GlobalNetworkEndpointGroupsClient.CreateAsync();
             // Initialize request argument(s)
             ListGlobalNetworkEndpointGroupsRequest request = new ListGlobalNetworkEndpointGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkEndpointGroupList response = await globalNetworkEndpointGroupsClient.ListAsync(request);
+            PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = globalNetworkEndpointGroupsClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkEndpointGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkEndpointGroupList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, CallSettings)
+            // Snippet: List(string, string, int?, CallSettings)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = GlobalNetworkEndpointGroupsClient.Create();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NetworkEndpointGroupList response = globalNetworkEndpointGroupsClient.List(project);
+            PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = globalNetworkEndpointGroupsClient.List(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkEndpointGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkEndpointGroupList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, CallSettings)
-            // Additional: ListAsync(string, CancellationToken)
+            // Snippet: ListAsync(string, string, int?, CallSettings)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = await GlobalNetworkEndpointGroupsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             // Make the request
-            NetworkEndpointGroupList response = await globalNetworkEndpointGroupsClient.ListAsync(project);
+            PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = globalNetworkEndpointGroupsClient.ListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkEndpointGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkEndpointGroupList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -436,8 +561,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest request = new ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -445,7 +568,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkEndpointGroupsListNetworkEndpoints response = globalNetworkEndpointGroupsClient.ListNetworkEndpoints(request);
+            PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = globalNetworkEndpointGroupsClient.ListNetworkEndpoints(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkEndpointWithHealthStatus item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkEndpointGroupsListNetworkEndpoints page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointWithHealthStatus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointWithHealthStatus> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointWithHealthStatus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -453,14 +608,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListNetworkEndpointsRequestObjectAsync()
         {
             // Snippet: ListNetworkEndpointsAsync(ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest, CallSettings)
-            // Additional: ListNetworkEndpointsAsync(ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest, CancellationToken)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = await GlobalNetworkEndpointGroupsClient.CreateAsync();
             // Initialize request argument(s)
             ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest request = new ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 OrderBy = "",
                 Project = "",
                 Filter = "",
@@ -468,36 +620,131 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            NetworkEndpointGroupsListNetworkEndpoints response = await globalNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(request);
+            PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = globalNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkEndpointWithHealthStatus item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkEndpointGroupsListNetworkEndpoints page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointWithHealthStatus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointWithHealthStatus> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointWithHealthStatus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListNetworkEndpoints</summary>
         public void ListNetworkEndpoints()
         {
-            // Snippet: ListNetworkEndpoints(string, string, CallSettings)
+            // Snippet: ListNetworkEndpoints(string, string, string, int?, CallSettings)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = GlobalNetworkEndpointGroupsClient.Create();
             // Initialize request argument(s)
             string project = "";
             string networkEndpointGroup = "";
             // Make the request
-            NetworkEndpointGroupsListNetworkEndpoints response = globalNetworkEndpointGroupsClient.ListNetworkEndpoints(project, networkEndpointGroup);
+            PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = globalNetworkEndpointGroupsClient.ListNetworkEndpoints(project, networkEndpointGroup);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkEndpointWithHealthStatus item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (NetworkEndpointGroupsListNetworkEndpoints page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointWithHealthStatus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointWithHealthStatus> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointWithHealthStatus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListNetworkEndpointsAsync</summary>
         public async Task ListNetworkEndpointsAsync()
         {
-            // Snippet: ListNetworkEndpointsAsync(string, string, CallSettings)
-            // Additional: ListNetworkEndpointsAsync(string, string, CancellationToken)
+            // Snippet: ListNetworkEndpointsAsync(string, string, string, int?, CallSettings)
             // Create client
             GlobalNetworkEndpointGroupsClient globalNetworkEndpointGroupsClient = await GlobalNetworkEndpointGroupsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string networkEndpointGroup = "";
             // Make the request
-            NetworkEndpointGroupsListNetworkEndpoints response = await globalNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(project, networkEndpointGroup);
+            PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = globalNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(project, networkEndpointGroup);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkEndpointWithHealthStatus item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((NetworkEndpointGroupsListNetworkEndpoints page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkEndpointWithHealthStatus item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkEndpointWithHealthStatus> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkEndpointWithHealthStatus item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

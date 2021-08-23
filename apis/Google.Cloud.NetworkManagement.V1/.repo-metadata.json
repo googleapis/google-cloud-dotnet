@@ -1,0 +1,6 @@
+{
+  "distribution_name": "Google.Cloud.NetworkManagement.V1",
+  "release_level": "ga",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.NetworkManagement.V1/latest",
+  "library_type": "GAPIC_AUTO"
+}

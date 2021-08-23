@@ -667,7 +667,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -675,12 +675,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -703,7 +713,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -711,12 +721,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -741,7 +761,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -749,12 +769,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -777,7 +807,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -785,12 +815,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -815,7 +855,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -823,12 +863,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -851,7 +901,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -859,12 +909,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -888,7 +948,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -896,12 +956,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -923,7 +993,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -931,12 +1001,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -956,7 +1036,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -964,12 +1044,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -987,7 +1077,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -995,12 +1085,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1024,7 +1124,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1032,12 +1132,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1059,7 +1169,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1067,12 +1177,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1188,7 +1308,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1196,12 +1316,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1222,7 +1352,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1230,12 +1360,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1258,7 +1398,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1266,12 +1406,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1292,7 +1442,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1300,12 +1450,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1328,7 +1488,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1336,12 +1496,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1362,7 +1532,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1370,12 +1540,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1400,7 +1580,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1408,12 +1588,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.LookupEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1436,7 +1626,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             Entry expectedResponse = new Entry
             {
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                Type = EntryType.Fileset,
+                Type = EntryType.Cluster,
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
                 Schema = new Schema(),
@@ -1444,12 +1634,22 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 SourceSystemTimestamps = new SystemTimestamps(),
                 LinkedResource = "linked_resourcef4db0f72",
                 BigqueryTableSpec = new BigQueryTableSpec(),
+                UsageSignal = new UsageSignal(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
                 BigqueryDateShardedSpec = new BigQueryDateShardedSpec(),
                 UserSpecifiedType = "user_specified_typecdee5e15",
                 IntegratedSystem = IntegratedSystem.Unspecified,
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                DataSourceConnectionSpec = new DataSourceConnectionSpec(),
+                RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
             };
             mockGrpcClient.Setup(x => x.LookupEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1482,6 +1682,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1511,6 +1712,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1542,6 +1744,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1571,6 +1774,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1602,6 +1806,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1631,6 +1836,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.CreateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1660,6 +1866,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1687,6 +1894,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1716,6 +1924,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1743,6 +1952,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1772,6 +1982,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1799,6 +2010,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.GetTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1829,6 +2041,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1857,6 +2070,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1886,6 +2100,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1913,6 +2128,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1943,6 +2159,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1971,6 +2188,7 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                         new TagTemplateField()
                     },
                 },
+                IsPubliclyReadable = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTagTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TagTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);

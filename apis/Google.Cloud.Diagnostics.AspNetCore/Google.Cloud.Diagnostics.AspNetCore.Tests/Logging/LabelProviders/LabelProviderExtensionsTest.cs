@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Single(services);
             var descriptor = services.Single();
 
-            Assert.Equal(typeof(ILogEntryLabelProvider), descriptor.ServiceType);
+            Assert.Equal(typeof(Common.ILogEntryLabelProvider), descriptor.ServiceType);
             Assert.Equal(typeof(TraceIdLogEntryLabelProvider), descriptor.ImplementationType);
             Assert.Equal(ServiceLifetime.Singleton, descriptor.Lifetime);
         }
@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Single(services);
             var descriptor = services.Single();
 
-            Assert.Equal(typeof(ILogEntryLabelProvider), descriptor.ServiceType);
+            Assert.Equal(typeof(Common.ILogEntryLabelProvider), descriptor.ServiceType);
             Assert.NotNull(descriptor.ImplementationFactory);
             Assert.Equal(ServiceLifetime.Singleton, descriptor.Lifetime);
         }
@@ -74,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Single(services);
             var descriptor = services.Single();
 
-            Assert.Equal(typeof(ILogEntryLabelProvider), descriptor.ServiceType);
+            Assert.Equal(typeof(Common.ILogEntryLabelProvider), descriptor.ServiceType);
             Assert.IsType<TraceIdLogEntryLabelProvider>(descriptor.ImplementationInstance);
             Assert.Equal(ServiceLifetime.Singleton, descriptor.Lifetime);
         }

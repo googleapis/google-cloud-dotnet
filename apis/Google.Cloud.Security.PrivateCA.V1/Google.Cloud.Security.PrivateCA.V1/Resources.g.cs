@@ -84,7 +84,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "bC5QdWJsaXNoaW5nT3B0aW9uc0ID4EEBEksKBmxhYmVscxgFIAMoCzI2Lmdv",
             "b2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuQ2FQb29sLkxhYmVs",
             "c0VudHJ5QgPgQQEaSwoRUHVibGlzaGluZ09wdGlvbnMSHAoPcHVibGlzaF9j",
-            "YV9jZXJ0GAEgASgIQgPgQQISGAoLcHVibGlzaF9jcmwYAiABKAhCA+BBAhrv",
+            "YV9jZXJ0GAEgASgIQgPgQQESGAoLcHVibGlzaF9jcmwYAiABKAhCA+BBARrv",
             "CQoOSXNzdWFuY2VQb2xpY3kSaAoRYWxsb3dlZF9rZXlfdHlwZXMYASADKAsy",
             "SC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLkNhUG9vbC5J",
             "c3N1YW5jZVBvbGljeS5BbGxvd2VkS2V5VHlwZUID4EEBEjgKEG1heGltdW1f",
@@ -112,8 +112,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "RV9BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIOCgpFQ0RTQV9QMjU2EAESDgoK",
             "RUNEU0FfUDM4NBACEg8KC0VERFNBXzI1NTE5EANCCgoIa2V5X3R5cGUaYAoN",
             "SXNzdWFuY2VNb2RlcxIlChhhbGxvd19jc3JfYmFzZWRfaXNzdWFuY2UYASAB",
-            "KAhCA+BBAhIoChthbGxvd19jb25maWdfYmFzZWRfaXNzdWFuY2UYAiABKAhC",
-            "A+BBAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAhCA+BBARIoChthbGxvd19jb25maWdfYmFzZWRfaXNzdWFuY2UYAiABKAhC",
+            "A+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
             "KAk6AjgBIjgKBFRpZXISFAoQVElFUl9VTlNQRUNJRklFRBAAEg4KCkVOVEVS",
             "UFJJU0UQARIKCgZERVZPUFMQAjpf6kFcCh9wcml2YXRlY2EuZ29vZ2xlYXBp",
             "cy5jb20vQ2FQb29sEjlwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
@@ -245,7 +245,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "EhMKC3NoYTI1Nl9oYXNoGAEgASgJIicKCE9iamVjdElkEhsKDm9iamVjdF9p",
             "ZF9wYXRoGAEgAygFQgPgQQIigAEKDVg1MDlFeHRlbnNpb24SRAoJb2JqZWN0",
             "X2lkGAEgASgLMiwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVjYS52",
-            "MS5PYmplY3RJZEID4EECEhUKCGNyaXRpY2FsGAIgASgIQgPgQQISEgoFdmFs",
+            "MS5PYmplY3RJZEID4EECEhUKCGNyaXRpY2FsGAIgASgIQgPgQQESEgoFdmFs",
             "dWUYAyABKAxCA+BBAiKiBQoIS2V5VXNhZ2USVAoOYmFzZV9rZXlfdXNhZ2UY",
             "ASABKAsyPC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLktl",
             "eVVzYWdlLktleVVzYWdlT3B0aW9ucxJgChJleHRlbmRlZF9rZXlfdXNhZ2UY",
@@ -2292,7 +2292,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int PublishCaCertFieldNumber = 1;
         private bool publishCaCert_;
         /// <summary>
-        /// Required. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA certificate and
+        /// Optional. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA certificate and
         /// includes its URL in the "Authority Information Access" X.509 extension
         /// in all issued [Certificates][google.cloud.security.privateca.v1.Certificate]. If this is false, the CA
         /// certificate will not be published and the corresponding X.509 extension
@@ -2310,7 +2310,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int PublishCrlFieldNumber = 2;
         private bool publishCrl_;
         /// <summary>
-        /// Required. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CRL and includes its
+        /// Optional. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CRL and includes its
         /// URL in the "CRL Distribution Points" X.509 extension in all issued
         /// [Certificates][google.cloud.security.privateca.v1.Certificate]. If this is false, CRLs will not be published
         /// and the corresponding X.509 extension will not be written in issued
@@ -3674,7 +3674,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             public const int AllowCsrBasedIssuanceFieldNumber = 1;
             private bool allowCsrBasedIssuance_;
             /// <summary>
-            /// Required. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
+            /// Optional. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
             /// specifying a CSR.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3689,7 +3689,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             public const int AllowConfigBasedIssuanceFieldNumber = 2;
             private bool allowConfigBasedIssuance_;
             /// <summary>
-            /// Required. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
+            /// Optional. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
             /// specifying a [CertificateConfig][google.cloud.security.privateca.v1.CertificateConfig].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8567,7 +8567,6 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         private global::Google.Protobuf.WellKnownTypes.Duration lifetime_;
         /// <summary>
         /// For convenience, the actual lifetime of an issued certificate.
-        /// Corresponds to 'not_after_time' - 'not_before_time'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Duration Lifetime {
@@ -8595,7 +8594,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int NotAfterTimeFieldNumber = 6;
         private global::Google.Protobuf.WellKnownTypes.Timestamp notAfterTime_;
         /// <summary>
-        /// The time at which the certificate expires.
+        /// The time after which the certificate is expired.
+        /// Per RFC 5280, the validity period for a certificate is the period of time
+        /// from not_before_time through not_after_time, inclusive.
+        /// Corresponds to 'not_before_time' + 'lifetime' - 1 second.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp NotAfterTime {
@@ -9489,7 +9491,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CriticalFieldNumber = 2;
     private bool critical_;
     /// <summary>
-    /// Required. Indicates whether or not this extension is critical (i.e., if the client
+    /// Optional. Indicates whether or not this extension is critical (i.e., if the client
     /// does not know how to handle this extension, the client should consider this
     /// to be an error).
     /// </summary>
@@ -11625,7 +11627,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// Optional. A CEL expression that may be used to validate the resolved X.509 Subject
     /// and/or Subject Alternative Name before a certificate is signed.
     /// To see the full allowed syntax and some examples, see
-    /// https://cloud.google.com/certificate-authority-service/docs/cel-guide
+    /// https://cloud.google.com/certificate-authority-service/docs/using-cel
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Expr CelExpression {
@@ -11641,7 +11643,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>
     /// Required. If this is true, the [Subject][google.cloud.security.privateca.v1.Subject] field may be copied from a certificate
     /// request into the signed certificate. Otherwise, the requested [Subject][google.cloud.security.privateca.v1.Subject]
-    /// will be discarded. The bool is optional to indicate an unset field, which suggests a forgotten value that needs to be set by the caller.
+    /// will be discarded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowSubjectPassthrough {
@@ -11669,7 +11671,6 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// Required. If this is true, the [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] extension may be copied from a
     /// certificate request into the signed certificate. Otherwise, the requested
     /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will be discarded.
-    /// The bool is optional to indicate an unset field, which suggests a forgotten value that needs to be set by the caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowSubjectAltNamesPassthrough {

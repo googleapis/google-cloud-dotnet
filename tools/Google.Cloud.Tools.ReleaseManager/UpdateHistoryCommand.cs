@@ -56,67 +56,22 @@ namespace Google.Cloud.Tools.ReleaseManager
             string historyFilePath = HistoryFile.GetPathForPackage(id);
 
             var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
+            using var repo = new Repository(root);
+            var releases = Release.LoadReleases(repo, catalog, api).ToList();
+            var historyFile = HistoryFile.Load(historyFilePath);
+            var sectionsInserted = historyFile.MergeReleases(releases);
+            if (sectionsInserted.Count != 0)
             {
-                var releases = LoadReleases(repo, catalog, api).ToList();
-                if (!File.Exists(historyFilePath))
+                historyFile.Save(historyFilePath);
+                var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
+                    .Replace('\\', '/');
+                Console.WriteLine($"Updated version history file: {relativePath}");
+                Console.WriteLine("New content:");
+                Console.WriteLine();
+                foreach (var line in sectionsInserted.SelectMany(section => section.Lines))
                 {
-                    File.WriteAllText(historyFilePath, "# Version history\r\n\r\n");
+                    Console.WriteLine(line);
                 }
-                var historyFile = HistoryFile.Load(historyFilePath);
-                var sectionsInserted = historyFile.MergeReleases(releases);
-                if (sectionsInserted.Count != 0)
-                {
-                    historyFile.Save(historyFilePath);
-                    var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
-                        .Replace('\\', '/');
-                    Console.WriteLine($"Updated version history file: {relativePath}");
-                    Console.WriteLine("New content:");
-                    Console.WriteLine();
-                    foreach (var line in sectionsInserted.SelectMany(section => section.Lines))
-                    {
-                        Console.WriteLine(line);
-                    }
-                }
-            }
-        }
-
-        private static IEnumerable<Release> LoadReleases(Repository repo, ApiCatalog catalog, ApiMetadata api)
-        {
-            var id = api.Id;
-            var commitPredicate = GitHelpers.CreateCommitPredicate(repo, catalog, api);
-
-            List<Release> releases = new List<Release>();
-            StructuredVersion currentVersion = StructuredVersion.FromString(api.Version);
-            Commit currentTagCommit = null;
-
-            // "Pending" as in "haven't been yielded in a release yet"
-            List<GitCommit> pendingCommits = new List<GitCommit>();
-
-            var tagPrefix = $"{id}-";
-            var versionsCommitId = repo.Tags
-                .Where(tag => tag.FriendlyName.StartsWith(tagPrefix))
-                .ToDictionary(tag => tag.Target.Id, tag => tag.FriendlyName.Substring(tagPrefix.Length));
-
-            foreach (var commit in repo.Head.Commits)
-            {
-                if (commitPredicate(commit))
-                {
-                    pendingCommits.Add(new GitCommit(commit));
-                }
-                if (versionsCommitId.TryGetValue(commit.Id, out string version) && !version.StartsWith("0."))
-                {
-                    yield return new Release(currentVersion, currentTagCommit, pendingCommits);
-                    // Release constructor clones the list, so we're safe to clear it.
-                    pendingCommits.Clear();
-                    currentTagCommit = commit;
-                    currentVersion = StructuredVersion.FromString(version);
-                }
-            }
-
-            if (pendingCommits.Count != 0)
-            {
-                yield return new Release(currentVersion, currentTagCommit, pendingCommits);
             }
         }
     }

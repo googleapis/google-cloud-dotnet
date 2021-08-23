@@ -540,11 +540,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("GLOBAL_POLICY_EVALUATION_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Enables global policy evaluation.
+        /// Enables system policy evaluation.
         /// </summary>
         [pbr::OriginalName("ENABLE")] Enable = 1,
         /// <summary>
-        /// Disables global policy evaluation.
+        /// Disables system policy evaluation.
         /// </summary>
         [pbr::OriginalName("DISABLE")] Disable = 2,
       }

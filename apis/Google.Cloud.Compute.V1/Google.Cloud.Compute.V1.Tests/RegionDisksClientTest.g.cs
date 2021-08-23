@@ -40,7 +40,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -56,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -86,7 +86,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -102,7 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -133,7 +133,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -149,7 +149,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -178,7 +178,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -194,7 +194,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -226,7 +226,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -242,7 +242,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -272,7 +272,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -288,7 +288,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -319,7 +319,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -335,7 +335,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -364,7 +364,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -380,7 +380,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -411,7 +411,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -427,7 +427,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -456,7 +456,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -472,7 +472,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -502,7 +502,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -518,7 +518,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -546,7 +546,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -562,7 +562,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -592,7 +592,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Disk expectedResponse = new Disk
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -605,7 +605,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
-                    "license_codesdd63b74e",
+                    -3549522739643304114L,
                 },
                 ReplicaZones =
                 {
@@ -624,7 +624,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
-                ProvisionedIops = "provisioned_iops7e6967a2",
+                ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
@@ -635,13 +635,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Options = "optionsa965da93",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                PhysicalBlockSizeBytes = -7292518380745299537L,
                 Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                SizeGb = "size_gb066e01fc",
+                SizeGb = -3653169847519542788L,
                 Labels =
                 {
                     {
@@ -669,7 +669,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Disk expectedResponse = new Disk
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -682,7 +682,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
-                    "license_codesdd63b74e",
+                    -3549522739643304114L,
                 },
                 ReplicaZones =
                 {
@@ -701,7 +701,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
-                ProvisionedIops = "provisioned_iops7e6967a2",
+                ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
@@ -712,13 +712,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Options = "optionsa965da93",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                PhysicalBlockSizeBytes = -7292518380745299537L,
                 Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                SizeGb = "size_gb066e01fc",
+                SizeGb = -3653169847519542788L,
                 Labels =
                 {
                     {
@@ -748,7 +748,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Disk expectedResponse = new Disk
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -761,7 +761,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
-                    "license_codesdd63b74e",
+                    -3549522739643304114L,
                 },
                 ReplicaZones =
                 {
@@ -780,7 +780,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
-                ProvisionedIops = "provisioned_iops7e6967a2",
+                ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
@@ -791,13 +791,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Options = "optionsa965da93",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                PhysicalBlockSizeBytes = -7292518380745299537L,
                 Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                SizeGb = "size_gb066e01fc",
+                SizeGb = -3653169847519542788L,
                 Labels =
                 {
                     {
@@ -825,7 +825,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Disk expectedResponse = new Disk
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Type = "typee2cc9d59",
@@ -838,7 +838,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LastAttachTimestamp = "last_attach_timestamp4fe3fe94",
                 LicenseCodes =
                 {
-                    "license_codesdd63b74e",
+                    -3549522739643304114L,
                 },
                 ReplicaZones =
                 {
@@ -857,7 +857,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
                 Status = Disk.Types.Status.Deleting,
-                ProvisionedIops = "provisioned_iops7e6967a2",
+                ProvisionedIops = -3779563869670119518L,
                 SourceStorageObject = "source_storage_object4e059972",
                 DiskEncryptionKey = new CustomerEncryptionKey(),
                 SourceSnapshotEncryptionKey = new CustomerEncryptionKey(),
@@ -868,13 +868,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Options = "optionsa965da93",
                 SourceImageEncryptionKey = new CustomerEncryptionKey(),
-                PhysicalBlockSizeBytes = "physical_block_size_bytes8dab69af",
+                PhysicalBlockSizeBytes = -7292518380745299537L,
                 Description = "description2cf9da67",
                 SourceDisk = "source_disk0eec086f",
                 SourceDiskId = "source_disk_id020f9fb8",
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                SizeGb = "size_gb066e01fc",
+                SizeGb = -3653169847519542788L,
                 Labels =
                 {
                     {
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1032,7 +1032,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1168,7 +1168,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1187,120 +1187,6 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ListRegionDisksRequest request = new ListRegionDisksRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                Region = "regionedb20d96",
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            DiskList expectedResponse = new DiskList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Disk(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            DiskList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ListRegionDisksRequest request = new ListRegionDisksRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                Region = "regionedb20d96",
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            DiskList expectedResponse = new DiskList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Disk(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            DiskList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DiskList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ListRegionDisksRequest request = new ListRegionDisksRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            DiskList expectedResponse = new DiskList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Disk(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            DiskList response = client.List(request.Project, request.Region);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ListRegionDisksRequest request = new ListRegionDisksRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            DiskList expectedResponse = new DiskList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new Disk(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DiskList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            DiskList responseCallSettings = await client.ListAsync(request.Project, request.Region, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DiskList responseCancellationToken = await client.ListAsync(request.Project, request.Region, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void RemoveResourcePoliciesRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
@@ -1314,7 +1200,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1330,7 +1216,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1360,7 +1246,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1376,7 +1262,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1407,7 +1293,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1423,7 +1309,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1452,7 +1338,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1468,7 +1354,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1500,7 +1386,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1516,7 +1402,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1546,7 +1432,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1562,7 +1448,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1593,7 +1479,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1609,7 +1495,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1638,7 +1524,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1654,7 +1540,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1798,7 +1684,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1814,7 +1700,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1844,7 +1730,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1860,7 +1746,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1891,7 +1777,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1907,7 +1793,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1936,7 +1822,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1952,7 +1838,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,

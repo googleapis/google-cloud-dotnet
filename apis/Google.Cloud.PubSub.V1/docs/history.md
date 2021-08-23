@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.6.0, released 2021-08-10
+
+- [Commit 61c5c17](https://github.com/googleapis/google-cloud-dotnet/commit/61c5c17): chore: Remove unused fields in PublisherClient
+- [Commit c75f979](https://github.com/googleapis/google-cloud-dotnet/commit/c75f979): Update PubSub ConfigureAwait warning disablement
+- [Commit 5fede56](https://github.com/googleapis/google-cloud-dotnet/commit/5fede56): feat: Add method signature for Subscriber.Pull without the deprecated return_immediately field.
+- [Commit 887ec05](https://github.com/googleapis/google-cloud-dotnet/commit/887ec05): feat: Adding subscription properties to streaming pull response in third party pubsub.proto.
+
 # Version 2.5.0, released 2021-05-26
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation

@@ -176,6 +176,12 @@ namespace Google.Cloud.OrgPolicy.V2
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public OrgPolicySettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public OrgPolicyClientBuilder()
+        {
+            UseJwtAccessWithScopes = OrgPolicyClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref OrgPolicyClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OrgPolicyClient> task);
@@ -268,7 +274,19 @@ namespace Google.Cloud.OrgPolicy.V2
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OrgPolicyClient"/> using the default credentials, endpoint and settings.

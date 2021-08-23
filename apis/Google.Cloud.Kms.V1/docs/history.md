@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-08-10
+
+- [Commit f62f458](https://github.com/googleapis/google-cloud-dotnet/commit/f62f458): feat: add support for HMAC, Variable Key Destruction, and GenerateRandom
+
 # Version 2.3.0, released 2021-06-22
 
 - [Commit f1d52c1](https://github.com/googleapis/google-cloud-dotnet/commit/f1d52c1): feat: add ECDSA secp256k1 to the list of supported algorithms.

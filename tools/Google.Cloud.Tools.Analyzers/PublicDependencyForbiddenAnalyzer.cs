@@ -169,7 +169,9 @@ namespace Google.Cloud.Tools.Analyzers
                 return;
             }
 
-            var checkedTypes = new Dictionary<ITypeSymbol, TypeCheckResult>();
+#pragma warning disable RS1024 // We're providing an appropriate symbol equality comparer, so all comparisons should be fine.
+            var checkedTypes = new Dictionary<ITypeSymbol, TypeCheckResult>(SymbolEqualityComparer.Default);
+#pragma warning restore RS1024
             var result = CheckType(type, checkedTypes);
             if (!result.IsTypeForbidden)
             {

@@ -40,7 +40,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -56,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -86,7 +86,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -102,7 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -133,7 +133,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -149,7 +149,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -178,7 +178,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -194,7 +194,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -213,158 +213,6 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void AggregatedListRequestObject()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            AggregatedListInstanceGroupManagersRequest request = new AggregatedListInstanceGroupManagersRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagerAggregatedList expectedResponse = new InstanceGroupManagerAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new InstanceGroupManagersScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerAggregatedList response = client.AggregatedList(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListRequestObjectAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            AggregatedListInstanceGroupManagersRequest request = new AggregatedListInstanceGroupManagersRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagerAggregatedList expectedResponse = new InstanceGroupManagerAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new InstanceGroupManagersScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagerAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerAggregatedList responseCallSettings = await client.AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagerAggregatedList responseCancellationToken = await client.AggregatedListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AggregatedList()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            AggregatedListInstanceGroupManagersRequest request = new AggregatedListInstanceGroupManagersRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            InstanceGroupManagerAggregatedList expectedResponse = new InstanceGroupManagerAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new InstanceGroupManagersScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerAggregatedList response = client.AggregatedList(request.Project);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            AggregatedListInstanceGroupManagersRequest request = new AggregatedListInstanceGroupManagersRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            InstanceGroupManagerAggregatedList expectedResponse = new InstanceGroupManagerAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new InstanceGroupManagersScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagerAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerAggregatedList responseCallSettings = await client.AggregatedListAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagerAggregatedList responseCancellationToken = await client.AggregatedListAsync(request.Project, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void ApplyUpdatesToInstancesRequestObject()
         {
             moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
@@ -377,7 +225,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -393,7 +241,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -422,7 +270,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -438,7 +286,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -469,7 +317,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -485,7 +333,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -514,7 +362,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -530,7 +378,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -562,7 +410,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -578,7 +426,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -608,7 +456,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -624,7 +472,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -655,7 +503,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -671,7 +519,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -700,7 +548,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -716,7 +564,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -747,7 +595,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -763,7 +611,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -792,7 +640,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -808,7 +656,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -838,7 +686,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -854,7 +702,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -882,7 +730,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -898,7 +746,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -930,7 +778,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -946,7 +794,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -976,7 +824,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -992,7 +840,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1023,7 +871,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1039,7 +887,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1068,7 +916,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1084,7 +932,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1115,7 +963,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1131,7 +979,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1160,7 +1008,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1176,7 +1024,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1207,7 +1055,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1223,7 +1071,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1252,7 +1100,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1268,7 +1116,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1298,7 +1146,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InstanceGroupManager expectedResponse = new InstanceGroupManager
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -1349,7 +1197,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InstanceGroupManager expectedResponse = new InstanceGroupManager
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -1402,7 +1250,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InstanceGroupManager expectedResponse = new InstanceGroupManager
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -1453,7 +1301,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             InstanceGroupManager expectedResponse = new InstanceGroupManager
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
@@ -1507,7 +1355,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1523,7 +1371,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1552,7 +1400,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1568,7 +1416,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1598,7 +1446,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1614,7 +1462,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1642,7 +1490,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1658,7 +1506,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1677,478 +1525,6 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListInstanceGroupManagersRequest request = new ListInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagerList expectedResponse = new InstanceGroupManagerList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceGroupManager(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListInstanceGroupManagersRequest request = new ListInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagerList expectedResponse = new InstanceGroupManagerList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceGroupManager(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagerList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagerList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListInstanceGroupManagersRequest request = new ListInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            InstanceGroupManagerList expectedResponse = new InstanceGroupManagerList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceGroupManager(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerList response = client.List(request.Project, request.Zone);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListInstanceGroupManagersRequest request = new ListInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            InstanceGroupManagerList expectedResponse = new InstanceGroupManagerList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceGroupManager(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagerList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagerList responseCallSettings = await client.ListAsync(request.Project, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagerList responseCancellationToken = await client.ListAsync(request.Project, request.Zone, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListErrorsRequestObject()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListErrorsInstanceGroupManagersRequest request = new ListErrorsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListErrorsResponse expectedResponse = new InstanceGroupManagersListErrorsResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceManagedByIgmError(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListErrors(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListErrorsResponse response = client.ListErrors(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListErrorsRequestObjectAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListErrorsInstanceGroupManagersRequest request = new ListErrorsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListErrorsResponse expectedResponse = new InstanceGroupManagersListErrorsResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceManagedByIgmError(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListErrorsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListErrorsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListErrorsResponse responseCallSettings = await client.ListErrorsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListErrorsResponse responseCancellationToken = await client.ListErrorsAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListErrors()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListErrorsInstanceGroupManagersRequest request = new ListErrorsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListErrorsResponse expectedResponse = new InstanceGroupManagersListErrorsResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceManagedByIgmError(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListErrors(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListErrorsResponse response = client.ListErrors(request.Project, request.Zone, request.InstanceGroupManager);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListErrorsAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListErrorsInstanceGroupManagersRequest request = new ListErrorsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListErrorsResponse expectedResponse = new InstanceGroupManagersListErrorsResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new InstanceManagedByIgmError(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListErrorsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListErrorsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListErrorsResponse responseCallSettings = await client.ListErrorsAsync(request.Project, request.Zone, request.InstanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListErrorsResponse responseCancellationToken = await client.ListErrorsAsync(request.Project, request.Zone, request.InstanceGroupManager, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListManagedInstancesRequestObject()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListManagedInstancesInstanceGroupManagersRequest request = new ListManagedInstancesInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListManagedInstancesResponse expectedResponse = new InstanceGroupManagersListManagedInstancesResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                ManagedInstances =
-                {
-                    new ManagedInstance(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListManagedInstances(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListManagedInstancesResponse response = client.ListManagedInstances(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListManagedInstancesRequestObjectAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListManagedInstancesInstanceGroupManagersRequest request = new ListManagedInstancesInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListManagedInstancesResponse expectedResponse = new InstanceGroupManagersListManagedInstancesResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                ManagedInstances =
-                {
-                    new ManagedInstance(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListManagedInstancesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListManagedInstancesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListManagedInstancesResponse responseCallSettings = await client.ListManagedInstancesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListManagedInstancesResponse responseCancellationToken = await client.ListManagedInstancesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListManagedInstances()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListManagedInstancesInstanceGroupManagersRequest request = new ListManagedInstancesInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListManagedInstancesResponse expectedResponse = new InstanceGroupManagersListManagedInstancesResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                ManagedInstances =
-                {
-                    new ManagedInstance(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListManagedInstances(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListManagedInstancesResponse response = client.ListManagedInstances(request.Project, request.Zone, request.InstanceGroupManager);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListManagedInstancesAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListManagedInstancesInstanceGroupManagersRequest request = new ListManagedInstancesInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListManagedInstancesResponse expectedResponse = new InstanceGroupManagersListManagedInstancesResponse
-            {
-                NextPageToken = "next_page_tokendbee0940",
-                ManagedInstances =
-                {
-                    new ManagedInstance(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListManagedInstancesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListManagedInstancesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListManagedInstancesResponse responseCallSettings = await client.ListManagedInstancesAsync(request.Project, request.Zone, request.InstanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListManagedInstancesResponse responseCancellationToken = await client.ListManagedInstancesAsync(request.Project, request.Zone, request.InstanceGroupManager, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListPerInstanceConfigsRequestObject()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListPerInstanceConfigsInstanceGroupManagersRequest request = new ListPerInstanceConfigsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListPerInstanceConfigsResp expectedResponse = new InstanceGroupManagersListPerInstanceConfigsResp
-            {
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new PerInstanceConfig(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListPerInstanceConfigs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListPerInstanceConfigsResp response = client.ListPerInstanceConfigs(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListPerInstanceConfigsRequestObjectAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListPerInstanceConfigsInstanceGroupManagersRequest request = new ListPerInstanceConfigsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            InstanceGroupManagersListPerInstanceConfigsResp expectedResponse = new InstanceGroupManagersListPerInstanceConfigsResp
-            {
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new PerInstanceConfig(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListPerInstanceConfigsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListPerInstanceConfigsResp>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListPerInstanceConfigsResp responseCallSettings = await client.ListPerInstanceConfigsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListPerInstanceConfigsResp responseCancellationToken = await client.ListPerInstanceConfigsAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListPerInstanceConfigs()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListPerInstanceConfigsInstanceGroupManagersRequest request = new ListPerInstanceConfigsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListPerInstanceConfigsResp expectedResponse = new InstanceGroupManagersListPerInstanceConfigsResp
-            {
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new PerInstanceConfig(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListPerInstanceConfigs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListPerInstanceConfigsResp response = client.ListPerInstanceConfigs(request.Project, request.Zone, request.InstanceGroupManager);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListPerInstanceConfigsAsync()
-        {
-            moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
-            ListPerInstanceConfigsInstanceGroupManagersRequest request = new ListPerInstanceConfigsInstanceGroupManagersRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                InstanceGroupManager = "instance_group_manager71b45dfc",
-            };
-            InstanceGroupManagersListPerInstanceConfigsResp expectedResponse = new InstanceGroupManagersListPerInstanceConfigsResp
-            {
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new PerInstanceConfig(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListPerInstanceConfigsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceGroupManagersListPerInstanceConfigsResp>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InstanceGroupManagersClient client = new InstanceGroupManagersClientImpl(mockGrpcClient.Object, null);
-            InstanceGroupManagersListPerInstanceConfigsResp responseCallSettings = await client.ListPerInstanceConfigsAsync(request.Project, request.Zone, request.InstanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InstanceGroupManagersListPerInstanceConfigsResp responseCancellationToken = await client.ListPerInstanceConfigsAsync(request.Project, request.Zone, request.InstanceGroupManager, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void PatchRequestObject()
         {
             moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient> mockGrpcClient = new moq::Mock<InstanceGroupManagers.InstanceGroupManagersClient>(moq::MockBehavior.Strict);
@@ -2162,7 +1538,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2178,7 +1554,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2208,7 +1584,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2224,7 +1600,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2255,7 +1631,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2271,7 +1647,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2300,7 +1676,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2316,7 +1692,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2348,7 +1724,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2364,7 +1740,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2394,7 +1770,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2410,7 +1786,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2441,7 +1817,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2457,7 +1833,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2486,7 +1862,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2502,7 +1878,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2534,7 +1910,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2550,7 +1926,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2580,7 +1956,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2596,7 +1972,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2627,7 +2003,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2643,7 +2019,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2672,7 +2048,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2688,7 +2064,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2720,7 +2096,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2736,7 +2112,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2766,7 +2142,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2782,7 +2158,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2813,7 +2189,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2829,7 +2205,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2858,7 +2234,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2874,7 +2250,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2906,7 +2282,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2922,7 +2298,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2952,7 +2328,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -2968,7 +2344,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -2999,7 +2375,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3015,7 +2391,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3044,7 +2420,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3060,7 +2436,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3092,7 +2468,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3108,7 +2484,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3138,7 +2514,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3154,7 +2530,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3185,7 +2561,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3201,7 +2577,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3230,7 +2606,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3246,7 +2622,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3278,7 +2654,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3294,7 +2670,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3324,7 +2700,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3340,7 +2716,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3371,7 +2747,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3387,7 +2763,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -3416,7 +2792,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -3432,7 +2808,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,

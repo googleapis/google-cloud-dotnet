@@ -28,23 +28,26 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaHGdvb2dsZS9hcGkvYW5u",
             "b3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9mbG93",
-            "LnByb3RvGjVnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9zZWN1cml0",
-            "eV9zZXR0aW5ncy5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlv",
-            "bnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xl",
-            "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8iOAoUU3BlZWNoVG9UZXh0U2V0",
-            "dGluZ3MSIAoYZW5hYmxlX3NwZWVjaF9hZGFwdGF0aW9uGAEgASgIIrsECgVB",
-            "Z2VudBIMCgRuYW1lGAEgASgJEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEC",
-            "EiUKFWRlZmF1bHRfbGFuZ3VhZ2VfY29kZRgDIAEoCUIG4EEC4EEFEiAKGHN1",
-            "cHBvcnRlZF9sYW5ndWFnZV9jb2RlcxgEIAMoCRIWCgl0aW1lX3pvbmUYBSAB",
-            "KAlCA+BBAhITCgtkZXNjcmlwdGlvbhgGIAEoCRISCgphdmF0YXJfdXJpGAcg",
-            "ASgJElQKF3NwZWVjaF90b190ZXh0X3NldHRpbmdzGA0gASgLMjMuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU3BlZWNoVG9UZXh0U2V0dGluZ3MS",
-            "OgoKc3RhcnRfZmxvdxgQIAEoCUIm4EEF+kEgCh5kaWFsb2dmbG93Lmdvb2ds",
-            "ZWFwaXMuY29tL0Zsb3cSSgoRc2VjdXJpdHlfc2V0dGluZ3MYESABKAlCL/pB",
-            "LAoqZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TZWN1cml0eVNldHRpbmdz",
-            "EiIKGmVuYWJsZV9zdGFja2RyaXZlcl9sb2dnaW5nGBIgASgIEh8KF2VuYWJs",
-            "ZV9zcGVsbF9jb3JyZWN0aW9uGBQgASgIOlzqQVkKH2RpYWxvZ2Zsb3cuZ29v",
+            "cmNlLnByb3RvGjVnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9hZHZh",
+            "bmNlZF9zZXR0aW5ncy5wcm90bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cv",
+            "Y3gvdjMvZmxvdy5wcm90bxo1Z29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gv",
+            "djMvc2VjdXJpdHlfc2V0dGluZ3MucHJvdG8aI2dvb2dsZS9sb25ncnVubmlu",
+            "Zy9vcGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
+            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIjgKFFNwZWVj",
+            "aFRvVGV4dFNldHRpbmdzEiAKGGVuYWJsZV9zcGVlY2hfYWRhcHRhdGlvbhgB",
+            "IAEoCCKLBQoFQWdlbnQSDAoEbmFtZRgBIAEoCRIZCgxkaXNwbGF5X25hbWUY",
+            "AiABKAlCA+BBAhIlChVkZWZhdWx0X2xhbmd1YWdlX2NvZGUYAyABKAlCBuBB",
+            "AuBBBRIgChhzdXBwb3J0ZWRfbGFuZ3VhZ2VfY29kZXMYBCADKAkSFgoJdGlt",
+            "ZV96b25lGAUgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YBiABKAkSEgoKYXZh",
+            "dGFyX3VyaRgHIAEoCRJUChdzcGVlY2hfdG9fdGV4dF9zZXR0aW5ncxgNIAEo",
+            "CzIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlNwZWVjaFRvVGV4",
+            "dFNldHRpbmdzEjoKCnN0YXJ0X2Zsb3cYECABKAlCJuBBBfpBIAoeZGlhbG9n",
+            "Zmxvdy5nb29nbGVhcGlzLmNvbS9GbG93EkoKEXNlY3VyaXR5X3NldHRpbmdz",
+            "GBEgASgJQi/6QSwKKmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vU2VjdXJp",
+            "dHlTZXR0aW5ncxImChplbmFibGVfc3RhY2tkcml2ZXJfbG9nZ2luZxgSIAEo",
+            "CEICGAESHwoXZW5hYmxlX3NwZWxsX2NvcnJlY3Rpb24YFCABKAgSSgoRYWR2",
+            "YW5jZWRfc2V0dGluZ3MYFiABKAsyLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5BZHZhbmNlZFNldHRpbmdzOlzqQVkKH2RpYWxvZ2Zsb3cuZ29v",
             "Z2xlYXBpcy5jb20vQWdlbnQSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
             "bnMve2xvY2F0aW9ufS9hZ2VudHMve2FnZW50fSJzChFMaXN0QWdlbnRzUmVx",
             "dWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfZGlhbG9nZmxvdy5nb29n",
@@ -124,15 +127,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "b25SZXN1bHR92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
             "bdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
             "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dm",
-            "bG93QpoBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCCkFn",
+            "bG93Qr4BCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCCkFn",
             "ZW50UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
             "YXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29n",
-            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM2IGcHJvdG8z"));
+            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRp",
+            "YWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettingsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SpeechToTextSettings), global::Google.Cloud.Dialogflow.Cx.V3.SpeechToTextSettings.Parser, new[]{ "EnableSpeechAdaptation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Parser, new[]{ "Name", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "SpeechToTextSettings", "StartFlow", "SecuritySettings", "EnableStackdriverLogging", "EnableSpellCorrection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Parser, new[]{ "Name", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "SpeechToTextSettings", "StartFlow", "SecuritySettings", "EnableStackdriverLogging", "EnableSpellCorrection", "AdvancedSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse.Parser, new[]{ "Agents", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetAgentRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -380,6 +384,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       securitySettings_ = other.securitySettings_;
       enableStackdriverLogging_ = other.enableStackdriverLogging_;
       enableSpellCorrection_ = other.enableSpellCorrection_;
+      advancedSettings_ = other.advancedSettings_ != null ? other.advancedSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -552,7 +557,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private bool enableStackdriverLogging_;
     /// <summary>
     /// Indicates if stackdriver logging is enabled for the agent.
+    /// Please use [agent.advanced_settings][google.cloud.dialogflow.cx.v3.AdvancedSettings.LoggingSettings]
+    /// instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool EnableStackdriverLogging {
       get { return enableStackdriverLogging_; }
@@ -573,6 +581,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return enableSpellCorrection_; }
       set {
         enableSpellCorrection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "advanced_settings" field.</summary>
+    public const int AdvancedSettingsFieldNumber = 22;
+    private global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings advancedSettings_;
+    /// <summary>
+    /// Hierarchical advanced settings for this agent. The settings exposed at the
+    /// lower level overrides the settings exposed at the higher level.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings AdvancedSettings {
+      get { return advancedSettings_; }
+      set {
+        advancedSettings_ = value;
       }
     }
 
@@ -601,6 +624,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (SecuritySettings != other.SecuritySettings) return false;
       if (EnableStackdriverLogging != other.EnableStackdriverLogging) return false;
       if (EnableSpellCorrection != other.EnableSpellCorrection) return false;
+      if (!object.Equals(AdvancedSettings, other.AdvancedSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -619,6 +643,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (SecuritySettings.Length != 0) hash ^= SecuritySettings.GetHashCode();
       if (EnableStackdriverLogging != false) hash ^= EnableStackdriverLogging.GetHashCode();
       if (EnableSpellCorrection != false) hash ^= EnableSpellCorrection.GetHashCode();
+      if (advancedSettings_ != null) hash ^= AdvancedSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -680,6 +705,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(160, 1);
         output.WriteBool(EnableSpellCorrection);
       }
+      if (advancedSettings_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AdvancedSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -734,6 +763,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(160, 1);
         output.WriteBool(EnableSpellCorrection);
       }
+      if (advancedSettings_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AdvancedSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -776,6 +809,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (EnableSpellCorrection != false) {
         size += 2 + 1;
+      }
+      if (advancedSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AdvancedSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -824,6 +860,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (other.EnableSpellCorrection != false) {
         EnableSpellCorrection = other.EnableSpellCorrection;
+      }
+      if (other.advancedSettings_ != null) {
+        if (advancedSettings_ == null) {
+          AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+        }
+        AdvancedSettings.MergeFrom(other.AdvancedSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -890,6 +932,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             EnableSpellCorrection = input.ReadBool();
             break;
           }
+          case 178: {
+            if (advancedSettings_ == null) {
+              AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+            }
+            input.ReadMessage(AdvancedSettings);
+            break;
+          }
         }
       }
     #endif
@@ -953,6 +1002,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 160: {
             EnableSpellCorrection = input.ReadBool();
+            break;
+          }
+          case 178: {
+            if (advancedSettings_ == null) {
+              AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+            }
+            input.ReadMessage(AdvancedSettings);
             break;
           }
         }

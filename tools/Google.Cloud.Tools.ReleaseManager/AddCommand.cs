@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -42,14 +43,16 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"API {id} already exists in the API catalog.");
             }
-            var serviceDirectory = ServiceDirectory.LoadFromGoogleapis();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
 
-            var service = serviceDirectory.Services.FirstOrDefault(service => service.CSharpNamespaceFromProtos == id);
-            if (service is null)
+            var targetApi = apiIndex.Apis.FirstOrDefault(api => api.DeriveCSharpNamespace() == id);
+            if (targetApi is null)
             {
                 var lowerWithoutCloud = id.Replace(".Cloud", "").ToLowerInvariant();
-                var possibilities = serviceDirectory.Services
-                    .Select(svc => svc.CSharpNamespaceFromProtos)
+                var possibilities = apiIndex.Apis
+                    .Select(api => api.DeriveCSharpNamespace())
                     .Where(ns => ns.Replace(".Cloud", "").ToLowerInvariant() == lowerWithoutCloud);
                 throw new UserErrorException(
                     $"No service found for '{id}'.{Environment.NewLine}Similar possibilities (check options?): {string.Join(", ", possibilities)}");
@@ -58,9 +61,9 @@ namespace Google.Cloud.Tools.ReleaseManager
             var api = new ApiMetadata
             {
                 Id = id,
-                ProtoPath = service.ServiceDirectory,
-                ProductName = service.Title.EndsWith(" API") ? service.Title[..^4] : service.Title,
-                Description = service.Description,
+                ProtoPath = targetApi.Directory,
+                ProductName = targetApi.Title.EndsWith(" API") ? targetApi.Title[..^4] : targetApi.Title,
+                Description = targetApi.Description,
                 Version = "1.0.0-beta00",
                 Type = ApiType.Grpc,
                 Generator = GeneratorType.Micro,
@@ -72,7 +75,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // This doesn't fail on any dependencies that aren't found - we could tighten this up later
             // by knowing about common protos, for example.
             var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
-            foreach (var import in service.ImportDirectories)
+            foreach (var import in targetApi.ImportDirectories)
             {
                 if (apisByProtoPath.TryGetValue(import, out var dependency))
                 {

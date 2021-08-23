@@ -37,7 +37,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
-        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public void Overview()
         {
             string projectId = _fixture.ProjectId;
@@ -68,9 +67,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             };
             publisher.Publish(topicName, new[] { message });
 
-            // Pull messages from the subscription. We're returning immediately, whether or not there
-            // are messages; in other cases you'll want to allow the call to wait until a message arrives.
-            PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
+            // Pull messages from the subscription. This will wait for some time if no new messages have been
+            // published yet.
+            PullResponse response = subscriber.Pull(subscriptionName, maxMessages: 10);
             foreach (ReceivedMessage received in response.ReceivedMessages)
             {
                 PubsubMessage msg = received.Message;
@@ -218,7 +217,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
-        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public void Pull()
         {
             string projectId = _fixture.ProjectId;
@@ -237,7 +235,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
 
-            PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
+            PullResponse pullResponse = client.Pull(subscriptionName, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
             {
                 // Messages can contain any data. We'll assume that we know this
@@ -255,7 +253,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
-        [Obsolete("Uses returnImmediately. See https://github.com/googleapis/google-cloud-dotnet/issues/6476")]
         public async Task PullAsync()
         {
             string projectId = _fixture.ProjectId;
@@ -275,7 +272,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
 
-            PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
+            PullResponse pullResponse = await client.PullAsync(subscriptionName, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
             {
                 // Messages can contain any data. We'll assume that we know this

@@ -31,128 +31,143 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
             "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
             "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byK9DwoKRXhwZXJpbWVudBIMCgRuYW1lGAEgASgJEhkKDGRpc3Bs",
+            "cC5wcm90byL7EAoKRXhwZXJpbWVudBIMCgRuYW1lGAEgASgJEhkKDGRpc3Bs",
             "YXlfbmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEj4KBXN0",
             "YXRlGAQgASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhw",
             "ZXJpbWVudC5TdGF0ZRJICgpkZWZpbml0aW9uGAUgASgLMjQuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwZXJpbWVudC5EZWZpbml0aW9uEkAK",
-            "BnJlc3VsdBgGIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "LkV4cGVyaW1lbnQuUmVzdWx0Ei8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydF90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgJIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVfdGlt",
-            "ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoRZXhwZXJp",
-            "bWVudF9sZW5ndGgYCyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "SAoQdmFyaWFudHNfaGlzdG9yeRgMIAMoCzIuLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLlZhcmlhbnRzSGlzdG9yeRp3CgpEZWZpbml0aW9uEhEK",
-            "CWNvbmRpdGlvbhgBIAEoCRJKChB2ZXJzaW9uX3ZhcmlhbnRzGAIgASgLMi4u",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVmVyc2lvblZhcmlhbnRz",
-            "SABCCgoIdmFyaWFudHMaiwgKBlJlc3VsdBJYCg92ZXJzaW9uX21ldHJpY3MY",
-            "ASADKAsyPy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FeHBlcmlt",
-            "ZW50LlJlc3VsdC5WZXJzaW9uTWV0cmljcxI0ChBsYXN0X3VwZGF0ZV90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBpnChJDb25maWRl",
-            "bmNlSW50ZXJ2YWwSGAoQY29uZmlkZW5jZV9sZXZlbBgBIAEoARINCgVyYXRp",
-            "bxgCIAEoARITCgtsb3dlcl9ib3VuZBgDIAEoARITCgt1cHBlcl9ib3VuZBgE",
-            "IAEoARqwAgoGTWV0cmljEkkKBHR5cGUYASABKA4yOy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52My5FeHBlcmltZW50LlJlc3VsdC5NZXRyaWNUeXBl",
-            "Ek4KCmNvdW50X3R5cGUYBSABKA4yOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5FeHBlcmltZW50LlJlc3VsdC5Db3VudFR5cGUSDwoFcmF0aW8Y",
-            "AiABKAFIABIPCgVjb3VudBgEIAEoAUgAEmAKE2NvbmZpZGVuY2VfaW50ZXJ2",
-            "YWwYAyABKAsyQy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FeHBl",
-            "cmltZW50LlJlc3VsdC5Db25maWRlbmNlSW50ZXJ2YWxCBwoFdmFsdWUaqgEK",
-            "DlZlcnNpb25NZXRyaWNzEjcKB3ZlcnNpb24YASABKAlCJvpBIwohZGlhbG9n",
-            "Zmxvdy5nb29nbGVhcGlzLmNvbS9WZXJzaW9uEkgKB21ldHJpY3MYAiADKAsy",
-            "Ny5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FeHBlcmltZW50LlJl",
-            "c3VsdC5NZXRyaWMSFQoNc2Vzc2lvbl9jb3VudBgDIAEoBSK2AQoKTWV0cmlj",
-            "VHlwZRIWChJNRVRSSUNfVU5TUEVDSUZJRUQQABImCiJDT05UQUlORURfU0VT",
-            "U0lPTl9OT19DQUxMQkFDS19SQVRFEAESGwoXTElWRV9BR0VOVF9IQU5ET0ZG",
-            "X1JBVEUQAhIZChVDQUxMQkFDS19TRVNTSU9OX1JBVEUQAxIaChZBQkFORE9O",
-            "RURfU0VTU0lPTl9SQVRFEAQSFAoQU0VTU0lPTl9FTkRfUkFURRAFIm8KCUNv",
-            "dW50VHlwZRIaChZDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAASGAoUVE9UQUxf",
-            "Tk9fTUFUQ0hfQ09VTlQQARIUChBUT1RBTF9UVVJOX0NPVU5UEAISFgoSQVZF",
-            "UkFHRV9UVVJOX0NPVU5UEAMiQAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIJCgVEUkFGVBABEgsKB1JVTk5JTkcQAhIICgRET05FEAM6lgHqQZIB",
-            "CiRkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0V4cGVyaW1lbnQSanByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hZ2VudHMve2Fn",
-            "ZW50fS9lbnZpcm9ubWVudHMve2Vudmlyb25tZW50fS9leHBlcmltZW50cy97",
-            "ZXhwZXJpbWVudH0irQEKD1ZlcnNpb25WYXJpYW50cxJICgh2YXJpYW50cxgB",
-            "IAMoCzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlZlcnNpb25W",
-            "YXJpYW50cy5WYXJpYW50GlAKB1ZhcmlhbnQSDwoHdmVyc2lvbhgBIAEoCRIa",
-            "ChJ0cmFmZmljX2FsbG9jYXRpb24YAiABKAISGAoQaXNfY29udHJvbF9ncm91",
-            "cBgDIAEoCCKaAQoPVmFyaWFudHNIaXN0b3J5EkoKEHZlcnNpb25fdmFyaWFu",
-            "dHMYASABKAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5WZXJz",
-            "aW9uVmFyaWFudHNIABIvCgt1cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCCgoIdmFyaWFudHMifQoWTGlzdEV4cGVyaW1l",
-            "bnRzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkZGlhbG9nZmxv",
-            "dy5nb29nbGVhcGlzLmNvbS9FeHBlcmltZW50EhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJInIKF0xpc3RFeHBlcmltZW50c1Jlc3Bv",
-            "bnNlEj4KC2V4cGVyaW1lbnRzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmRpYWxv",
-            "Z2Zsb3cuY3gudjMuRXhwZXJpbWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
-            "KAkiUgoUR2V0RXhwZXJpbWVudFJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC",
-            "+kEmCiRkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0V4cGVyaW1lbnQimwEK",
-            "F0NyZWF0ZUV4cGVyaW1lbnRSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC",
-            "+kEmEiRkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0V4cGVyaW1lbnQSQgoK",
-            "ZXhwZXJpbWVudBgCIAEoCzIpLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzLkV4cGVyaW1lbnRCA+BBAiKTAQoXVXBkYXRlRXhwZXJpbWVudFJlcXVl",
-            "c3QSQgoKZXhwZXJpbWVudBgBIAEoCzIpLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LmN4LnYzLkV4cGVyaW1lbnRCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJVChdEZWxldGVF",
-            "eHBlcmltZW50UmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGRpYWxv",
-            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vRXhwZXJpbWVudCJUChZTdGFydEV4cGVy",
-            "aW1lbnRSZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokZGlhbG9nZmxv",
-            "dy5nb29nbGVhcGlzLmNvbS9FeHBlcmltZW50IlMKFVN0b3BFeHBlcmltZW50",
-            "UmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGRpYWxvZ2Zsb3cuZ29v",
-            "Z2xlYXBpcy5jb20vRXhwZXJpbWVudDL4DAoLRXhwZXJpbWVudHMS2gEKD0xp",
-            "c3RFeHBlcmltZW50cxI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "Lkxpc3RFeHBlcmltZW50c1JlcXVlc3QaNi5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy5jeC52My5MaXN0RXhwZXJpbWVudHNSZXNwb25zZSJYgtPkkwJJEkcv",
-            "djMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vu",
-            "dmlyb25tZW50cy8qfS9leHBlcmltZW50c9pBBnBhcmVudBLHAQoNR2V0RXhw",
-            "ZXJpbWVudBIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkdldEV4",
-            "cGVyaW1lbnRSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djMuRXhwZXJpbWVudCJWgtPkkwJJEkcvdjMve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKi9leHBlcmltZW50",
-            "cy8qfdpBBG5hbWUS5gEKEENyZWF0ZUV4cGVyaW1lbnQSNi5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVFeHBlcmltZW50UmVxdWVzdBop",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQib4LT",
-            "5JMCVSJHL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2Vu",
-            "dHMvKi9lbnZpcm9ubWVudHMvKn0vZXhwZXJpbWVudHM6CmV4cGVyaW1lbnTa",
-            "QRFwYXJlbnQsZXhwZXJpbWVudBL2AQoQVXBkYXRlRXhwZXJpbWVudBI2Lmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0ZUV4cGVyaW1lbnRS",
-            "ZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwZXJp",
-            "bWVudCJ/gtPkkwJgMlIvdjMve2V4cGVyaW1lbnQubmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL2V4cGVyaW1l",
-            "bnRzLyp9OgpleHBlcmltZW502kEWZXhwZXJpbWVudCx1cGRhdGVfbWFzaxK6",
-            "AQoQRGVsZXRlRXhwZXJpbWVudBI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LmN4LnYzLkRlbGV0ZUV4cGVyaW1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IlaC0+STAkkqRy92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL2V4cGVyaW1lbnRzLyp9",
-            "2kEEbmFtZRLUAQoPU3RhcnRFeHBlcmltZW50EjUuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuU3RhcnRFeHBlcmltZW50UmVxdWVzdBopLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQiX4LT5JMCUiJN",
+            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwZXJpbWVudC5EZWZpbml0aW9uEkQK",
+            "DnJvbGxvdXRfY29uZmlnGA4gASgLMiwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuUm9sbG91dENvbmZpZxJCCg1yb2xsb3V0X3N0YXRlGA8gASgL",
+            "MisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUm9sbG91dFN0YXRl",
+            "Eh4KFnJvbGxvdXRfZmFpbHVyZV9yZWFzb24YECABKAkSQAoGcmVzdWx0GAYg",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwZXJpbWVu",
+            "dC5SZXN1bHQSLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEi4KCnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAkgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1lGAogASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChFleHBlcmltZW50X2xlbmd0",
+            "aBgLIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJIChB2YXJpYW50",
+            "c19oaXN0b3J5GAwgAygLMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
+            "djMuVmFyaWFudHNIaXN0b3J5GncKCkRlZmluaXRpb24SEQoJY29uZGl0aW9u",
+            "GAEgASgJEkoKEHZlcnNpb25fdmFyaWFudHMYAiABKAsyLi5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy5jeC52My5WZXJzaW9uVmFyaWFudHNIAEIKCgh2YXJp",
+            "YW50cxqLCAoGUmVzdWx0ElgKD3ZlcnNpb25fbWV0cmljcxgBIAMoCzI/Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQuUmVzdWx0",
+            "LlZlcnNpb25NZXRyaWNzEjQKEGxhc3RfdXBkYXRlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wGmcKEkNvbmZpZGVuY2VJbnRlcnZh",
+            "bBIYChBjb25maWRlbmNlX2xldmVsGAEgASgBEg0KBXJhdGlvGAIgASgBEhMK",
+            "C2xvd2VyX2JvdW5kGAMgASgBEhMKC3VwcGVyX2JvdW5kGAQgASgBGrACCgZN",
+            "ZXRyaWMSSQoEdHlwZRgBIAEoDjI7Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LmN4LnYzLkV4cGVyaW1lbnQuUmVzdWx0Lk1ldHJpY1R5cGUSTgoKY291bnRf",
+            "dHlwZRgFIAEoDjI6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4",
+            "cGVyaW1lbnQuUmVzdWx0LkNvdW50VHlwZRIPCgVyYXRpbxgCIAEoAUgAEg8K",
+            "BWNvdW50GAQgASgBSAASYAoTY29uZmlkZW5jZV9pbnRlcnZhbBgDIAEoCzJD",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQuUmVz",
+            "dWx0LkNvbmZpZGVuY2VJbnRlcnZhbEIHCgV2YWx1ZRqqAQoOVmVyc2lvbk1l",
+            "dHJpY3MSNwoHdmVyc2lvbhgBIAEoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2ds",
+            "ZWFwaXMuY29tL1ZlcnNpb24SSAoHbWV0cmljcxgCIAMoCzI3Lmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQuUmVzdWx0Lk1ldHJp",
+            "YxIVCg1zZXNzaW9uX2NvdW50GAMgASgFIrYBCgpNZXRyaWNUeXBlEhYKEk1F",
+            "VFJJQ19VTlNQRUNJRklFRBAAEiYKIkNPTlRBSU5FRF9TRVNTSU9OX05PX0NB",
+            "TExCQUNLX1JBVEUQARIbChdMSVZFX0FHRU5UX0hBTkRPRkZfUkFURRACEhkK",
+            "FUNBTExCQUNLX1NFU1NJT05fUkFURRADEhoKFkFCQU5ET05FRF9TRVNTSU9O",
+            "X1JBVEUQBBIUChBTRVNTSU9OX0VORF9SQVRFEAUibwoJQ291bnRUeXBlEhoK",
+            "FkNPVU5UX1RZUEVfVU5TUEVDSUZJRUQQABIYChRUT1RBTF9OT19NQVRDSF9D",
+            "T1VOVBABEhQKEFRPVEFMX1RVUk5fQ09VTlQQAhIWChJBVkVSQUdFX1RVUk5f",
+            "Q09VTlQQAyJUCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBURS",
+            "QUZUEAESCwoHUlVOTklORxACEggKBERPTkUQAxISCg5ST0xMT1VUX0ZBSUxF",
+            "RBAEOpYB6kGSAQokZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9FeHBlcmlt",
+            "ZW50Empwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "YWdlbnRzL3thZ2VudH0vZW52aXJvbm1lbnRzL3tlbnZpcm9ubWVudH0vZXhw",
+            "ZXJpbWVudHMve2V4cGVyaW1lbnR9Iq0BCg9WZXJzaW9uVmFyaWFudHMSSAoI",
+            "dmFyaWFudHMYASADKAsyNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
+            "My5WZXJzaW9uVmFyaWFudHMuVmFyaWFudBpQCgdWYXJpYW50Eg8KB3ZlcnNp",
+            "b24YASABKAkSGgoSdHJhZmZpY19hbGxvY2F0aW9uGAIgASgCEhgKEGlzX2Nv",
+            "bnRyb2xfZ3JvdXAYAyABKAgimgEKD1ZhcmlhbnRzSGlzdG9yeRJKChB2ZXJz",
+            "aW9uX3ZhcmlhbnRzGAEgASgLMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjMuVmVyc2lvblZhcmlhbnRzSAASLwoLdXBkYXRlX3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgoKCHZhcmlhbnRzIoUCCg1S",
+            "b2xsb3V0Q29uZmlnEk8KDXJvbGxvdXRfc3RlcHMYASADKAsyOC5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5Sb2xsb3V0Q29uZmlnLlJvbGxvdXRT",
+            "dGVwEhkKEXJvbGxvdXRfY29uZGl0aW9uGAIgASgJEhkKEWZhaWx1cmVfY29u",
+            "ZGl0aW9uGAMgASgJGm0KC1JvbGxvdXRTdGVwEhQKDGRpc3BsYXlfbmFtZRgB",
+            "IAEoCRIXCg90cmFmZmljX3BlcmNlbnQYAiABKAUSLwoMbWluX2R1cmF0aW9u",
+            "GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uImAKDFJvbGxvdXRT",
+            "dGF0ZRIMCgRzdGVwGAEgASgJEhIKCnN0ZXBfaW5kZXgYAyABKAUSLgoKc3Rh",
+            "cnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAifQoW",
+            "TGlzdEV4cGVyaW1lbnRzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpB",
+            "JhIkZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9FeHBlcmltZW50EhEKCXBh",
+            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInIKF0xpc3RFeHBl",
+            "cmltZW50c1Jlc3BvbnNlEj4KC2V4cGVyaW1lbnRzGAEgAygLMikuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRXhwZXJpbWVudBIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkiUgoUR2V0RXhwZXJpbWVudFJlcXVlc3QSOgoEbmFt",
+            "ZRgBIAEoCUIs4EEC+kEmCiRkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0V4",
+            "cGVyaW1lbnQimwEKF0NyZWF0ZUV4cGVyaW1lbnRSZXF1ZXN0EjwKBnBhcmVu",
+            "dBgBIAEoCUIs4EEC+kEmEiRkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0V4",
+            "cGVyaW1lbnQSQgoKZXhwZXJpbWVudBgCIAEoCzIpLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnRCA+BBAiKTAQoXVXBkYXRlRXhw",
+            "ZXJpbWVudFJlcXVlc3QSQgoKZXhwZXJpbWVudBgBIAEoCzIpLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnRCA+BBAhI0Cgt1cGRh",
+            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "AiJVChdEZWxldGVFeHBlcmltZW50UmVxdWVzdBI6CgRuYW1lGAEgASgJQizg",
+            "QQL6QSYKJGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRXhwZXJpbWVudCJU",
+            "ChZTdGFydEV4cGVyaW1lbnRSZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpB",
+            "JgokZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9FeHBlcmltZW50IlMKFVN0",
+            "b3BFeHBlcmltZW50UmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGRp",
+            "YWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRXhwZXJpbWVudDL4DAoLRXhwZXJp",
+            "bWVudHMS2gEKD0xpc3RFeHBlcmltZW50cxI1Lmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLkxpc3RFeHBlcmltZW50c1JlcXVlc3QaNi5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0RXhwZXJpbWVudHNSZXNwb25z",
+            "ZSJYgtPkkwJJEkcvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2FnZW50cy8qL2Vudmlyb25tZW50cy8qfS9leHBlcmltZW50c9pBBnBhcmVu",
+            "dBLHAQoNR2V0RXhwZXJpbWVudBIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LmN4LnYzLkdldEV4cGVyaW1lbnRSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cuY3gudjMuRXhwZXJpbWVudCJWgtPkkwJJEkcvdjMve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMv",
+            "Ki9leHBlcmltZW50cy8qfdpBBG5hbWUS5gEKEENyZWF0ZUV4cGVyaW1lbnQS",
+            "Ni5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVFeHBlcmlt",
+            "ZW50UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4",
+            "cGVyaW1lbnQib4LT5JMCVSJHL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKn0vZXhwZXJpbWVudHM6",
+            "CmV4cGVyaW1lbnTaQRFwYXJlbnQsZXhwZXJpbWVudBL2AQoQVXBkYXRlRXhw",
+            "ZXJpbWVudBI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0",
+            "ZUV4cGVyaW1lbnRSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjMuRXhwZXJpbWVudCJ/gtPkkwJgMlIvdjMve2V4cGVyaW1lbnQubmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50",
+            "cy8qL2V4cGVyaW1lbnRzLyp9OgpleHBlcmltZW502kEWZXhwZXJpbWVudCx1",
+            "cGRhdGVfbWFzaxK6AQoQRGVsZXRlRXhwZXJpbWVudBI2Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLkRlbGV0ZUV4cGVyaW1lbnRSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IlaC0+STAkkqRy92My97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL2V4",
+            "cGVyaW1lbnRzLyp92kEEbmFtZRLUAQoPU3RhcnRFeHBlcmltZW50EjUuZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuU3RhcnRFeHBlcmltZW50UmVx",
+            "dWVzdBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1l",
+            "bnQiX4LT5JMCUiJNL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "YWdlbnRzLyovZW52aXJvbm1lbnRzLyovZXhwZXJpbWVudHMvKn06c3RhcnQ6",
+            "ASraQQRuYW1lEtEBCg5TdG9wRXhwZXJpbWVudBI0Lmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLlN0b3BFeHBlcmltZW50UmVxdWVzdBopLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cGVyaW1lbnQiXoLT5JMCUSJM",
             "L3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52",
-            "aXJvbm1lbnRzLyovZXhwZXJpbWVudHMvKn06c3RhcnQ6ASraQQRuYW1lEtEB",
-            "Cg5TdG9wRXhwZXJpbWVudBI0Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzLlN0b3BFeHBlcmltZW50UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLkV4cGVyaW1lbnQiXoLT5JMCUSJML3YzL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJvbm1lbnRzLyov",
-            "ZXhwZXJpbWVudHMvKn06c3RvcDoBKtpBBG5hbWUaeMpBGWRpYWxvZ2Zsb3cu",
-            "Z29vZ2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvZGlhbG9nZmxvd0KfAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LmN4LnYzQg9FeHBlcmltZW50UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3Yz",
-            "O2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM2IG",
-            "cHJvdG8z"));
+            "aXJvbm1lbnRzLyovZXhwZXJpbWVudHMvKn06c3RvcDoBKtpBBG5hbWUaeMpB",
+            "GWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0LDAQohY29tLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzQg9FeHBlcmltZW50UHJvdG9QAVo/Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFs",
+            "b2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9n",
+            "Zmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpW",
+            "M2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Parser, new[]{ "Name", "DisplayName", "Description", "State", "Definition", "Result", "CreateTime", "StartTime", "EndTime", "LastUpdateTime", "ExperimentLength", "VariantsHistory" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Definition), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Definition.Parser, new[]{ "Condition", "VersionVariants" }, new[]{ "Variants" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Parser, new[]{ "Name", "DisplayName", "Description", "State", "Definition", "RolloutConfig", "RolloutState", "RolloutFailureReason", "Result", "CreateTime", "StartTime", "EndTime", "LastUpdateTime", "ExperimentLength", "VariantsHistory" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Definition), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Definition.Parser, new[]{ "Condition", "VersionVariants" }, new[]{ "Variants" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Parser, new[]{ "VersionMetrics", "LastUpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.MetricType), typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.CountType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.ConfidenceInterval), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.ConfidenceInterval.Parser, new[]{ "ConfidenceLevel", "Ratio", "LowerBound", "UpperBound" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.Metric), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.Metric.Parser, new[]{ "Type", "CountType", "Ratio", "Count", "ConfidenceInterval" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.VersionMetrics), global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.VersionMetrics.Parser, new[]{ "Version", "Metrics", "SessionCount" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.VersionVariants), global::Google.Cloud.Dialogflow.Cx.V3.VersionVariants.Parser, new[]{ "Variants" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.VersionVariants.Types.Variant), global::Google.Cloud.Dialogflow.Cx.V3.VersionVariants.Types.Variant.Parser, new[]{ "Version", "TrafficAllocation", "IsControlGroup" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.VariantsHistory), global::Google.Cloud.Dialogflow.Cx.V3.VariantsHistory.Parser, new[]{ "VersionVariants", "UpdateTime" }, new[]{ "Variants" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig), global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Parser, new[]{ "RolloutSteps", "RolloutCondition", "FailureCondition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep), global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep.Parser, new[]{ "DisplayName", "TrafficPercent", "MinDuration" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RolloutState), global::Google.Cloud.Dialogflow.Cx.V3.RolloutState.Parser, new[]{ "Step", "StepIndex", "StartTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse.Parser, new[]{ "Experiments", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -204,6 +219,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       description_ = other.description_;
       state_ = other.state_;
       definition_ = other.definition_ != null ? other.definition_.Clone() : null;
+      rolloutConfig_ = other.rolloutConfig_ != null ? other.rolloutConfig_.Clone() : null;
+      rolloutState_ = other.rolloutState_ != null ? other.rolloutState_.Clone() : null;
+      rolloutFailureReason_ = other.rolloutFailureReason_;
       result_ = other.result_ != null ? other.result_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
@@ -269,9 +287,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State state_ = global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State.Unspecified;
     /// <summary>
     /// The current state of the experiment.
-    /// Transition triggered by Expriments.StartExperiment: PENDING->RUNNING.
-    /// Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or
-    /// RUNNING->CANCELLED.
+    /// Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING.
+    /// Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or
+    /// RUNNING->DONE.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State State {
@@ -292,6 +310,53 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return definition_; }
       set {
         definition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rollout_config" field.</summary>
+    public const int RolloutConfigFieldNumber = 14;
+    private global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig rolloutConfig_;
+    /// <summary>
+    /// The configuration for auto rollout. If set, there should be exactly two
+    /// variants in the experiment (control variant being the default version of
+    /// the flow), the traffic allocation for the non-control variant will
+    /// gradually increase to 100% when conditions are met, and eventually
+    /// replace the control variant to become the default version of the flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig RolloutConfig {
+      get { return rolloutConfig_; }
+      set {
+        rolloutConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rollout_state" field.</summary>
+    public const int RolloutStateFieldNumber = 15;
+    private global::Google.Cloud.Dialogflow.Cx.V3.RolloutState rolloutState_;
+    /// <summary>
+    /// State of the auto rollout process.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.Cx.V3.RolloutState RolloutState {
+      get { return rolloutState_; }
+      set {
+        rolloutState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rollout_failure_reason" field.</summary>
+    public const int RolloutFailureReasonFieldNumber = 16;
+    private string rolloutFailureReason_ = "";
+    /// <summary>
+    /// The reason why rollout has failed. Should only be set when state is
+    /// ROLLOUT_FAILED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RolloutFailureReason {
+      get { return rolloutFailureReason_; }
+      set {
+        rolloutFailureReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -412,6 +477,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Description != other.Description) return false;
       if (State != other.State) return false;
       if (!object.Equals(Definition, other.Definition)) return false;
+      if (!object.Equals(RolloutConfig, other.RolloutConfig)) return false;
+      if (!object.Equals(RolloutState, other.RolloutState)) return false;
+      if (RolloutFailureReason != other.RolloutFailureReason) return false;
       if (!object.Equals(Result, other.Result)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
@@ -430,6 +498,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (State != global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (definition_ != null) hash ^= Definition.GetHashCode();
+      if (rolloutConfig_ != null) hash ^= RolloutConfig.GetHashCode();
+      if (rolloutState_ != null) hash ^= RolloutState.GetHashCode();
+      if (RolloutFailureReason.Length != 0) hash ^= RolloutFailureReason.GetHashCode();
       if (result_ != null) hash ^= Result.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -498,6 +569,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteMessage(ExperimentLength);
       }
       variantsHistory_.WriteTo(output, _repeated_variantsHistory_codec);
+      if (rolloutConfig_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RolloutConfig);
+      }
+      if (rolloutState_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(RolloutState);
+      }
+      if (RolloutFailureReason.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(RolloutFailureReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -552,6 +635,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteMessage(ExperimentLength);
       }
       variantsHistory_.WriteTo(ref output, _repeated_variantsHistory_codec);
+      if (rolloutConfig_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RolloutConfig);
+      }
+      if (rolloutState_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(RolloutState);
+      }
+      if (RolloutFailureReason.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(RolloutFailureReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -575,6 +670,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (definition_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Definition);
+      }
+      if (rolloutConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RolloutConfig);
+      }
+      if (rolloutState_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RolloutState);
+      }
+      if (RolloutFailureReason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RolloutFailureReason);
       }
       if (result_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Result);
@@ -623,6 +727,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           Definition = new global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Definition();
         }
         Definition.MergeFrom(other.Definition);
+      }
+      if (other.rolloutConfig_ != null) {
+        if (rolloutConfig_ == null) {
+          RolloutConfig = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig();
+        }
+        RolloutConfig.MergeFrom(other.RolloutConfig);
+      }
+      if (other.rolloutState_ != null) {
+        if (rolloutState_ == null) {
+          RolloutState = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutState();
+        }
+        RolloutState.MergeFrom(other.RolloutState);
+      }
+      if (other.RolloutFailureReason.Length != 0) {
+        RolloutFailureReason = other.RolloutFailureReason;
       }
       if (other.result_ != null) {
         if (result_ == null) {
@@ -744,6 +863,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             variantsHistory_.AddEntriesFrom(input, _repeated_variantsHistory_codec);
             break;
           }
+          case 114: {
+            if (rolloutConfig_ == null) {
+              RolloutConfig = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig();
+            }
+            input.ReadMessage(RolloutConfig);
+            break;
+          }
+          case 122: {
+            if (rolloutState_ == null) {
+              RolloutState = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutState();
+            }
+            input.ReadMessage(RolloutState);
+            break;
+          }
+          case 130: {
+            RolloutFailureReason = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -827,6 +964,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             variantsHistory_.AddEntriesFrom(ref input, _repeated_variantsHistory_codec);
             break;
           }
+          case 114: {
+            if (rolloutConfig_ == null) {
+              RolloutConfig = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig();
+            }
+            input.ReadMessage(RolloutConfig);
+            break;
+          }
+          case 122: {
+            if (rolloutState_ == null) {
+              RolloutState = new global::Google.Cloud.Dialogflow.Cx.V3.RolloutState();
+            }
+            input.ReadMessage(RolloutState);
+            break;
+          }
+          case 130: {
+            RolloutFailureReason = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -856,6 +1011,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// The experiment is done.
         /// </summary>
         [pbr::OriginalName("DONE")] Done = 3,
+        /// <summary>
+        /// The experiment with auto-rollout enabled has failed.
+        /// </summary>
+        [pbr::OriginalName("ROLLOUT_FAILED")] RolloutFailed = 4,
       }
 
       /// <summary>
@@ -3025,6 +3184,799 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
+  /// The configuration for auto rollout.
+  /// </summary>
+  public sealed partial class RolloutConfig : pb::IMessage<RolloutConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RolloutConfig> _parser = new pb::MessageParser<RolloutConfig>(() => new RolloutConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RolloutConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutConfig(RolloutConfig other) : this() {
+      rolloutSteps_ = other.rolloutSteps_.Clone();
+      rolloutCondition_ = other.rolloutCondition_;
+      failureCondition_ = other.failureCondition_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutConfig Clone() {
+      return new RolloutConfig(this);
+    }
+
+    /// <summary>Field number for the "rollout_steps" field.</summary>
+    public const int RolloutStepsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep> _repeated_rolloutSteps_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep> rolloutSteps_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep>();
+    /// <summary>
+    /// Steps to roll out a flow version. Steps should be sorted by percentage in
+    /// ascending order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Types.RolloutStep> RolloutSteps {
+      get { return rolloutSteps_; }
+    }
+
+    /// <summary>Field number for the "rollout_condition" field.</summary>
+    public const int RolloutConditionFieldNumber = 2;
+    private string rolloutCondition_ = "";
+    /// <summary>
+    /// The conditions that are used to evaluate the success of a rollout
+    /// step. If not specified, all rollout steps will proceed to the next one
+    /// unless failure conditions are met. E.g. "containment_rate > 60% AND
+    /// callback_rate &lt; 20%". See the [conditions
+    /// reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RolloutCondition {
+      get { return rolloutCondition_; }
+      set {
+        rolloutCondition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "failure_condition" field.</summary>
+    public const int FailureConditionFieldNumber = 3;
+    private string failureCondition_ = "";
+    /// <summary>
+    /// The conditions that are used to evaluate the failure of a rollout
+    /// step. If not specified, no rollout steps will fail. E.g. "containment_rate
+    /// &lt; 10% OR average_turn_count &lt; 3". See the [conditions
+    /// reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FailureCondition {
+      get { return failureCondition_; }
+      set {
+        failureCondition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RolloutConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RolloutConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!rolloutSteps_.Equals(other.rolloutSteps_)) return false;
+      if (RolloutCondition != other.RolloutCondition) return false;
+      if (FailureCondition != other.FailureCondition) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= rolloutSteps_.GetHashCode();
+      if (RolloutCondition.Length != 0) hash ^= RolloutCondition.GetHashCode();
+      if (FailureCondition.Length != 0) hash ^= FailureCondition.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      rolloutSteps_.WriteTo(output, _repeated_rolloutSteps_codec);
+      if (RolloutCondition.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RolloutCondition);
+      }
+      if (FailureCondition.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FailureCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      rolloutSteps_.WriteTo(ref output, _repeated_rolloutSteps_codec);
+      if (RolloutCondition.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RolloutCondition);
+      }
+      if (FailureCondition.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FailureCondition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += rolloutSteps_.CalculateSize(_repeated_rolloutSteps_codec);
+      if (RolloutCondition.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RolloutCondition);
+      }
+      if (FailureCondition.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FailureCondition);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RolloutConfig other) {
+      if (other == null) {
+        return;
+      }
+      rolloutSteps_.Add(other.rolloutSteps_);
+      if (other.RolloutCondition.Length != 0) {
+        RolloutCondition = other.RolloutCondition;
+      }
+      if (other.FailureCondition.Length != 0) {
+        FailureCondition = other.FailureCondition;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            rolloutSteps_.AddEntriesFrom(input, _repeated_rolloutSteps_codec);
+            break;
+          }
+          case 18: {
+            RolloutCondition = input.ReadString();
+            break;
+          }
+          case 26: {
+            FailureCondition = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            rolloutSteps_.AddEntriesFrom(ref input, _repeated_rolloutSteps_codec);
+            break;
+          }
+          case 18: {
+            RolloutCondition = input.ReadString();
+            break;
+          }
+          case 26: {
+            FailureCondition = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RolloutConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A single rollout step with specified traffic allocation.
+      /// </summary>
+      public sealed partial class RolloutStep : pb::IMessage<RolloutStep>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RolloutStep> _parser = new pb::MessageParser<RolloutStep>(() => new RolloutStep());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<RolloutStep> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.RolloutConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RolloutStep() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RolloutStep(RolloutStep other) : this() {
+          displayName_ = other.displayName_;
+          trafficPercent_ = other.trafficPercent_;
+          minDuration_ = other.minDuration_ != null ? other.minDuration_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RolloutStep Clone() {
+          return new RolloutStep(this);
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 1;
+        private string displayName_ = "";
+        /// <summary>
+        /// The name of the rollout step;
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "traffic_percent" field.</summary>
+        public const int TrafficPercentFieldNumber = 2;
+        private int trafficPercent_;
+        /// <summary>
+        /// The percentage of traffic allocated to the flow version of this rollout
+        /// step. (0%, 100%].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int TrafficPercent {
+          get { return trafficPercent_; }
+          set {
+            trafficPercent_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_duration" field.</summary>
+        public const int MinDurationFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Duration minDuration_;
+        /// <summary>
+        /// The minimum time that this step should last. Should be longer than 1
+        /// hour. If not set, the default minimum duration for each step will be 1
+        /// hour.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Protobuf.WellKnownTypes.Duration MinDuration {
+          get { return minDuration_; }
+          set {
+            minDuration_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as RolloutStep);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(RolloutStep other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DisplayName != other.DisplayName) return false;
+          if (TrafficPercent != other.TrafficPercent) return false;
+          if (!object.Equals(MinDuration, other.MinDuration)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (TrafficPercent != 0) hash ^= TrafficPercent.GetHashCode();
+          if (minDuration_ != null) hash ^= MinDuration.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DisplayName);
+          }
+          if (TrafficPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TrafficPercent);
+          }
+          if (minDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(MinDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DisplayName);
+          }
+          if (TrafficPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TrafficPercent);
+          }
+          if (minDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(MinDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (TrafficPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrafficPercent);
+          }
+          if (minDuration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinDuration);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(RolloutStep other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.TrafficPercent != 0) {
+            TrafficPercent = other.TrafficPercent;
+          }
+          if (other.minDuration_ != null) {
+            if (minDuration_ == null) {
+              MinDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            MinDuration.MergeFrom(other.MinDuration);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 16: {
+                TrafficPercent = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                if (minDuration_ == null) {
+                  MinDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MinDuration);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 16: {
+                TrafficPercent = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                if (minDuration_ == null) {
+                  MinDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MinDuration);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// State of the auto-rollout process.
+  /// </summary>
+  public sealed partial class RolloutState : pb::IMessage<RolloutState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RolloutState> _parser = new pb::MessageParser<RolloutState>(() => new RolloutState());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RolloutState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutState(RolloutState other) : this() {
+      step_ = other.step_;
+      stepIndex_ = other.stepIndex_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RolloutState Clone() {
+      return new RolloutState(this);
+    }
+
+    /// <summary>Field number for the "step" field.</summary>
+    public const int StepFieldNumber = 1;
+    private string step_ = "";
+    /// <summary>
+    /// Display name of the current auto rollout step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Step {
+      get { return step_; }
+      set {
+        step_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "step_index" field.</summary>
+    public const int StepIndexFieldNumber = 3;
+    private int stepIndex_;
+    /// <summary>
+    /// Index of the current step in the auto rollout steps list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StepIndex {
+      get { return stepIndex_; }
+      set {
+        stepIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Start time of the current step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RolloutState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RolloutState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Step != other.Step) return false;
+      if (StepIndex != other.StepIndex) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Step.Length != 0) hash ^= Step.GetHashCode();
+      if (StepIndex != 0) hash ^= StepIndex.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Step.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Step);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (StepIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StepIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Step.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Step);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (StepIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StepIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Step.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Step);
+      }
+      if (StepIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StepIndex);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RolloutState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Step.Length != 0) {
+        Step = other.Step;
+      }
+      if (other.StepIndex != 0) {
+        StepIndex = other.StepIndex;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Step = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 24: {
+            StepIndex = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Step = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 24: {
+            StepIndex = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request message for [Experiments.ListExperiments][google.cloud.dialogflow.cx.v3.Experiments.ListExperiments].
   /// </summary>
   public sealed partial class ListExperimentsRequest : pb::IMessage<ListExperimentsRequest>
@@ -3039,7 +3991,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3298,7 +4250,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3508,7 +4460,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3688,7 +4640,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3916,7 +4868,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4151,7 +5103,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4331,7 +5283,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4511,7 +5463,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.ExperimentReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

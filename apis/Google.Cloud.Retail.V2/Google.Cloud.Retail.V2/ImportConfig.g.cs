@@ -26,75 +26,97 @@ namespace Google.Cloud.Retail.V2 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvcmV0YWlsL3YyL2ltcG9ydF9jb25maWcucHJvdG8S",
             "Fmdvb2dsZS5jbG91ZC5yZXRhaWwudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aJGdv",
-            "b2dsZS9jbG91ZC9yZXRhaWwvdjIvcHJvZHVjdC5wcm90bxonZ29vZ2xlL2Ns",
-            "b3VkL3JldGFpbC92Mi91c2VyX2V2ZW50LnByb3RvGiBnb29nbGUvcHJvdG9i",
-            "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iOQoJR2NzU291cmNl",
-            "EhcKCmlucHV0X3VyaXMYASADKAlCA+BBAhITCgtkYXRhX3NjaGVtYRgCIAEo",
-            "CSKCAQoOQmlnUXVlcnlTb3VyY2USEgoKcHJvamVjdF9pZBgFIAEoCRIXCgpk",
-            "YXRhc2V0X2lkGAEgASgJQgPgQQISFQoIdGFibGVfaWQYAiABKAlCA+BBAhIX",
-            "Cg9nY3Nfc3RhZ2luZ19kaXIYAyABKAkSEwoLZGF0YV9zY2hlbWEYBCABKAki",
-            "TQoTUHJvZHVjdElubGluZVNvdXJjZRI2Cghwcm9kdWN0cxgBIAMoCzIfLmdv",
-            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECIlQKFVVzZXJFdmVu",
-            "dElubGluZVNvdXJjZRI7Cgt1c2VyX2V2ZW50cxgBIAMoCzIhLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuVXNlckV2ZW50QgPgQQIiOQoSSW1wb3J0RXJyb3Jz",
-            "Q29uZmlnEhQKCmdjc19wcmVmaXgYASABKAlIAEINCgtkZXN0aW5hdGlvbiLn",
-            "AQoVSW1wb3J0UHJvZHVjdHNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EEC",
-            "EkUKDGlucHV0X2NvbmZpZxgCIAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHJvZHVjdElucHV0Q29uZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgD",
-            "IAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29u",
-            "ZmlnEi8KC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzayK6AQoXSW1wb3J0VXNlckV2ZW50c1JlcXVlc3QSEwoGcGFyZW50",
-            "GAEgASgJQgPgQQISRwoMaW5wdXRfY29uZmlnGAIgASgLMiwuZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52Mi5Vc2VyRXZlbnRJbnB1dENvbmZpZ0ID4EECEkEKDWVy",
-            "cm9yc19jb25maWcYAyABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLklt",
-            "cG9ydEVycm9yc0NvbmZpZyLpAQoSUHJvZHVjdElucHV0Q29uZmlnEkwKFXBy",
-            "b2R1Y3RfaW5saW5lX3NvdXJjZRgBIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRh",
-            "aWwudjIuUHJvZHVjdElubGluZVNvdXJjZUgAEjcKCmdjc19zb3VyY2UYAiAB",
-            "KAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkdjc1NvdXJjZUgAEkIKEGJp",
-            "Z19xdWVyeV9zb3VyY2UYAyABKAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkJpZ1F1ZXJ5U291cmNlSABCCAoGc291cmNlIv8BChRVc2VyRXZlbnRJbnB1",
-            "dENvbmZpZxJWChh1c2VyX2V2ZW50X2lubGluZV9zb3VyY2UYASABKAsyLS5n",
-            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudElubGluZVNvdXJjZUID",
-            "4EECSAASPAoKZ2NzX3NvdXJjZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRh",
-            "aWwudjIuR2NzU291cmNlQgPgQQJIABJHChBiaWdfcXVlcnlfc291cmNlGAMg",
-            "ASgLMiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5CaWdRdWVyeVNvdXJjZUID",
-            "4EECSABCCAoGc291cmNlIqABCg5JbXBvcnRNZXRhZGF0YRIvCgtjcmVhdGVf",
-            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBk",
-            "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUK",
-            "DXN1Y2Nlc3NfY291bnQYAyABKAMSFQoNZmFpbHVyZV9jb3VudBgEIAEoAyKG",
-            "AQoWSW1wb3J0UHJvZHVjdHNSZXNwb25zZRIpCg1lcnJvcl9zYW1wbGVzGAEg",
-            "AygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSQQoNZXJyb3JzX2NvbmZpZxgCIAEo",
-            "CzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmln",
-            "ItABChhJbXBvcnRVc2VyRXZlbnRzUmVzcG9uc2USKQoNZXJyb3Jfc2FtcGxl",
-            "cxgBIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkEKDWVycm9yc19jb25maWcY",
-            "AiABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydEVycm9yc0Nv",
-            "bmZpZxJGCg5pbXBvcnRfc3VtbWFyeRgDIAEoCzIuLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuVXNlckV2ZW50SW1wb3J0U3VtbWFyeSJUChZVc2VyRXZlbnRJ",
-            "bXBvcnRTdW1tYXJ5EhsKE2pvaW5lZF9ldmVudHNfY291bnQYASABKAMSHQoV",
-            "dW5qb2luZWRfZXZlbnRzX2NvdW50GAIgASgDQsYBChpjb20uZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52MkIRSW1wb3J0Q29uZmlnUHJvdG9QAVo8Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7",
-            "cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdv",
-            "b2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6",
-            "OlYyYgZwcm90bzM="));
+            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJGdvb2dsZS9jbG91ZC9yZXRhaWwv",
+            "djIvcHJvZHVjdC5wcm90bxonZ29vZ2xlL2Nsb3VkL3JldGFpbC92Mi91c2Vy",
+            "X2V2ZW50LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3Jw",
+            "Yy9zdGF0dXMucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8iOQoJR2Nz",
+            "U291cmNlEhcKCmlucHV0X3VyaXMYASADKAlCA+BBAhITCgtkYXRhX3NjaGVt",
+            "YRgCIAEoCSK8AQoOQmlnUXVlcnlTb3VyY2USKwoOcGFydGl0aW9uX2RhdGUY",
+            "BiABKAsyES5nb29nbGUudHlwZS5EYXRlSAASEgoKcHJvamVjdF9pZBgFIAEo",
+            "CRIXCgpkYXRhc2V0X2lkGAEgASgJQgPgQQISFQoIdGFibGVfaWQYAiABKAlC",
+            "A+BBAhIXCg9nY3Nfc3RhZ2luZ19kaXIYAyABKAkSEwoLZGF0YV9zY2hlbWEY",
+            "BCABKAlCCwoJcGFydGl0aW9uIk0KE1Byb2R1Y3RJbmxpbmVTb3VyY2USNgoI",
+            "cHJvZHVjdHMYASADKAsyHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1",
+            "Y3RCA+BBAiJUChVVc2VyRXZlbnRJbmxpbmVTb3VyY2USOwoLdXNlcl9ldmVu",
+            "dHMYASADKAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudEID",
+            "4EECIjkKEkltcG9ydEVycm9yc0NvbmZpZxIUCgpnY3NfcHJlZml4GAEgASgJ",
+            "SABCDQoLZGVzdGluYXRpb24i9AMKFUltcG9ydFByb2R1Y3RzUmVxdWVzdBI0",
+            "CgZwYXJlbnQYASABKAlCJOBBAvpBHgoccmV0YWlsLmdvb2dsZWFwaXMuY29t",
+            "L0JyYW5jaBISCgpyZXF1ZXN0X2lkGAYgASgJEkUKDGlucHV0X2NvbmZpZxgC",
+            "IAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdElucHV0Q29u",
+            "ZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgDIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmlnEi8KC3VwZGF0ZV9tYXNr",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJdChNyZWNvbmNp",
+            "bGlhdGlvbl9tb2RlGAUgASgOMkAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5J",
+            "bXBvcnRQcm9kdWN0c1JlcXVlc3QuUmVjb25jaWxpYXRpb25Nb2RlEiEKGW5v",
+            "dGlmaWNhdGlvbl9wdWJzdWJfdG9waWMYByABKAkiVAoSUmVjb25jaWxpYXRp",
+            "b25Nb2RlEiMKH1JFQ09OQ0lMSUFUSU9OX01PREVfVU5TUEVDSUZJRUQQABIP",
+            "CgtJTkNSRU1FTlRBTBABEggKBEZVTEwQAiLcAQoXSW1wb3J0VXNlckV2ZW50",
+            "c1JlcXVlc3QSNQoGcGFyZW50GAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29n",
+            "bGVhcGlzLmNvbS9DYXRhbG9nEkcKDGlucHV0X2NvbmZpZxgCIAEoCzIsLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuVXNlckV2ZW50SW5wdXRDb25maWdCA+BB",
+            "AhJBCg1lcnJvcnNfY29uZmlnGAMgASgLMiouZ29vZ2xlLmNsb3VkLnJldGFp",
+            "bC52Mi5JbXBvcnRFcnJvcnNDb25maWcixQEKG0ltcG9ydENvbXBsZXRpb25E",
+            "YXRhUmVxdWVzdBI1CgZwYXJlbnQYASABKAlCJeBBAvpBHwodcmV0YWlsLmdv",
+            "b2dsZWFwaXMuY29tL0NhdGFsb2cSTAoMaW5wdXRfY29uZmlnGAIgASgLMjEu",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Db21wbGV0aW9uRGF0YUlucHV0Q29u",
+            "ZmlnQgPgQQISIQoZbm90aWZpY2F0aW9uX3B1YnN1Yl90b3BpYxgDIAEoCSLp",
+            "AQoSUHJvZHVjdElucHV0Q29uZmlnEkwKFXByb2R1Y3RfaW5saW5lX3NvdXJj",
+            "ZRgBIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdElubGlu",
+            "ZVNvdXJjZUgAEjcKCmdjc19zb3VyY2UYAiABKAsyIS5nb29nbGUuY2xvdWQu",
+            "cmV0YWlsLnYyLkdjc1NvdXJjZUgAEkIKEGJpZ19xdWVyeV9zb3VyY2UYAyAB",
+            "KAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkJpZ1F1ZXJ5U291cmNlSABC",
+            "CAoGc291cmNlIv8BChRVc2VyRXZlbnRJbnB1dENvbmZpZxJWChh1c2VyX2V2",
+            "ZW50X2lubGluZV9zb3VyY2UYASABKAsyLS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlVzZXJFdmVudElubGluZVNvdXJjZUID4EECSAASPAoKZ2NzX3NvdXJj",
+            "ZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2NzU291cmNlQgPg",
+            "QQJIABJHChBiaWdfcXVlcnlfc291cmNlGAMgASgLMiYuZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5CaWdRdWVyeVNvdXJjZUID4EECSABCCAoGc291cmNlIm4K",
+            "GUNvbXBsZXRpb25EYXRhSW5wdXRDb25maWcSRwoQYmlnX3F1ZXJ5X3NvdXJj",
+            "ZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQmlnUXVlcnlTb3Vy",
+            "Y2VCA+BBAkgAQggKBnNvdXJjZSLXAQoOSW1wb3J0TWV0YWRhdGESLwoLY3Jl",
+            "YXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8K",
+            "C3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIVCg1zdWNjZXNzX2NvdW50GAMgASgDEhUKDWZhaWx1cmVfY291bnQYBCAB",
+            "KAMSEgoKcmVxdWVzdF9pZBgFIAEoCRIhChlub3RpZmljYXRpb25fcHVic3Vi",
+            "X3RvcGljGAYgASgJIoYBChZJbXBvcnRQcm9kdWN0c1Jlc3BvbnNlEikKDWVy",
+            "cm9yX3NhbXBsZXMYASADKAsyEi5nb29nbGUucnBjLlN0YXR1cxJBCg1lcnJv",
+            "cnNfY29uZmlnGAIgASgLMiouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBv",
+            "cnRFcnJvcnNDb25maWci0AEKGEltcG9ydFVzZXJFdmVudHNSZXNwb25zZRIp",
+            "Cg1lcnJvcl9zYW1wbGVzGAEgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSQQoN",
+            "ZXJyb3JzX2NvbmZpZxgCIAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "SW1wb3J0RXJyb3JzQ29uZmlnEkYKDmltcG9ydF9zdW1tYXJ5GAMgASgLMi4u",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Vc2VyRXZlbnRJbXBvcnRTdW1tYXJ5",
+            "IlQKFlVzZXJFdmVudEltcG9ydFN1bW1hcnkSGwoTam9pbmVkX2V2ZW50c19j",
+            "b3VudBgBIAEoAxIdChV1bmpvaW5lZF9ldmVudHNfY291bnQYAiABKAMiSQoc",
+            "SW1wb3J0Q29tcGxldGlvbkRhdGFSZXNwb25zZRIpCg1lcnJvcl9zYW1wbGVz",
+            "GAEgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCxgEKGmNvbS5nb29nbGUuY2xv",
+            "dWQucmV0YWlsLnYyQhFJbXBvcnRDb25maWdQcm90b1ABWjxnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92Mjty",
+            "ZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29v",
+            "Z2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.GcsSource), global::Google.Cloud.Retail.V2.GcsSource.Parser, new[]{ "InputUris", "DataSchema" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.BigQuerySource), global::Google.Cloud.Retail.V2.BigQuerySource.Parser, new[]{ "ProjectId", "DatasetId", "TableId", "GcsStagingDir", "DataSchema" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.BigQuerySource), global::Google.Cloud.Retail.V2.BigQuerySource.Parser, new[]{ "PartitionDate", "ProjectId", "DatasetId", "TableId", "GcsStagingDir", "DataSchema" }, new[]{ "Partition" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductInlineSource), global::Google.Cloud.Retail.V2.ProductInlineSource.Parser, new[]{ "Products" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventInlineSource), global::Google.Cloud.Retail.V2.UserEventInlineSource.Parser, new[]{ "UserEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportErrorsConfig), global::Google.Cloud.Retail.V2.ImportErrorsConfig.Parser, new[]{ "GcsPrefix" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportProductsRequest), global::Google.Cloud.Retail.V2.ImportProductsRequest.Parser, new[]{ "Parent", "InputConfig", "ErrorsConfig", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportProductsRequest), global::Google.Cloud.Retail.V2.ImportProductsRequest.Parser, new[]{ "Parent", "RequestId", "InputConfig", "ErrorsConfig", "UpdateMask", "ReconciliationMode", "NotificationPubsubTopic" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportUserEventsRequest), global::Google.Cloud.Retail.V2.ImportUserEventsRequest.Parser, new[]{ "Parent", "InputConfig", "ErrorsConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportCompletionDataRequest), global::Google.Cloud.Retail.V2.ImportCompletionDataRequest.Parser, new[]{ "Parent", "InputConfig", "NotificationPubsubTopic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductInputConfig), global::Google.Cloud.Retail.V2.ProductInputConfig.Parser, new[]{ "ProductInlineSource", "GcsSource", "BigQuerySource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventInputConfig), global::Google.Cloud.Retail.V2.UserEventInputConfig.Parser, new[]{ "UserEventInlineSource", "GcsSource", "BigQuerySource" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportMetadata), global::Google.Cloud.Retail.V2.ImportMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CompletionDataInputConfig), global::Google.Cloud.Retail.V2.CompletionDataInputConfig.Parser, new[]{ "BigQuerySource" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportMetadata), global::Google.Cloud.Retail.V2.ImportMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount", "RequestId", "NotificationPubsubTopic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportProductsResponse), global::Google.Cloud.Retail.V2.ImportProductsResponse.Parser, new[]{ "ErrorSamples", "ErrorsConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportUserEventsResponse), global::Google.Cloud.Retail.V2.ImportUserEventsResponse.Parser, new[]{ "ErrorSamples", "ErrorsConfig", "ImportSummary" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventImportSummary), global::Google.Cloud.Retail.V2.UserEventImportSummary.Parser, new[]{ "JoinedEventsCount", "UnjoinedEventsCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventImportSummary), global::Google.Cloud.Retail.V2.UserEventImportSummary.Parser, new[]{ "JoinedEventsCount", "UnjoinedEventsCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportCompletionDataResponse), global::Google.Cloud.Retail.V2.ImportCompletionDataResponse.Parser, new[]{ "ErrorSamples" }, null, null, null, null)
           }));
     }
     #endregion
@@ -156,7 +178,7 @@ namespace Google.Cloud.Retail.V2 {
     /// files, such as `gs://bucket/directory/*.json`. A request can
     /// contain at most 100 files, and each file can be up to 2 GB. See
     /// [Importing product
-    /// information](https://cloud.google.com/recommendations-ai/docs/upload-catalog)
+    /// information](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog)
     /// for the expected file format and setup instructions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -183,7 +205,7 @@ namespace Google.Cloud.Retail.V2 {
     /// * `user_event` (default): One JSON
     /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
     /// * `user_event_ga360`: Using
-    ///   https://support.google.com/analytics/answer/3437719?hl=en.
+    ///   https://support.google.com/analytics/answer/3437719.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DataSchema {
@@ -367,6 +389,12 @@ namespace Google.Cloud.Retail.V2 {
       tableId_ = other.tableId_;
       gcsStagingDir_ = other.gcsStagingDir_;
       dataSchema_ = other.dataSchema_;
+      switch (other.PartitionCase) {
+        case PartitionOneofCase.PartitionDate:
+          PartitionDate = other.PartitionDate.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -375,13 +403,31 @@ namespace Google.Cloud.Retail.V2 {
       return new BigQuerySource(this);
     }
 
+    /// <summary>Field number for the "partition_date" field.</summary>
+    public const int PartitionDateFieldNumber = 6;
+    /// <summary>
+    /// BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
+    ///
+    /// Only supported when
+    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// is set to `FULL`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date PartitionDate {
+      get { return partitionCase_ == PartitionOneofCase.PartitionDate ? (global::Google.Type.Date) partition_ : null; }
+      set {
+        partition_ = value;
+        partitionCase_ = value == null ? PartitionOneofCase.None : PartitionOneofCase.PartitionDate;
+      }
+    }
+
     /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 5;
     private string projectId_ = "";
     /// <summary>
-    /// The project id (can be project # or id) that the BigQuery source is in with
+    /// The project ID (can be project # or ID) that the BigQuery source is in with
     /// a length limit of 128 characters. If not specified, inherits the project
-    /// id from the parent request.
+    /// ID from the parent request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -456,7 +502,7 @@ namespace Google.Cloud.Retail.V2 {
     /// * `user_event` (default): One JSON
     /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
     /// * `user_event_ga360`: Using
-    ///   https://support.google.com/analytics/answer/3437719?hl=en.
+    ///   https://support.google.com/analytics/answer/3437719.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DataSchema {
@@ -464,6 +510,24 @@ namespace Google.Cloud.Retail.V2 {
       set {
         dataSchema_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    private object partition_;
+    /// <summary>Enum of possible cases for the "partition" oneof.</summary>
+    public enum PartitionOneofCase {
+      None = 0,
+      PartitionDate = 6,
+    }
+    private PartitionOneofCase partitionCase_ = PartitionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartitionOneofCase PartitionCase {
+      get { return partitionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearPartition() {
+      partitionCase_ = PartitionOneofCase.None;
+      partition_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -479,22 +543,26 @@ namespace Google.Cloud.Retail.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(PartitionDate, other.PartitionDate)) return false;
       if (ProjectId != other.ProjectId) return false;
       if (DatasetId != other.DatasetId) return false;
       if (TableId != other.TableId) return false;
       if (GcsStagingDir != other.GcsStagingDir) return false;
       if (DataSchema != other.DataSchema) return false;
+      if (PartitionCase != other.PartitionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (partitionCase_ == PartitionOneofCase.PartitionDate) hash ^= PartitionDate.GetHashCode();
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (TableId.Length != 0) hash ^= TableId.GetHashCode();
       if (GcsStagingDir.Length != 0) hash ^= GcsStagingDir.GetHashCode();
       if (DataSchema.Length != 0) hash ^= DataSchema.GetHashCode();
+      hash ^= (int) partitionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -531,6 +599,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(ProjectId);
       }
+      if (partitionCase_ == PartitionOneofCase.PartitionDate) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PartitionDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -560,6 +632,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(ProjectId);
       }
+      if (partitionCase_ == PartitionOneofCase.PartitionDate) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PartitionDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -569,6 +645,9 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (partitionCase_ == PartitionOneofCase.PartitionDate) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartitionDate);
+      }
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
@@ -610,6 +689,15 @@ namespace Google.Cloud.Retail.V2 {
       if (other.DataSchema.Length != 0) {
         DataSchema = other.DataSchema;
       }
+      switch (other.PartitionCase) {
+        case PartitionOneofCase.PartitionDate:
+          if (PartitionDate == null) {
+            PartitionDate = new global::Google.Type.Date();
+          }
+          PartitionDate.MergeFrom(other.PartitionDate);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -644,6 +732,15 @@ namespace Google.Cloud.Retail.V2 {
             ProjectId = input.ReadString();
             break;
           }
+          case 50: {
+            global::Google.Type.Date subBuilder = new global::Google.Type.Date();
+            if (partitionCase_ == PartitionOneofCase.PartitionDate) {
+              subBuilder.MergeFrom(PartitionDate);
+            }
+            input.ReadMessage(subBuilder);
+            PartitionDate = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -676,6 +773,15 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 42: {
             ProjectId = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Type.Date subBuilder = new global::Google.Type.Date();
+            if (partitionCase_ == PartitionOneofCase.PartitionDate) {
+              subBuilder.MergeFrom(PartitionDate);
+            }
+            input.ReadMessage(subBuilder);
+            PartitionDate = subBuilder;
             break;
           }
         }
@@ -734,7 +840,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. A list of products to update/create. Each product must have a
     /// valid [Product.id][google.cloud.retail.v2.Product.id]. Recommended max of
-    /// 10k items.
+    /// 100 items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> Products {
@@ -1263,9 +1369,12 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportProductsRequest(ImportProductsRequest other) : this() {
       parent_ = other.parent_;
+      requestId_ = other.requestId_;
       inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
       errorsConfig_ = other.errorsConfig_ != null ? other.errorsConfig_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      reconciliationMode_ = other.reconciliationMode_;
+      notificationPubsubTopic_ = other.notificationPubsubTopic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1289,6 +1398,28 @@ namespace Google.Cloud.Retail.V2 {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 6;
+    private string requestId_ = "";
+    /// <summary>
+    /// Unique identifier provided by client, within the ancestor
+    /// dataset scope. Ensures idempotency and used for request deduplication.
+    /// Server-generated if unspecified. Up to 128 characters long and must match
+    /// the pattern: "[a-zA-Z0-9_]+". This is returned as [Operation.name][] in
+    /// [ImportMetadata][google.cloud.retail.v2.ImportMetadata].
+    ///
+    /// Only supported when
+    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// is set to `FULL`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1335,6 +1466,44 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "reconciliation_mode" field.</summary>
+    public const int ReconciliationModeFieldNumber = 5;
+    private global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode reconciliationMode_ = global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified;
+    /// <summary>
+    /// The mode of reconciliation between existing products and the products to be
+    /// imported. Defaults to
+    /// [ReconciliationMode.INCREMENTAL][google.cloud.retail.v2.ImportProductsRequest.ReconciliationMode.INCREMENTAL].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode ReconciliationMode {
+      get { return reconciliationMode_; }
+      set {
+        reconciliationMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "notification_pubsub_topic" field.</summary>
+    public const int NotificationPubsubTopicFieldNumber = 7;
+    private string notificationPubsubTopic_ = "";
+    /// <summary>
+    /// Pub/Sub topic for receiving notification. If this field is set,
+    /// when the import is finished, a notification will be sent to
+    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// [Operation][google.longrunning.Operation].
+    /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+    ///
+    /// Only supported when
+    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// is set to `FULL`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationPubsubTopic {
+      get { return notificationPubsubTopic_; }
+      set {
+        notificationPubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImportProductsRequest);
@@ -1349,9 +1518,12 @@ namespace Google.Cloud.Retail.V2 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (RequestId != other.RequestId) return false;
       if (!object.Equals(InputConfig, other.InputConfig)) return false;
       if (!object.Equals(ErrorsConfig, other.ErrorsConfig)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (ReconciliationMode != other.ReconciliationMode) return false;
+      if (NotificationPubsubTopic != other.NotificationPubsubTopic) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1359,9 +1531,12 @@ namespace Google.Cloud.Retail.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
       if (errorsConfig_ != null) hash ^= ErrorsConfig.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (ReconciliationMode != global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified) hash ^= ReconciliationMode.GetHashCode();
+      if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1394,6 +1569,18 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(UpdateMask);
       }
+      if (ReconciliationMode != global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ReconciliationMode);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(NotificationPubsubTopic);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1419,6 +1606,18 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(UpdateMask);
       }
+      if (ReconciliationMode != global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ReconciliationMode);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(NotificationPubsubTopic);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1431,6 +1630,9 @@ namespace Google.Cloud.Retail.V2 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
       if (inputConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
       }
@@ -1439,6 +1641,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (ReconciliationMode != global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReconciliationMode);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationPubsubTopic);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1453,6 +1661,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
@@ -1471,6 +1682,12 @@ namespace Google.Cloud.Retail.V2 {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.ReconciliationMode != global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode.Unspecified) {
+        ReconciliationMode = other.ReconciliationMode;
+      }
+      if (other.NotificationPubsubTopic.Length != 0) {
+        NotificationPubsubTopic = other.NotificationPubsubTopic;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1509,6 +1726,18 @@ namespace Google.Cloud.Retail.V2 {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 40: {
+            ReconciliationMode = (global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 58: {
+            NotificationPubsubTopic = input.ReadString();
             break;
           }
         }
@@ -1550,10 +1779,60 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 40: {
+            ReconciliationMode = (global::Google.Cloud.Retail.V2.ImportProductsRequest.Types.ReconciliationMode) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 58: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImportProductsRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Indicates how imported products are reconciled with the existing products
+      /// created or imported before.
+      /// </summary>
+      public enum ReconciliationMode {
+        /// <summary>
+        /// Defaults to INCREMENTAL.
+        /// </summary>
+        [pbr::OriginalName("RECONCILIATION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Inserts new products or updates existing products.
+        /// </summary>
+        [pbr::OriginalName("INCREMENTAL")] Incremental = 1,
+        /// <summary>
+        /// Calculates diff and replaces the entire product dataset. Existing
+        /// products may be deleted if they are not present in the source location.
+        ///
+        /// Can only be while using
+        /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource].
+        ///
+        /// Add the IAM permission "BigQuery Data Viewer" for
+        /// cloud-retail-customer-data-access@system.gserviceaccount.com before
+        /// using this feature otherwise an error is thrown.
+        ///
+        /// This feature is only available for users who have Retail Search enabled.
+        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// cloud sales if you are interested in using Retail Search.
+        /// </summary>
+        [pbr::OriginalName("FULL")] Full = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1833,6 +2112,277 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
+  /// Request message for ImportCompletionData methods.
+  /// </summary>
+  public sealed partial class ImportCompletionDataRequest : pb::IMessage<ImportCompletionDataRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportCompletionDataRequest> _parser = new pb::MessageParser<ImportCompletionDataRequest>(() => new ImportCompletionDataRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportCompletionDataRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataRequest(ImportCompletionDataRequest other) : this() {
+      parent_ = other.parent_;
+      inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
+      notificationPubsubTopic_ = other.notificationPubsubTopic_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataRequest Clone() {
+      return new ImportCompletionDataRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The catalog which the suggestions dataset belongs to.
+    ///
+    /// Format: `projects/1234/locations/global/catalogs/default_catalog`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "input_config" field.</summary>
+    public const int InputConfigFieldNumber = 2;
+    private global::Google.Cloud.Retail.V2.CompletionDataInputConfig inputConfig_;
+    /// <summary>
+    /// Required. The desired input location of the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.CompletionDataInputConfig InputConfig {
+      get { return inputConfig_; }
+      set {
+        inputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "notification_pubsub_topic" field.</summary>
+    public const int NotificationPubsubTopicFieldNumber = 3;
+    private string notificationPubsubTopic_ = "";
+    /// <summary>
+    /// Pub/Sub topic for receiving notification. If this field is set,
+    /// when the import is finished, a notification will be sent to
+    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// [Operation][google.longrunning.Operation].
+    /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationPubsubTopic {
+      get { return notificationPubsubTopic_; }
+      set {
+        notificationPubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportCompletionDataRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportCompletionDataRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      if (NotificationPubsubTopic != other.NotificationPubsubTopic) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (inputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InputConfig);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NotificationPubsubTopic);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (inputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InputConfig);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NotificationPubsubTopic);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (inputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationPubsubTopic);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportCompletionDataRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.inputConfig_ != null) {
+        if (inputConfig_ == null) {
+          InputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+        }
+        InputConfig.MergeFrom(other.InputConfig);
+      }
+      if (other.NotificationPubsubTopic.Length != 0) {
+        NotificationPubsubTopic = other.NotificationPubsubTopic;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inputConfig_ == null) {
+              InputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(InputConfig);
+            break;
+          }
+          case 26: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inputConfig_ == null) {
+              InputConfig = new global::Google.Cloud.Retail.V2.CompletionDataInputConfig();
+            }
+            input.ReadMessage(InputConfig);
+            break;
+          }
+          case 26: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The input config source for products.
   /// </summary>
   public sealed partial class ProductInputConfig : pb::IMessage<ProductInputConfig>
@@ -1847,7 +2397,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2176,7 +2726,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2491,6 +3041,229 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
+  /// The input config source for completion data.
+  /// </summary>
+  public sealed partial class CompletionDataInputConfig : pb::IMessage<CompletionDataInputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CompletionDataInputConfig> _parser = new pb::MessageParser<CompletionDataInputConfig>(() => new CompletionDataInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CompletionDataInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompletionDataInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompletionDataInputConfig(CompletionDataInputConfig other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.BigQuerySource:
+          BigQuerySource = other.BigQuerySource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompletionDataInputConfig Clone() {
+      return new CompletionDataInputConfig(this);
+    }
+
+    /// <summary>Field number for the "big_query_source" field.</summary>
+    public const int BigQuerySourceFieldNumber = 1;
+    /// <summary>
+    /// Required. BigQuery input source.
+    ///
+    /// Add the IAM permission "BigQuery Data Viewer" for
+    /// cloud-retail-customer-data-access@system.gserviceaccount.com before
+    /// using this feature otherwise an error is thrown.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.BigQuerySource BigQuerySource {
+      get { return sourceCase_ == SourceOneofCase.BigQuerySource ? (global::Google.Cloud.Retail.V2.BigQuerySource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.BigQuerySource;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      BigQuerySource = 1,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CompletionDataInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CompletionDataInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(BigQuerySource, other.BigQuerySource)) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.BigQuerySource) hash ^= BigQuerySource.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (sourceCase_ == SourceOneofCase.BigQuerySource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BigQuerySource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sourceCase_ == SourceOneofCase.BigQuerySource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BigQuerySource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.BigQuerySource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigQuerySource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CompletionDataInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.BigQuerySource:
+          if (BigQuerySource == null) {
+            BigQuerySource = new global::Google.Cloud.Retail.V2.BigQuerySource();
+          }
+          BigQuerySource.MergeFrom(other.BigQuerySource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Retail.V2.BigQuerySource subBuilder = new global::Google.Cloud.Retail.V2.BigQuerySource();
+            if (sourceCase_ == SourceOneofCase.BigQuerySource) {
+              subBuilder.MergeFrom(BigQuerySource);
+            }
+            input.ReadMessage(subBuilder);
+            BigQuerySource = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Retail.V2.BigQuerySource subBuilder = new global::Google.Cloud.Retail.V2.BigQuerySource();
+            if (sourceCase_ == SourceOneofCase.BigQuerySource) {
+              subBuilder.MergeFrom(BigQuerySource);
+            }
+            input.ReadMessage(subBuilder);
+            BigQuerySource = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Metadata related to the progress of the Import operation. This will be
   /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
@@ -2506,7 +3279,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2527,6 +3300,8 @@ namespace Google.Cloud.Retail.V2 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       successCount_ = other.successCount_;
       failureCount_ = other.failureCount_;
+      requestId_ = other.requestId_;
+      notificationPubsubTopic_ = other.notificationPubsubTopic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2592,6 +3367,39 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 5;
+    private string requestId_ = "";
+    /// <summary>
+    /// Id of the request / operation. This is parroting back the requestId
+    /// that was passed in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "notification_pubsub_topic" field.</summary>
+    public const int NotificationPubsubTopicFieldNumber = 6;
+    private string notificationPubsubTopic_ = "";
+    /// <summary>
+    /// Pub/Sub topic for receiving notification. If this field is set,
+    /// when the import is finished, a notification will be sent to
+    /// specified Pub/Sub topic. The message data will be JSON string of a
+    /// [Operation][google.longrunning.Operation].
+    /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NotificationPubsubTopic {
+      get { return notificationPubsubTopic_; }
+      set {
+        notificationPubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImportMetadata);
@@ -2609,6 +3417,8 @@ namespace Google.Cloud.Retail.V2 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (SuccessCount != other.SuccessCount) return false;
       if (FailureCount != other.FailureCount) return false;
+      if (RequestId != other.RequestId) return false;
+      if (NotificationPubsubTopic != other.NotificationPubsubTopic) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2619,6 +3429,8 @@ namespace Google.Cloud.Retail.V2 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (SuccessCount != 0L) hash ^= SuccessCount.GetHashCode();
       if (FailureCount != 0L) hash ^= FailureCount.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (NotificationPubsubTopic.Length != 0) hash ^= NotificationPubsubTopic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2651,6 +3463,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(NotificationPubsubTopic);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2676,6 +3496,14 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(NotificationPubsubTopic);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2696,6 +3524,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (FailureCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailureCount);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (NotificationPubsubTopic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotificationPubsubTopic);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2725,6 +3559,12 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.FailureCount != 0L) {
         FailureCount = other.FailureCount;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      if (other.NotificationPubsubTopic.Length != 0) {
+        NotificationPubsubTopic = other.NotificationPubsubTopic;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2760,6 +3600,14 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 32: {
             FailureCount = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 50: {
+            NotificationPubsubTopic = input.ReadString();
             break;
           }
         }
@@ -2798,6 +3646,14 @@ namespace Google.Cloud.Retail.V2 {
             FailureCount = input.ReadInt64();
             break;
           }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 50: {
+            NotificationPubsubTopic = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2823,7 +3679,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3040,7 +3896,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3305,7 +4161,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3499,6 +4355,176 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 16: {
             UnjoinedEventsCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the
+  /// [ImportCompletionDataRequest][google.cloud.retail.v2.ImportCompletionDataRequest].
+  /// If the long running operation is done, this message is returned by the
+  /// google.longrunning.Operations.response field if the operation is successful.
+  /// </summary>
+  public sealed partial class ImportCompletionDataResponse : pb::IMessage<ImportCompletionDataResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportCompletionDataResponse> _parser = new pb::MessageParser<ImportCompletionDataResponse>(() => new ImportCompletionDataResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportCompletionDataResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataResponse(ImportCompletionDataResponse other) : this() {
+      errorSamples_ = other.errorSamples_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCompletionDataResponse Clone() {
+      return new ImportCompletionDataResponse(this);
+    }
+
+    /// <summary>Field number for the "error_samples" field.</summary>
+    public const int ErrorSamplesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Rpc.Status> _repeated_errorSamples_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Rpc.Status.Parser);
+    private readonly pbc::RepeatedField<global::Google.Rpc.Status> errorSamples_ = new pbc::RepeatedField<global::Google.Rpc.Status>();
+    /// <summary>
+    /// A sample of errors encountered while processing the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Rpc.Status> ErrorSamples {
+      get { return errorSamples_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportCompletionDataResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportCompletionDataResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!errorSamples_.Equals(other.errorSamples_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= errorSamples_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      errorSamples_.WriteTo(output, _repeated_errorSamples_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      errorSamples_.WriteTo(ref output, _repeated_errorSamples_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += errorSamples_.CalculateSize(_repeated_errorSamples_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportCompletionDataResponse other) {
+      if (other == null) {
+        return;
+      }
+      errorSamples_.Add(other.errorSamples_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            errorSamples_.AddEntriesFrom(input, _repeated_errorSamples_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            errorSamples_.AddEntriesFrom(ref input, _repeated_errorSamples_codec);
             break;
           }
         }

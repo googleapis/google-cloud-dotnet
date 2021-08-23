@@ -831,6 +831,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public CertificateAuthorityServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public CertificateAuthorityServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = CertificateAuthorityServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref CertificateAuthorityServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CertificateAuthorityServiceClient> task);
@@ -905,7 +911,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CertificateAuthorityServiceClient"/> using the default credentials,
@@ -3527,7 +3545,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CaPool, OperationMetadata> DeleteCaPool(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCaPool(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3536,7 +3554,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3545,7 +3563,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, st::CancellationToken cancellationToken) =>
             DeleteCaPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteCaPool</c>.</summary>
@@ -3559,8 +3577,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<CaPool, OperationMetadata> PollOnceDeleteCaPool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<CaPool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCaPoolOperationsClient, callSettings);
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteCaPool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCaPoolOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -3571,8 +3589,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> PollOnceDeleteCaPoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<CaPool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCaPoolOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteCaPoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCaPoolOperationsClient, callSettings);
 
         /// <summary>
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
@@ -3583,7 +3601,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CaPool, OperationMetadata> DeleteCaPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCaPool(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCaPool(new DeleteCaPoolRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -3598,7 +3616,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCaPoolAsync(new DeleteCaPoolRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -3613,7 +3631,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteCaPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3625,7 +3643,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CaPool, OperationMetadata> DeleteCaPool(CaPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCaPool(CaPoolName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCaPool(new DeleteCaPoolRequest
             {
                 CaPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -3640,7 +3658,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(CaPoolName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(CaPoolName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCaPoolAsync(new DeleteCaPoolRequest
             {
                 CaPoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -3655,7 +3673,7 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(CaPoolName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(CaPoolName name, st::CancellationToken cancellationToken) =>
             DeleteCaPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -5617,10 +5635,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<CaPool, OperationMetadata> DeleteCaPool(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteCaPool(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteCaPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<CaPool, OperationMetadata>(_callDeleteCaPool.Sync(request, callSettings), DeleteCaPoolOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteCaPool.Sync(request, callSettings), DeleteCaPoolOperationsClient);
         }
 
         /// <summary>
@@ -5629,10 +5647,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<CaPool, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCaPoolAsync(DeleteCaPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteCaPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<CaPool, OperationMetadata>(await _callDeleteCaPool.Async(request, callSettings).ConfigureAwait(false), DeleteCaPoolOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCaPool.Async(request, callSettings).ConfigureAwait(false), DeleteCaPoolOperationsClient);
         }
 
         /// <summary>

@@ -64,6 +64,12 @@
                 "EncryptAsync"
               ]
             },
+            "GenerateRandomBytes": {
+              "methods": [
+                "GenerateRandomBytes",
+                "GenerateRandomBytesAsync"
+              ]
+            },
             "GetCryptoKey": {
               "methods": [
                 "GetCryptoKey",
@@ -122,6 +128,18 @@
               "methods": [
                 "ListKeyRings",
                 "ListKeyRingsAsync"
+              ]
+            },
+            "MacSign": {
+              "methods": [
+                "MacSign",
+                "MacSignAsync"
+              ]
+            },
+            "MacVerify": {
+              "methods": [
+                "MacVerify",
+                "MacVerifyAsync"
               ]
             },
             "RestoreCryptoKeyVersion": {

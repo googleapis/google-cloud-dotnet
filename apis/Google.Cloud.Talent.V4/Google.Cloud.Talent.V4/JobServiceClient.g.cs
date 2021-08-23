@@ -261,6 +261,12 @@ namespace Google.Cloud.Talent.V4
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public JobServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public JobServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = JobServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref JobServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<JobServiceClient> task);
@@ -335,7 +341,19 @@ namespace Google.Cloud.Talent.V4
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="JobServiceClient"/> using the default credentials, endpoint and
@@ -1607,10 +1625,13 @@ namespace Google.Cloud.Talent.V4
         /// 
         /// The fields eligible for filtering are:
         /// 
-        /// * `companyName` (Required)
+        /// * `companyName`
         /// * `requisitionId`
         /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
+        /// 
+        /// At least one of `companyName` and `requisitionId` must present or an
+        /// INVALID_ARGUMENT error is thrown.
         /// 
         /// Sample Query:
         /// 
@@ -1619,6 +1640,8 @@ namespace Google.Cloud.Talent.V4
         /// requisitionId = "req-1"
         /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
+        /// * requisitionId = "req-1"
+        /// * requisitionId = "req-1" AND status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1655,10 +1678,13 @@ namespace Google.Cloud.Talent.V4
         /// 
         /// The fields eligible for filtering are:
         /// 
-        /// * `companyName` (Required)
+        /// * `companyName`
         /// * `requisitionId`
         /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
+        /// 
+        /// At least one of `companyName` and `requisitionId` must present or an
+        /// INVALID_ARGUMENT error is thrown.
         /// 
         /// Sample Query:
         /// 
@@ -1667,6 +1693,8 @@ namespace Google.Cloud.Talent.V4
         /// requisitionId = "req-1"
         /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
+        /// * requisitionId = "req-1"
+        /// * requisitionId = "req-1" AND status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1703,10 +1731,13 @@ namespace Google.Cloud.Talent.V4
         /// 
         /// The fields eligible for filtering are:
         /// 
-        /// * `companyName` (Required)
+        /// * `companyName`
         /// * `requisitionId`
         /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
+        /// 
+        /// At least one of `companyName` and `requisitionId` must present or an
+        /// INVALID_ARGUMENT error is thrown.
         /// 
         /// Sample Query:
         /// 
@@ -1715,6 +1746,8 @@ namespace Google.Cloud.Talent.V4
         /// requisitionId = "req-1"
         /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
+        /// * requisitionId = "req-1"
+        /// * requisitionId = "req-1" AND status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1751,10 +1784,13 @@ namespace Google.Cloud.Talent.V4
         /// 
         /// The fields eligible for filtering are:
         /// 
-        /// * `companyName` (Required)
+        /// * `companyName`
         /// * `requisitionId`
         /// * `status` Available values: OPEN, EXPIRED, ALL. Defaults to
         /// OPEN if no value is specified.
+        /// 
+        /// At least one of `companyName` and `requisitionId` must present or an
+        /// INVALID_ARGUMENT error is thrown.
         /// 
         /// Sample Query:
         /// 
@@ -1763,6 +1799,8 @@ namespace Google.Cloud.Talent.V4
         /// requisitionId = "req-1"
         /// * companyName = "projects/foo/tenants/bar/companies/baz" AND
         /// status = "EXPIRED"
+        /// * requisitionId = "req-1"
+        /// * requisitionId = "req-1" AND status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

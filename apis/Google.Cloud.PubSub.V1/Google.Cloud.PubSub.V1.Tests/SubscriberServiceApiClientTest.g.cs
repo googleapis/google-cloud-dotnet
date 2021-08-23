@@ -52,6 +52,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             Subscription expectedResponse = new Subscription
             {
@@ -74,6 +75,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -107,6 +109,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             Subscription expectedResponse = new Subscription
             {
@@ -129,6 +132,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -171,6 +175,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -211,6 +216,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -253,6 +259,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -293,6 +300,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -332,6 +340,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -369,6 +378,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -408,6 +418,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -445,6 +456,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -484,6 +496,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -521,6 +534,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -561,6 +575,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -599,6 +614,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                TopicMessageRetentionDuration = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -961,7 +977,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void Pull()
+        public void Pull1()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
@@ -989,7 +1005,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task PullAsync()
+        public async stt::Task Pull1Async()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
@@ -1021,7 +1037,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void PullResourceNames()
+        public void Pull1ResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
@@ -1049,7 +1065,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task PullResourceNamesAsync()
+        public async stt::Task Pull1ResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             PullRequest request = new PullRequest
@@ -1076,6 +1092,102 @@ namespace Google.Cloud.PubSub.V1.Tests
 #pragma warning disable CS0612
             PullResponse responseCancellationToken = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.ReturnImmediately, request.MaxMessages, st::CancellationToken.None);
 #pragma warning restore CS0612
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Pull2()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 453182879,
+            };
+            PullResponse expectedResponse = new PullResponse
+            {
+                ReceivedMessages =
+                {
+                    new ReceivedMessage(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            PullResponse response = client.Pull(request.Subscription, request.MaxMessages);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Pull2Async()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 453182879,
+            };
+            PullResponse expectedResponse = new PullResponse
+            {
+                ReceivedMessages =
+                {
+                    new ReceivedMessage(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            PullResponse responseCallSettings = await client.PullAsync(request.Subscription, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PullResponse responseCancellationToken = await client.PullAsync(request.Subscription, request.MaxMessages, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void Pull2ResourceNames()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 453182879,
+            };
+            PullResponse expectedResponse = new PullResponse
+            {
+                ReceivedMessages =
+                {
+                    new ReceivedMessage(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            PullResponse response = client.Pull(request.SubscriptionAsSubscriptionName, request.MaxMessages);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task Pull2ResourceNamesAsync()
+        {
+            moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 453182879,
+            };
+            PullResponse expectedResponse = new PullResponse
+            {
+                ReceivedMessages =
+                {
+                    new ReceivedMessage(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            PullResponse responseCallSettings = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.MaxMessages, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PullResponse responseCancellationToken = await client.PullAsync(request.SubscriptionAsSubscriptionName, request.MaxMessages, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

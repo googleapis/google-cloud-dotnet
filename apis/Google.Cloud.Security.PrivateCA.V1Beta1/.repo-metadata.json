@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Security.PrivateCA.V1Beta1",
   "release_level": "beta",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Security.PrivateCA.V1Beta1/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Security.PrivateCA.V1Beta1/latest",
   "library_type": "GAPIC_AUTO"
 }

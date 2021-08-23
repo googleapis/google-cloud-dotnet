@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -153,6 +154,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public RegionUrlMapsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public RegionUrlMapsClientBuilder()
+        {
+            UseJwtAccessWithScopes = RegionUrlMapsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref RegionUrlMapsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<RegionUrlMapsClient> task);
@@ -228,7 +235,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionUrlMapsClient"/> using the default credentials, endpoint and
@@ -553,8 +572,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual UrlMapList List(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="UrlMap"/> resources.</returns>
+        public virtual gax::PagedEnumerable<UrlMapList, UrlMap> List(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -562,18 +581,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UrlMapList> ListAsync(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="UrlMap"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<UrlMapList, UrlMap> ListAsync(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of UrlMap resources available to the specified project in the specified region.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UrlMapList> ListAsync(ListRegionUrlMapsRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of UrlMap resources available to the specified project in the specified region.
@@ -584,13 +594,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual UrlMapList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="UrlMap"/> resources.</returns>
+        public virtual gax::PagedEnumerable<UrlMapList, UrlMap> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListRegionUrlMapsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -602,28 +622,24 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UrlMapList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="UrlMap"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<UrlMapList, UrlMap> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListRegionUrlMapsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of UrlMap resources available to the specified project in the specified region.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region scoping this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UrlMapList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified UrlMap resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
@@ -1089,11 +1105,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override UrlMapList List(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="UrlMap"/> resources.</returns>
+        public override gax::PagedEnumerable<UrlMapList, UrlMap> List(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionUrlMapsRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRegionUrlMapsRequest, UrlMapList, UrlMap>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1101,11 +1117,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<UrlMapList> ListAsync(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="UrlMap"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<UrlMapList, UrlMap> ListAsync(ListRegionUrlMapsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionUrlMapsRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRegionUrlMapsRequest, UrlMapList, UrlMap>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1179,5 +1195,23 @@ namespace Google.Cloud.Compute.V1
             Modify_ValidateRegionUrlMapRequest(ref request, ref callSettings);
             return _callValidate.Async(request, callSettings);
         }
+    }
+
+    public partial class ListRegionUrlMapsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class UrlMapList : gaxgrpc::IPageResponse<UrlMap>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UrlMap> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

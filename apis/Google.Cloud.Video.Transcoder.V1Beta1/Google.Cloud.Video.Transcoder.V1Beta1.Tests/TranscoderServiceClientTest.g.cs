@@ -56,6 +56,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -92,6 +93,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -130,6 +132,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -166,6 +169,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -204,6 +208,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -240,6 +245,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -277,6 +283,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -312,6 +319,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -349,6 +357,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -384,6 +393,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -421,6 +431,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -456,6 +467,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
                 EndTime = new wkt::Timestamp(),
+                TtlAfterCompletionDays = 1495978457,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);

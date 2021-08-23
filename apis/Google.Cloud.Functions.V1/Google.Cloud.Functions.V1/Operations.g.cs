@@ -124,7 +124,7 @@ namespace Google.Cloud.Functions.V1 {
     private string target_ = "";
     /// <summary>
     /// Target of the operation - for example
-    /// projects/project-1/locations/region-1/functions/function-1
+    /// `projects/project-1/locations/region-1/functions/function-1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Target {

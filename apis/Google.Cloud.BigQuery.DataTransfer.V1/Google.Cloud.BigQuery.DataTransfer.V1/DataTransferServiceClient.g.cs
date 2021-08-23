@@ -287,6 +287,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public DataTransferServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public DataTransferServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = DataTransferServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref DataTransferServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DataTransferServiceClient> task);
@@ -363,7 +369,19 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="DataTransferServiceClient"/> using the default credentials, endpoint and
@@ -1261,7 +1279,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetTransferConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1270,7 +1289,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1279,7 +1299,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1305,7 +1326,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1331,7 +1353,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1357,7 +1380,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1383,7 +1407,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -1409,7 +1434,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources
@@ -2644,7 +2670,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2656,7 +2683,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about all data transfers in the project.
+        /// Returns information about all transfer configs owned by a project in the
+        /// specified location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

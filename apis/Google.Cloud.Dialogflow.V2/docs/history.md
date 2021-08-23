@@ -1,5 +1,13 @@
 # Version history
 
+# Version 3.4.0, released 2021-08-10
+
+- [Commit 5dba1ca](https://github.com/googleapis/google-cloud-dotnet/commit/5dba1ca):
+  - fix: fix validation result docs
+  - feat: add language code to streaming recognition result
+  - docs: update environment docs
+- [Commit 281077c](https://github.com/googleapis/google-cloud-dotnet/commit/281077c): docs: fix typos
+
 # Version 3.3.0, released 2021-06-22
 
 - [Commit c135978](https://github.com/googleapis/google-cloud-dotnet/commit/c135978): docs: added notes to train agent prior to sending queries fix: added resource reference to agent_version

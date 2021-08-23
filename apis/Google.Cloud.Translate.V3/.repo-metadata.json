@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Translate.V3",
   "release_level": "ga",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Translate.V3/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Translate.V3/latest",
   "library_type": "GAPIC_AUTO"
 }

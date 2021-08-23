@@ -121,7 +121,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             // We use TryAdd... here to allow user code to inject their own trace context provider
             // and matching trace context response propagator. We use Google trace header otherwise.
-            services.TryAddScoped<ITraceContext>(ProvideGoogleTraceHeaderContext);
+            services.TryAddGoogleTraceContextProvider();
             services.TryAddSingleton<Action<HttpResponse, ITraceContext>>(PropagateGoogleTraceHeaders);
 
             // Obsolete: Adding this for backwards compatibility in case someone is using the old factory type.
@@ -143,6 +143,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.TryAddSingleton(new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
 
             return services.AddSingleton(traceFallbackPredicate);
+        }
+
+        /// <summary>
+        /// Adds the services needed for obtaining the trace context from Google's own trace header,
+        /// but only if no other trace context provider is registered.
+        /// If you are using <see cref="AddGoogleTrace(IServiceCollection, Action{TraceServiceOptions})"/>
+        /// you don't need to call this method. Only use this method if you want to extract the trace context
+        /// information from Google's own header for your own code to use, or if you are not using the tracing
+        /// component of this library but are using the logging component and want the trace context information
+        /// to be associated with the log entries.
+        /// </summary>
+        public static IServiceCollection TryAddGoogleTraceContextProvider(this IServiceCollection services)
+        {
+            // We use TryAdd... here to allow user code to inject their own trace context provider
+            // and matching trace context response propagator. We use Google trace header otherwise.
+            services.TryAddScoped<ITraceContext>(ProvideGoogleTraceHeaderContext);
+            return services;
         }
 
         /// <summary>

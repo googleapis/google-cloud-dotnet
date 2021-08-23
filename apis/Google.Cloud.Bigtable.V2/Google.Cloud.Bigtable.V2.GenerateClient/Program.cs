@@ -101,8 +101,6 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         private static async Task<int> Main(string[] args)
         {
-            FixClientBuilder();
-
             // TODO: Figure out why `dotnet run` from generateapis.sh is sending 6 args instead of 3 as in: arg1 arg2 arg3 arg1 arg2 arg3
             if (args.Length < 3)
             {
@@ -278,17 +276,6 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         }
 
         /// <summary>
-        /// Remove the parts of the generated BigtableServiceApiClientBuilder that are provided manual by partial classes.
-        /// </summary>
-        private static void FixClientBuilder()
-        {
-            var layout = DirectoryLayout.ForApi("Google.Cloud.Bigtable.V2");
-            SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Bigtable.V2", "BigtableServiceApiClient.g.cs"))
-                .RemoveMethod("BigtableServiceApiClientBuilder", "GetChannelPool")
-                .Save();
-        }
-
-        /// <summary>
         /// Rewriter which takes a second pass at a split async method (<see cref="CustomStreamMethodInfo.SplitSyncAndAsync"/>)
         /// to convert the (request, callSettings) overload into a (request, cancellationToken) overload which delegates to the
         /// original.
@@ -392,7 +379,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     {
                         node = node.WithReturnType(ParseTypeName(customStreamMethodInfo.TypeName));
                     }
-                    else if (Method.ReturnType.ContainingType == Method.ContainingType)
+                    else if (SymbolEqualityComparer.Default.Equals(Method.ReturnType.ContainingType, Method.ContainingType))
                     {
                         // If the method's return type is defined in the underlying client's class, qualify the return type.
                         node = node.WithReturnType(

@@ -75,6 +75,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> __Marshaller_google_devtools_cloudbuild_v1_ListBuildsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_CancelBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CancelBuildRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.RetryBuildRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.BuildTrigger.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_GetBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest.Parser));
@@ -87,8 +88,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest.Parser));
-    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.WorkerPool> __Marshaller_google_devtools_cloudbuild_v1_WorkerPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_GetWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.WorkerPool> __Marshaller_google_devtools_cloudbuild_v1_WorkerPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_DeleteWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_UpdateWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest> __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest.Parser));
@@ -127,6 +128,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         __ServiceName,
         "RetryBuild",
         __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation> __Method_ApproveBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApproveBuild",
+        __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Method_CreateBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(
@@ -178,12 +186,12 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest,
         __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse);
 
-    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool> __Method_CreateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_CreateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateWorkerPool",
         __Marshaller_google_devtools_cloudbuild_v1_CreateWorkerPoolRequest,
-        __Marshaller_google_devtools_cloudbuild_v1_WorkerPool);
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool> __Method_GetWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(
         grpc::MethodType.Unary,
@@ -192,19 +200,19 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_GetWorkerPoolRequest,
         __Marshaller_google_devtools_cloudbuild_v1_WorkerPool);
 
-    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_DeleteWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteWorkerPool",
         __Marshaller_google_devtools_cloudbuild_v1_DeleteWorkerPoolRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_longrunning_Operation);
 
-    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool> __Method_UpdateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_UpdateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateWorkerPool",
         __Marshaller_google_devtools_cloudbuild_v1_UpdateWorkerPoolRequest,
-        __Marshaller_google_devtools_cloudbuild_v1_WorkerPool);
+        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> __Method_ListWorkerPools = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse>(
         grpc::MethodType.Unary,
@@ -315,6 +323,22 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
 
       /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a new `BuildTrigger`.
       ///
       /// This API is experimental.
@@ -403,22 +427,18 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
 
       /// <summary>
-      /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-      ///
-      /// This API is experimental.
+      /// Creates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.WorkerPool> CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Returns information about a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Returns details of a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -429,35 +449,29 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
 
       /// <summary>
-      /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-      ///
-      /// This API is experimental.
+      /// Deletes a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Update a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Updates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.WorkerPool> UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// List project's `WorkerPools`.
-      ///
-      /// This API is experimental.
+      /// Lists `WorkerPool`s.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -857,6 +871,70 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RetryBuild, null, options, request);
       }
       /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApproveBuild, null, options, request);
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves or rejects a pending build.
+      ///
+      /// If approved, the returned LRO will be analogous to the LRO returned from
+      /// a CreateBuild call.
+      ///
+      /// If rejected, the returned LRO will be immediately done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApproveBuild, null, options, request);
+      }
+      /// <summary>
       /// Creates a new `BuildTrigger`.
       ///
       /// This API is experimental.
@@ -1209,61 +1287,51 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ReceiveTriggerWebhook, null, options, request);
       }
       /// <summary>
-      /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-      ///
-      /// This API is experimental.
+      /// Creates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-      ///
-      /// This API is experimental.
+      /// Creates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-      ///
-      /// This API is experimental.
+      /// Creates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-      ///
-      /// This API is experimental.
+      /// Creates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Returns information about a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Returns details of a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,9 +1343,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return GetWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Returns details of a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1287,9 +1353,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Returns information about a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Returns details of a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1301,9 +1365,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return GetWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Returns details of a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1313,113 +1375,95 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-      ///
-      /// This API is experimental.
+      /// Deletes a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.LongRunning.Operation DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-      ///
-      /// This API is experimental.
+      /// Deletes a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-      ///
-      /// This API is experimental.
+      /// Deletes a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a `WorkerPool` by its project ID and WorkerPool name.
-      ///
-      /// This API is experimental.
+      /// Deletes a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Update a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Updates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Updates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateWorkerPool, null, options, request);
       }
       /// <summary>
-      /// Update a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Updates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update a `WorkerPool`.
-      ///
-      /// This API is experimental.
+      /// Updates a `WorkerPool`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkerPool, null, options, request);
       }
       /// <summary>
-      /// List project's `WorkerPools`.
-      ///
-      /// This API is experimental.
+      /// Lists `WorkerPool`s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1431,9 +1475,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return ListWorkerPools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List project's `WorkerPools`.
-      ///
-      /// This API is experimental.
+      /// Lists `WorkerPool`s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1443,9 +1485,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkerPools, null, options, request);
       }
       /// <summary>
-      /// List project's `WorkerPools`.
-      ///
-      /// This API is experimental.
+      /// Lists `WorkerPool`s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1457,9 +1497,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         return ListWorkerPoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List project's `WorkerPools`.
-      ///
-      /// This API is experimental.
+      /// Lists `WorkerPool`s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1485,6 +1523,7 @@ namespace Google.Cloud.CloudBuild.V1 {
           .AddMethod(__Method_ListBuilds, serviceImpl.ListBuilds)
           .AddMethod(__Method_CancelBuild, serviceImpl.CancelBuild)
           .AddMethod(__Method_RetryBuild, serviceImpl.RetryBuild)
+          .AddMethod(__Method_ApproveBuild, serviceImpl.ApproveBuild)
           .AddMethod(__Method_CreateBuildTrigger, serviceImpl.CreateBuildTrigger)
           .AddMethod(__Method_GetBuildTrigger, serviceImpl.GetBuildTrigger)
           .AddMethod(__Method_ListBuildTriggers, serviceImpl.ListBuildTriggers)
@@ -1510,6 +1549,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceBinder.AddMethod(__Method_ListBuilds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListBuildsRequest, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse>(serviceImpl.ListBuilds));
       serviceBinder.AddMethod(__Method_CancelBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest, global::Google.Cloud.CloudBuild.V1.Build>(serviceImpl.CancelBuild));
       serviceBinder.AddMethod(__Method_RetryBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest, global::Google.LongRunning.Operation>(serviceImpl.RetryBuild));
+      serviceBinder.AddMethod(__Method_ApproveBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation>(serviceImpl.ApproveBuild));
       serviceBinder.AddMethod(__Method_CreateBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.CreateBuildTrigger));
       serviceBinder.AddMethod(__Method_GetBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.GetBuildTrigger));
       serviceBinder.AddMethod(__Method_ListBuildTriggers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse>(serviceImpl.ListBuildTriggers));
@@ -1517,10 +1557,10 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceBinder.AddMethod(__Method_UpdateBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.UpdateBuildTrigger));
       serviceBinder.AddMethod(__Method_RunBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest, global::Google.LongRunning.Operation>(serviceImpl.RunBuildTrigger));
       serviceBinder.AddMethod(__Method_ReceiveTriggerWebhook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse>(serviceImpl.ReceiveTriggerWebhook));
-      serviceBinder.AddMethod(__Method_CreateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(serviceImpl.CreateWorkerPool));
+      serviceBinder.AddMethod(__Method_CreateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkerPool));
       serviceBinder.AddMethod(__Method_GetWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(serviceImpl.GetWorkerPool));
-      serviceBinder.AddMethod(__Method_DeleteWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkerPool));
-      serviceBinder.AddMethod(__Method_UpdateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(serviceImpl.UpdateWorkerPool));
+      serviceBinder.AddMethod(__Method_DeleteWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteWorkerPool));
+      serviceBinder.AddMethod(__Method_UpdateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateWorkerPool));
       serviceBinder.AddMethod(__Method_ListWorkerPools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse>(serviceImpl.ListWorkerPools));
     }
 

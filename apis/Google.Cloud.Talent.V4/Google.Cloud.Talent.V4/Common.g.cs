@@ -138,12 +138,13 @@ namespace Google.Cloud.Talent.V4 {
             "T05MWRABEhYKElNIQVJFRF9XSVRIX0dPT0dMRRACEhYKElNIQVJFRF9XSVRI",
             "X1BVQkxJQxADGgIYASpxChBIdG1sU2FuaXRpemF0aW9uEiEKHUhUTUxfU0FO",
             "SVRJWkFUSU9OX1VOU1BFQ0lGSUVEEAASHgoaSFRNTF9TQU5JVElaQVRJT05f",
-            "RElTQUJMRUQQARIaChZTSU1QTEVfRk9STUFUVElOR19PTkxZEAIqSQoNQ29t",
+            "RElTQUJMRUQQARIaChZTSU1QTEVfRk9STUFUVElOR19PTkxZEAIqewoNQ29t",
             "bXV0ZU1ldGhvZBIeChpDT01NVVRFX01FVEhPRF9VTlNQRUNJRklFRBAAEgsK",
-            "B0RSSVZJTkcQARILCgdUUkFOU0lUEAJCbwoaY29tLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRCC0NvbW1vblByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVudKICA0NU",
-            "U2IGcHJvdG8z"));
+            "B0RSSVZJTkcQARILCgdUUkFOU0lUEAISCwoHV0FMS0lORxADEgsKB0NZQ0xJ",
+            "TkcQBBIWChJUUkFOU0lUX0FDQ0VTU0lCTEUQBUJvChpjb20uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NEILQ29tbW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjQ7dGFsZW50",
+            "ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4.CompanySize), typeof(global::Google.Cloud.Talent.V4.JobBenefit), typeof(global::Google.Cloud.Talent.V4.DegreeType), typeof(global::Google.Cloud.Talent.V4.EmploymentType), typeof(global::Google.Cloud.Talent.V4.JobLevel), typeof(global::Google.Cloud.Talent.V4.JobCategory), typeof(global::Google.Cloud.Talent.V4.PostingRegion), typeof(global::Google.Cloud.Talent.V4.Visibility), typeof(global::Google.Cloud.Talent.V4.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4.CommuteMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -642,7 +643,8 @@ namespace Google.Cloud.Talent.V4 {
   }
 
   /// <summary>
-  /// Method for commute.
+  /// Method for commute. Walking, biking and wheelchair accessible transit is
+  /// still in the Preview stage.
   /// </summary>
   public enum CommuteMethod {
     /// <summary>
@@ -658,6 +660,19 @@ namespace Google.Cloud.Talent.V4 {
     /// subway, and so on.
     /// </summary>
     [pbr::OriginalName("TRANSIT")] Transit = 2,
+    /// <summary>
+    /// Commute time is calculated based on walking time.
+    /// </summary>
+    [pbr::OriginalName("WALKING")] Walking = 3,
+    /// <summary>
+    /// Commute time is calculated based on biking time.
+    /// </summary>
+    [pbr::OriginalName("CYCLING")] Cycling = 4,
+    /// <summary>
+    /// Commute time is calculated based on public transit that is wheelchair
+    /// accessible.
+    /// </summary>
+    [pbr::OriginalName("TRANSIT_ACCESSIBLE")] TransitAccessible = 5,
   }
 
   #endregion

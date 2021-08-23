@@ -1,6 +1,8 @@
 name: Detect differences (PR only)
 
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
 
@@ -24,5 +26,11 @@ jobs:
         git checkout pr-head
 
     - name: Detect PR changes
+      env:
+        ALLOW_BREAKING_CHANGES: ${{contains(github.event.pull_request.labels.*.name, 'allow breaking changes')}}
       run: |
-        ./detect-pr-changes.sh
+        if [[ $ALLOW_BREAKING_CHANGES == "true" ]]
+        then
+          SCRIPT_OPTION=--allow-breaking-changes
+        fi
+        ./detect-pr-changes.sh $SCRIPT_OPTION

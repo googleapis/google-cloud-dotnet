@@ -25,30 +25,32 @@ namespace Google.Cloud.ServiceControl.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvYXBpL3NlcnZpY2Vjb250cm9sL3YxL2Rpc3RyaWJ1dGlvbi5w",
-            "cm90bxIcZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MSLoBAoMRGlzdHJp",
-            "YnV0aW9uEg0KBWNvdW50GAEgASgDEgwKBG1lYW4YAiABKAESDwoHbWluaW11",
-            "bRgDIAEoARIPCgdtYXhpbXVtGAQgASgBEiAKGHN1bV9vZl9zcXVhcmVkX2Rl",
-            "dmlhdGlvbhgFIAEoARIVCg1idWNrZXRfY291bnRzGAYgAygDElIKDmxpbmVh",
-            "cl9idWNrZXRzGAcgASgLMjguZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52",
-            "MS5EaXN0cmlidXRpb24uTGluZWFyQnVja2V0c0gAElwKE2V4cG9uZW50aWFs",
-            "X2J1Y2tldHMYCCABKAsyPS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYx",
-            "LkRpc3RyaWJ1dGlvbi5FeHBvbmVudGlhbEJ1Y2tldHNIABJWChBleHBsaWNp",
-            "dF9idWNrZXRzGAkgASgLMjouZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52",
-            "MS5EaXN0cmlidXRpb24uRXhwbGljaXRCdWNrZXRzSAAaSgoNTGluZWFyQnVj",
-            "a2V0cxIaChJudW1fZmluaXRlX2J1Y2tldHMYASABKAUSDQoFd2lkdGgYAiAB",
-            "KAESDgoGb2Zmc2V0GAMgASgBGlYKEkV4cG9uZW50aWFsQnVja2V0cxIaChJu",
-            "dW1fZmluaXRlX2J1Y2tldHMYASABKAUSFQoNZ3Jvd3RoX2ZhY3RvchgCIAEo",
-            "ARINCgVzY2FsZRgDIAEoARohCg9FeHBsaWNpdEJ1Y2tldHMSDgoGYm91bmRz",
-            "GAEgAygBQg8KDWJ1Y2tldF9vcHRpb25C7AEKIGNvbS5nb29nbGUuYXBpLnNl",
-            "cnZpY2Vjb250cm9sLnYxQhFEaXN0cmlidXRpb25Qcm90b1ABWkpnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwaS9zZXJ2aWNlY29u",
-            "dHJvbC92MTtzZXJ2aWNlY29udHJvbPgBAaoCHkdvb2dsZS5DbG91ZC5TZXJ2",
-            "aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2aWNlQ29udHJvbFxW",
-            "MeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9sOjpWMWIGcHJvdG8z"));
+            "cm90bxIcZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MRodZ29vZ2xlL2Fw",
+            "aS9kaXN0cmlidXRpb24ucHJvdG8ingUKDERpc3RyaWJ1dGlvbhINCgVjb3Vu",
+            "dBgBIAEoAxIMCgRtZWFuGAIgASgBEg8KB21pbmltdW0YAyABKAESDwoHbWF4",
+            "aW11bRgEIAEoARIgChhzdW1fb2Zfc3F1YXJlZF9kZXZpYXRpb24YBSABKAES",
+            "FQoNYnVja2V0X2NvdW50cxgGIAMoAxJSCg5saW5lYXJfYnVja2V0cxgHIAEo",
+            "CzI4Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9u",
+            "LkxpbmVhckJ1Y2tldHNIABJcChNleHBvbmVudGlhbF9idWNrZXRzGAggASgL",
+            "Mj0uZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5EaXN0cmlidXRpb24u",
+            "RXhwb25lbnRpYWxCdWNrZXRzSAASVgoQZXhwbGljaXRfYnVja2V0cxgJIAEo",
+            "CzI6Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9u",
+            "LkV4cGxpY2l0QnVja2V0c0gAEjQKCWV4ZW1wbGFycxgKIAMoCzIhLmdvb2ds",
+            "ZS5hcGkuRGlzdHJpYnV0aW9uLkV4ZW1wbGFyGkoKDUxpbmVhckJ1Y2tldHMS",
+            "GgoSbnVtX2Zpbml0ZV9idWNrZXRzGAEgASgFEg0KBXdpZHRoGAIgASgBEg4K",
+            "Bm9mZnNldBgDIAEoARpWChJFeHBvbmVudGlhbEJ1Y2tldHMSGgoSbnVtX2Zp",
+            "bml0ZV9idWNrZXRzGAEgASgFEhUKDWdyb3d0aF9mYWN0b3IYAiABKAESDQoF",
+            "c2NhbGUYAyABKAEaIQoPRXhwbGljaXRCdWNrZXRzEg4KBmJvdW5kcxgBIAMo",
+            "AUIPCg1idWNrZXRfb3B0aW9uQuwBCiBjb20uZ29vZ2xlLmFwaS5zZXJ2aWNl",
+            "Y29udHJvbC52MUIRRGlzdHJpYnV0aW9uUHJvdG9QAVpKZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcGkvc2VydmljZWNvbnRyb2wv",
+            "djE7c2VydmljZWNvbnRyb2z4AQGqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNv",
+            "bnRyb2wuVjHKAh5Hb29nbGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFH",
+            "b29nbGU6OkNsb3VkOjpTZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution), global::Google.Cloud.ServiceControl.V1.Distribution.Parser, new[]{ "Count", "Mean", "Minimum", "Maximum", "SumOfSquaredDeviation", "BucketCounts", "LinearBuckets", "ExponentialBuckets", "ExplicitBuckets" }, new[]{ "BucketOption" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets), global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets.Parser, new[]{ "NumFiniteBuckets", "Width", "Offset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution), global::Google.Cloud.ServiceControl.V1.Distribution.Parser, new[]{ "Count", "Mean", "Minimum", "Maximum", "SumOfSquaredDeviation", "BucketCounts", "LinearBuckets", "ExponentialBuckets", "ExplicitBuckets", "Exemplars" }, new[]{ "BucketOption" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets), global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets.Parser, new[]{ "NumFiniteBuckets", "Width", "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExponentialBuckets), global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExponentialBuckets.Parser, new[]{ "NumFiniteBuckets", "GrowthFactor", "Scale" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExplicitBuckets), global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExplicitBuckets.Parser, new[]{ "Bounds" }, null, null, null, null)})
           }));
@@ -102,6 +104,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       maximum_ = other.maximum_;
       sumOfSquaredDeviation_ = other.sumOfSquaredDeviation_;
       bucketCounts_ = other.bucketCounts_.Clone();
+      exemplars_ = other.exemplars_.Clone();
       switch (other.BucketOptionCase) {
         case BucketOptionOneofCase.LinearBuckets:
           LinearBuckets = other.LinearBuckets.Clone();
@@ -261,6 +264,19 @@ namespace Google.Cloud.ServiceControl.V1 {
       }
     }
 
+    /// <summary>Field number for the "exemplars" field.</summary>
+    public const int ExemplarsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Api.Distribution.Types.Exemplar> _repeated_exemplars_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Api.Distribution.Types.Exemplar.Parser);
+    private readonly pbc::RepeatedField<global::Google.Api.Distribution.Types.Exemplar> exemplars_ = new pbc::RepeatedField<global::Google.Api.Distribution.Types.Exemplar>();
+    /// <summary>
+    /// Example points. Must be in increasing order of `value` field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Api.Distribution.Types.Exemplar> Exemplars {
+      get { return exemplars_; }
+    }
+
     private object bucketOption_;
     /// <summary>Enum of possible cases for the "bucket_option" oneof.</summary>
     public enum BucketOptionOneofCase {
@@ -303,6 +319,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (!object.Equals(LinearBuckets, other.LinearBuckets)) return false;
       if (!object.Equals(ExponentialBuckets, other.ExponentialBuckets)) return false;
       if (!object.Equals(ExplicitBuckets, other.ExplicitBuckets)) return false;
+      if(!exemplars_.Equals(other.exemplars_)) return false;
       if (BucketOptionCase != other.BucketOptionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -319,6 +336,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (bucketOptionCase_ == BucketOptionOneofCase.LinearBuckets) hash ^= LinearBuckets.GetHashCode();
       if (bucketOptionCase_ == BucketOptionOneofCase.ExponentialBuckets) hash ^= ExponentialBuckets.GetHashCode();
       if (bucketOptionCase_ == BucketOptionOneofCase.ExplicitBuckets) hash ^= ExplicitBuckets.GetHashCode();
+      hash ^= exemplars_.GetHashCode();
       hash ^= (int) bucketOptionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -369,6 +387,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ExplicitBuckets);
       }
+      exemplars_.WriteTo(output, _repeated_exemplars_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -411,6 +430,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ExplicitBuckets);
       }
+      exemplars_.WriteTo(ref output, _repeated_exemplars_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -445,6 +465,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (bucketOptionCase_ == BucketOptionOneofCase.ExplicitBuckets) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplicitBuckets);
       }
+      size += exemplars_.CalculateSize(_repeated_exemplars_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -472,6 +493,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         SumOfSquaredDeviation = other.SumOfSquaredDeviation;
       }
       bucketCounts_.Add(other.bucketCounts_);
+      exemplars_.Add(other.exemplars_);
       switch (other.BucketOptionCase) {
         case BucketOptionOneofCase.LinearBuckets:
           if (LinearBuckets == null) {
@@ -559,6 +581,10 @@ namespace Google.Cloud.ServiceControl.V1 {
             ExplicitBuckets = subBuilder;
             break;
           }
+          case 82: {
+            exemplars_.AddEntriesFrom(input, _repeated_exemplars_codec);
+            break;
+          }
         }
       }
     #endif
@@ -623,6 +649,10 @@ namespace Google.Cloud.ServiceControl.V1 {
             }
             input.ReadMessage(subBuilder);
             ExplicitBuckets = subBuilder;
+            break;
+          }
+          case 82: {
+            exemplars_.AddEntriesFrom(ref input, _repeated_exemplars_codec);
             break;
           }
         }

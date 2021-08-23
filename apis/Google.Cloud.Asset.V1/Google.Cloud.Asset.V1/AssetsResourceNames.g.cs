@@ -29,4 +29,16 @@ namespace Google.Cloud.Asset.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class RelatedAsset
+    {
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Asset"/> resource name property.
+        /// </summary>
+        public gax::IResourceName AssetAsResourceName
+        {
+            get => string.IsNullOrEmpty(Asset) ? null : gax::UnparsedResourceName.Parse(Asset);
+            set => Asset = value?.ToString() ?? "";
+        }
+    }
 }

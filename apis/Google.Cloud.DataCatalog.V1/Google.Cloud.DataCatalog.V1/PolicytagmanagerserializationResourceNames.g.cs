@@ -16,9 +16,22 @@
 
 using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcdv = Google.Cloud.DataCatalog.V1;
 
 namespace Google.Cloud.DataCatalog.V1
 {
+    public partial class ReplaceTaxonomyRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TaxonomyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TaxonomyName TaxonomyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TaxonomyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportTaxonomiesRequest
     {
         /// <summary>

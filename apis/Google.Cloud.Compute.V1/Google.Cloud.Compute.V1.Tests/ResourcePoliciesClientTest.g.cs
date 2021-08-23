@@ -27,162 +27,6 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedResourcePoliciesClientTest
     {
         [xunit::FactAttribute]
-        public void AggregatedListRequestObject()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            AggregatedListResourcePoliciesRequest request = new AggregatedListResourcePoliciesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            ResourcePolicyAggregatedList expectedResponse = new ResourcePolicyAggregatedList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new ResourcePoliciesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyAggregatedList response = client.AggregatedList(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListRequestObjectAsync()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            AggregatedListResourcePoliciesRequest request = new AggregatedListResourcePoliciesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            ResourcePolicyAggregatedList expectedResponse = new ResourcePolicyAggregatedList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new ResourcePoliciesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResourcePolicyAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyAggregatedList responseCallSettings = await client.AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ResourcePolicyAggregatedList responseCancellationToken = await client.AggregatedListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AggregatedList()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            AggregatedListResourcePoliciesRequest request = new AggregatedListResourcePoliciesRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            ResourcePolicyAggregatedList expectedResponse = new ResourcePolicyAggregatedList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new ResourcePoliciesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyAggregatedList response = client.AggregatedList(request.Project);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListAsync()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            AggregatedListResourcePoliciesRequest request = new AggregatedListResourcePoliciesRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            ResourcePolicyAggregatedList expectedResponse = new ResourcePolicyAggregatedList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new ResourcePoliciesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResourcePolicyAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyAggregatedList responseCallSettings = await client.AggregatedListAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ResourcePolicyAggregatedList responseCancellationToken = await client.AggregatedListAsync(request.Project, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void DeleteRequestObject()
         {
             moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
@@ -195,7 +39,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -211,7 +55,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -240,7 +84,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -256,7 +100,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -286,7 +130,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -302,7 +146,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -330,7 +174,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -346,7 +190,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -376,7 +220,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ResourcePolicy expectedResponse = new ResourcePolicy
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 GroupPlacementPolicy = new ResourcePolicyGroupPlacementPolicy(),
@@ -408,7 +252,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ResourcePolicy expectedResponse = new ResourcePolicy
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 GroupPlacementPolicy = new ResourcePolicyGroupPlacementPolicy(),
@@ -442,7 +286,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ResourcePolicy expectedResponse = new ResourcePolicy
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 GroupPlacementPolicy = new ResourcePolicyGroupPlacementPolicy(),
@@ -474,7 +318,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             ResourcePolicy expectedResponse = new ResourcePolicy
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 GroupPlacementPolicy = new ResourcePolicyGroupPlacementPolicy(),
@@ -619,7 +463,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -635,7 +479,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -664,7 +508,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -680,7 +524,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -710,7 +554,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -726,7 +570,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -754,7 +598,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -770,7 +614,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -784,136 +628,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Operation responseCallSettings = await client.InsertAsync(request.Project, request.Region, request.ResourcePolicyResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Region, request.ResourcePolicyResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            ListResourcePoliciesRequest request = new ListResourcePoliciesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                Region = "regionedb20d96",
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            ResourcePolicyList expectedResponse = new ResourcePolicyList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new ResourcePolicy(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            ListResourcePoliciesRequest request = new ListResourcePoliciesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                Region = "regionedb20d96",
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            ResourcePolicyList expectedResponse = new ResourcePolicyList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new ResourcePolicy(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResourcePolicyList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ResourcePolicyList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            ListResourcePoliciesRequest request = new ListResourcePoliciesRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            ResourcePolicyList expectedResponse = new ResourcePolicyList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new ResourcePolicy(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyList response = client.List(request.Project, request.Region);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<ResourcePolicies.ResourcePoliciesClient> mockGrpcClient = new moq::Mock<ResourcePolicies.ResourcePoliciesClient>(moq::MockBehavior.Strict);
-            ListResourcePoliciesRequest request = new ListResourcePoliciesRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            ResourcePolicyList expectedResponse = new ResourcePolicyList
-            {
-                Id = "id74b70bb8",
-                Etag = "etage8ad7218",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new ResourcePolicy(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResourcePolicyList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ResourcePoliciesClient client = new ResourcePoliciesClientImpl(mockGrpcClient.Object, null);
-            ResourcePolicyList responseCallSettings = await client.ListAsync(request.Project, request.Region, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ResourcePolicyList responseCancellationToken = await client.ListAsync(request.Project, request.Region, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

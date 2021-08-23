@@ -27,158 +27,6 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedMachineTypesClientTest
     {
         [xunit::FactAttribute]
-        public void AggregatedListRequestObject()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            AggregatedListMachineTypesRequest request = new AggregatedListMachineTypesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new MachineTypesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeAggregatedList response = client.AggregatedList(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListRequestObjectAsync()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            AggregatedListMachineTypesRequest request = new AggregatedListMachineTypesRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new MachineTypesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeAggregatedList responseCallSettings = await client.AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            MachineTypeAggregatedList responseCancellationToken = await client.AggregatedListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AggregatedList()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            AggregatedListMachineTypesRequest request = new AggregatedListMachineTypesRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new MachineTypesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeAggregatedList response = client.AggregatedList(request.Project);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListAsync()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            AggregatedListMachineTypesRequest request = new AggregatedListMachineTypesRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            MachineTypeAggregatedList expectedResponse = new MachineTypeAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new MachineTypesScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeAggregatedList responseCallSettings = await client.AggregatedListAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            MachineTypeAggregatedList responseCancellationToken = await client.AggregatedListAsync(request.Project, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
@@ -190,14 +38,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -226,14 +74,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -264,14 +112,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -300,14 +148,14 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             MachineType expectedResponse = new MachineType
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 ImageSpaceGb = 480303298,
                 MemoryMb = -1241574521,
-                MaximumPersistentDisksSizeGb = "maximum_persistent_disks_size_gb3b744507",
+                MaximumPersistentDisksSizeGb = -4994613391596960505L,
                 Accelerators = { new Accelerators(), },
                 GuestCpus = 325324266,
                 Description = "description2cf9da67",
@@ -322,120 +170,6 @@ namespace Google.Cloud.Compute.V1.Tests
             MachineType responseCallSettings = await client.GetAsync(request.Project, request.Zone, request.MachineType, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MachineType responseCancellationToken = await client.GetAsync(request.Project, request.Zone, request.MachineType, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            ListMachineTypesRequest request = new ListMachineTypesRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            MachineTypeList expectedResponse = new MachineTypeList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new MachineType(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            ListMachineTypesRequest request = new ListMachineTypesRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            MachineTypeList expectedResponse = new MachineTypeList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new MachineType(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            MachineTypeList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            ListMachineTypesRequest request = new ListMachineTypesRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            MachineTypeList expectedResponse = new MachineTypeList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new MachineType(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeList response = client.List(request.Project, request.Zone);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<MachineTypes.MachineTypesClient> mockGrpcClient = new moq::Mock<MachineTypes.MachineTypesClient>(moq::MockBehavior.Strict);
-            ListMachineTypesRequest request = new ListMachineTypesRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            MachineTypeList expectedResponse = new MachineTypeList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items = { new MachineType(), },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MachineTypeList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            MachineTypesClient client = new MachineTypesClientImpl(mockGrpcClient.Object, null);
-            MachineTypeList responseCallSettings = await client.ListAsync(request.Project, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            MachineTypeList responseCancellationToken = await client.ListAsync(request.Project, request.Zone, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

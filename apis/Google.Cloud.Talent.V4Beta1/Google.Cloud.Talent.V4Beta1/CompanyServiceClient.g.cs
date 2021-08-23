@@ -139,6 +139,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public CompanyServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public CompanyServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = CompanyServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref CompanyServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CompanyServiceClient> task);
@@ -214,7 +220,19 @@ namespace Google.Cloud.Talent.V4Beta1
             "https://www.googleapis.com/auth/jobs",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CompanyServiceClient"/> using the default credentials, endpoint and

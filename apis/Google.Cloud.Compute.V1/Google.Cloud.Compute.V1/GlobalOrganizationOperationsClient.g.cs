@@ -103,6 +103,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public GlobalOrganizationOperationsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public GlobalOrganizationOperationsClientBuilder()
+        {
+            UseJwtAccessWithScopes = GlobalOrganizationOperationsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref GlobalOrganizationOperationsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GlobalOrganizationOperationsClient> task);
@@ -178,7 +184,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="GlobalOrganizationOperationsClient"/> using the default credentials,
@@ -374,8 +392,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual OperationList List(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<OperationList, Operation> List(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -383,42 +401,49 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<OperationList> ListAsync(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Retrieves a list of Operation resources contained within the specified organization.
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<OperationList> ListAsync(ListGlobalOrganizationOperationsRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
-        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual OperationList List(gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListGlobalOrganizationOperationsRequest { }, callSettings);
+        /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<OperationList, Operation> List(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            List(new ListGlobalOrganizationOperationsRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Retrieves a list of Operation resources contained within the specified organization.
         /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<OperationList> ListAsync(gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListGlobalOrganizationOperationsRequest { }, callSettings);
-
-        /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
-        /// </summary>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<OperationList> ListAsync(st::CancellationToken cancellationToken) =>
-            ListAsync(gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAsync(new ListGlobalOrganizationOperationsRequest
+            {
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>GlobalOrganizationOperations client wrapper implementation, for convenient use.</summary>
@@ -530,11 +555,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override OperationList List(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
+        public override gax::PagedEnumerable<OperationList, Operation> List(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGlobalOrganizationOperationsRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGlobalOrganizationOperationsRequest, OperationList, Operation>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -542,11 +567,21 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<OperationList> ListAsync(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(ListGlobalOrganizationOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListGlobalOrganizationOperationsRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGlobalOrganizationOperationsRequest, OperationList, Operation>(_callList, request, callSettings);
+        }
+    }
+
+    public partial class ListGlobalOrganizationOperationsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
         }
     }
 }

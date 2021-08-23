@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// instead. The function returned by <see cref="CreateFactory(string, IConsumer{TraceProto}, TraceOptions)"/>
         /// will accept any <see cref="ITraceContext"/> as input and not just <see cref="TraceHeaderContext"/>.
         /// </remarks>
-        [Obsolete("Please use ManagedTracer.CreateFactory instead which only differs in that the returned factory will accept any ITraceContext as input.")]
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ManagedTracer.CreateFactory instead which only differs in that the returned factory will accept any ITraceContext as input.")]
         public static Func<TraceHeaderContext, IManagedTracer> CreateTracerFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options) =>
             CreateFactory(projectId, consumer, options);
 

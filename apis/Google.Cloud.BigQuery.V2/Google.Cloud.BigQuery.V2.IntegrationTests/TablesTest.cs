@@ -14,9 +14,11 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -290,6 +292,69 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         TableId = _fixture.CreateTableId()
                     }
                 }));
+        }
+
+        /// <summary>
+        /// Calls GetOrCreateTable with multiple concurrent requests. We create 5 threads all trying
+        /// to GetOrCreate the same dataset at the same time, to check that
+        /// "get (not found) -> create (conflict) -> get (ok)" works appropriately.
+        /// We use 5 threads as that's the quota limit for updates to a single dataset's metadata within 10
+        /// seconds. We can't actually tell for sure whether any of the calls went through all three RPCs,
+        /// but the test does fail without the final "get".
+        /// 
+        /// We could potentially detect the create request failing due to lack of quota and perform
+        /// a second "get", but the quota check happens early - leading to "not found" errors while the dataset
+        /// is being created. Rather than get into polling intervals etc, we just let it fail in that case;
+        /// users will need to write higher-level retry if they're in that very niche situation.
+        /// 
+        /// (Threads are used rather than tasks to ensure that the requests really are pretty much "all at
+        /// the same time"; we don't want the normal slow task warm-up to skew this, although they're used
+        /// in the async test for convenience.)
+        /// </summary>
+        [Fact]
+        public void GetOrCreateTable_HighContention()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var datasetId = _fixture.CreateDatasetId();
+            client.CreateDataset(datasetId);
+            int successes = 0;
+            ConcurrentBag<Exception> exceptions = new ConcurrentBag<Exception>();
+            var threads = Enumerable.Range(0, 5).Select(_ => new Thread(() =>
+            {
+                try
+                {
+                    client.GetOrCreateTable(datasetId, "highcontention", new Table());
+                    Interlocked.Increment(ref successes);
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            })).ToList();
+
+            // Start all the threads at roughly the same time
+            threads.ForEach(t => t.Start());
+
+            // ... and wait for them all to finish
+            threads.ForEach(t => t.Join(5000));
+
+            Assert.Empty(exceptions);
+            // If any threads timed out, we won't have enough successes.
+            Assert.Equal(threads.Count, successes);
+        }
+
+        /// <summary>
+        /// See <see cref="GetOrCreateTable_HighContention"/> for commentary on the test.
+        /// </summary>
+        [Fact]
+        public async Task GetOrCreateTableAsync_HighContention()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var datasetId = _fixture.CreateDatasetId();
+            await client.CreateDatasetAsync(datasetId);
+
+            var tasks = Enumerable.Range(0, 5).Select(_ => client.GetOrCreateTableAsync(datasetId, "highcontention", new Table())).ToList();
+            await Task.WhenAll(tasks);
         }
 
         [Fact]

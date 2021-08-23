@@ -145,14 +145,7 @@ namespace Google.Cloud.Firestore.V1
 
     // Support for FirestoreDbBuilder.
     public sealed partial class FirestoreClientBuilder : ClientBuilderBase<FirestoreClient>
-    {
-        /// <summary>
-        /// Creates a new instance with no settings.
-        /// </summary>
-        public FirestoreClientBuilder()
-        {
-        }
-        
+    {       
         /// <summary>
         /// Creates a <see cref="FirestoreClientBuilder"/> by copying common settings from another builder.
         /// This method is intended for use in Google.Cloud.Firestore with FirestoreDbBuilder. It will

@@ -45,12 +45,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -60,11 +67,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -90,12 +123,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -105,11 +145,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -137,12 +203,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -152,11 +225,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -182,12 +281,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -197,11 +303,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -229,12 +361,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -244,11 +383,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -274,12 +439,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -289,11 +461,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -319,12 +517,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -334,11 +539,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -362,12 +593,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -377,11 +615,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -407,12 +671,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -422,11 +693,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -450,12 +747,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -465,11 +769,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -495,12 +825,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -510,11 +847,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -538,12 +901,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -553,11 +923,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -577,6 +973,7 @@ namespace Google.Cloud.Retail.V2.Tests
             {
                 Product = new Product(),
                 UpdateMask = new wkt::FieldMask(),
+                AllowMissing = true,
             };
             Product expectedResponse = new Product
             {
@@ -584,12 +981,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -599,11 +1003,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -621,6 +1051,7 @@ namespace Google.Cloud.Retail.V2.Tests
             {
                 Product = new Product(),
                 UpdateMask = new wkt::FieldMask(),
+                AllowMissing = true,
             };
             Product expectedResponse = new Product
             {
@@ -628,12 +1059,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -643,11 +1081,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -674,12 +1138,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -689,11 +1160,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);
@@ -718,12 +1215,19 @@ namespace Google.Cloud.Retail.V2.Tests
                 Id = "id74b70bb8",
                 Type = Product.Types.Type.Collection,
                 PrimaryProductId = "primary_product_id96202300",
+                CollectionMemberIds =
+                {
+                    "collection_member_ids3c9b26a9",
+                },
+                Gtin = "gtin79aaf991",
                 Categories =
                 {
                     "categoriesb4ccb5b0",
                 },
                 Title = "title17dbd3d5",
+                Brands = { "brandsd5b53f63", },
                 Description = "description2cf9da67",
+                LanguageCode = "language_code2f6c7160",
                 Attributes =
                 {
                     {
@@ -733,11 +1237,37 @@ namespace Google.Cloud.Retail.V2.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 PriceInfo = new PriceInfo(),
+                Rating = new Rating(),
+                ExpireTime = new wkt::Timestamp(),
+                Ttl = new wkt::Duration(),
                 AvailableTime = new wkt::Timestamp(),
                 Availability = Product.Types.Availability.InStock,
                 AvailableQuantity = 719656040,
+                FulfillmentInfo =
+                {
+                    new FulfillmentInfo(),
+                },
                 Uri = "uri3db70593",
                 Images = { new Image(), },
+                Audience = new Audience(),
+                ColorInfo = new ColorInfo(),
+                Sizes = { "sizes8e1627b0", },
+                Materials =
+                {
+                    "materials38c02a2d",
+                },
+                Patterns =
+                {
+                    "patternsb451ea9d",
+                },
+                Conditions =
+                {
+                    "conditionsec99b3b5",
+                },
+                RetrievableFields = new wkt::FieldMask(),
+                Variants = { new Product(), },
+                PublishTime = new wkt::Timestamp(),
+                Promotions = { new Promotion(), },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null);

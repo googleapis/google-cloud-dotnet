@@ -329,7 +329,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Boolean expressions (AND/OR/NOT) are supported up to 3 levels of
     /// nesting (for example, "((A AND B AND C) OR NOT D) AND E"), a maximum of 100
     /// comparisons or functions are allowed in the expression. The expression
-    /// must be &lt; 6000 bytes in length.
+    /// must be &lt; 10000 bytes in length.
     ///
     /// Sample Query:
     /// `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
@@ -893,16 +893,20 @@ namespace Google.Cloud.Talent.V4 {
     public const int RegionCodeFieldNumber = 2;
     private string regionCode_ = "";
     /// <summary>
-    /// CLDR region code of the country/region of the address. This is used
-    /// to address ambiguity of the user-input location, for example, "Liverpool"
-    /// against "Liverpool, NY, US" or "Liverpool, UK".
+    /// CLDR region code of the country/region. This field may be used in two ways:
     ///
-    /// Set this field to bias location resolution toward a specific country
-    /// or territory. If this field is not set, application behavior is biased
-    /// toward the United States by default.
+    /// 1) If telecommute preference is not set, this field is used address
+    /// ambiguity of the user-input address. For example, "Liverpool" may refer to
+    /// "Liverpool, NY, US" or "Liverpool, UK". This region code biases the
+    /// address resolution toward a specific country or territory. If this field is
+    /// not set, address resolution is biased toward the United States by default.
+    ///
+    /// 2) If telecommute preference is set to TELECOMMUTE_ALLOWED, the
+    /// telecommute location filter will be limited to the region specified in this
+    /// field. If this field is not set, the telecommute job locations will not be
     ///
     /// See
-    /// https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html
+    /// https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_information.html
     /// for details. Example: "CH" for Switzerland.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

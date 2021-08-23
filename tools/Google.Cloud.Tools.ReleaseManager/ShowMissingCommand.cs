@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -31,30 +33,31 @@ namespace Google.Cloud.Tools.ReleaseManager
         protected override void ExecuteImpl(string[] args)
         {
             var catalog = ApiCatalog.Load();
-            // Note: for now, we could actually load it from apis/ServiceDirectory, but hey...
-            var directory = ServiceDirectory.LoadFromGoogleapis();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
             var stabilityFilter = BuildStabilityFilter(args[0]);
 
             var ignoredOrGeneratedPaths = new HashSet<string>(catalog.IgnoredPaths.Keys);
             ignoredOrGeneratedPaths.UnionWith(catalog.Apis.Select(api => api.ProtoPath));
 
-            var missingServices = directory.Services
+            var missingApis = apiIndex.Apis
                 .Where(stabilityFilter)
-                .Where(svc => !ignoredOrGeneratedPaths.Contains(svc.ServiceDirectory))
+                .Where(api => !ignoredOrGeneratedPaths.Contains(api.Directory))
                 .ToList();
 
-            Console.WriteLine($"Missing services: {missingServices.Count}");
-            foreach (var service in missingServices)
+            Console.WriteLine($"Missing apis: {missingApis.Count}");
+            foreach (var api in missingApis)
             {
-                Console.WriteLine(service.ServiceDirectory);
+                Console.WriteLine($"{api.Directory} => {api.DeriveCSharpNamespace()}");
             }
         }
 
-        private static Func<Service, bool> BuildStabilityFilter(string minStability) => minStability switch
+        private static Func<Api, bool> BuildStabilityFilter(string minStability) => minStability switch
         {
-            "stable" => service => service.Stable,
-            "beta" => service => service.Stable || service.Version.Contains("beta"),
-            "alpha" => service => true,
+            "stable" => api => api.Stable,
+            "beta" => api => api.Stable || api.Version.Contains("beta"),
+            "alpha" => api => true,
             _ => throw new UserErrorException($"Invalid min-stability specified. Valid values: stable, beta, alpha")
         };
     }

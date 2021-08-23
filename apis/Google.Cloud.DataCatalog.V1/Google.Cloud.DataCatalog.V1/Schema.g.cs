@@ -49,7 +49,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Messages
   /// <summary>
-  /// Represents a schema (e.g. BigQuery, GoogleSQL, Avro schema).
+  /// Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
   /// </summary>
   public sealed partial class Schema : pb::IMessage<Schema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -219,7 +219,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Representation of a column within a schema. Columns could be nested inside
+  /// A column within a schema. Columns can be nested inside
   /// other columns.
   /// </summary>
   public sealed partial class ColumnSchema : pb::IMessage<ColumnSchema>
@@ -318,7 +318,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ModeFieldNumber = 3;
     private string mode_ = "";
     /// <summary>
-    /// Optional. A column's mode indicates if values in this column are required,
+    /// Optional. A column's mode indicates whether values in this column are required,
     /// nullable, or repeated.
     ///
     /// Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported.

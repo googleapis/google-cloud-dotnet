@@ -28,42 +28,58 @@ namespace Google.Cloud.Retail.V2 {
             "ZS5jbG91ZC5yZXRhaWwudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29t",
-            "bW9uLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL3dyYXBwZXJzLnByb3RvIswHCgdQcm9kdWN0EhEKBG5hbWUYASABKAlC",
-            "A+BBBRIPCgJpZBgCIAEoCUID4EEFEjcKBHR5cGUYAyABKA4yJC5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlByb2R1Y3QuVHlwZUID4EEFEhoKEnByaW1hcnlf",
-            "cHJvZHVjdF9pZBgEIAEoCRISCgpjYXRlZ29yaWVzGAcgAygJEhIKBXRpdGxl",
-            "GAggASgJQgPgQQISEwoLZGVzY3JpcHRpb24YCiABKAkSQwoKYXR0cmlidXRl",
-            "cxgMIAMoCzIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdC5BdHRy",
-            "aWJ1dGVzRW50cnkSDAoEdGFncxgNIAMoCRI1CgpwcmljZV9pbmZvGA4gASgL",
-            "MiEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmljZUluZm8SMgoOYXZhaWxh",
-            "YmxlX3RpbWUYEiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIK",
-            "DGF2YWlsYWJpbGl0eRgTIAEoDjIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "UHJvZHVjdC5BdmFpbGFiaWxpdHkSNwoSYXZhaWxhYmxlX3F1YW50aXR5GBQg",
-            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSCwoDdXJpGBYgASgJ",
-            "Ei0KBmltYWdlcxgXIAMoCzIdLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1h",
-            "Z2UaWgoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgC",
-            "IAEoCzInLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ3VzdG9tQXR0cmlidXRl",
-            "OgI4ASJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZ",
-            "EAESCwoHVkFSSUFOVBACEg4KCkNPTExFQ1RJT04QAyJpCgxBdmFpbGFiaWxp",
-            "dHkSHAoYQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQ",
-            "ARIQCgxPVVRfT0ZfU1RPQ0sQAhIMCghQUkVPUkRFUhADEg0KCUJBQ0tPUkRF",
-            "UhAEOoQB6kGAAQodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSX3By",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9n",
-            "cy97Y2F0YWxvZ30vYnJhbmNoZXMve2JyYW5jaH0vcHJvZHVjdHMve3Byb2R1",
-            "Y3R9QrACChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkIMUHJvZHVjdFBy",
-            "b3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdvb2dsZS5DbG91",
-            "ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xl",
-            "OjpDbG91ZDo6UmV0YWlsOjpWMupBbAoccmV0YWlsLmdvb2dsZWFwaXMuY29t",
-            "L0JyYW5jaBJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2NhdGFsb2dzL3tjYXRhbG9nfS9icmFuY2hlcy97YnJhbmNofWIGcHJv",
-            "dG8z"));
+            "bW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdv",
+            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMu",
+            "cHJvdG8ijw0KB1Byb2R1Y3QSMQoLZXhwaXJlX3RpbWUYECABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wSAASLQoDdHRsGBEgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQRIABIRCgRuYW1lGAEgASgJQgPgQQUS",
+            "DwoCaWQYAiABKAlCA+BBBRI3CgR0eXBlGAMgASgOMiQuZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5Qcm9kdWN0LlR5cGVCA+BBBRIaChJwcmltYXJ5X3Byb2R1",
+            "Y3RfaWQYBCABKAkSHQoVY29sbGVjdGlvbl9tZW1iZXJfaWRzGAUgAygJEgwK",
+            "BGd0aW4YBiABKAkSEgoKY2F0ZWdvcmllcxgHIAMoCRISCgV0aXRsZRgIIAEo",
+            "CUID4EECEg4KBmJyYW5kcxgJIAMoCRITCgtkZXNjcmlwdGlvbhgKIAEoCRIV",
+            "Cg1sYW5ndWFnZV9jb2RlGAsgASgJEkMKCmF0dHJpYnV0ZXMYDCADKAsyLy5n",
+            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3QuQXR0cmlidXRlc0VudHJ5",
+            "EgwKBHRhZ3MYDSADKAkSNQoKcHJpY2VfaW5mbxgOIAEoCzIhLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuUHJpY2VJbmZvEi4KBnJhdGluZxgPIAEoCzIeLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUmF0aW5nEjIKDmF2YWlsYWJsZV90aW1l",
+            "GBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCgxhdmFpbGFi",
+            "aWxpdHkYEyABKA4yLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3Qu",
+            "QXZhaWxhYmlsaXR5EjcKEmF2YWlsYWJsZV9xdWFudGl0eRgUIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEkEKEGZ1bGZpbGxtZW50X2luZm8Y",
+            "FSADKAsyJy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkZ1bGZpbGxtZW50SW5m",
+            "bxILCgN1cmkYFiABKAkSLQoGaW1hZ2VzGBcgAygLMh0uZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5JbWFnZRIyCghhdWRpZW5jZRgYIAEoCzIgLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuQXVkaWVuY2USNQoKY29sb3JfaW5mbxgZIAEoCzIh",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29sb3JJbmZvEg0KBXNpemVzGBog",
+            "AygJEhEKCW1hdGVyaWFscxgbIAMoCRIQCghwYXR0ZXJucxgcIAMoCRISCgpj",
+            "b25kaXRpb25zGB0gAygJEjUKCnByb21vdGlvbnMYIiADKAsyIS5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLlByb21vdGlvbhIwCgxwdWJsaXNoX3RpbWUYISAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjYKEnJldHJpZXZhYmxl",
+            "X2ZpZWxkcxgeIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSNgoI",
+            "dmFyaWFudHMYHyADKAsyHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1",
+            "Y3RCA+BBAxpaCg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZh",
+            "bHVlGAIgASgLMicuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRy",
+            "aWJ1dGU6AjgBIkYKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BS",
+            "SU1BUlkQARILCgdWQVJJQU5UEAISDgoKQ09MTEVDVElPThADImkKDEF2YWls",
+            "YWJpbGl0eRIcChhBVkFJTEFCSUxJVFlfVU5TUEVDSUZJRUQQABIMCghJTl9T",
+            "VE9DSxABEhAKDE9VVF9PRl9TVE9DSxACEgwKCFBSRU9SREVSEAMSDQoJQkFD",
+            "S09SREVSEAQ6hAHqQYABCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVj",
+            "dBJfcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nh",
+            "dGFsb2dzL3tjYXRhbG9nfS9icmFuY2hlcy97YnJhbmNofS9wcm9kdWN0cy97",
+            "cHJvZHVjdH1CDAoKZXhwaXJhdGlvbkKwAgoaY29tLmdvb2dsZS5jbG91ZC5y",
+            "ZXRhaWwudjJCDFByb2R1Y3RQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZS",
+            "RVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3Vk",
+            "XFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjLqQWwKHHJl",
+            "dGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSTHByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vYnJh",
+            "bmNoZXMve2JyYW5jaH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Product), global::Google.Cloud.Retail.V2.Product.Parser, new[]{ "Name", "Id", "Type", "PrimaryProductId", "Categories", "Title", "Description", "Attributes", "Tags", "PriceInfo", "AvailableTime", "Availability", "AvailableQuantity", "Uri", "Images" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.Product.Types.Type), typeof(global::Google.Cloud.Retail.V2.Product.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Product), global::Google.Cloud.Retail.V2.Product.Parser, new[]{ "ExpireTime", "Ttl", "Name", "Id", "Type", "PrimaryProductId", "CollectionMemberIds", "Gtin", "Categories", "Title", "Brands", "Description", "LanguageCode", "Attributes", "Tags", "PriceInfo", "Rating", "AvailableTime", "Availability", "AvailableQuantity", "FulfillmentInfo", "Uri", "Images", "Audience", "ColorInfo", "Sizes", "Materials", "Patterns", "Conditions", "Promotions", "PublishTime", "RetrievableFields", "Variants" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.Retail.V2.Product.Types.Type), typeof(global::Google.Cloud.Retail.V2.Product.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -107,23 +123,104 @@ namespace Google.Cloud.Retail.V2 {
       id_ = other.id_;
       type_ = other.type_;
       primaryProductId_ = other.primaryProductId_;
+      collectionMemberIds_ = other.collectionMemberIds_.Clone();
+      gtin_ = other.gtin_;
       categories_ = other.categories_.Clone();
       title_ = other.title_;
+      brands_ = other.brands_.Clone();
       description_ = other.description_;
+      languageCode_ = other.languageCode_;
       attributes_ = other.attributes_.Clone();
       tags_ = other.tags_.Clone();
       priceInfo_ = other.priceInfo_ != null ? other.priceInfo_.Clone() : null;
+      rating_ = other.rating_ != null ? other.rating_.Clone() : null;
       availableTime_ = other.availableTime_ != null ? other.availableTime_.Clone() : null;
       availability_ = other.availability_;
       AvailableQuantity = other.AvailableQuantity;
+      fulfillmentInfo_ = other.fulfillmentInfo_.Clone();
       uri_ = other.uri_;
       images_ = other.images_.Clone();
+      audience_ = other.audience_ != null ? other.audience_.Clone() : null;
+      colorInfo_ = other.colorInfo_ != null ? other.colorInfo_.Clone() : null;
+      sizes_ = other.sizes_.Clone();
+      materials_ = other.materials_.Clone();
+      patterns_ = other.patterns_.Clone();
+      conditions_ = other.conditions_.Clone();
+      promotions_ = other.promotions_.Clone();
+      publishTime_ = other.publishTime_ != null ? other.publishTime_.Clone() : null;
+      retrievableFields_ = other.retrievableFields_ != null ? other.retrievableFields_.Clone() : null;
+      variants_ = other.variants_.Clone();
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          ExpireTime = other.ExpireTime.Clone();
+          break;
+        case ExpirationOneofCase.Ttl:
+          Ttl = other.Ttl.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Product Clone() {
       return new Product(this);
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 16;
+    /// <summary>
+    /// The timestamp when this product becomes unavailable for
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    ///
+    /// If it is set, the [Product][google.cloud.retail.v2.Product] is not
+    /// available for
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] after
+    /// [expire_time][google.cloud.retail.v2.Product.expire_time]. However, the
+    /// product can still be retrieved by
+    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+    /// and
+    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+    ///
+    /// Google Merchant Center property
+    /// [expiration_date](https://support.google.com/merchants/answer/6324499).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expirationCase_ == ExpirationOneofCase.ExpireTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.ExpireTime;
+      }
+    }
+
+    /// <summary>Field number for the "ttl" field.</summary>
+    public const int TtlFieldNumber = 17;
+    /// <summary>
+    /// Input only. The TTL (time to live) of the product.
+    ///
+    /// If it is set, [expire_time][google.cloud.retail.v2.Product.expire_time]
+    /// is set as current timestamp plus
+    /// [ttl][google.cloud.retail.v2.Product.ttl]. The derived
+    /// [expire_time][google.cloud.retail.v2.Product.expire_time] is returned in
+    /// the output and [ttl][google.cloud.retail.v2.Product.ttl] is left blank
+    /// when retrieving the [Product][google.cloud.retail.v2.Product].
+    ///
+    /// If it is set, the product is not available for
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] after
+    /// current timestamp plus [ttl][google.cloud.retail.v2.Product.ttl].
+    /// However, the product can still be retrieved by
+    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+    /// and
+    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration Ttl {
+      get { return expirationCase_ == ExpirationOneofCase.Ttl ? (global::Google.Protobuf.WellKnownTypes.Duration) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.Ttl;
+      }
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -172,7 +269,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int TypeFieldNumber = 3;
     private global::Google.Cloud.Retail.V2.Product.Types.Type type_ = global::Google.Cloud.Retail.V2.Product.Types.Type.Unspecified;
     /// <summary>
-    /// Immutable. The type of the product. This field is output-only.
+    /// Immutable. The type of the product. Default to
+    /// [Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
+    /// if unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.Product.Types.Type Type {
@@ -213,6 +312,52 @@ namespace Google.Cloud.Retail.V2 {
       get { return primaryProductId_; }
       set {
         primaryProductId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "collection_member_ids" field.</summary>
+    public const int CollectionMemberIdsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_collectionMemberIds_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> collectionMemberIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The [id][google.cloud.retail.v2.Product.id] of the collection members when
+    /// [type][google.cloud.retail.v2.Product.type] is
+    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION].
+    ///
+    /// Should not set it for other types. A maximum of 1000 values are allowed.
+    /// Otherwise, an INVALID_ARGUMENT error is return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> CollectionMemberIds {
+      get { return collectionMemberIds_; }
+    }
+
+    /// <summary>Field number for the "gtin" field.</summary>
+    public const int GtinFieldNumber = 6;
+    private string gtin_ = "";
+    /// <summary>
+    /// The Global Trade Item Number (GTIN) of the product.
+    ///
+    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [gtin](https://support.google.com/merchants/answer/6324461).
+    /// Schema.org property
+    /// [Product.isbn](https://schema.org/isbn) or
+    /// [Product.gtin8](https://schema.org/gtin8) or
+    /// [Product.gtin12](https://schema.org/gtin12) or
+    /// [Product.gtin13](https://schema.org/gtin13) or
+    /// [Product.gtin14](https://schema.org/gtin14).
+    ///
+    /// If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Gtin {
+      get { return gtin_; }
+      set {
+        gtin_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -267,7 +412,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Product title.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// This field must be a UTF-8 encoded string with a length limit of 1,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
@@ -280,6 +425,27 @@ namespace Google.Cloud.Retail.V2 {
       set {
         title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "brands" field.</summary>
+    public const int BrandsFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_brands_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> brands_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The brands of the product.
+    ///
+    /// A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
+    /// string with a length limit of 1,000 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [brand](https://support.google.com/merchants/answer/6324351). Schema.org
+    /// property [Product.brand](https://schema.org/brand).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Brands {
+      get { return brands_; }
     }
 
     /// <summary>Field number for the "description" field.</summary>
@@ -300,6 +466,29 @@ namespace Google.Cloud.Retail.V2 {
       get { return description_; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 11;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Language of the title/description and other string attributes. Use language
+    /// tags defined by [BCP 47][https://www.rfc-editor.org/rfc/bcp/bcp47.txt].
+    ///
+    /// For product prediction, this field is ignored and the model automatically
+    /// detects the text language. The [Product][google.cloud.retail.v2.Product]
+    /// can include text in different languages, but duplicating
+    /// [Product][google.cloud.retail.v2.Product]s to provide text in multiple
+    /// languages can result in degraded model performance.
+    ///
+    /// For product search this field is in use. It defaults to "en-US" if unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -325,11 +514,14 @@ namespace Google.Cloud.Retail.V2 {
     /// "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
     /// }`.
     ///
-    /// A maximum of 150 attributes are allowed. Otherwise, an INVALID_ARGUMENT
-    /// error is returned.
+    /// This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
+    /// error is returned:
     ///
-    /// The key must be a UTF-8 encoded string with a length limit of 5,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// * Max entries count: 200.
+    /// * The key must be a UTF-8 encoded string with a length limit of 128
+    ///   characters.
+    /// * For indexable attribute, the key must match the pattern:
+    ///   [a-zA-Z0-9][a-zA-Z0-9_]*. For example, key0LikeThis or KEY_1_LIKE_THIS.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute> Attributes {
@@ -378,12 +570,27 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "rating" field.</summary>
+    public const int RatingFieldNumber = 15;
+    private global::Google.Cloud.Retail.V2.Rating rating_;
+    /// <summary>
+    /// The rating of this product.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.Rating Rating {
+      get { return rating_; }
+      set {
+        rating_ = value;
+      }
+    }
+
     /// <summary>Field number for the "available_time" field.</summary>
     public const int AvailableTimeFieldNumber = 18;
     private global::Google.Protobuf.WellKnownTypes.Timestamp availableTime_;
     /// <summary>
     /// The timestamp when this [Product][google.cloud.retail.v2.Product] becomes
-    /// available recommendation and search.
+    /// available for
+    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp AvailableTime {
@@ -429,11 +636,32 @@ namespace Google.Cloud.Retail.V2 {
     }
 
 
+    /// <summary>Field number for the "fulfillment_info" field.</summary>
+    public const int FulfillmentInfoFieldNumber = 21;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.FulfillmentInfo> _repeated_fulfillmentInfo_codec
+        = pb::FieldCodec.ForMessage(170, global::Google.Cloud.Retail.V2.FulfillmentInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.FulfillmentInfo> fulfillmentInfo_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.FulfillmentInfo>();
+    /// <summary>
+    /// Fulfillment information, such as the store IDs for in-store pickup or
+    /// region IDs for different shipping methods.
+    ///
+    /// All the elements must have distinct
+    /// [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type].
+    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.FulfillmentInfo> FulfillmentInfo {
+      get { return fulfillmentInfo_; }
+    }
+
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 22;
     private string uri_ = "";
     /// <summary>
     /// Canonical URL directly linking to the product detail page.
+    ///
+    /// It is strongly recommended to provide a valid uri for the product,
+    /// otherwise the service performance could be significantly degraded.
     ///
     /// This field must be a UTF-8 encoded string with a length limit of 5,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -456,7 +684,8 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForMessage(186, global::Google.Cloud.Retail.V2.Image.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Image> images_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Image>();
     /// <summary>
-    /// Product images for the product.
+    /// Product images for the product.Highly recommended to put the main image
+    /// to the first.
     ///
     /// A maximum of 300 images are allowed.
     ///
@@ -467,6 +696,281 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Image> Images {
       get { return images_; }
+    }
+
+    /// <summary>Field number for the "audience" field.</summary>
+    public const int AudienceFieldNumber = 24;
+    private global::Google.Cloud.Retail.V2.Audience audience_;
+    /// <summary>
+    /// The target group associated with a given audience (e.g. male, veterans,
+    /// car owners, musicians, etc.) of the product.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.Audience Audience {
+      get { return audience_; }
+      set {
+        audience_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "color_info" field.</summary>
+    public const int ColorInfoFieldNumber = 25;
+    private global::Google.Cloud.Retail.V2.ColorInfo colorInfo_;
+    /// <summary>
+    /// The color of the product.
+    ///
+    /// Google Merchant Center property
+    /// [color](https://support.google.com/merchants/answer/6324487). Schema.org
+    /// property [Product.color](https://schema.org/color).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.ColorInfo ColorInfo {
+      get { return colorInfo_; }
+      set {
+        colorInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sizes" field.</summary>
+    public const int SizesFieldNumber = 26;
+    private static readonly pb::FieldCodec<string> _repeated_sizes_codec
+        = pb::FieldCodec.ForString(210);
+    private readonly pbc::RepeatedField<string> sizes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The size of the product. To represent different size systems or size types,
+    /// consider using this format: [[[size_system:]size_type:]size_value].
+    ///
+    /// For example, in "US:MENS:M", "US" represents size system; "MENS" represents
+    /// size type; "M" represents size value. In "GIRLS:27", size system is empty;
+    /// "GIRLS" represents size type; "27" represents size value. In "32 inches",
+    /// both size system and size type are empty, while size value is "32 inches".
+    ///
+    /// A maximum of 20 values are allowed per
+    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// encoded string with a length limit of 128 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [size](https://support.google.com/merchants/answer/6324492),
+    /// [size_type](https://support.google.com/merchants/answer/6324497) and
+    /// [size_system](https://support.google.com/merchants/answer/6324502).
+    /// Schema.org property [Product.size](https://schema.org/size).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Sizes {
+      get { return sizes_; }
+    }
+
+    /// <summary>Field number for the "materials" field.</summary>
+    public const int MaterialsFieldNumber = 27;
+    private static readonly pb::FieldCodec<string> _repeated_materials_codec
+        = pb::FieldCodec.ForString(218);
+    private readonly pbc::RepeatedField<string> materials_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The material of the product. For example, "leather", "wooden".
+    ///
+    /// A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
+    /// string with a length limit of 128 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [material](https://support.google.com/merchants/answer/6324410). Schema.org
+    /// property [Product.material](https://schema.org/material).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Materials {
+      get { return materials_; }
+    }
+
+    /// <summary>Field number for the "patterns" field.</summary>
+    public const int PatternsFieldNumber = 28;
+    private static readonly pb::FieldCodec<string> _repeated_patterns_codec
+        = pb::FieldCodec.ForString(226);
+    private readonly pbc::RepeatedField<string> patterns_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The pattern or graphic print of the product. For example, "striped", "polka
+    /// dot", "paisley".
+    ///
+    /// A maximum of 5 values are allowed per
+    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// encoded string with a length limit of 128 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
+    /// property [Product.pattern](https://schema.org/pattern).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Patterns {
+      get { return patterns_; }
+    }
+
+    /// <summary>Field number for the "conditions" field.</summary>
+    public const int ConditionsFieldNumber = 29;
+    private static readonly pb::FieldCodec<string> _repeated_conditions_codec
+        = pb::FieldCodec.ForString(234);
+    private readonly pbc::RepeatedField<string> conditions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The condition of the product. Strongly encouraged to use the standard
+    /// values: "new", "refurbished", "used".
+    ///
+    /// A maximum of 5 values are allowed per
+    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// encoded string with a length limit of 128 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// Google Merchant Center property
+    /// [condition](https://support.google.com/merchants/answer/6324469).
+    /// Schema.org property
+    /// [Offer.itemCondition](https://schema.org/itemCondition).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Conditions {
+      get { return conditions_; }
+    }
+
+    /// <summary>Field number for the "promotions" field.</summary>
+    public const int PromotionsFieldNumber = 34;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Promotion> _repeated_promotions_codec
+        = pb::FieldCodec.ForMessage(274, global::Google.Cloud.Retail.V2.Promotion.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Promotion> promotions_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Promotion>();
+    /// <summary>
+    /// The promotions applied to the product. A maximum of 10 values are allowed
+    /// per [Product][google.cloud.retail.v2.Product].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Promotion> Promotions {
+      get { return promotions_; }
+    }
+
+    /// <summary>Field number for the "publish_time" field.</summary>
+    public const int PublishTimeFieldNumber = 33;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp publishTime_;
+    /// <summary>
+    /// The timestamp when the product is published by the retailer for the first
+    /// time, which indicates the freshness of the products. Note that this field
+    /// is different from
+    /// [available_time][google.cloud.retail.v2.Product.available_time], given it
+    /// purely describes product freshness regardless of when it is available on
+    /// search and recommendation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp PublishTime {
+      get { return publishTime_; }
+      set {
+        publishTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retrievable_fields" field.</summary>
+    public const int RetrievableFieldsFieldNumber = 30;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask retrievableFields_;
+    /// <summary>
+    /// Indicates which fields in the [Product][google.cloud.retail.v2.Product]s
+    /// are returned in [SearchResponse][google.cloud.retail.v2.SearchResponse].
+    ///
+    /// Supported fields for all [type][google.cloud.retail.v2.Product.type]s:
+    ///
+    /// * [audience][google.cloud.retail.v2.Product.audience]
+    /// * [availability][google.cloud.retail.v2.Product.availability]
+    /// * [brands][google.cloud.retail.v2.Product.brands]
+    /// * [color_info][google.cloud.retail.v2.Product.color_info]
+    /// * [conditions][google.cloud.retail.v2.Product.conditions]
+    /// * [gtin][google.cloud.retail.v2.Product.gtin]
+    /// * [materials][google.cloud.retail.v2.Product.materials]
+    /// * [name][google.cloud.retail.v2.Product.name]
+    /// * [patterns][google.cloud.retail.v2.Product.patterns]
+    /// * [price_info][google.cloud.retail.v2.Product.price_info]
+    /// * [rating][google.cloud.retail.v2.Product.rating]
+    /// * [sizes][google.cloud.retail.v2.Product.sizes]
+    /// * [title][google.cloud.retail.v2.Product.title]
+    /// * [uri][google.cloud.retail.v2.Product.uri]
+    ///
+    /// Supported fields only for
+    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
+    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]:
+    ///
+    /// * [categories][google.cloud.retail.v2.Product.categories]
+    /// * [description][google.cloud.retail.v2.Product.description]
+    /// * [images][google.cloud.retail.v2.Product.images]
+    ///
+    /// Supported fields only for
+    /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]:
+    ///
+    /// * Only the first image in [images][google.cloud.retail.v2.Product.images]
+    ///
+    /// To mark [attributes][google.cloud.retail.v2.Product.attributes] as
+    /// retrievable, include paths of the form "attributes.key" where "key" is the
+    /// key of a custom attribute, as specified in
+    /// [attributes][google.cloud.retail.v2.Product.attributes].
+    ///
+    /// For [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
+    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION], the
+    /// following fields are always returned in
+    /// [SearchResponse][google.cloud.retail.v2.SearchResponse] by default:
+    ///
+    /// * [name][google.cloud.retail.v2.Product.name]
+    ///
+    /// For [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT], the
+    /// following fields are always returned in by default:
+    ///
+    /// * [name][google.cloud.retail.v2.Product.name]
+    /// * [color_info][google.cloud.retail.v2.Product.color_info]
+    ///
+    /// Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
+    /// returned.
+    ///
+    /// Note: Returning more fields in
+    /// [SearchResponse][google.cloud.retail.v2.SearchResponse] may increase
+    /// response payload size and serving latency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask RetrievableFields {
+      get { return retrievableFields_; }
+      set {
+        retrievableFields_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "variants" field.</summary>
+    public const int VariantsFieldNumber = 31;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Product> _repeated_variants_codec
+        = pb::FieldCodec.ForMessage(250, global::Google.Cloud.Retail.V2.Product.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> variants_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product>();
+    /// <summary>
+    /// Output only. Product variants grouped together on primary product which
+    /// share similar product attributes. It's automatically grouped by
+    /// [primary_product_id][google.cloud.retail.v2.Product.primary_product_id] for
+    /// all the product variants. Only populated for
+    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
+    /// [Product][google.cloud.retail.v2.Product]s.
+    ///
+    /// Note: This field is OUTPUT_ONLY for
+    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct].
+    /// Do not set this field in API requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> Variants {
+      get { return variants_; }
+    }
+
+    private object expiration_;
+    /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
+    public enum ExpirationOneofCase {
+      None = 0,
+      ExpireTime = 16,
+      Ttl = 17,
+    }
+    private ExpirationOneofCase expirationCase_ = ExpirationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExpirationOneofCase ExpirationCase {
+      get { return expirationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearExpiration() {
+      expirationCase_ = ExpirationOneofCase.None;
+      expiration_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -482,42 +986,80 @@ namespace Google.Cloud.Retail.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!object.Equals(Ttl, other.Ttl)) return false;
       if (Name != other.Name) return false;
       if (Id != other.Id) return false;
       if (Type != other.Type) return false;
       if (PrimaryProductId != other.PrimaryProductId) return false;
+      if(!collectionMemberIds_.Equals(other.collectionMemberIds_)) return false;
+      if (Gtin != other.Gtin) return false;
       if(!categories_.Equals(other.categories_)) return false;
       if (Title != other.Title) return false;
+      if(!brands_.Equals(other.brands_)) return false;
       if (Description != other.Description) return false;
+      if (LanguageCode != other.LanguageCode) return false;
       if (!Attributes.Equals(other.Attributes)) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(PriceInfo, other.PriceInfo)) return false;
+      if (!object.Equals(Rating, other.Rating)) return false;
       if (!object.Equals(AvailableTime, other.AvailableTime)) return false;
       if (Availability != other.Availability) return false;
       if (AvailableQuantity != other.AvailableQuantity) return false;
+      if(!fulfillmentInfo_.Equals(other.fulfillmentInfo_)) return false;
       if (Uri != other.Uri) return false;
       if(!images_.Equals(other.images_)) return false;
+      if (!object.Equals(Audience, other.Audience)) return false;
+      if (!object.Equals(ColorInfo, other.ColorInfo)) return false;
+      if(!sizes_.Equals(other.sizes_)) return false;
+      if(!materials_.Equals(other.materials_)) return false;
+      if(!patterns_.Equals(other.patterns_)) return false;
+      if(!conditions_.Equals(other.conditions_)) return false;
+      if(!promotions_.Equals(other.promotions_)) return false;
+      if (!object.Equals(PublishTime, other.PublishTime)) return false;
+      if (!object.Equals(RetrievableFields, other.RetrievableFields)) return false;
+      if(!variants_.Equals(other.variants_)) return false;
+      if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) hash ^= ExpireTime.GetHashCode();
+      if (expirationCase_ == ExpirationOneofCase.Ttl) hash ^= Ttl.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Type != global::Google.Cloud.Retail.V2.Product.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (PrimaryProductId.Length != 0) hash ^= PrimaryProductId.GetHashCode();
+      hash ^= collectionMemberIds_.GetHashCode();
+      if (Gtin.Length != 0) hash ^= Gtin.GetHashCode();
       hash ^= categories_.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
+      hash ^= brands_.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       hash ^= Attributes.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (priceInfo_ != null) hash ^= PriceInfo.GetHashCode();
+      if (rating_ != null) hash ^= Rating.GetHashCode();
       if (availableTime_ != null) hash ^= AvailableTime.GetHashCode();
       if (Availability != global::Google.Cloud.Retail.V2.Product.Types.Availability.Unspecified) hash ^= Availability.GetHashCode();
       if (availableQuantity_ != null) hash ^= AvailableQuantity.GetHashCode();
+      hash ^= fulfillmentInfo_.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       hash ^= images_.GetHashCode();
+      if (audience_ != null) hash ^= Audience.GetHashCode();
+      if (colorInfo_ != null) hash ^= ColorInfo.GetHashCode();
+      hash ^= sizes_.GetHashCode();
+      hash ^= materials_.GetHashCode();
+      hash ^= patterns_.GetHashCode();
+      hash ^= conditions_.GetHashCode();
+      hash ^= promotions_.GetHashCode();
+      if (publishTime_ != null) hash ^= PublishTime.GetHashCode();
+      if (retrievableFields_ != null) hash ^= RetrievableFields.GetHashCode();
+      hash ^= variants_.GetHashCode();
+      hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -550,20 +1092,42 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(34);
         output.WriteString(PrimaryProductId);
       }
+      collectionMemberIds_.WriteTo(output, _repeated_collectionMemberIds_codec);
+      if (Gtin.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Gtin);
+      }
       categories_.WriteTo(output, _repeated_categories_codec);
       if (Title.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(Title);
       }
+      brands_.WriteTo(output, _repeated_brands_codec);
       if (Description.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(LanguageCode);
       }
       attributes_.WriteTo(output, _map_attributes_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
       if (priceInfo_ != null) {
         output.WriteRawTag(114);
         output.WriteMessage(PriceInfo);
+      }
+      if (rating_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Rating);
+      }
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(Ttl);
       }
       if (availableTime_ != null) {
         output.WriteRawTag(146, 1);
@@ -576,11 +1140,34 @@ namespace Google.Cloud.Retail.V2 {
       if (availableQuantity_ != null) {
         _single_availableQuantity_codec.WriteTagAndValue(output, AvailableQuantity);
       }
+      fulfillmentInfo_.WriteTo(output, _repeated_fulfillmentInfo_codec);
       if (Uri.Length != 0) {
         output.WriteRawTag(178, 1);
         output.WriteString(Uri);
       }
       images_.WriteTo(output, _repeated_images_codec);
+      if (audience_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(Audience);
+      }
+      if (colorInfo_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(ColorInfo);
+      }
+      sizes_.WriteTo(output, _repeated_sizes_codec);
+      materials_.WriteTo(output, _repeated_materials_codec);
+      patterns_.WriteTo(output, _repeated_patterns_codec);
+      conditions_.WriteTo(output, _repeated_conditions_codec);
+      if (retrievableFields_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(RetrievableFields);
+      }
+      variants_.WriteTo(output, _repeated_variants_codec);
+      if (publishTime_ != null) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(PublishTime);
+      }
+      promotions_.WriteTo(output, _repeated_promotions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -606,20 +1193,42 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(34);
         output.WriteString(PrimaryProductId);
       }
+      collectionMemberIds_.WriteTo(ref output, _repeated_collectionMemberIds_codec);
+      if (Gtin.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Gtin);
+      }
       categories_.WriteTo(ref output, _repeated_categories_codec);
       if (Title.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(Title);
       }
+      brands_.WriteTo(ref output, _repeated_brands_codec);
       if (Description.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(LanguageCode);
       }
       attributes_.WriteTo(ref output, _map_attributes_codec);
       tags_.WriteTo(ref output, _repeated_tags_codec);
       if (priceInfo_ != null) {
         output.WriteRawTag(114);
         output.WriteMessage(PriceInfo);
+      }
+      if (rating_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Rating);
+      }
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(Ttl);
       }
       if (availableTime_ != null) {
         output.WriteRawTag(146, 1);
@@ -632,11 +1241,34 @@ namespace Google.Cloud.Retail.V2 {
       if (availableQuantity_ != null) {
         _single_availableQuantity_codec.WriteTagAndValue(ref output, AvailableQuantity);
       }
+      fulfillmentInfo_.WriteTo(ref output, _repeated_fulfillmentInfo_codec);
       if (Uri.Length != 0) {
         output.WriteRawTag(178, 1);
         output.WriteString(Uri);
       }
       images_.WriteTo(ref output, _repeated_images_codec);
+      if (audience_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(Audience);
+      }
+      if (colorInfo_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(ColorInfo);
+      }
+      sizes_.WriteTo(ref output, _repeated_sizes_codec);
+      materials_.WriteTo(ref output, _repeated_materials_codec);
+      patterns_.WriteTo(ref output, _repeated_patterns_codec);
+      conditions_.WriteTo(ref output, _repeated_conditions_codec);
+      if (retrievableFields_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(RetrievableFields);
+      }
+      variants_.WriteTo(ref output, _repeated_variants_codec);
+      if (publishTime_ != null) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(PublishTime);
+      }
+      promotions_.WriteTo(ref output, _repeated_promotions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -646,6 +1278,12 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Ttl);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -658,17 +1296,28 @@ namespace Google.Cloud.Retail.V2 {
       if (PrimaryProductId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrimaryProductId);
       }
+      size += collectionMemberIds_.CalculateSize(_repeated_collectionMemberIds_codec);
+      if (Gtin.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Gtin);
+      }
       size += categories_.CalculateSize(_repeated_categories_codec);
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
+      size += brands_.CalculateSize(_repeated_brands_codec);
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
       size += attributes_.CalculateSize(_map_attributes_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (priceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PriceInfo);
+      }
+      if (rating_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rating);
       }
       if (availableTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AvailableTime);
@@ -679,10 +1328,29 @@ namespace Google.Cloud.Retail.V2 {
       if (availableQuantity_ != null) {
         size += _single_availableQuantity_codec.CalculateSizeWithTag(AvailableQuantity);
       }
+      size += fulfillmentInfo_.CalculateSize(_repeated_fulfillmentInfo_codec);
       if (Uri.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       size += images_.CalculateSize(_repeated_images_codec);
+      if (audience_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Audience);
+      }
+      if (colorInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ColorInfo);
+      }
+      size += sizes_.CalculateSize(_repeated_sizes_codec);
+      size += materials_.CalculateSize(_repeated_materials_codec);
+      size += patterns_.CalculateSize(_repeated_patterns_codec);
+      size += conditions_.CalculateSize(_repeated_conditions_codec);
+      size += promotions_.CalculateSize(_repeated_promotions_codec);
+      if (publishTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PublishTime);
+      }
+      if (retrievableFields_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RetrievableFields);
+      }
+      size += variants_.CalculateSize(_repeated_variants_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -706,12 +1374,20 @@ namespace Google.Cloud.Retail.V2 {
       if (other.PrimaryProductId.Length != 0) {
         PrimaryProductId = other.PrimaryProductId;
       }
+      collectionMemberIds_.Add(other.collectionMemberIds_);
+      if (other.Gtin.Length != 0) {
+        Gtin = other.Gtin;
+      }
       categories_.Add(other.categories_);
       if (other.Title.Length != 0) {
         Title = other.Title;
       }
+      brands_.Add(other.brands_);
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
       }
       attributes_.Add(other.attributes_);
       tags_.Add(other.tags_);
@@ -720,6 +1396,12 @@ namespace Google.Cloud.Retail.V2 {
           PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
         }
         PriceInfo.MergeFrom(other.PriceInfo);
+      }
+      if (other.rating_ != null) {
+        if (rating_ == null) {
+          Rating = new global::Google.Cloud.Retail.V2.Rating();
+        }
+        Rating.MergeFrom(other.Rating);
       }
       if (other.availableTime_ != null) {
         if (availableTime_ == null) {
@@ -735,10 +1417,56 @@ namespace Google.Cloud.Retail.V2 {
           AvailableQuantity = other.AvailableQuantity;
         }
       }
+      fulfillmentInfo_.Add(other.fulfillmentInfo_);
       if (other.Uri.Length != 0) {
         Uri = other.Uri;
       }
       images_.Add(other.images_);
+      if (other.audience_ != null) {
+        if (audience_ == null) {
+          Audience = new global::Google.Cloud.Retail.V2.Audience();
+        }
+        Audience.MergeFrom(other.Audience);
+      }
+      if (other.colorInfo_ != null) {
+        if (colorInfo_ == null) {
+          ColorInfo = new global::Google.Cloud.Retail.V2.ColorInfo();
+        }
+        ColorInfo.MergeFrom(other.ColorInfo);
+      }
+      sizes_.Add(other.sizes_);
+      materials_.Add(other.materials_);
+      patterns_.Add(other.patterns_);
+      conditions_.Add(other.conditions_);
+      promotions_.Add(other.promotions_);
+      if (other.publishTime_ != null) {
+        if (publishTime_ == null) {
+          PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        PublishTime.MergeFrom(other.PublishTime);
+      }
+      if (other.retrievableFields_ != null) {
+        if (retrievableFields_ == null) {
+          RetrievableFields = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        RetrievableFields.MergeFrom(other.RetrievableFields);
+      }
+      variants_.Add(other.variants_);
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          if (ExpireTime == null) {
+            ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          ExpireTime.MergeFrom(other.ExpireTime);
+          break;
+        case ExpirationOneofCase.Ttl:
+          if (Ttl == null) {
+            Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
+          }
+          Ttl.MergeFrom(other.Ttl);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -769,6 +1497,14 @@ namespace Google.Cloud.Retail.V2 {
             PrimaryProductId = input.ReadString();
             break;
           }
+          case 42: {
+            collectionMemberIds_.AddEntriesFrom(input, _repeated_collectionMemberIds_codec);
+            break;
+          }
+          case 50: {
+            Gtin = input.ReadString();
+            break;
+          }
           case 58: {
             categories_.AddEntriesFrom(input, _repeated_categories_codec);
             break;
@@ -777,8 +1513,16 @@ namespace Google.Cloud.Retail.V2 {
             Title = input.ReadString();
             break;
           }
+          case 74: {
+            brands_.AddEntriesFrom(input, _repeated_brands_codec);
+            break;
+          }
           case 82: {
             Description = input.ReadString();
+            break;
+          }
+          case 90: {
+            LanguageCode = input.ReadString();
             break;
           }
           case 98: {
@@ -794,6 +1538,31 @@ namespace Google.Cloud.Retail.V2 {
               PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
             }
             input.ReadMessage(PriceInfo);
+            break;
+          }
+          case 122: {
+            if (rating_ == null) {
+              Rating = new global::Google.Cloud.Retail.V2.Rating();
+            }
+            input.ReadMessage(Rating);
+            break;
+          }
+          case 130: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
             break;
           }
           case 146: {
@@ -814,12 +1583,68 @@ namespace Google.Cloud.Retail.V2 {
             }
             break;
           }
+          case 170: {
+            fulfillmentInfo_.AddEntriesFrom(input, _repeated_fulfillmentInfo_codec);
+            break;
+          }
           case 178: {
             Uri = input.ReadString();
             break;
           }
           case 186: {
             images_.AddEntriesFrom(input, _repeated_images_codec);
+            break;
+          }
+          case 194: {
+            if (audience_ == null) {
+              Audience = new global::Google.Cloud.Retail.V2.Audience();
+            }
+            input.ReadMessage(Audience);
+            break;
+          }
+          case 202: {
+            if (colorInfo_ == null) {
+              ColorInfo = new global::Google.Cloud.Retail.V2.ColorInfo();
+            }
+            input.ReadMessage(ColorInfo);
+            break;
+          }
+          case 210: {
+            sizes_.AddEntriesFrom(input, _repeated_sizes_codec);
+            break;
+          }
+          case 218: {
+            materials_.AddEntriesFrom(input, _repeated_materials_codec);
+            break;
+          }
+          case 226: {
+            patterns_.AddEntriesFrom(input, _repeated_patterns_codec);
+            break;
+          }
+          case 234: {
+            conditions_.AddEntriesFrom(input, _repeated_conditions_codec);
+            break;
+          }
+          case 242: {
+            if (retrievableFields_ == null) {
+              RetrievableFields = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(RetrievableFields);
+            break;
+          }
+          case 250: {
+            variants_.AddEntriesFrom(input, _repeated_variants_codec);
+            break;
+          }
+          case 266: {
+            if (publishTime_ == null) {
+              PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PublishTime);
+            break;
+          }
+          case 274: {
+            promotions_.AddEntriesFrom(input, _repeated_promotions_codec);
             break;
           }
         }
@@ -852,6 +1677,14 @@ namespace Google.Cloud.Retail.V2 {
             PrimaryProductId = input.ReadString();
             break;
           }
+          case 42: {
+            collectionMemberIds_.AddEntriesFrom(ref input, _repeated_collectionMemberIds_codec);
+            break;
+          }
+          case 50: {
+            Gtin = input.ReadString();
+            break;
+          }
           case 58: {
             categories_.AddEntriesFrom(ref input, _repeated_categories_codec);
             break;
@@ -860,8 +1693,16 @@ namespace Google.Cloud.Retail.V2 {
             Title = input.ReadString();
             break;
           }
+          case 74: {
+            brands_.AddEntriesFrom(ref input, _repeated_brands_codec);
+            break;
+          }
           case 82: {
             Description = input.ReadString();
+            break;
+          }
+          case 90: {
+            LanguageCode = input.ReadString();
             break;
           }
           case 98: {
@@ -877,6 +1718,31 @@ namespace Google.Cloud.Retail.V2 {
               PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
             }
             input.ReadMessage(PriceInfo);
+            break;
+          }
+          case 122: {
+            if (rating_ == null) {
+              Rating = new global::Google.Cloud.Retail.V2.Rating();
+            }
+            input.ReadMessage(Rating);
+            break;
+          }
+          case 130: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
             break;
           }
           case 146: {
@@ -897,12 +1763,68 @@ namespace Google.Cloud.Retail.V2 {
             }
             break;
           }
+          case 170: {
+            fulfillmentInfo_.AddEntriesFrom(ref input, _repeated_fulfillmentInfo_codec);
+            break;
+          }
           case 178: {
             Uri = input.ReadString();
             break;
           }
           case 186: {
             images_.AddEntriesFrom(ref input, _repeated_images_codec);
+            break;
+          }
+          case 194: {
+            if (audience_ == null) {
+              Audience = new global::Google.Cloud.Retail.V2.Audience();
+            }
+            input.ReadMessage(Audience);
+            break;
+          }
+          case 202: {
+            if (colorInfo_ == null) {
+              ColorInfo = new global::Google.Cloud.Retail.V2.ColorInfo();
+            }
+            input.ReadMessage(ColorInfo);
+            break;
+          }
+          case 210: {
+            sizes_.AddEntriesFrom(ref input, _repeated_sizes_codec);
+            break;
+          }
+          case 218: {
+            materials_.AddEntriesFrom(ref input, _repeated_materials_codec);
+            break;
+          }
+          case 226: {
+            patterns_.AddEntriesFrom(ref input, _repeated_patterns_codec);
+            break;
+          }
+          case 234: {
+            conditions_.AddEntriesFrom(ref input, _repeated_conditions_codec);
+            break;
+          }
+          case 242: {
+            if (retrievableFields_ == null) {
+              RetrievableFields = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(RetrievableFields);
+            break;
+          }
+          case 250: {
+            variants_.AddEntriesFrom(ref input, _repeated_variants_codec);
+            break;
+          }
+          case 266: {
+            if (publishTime_ == null) {
+              PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PublishTime);
+            break;
+          }
+          case 274: {
+            promotions_.AddEntriesFrom(ref input, _repeated_promotions_codec);
             break;
           }
         }
@@ -920,7 +1842,8 @@ namespace Google.Cloud.Retail.V2 {
       public enum Type {
         /// <summary>
         /// Default value. Default to
-        /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] if unset.
+        /// [Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
+        /// if unset.
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>

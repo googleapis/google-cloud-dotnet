@@ -2145,6 +2145,273 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
+        public void UpdateCryptoKeyPrimaryVersionRequestObject()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                CryptoKeyVersionId = "",
+            };
+            // Make the request
+            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
+        public async Task UpdateCryptoKeyPrimaryVersionRequestObjectAsync()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
+            // Additional: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                CryptoKeyVersionId = "",
+            };
+            // Make the request
+            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
+        public void UpdateCryptoKeyPrimaryVersion()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersion(string, string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            string cryptoKeyVersionId = "";
+            // Make the request
+            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(name, cryptoKeyVersionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
+        public async Task UpdateCryptoKeyPrimaryVersionAsync()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(string, string, CallSettings)
+            // Additional: UpdateCryptoKeyPrimaryVersionAsync(string, string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
+            string cryptoKeyVersionId = "";
+            // Make the request
+            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
+        public void UpdateCryptoKeyPrimaryVersionResourceNames()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersion(CryptoKeyName, string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            string cryptoKeyVersionId = "";
+            // Make the request
+            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(name, cryptoKeyVersionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
+        public async Task UpdateCryptoKeyPrimaryVersionResourceNamesAsync()
+        {
+            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CallSettings)
+            // Additional: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
+            string cryptoKeyVersionId = "";
+            // Make the request
+            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
+        public void DestroyCryptoKeyVersionRequestObject()
+        {
+            // Snippet: DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
+        public async Task DestroyCryptoKeyVersionRequestObjectAsync()
+        {
+            // Snippet: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CallSettings)
+            // Additional: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
+        public void DestroyCryptoKeyVersion()
+        {
+            // Snippet: DestroyCryptoKeyVersion(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
+        public async Task DestroyCryptoKeyVersionAsync()
+        {
+            // Snippet: DestroyCryptoKeyVersionAsync(string, CallSettings)
+            // Additional: DestroyCryptoKeyVersionAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
+        public void DestroyCryptoKeyVersionResourceNames()
+        {
+            // Snippet: DestroyCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
+        public async Task DestroyCryptoKeyVersionResourceNamesAsync()
+        {
+            // Snippet: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
+            // Additional: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
+        public void RestoreCryptoKeyVersionRequestObject()
+        {
+            // Snippet: RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
+        public async Task RestoreCryptoKeyVersionRequestObjectAsync()
+        {
+            // Snippet: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CallSettings)
+            // Additional: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
+        public void RestoreCryptoKeyVersion()
+        {
+            // Snippet: RestoreCryptoKeyVersion(string, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
+        public async Task RestoreCryptoKeyVersionAsync()
+        {
+            // Snippet: RestoreCryptoKeyVersionAsync(string, CallSettings)
+            // Additional: RestoreCryptoKeyVersionAsync(string, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
+        public void RestoreCryptoKeyVersionResourceNames()
+        {
+            // Snippet: RestoreCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
+        public async Task RestoreCryptoKeyVersionResourceNamesAsync()
+        {
+            // Snippet: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
+            // Additional: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for Encrypt</summary>
         public void EncryptRequestObject()
         {
@@ -2533,270 +2800,269 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
-        public void UpdateCryptoKeyPrimaryVersionRequestObject()
+        /// <summary>Snippet for MacSign</summary>
+        public void MacSignRequestObject()
         {
-            // Snippet: UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
+            // Snippet: MacSign(MacSignRequest, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
-            {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersionId = "",
-            };
-            // Make the request
-            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
-        public async Task UpdateCryptoKeyPrimaryVersionRequestObjectAsync()
-        {
-            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CallSettings)
-            // Additional: UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest, CancellationToken)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
-            {
-                CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersionId = "",
-            };
-            // Make the request
-            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
-        public void UpdateCryptoKeyPrimaryVersion()
-        {
-            // Snippet: UpdateCryptoKeyPrimaryVersion(string, string, CallSettings)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
-            string cryptoKeyVersionId = "";
-            // Make the request
-            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(name, cryptoKeyVersionId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
-        public async Task UpdateCryptoKeyPrimaryVersionAsync()
-        {
-            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(string, string, CallSettings)
-            // Additional: UpdateCryptoKeyPrimaryVersionAsync(string, string, CancellationToken)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]";
-            string cryptoKeyVersionId = "";
-            // Make the request
-            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersion</summary>
-        public void UpdateCryptoKeyPrimaryVersionResourceNames()
-        {
-            // Snippet: UpdateCryptoKeyPrimaryVersion(CryptoKeyName, string, CallSettings)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
-            // Initialize request argument(s)
-            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
-            string cryptoKeyVersionId = "";
-            // Make the request
-            CryptoKey response = keyManagementServiceClient.UpdateCryptoKeyPrimaryVersion(name, cryptoKeyVersionId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCryptoKeyPrimaryVersionAsync</summary>
-        public async Task UpdateCryptoKeyPrimaryVersionResourceNamesAsync()
-        {
-            // Snippet: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CallSettings)
-            // Additional: UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName, string, CancellationToken)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CryptoKeyName name = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
-            string cryptoKeyVersionId = "";
-            // Make the request
-            CryptoKey response = await keyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
-        public void DestroyCryptoKeyVersionRequestObject()
-        {
-            // Snippet: DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest, CallSettings)
-            // Create client
-            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
-            // Initialize request argument(s)
-            DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
+            MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
             };
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(request);
+            MacSignResponse response = keyManagementServiceClient.MacSign(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
-        public async Task DestroyCryptoKeyVersionRequestObjectAsync()
+        /// <summary>Snippet for MacSignAsync</summary>
+        public async Task MacSignRequestObjectAsync()
         {
-            // Snippet: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CallSettings)
-            // Additional: DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest, CancellationToken)
+            // Snippet: MacSignAsync(MacSignRequest, CallSettings)
+            // Additional: MacSignAsync(MacSignRequest, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
+            MacSignRequest request = new MacSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
             };
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(request);
+            MacSignResponse response = await keyManagementServiceClient.MacSignAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
-        public void DestroyCryptoKeyVersion()
+        /// <summary>Snippet for MacSign</summary>
+        public void MacSign()
         {
-            // Snippet: DestroyCryptoKeyVersion(string, CallSettings)
+            // Snippet: MacSign(string, ByteString, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            ByteString data = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(name);
+            MacSignResponse response = keyManagementServiceClient.MacSign(name, data);
             // End snippet
         }
 
-        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
-        public async Task DestroyCryptoKeyVersionAsync()
+        /// <summary>Snippet for MacSignAsync</summary>
+        public async Task MacSignAsync()
         {
-            // Snippet: DestroyCryptoKeyVersionAsync(string, CallSettings)
-            // Additional: DestroyCryptoKeyVersionAsync(string, CancellationToken)
+            // Snippet: MacSignAsync(string, ByteString, CallSettings)
+            // Additional: MacSignAsync(string, ByteString, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            ByteString data = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(name);
+            MacSignResponse response = await keyManagementServiceClient.MacSignAsync(name, data);
             // End snippet
         }
 
-        /// <summary>Snippet for DestroyCryptoKeyVersion</summary>
-        public void DestroyCryptoKeyVersionResourceNames()
+        /// <summary>Snippet for MacSign</summary>
+        public void MacSignResourceNames()
         {
-            // Snippet: DestroyCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Snippet: MacSign(CryptoKeyVersionName, ByteString, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
             CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString data = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.DestroyCryptoKeyVersion(name);
+            MacSignResponse response = keyManagementServiceClient.MacSign(name, data);
             // End snippet
         }
 
-        /// <summary>Snippet for DestroyCryptoKeyVersionAsync</summary>
-        public async Task DestroyCryptoKeyVersionResourceNamesAsync()
+        /// <summary>Snippet for MacSignAsync</summary>
+        public async Task MacSignResourceNamesAsync()
         {
-            // Snippet: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
-            // Additional: DestroyCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Snippet: MacSignAsync(CryptoKeyVersionName, ByteString, CallSettings)
+            // Additional: MacSignAsync(CryptoKeyVersionName, ByteString, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
             CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString data = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.DestroyCryptoKeyVersionAsync(name);
+            MacSignResponse response = await keyManagementServiceClient.MacSignAsync(name, data);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
-        public void RestoreCryptoKeyVersionRequestObject()
+        /// <summary>Snippet for MacVerify</summary>
+        public void MacVerifyRequestObject()
         {
-            // Snippet: RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest, CallSettings)
+            // Snippet: MacVerify(MacVerifyRequest, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
+            MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
+                Mac = ByteString.Empty,
+                MacCrc32C = 0L,
             };
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(request);
+            MacVerifyResponse response = keyManagementServiceClient.MacVerify(request);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
-        public async Task RestoreCryptoKeyVersionRequestObjectAsync()
+        /// <summary>Snippet for MacVerifyAsync</summary>
+        public async Task MacVerifyRequestObjectAsync()
         {
-            // Snippet: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CallSettings)
-            // Additional: RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest, CancellationToken)
+            // Snippet: MacVerifyAsync(MacVerifyRequest, CallSettings)
+            // Additional: MacVerifyAsync(MacVerifyRequest, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
+            MacVerifyRequest request = new MacVerifyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
+                Mac = ByteString.Empty,
+                MacCrc32C = 0L,
             };
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(request);
+            MacVerifyResponse response = await keyManagementServiceClient.MacVerifyAsync(request);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
-        public void RestoreCryptoKeyVersion()
+        /// <summary>Snippet for MacVerify</summary>
+        public void MacVerify()
         {
-            // Snippet: RestoreCryptoKeyVersion(string, CallSettings)
+            // Snippet: MacVerify(string, ByteString, ByteString, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            ByteString data = ByteString.Empty;
+            ByteString mac = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(name);
+            MacVerifyResponse response = keyManagementServiceClient.MacVerify(name, data, mac);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
-        public async Task RestoreCryptoKeyVersionAsync()
+        /// <summary>Snippet for MacVerifyAsync</summary>
+        public async Task MacVerifyAsync()
         {
-            // Snippet: RestoreCryptoKeyVersionAsync(string, CallSettings)
-            // Additional: RestoreCryptoKeyVersionAsync(string, CancellationToken)
+            // Snippet: MacVerifyAsync(string, ByteString, ByteString, CallSettings)
+            // Additional: MacVerifyAsync(string, ByteString, ByteString, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEY_RING]/cryptoKeys/[CRYPTO_KEY]/cryptoKeyVersions/[CRYPTO_KEY_VERSION]";
+            ByteString data = ByteString.Empty;
+            ByteString mac = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(name);
+            MacVerifyResponse response = await keyManagementServiceClient.MacVerifyAsync(name, data, mac);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersion</summary>
-        public void RestoreCryptoKeyVersionResourceNames()
+        /// <summary>Snippet for MacVerify</summary>
+        public void MacVerifyResourceNames()
         {
-            // Snippet: RestoreCryptoKeyVersion(CryptoKeyVersionName, CallSettings)
+            // Snippet: MacVerify(CryptoKeyVersionName, ByteString, ByteString, CallSettings)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
             CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString data = ByteString.Empty;
+            ByteString mac = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.RestoreCryptoKeyVersion(name);
+            MacVerifyResponse response = keyManagementServiceClient.MacVerify(name, data, mac);
             // End snippet
         }
 
-        /// <summary>Snippet for RestoreCryptoKeyVersionAsync</summary>
-        public async Task RestoreCryptoKeyVersionResourceNamesAsync()
+        /// <summary>Snippet for MacVerifyAsync</summary>
+        public async Task MacVerifyResourceNamesAsync()
         {
-            // Snippet: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CallSettings)
-            // Additional: RestoreCryptoKeyVersionAsync(CryptoKeyVersionName, CancellationToken)
+            // Snippet: MacVerifyAsync(CryptoKeyVersionName, ByteString, ByteString, CallSettings)
+            // Additional: MacVerifyAsync(CryptoKeyVersionName, ByteString, ByteString, CancellationToken)
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
             // Initialize request argument(s)
             CryptoKeyVersionName name = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString data = ByteString.Empty;
+            ByteString mac = ByteString.Empty;
             // Make the request
-            CryptoKeyVersion response = await keyManagementServiceClient.RestoreCryptoKeyVersionAsync(name);
+            MacVerifyResponse response = await keyManagementServiceClient.MacVerifyAsync(name, data, mac);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateRandomBytes</summary>
+        public void GenerateRandomBytesRequestObject()
+        {
+            // Snippet: GenerateRandomBytes(GenerateRandomBytesRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
+            {
+                Location = "",
+                LengthBytes = 0,
+                ProtectionLevel = ProtectionLevel.Unspecified,
+            };
+            // Make the request
+            GenerateRandomBytesResponse response = keyManagementServiceClient.GenerateRandomBytes(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateRandomBytesAsync</summary>
+        public async Task GenerateRandomBytesRequestObjectAsync()
+        {
+            // Snippet: GenerateRandomBytesAsync(GenerateRandomBytesRequest, CallSettings)
+            // Additional: GenerateRandomBytesAsync(GenerateRandomBytesRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateRandomBytesRequest request = new GenerateRandomBytesRequest
+            {
+                Location = "",
+                LengthBytes = 0,
+                ProtectionLevel = ProtectionLevel.Unspecified,
+            };
+            // Make the request
+            GenerateRandomBytesResponse response = await keyManagementServiceClient.GenerateRandomBytesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateRandomBytes</summary>
+        public void GenerateRandomBytes()
+        {
+            // Snippet: GenerateRandomBytes(string, int, ProtectionLevel, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string location = "";
+            int lengthBytes = 0;
+            ProtectionLevel protectionLevel = ProtectionLevel.Unspecified;
+            // Make the request
+            GenerateRandomBytesResponse response = keyManagementServiceClient.GenerateRandomBytes(location, lengthBytes, protectionLevel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateRandomBytesAsync</summary>
+        public async Task GenerateRandomBytesAsync()
+        {
+            // Snippet: GenerateRandomBytesAsync(string, int, ProtectionLevel, CallSettings)
+            // Additional: GenerateRandomBytesAsync(string, int, ProtectionLevel, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string location = "";
+            int lengthBytes = 0;
+            ProtectionLevel protectionLevel = ProtectionLevel.Unspecified;
+            // Make the request
+            GenerateRandomBytesResponse response = await keyManagementServiceClient.GenerateRandomBytesAsync(location, lengthBytes, protectionLevel);
             // End snippet
         }
     }

@@ -159,6 +159,12 @@ namespace Google.Cloud.Language.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public LanguageServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public LanguageServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = LanguageServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref LanguageServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<LanguageServiceClient> task);
@@ -235,7 +241,19 @@ namespace Google.Cloud.Language.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="LanguageServiceClient"/> using the default credentials, endpoint and

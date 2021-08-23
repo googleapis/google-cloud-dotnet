@@ -27,158 +27,6 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedNetworkEndpointGroupsClientTest
     {
         [xunit::FactAttribute]
-        public void AggregatedListRequestObject()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupAggregatedList expectedResponse = new NetworkEndpointGroupAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new NetworkEndpointGroupsScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupAggregatedList response = client.AggregatedList(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListRequestObjectAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
-            {
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupAggregatedList expectedResponse = new NetworkEndpointGroupAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new NetworkEndpointGroupsScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupAggregatedList responseCallSettings = await client.AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupAggregatedList responseCancellationToken = await client.AggregatedListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AggregatedList()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            NetworkEndpointGroupAggregatedList expectedResponse = new NetworkEndpointGroupAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new NetworkEndpointGroupsScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedList(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupAggregatedList response = client.AggregatedList(request.Project);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AggregatedListAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
-            {
-                Project = "projectaa6ff846",
-            };
-            NetworkEndpointGroupAggregatedList expectedResponse = new NetworkEndpointGroupAggregatedList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    {
-                        "key8a0b6e3c",
-                        new NetworkEndpointGroupsScopedList()
-                    },
-                },
-                Unreachables =
-                {
-                    "unreachables3ca950ee",
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.AggregatedListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupAggregatedList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupAggregatedList responseCallSettings = await client.AggregatedListAsync(request.Project, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupAggregatedList responseCancellationToken = await client.AggregatedListAsync(request.Project, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void AttachNetworkEndpointsRequestObject()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
@@ -192,7 +40,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -208,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -238,7 +86,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -254,7 +102,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -285,7 +133,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -301,7 +149,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -330,7 +178,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -346,7 +194,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -377,7 +225,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -393,7 +241,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -422,7 +270,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -438,7 +286,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -468,7 +316,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -484,7 +332,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -512,7 +360,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -528,7 +376,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -560,7 +408,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -576,7 +424,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -606,7 +454,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -622,7 +470,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -653,7 +501,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -669,7 +517,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -698,7 +546,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -714,7 +562,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -744,7 +592,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             NetworkEndpointGroup expectedResponse = new NetworkEndpointGroup
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Size = -1218396681,
@@ -787,7 +635,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             NetworkEndpointGroup expectedResponse = new NetworkEndpointGroup
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Size = -1218396681,
@@ -832,7 +680,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             NetworkEndpointGroup expectedResponse = new NetworkEndpointGroup
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Size = -1218396681,
@@ -875,7 +723,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             NetworkEndpointGroup expectedResponse = new NetworkEndpointGroup
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 Size = -1218396681,
@@ -921,7 +769,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -937,7 +785,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -966,7 +814,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -982,7 +830,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1012,7 +860,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1028,7 +876,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1056,7 +904,7 @@ namespace Google.Cloud.Compute.V1.Tests
             };
             Operation expectedResponse = new Operation
             {
-                Id = "id74b70bb8",
+                Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 User = "userb1cb11ee",
@@ -1072,7 +920,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 OperationType = "operation_typeece9e153",
                 Status = Operation.Types.Status.Pending,
                 HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = "target_id16dfe255",
+                TargetId = 6263187990225347157UL,
                 ClientOperationId = "client_operation_id4e51b631",
                 StatusMessage = "status_message2c618f86",
                 HttpErrorStatusCode = 1766362655,
@@ -1086,262 +934,6 @@ namespace Google.Cloud.Compute.V1.Tests
             Operation responseCallSettings = await client.InsertAsync(request.Project, request.Zone, request.NetworkEndpointGroupResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Zone, request.NetworkEndpointGroupResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListRequestObject()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupList expectedResponse = new NetworkEndpointGroupList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointGroup(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupList response = client.List(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListRequestObjectAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupList expectedResponse = new NetworkEndpointGroupList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointGroup(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupList responseCallSettings = await client.ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupList responseCancellationToken = await client.ListAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void List()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            NetworkEndpointGroupList expectedResponse = new NetworkEndpointGroupList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointGroup(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.List(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupList response = client.List(request.Project, request.Zone);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-            };
-            NetworkEndpointGroupList expectedResponse = new NetworkEndpointGroupList
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointGroup(),
-                },
-                SelfLink = "self_link7e87f12d",
-            };
-            mockGrpcClient.Setup(x => x.ListAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupList>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupList responseCallSettings = await client.ListAsync(request.Project, request.Zone, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupList responseCancellationToken = await client.ListAsync(request.Project, request.Zone, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListNetworkEndpointsRequestObject()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupsListNetworkEndpoints expectedResponse = new NetworkEndpointGroupsListNetworkEndpoints
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointWithHealthStatus(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListNetworkEndpoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupsListNetworkEndpoints response = client.ListNetworkEndpoints(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListNetworkEndpointsRequestObjectAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                PageToken = "page_tokenf09e5538",
-                MaxResults = 2806814450U,
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                OrderBy = "order_byb4d33ada",
-                Project = "projectaa6ff846",
-                Filter = "filtere47ac9b2",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-                ReturnPartialSuccess = false,
-            };
-            NetworkEndpointGroupsListNetworkEndpoints expectedResponse = new NetworkEndpointGroupsListNetworkEndpoints
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointWithHealthStatus(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListNetworkEndpointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupsListNetworkEndpoints>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupsListNetworkEndpoints responseCallSettings = await client.ListNetworkEndpointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupsListNetworkEndpoints responseCancellationToken = await client.ListNetworkEndpointsAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListNetworkEndpoints()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            NetworkEndpointGroupsListNetworkEndpoints expectedResponse = new NetworkEndpointGroupsListNetworkEndpoints
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointWithHealthStatus(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListNetworkEndpoints(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupsListNetworkEndpoints response = client.ListNetworkEndpoints(request.Project, request.Zone, request.NetworkEndpointGroup, request.NetworkEndpointGroupsListEndpointsRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListNetworkEndpointsAsync()
-        {
-            moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
-            {
-                Zone = "zone255f4ea8",
-                NetworkEndpointGroupsListEndpointsRequestResource = new NetworkEndpointGroupsListEndpointsRequest(),
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            NetworkEndpointGroupsListNetworkEndpoints expectedResponse = new NetworkEndpointGroupsListNetworkEndpoints
-            {
-                Id = "id74b70bb8",
-                Kind = "kindf7aa39d9",
-                Warning = new Warning(),
-                NextPageToken = "next_page_tokendbee0940",
-                Items =
-                {
-                    new NetworkEndpointWithHealthStatus(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.ListNetworkEndpointsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NetworkEndpointGroupsListNetworkEndpoints>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NetworkEndpointGroupsClient client = new NetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            NetworkEndpointGroupsListNetworkEndpoints responseCallSettings = await client.ListNetworkEndpointsAsync(request.Project, request.Zone, request.NetworkEndpointGroup, request.NetworkEndpointGroupsListEndpointsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            NetworkEndpointGroupsListNetworkEndpoints responseCancellationToken = await client.ListNetworkEndpointsAsync(request.Project, request.Zone, request.NetworkEndpointGroup, request.NetworkEndpointGroupsListEndpointsRequestResource, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

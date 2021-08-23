@@ -16,6 +16,7 @@
 
 using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -43,7 +44,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -78,8 +79,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -102,7 +109,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -137,8 +144,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -162,7 +175,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -197,8 +210,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -220,7 +239,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -255,8 +274,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -281,7 +306,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -316,8 +341,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -340,7 +371,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -375,8 +406,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -400,7 +437,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -435,8 +472,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -458,7 +501,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             Build expectedResponse = new Build
             {
                 Id = "id74b70bb8",
-                Status = Build.Types.Status.InternalError,
+                Status = Build.Types.Status.Success,
                 Source = new Source(),
                 CreateTime = new wkt::Timestamp(),
                 StartTime = new wkt::Timestamp(),
@@ -493,8 +536,14 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 Artifacts = new Artifacts(),
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                Approval = new BuildApproval(),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
                 AvailableSecrets = new Secrets(),
+                Warnings =
+                {
+                    new Build.Types.Warning(),
+                },
+                FailureInfo = new Build.Types.FailureInfo(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -514,6 +563,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
@@ -540,10 +590,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -561,6 +614,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 Trigger = new BuildTrigger(),
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
@@ -587,10 +641,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -636,10 +693,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -683,10 +743,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -706,6 +769,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
@@ -732,10 +796,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -753,6 +820,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
@@ -779,10 +847,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -828,10 +899,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -875,10 +949,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -898,6 +975,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -915,6 +993,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -995,10 +1074,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1043,10 +1125,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1093,10 +1178,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1141,10 +1229,13 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     "included_files53b7943b",
                 },
+                Autodetect = false,
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
+                WebhookConfig = new WebhookConfig(),
+                ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1166,6 +1257,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ProjectId = "project_id43ad98b0",
                 Trigger = "trigger098ed0c7",
                 Secret = "secret9422be5e",
+                Name = "name1c9368b0",
             };
             ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
             mockGrpcClient.Setup(x => x.ReceiveTriggerWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1186,6 +1278,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 ProjectId = "project_id43ad98b0",
                 Trigger = "trigger098ed0c7",
                 Secret = "secret9422be5e",
+                Name = "name1c9368b0",
             };
             ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
             mockGrpcClient.Setup(x => x.ReceiveTriggerWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReceiveTriggerWebhookResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1198,97 +1291,32 @@ namespace Google.Cloud.CloudBuild.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateWorkerPoolRequestObject()
-        {
-            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
-            {
-                Parent = "parent7858e4d0",
-                WorkerPool = new WorkerPool(),
-            };
-            WorkerPool expectedResponse = new WorkerPool
-            {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
-                {
-                    WorkerPool.Types.Region.UsEast1,
-                },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
-            };
-            mockGrpcClient.Setup(x => x.CreateWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            WorkerPool response = client.CreateWorkerPool(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateWorkerPoolRequestObjectAsync()
-        {
-            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
-            {
-                Parent = "parent7858e4d0",
-                WorkerPool = new WorkerPool(),
-            };
-            WorkerPool expectedResponse = new WorkerPool
-            {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
-                {
-                    WorkerPool.Types.Region.UsEast1,
-                },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
-            };
-            mockGrpcClient.Setup(x => x.CreateWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            WorkerPool responseCallSettings = await client.CreateWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            WorkerPool responseCancellationToken = await client.CreateWorkerPoolAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetWorkerPoolRequestObject()
         {
             moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Name = "name1c9368b0",
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
             WorkerPool expectedResponse = new WorkerPool
             {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
                 {
-                    WorkerPool.Types.Region.UsEast1,
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
                 },
                 CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
                 UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1304,23 +1332,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Name = "name1c9368b0",
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
             WorkerPool expectedResponse = new WorkerPool
             {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
                 {
-                    WorkerPool.Types.Region.UsEast1,
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
                 },
                 CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
                 UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
             mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1332,144 +1363,145 @@ namespace Google.Cloud.CloudBuild.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void DeleteWorkerPoolRequestObject()
+        public void GetWorkerPool()
         {
             moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Name = "name1c9368b0",
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            client.DeleteWorkerPool(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteWorkerPoolRequestObjectAsync()
-        {
-            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            DeleteWorkerPoolRequest request = new DeleteWorkerPoolRequest
-            {
-                Name = "name1c9368b0",
-            };
-            wkt::Empty expectedResponse = new wkt::Empty { };
-            mockGrpcClient.Setup(x => x.DeleteWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            await client.DeleteWorkerPoolAsync(request, st::CancellationToken.None);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void UpdateWorkerPoolRequestObject()
-        {
-            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
-            {
-                Name = "name1c9368b0",
-                WorkerPool = new WorkerPool(),
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
             WorkerPool expectedResponse = new WorkerPool
             {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
                 {
-                    WorkerPool.Types.Region.UsEast1,
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
                 },
                 CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
                 UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            WorkerPool response = client.UpdateWorkerPool(request);
+            WorkerPool response = client.GetWorkerPool(request.Name);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [xunit::FactAttribute]
-        public async stt::Task UpdateWorkerPoolRequestObjectAsync()
+        public async stt::Task GetWorkerPoolAsync()
         {
             moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Name = "name1c9368b0",
-                WorkerPool = new WorkerPool(),
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
             WorkerPool expectedResponse = new WorkerPool
             {
-                ProjectId = "project_id43ad98b0",
-                ServiceAccountEmail = "service_account_emailb0c3703d",
-                WorkerCount = -1903495562118123823L,
-                Regions =
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
                 {
-                    WorkerPool.Types.Region.UsEast1,
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
                 },
                 CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Status = WorkerPool.Types.Status.Deleted,
-                Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
                 UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
-            mockGrpcClient.Setup(x => x.UpdateWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            WorkerPool responseCallSettings = await client.UpdateWorkerPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            WorkerPool responseCallSettings = await client.GetWorkerPoolAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            WorkerPool responseCancellationToken = await client.UpdateWorkerPoolAsync(request, st::CancellationToken.None);
+            WorkerPool responseCancellationToken = await client.GetWorkerPoolAsync(request.Name, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
         [xunit::FactAttribute]
-        public void ListWorkerPoolsRequestObject()
+        public void GetWorkerPoolResourceNames()
         {
             moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Parent = "parent7858e4d0",
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
-            ListWorkerPoolsResponse expectedResponse = new ListWorkerPoolsResponse
+            WorkerPool expectedResponse = new WorkerPool
             {
-                WorkerPools = { new WorkerPool(), },
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
-            mockGrpcClient.Setup(x => x.ListWorkerPools(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            ListWorkerPoolsResponse response = client.ListWorkerPools(request);
+            WorkerPool response = client.GetWorkerPool(request.WorkerPoolName);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 
         [xunit::FactAttribute]
-        public async stt::Task ListWorkerPoolsRequestObjectAsync()
+        public async stt::Task GetWorkerPoolResourceNamesAsync()
         {
             moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Parent = "parent7858e4d0",
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
-            ListWorkerPoolsResponse expectedResponse = new ListWorkerPoolsResponse
+            WorkerPool expectedResponse = new WorkerPool
             {
-                WorkerPools = { new WorkerPool(), },
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                DisplayName = "display_name137f65c2",
+                Uid = "uida2d37198",
+                Annotations =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+                State = WorkerPool.Types.State.Deleting,
+                Etag = "etage8ad7218",
+                PrivatePoolV1Config = new PrivatePoolV1Config(),
             };
-            mockGrpcClient.Setup(x => x.ListWorkerPoolsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListWorkerPoolsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
-            ListWorkerPoolsResponse responseCallSettings = await client.ListWorkerPoolsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            WorkerPool responseCallSettings = await client.GetWorkerPoolAsync(request.WorkerPoolName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ListWorkerPoolsResponse responseCancellationToken = await client.ListWorkerPoolsAsync(request, st::CancellationToken.None);
+            WorkerPool responseCancellationToken = await client.GetWorkerPoolAsync(request.WorkerPoolName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

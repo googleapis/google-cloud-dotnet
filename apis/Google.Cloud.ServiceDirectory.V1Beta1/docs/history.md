@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0-beta05, released 2021-07-27
+
+- [Commit 14795e6](https://github.com/googleapis/google-cloud-dotnet/commit/14795e6): feat: Update Service Directory v1beta1 protos to include VPC Network field, and create/modify timestamp fields.
+
 # Version 1.0.0-beta04, released 2021-05-26
 
 No API surface changes; just dependency updates.

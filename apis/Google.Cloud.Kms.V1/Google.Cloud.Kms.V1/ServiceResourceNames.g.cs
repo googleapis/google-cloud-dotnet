@@ -188,6 +188,42 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class UpdateCryptoKeyPrimaryVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyName CryptoKeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DestroyCryptoKeyVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestoreCryptoKeyVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class EncryptRequest
     {
         /// <summary>
@@ -236,19 +272,7 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
-    public partial class UpdateCryptoKeyPrimaryVersionRequest
-    {
-        /// <summary>
-        /// <see cref="gckv::CryptoKeyName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gckv::CryptoKeyName CryptoKeyName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DestroyCryptoKeyVersionRequest
+    public partial class MacSignRequest
     {
         /// <summary>
         /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
@@ -260,7 +284,7 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
-    public partial class RestoreCryptoKeyVersionRequest
+    public partial class MacVerifyRequest
     {
         /// <summary>
         /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.

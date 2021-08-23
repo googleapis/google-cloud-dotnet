@@ -1,14 +1,8 @@
 # Sed commands to use Google.Gax.Grpc.Gcp in
 # BigtableServiceApiClient.g.cs
 
-# Add a using directive
-s/using gaxgrpc = .*/&\nusing gaxgrpcgcp = Google.Api.Gax.Grpc.Gcp;/
-
 # Replace uses of the gRPC generated client, which is still BigtableClient
 s/BigtableServiceApi.BigtableServiceApiClient/Bigtable.BigtableClient/g
-
-# Replace the channel pool declaration with a call invoker pool declaration
-s/gaxgrpc::ChannelPool ChannelPool.*/gaxgrpcgcp::GcpCallInvokerPool CallInvokerPool { get; } = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);/
 
 # Replace channel acquisition with callInvoker acquision
 s/grpccore::Channel channel = ChannelPool\.GetChannel\(endpoint \?\? DefaultEndpoint\)/grpccore::CallInvoker callInvoker = CallInvokerPool.GetCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions())/

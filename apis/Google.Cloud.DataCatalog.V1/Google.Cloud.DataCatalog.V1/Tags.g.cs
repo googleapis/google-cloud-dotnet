@@ -36,48 +36,49 @@ namespace Google.Cloud.DataCatalog.V1 {
             "RmllbGQ6AjgBOoEB6kF+Ch5kYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9U",
             "YWcSXHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9l",
             "bnRyeUdyb3Vwcy97ZW50cnlfZ3JvdXB9L2VudHJpZXMve2VudHJ5fS90YWdz",
-            "L3t0YWd9QgcKBXNjb3BlIqgCCghUYWdGaWVsZBIZCgxkaXNwbGF5X25hbWUY",
+            "L3t0YWd9QgcKBXNjb3BlIsICCghUYWdGaWVsZBIZCgxkaXNwbGF5X25hbWUY",
             "ASABKAlCA+BBAxIWCgxkb3VibGVfdmFsdWUYAiABKAFIABIWCgxzdHJpbmdf",
             "dmFsdWUYAyABKAlIABIUCgpib29sX3ZhbHVlGAQgASgISAASNQoPdGltZXN0",
             "YW1wX3ZhbHVlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgA",
             "EkUKCmVudW1fdmFsdWUYBiABKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuVGFnRmllbGQuRW51bVZhbHVlSAASEgoFb3JkZXIYByABKAVCA+BB",
-            "AxohCglFbnVtVmFsdWUSFAoMZGlzcGxheV9uYW1lGAEgASgJQgYKBGtpbmQi",
-            "zAIKC1RhZ1RlbXBsYXRlEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1l",
-            "GAIgASgJEkkKBmZpZWxkcxgDIAMoCzI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy52MS5UYWdUZW1wbGF0ZS5GaWVsZHNFbnRyeUID4EECGlwKC0ZpZWxk",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRI8CgV2YWx1ZRgCIAEoCzItLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0ZUZpZWxkOgI4ATpw6kFt",
-            "CiZkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZRJDcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RhZ1RlbXBs",
-            "YXRlcy97dGFnX3RlbXBsYXRlfSK3AgoQVGFnVGVtcGxhdGVGaWVsZBIRCgRu",
-            "YW1lGAYgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAEgASgJEjkKBHR5cGUY",
-            "AiABKAsyJi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBl",
-            "QgPgQQISEwoLaXNfcmVxdWlyZWQYAyABKAgSEwoLZGVzY3JpcHRpb24YBCAB",
-            "KAkSDQoFb3JkZXIYBSABKAU6hQHqQYEBCitkYXRhY2F0YWxvZy5nb29nbGVh",
-            "cGlzLmNvbS9UYWdUZW1wbGF0ZUZpZWxkElJwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxh",
-            "dGV9L2ZpZWxkcy97ZmllbGR9IpgDCglGaWVsZFR5cGUSTgoOcHJpbWl0aXZl",
-            "X3R5cGUYASABKA4yNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmll",
-            "bGRUeXBlLlByaW1pdGl2ZVR5cGVIABJECgllbnVtX3R5cGUYAiABKAsyLy5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBlLkVudW1UeXBl",
-            "SAAahQEKCEVudW1UeXBlElEKDmFsbG93ZWRfdmFsdWVzGAEgAygLMjkuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkZpZWxkVHlwZS5FbnVtVHlwZS5F",
-            "bnVtVmFsdWUaJgoJRW51bVZhbHVlEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID",
-            "4EECImAKDVByaW1pdGl2ZVR5cGUSHgoaUFJJTUlUSVZFX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIKCgZET1VCTEUQARIKCgZTVFJJTkcQAhIICgRCT09MEAMSDQoJ",
-            "VElNRVNUQU1QEARCCwoJdHlwZV9kZWNsQssBCh9jb20uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNhdGFsb2f4",
-            "AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xv",
-            "dWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxv",
-            "Zzo6VjFiBnByb3RvMw=="));
+            "b2cudjEuVGFnRmllbGQuRW51bVZhbHVlSAASGAoOcmljaHRleHRfdmFsdWUY",
+            "CCABKAlIABISCgVvcmRlchgHIAEoBUID4EEDGiEKCUVudW1WYWx1ZRIUCgxk",
+            "aXNwbGF5X25hbWUYASABKAlCBgoEa2luZCLqAgoLVGFnVGVtcGxhdGUSDAoE",
+            "bmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSHAoUaXNfcHVibGlj",
+            "bHlfcmVhZGFibGUYBSABKAgSSQoGZmllbGRzGAMgAygLMjQuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlLkZpZWxkc0VudHJ5QgPg",
+            "QQIaXAoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEjwKBXZhbHVlGAIgASgL",
+            "Mi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ1RlbXBsYXRlRmll",
+            "bGQ6AjgBOnDqQW0KJmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1RhZ1Rl",
+            "bXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9IrcCChBUYWdUZW1wbGF0",
+            "ZUZpZWxkEhEKBG5hbWUYBiABKAlCA+BBAxIUCgxkaXNwbGF5X25hbWUYASAB",
+            "KAkSOQoEdHlwZRgCIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52",
+            "MS5GaWVsZFR5cGVCA+BBAhITCgtpc19yZXF1aXJlZBgDIAEoCBITCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCRINCgVvcmRlchgFIAEoBTqFAepBgQEKK2RhdGFjYXRh",
+            "bG9nLmdvb2dsZWFwaXMuY29tL1RhZ1RlbXBsYXRlRmllbGQSUnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90YWdUZW1wbGF0ZXMv",
+            "e3RhZ190ZW1wbGF0ZX0vZmllbGRzL3tmaWVsZH0ipgMKCUZpZWxkVHlwZRJO",
+            "Cg5wcmltaXRpdmVfdHlwZRgBIAEoDjI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0",
+            "YWxvZy52MS5GaWVsZFR5cGUuUHJpbWl0aXZlVHlwZUgAEkQKCWVudW1fdHlw",
+            "ZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5GaWVsZFR5",
+            "cGUuRW51bVR5cGVIABqFAQoIRW51bVR5cGUSUQoOYWxsb3dlZF92YWx1ZXMY",
+            "ASADKAsyOS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBl",
+            "LkVudW1UeXBlLkVudW1WYWx1ZRomCglFbnVtVmFsdWUSGQoMZGlzcGxheV9u",
+            "YW1lGAEgASgJQgPgQQIibgoNUHJpbWl0aXZlVHlwZRIeChpQUklNSVRJVkVf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgoKBkRPVUJMRRABEgoKBlNUUklORxACEggK",
+            "BEJPT0wQAxINCglUSU1FU1RBTVAQBBIMCghSSUNIVEVYVBAFQgsKCXR5cGVf",
+            "ZGVjbELLAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkZn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rh",
+            "dGFjYXRhbG9nL3YxO2RhdGFjYXRhbG9n+AEBqgIbR29vZ2xlLkNsb3VkLkRh",
+            "dGFDYXRhbG9nLlYxygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIe",
+            "R29vZ2xlOjpDbG91ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField), global::Google.Cloud.DataCatalog.V1.TagField.Parser, new[]{ "DisplayName", "DoubleValue", "StringValue", "BoolValue", "TimestampValue", "EnumValue", "Order" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField), global::Google.Cloud.DataCatalog.V1.TagField.Parser, new[]{ "DisplayName", "DoubleValue", "StringValue", "BoolValue", "TimestampValue", "EnumValue", "RichtextValue", "Order" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "IsPubliclyReadable", "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplateField), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser, new[]{ "Name", "DisplayName", "Type", "IsRequired", "Description", "Order" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType), global::Google.Cloud.DataCatalog.V1.FieldType.Parser, new[]{ "PrimitiveType", "EnumType" }, new[]{ "TypeDecl" }, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Parser, new[]{ "AllowedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)})})
           }));
@@ -87,8 +88,8 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Messages
   /// <summary>
-  /// Tags are used to attach custom metadata to Data Catalog resources. Tags
-  /// conform to the specifications within their tag template.
+  /// Tags contain custom metadata and are attached to Data Catalog resources. Tags
+  /// conform with the specification of their tag template.
   ///
   /// See [Data Catalog
   /// IAM](https://cloud.google.com/data-catalog/docs/concepts/iam) for information
@@ -145,11 +146,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the tag in URL format. Example:
-    ///
-    /// `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}`
-    ///
-    /// where `tag_id` is a system-generated identifier.
+    /// The resource name of the tag in URL format where tag ID is a
+    /// system-generated identifier.
     ///
     /// Note: The tag itself might not be stored in the location specified in its
     /// name.
@@ -166,9 +164,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int TemplateFieldNumber = 2;
     private string template_ = "";
     /// <summary>
-    /// Required. The resource name of the tag template that this tag uses. Example:
+    /// Required. The resource name of the tag template this tag uses. Example:
     ///
-    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}`
+    /// `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE_ID}`
     ///
     /// This field cannot be modified after creation.
     /// </summary>
@@ -198,7 +196,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ColumnFieldNumber = 4;
     /// <summary>
     /// Resources like entry can have schemas associated with them. This scope
-    /// allows users to attach tags to an individual column based on that schema.
+    /// allows you to attach tags to an individual column based on that schema.
     ///
     /// To attach a tag to a nested column, separate column names with a dot
     /// (`.`). Example: `column.nested_column`.
@@ -218,8 +216,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.DataCatalog.V1.TagField.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField> fields_ = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField>();
     /// <summary>
-    /// Required. This maps the ID of a tag field to the value of and additional information
-    /// about that field. Valid field IDs are defined by the tag's template. A tag
+    /// Required. Maps the ID of a tag field to its value and additional information
+    /// about that field.
+    ///
+    /// Tag template defines valid field IDs. A tag
     /// must have at least 1 field and at most 500 fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -460,7 +460,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Contains the value and supporting information for a field within
+  /// Contains the value and additional information on a field within
   /// a [Tag][google.cloud.datacatalog.v1.Tag].
   /// </summary>
   public sealed partial class TagField : pb::IMessage<TagField>
@@ -510,6 +510,9 @@ namespace Google.Cloud.DataCatalog.V1 {
         case KindOneofCase.EnumValue:
           EnumValue = other.EnumValue.Clone();
           break;
+        case KindOneofCase.RichtextValue:
+          RichtextValue = other.RichtextValue;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -537,7 +540,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "double_value" field.</summary>
     public const int DoubleValueFieldNumber = 2;
     /// <summary>
-    /// Holds the value for a tag field with double type.
+    /// The value of a tag field with a double type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double DoubleValue {
@@ -551,7 +554,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "string_value" field.</summary>
     public const int StringValueFieldNumber = 3;
     /// <summary>
-    /// Holds the value for a tag field with string type.
+    /// The value of a tag field with a string type.
+    ///
     /// The maximum length is 2000 UTF-8 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -566,7 +570,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "bool_value" field.</summary>
     public const int BoolValueFieldNumber = 4;
     /// <summary>
-    /// Holds the value for a tag field with boolean type.
+    /// The value of a tag field with a boolean type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool BoolValue {
@@ -580,7 +584,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "timestamp_value" field.</summary>
     public const int TimestampValueFieldNumber = 5;
     /// <summary>
-    /// Holds the value for a tag field with timestamp type.
+    /// The value of a tag field with a timestamp type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimestampValue {
@@ -594,8 +598,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "enum_value" field.</summary>
     public const int EnumValueFieldNumber = 6;
     /// <summary>
-    /// Holds the value for a tag field with enum type. This value must be
-    /// one of the allowed values in the definition of this enum.
+    /// The value of a tag field with an enum type.
+    ///
+    /// This value must be one of the allowed values listed in this enum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue EnumValue {
@@ -606,15 +611,34 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "richtext_value" field.</summary>
+    public const int RichtextValueFieldNumber = 8;
+    /// <summary>
+    /// The value of a tag field with a rich text type.
+    ///
+    /// The maximum length is 10 MiB as this value holds HTML descriptions
+    /// including encoded images. The maximum length of the text without images
+    /// is 100 KiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RichtextValue {
+      get { return kindCase_ == KindOneofCase.RichtextValue ? (string) kind_ : ""; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        kindCase_ = KindOneofCase.RichtextValue;
+      }
+    }
+
     /// <summary>Field number for the "order" field.</summary>
     public const int OrderFieldNumber = 7;
     private int order_;
     /// <summary>
-    /// Output only. The order of this field with respect to other fields in this tag. It can be
-    /// set in [Tag][google.cloud.datacatalog.v1.TagTemplateField.order]. For
-    /// example, a higher value can indicate a more important field. The value can
-    /// be negative. Multiple fields can have the same order, and field orders
-    /// within a tag do not have to be sequential.
+    /// Output only. The order of this field with respect to other fields in this tag. Can be
+    /// set by [Tag][google.cloud.datacatalog.v1.TagTemplateField.order].
+    ///
+    /// For example, a higher value can indicate a more important field.
+    /// The value can be negative. Multiple fields can have the same order, and
+    /// field orders within a tag don't have to be sequential.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Order {
@@ -633,6 +657,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       BoolValue = 4,
       TimestampValue = 5,
       EnumValue = 6,
+      RichtextValue = 8,
     }
     private KindOneofCase kindCase_ = KindOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -665,6 +690,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (BoolValue != other.BoolValue) return false;
       if (!object.Equals(TimestampValue, other.TimestampValue)) return false;
       if (!object.Equals(EnumValue, other.EnumValue)) return false;
+      if (RichtextValue != other.RichtextValue) return false;
       if (Order != other.Order) return false;
       if (KindCase != other.KindCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -679,6 +705,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (kindCase_ == KindOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
       if (kindCase_ == KindOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (kindCase_ == KindOneofCase.EnumValue) hash ^= EnumValue.GetHashCode();
+      if (kindCase_ == KindOneofCase.RichtextValue) hash ^= RichtextValue.GetHashCode();
       if (Order != 0) hash ^= Order.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
@@ -725,6 +752,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
+      if (kindCase_ == KindOneofCase.RichtextValue) {
+        output.WriteRawTag(66);
+        output.WriteString(RichtextValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -762,6 +793,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
+      if (kindCase_ == KindOneofCase.RichtextValue) {
+        output.WriteRawTag(66);
+        output.WriteString(RichtextValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -788,6 +823,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (kindCase_ == KindOneofCase.EnumValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnumValue);
+      }
+      if (kindCase_ == KindOneofCase.RichtextValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RichtextValue);
       }
       if (Order != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Order);
@@ -830,6 +868,9 @@ namespace Google.Cloud.DataCatalog.V1 {
             EnumValue = new global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue();
           }
           EnumValue.MergeFrom(other.EnumValue);
+          break;
+        case KindOneofCase.RichtextValue:
+          RichtextValue = other.RichtextValue;
           break;
       }
 
@@ -885,6 +926,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             Order = input.ReadInt32();
             break;
           }
+          case 66: {
+            RichtextValue = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -937,6 +982,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             Order = input.ReadInt32();
             break;
           }
+          case 66: {
+            RichtextValue = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -947,7 +996,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Holds an enum value.
+      /// An enum value.
       /// </summary>
       public sealed partial class EnumValue : pb::IMessage<EnumValue>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1130,14 +1179,15 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// A tag template defines a tag, which can have one or more typed fields.
-  /// The template is used to create and attach the tag to GCP resources.
-  /// [Tag template
-  /// roles](https://cloud.google.com/iam/docs/understanding-roles#data-catalog-roles)
-  /// provide permissions to create, edit, and use the template. See, for example,
-  /// the [TagTemplate
-  /// User](https://cloud.google.com/data-catalog/docs/how-to/template-user) role,
-  /// which includes permission to use the tag template to tag resources.
+  /// A tag template defines a tag that can have one or more typed fields.
+  ///
+  /// The template is used to create tags that are attached to GCP resources.
+  /// [Tag template roles]
+  /// (https://cloud.google.com/iam/docs/understanding-roles#data-catalog-roles)
+  /// provide permissions to create, edit, and use the template. For example,
+  /// see the [TagTemplate User]
+  /// (https://cloud.google.com/data-catalog/docs/how-to/template-user) role
+  /// that includes a permission to use the tag template to tag resources.
   /// </summary>
   public sealed partial class TagTemplate : pb::IMessage<TagTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1170,6 +1220,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public TagTemplate(TagTemplate other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
+      isPubliclyReadable_ = other.isPubliclyReadable_;
       fields_ = other.fields_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1183,9 +1234,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the tag template in URL format. Example:
-    ///
-    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}`
+    /// The resource name of the tag template in URL format.
     ///
     /// Note: The tag template itself and its child resources might not be
     /// stored in the location specified in its name.
@@ -1216,6 +1265,46 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "is_publicly_readable" field.</summary>
+    public const int IsPubliclyReadableFieldNumber = 5;
+    private bool isPubliclyReadable_;
+    /// <summary>
+    /// Indicates whether this is a public tag template.
+    ///
+    /// Every user has view access to a *public* tag template by default.
+    /// This means that:
+    ///
+    ///   * Every user can use this tag template to tag an entry.
+    ///   * If an entry is tagged using the tag template, the tag is always
+    ///     shown in the response to ``ListTags`` called on the entry.
+    ///   * To get the template using the GetTagTemplate method, you
+    ///     need view access either on the project or the organization the tag
+    ///     template resides in but no other permission is needed.
+    ///   * Operations on the tag template other than viewing (for example,
+    ///     editing IAM policies) follow standard IAM structures.
+    ///
+    /// Tags created with a public tag template are referred to as public tags.
+    ///
+    /// You can search for a public tag by value with a
+    /// simple search query instead of using a ``tag:`` predicate.
+    ///
+    /// Public tag templates may not appear in search results depending on scope,
+    /// see:
+    /// [include_public_tag_templates][google.cloud.datacatalog.v1.SearchCatalogRequest.Scope.include_public_tag_templates]
+    ///
+    /// Note: If an [IAM domain
+    /// restriction](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains)
+    /// is configured in the tag template's location, the public access will not be
+    /// enabled but the simple search for tag values will still work.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsPubliclyReadable {
+      get { return isPubliclyReadable_; }
+      set {
+        isPubliclyReadable_ = value;
+      }
+    }
+
     /// <summary>Field number for the "fields" field.</summary>
     public const int FieldsFieldNumber = 3;
     private static readonly pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagTemplateField>.Codec _map_fields_codec
@@ -1223,13 +1312,16 @@ namespace Google.Cloud.DataCatalog.V1 {
     private readonly pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagTemplateField> fields_ = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagTemplateField>();
     /// <summary>
     /// Required. Map of tag template field IDs to the settings for the field.
-    /// This map is an exhaustive list of the allowed fields. This map must contain
+    /// This map is an exhaustive list of the allowed fields. The map must contain
     /// at least one field and at most 500 fields.
     ///
-    /// The keys to this map are tag template field IDs. Field IDs can contain
-    /// letters (both uppercase and lowercase), numbers (0-9) and underscores (_).
-    /// Field IDs must be at least 1 character long and at most
-    /// 64 characters long. Field IDs must start with a letter or underscore.
+    /// The keys to this map are tag template field IDs. The IDs have the
+    /// following limitations:
+    ///
+    /// * Can contain uppercase and lowercase letters, numbers (0-9) and
+    ///   underscores (_).
+    /// * Must be at least 1 character and at most 64 characters long.
+    /// * Must start with a letter or underscore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagTemplateField> Fields {
@@ -1251,6 +1343,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (IsPubliclyReadable != other.IsPubliclyReadable) return false;
       if (!Fields.Equals(other.Fields)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1260,6 +1353,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (IsPubliclyReadable != false) hash ^= IsPubliclyReadable.GetHashCode();
       hash ^= Fields.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1286,6 +1380,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(DisplayName);
       }
       fields_.WriteTo(output, _map_fields_codec);
+      if (IsPubliclyReadable != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsPubliclyReadable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1304,6 +1402,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(DisplayName);
       }
       fields_.WriteTo(ref output, _map_fields_codec);
+      if (IsPubliclyReadable != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsPubliclyReadable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1318,6 +1420,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (IsPubliclyReadable != false) {
+        size += 1 + 1;
       }
       size += fields_.CalculateSize(_map_fields_codec);
       if (_unknownFields != null) {
@@ -1336,6 +1441,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.IsPubliclyReadable != false) {
+        IsPubliclyReadable = other.IsPubliclyReadable;
       }
       fields_.Add(other.fields_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1364,6 +1472,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             fields_.AddEntriesFrom(input, _map_fields_codec);
             break;
           }
+          case 40: {
+            IsPubliclyReadable = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1388,6 +1500,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 26: {
             fields_.AddEntriesFrom(ref input, _map_fields_codec);
+            break;
+          }
+          case 40: {
+            IsPubliclyReadable = input.ReadBool();
             break;
           }
         }
@@ -1449,9 +1565,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Output only. The resource name of the tag template field in URL format. Example:
     ///
-    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}`
+    /// `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}`
     ///
-    /// Note: The `TagTemplateField` itself might not be stored in the location
+    /// Note: The tag template field itself might not be stored in the location
     /// specified in its name.
     ///
     /// The name must contain only letters (a-z, A-Z), numbers (0-9),
@@ -1502,7 +1618,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int IsRequiredFieldNumber = 3;
     private bool isRequired_;
     /// <summary>
-    /// Whether this is a required field. Defaults to false.
+    /// If true, this field is required. Defaults to false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsRequired {
@@ -1531,9 +1647,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     private int order_;
     /// <summary>
     /// The order of this field with respect to other fields in this tag
-    /// template. For example, a higher value can indicate a more important field.
-    /// The value can be negative. Multiple fields can have the same order, and
-    /// field orders within a tag do not have to be sequential.
+    /// template.
+    ///
+    /// For example, a higher value can indicate a more important field.
+    /// The value can be negative. Multiple fields can have the same order and
+    /// field orders within a tag don't have to be sequential.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Order {
@@ -1844,7 +1962,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "primitive_type" field.</summary>
     public const int PrimitiveTypeFieldNumber = 1;
     /// <summary>
-    /// Represents primitive types - string, bool etc.
+    /// Primitive types, such as string, boolean, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType PrimitiveType {
@@ -1858,7 +1976,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "enum_type" field.</summary>
     public const int EnumTypeFieldNumber = 2;
     /// <summary>
-    /// Represents an enum type.
+    /// An enum type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType EnumType {
@@ -2059,7 +2177,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public static partial class Types {
       public enum PrimitiveType {
         /// <summary>
-        /// This is the default invalid value for a type.
+        /// The default invalid value for a type.
         /// </summary>
         [pbr::OriginalName("PRIMITIVE_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -2078,6 +2196,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         /// A timestamp.
         /// </summary>
         [pbr::OriginalName("TIMESTAMP")] Timestamp = 4,
+        /// <summary>
+        /// A Richtext description.
+        /// </summary>
+        [pbr::OriginalName("RICHTEXT")] Richtext = 5,
       }
 
       public sealed partial class EnumType : pb::IMessage<EnumType>
@@ -2131,7 +2253,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         /// be case-insensitively unique within this set.
         ///
         /// The order of items in this set is preserved. This field can be used to
-        /// create, remove and reorder enum values. To rename enum values, use the
+        /// create, remove, and reorder enum values. To rename enum values, use the
         /// `RenameTagTemplateFieldEnumValue` method.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

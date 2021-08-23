@@ -27,6 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 #error unknown target framework
 #endif
 {
+#pragma warning disable CS0618 // Type or member is obsolete
     public class GoogleTraceProviderTests
     {
         [Fact]
@@ -40,6 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             string expectedSpanId = "000000000012d687";
 
             IServiceProvider serviceProvider = MockServiceProvider(traceId, spanId, true);
+
 
             GoogleTraceProvider traceProvider = new GoogleTraceProvider();
             TraceContextForLogEntry traceContext = traceProvider.GetCurrentTraceContext(serviceProvider);
@@ -83,4 +85,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             return serviceProviderMock.Object;
         }
     }
+#pragma warning restore CS0618 // Type or member is obsolete
 }

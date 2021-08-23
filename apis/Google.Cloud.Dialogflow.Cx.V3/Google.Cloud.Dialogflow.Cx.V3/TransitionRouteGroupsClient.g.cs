@@ -151,6 +151,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public TransitionRouteGroupsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public TransitionRouteGroupsClientBuilder()
+        {
+            UseJwtAccessWithScopes = TransitionRouteGroupsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref TransitionRouteGroupsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TransitionRouteGroupsClient> task);
@@ -226,7 +232,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             "https://www.googleapis.com/auth/dialogflow",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="TransitionRouteGroupsClient"/> using the default credentials, endpoint

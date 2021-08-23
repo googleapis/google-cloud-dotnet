@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.6.0, released 2021-08-10
+
+- [Commit 9bd536a](https://github.com/googleapis/google-cloud-dotnet/commit/9bd536a): feat: In Secret Manager, users can now use filter to customize the output of ListSecrets/ListSecretVersions calls
+- [Commit edf114d](https://github.com/googleapis/google-cloud-dotnet/commit/edf114d):
+  - feat: Tune Secret Manager auto retry parameters
+  - UNKNOWN removed from retryable errors per AIP-194. Added RESOURCE_EXHAUSTED with adjusted parameters for better performance with spikes of AccessSecretVersion requests at or near quota limits.
+
 # Version 1.5.0, released 2021-06-22
 
 - [Commit fbd2e65](https://github.com/googleapis/google-cloud-dotnet/commit/fbd2e65): - feat: Etags - users can now use etags for optimistic concurrency control when modifying Secret or SecretVersion.

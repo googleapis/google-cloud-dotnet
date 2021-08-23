@@ -51,6 +51,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -79,6 +81,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -109,6 +113,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -137,6 +143,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -167,6 +175,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -195,6 +205,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -223,6 +235,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -249,6 +263,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -277,6 +293,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -303,6 +321,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -331,6 +351,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -357,6 +379,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -386,6 +410,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -413,6 +439,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -442,6 +470,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -469,6 +499,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateNamespaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Namespace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -593,6 +625,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -622,6 +656,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -653,6 +689,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -682,6 +720,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -713,6 +753,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -742,6 +784,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -771,6 +815,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -798,6 +844,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -827,6 +875,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -854,6 +904,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -883,6 +935,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -910,6 +964,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -940,6 +996,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -968,6 +1026,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -998,6 +1058,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1026,6 +1088,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                     },
                 },
                 Endpoints = { new Endpoint(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1151,6 +1215,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1181,6 +1248,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1213,6 +1283,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1243,6 +1316,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1275,6 +1351,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1305,6 +1384,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1335,6 +1417,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1363,6 +1448,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1393,6 +1481,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1421,6 +1512,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1451,6 +1545,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1479,6 +1576,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1510,6 +1610,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1539,6 +1642,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1570,6 +1676,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1599,6 +1708,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);

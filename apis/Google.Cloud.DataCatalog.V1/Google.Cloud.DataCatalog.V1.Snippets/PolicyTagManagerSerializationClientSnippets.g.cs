@@ -22,6 +22,41 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedPolicyTagManagerSerializationClientSnippets
     {
+        /// <summary>Snippet for ReplaceTaxonomy</summary>
+        public void ReplaceTaxonomyRequestObject()
+        {
+            // Snippet: ReplaceTaxonomy(ReplaceTaxonomyRequest, CallSettings)
+            // Create client
+            PolicyTagManagerSerializationClient policyTagManagerSerializationClient = PolicyTagManagerSerializationClient.Create();
+            // Initialize request argument(s)
+            ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                SerializedTaxonomy = new SerializedTaxonomy(),
+            };
+            // Make the request
+            Taxonomy response = policyTagManagerSerializationClient.ReplaceTaxonomy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReplaceTaxonomyAsync</summary>
+        public async Task ReplaceTaxonomyRequestObjectAsync()
+        {
+            // Snippet: ReplaceTaxonomyAsync(ReplaceTaxonomyRequest, CallSettings)
+            // Additional: ReplaceTaxonomyAsync(ReplaceTaxonomyRequest, CancellationToken)
+            // Create client
+            PolicyTagManagerSerializationClient policyTagManagerSerializationClient = await PolicyTagManagerSerializationClient.CreateAsync();
+            // Initialize request argument(s)
+            ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                SerializedTaxonomy = new SerializedTaxonomy(),
+            };
+            // Make the request
+            Taxonomy response = await policyTagManagerSerializationClient.ReplaceTaxonomyAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ImportTaxonomies</summary>
         public void ImportTaxonomiesRequestObject()
         {

@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Gaming.V1Beta",
   "release_level": "beta",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Gaming.V1Beta/latest",
   "library_type": "GAPIC_AUTO"
 }

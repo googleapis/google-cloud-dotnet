@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -43,6 +44,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 {
                     new SpeechRecognitionResult(),
                 },
+                TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
@@ -67,6 +69,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 {
                     new SpeechRecognitionResult(),
                 },
+                TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
@@ -93,6 +96,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 {
                     new SpeechRecognitionResult(),
                 },
+                TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.Recognize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);
@@ -117,6 +121,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 {
                     new SpeechRecognitionResult(),
                 },
+                TotalBilledTime = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.RecognizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RecognizeResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SpeechClient client = new SpeechClientImpl(mockGrpcClient.Object, null);

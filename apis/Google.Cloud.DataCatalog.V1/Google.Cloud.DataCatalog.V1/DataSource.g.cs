@@ -47,7 +47,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
   #region Messages
   /// <summary>
-  /// Describes the physical location of an entry.
+  /// Physical location of an entry.
   /// </summary>
   public sealed partial class DataSource : pb::IMessage<DataSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -92,7 +92,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ServiceFieldNumber = 1;
     private global::Google.Cloud.DataCatalog.V1.DataSource.Types.Service service_ = global::Google.Cloud.DataCatalog.V1.DataSource.Types.Service.Unspecified;
     /// <summary>
-    /// Service in which the data is physically stored.
+    /// Service that physically stores the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.DataSource.Types.Service Service {
@@ -106,8 +106,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ResourceFieldNumber = 2;
     private string resource_ = "";
     /// <summary>
-    /// Full name of the resource as defined by the service, e.g.
-    /// //bigquery.googleapis.com/projects/{project_id}/locations/{location}/datasets/{dataset_id}/tables/{table_id}
+    /// Full name of a resource as defined by the service. For example:
+    ///
+    /// `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -267,7 +268,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Service name where the data is stored.
+      /// Name of a service that stores the data.
       /// </summary>
       public enum Service {
         /// <summary>

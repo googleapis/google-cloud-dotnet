@@ -57,10 +57,13 @@ namespace Google.Cloud.Tools.Analyzers
             var invocation = (IInvocationOperation)context.Operation;
             if (invocation.Syntax is InvocationExpressionSyntax invocationExpression &&
                 invocation.TargetMethod?.IsExternallyVisible() == true &&
-                context.Compilation.Assembly == invocation.TargetMethod.ContainingAssembly &&
+                SymbolEqualityComparer.Default.Equals(context.Compilation.Assembly, invocation.TargetMethod.ContainingAssembly) &&
                 invocation.Arguments.Any(ShouldAnalyzeArgument))
             {
+#pragma warning disable RS1030 // Not entirely sure how to avoid this, but it does seem to work...
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
+#pragma warning restore RS1030
+
                 var usableVariables = GetUsableVariables(context.Operation.Syntax, semanticModel);
 
                 foreach (var arg in invocation.Arguments)

@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -114,6 +115,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public RegionInstanceGroupsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public RegionInstanceGroupsClientBuilder()
+        {
+            UseJwtAccessWithScopes = RegionInstanceGroupsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref RegionInstanceGroupsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<RegionInstanceGroupsClient> task);
@@ -189,7 +196,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="RegionInstanceGroupsClient"/> using the default credentials, endpoint
@@ -341,8 +360,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual RegionInstanceGroupList List(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RegionInstanceGroupList, InstanceGroup> List(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -350,18 +369,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupList> ListAsync(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> ListAsync(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupList> ListAsync(ListRegionInstanceGroupsRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of instance group resources contained within the specified region.
@@ -372,13 +382,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual RegionInstanceGroupList List(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RegionInstanceGroupList, InstanceGroup> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListRegionInstanceGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -390,36 +410,32 @@ namespace Google.Cloud.Compute.V1
         /// <param name="region">
         /// Name of the region scoping this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupList> ListAsync(string project, string region, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListRegionInstanceGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region scoping this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupList> ListAsync(string project, string region, st::CancellationToken cancellationToken) =>
-            ListAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual RegionInstanceGroupsListInstances ListInstances(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstances(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -427,18 +443,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupsListInstances> ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupsListInstances> ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest request, st::CancellationToken cancellationToken) =>
-            ListInstancesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
@@ -455,15 +462,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="regionInstanceGroupsListInstancesRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual RegionInstanceGroupsListInstances ListInstances(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstances(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstances(new ListInstancesRegionInstanceGroupsRequest
             {
                 InstanceGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroup, nameof(instanceGroup)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 RegionInstanceGroupsListInstancesRequestResource = gax::GaxPreconditions.CheckNotNull(regionInstanceGroupsListInstancesRequestResource, nameof(regionInstanceGroupsListInstancesRequestResource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -481,36 +498,26 @@ namespace Google.Cloud.Compute.V1
         /// <param name="regionInstanceGroupsListInstancesRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupsListInstances> ListInstancesAsync(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstancesAsync(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListInstancesAsync(new ListInstancesRegionInstanceGroupsRequest
             {
                 InstanceGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceGroup, nameof(instanceGroup)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
                 RegionInstanceGroupsListInstancesRequestResource = gax::GaxPreconditions.CheckNotNull(regionInstanceGroupsListInstancesRequestResource, nameof(regionInstanceGroupsListInstancesRequestResource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="region">
-        /// Name of the region scoping this request.
-        /// </param>
-        /// <param name="instanceGroup">
-        /// Name of the regional instance group for which we want to list the instances.
-        /// </param>
-        /// <param name="regionInstanceGroupsListInstancesRequestResource">
-        /// The body resource for this request
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<RegionInstanceGroupsListInstances> ListInstancesAsync(string project, string region, string instanceGroup, RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource, st::CancellationToken cancellationToken) =>
-            ListInstancesAsync(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the named ports for the specified regional instance group.
@@ -704,11 +711,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override RegionInstanceGroupList List(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<RegionInstanceGroupList, InstanceGroup> List(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionInstanceGroupsRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRegionInstanceGroupsRequest, RegionInstanceGroupList, InstanceGroup>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -716,11 +723,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<RegionInstanceGroupList> ListAsync(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> ListAsync(ListRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListRegionInstanceGroupsRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRegionInstanceGroupsRequest, RegionInstanceGroupList, InstanceGroup>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -728,11 +735,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override RegionInstanceGroupsListInstances ListInstances(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public override gax::PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstances(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRegionInstanceGroupsRequest(ref request, ref callSettings);
-            return _callListInstances.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancesRegionInstanceGroupsRequest, RegionInstanceGroupsListInstances, InstanceWithNamedPorts>(_callListInstances, request, callSettings);
         }
 
         /// <summary>
@@ -740,11 +747,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<RegionInstanceGroupsListInstances> ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="InstanceWithNamedPorts"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListInstancesRegionInstanceGroupsRequest(ref request, ref callSettings);
-            return _callListInstances.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancesRegionInstanceGroupsRequest, RegionInstanceGroupsListInstances, InstanceWithNamedPorts>(_callListInstances, request, callSettings);
         }
 
         /// <summary>
@@ -770,5 +777,41 @@ namespace Google.Cloud.Compute.V1
             Modify_SetNamedPortsRegionInstanceGroupRequest(ref request, ref callSettings);
             return _callSetNamedPorts.Async(request, callSettings);
         }
+    }
+
+    public partial class ListRegionInstanceGroupsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListInstancesRegionInstanceGroupsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class RegionInstanceGroupList : gaxgrpc::IPageResponse<InstanceGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstanceGroup> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class RegionInstanceGroupsListInstances : gaxgrpc::IPageResponse<InstanceWithNamedPorts>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstanceWithNamedPorts> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

@@ -24,9 +24,10 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
-  /// Policy Tag Manager serialization API service allows clients to manipulate
-  /// their policy tags and taxonomies in serialized format, where taxonomy is a
-  /// hierarchical group of policy tags.
+  /// Policy Tag Manager Serialization API service allows you to manipulate
+  /// your policy tags and taxonomies in a serialized format.
+  ///
+  /// Taxonomy is a hierarchical group of policy tags.
   /// </summary>
   public static partial class PolicyTagManagerSerialization
   {
@@ -62,10 +63,19 @@ namespace Google.Cloud.DataCatalog.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest> __Marshaller_google_cloud_datacatalog_v1_ReplaceTaxonomyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.Taxonomy> __Marshaller_google_cloud_datacatalog_v1_Taxonomy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.Taxonomy.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest> __Marshaller_google_cloud_datacatalog_v1_ImportTaxonomiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse> __Marshaller_google_cloud_datacatalog_v1_ImportTaxonomiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesRequest> __Marshaller_google_cloud_datacatalog_v1_ExportTaxonomiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesResponse> __Marshaller_google_cloud_datacatalog_v1_ExportTaxonomiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesResponse.Parser));
+
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest, global::Google.Cloud.DataCatalog.V1.Taxonomy> __Method_ReplaceTaxonomy = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest, global::Google.Cloud.DataCatalog.V1.Taxonomy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReplaceTaxonomy",
+        __Marshaller_google_cloud_datacatalog_v1_ReplaceTaxonomyRequest,
+        __Marshaller_google_cloud_datacatalog_v1_Taxonomy);
 
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest, global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse> __Method_ImportTaxonomies = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest, global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse>(
         grpc::MethodType.Unary,
@@ -92,15 +102,37 @@ namespace Google.Cloud.DataCatalog.V1 {
     public abstract partial class PolicyTagManagerSerializationBase
     {
       /// <summary>
-      /// Creates new taxonomies (including their policy tags) by importing from
-      /// inlined source or cross-regional source. New taxonomies will be created in
-      /// a given parent project.
+      /// Replaces (updates) a taxonomy and all its policy tags.
       ///
-      /// If using the cross-regional source, a new taxonomy is created by copying
+      /// The taxonomy and its entire hierarchy of policy tags must be
+      /// represented literally by `SerializedTaxonomy` and the nested
+      /// `SerializedPolicyTag` messages.
+      ///
+      /// This operation automatically does the following:
+      ///
+      /// - Deletes the existing policy tags that are missing from the
+      ///   `SerializedPolicyTag`.
+      /// - Creates policy tags that don't have resource names. They are considered
+      ///   new.
+      /// - Updates policy tags with valid resources names accordingly.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Taxonomy> ReplaceTaxonomy(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates new taxonomies (including their policy tags) in a given project
+      /// by importing from inlined or cross-regional sources.
+      ///
+      /// For a cross-regional source, new taxonomies are created by copying
       /// from a source in another region.
       ///
-      /// If using the inlined source, this method provides a way to bulk create
-      /// taxonomies and policy tags using nested proto structure.
+      /// For an inlined source, taxonomies and policy tags are created in bulk using
+      /// nested protocol buffer structures.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,12 +143,12 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Exports taxonomies as the requested type and returns the taxonomies
-      /// including their policy tags. The requested taxonomies must belong to one
-      /// project.
+      /// Exports taxonomies in the requested type and returns them,
+      /// including their policy tags. The requested taxonomies must belong to the
+      /// same project.
       ///
-      /// SerializedTaxonomy protos with nested policy tags that are generated by
-      /// this method can be used as input for future ImportTaxonomies calls.
+      /// This method generates `SerializedTaxonomy` protocol buffers with nested
+      /// policy tags that can be used as input for `ImportTaxonomies` calls.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -152,15 +184,106 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Creates new taxonomies (including their policy tags) by importing from
-      /// inlined source or cross-regional source. New taxonomies will be created in
-      /// a given parent project.
+      /// Replaces (updates) a taxonomy and all its policy tags.
       ///
-      /// If using the cross-regional source, a new taxonomy is created by copying
+      /// The taxonomy and its entire hierarchy of policy tags must be
+      /// represented literally by `SerializedTaxonomy` and the nested
+      /// `SerializedPolicyTag` messages.
+      ///
+      /// This operation automatically does the following:
+      ///
+      /// - Deletes the existing policy tags that are missing from the
+      ///   `SerializedPolicyTag`.
+      /// - Creates policy tags that don't have resource names. They are considered
+      ///   new.
+      /// - Updates policy tags with valid resources names accordingly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.DataCatalog.V1.Taxonomy ReplaceTaxonomy(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReplaceTaxonomy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Replaces (updates) a taxonomy and all its policy tags.
+      ///
+      /// The taxonomy and its entire hierarchy of policy tags must be
+      /// represented literally by `SerializedTaxonomy` and the nested
+      /// `SerializedPolicyTag` messages.
+      ///
+      /// This operation automatically does the following:
+      ///
+      /// - Deletes the existing policy tags that are missing from the
+      ///   `SerializedPolicyTag`.
+      /// - Creates policy tags that don't have resource names. They are considered
+      ///   new.
+      /// - Updates policy tags with valid resources names accordingly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.DataCatalog.V1.Taxonomy ReplaceTaxonomy(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReplaceTaxonomy, null, options, request);
+      }
+      /// <summary>
+      /// Replaces (updates) a taxonomy and all its policy tags.
+      ///
+      /// The taxonomy and its entire hierarchy of policy tags must be
+      /// represented literally by `SerializedTaxonomy` and the nested
+      /// `SerializedPolicyTag` messages.
+      ///
+      /// This operation automatically does the following:
+      ///
+      /// - Deletes the existing policy tags that are missing from the
+      ///   `SerializedPolicyTag`.
+      /// - Creates policy tags that don't have resource names. They are considered
+      ///   new.
+      /// - Updates policy tags with valid resources names accordingly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Taxonomy> ReplaceTaxonomyAsync(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReplaceTaxonomyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Replaces (updates) a taxonomy and all its policy tags.
+      ///
+      /// The taxonomy and its entire hierarchy of policy tags must be
+      /// represented literally by `SerializedTaxonomy` and the nested
+      /// `SerializedPolicyTag` messages.
+      ///
+      /// This operation automatically does the following:
+      ///
+      /// - Deletes the existing policy tags that are missing from the
+      ///   `SerializedPolicyTag`.
+      /// - Creates policy tags that don't have resource names. They are considered
+      ///   new.
+      /// - Updates policy tags with valid resources names accordingly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Taxonomy> ReplaceTaxonomyAsync(global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReplaceTaxonomy, null, options, request);
+      }
+      /// <summary>
+      /// Creates new taxonomies (including their policy tags) in a given project
+      /// by importing from inlined or cross-regional sources.
+      ///
+      /// For a cross-regional source, new taxonomies are created by copying
       /// from a source in another region.
       ///
-      /// If using the inlined source, this method provides a way to bulk create
-      /// taxonomies and policy tags using nested proto structure.
+      /// For an inlined source, taxonomies and policy tags are created in bulk using
+      /// nested protocol buffer structures.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -172,15 +295,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ImportTaxonomies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates new taxonomies (including their policy tags) by importing from
-      /// inlined source or cross-regional source. New taxonomies will be created in
-      /// a given parent project.
+      /// Creates new taxonomies (including their policy tags) in a given project
+      /// by importing from inlined or cross-regional sources.
       ///
-      /// If using the cross-regional source, a new taxonomy is created by copying
+      /// For a cross-regional source, new taxonomies are created by copying
       /// from a source in another region.
       ///
-      /// If using the inlined source, this method provides a way to bulk create
-      /// taxonomies and policy tags using nested proto structure.
+      /// For an inlined source, taxonomies and policy tags are created in bulk using
+      /// nested protocol buffer structures.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -190,15 +312,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ImportTaxonomies, null, options, request);
       }
       /// <summary>
-      /// Creates new taxonomies (including their policy tags) by importing from
-      /// inlined source or cross-regional source. New taxonomies will be created in
-      /// a given parent project.
+      /// Creates new taxonomies (including their policy tags) in a given project
+      /// by importing from inlined or cross-regional sources.
       ///
-      /// If using the cross-regional source, a new taxonomy is created by copying
+      /// For a cross-regional source, new taxonomies are created by copying
       /// from a source in another region.
       ///
-      /// If using the inlined source, this method provides a way to bulk create
-      /// taxonomies and policy tags using nested proto structure.
+      /// For an inlined source, taxonomies and policy tags are created in bulk using
+      /// nested protocol buffer structures.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -210,15 +331,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ImportTaxonomiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates new taxonomies (including their policy tags) by importing from
-      /// inlined source or cross-regional source. New taxonomies will be created in
-      /// a given parent project.
+      /// Creates new taxonomies (including their policy tags) in a given project
+      /// by importing from inlined or cross-regional sources.
       ///
-      /// If using the cross-regional source, a new taxonomy is created by copying
+      /// For a cross-regional source, new taxonomies are created by copying
       /// from a source in another region.
       ///
-      /// If using the inlined source, this method provides a way to bulk create
-      /// taxonomies and policy tags using nested proto structure.
+      /// For an inlined source, taxonomies and policy tags are created in bulk using
+      /// nested protocol buffer structures.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -228,12 +348,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ImportTaxonomies, null, options, request);
       }
       /// <summary>
-      /// Exports taxonomies as the requested type and returns the taxonomies
-      /// including their policy tags. The requested taxonomies must belong to one
-      /// project.
+      /// Exports taxonomies in the requested type and returns them,
+      /// including their policy tags. The requested taxonomies must belong to the
+      /// same project.
       ///
-      /// SerializedTaxonomy protos with nested policy tags that are generated by
-      /// this method can be used as input for future ImportTaxonomies calls.
+      /// This method generates `SerializedTaxonomy` protocol buffers with nested
+      /// policy tags that can be used as input for `ImportTaxonomies` calls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -245,12 +365,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ExportTaxonomies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports taxonomies as the requested type and returns the taxonomies
-      /// including their policy tags. The requested taxonomies must belong to one
-      /// project.
+      /// Exports taxonomies in the requested type and returns them,
+      /// including their policy tags. The requested taxonomies must belong to the
+      /// same project.
       ///
-      /// SerializedTaxonomy protos with nested policy tags that are generated by
-      /// this method can be used as input for future ImportTaxonomies calls.
+      /// This method generates `SerializedTaxonomy` protocol buffers with nested
+      /// policy tags that can be used as input for `ImportTaxonomies` calls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -260,12 +380,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExportTaxonomies, null, options, request);
       }
       /// <summary>
-      /// Exports taxonomies as the requested type and returns the taxonomies
-      /// including their policy tags. The requested taxonomies must belong to one
-      /// project.
+      /// Exports taxonomies in the requested type and returns them,
+      /// including their policy tags. The requested taxonomies must belong to the
+      /// same project.
       ///
-      /// SerializedTaxonomy protos with nested policy tags that are generated by
-      /// this method can be used as input for future ImportTaxonomies calls.
+      /// This method generates `SerializedTaxonomy` protocol buffers with nested
+      /// policy tags that can be used as input for `ImportTaxonomies` calls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -277,12 +397,12 @@ namespace Google.Cloud.DataCatalog.V1 {
         return ExportTaxonomiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports taxonomies as the requested type and returns the taxonomies
-      /// including their policy tags. The requested taxonomies must belong to one
-      /// project.
+      /// Exports taxonomies in the requested type and returns them,
+      /// including their policy tags. The requested taxonomies must belong to the
+      /// same project.
       ///
-      /// SerializedTaxonomy protos with nested policy tags that are generated by
-      /// this method can be used as input for future ImportTaxonomies calls.
+      /// This method generates `SerializedTaxonomy` protocol buffers with nested
+      /// policy tags that can be used as input for `ImportTaxonomies` calls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -303,6 +423,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public static grpc::ServerServiceDefinition BindService(PolicyTagManagerSerializationBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ReplaceTaxonomy, serviceImpl.ReplaceTaxonomy)
           .AddMethod(__Method_ImportTaxonomies, serviceImpl.ImportTaxonomies)
           .AddMethod(__Method_ExportTaxonomies, serviceImpl.ExportTaxonomies).Build();
     }
@@ -313,6 +434,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PolicyTagManagerSerializationBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ReplaceTaxonomy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest, global::Google.Cloud.DataCatalog.V1.Taxonomy>(serviceImpl.ReplaceTaxonomy));
       serviceBinder.AddMethod(__Method_ImportTaxonomies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest, global::Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse>(serviceImpl.ImportTaxonomies));
       serviceBinder.AddMethod(__Method_ExportTaxonomies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesRequest, global::Google.Cloud.DataCatalog.V1.ExportTaxonomiesResponse>(serviceImpl.ExportTaxonomies));
     }

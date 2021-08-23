@@ -27,6 +27,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
 
     <Authors>Google LLC</Authors>
+    <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)) Google LLC</Copyright>
     <PackageIcon>NuGetIcon.png</PackageIcon>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

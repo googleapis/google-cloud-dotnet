@@ -56,11 +56,14 @@ namespace Google.Cloud.ServiceControl.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CheckSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CheckSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -69,10 +72,10 @@ namespace Google.Cloud.ServiceControl.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 16 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ReportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ReportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(16000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ServiceControllerSettings"/> object.</returns>
@@ -87,6 +90,12 @@ namespace Google.Cloud.ServiceControl.V1
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public ServiceControllerSettings Settings { get; set; }
+
+        /// <summary>Creates a new builder with default settings.</summary>
+        public ServiceControllerClientBuilder()
+        {
+            UseJwtAccessWithScopes = ServiceControllerClient.UseJwtAccessWithScopes;
+        }
 
         partial void InterceptBuild(ref ServiceControllerClient client);
 
@@ -139,7 +148,7 @@ namespace Google.Cloud.ServiceControl.V1
 
     /// <summary>ServiceController client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Control API](https://cloud.google.com/service-control/overview)
+    /// [Google Service Control API](/service-control/overview)
     /// 
     /// Lets clients check and report operations against a [managed
     /// service](https://cloud.google.com/service-management/reference/rpc/google.api/servicemanagement.v1#google.api.servicemanagement.v1.ManagedService).
@@ -166,7 +175,19 @@ namespace Google.Cloud.ServiceControl.V1
             "https://www.googleapis.com/auth/servicecontrol",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="ServiceControllerClient"/> using the default credentials, endpoint and
@@ -234,7 +255,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// propagation, therefore callers MUST NOT depend on the `Check` method having
         /// the latest policy information.
         /// 
-        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.check` permission
         /// on the specified service. For more information, see
@@ -258,7 +280,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// propagation, therefore callers MUST NOT depend on the `Check` method having
         /// the latest policy information.
         /// 
-        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.check` permission
         /// on the specified service. For more information, see
@@ -282,7 +305,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// propagation, therefore callers MUST NOT depend on the `Check` method having
         /// the latest policy information.
         /// 
-        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.check` permission
         /// on the specified service. For more information, see
@@ -304,8 +328,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// the aggregation time window to avoid data loss risk more than 0.01%
         /// for business and compliance reasons.
         /// 
-        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-        /// 1MB.
+        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.report` permission
         /// on the specified service. For more information, see
@@ -327,8 +351,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// the aggregation time window to avoid data loss risk more than 0.01%
         /// for business and compliance reasons.
         /// 
-        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-        /// 1MB.
+        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.report` permission
         /// on the specified service. For more information, see
@@ -350,8 +374,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// the aggregation time window to avoid data loss risk more than 0.01%
         /// for business and compliance reasons.
         /// 
-        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-        /// 1MB.
+        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.report` permission
         /// on the specified service. For more information, see
@@ -366,7 +390,7 @@ namespace Google.Cloud.ServiceControl.V1
 
     /// <summary>ServiceController client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Control API](https://cloud.google.com/service-control/overview)
+    /// [Google Service Control API](/service-control/overview)
     /// 
     /// Lets clients check and report operations against a [managed
     /// service](https://cloud.google.com/service-management/reference/rpc/google.api/servicemanagement.v1#google.api.servicemanagement.v1.ManagedService).
@@ -423,7 +447,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// propagation, therefore callers MUST NOT depend on the `Check` method having
         /// the latest policy information.
         /// 
-        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.check` permission
         /// on the specified service. For more information, see
@@ -450,7 +475,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// propagation, therefore callers MUST NOT depend on the `Check` method having
         /// the latest policy information.
         /// 
-        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has the size limit of 64KB.
+        /// NOTE: the [CheckRequest][google.api.servicecontrol.v1.CheckRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.check` permission
         /// on the specified service. For more information, see
@@ -475,8 +501,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// the aggregation time window to avoid data loss risk more than 0.01%
         /// for business and compliance reasons.
         /// 
-        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-        /// 1MB.
+        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.report` permission
         /// on the specified service. For more information, see
@@ -501,8 +527,8 @@ namespace Google.Cloud.ServiceControl.V1
         /// the aggregation time window to avoid data loss risk more than 0.01%
         /// for business and compliance reasons.
         /// 
-        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has the size limit (wire-format byte size) of
-        /// 1MB.
+        /// NOTE: the [ReportRequest][google.api.servicecontrol.v1.ReportRequest] has
+        /// the size limit (wire-format byte size) of 1MB.
         /// 
         /// This method requires the `servicemanagement.services.report` permission
         /// on the specified service. For more information, see

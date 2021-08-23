@@ -33,7 +33,7 @@ namespace Google.Cloud.Kms.V1 {
             "CUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEID4EEDOmHqQV4KH2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t",
             "L0tleVJpbmcSO3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9IoYGCglDcnlwdG9LZXkSEQoEbmFt",
+            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9Iu4GCglDcnlwdG9LZXkSEQoEbmFt",
             "ZRgBIAEoCUID4EEDEjsKB3ByaW1hcnkYAiABKAsyJS5nb29nbGUuY2xvdWQu",
             "a21zLnYxLkNyeXB0b0tleVZlcnNpb25CA+BBAxJFCgdwdXJwb3NlGAMgASgO",
             "Mi8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXkuQ3J5cHRvS2V5UHVy",
@@ -43,110 +43,114 @@ namespace Google.Cloud.Kms.V1 {
             "aW9kGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASRwoQdmVy",
             "c2lvbl90ZW1wbGF0ZRgLIAEoCzItLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5",
             "cHRvS2V5VmVyc2lvblRlbXBsYXRlEjoKBmxhYmVscxgKIAMoCzIqLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5LkxhYmVsc0VudHJ5Gi0KC0xhYmVs",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEieAoQQ3J5",
-            "cHRvS2V5UHVycG9zZRIiCh5DUllQVE9fS0VZX1BVUlBPU0VfVU5TUEVDSUZJ",
-            "RUQQABITCg9FTkNSWVBUX0RFQ1JZUFQQARITCg9BU1lNTUVUUklDX1NJR04Q",
-            "BRIWChJBU1lNTUVUUklDX0RFQ1JZUFQQBjp76kF4CiFjbG91ZGttcy5nb29n",
-            "bGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tl",
-            "eXMve2NyeXB0b19rZXl9QhMKEXJvdGF0aW9uX3NjaGVkdWxlIrMBChhDcnlw",
-            "dG9LZXlWZXJzaW9uVGVtcGxhdGUSPgoQcHJvdGVjdGlvbl9sZXZlbBgBIAEo",
-            "DjIkLmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsElcKCWFs",
-            "Z29yaXRobRgDIAEoDjI/Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
-            "VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uQWxnb3JpdGhtQgPgQQIi8QEKF0tl",
-            "eU9wZXJhdGlvbkF0dGVzdGF0aW9uElMKBmZvcm1hdBgEIAEoDjI+Lmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24uQXR0ZXN0",
-            "YXRpb25Gb3JtYXRCA+BBAxIUCgdjb250ZW50GAUgASgMQgPgQQMiawoRQXR0",
-            "ZXN0YXRpb25Gb3JtYXQSIgoeQVRURVNUQVRJT05fRk9STUFUX1VOU1BFQ0lG",
-            "SUVEEAASGAoUQ0FWSVVNX1YxX0NPTVBSRVNTRUQQAxIYChRDQVZJVU1fVjJf",
-            "Q09NUFJFU1NFRBAEIqgOChBDcnlwdG9LZXlWZXJzaW9uEhEKBG5hbWUYASAB",
-            "KAlCA+BBAxJKCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uU3RhdGUSQwoQcHJv",
-            "dGVjdGlvbl9sZXZlbBgHIAEoDjIkLmdvb2dsZS5jbG91ZC5rbXMudjEuUHJv",
-            "dGVjdGlvbkxldmVsQgPgQQMSVwoJYWxnb3JpdGhtGAogASgOMj8uZ29vZ2xl",
+            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5LkxhYmVsc0VudHJ5EhgKC2ltcG9y",
+            "dF9vbmx5GA0gASgIQgPgQQUSQgoaZGVzdHJveV9zY2hlZHVsZWRfZHVyYXRp",
+            "b24YDiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBBRotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIoEB",
+            "ChBDcnlwdG9LZXlQdXJwb3NlEiIKHkNSWVBUT19LRVlfUFVSUE9TRV9VTlNQ",
+            "RUNJRklFRBAAEhMKD0VOQ1JZUFRfREVDUllQVBABEhMKD0FTWU1NRVRSSUNf",
+            "U0lHThAFEhYKEkFTWU1NRVRSSUNfREVDUllQVBAGEgcKA01BQxAJOnvqQXgK",
+            "IWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlf",
+            "cmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1CEwoRcm90YXRpb25fc2No",
+            "ZWR1bGUiswEKGENyeXB0b0tleVZlcnNpb25UZW1wbGF0ZRI+ChBwcm90ZWN0",
+            "aW9uX2xldmVsGAEgASgOMiQuZ29vZ2xlLmNsb3VkLmttcy52MS5Qcm90ZWN0",
+            "aW9uTGV2ZWwSVwoJYWxnb3JpdGhtGAMgASgOMj8uZ29vZ2xlLmNsb3VkLmtt",
+            "cy52MS5DcnlwdG9LZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25BbGdvcml0",
+            "aG1CA+BBAiLxAQoXS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24SUwoGZm9ybWF0",
+            "GAQgASgOMj4uZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRl",
+            "c3RhdGlvbi5BdHRlc3RhdGlvbkZvcm1hdEID4EEDEhQKB2NvbnRlbnQYBSAB",
+            "KAxCA+BBAyJrChFBdHRlc3RhdGlvbkZvcm1hdBIiCh5BVFRFU1RBVElPTl9G",
+            "T1JNQVRfVU5TUEVDSUZJRUQQABIYChRDQVZJVU1fVjFfQ09NUFJFU1NFRBAD",
+            "EhgKFENBVklVTV9WMl9DT01QUkVTU0VEEAQiuQ4KEENyeXB0b0tleVZlcnNp",
+            "b24SEQoEbmFtZRgBIAEoCUID4EEDEkoKBXN0YXRlGAMgASgOMjsuZ29vZ2xl",
             "LmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNp",
-            "b25BbGdvcml0aG1CA+BBAxJGCgthdHRlc3RhdGlvbhgIIAEoCzIsLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb25CA+BBAxI0",
-            "CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI2Cg1nZW5lcmF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lfdGltZRgFIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI7ChJkZXN0cm95X2V2ZW50",
-            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "FwoKaW1wb3J0X2pvYhgOIAEoCUID4EEDEjQKC2ltcG9ydF90aW1lGA8gASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiIKFWltcG9ydF9m",
-            "YWlsdXJlX3JlYXNvbhgQIAEoCUID4EEDEl4KIWV4dGVybmFsX3Byb3RlY3Rp",
-            "b25fbGV2ZWxfb3B0aW9ucxgRIAEoCzIzLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "RXh0ZXJuYWxQcm90ZWN0aW9uTGV2ZWxPcHRpb25zIt0EChlDcnlwdG9LZXlW",
-            "ZXJzaW9uQWxnb3JpdGhtEiwKKENSWVBUT19LRVlfVkVSU0lPTl9BTEdPUklU",
-            "SE1fVU5TUEVDSUZJRUQQABIfChtHT09HTEVfU1lNTUVUUklDX0VOQ1JZUFRJ",
-            "T04QARIcChhSU0FfU0lHTl9QU1NfMjA0OF9TSEEyNTYQAhIcChhSU0FfU0lH",
-            "Tl9QU1NfMzA3Ml9TSEEyNTYQAxIcChhSU0FfU0lHTl9QU1NfNDA5Nl9TSEEy",
-            "NTYQBBIcChhSU0FfU0lHTl9QU1NfNDA5Nl9TSEE1MTIQDxIeChpSU0FfU0lH",
-            "Tl9QS0NTMV8yMDQ4X1NIQTI1NhAFEh4KGlJTQV9TSUdOX1BLQ1MxXzMwNzJf",
-            "U0hBMjU2EAYSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEEyNTYQBxIeChpS",
-            "U0FfU0lHTl9QS0NTMV80MDk2X1NIQTUxMhAQEiAKHFJTQV9ERUNSWVBUX09B",
-            "RVBfMjA0OF9TSEEyNTYQCBIgChxSU0FfREVDUllQVF9PQUVQXzMwNzJfU0hB",
-            "MjU2EAkSIAocUlNBX0RFQ1JZUFRfT0FFUF80MDk2X1NIQTI1NhAKEiAKHFJT",
-            "QV9ERUNSWVBUX09BRVBfNDA5Nl9TSEE1MTIQERIXChNFQ19TSUdOX1AyNTZf",
-            "U0hBMjU2EAwSFwoTRUNfU0lHTl9QMzg0X1NIQTM4NBANEhwKGEVDX1NJR05f",
-            "U0VDUDI1NksxX1NIQTI1NhAfEiEKHUVYVEVSTkFMX1NZTU1FVFJJQ19FTkNS",
-            "WVBUSU9OEBIiwQEKFUNyeXB0b0tleVZlcnNpb25TdGF0ZRIoCiRDUllQVE9f",
-            "S0VZX1ZFUlNJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIWChJQRU5ESU5HX0dF",
-            "TkVSQVRJT04QBRILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhINCglERVNU",
-            "Uk9ZRUQQAxIVChFERVNUUk9ZX1NDSEVEVUxFRBAEEhIKDlBFTkRJTkdfSU1Q",
-            "T1JUEAYSEQoNSU1QT1JUX0ZBSUxFRBAHIkkKFENyeXB0b0tleVZlcnNpb25W",
-            "aWV3EicKI0NSWVBUT19LRVlfVkVSU0lPTl9WSUVXX1VOU1BFQ0lGSUVEEAAS",
-            "CAoERlVMTBABOqoB6kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5",
-            "cHRvS2V5VmVyc2lvbhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5",
-            "cHRvX2tleX0vY3J5cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lv",
-            "bn0i3AIKCVB1YmxpY0tleRILCgNwZW0YASABKAkSUgoJYWxnb3JpdGhtGAIg",
-            "ASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uLkNy",
-            "eXB0b0tleVZlcnNpb25BbGdvcml0aG0SLwoKcGVtX2NyYzMyYxgDIAEoCzIb",
-            "Lmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlEgwKBG5hbWUYBCABKAk6rgHq",
-            "QaoBCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9QdWJsaWNLZXkShAFwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mv",
-            "e2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlW",
-            "ZXJzaW9ucy97Y3J5cHRvX2tleV92ZXJzaW9ufS9wdWJsaWNLZXki2wcKCUlt",
-            "cG9ydEpvYhIRCgRuYW1lGAEgASgJQgPgQQMSSgoNaW1wb3J0X21ldGhvZBgC",
-            "IAEoDjIrLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iLkltcG9ydE1l",
-            "dGhvZEIG4EEC4EEFEkYKEHByb3RlY3Rpb25fbGV2ZWwYCSABKA4yJC5nb29n",
-            "bGUuY2xvdWQua21zLnYxLlByb3RlY3Rpb25MZXZlbEIG4EEC4EEFEjQKC2Ny",
-            "ZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjYKDWdlbmVyYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLZXhwaXJlX3RpbWUYBSABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOgoRZXhwaXJlX2V2ZW50X3RpbWUY",
-            "CiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQQoFc3Rh",
-            "dGUYBiABKA4yLS5nb29nbGUuY2xvdWQua21zLnYxLkltcG9ydEpvYi5JbXBv",
-            "cnRKb2JTdGF0ZUID4EEDEkkKCnB1YmxpY19rZXkYByABKAsyMC5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkltcG9ydEpvYi5XcmFwcGluZ1B1YmxpY0tleUID4EED",
-            "EkYKC2F0dGVzdGF0aW9uGAggASgLMiwuZ29vZ2xlLmNsb3VkLmttcy52MS5L",
-            "ZXlPcGVyYXRpb25BdHRlc3RhdGlvbkID4EEDGiAKEVdyYXBwaW5nUHVibGlj",
-            "S2V5EgsKA3BlbRgBIAEoCSJtCgxJbXBvcnRNZXRob2QSHQoZSU1QT1JUX01F",
-            "VEhPRF9VTlNQRUNJRklFRBAAEh4KGlJTQV9PQUVQXzMwNzJfU0hBMV9BRVNf",
-            "MjU2EAESHgoaUlNBX09BRVBfNDA5Nl9TSEExX0FFU18yNTYQAiJjCg5JbXBv",
-            "cnRKb2JTdGF0ZRIgChxJTVBPUlRfSk9CX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "FgoSUEVORElOR19HRU5FUkFUSU9OEAESCgoGQUNUSVZFEAISCwoHRVhQSVJF",
-            "RBADOnvqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0ltcG9ydEpvYhJT",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJp",
-            "bmdzL3trZXlfcmluZ30vaW1wb3J0Sm9icy97aW1wb3J0X2pvYn0iOgoeRXh0",
-            "ZXJuYWxQcm90ZWN0aW9uTGV2ZWxPcHRpb25zEhgKEGV4dGVybmFsX2tleV91",
-            "cmkYASABKAkqWAoPUHJvdGVjdGlvbkxldmVsEiAKHFBST1RFQ1RJT05fTEVW",
-            "RUxfVU5TUEVDSUZJRUQQABIMCghTT0ZUV0FSRRABEgcKA0hTTRACEgwKCEVY",
-            "VEVSTkFMEANClQEKF2NvbS5nb29nbGUuY2xvdWQua21zLnYxQhFLbXNSZXNv",
-            "dXJjZXNQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL2ttcy92MTtrbXP4AQGqAhNHb29nbGUuQ2xvdWQuS21z",
-            "LlYxygITR29vZ2xlXENsb3VkXEttc1xWMWIGcHJvdG8z"));
+            "b25TdGF0ZRJDChBwcm90ZWN0aW9uX2xldmVsGAcgASgOMiQuZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5Qcm90ZWN0aW9uTGV2ZWxCA+BBAxJXCglhbGdvcml0aG0Y",
+            "CiABKA4yPy5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24u",
+            "Q3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRobUID4EEDEkYKC2F0dGVzdGF0aW9u",
+            "GAggASgLMiwuZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRl",
+            "c3RhdGlvbkID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjYKDWdlbmVyYXRlX3RpbWUYCyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNQoMZGVzdHJveV90",
+            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjsK",
+            "EmRlc3Ryb3lfZXZlbnRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIXCgppbXBvcnRfam9iGA4gASgJQgPgQQMSNAoLaW1w",
+            "b3J0X3RpbWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSIgoVaW1wb3J0X2ZhaWx1cmVfcmVhc29uGBAgASgJQgPgQQMSXgohZXh0",
+            "ZXJuYWxfcHJvdGVjdGlvbl9sZXZlbF9vcHRpb25zGBEgASgLMjMuZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5FeHRlcm5hbFByb3RlY3Rpb25MZXZlbE9wdGlvbnMi",
+            "7gQKGUNyeXB0b0tleVZlcnNpb25BbGdvcml0aG0SLAooQ1JZUFRPX0tFWV9W",
+            "RVJTSU9OX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEh8KG0dPT0dMRV9TWU1N",
+            "RVRSSUNfRU5DUllQVElPThABEhwKGFJTQV9TSUdOX1BTU18yMDQ4X1NIQTI1",
+            "NhACEhwKGFJTQV9TSUdOX1BTU18zMDcyX1NIQTI1NhADEhwKGFJTQV9TSUdO",
+            "X1BTU180MDk2X1NIQTI1NhAEEhwKGFJTQV9TSUdOX1BTU180MDk2X1NIQTUx",
+            "MhAPEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhfU0hBMjU2EAUSHgoaUlNBX1NJ",
+            "R05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpSU0FfU0lHTl9QS0NTMV80MDk2",
+            "X1NIQTI1NhAHEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hBNTEyEBASIAoc",
+            "UlNBX0RFQ1JZUFRfT0FFUF8yMDQ4X1NIQTI1NhAIEiAKHFJTQV9ERUNSWVBU",
+            "X09BRVBfMzA3Ml9TSEEyNTYQCRIgChxSU0FfREVDUllQVF9PQUVQXzQwOTZf",
+            "U0hBMjU2EAoSIAocUlNBX0RFQ1JZUFRfT0FFUF80MDk2X1NIQTUxMhAREhcK",
+            "E0VDX1NJR05fUDI1Nl9TSEEyNTYQDBIXChNFQ19TSUdOX1AzODRfU0hBMzg0",
+            "EA0SHAoYRUNfU0lHTl9TRUNQMjU2SzFfU0hBMjU2EB8SDwoLSE1BQ19TSEEy",
+            "NTYQIBIhCh1FWFRFUk5BTF9TWU1NRVRSSUNfRU5DUllQVElPThASIsEBChVD",
+            "cnlwdG9LZXlWZXJzaW9uU3RhdGUSKAokQ1JZUFRPX0tFWV9WRVJTSU9OX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASFgoSUEVORElOR19HRU5FUkFUSU9OEAUSCwoH",
+            "RU5BQkxFRBABEgwKCERJU0FCTEVEEAISDQoJREVTVFJPWUVEEAMSFQoRREVT",
+            "VFJPWV9TQ0hFRFVMRUQQBBISCg5QRU5ESU5HX0lNUE9SVBAGEhEKDUlNUE9S",
+            "VF9GQUlMRUQQByJJChRDcnlwdG9LZXlWZXJzaW9uVmlldxInCiNDUllQVE9f",
+            "S0VZX1ZFUlNJT05fVklFV19VTlNQRUNJRklFRBAAEggKBEZVTEwQATqqAepB",
+            "pgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24S",
+            "enByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlS",
+            "aW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0",
+            "b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259IpwDCglQdWJsaWNL",
+            "ZXkSCwoDcGVtGAEgASgJElIKCWFsZ29yaXRobRgCIAEoDjI/Lmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9u",
+            "QWxnb3JpdGhtEi8KCnBlbV9jcmMzMmMYAyABKAsyGy5nb29nbGUucHJvdG9i",
+            "dWYuSW50NjRWYWx1ZRIMCgRuYW1lGAQgASgJEj4KEHByb3RlY3Rpb25fbGV2",
+            "ZWwYBSABKA4yJC5nb29nbGUuY2xvdWQua21zLnYxLlByb3RlY3Rpb25MZXZl",
+            "bDquAepBqgEKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL1B1YmxpY0tleRKE",
+            "AXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlS",
+            "aW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0",
+            "b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259L3B1YmxpY0tleSLb",
+            "BwoJSW1wb3J0Sm9iEhEKBG5hbWUYASABKAlCA+BBAxJKCg1pbXBvcnRfbWV0",
+            "aG9kGAIgASgOMisuZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRKb2IuSW1w",
+            "b3J0TWV0aG9kQgbgQQLgQQUSRgoQcHJvdGVjdGlvbl9sZXZlbBgJIAEoDjIk",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsQgbgQQLgQQUS",
+            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNgoNZ2VuZXJhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgFIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI6ChFleHBpcmVfZXZlbnRf",
+            "dGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJB",
+            "CgVzdGF0ZRgGIAEoDjItLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9i",
+            "LkltcG9ydEpvYlN0YXRlQgPgQQMSSQoKcHVibGljX2tleRgHIAEoCzIwLmdv",
+            "b2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iLldyYXBwaW5nUHVibGljS2V5",
+            "QgPgQQMSRgoLYXR0ZXN0YXRpb24YCCABKAsyLC5nb29nbGUuY2xvdWQua21z",
+            "LnYxLktleU9wZXJhdGlvbkF0dGVzdGF0aW9uQgPgQQMaIAoRV3JhcHBpbmdQ",
+            "dWJsaWNLZXkSCwoDcGVtGAEgASgJIm0KDEltcG9ydE1ldGhvZBIdChlJTVBP",
+            "UlRfTUVUSE9EX1VOU1BFQ0lGSUVEEAASHgoaUlNBX09BRVBfMzA3Ml9TSEEx",
+            "X0FFU18yNTYQARIeChpSU0FfT0FFUF80MDk2X1NIQTFfQUVTXzI1NhACImMK",
+            "DkltcG9ydEpvYlN0YXRlEiAKHElNUE9SVF9KT0JfU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIWChJQRU5ESU5HX0dFTkVSQVRJT04QARIKCgZBQ1RJVkUQAhILCgdF",
+            "WFBJUkVEEAM6e+pBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vSW1wb3J0",
+            "Sm9iElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "a2V5UmluZ3Mve2tleV9yaW5nfS9pbXBvcnRKb2JzL3tpbXBvcnRfam9ifSI6",
+            "Ch5FeHRlcm5hbFByb3RlY3Rpb25MZXZlbE9wdGlvbnMSGAoQZXh0ZXJuYWxf",
+            "a2V5X3VyaRgBIAEoCSpYCg9Qcm90ZWN0aW9uTGV2ZWwSIAocUFJPVEVDVElP",
+            "Tl9MRVZFTF9VTlNQRUNJRklFRBAAEgwKCFNPRlRXQVJFEAESBwoDSFNNEAIS",
+            "DAoIRVhURVJOQUwQA0KVAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCEUtt",
+            "c1Jlc291cmNlc1Byb3RvUAFaNmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQva21zL3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91",
+            "ZC5LbXMuVjHKAhNHb29nbGVcQ2xvdWRcS21zXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyRing), global::Google.Cloud.Kms.V1.KeyRing.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels", "ImportOnly", "DestroyScheduledDuration" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate), global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate.Parser, new[]{ "ProtectionLevel", "Algorithm" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Parser, new[]{ "Format", "Content" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "ProtectionLevel", "Algorithm", "Attestation", "CreateTime", "GenerateTime", "DestroyTime", "DestroyEventTime", "ImportJob", "ImportTime", "ImportFailureReason", "ExternalProtectionLevelOptions" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm", "PemCrc32C", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm", "PemCrc32C", "Name", "ProtectionLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob), global::Google.Cloud.Kms.V1.ImportJob.Parser, new[]{ "Name", "ImportMethod", "ProtectionLevel", "CreateTime", "GenerateTime", "ExpireTime", "ExpireEventTime", "State", "PublicKey", "Attestation" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportMethod), typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportJobState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey), global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey.Parser, new[]{ "Pem" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions), global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions.Parser, new[]{ "ExternalKeyUri" }, null, null, null, null)
           }));
@@ -452,6 +456,8 @@ namespace Google.Cloud.Kms.V1 {
       nextRotationTime_ = other.nextRotationTime_ != null ? other.nextRotationTime_.Clone() : null;
       versionTemplate_ = other.versionTemplate_ != null ? other.versionTemplate_.Clone() : null;
       labels_ = other.labels_.Clone();
+      importOnly_ = other.importOnly_;
+      destroyScheduledDuration_ = other.destroyScheduledDuration_ != null ? other.destroyScheduledDuration_.Clone() : null;
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
           RotationPeriod = other.RotationPeriod.Clone();
@@ -611,6 +617,38 @@ namespace Google.Cloud.Kms.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "import_only" field.</summary>
+    public const int ImportOnlyFieldNumber = 13;
+    private bool importOnly_;
+    /// <summary>
+    /// Immutable. Whether this key may contain imported versions only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ImportOnly {
+      get { return importOnly_; }
+      set {
+        importOnly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "destroy_scheduled_duration" field.</summary>
+    public const int DestroyScheduledDurationFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Duration destroyScheduledDuration_;
+    /// <summary>
+    /// Immutable. The period of time that versions of this key spend in the
+    /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+    /// state before transitioning to
+    /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED]. If not
+    /// specified at creation time, the default duration is 24 hours.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration DestroyScheduledDuration {
+      get { return destroyScheduledDuration_; }
+      set {
+        destroyScheduledDuration_ = value;
+      }
+    }
+
     private object rotationSchedule_;
     /// <summary>Enum of possible cases for the "rotation_schedule" oneof.</summary>
     public enum RotationScheduleOneofCase {
@@ -650,6 +688,8 @@ namespace Google.Cloud.Kms.V1 {
       if (!object.Equals(RotationPeriod, other.RotationPeriod)) return false;
       if (!object.Equals(VersionTemplate, other.VersionTemplate)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (ImportOnly != other.ImportOnly) return false;
+      if (!object.Equals(DestroyScheduledDuration, other.DestroyScheduledDuration)) return false;
       if (RotationScheduleCase != other.RotationScheduleCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -665,6 +705,8 @@ namespace Google.Cloud.Kms.V1 {
       if (rotationScheduleCase_ == RotationScheduleOneofCase.RotationPeriod) hash ^= RotationPeriod.GetHashCode();
       if (versionTemplate_ != null) hash ^= VersionTemplate.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (ImportOnly != false) hash ^= ImportOnly.GetHashCode();
+      if (destroyScheduledDuration_ != null) hash ^= DestroyScheduledDuration.GetHashCode();
       hash ^= (int) rotationScheduleCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -711,6 +753,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(VersionTemplate);
       }
+      if (ImportOnly != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(ImportOnly);
+      }
+      if (destroyScheduledDuration_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DestroyScheduledDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -749,6 +799,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(VersionTemplate);
       }
+      if (ImportOnly != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(ImportOnly);
+      }
+      if (destroyScheduledDuration_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DestroyScheduledDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -780,6 +838,12 @@ namespace Google.Cloud.Kms.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VersionTemplate);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (ImportOnly != false) {
+        size += 1 + 1;
+      }
+      if (destroyScheduledDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestroyScheduledDuration);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -822,6 +886,15 @@ namespace Google.Cloud.Kms.V1 {
         VersionTemplate.MergeFrom(other.VersionTemplate);
       }
       labels_.Add(other.labels_);
+      if (other.ImportOnly != false) {
+        ImportOnly = other.ImportOnly;
+      }
+      if (other.destroyScheduledDuration_ != null) {
+        if (destroyScheduledDuration_ == null) {
+          DestroyScheduledDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        DestroyScheduledDuration.MergeFrom(other.DestroyScheduledDuration);
+      }
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
           if (RotationPeriod == null) {
@@ -894,6 +967,17 @@ namespace Google.Cloud.Kms.V1 {
             input.ReadMessage(VersionTemplate);
             break;
           }
+          case 104: {
+            ImportOnly = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (destroyScheduledDuration_ == null) {
+              DestroyScheduledDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DestroyScheduledDuration);
+            break;
+          }
         }
       }
     #endif
@@ -957,6 +1041,17 @@ namespace Google.Cloud.Kms.V1 {
             input.ReadMessage(VersionTemplate);
             break;
           }
+          case 104: {
+            ImportOnly = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (destroyScheduledDuration_ == null) {
+              DestroyScheduledDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DestroyScheduledDuration);
+            break;
+          }
         }
       }
     }
@@ -995,6 +1090,11 @@ namespace Google.Cloud.Kms.V1 {
         /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
         /// </summary>
         [pbr::OriginalName("ASYMMETRIC_DECRYPT")] AsymmetricDecrypt = 6,
+        /// <summary>
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
+        /// [MacSign][google.cloud.kms.v1.KeyManagementService.MacSign].
+        /// </summary>
+        [pbr::OriginalName("MAC")] Mac = 9,
       }
 
     }
@@ -2246,6 +2346,12 @@ namespace Google.Cloud.Kms.V1 {
       /// The fields in the name after "EC_SIGN_" correspond to the following
       /// parameters: elliptic curve, digest algorithm.
       ///
+      /// Algorithms beginning with "HMAC_" are usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// [MAC][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.MAC].
+      ///
+      /// The suffix following "HMAC_" corresponds to the hash algorithm being used
+      /// (eg. SHA256).
+      ///
       /// For more information, see [Key purposes and algorithms]
       /// (https://cloud.google.com/kms/docs/algorithms).
       /// </summary>
@@ -2320,6 +2426,10 @@ namespace Google.Cloud.Kms.V1 {
         /// </summary>
         [pbr::OriginalName("EC_SIGN_SECP256K1_SHA256")] EcSignSecp256K1Sha256 = 31,
         /// <summary>
+        /// HMAC-SHA256 signing with a 256 bit key.
+        /// </summary>
+        [pbr::OriginalName("HMAC_SHA256")] HmacSha256 = 32,
+        /// <summary>
         /// Algorithm representing symmetric encryption by an external key manager.
         /// </summary>
         [pbr::OriginalName("EXTERNAL_SYMMETRIC_ENCRYPTION")] ExternalSymmetricEncryption = 18,
@@ -2350,7 +2460,6 @@ namespace Google.Cloud.Kms.V1 {
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
         /// This version is destroyed, and the key material is no longer stored.
-        /// A version may not leave this state once entered.
         /// </summary>
         [pbr::OriginalName("DESTROYED")] Destroyed = 3,
         /// <summary>
@@ -2436,6 +2545,7 @@ namespace Google.Cloud.Kms.V1 {
       algorithm_ = other.algorithm_;
       PemCrc32C = other.PemCrc32C;
       name_ = other.name_;
+      protectionLevel_ = other.protectionLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2522,6 +2632,20 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "protection_level" field.</summary>
+    public const int ProtectionLevelFieldNumber = 5;
+    private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
+    /// <summary>
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
+      get { return protectionLevel_; }
+      set {
+        protectionLevel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PublicKey);
@@ -2539,6 +2663,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Algorithm != other.Algorithm) return false;
       if (PemCrc32C != other.PemCrc32C) return false;
       if (Name != other.Name) return false;
+      if (ProtectionLevel != other.ProtectionLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2549,6 +2674,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) hash ^= Algorithm.GetHashCode();
       if (pemCrc32C_ != null) hash ^= PemCrc32C.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) hash ^= ProtectionLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2580,6 +2706,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ProtectionLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2604,6 +2734,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ProtectionLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2624,6 +2758,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProtectionLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2649,6 +2786,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
+        ProtectionLevel = other.ProtectionLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2683,6 +2823,10 @@ namespace Google.Cloud.Kms.V1 {
             Name = input.ReadString();
             break;
           }
+          case 40: {
+            ProtectionLevel = (global::Google.Cloud.Kms.V1.ProtectionLevel) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2714,6 +2858,10 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 34: {
             Name = input.ReadString();
+            break;
+          }
+          case 40: {
+            ProtectionLevel = (global::Google.Cloud.Kms.V1.ProtectionLevel) input.ReadEnum();
             break;
           }
         }

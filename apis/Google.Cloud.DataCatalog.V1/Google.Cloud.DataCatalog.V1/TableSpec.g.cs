@@ -151,8 +151,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "view_spec" field.</summary>
     public const int ViewSpecFieldNumber = 2;
     /// <summary>
-    /// Table view specification. This field should only be populated if
-    /// `table_source_type` is `BIGQUERY_VIEW`.
+    /// Table view specification. Populated only if
+    /// the `table_source_type` is `BIGQUERY_VIEW`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.ViewSpec ViewSpec {
@@ -166,8 +166,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "table_spec" field.</summary>
     public const int TableSpecFieldNumber = 3;
     /// <summary>
-    /// Spec of a BigQuery table. This field should only be populated if
-    /// `table_source_type` is `BIGQUERY_TABLE`.
+    /// Specification of a BigQuery table. Populated only if
+    /// the `table_source_type` is `BIGQUERY_TABLE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.TableSpec TableSpec {
@@ -578,7 +578,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Normal BigQuery table spec.
+  /// Normal BigQuery table specification.
   /// </summary>
   public sealed partial class TableSpec : pb::IMessage<TableSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -622,10 +622,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int GroupedEntryFieldNumber = 1;
     private string groupedEntry_ = "";
     /// <summary>
-    /// Output only. If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`,
-    /// `grouped_entry` is the Data Catalog resource name of the date sharded
-    /// grouped entry, for example,
-    /// `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
+    /// Output only. If the table is date-sharded, that is, it matches the `[prefix]YYYYMMDD`
+    /// name pattern, this field is the Data Catalog resource name of the
+    /// date-sharded grouped entry. For example:
+    ///
+    /// `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+    ///
     /// Otherwise, `grouped_entry` is empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -760,9 +762,11 @@ namespace Google.Cloud.DataCatalog.V1 {
   }
 
   /// <summary>
-  /// Spec for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`.
-  /// Context:
-  /// https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding
+  /// Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name
+  /// pattern.
+  ///
+  /// For more information, see [Introduction to partitioned tables]
+  /// (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
   /// </summary>
   public sealed partial class BigQueryDateShardedSpec : pb::IMessage<BigQueryDateShardedSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -809,8 +813,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string dataset_ = "";
     /// <summary>
     /// Output only. The Data Catalog resource name of the dataset entry the current table
-    /// belongs to, for example,
-    /// `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
+    /// belongs to. For example:
+    ///
+    /// `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Dataset {
@@ -824,8 +829,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int TablePrefixFieldNumber = 2;
     private string tablePrefix_ = "";
     /// <summary>
-    /// Output only. The table name prefix of the shards. The name of any given shard is
-    /// `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the
+    /// Output only. The table name prefix of the shards.
+    ///
+    /// The name of any given shard is `[table_prefix]YYYYMMDD`.
+    /// For example, for the `MyTable20180101` shard, the
     /// `table_prefix` is `MyTable`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -97,6 +97,12 @@ namespace Google.Cloud.LifeSciences.V2Beta
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public WorkflowsServiceV2BetaSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public WorkflowsServiceV2BetaClientBuilder()
+        {
+            UseJwtAccessWithScopes = WorkflowsServiceV2BetaClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref WorkflowsServiceV2BetaClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<WorkflowsServiceV2BetaClient> task);
@@ -171,7 +177,19 @@ namespace Google.Cloud.LifeSciences.V2Beta
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="WorkflowsServiceV2BetaClient"/> using the default credentials, endpoint

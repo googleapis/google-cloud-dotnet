@@ -21,6 +21,7 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -186,6 +187,12 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public NetworkEndpointGroupsSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public NetworkEndpointGroupsClientBuilder()
+        {
+            UseJwtAccessWithScopes = NetworkEndpointGroupsClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref NetworkEndpointGroupsClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<NetworkEndpointGroupsClient> task);
@@ -261,7 +268,19 @@ namespace Google.Cloud.Compute.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="NetworkEndpointGroupsClient"/> using the default credentials, endpoint
@@ -325,8 +344,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupAggregatedList AggregatedList(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedList(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -334,18 +353,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupAggregatedList> AggregatedListAsync(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedListAsync(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupAggregatedList> AggregatedListAsync(AggregatedListNetworkEndpointGroupsRequest request, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of network endpoint groups and sorts them by zone.
@@ -353,12 +365,22 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupAggregatedList AggregatedList(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedList(new AggregatedListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -367,24 +389,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupAggregatedList> AggregatedListAsync(string project, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             AggregatedListAsync(new AggregatedListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupAggregatedList> AggregatedListAsync(string project, st::CancellationToken cancellationToken) =>
-            AggregatedListAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Attach a list of network endpoints to the specified network endpoint group.
@@ -853,8 +876,8 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupList List(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> List(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -862,18 +885,9 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupList> ListAsync(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> ListAsync(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupList> ListAsync(ListNetworkEndpointGroupsRequest request, st::CancellationToken cancellationToken) =>
-            ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
@@ -884,13 +898,23 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupList List(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             List(new ListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -902,36 +926,32 @@ namespace Google.Cloud.Compute.V1
         /// <param name="zone">
         /// The name of the zone where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupList> ListAsync(string project, string zone, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListAsync(new ListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the network endpoint group is located. It should comply with RFC1035.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupList> ListAsync(string project, string zone, st::CancellationToken cancellationToken) =>
-            ListAsync(project, zone, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Lists the network endpoints in the specified network endpoint group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupsListNetworkEndpoints ListNetworkEndpoints(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpoints(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -939,18 +959,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupsListNetworkEndpoints> ListNetworkEndpointsAsync(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpointsAsync(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists the network endpoints in the specified network endpoint group.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupsListNetworkEndpoints> ListNetworkEndpointsAsync(ListNetworkEndpointsNetworkEndpointGroupsRequest request, st::CancellationToken cancellationToken) =>
-            ListNetworkEndpointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the network endpoints in the specified network endpoint group.
@@ -967,15 +980,25 @@ namespace Google.Cloud.Compute.V1
         /// <param name="networkEndpointGroupsListEndpointsRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual NetworkEndpointGroupsListNetworkEndpoints ListNetworkEndpoints(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpoints(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListNetworkEndpoints(new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
                 NetworkEndpointGroupsListEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupsListEndpointsRequestResource, nameof(networkEndpointGroupsListEndpointsRequestResource)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -993,36 +1016,28 @@ namespace Google.Cloud.Compute.V1
         /// <param name="networkEndpointGroupsListEndpointsRequestResource">
         /// The body resource for this request
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupsListNetworkEndpoints> ListNetworkEndpointsAsync(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpointsAsync(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListNetworkEndpointsAsync(new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
                 NetworkEndpointGroupsListEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupsListEndpointsRequestResource, nameof(networkEndpointGroupsListEndpointsRequestResource)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists the network endpoints in the specified network endpoint group.
-        /// </summary>
-        /// <param name="project">
-        /// Project ID for this request.
-        /// </param>
-        /// <param name="zone">
-        /// The name of the zone where the network endpoint group is located. It should comply with RFC1035.
-        /// </param>
-        /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group from which you want to generate a list of included network endpoints. It should comply with RFC1035.
-        /// </param>
-        /// <param name="networkEndpointGroupsListEndpointsRequestResource">
-        /// The body resource for this request
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<NetworkEndpointGroupsListNetworkEndpoints> ListNetworkEndpointsAsync(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, st::CancellationToken cancellationToken) =>
-            ListNetworkEndpointsAsync(project, zone, networkEndpointGroup, networkEndpointGroupsListEndpointsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1237,11 +1252,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NetworkEndpointGroupAggregatedList AggregatedList(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedList(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callAggregatedList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListNetworkEndpointGroupsRequest, NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1249,11 +1264,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NetworkEndpointGroupAggregatedList> AggregatedListAsync(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedListAsync(AggregatedListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AggregatedListNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callAggregatedList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListNetworkEndpointGroupsRequest, NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>
@@ -1381,11 +1398,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NetworkEndpointGroupList List(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> List(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callList.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNetworkEndpointGroupsRequest, NetworkEndpointGroupList, NetworkEndpointGroup>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1393,11 +1410,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NetworkEndpointGroupList> ListAsync(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> ListAsync(ListNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callList.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNetworkEndpointGroupsRequest, NetworkEndpointGroupList, NetworkEndpointGroup>(_callList, request, callSettings);
         }
 
         /// <summary>
@@ -1405,11 +1422,11 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override NetworkEndpointGroupsListNetworkEndpoints ListNetworkEndpoints(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.</returns>
+        public override gax::PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpoints(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNetworkEndpointsNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callListNetworkEndpoints.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNetworkEndpointsNetworkEndpointGroupsRequest, NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus>(_callListNetworkEndpoints, request, callSettings);
         }
 
         /// <summary>
@@ -1417,11 +1434,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<NetworkEndpointGroupsListNetworkEndpoints> ListNetworkEndpointsAsync(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpointsAsync(ListNetworkEndpointsNetworkEndpointGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListNetworkEndpointsNetworkEndpointGroupsRequest(ref request, ref callSettings);
-            return _callListNetworkEndpoints.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNetworkEndpointsNetworkEndpointGroupsRequest, NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus>(_callListNetworkEndpoints, request, callSettings);
         }
 
         /// <summary>
@@ -1447,5 +1466,44 @@ namespace Google.Cloud.Compute.V1
             Modify_TestIamPermissionsNetworkEndpointGroupRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+    }
+
+    public partial class AggregatedListNetworkEndpointGroupsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListNetworkEndpointGroupsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListNetworkEndpointsNetworkEndpointGroupsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class NetworkEndpointGroupAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

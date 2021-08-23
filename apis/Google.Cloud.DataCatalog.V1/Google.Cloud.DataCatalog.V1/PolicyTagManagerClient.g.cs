@@ -235,6 +235,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public PolicyTagManagerSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public PolicyTagManagerClientBuilder()
+        {
+            UseJwtAccessWithScopes = PolicyTagManagerClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref PolicyTagManagerClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<PolicyTagManagerClient> task);
@@ -286,7 +292,7 @@ namespace Google.Cloud.DataCatalog.V1
 
     /// <summary>PolicyTagManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Policy Tag Manager API service allows clients to manage their policy tags and
+    /// Policy Tag Manager API service allows you to manage your policy tags and
     /// taxonomies.
     /// 
     /// Policy tags are used to tag BigQuery columns and apply additional access
@@ -313,7 +319,19 @@ namespace Google.Cloud.DataCatalog.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="PolicyTagManagerClient"/> using the default credentials, endpoint and
@@ -370,8 +388,9 @@ namespace Google.Cloud.DataCatalog.V1
         public virtual PolicyTagManager.PolicyTagManagerClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -380,8 +399,9 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -390,8 +410,9 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -400,14 +421,15 @@ namespace Google.Cloud.DataCatalog.V1
             CreateTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -419,14 +441,15 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -438,14 +461,15 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -453,14 +477,15 @@ namespace Google.Cloud.DataCatalog.V1
             CreateTaxonomyAsync(parent, taxonomy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -472,14 +497,15 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -491,14 +517,15 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project that the taxonomy will belong to.
         /// </param>
         /// <param name="taxonomy">
-        /// The taxonomy to be created.
+        /// The taxonomy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -506,7 +533,7 @@ namespace Google.Cloud.DataCatalog.V1
             CreateTaxonomyAsync(parent, taxonomy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
@@ -517,7 +544,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
@@ -528,7 +555,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
@@ -539,13 +566,14 @@ namespace Google.Cloud.DataCatalog.V1
             DeleteTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -556,13 +584,14 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -573,13 +602,14 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -587,13 +617,14 @@ namespace Google.Cloud.DataCatalog.V1
             DeleteTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -604,13 +635,14 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -621,13 +653,14 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the taxonomy to be deleted. All policy tags in
-        /// this taxonomy will also be deleted.
+        /// Required. Resource name of the taxonomy to delete.
+        /// 
+        /// Note: All policy tags in this taxonomy are also deleted.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -635,7 +668,7 @@ namespace Google.Cloud.DataCatalog.V1
             DeleteTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -645,7 +678,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -655,7 +688,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -665,12 +698,12 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="taxonomy">
-        /// The taxonomy to update. Only description, display_name, and activated
-        /// policy types can be updated.
+        /// The taxonomy to update. You can update only its description, display name,
+        /// and activated policy types.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -678,12 +711,12 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTaxonomy(new UpdateTaxonomyRequest { Taxonomy = taxonomy, }, callSettings);
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="taxonomy">
-        /// The taxonomy to update. Only description, display_name, and activated
-        /// policy types can be updated.
+        /// The taxonomy to update. You can update only its description, display name,
+        /// and activated policy types.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -691,12 +724,12 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTaxonomyAsync(new UpdateTaxonomyRequest { Taxonomy = taxonomy, }, callSettings);
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="taxonomy">
-        /// The taxonomy to update. Only description, display_name, and activated
-        /// policy types can be updated.
+        /// The taxonomy to update. You can update only its description, display name,
+        /// and activated policy types.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -704,8 +737,8 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTaxonomyAsync(taxonomy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -714,8 +747,8 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -724,8 +757,8 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project to list the taxonomies of.
@@ -749,8 +782,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project to list the taxonomies of.
@@ -774,8 +807,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project to list the taxonomies of.
@@ -799,8 +832,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the project to list the taxonomies of.
@@ -854,7 +887,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -868,7 +901,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -882,7 +915,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -893,7 +926,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -907,7 +940,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -921,7 +954,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a taxonomy.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested taxonomy.
+        /// Required. Resource name of the taxonomy to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -959,10 +992,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -977,10 +1011,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -995,10 +1030,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1009,10 +1045,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1027,10 +1064,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1045,10 +1083,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
+        /// /&amp;gt;
         /// </param>
         /// <param name="policyTag">
-        /// The policy tag to be created.
+        /// The policy tag to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1056,12 +1095,12 @@ namespace Google.Cloud.DataCatalog.V1
             CreatePolicyTagAsync(parent, policyTag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1070,12 +1109,12 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1084,12 +1123,12 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1098,16 +1137,17 @@ namespace Google.Cloud.DataCatalog.V1
             DeletePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1118,16 +1158,17 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1138,16 +1179,17 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1155,16 +1197,17 @@ namespace Google.Cloud.DataCatalog.V1
             DeletePolicyTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1175,16 +1218,17 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1195,16 +1239,17 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy tag to be deleted. All of its descendant
-        /// policy tags will also be deleted.
+        /// Required. Resource name of the policy tag to delete.
+        /// 
+        /// Note: All of its descendant policy tags are also deleted.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1212,7 +1257,7 @@ namespace Google.Cloud.DataCatalog.V1
             DeletePolicyTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1222,7 +1267,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1232,7 +1277,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1242,12 +1287,12 @@ namespace Google.Cloud.DataCatalog.V1
             UpdatePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="policyTag">
-        /// The policy tag to update. Only the description, display_name, and
-        /// parent_policy_tag fields can be updated.
+        /// The policy tag to update. You can update only its description, display
+        /// name, and parent policy tag fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1258,12 +1303,12 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="policyTag">
-        /// The policy tag to update. Only the description, display_name, and
-        /// parent_policy_tag fields can be updated.
+        /// The policy tag to update. You can update only its description, display
+        /// name, and parent policy tag fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1274,12 +1319,12 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="policyTag">
-        /// The policy tag to update. Only the description, display_name, and
-        /// parent_policy_tag fields can be updated.
+        /// The policy tag to update. You can update only its description, display
+        /// name, and parent policy tag fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1431,7 +1476,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1445,7 +1490,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1459,7 +1504,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1470,7 +1515,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1484,7 +1529,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1498,7 +1543,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Gets a policy tag.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the requested policy tag.
+        /// Required. Resource name of the policy tag.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1560,7 +1605,7 @@ namespace Google.Cloud.DataCatalog.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the permissions that a caller has on a specified policy tag or
+        /// Returns your permissions on a specified policy tag or
         /// taxonomy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1570,7 +1615,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the permissions that a caller has on a specified policy tag or
+        /// Returns your permissions on a specified policy tag or
         /// taxonomy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1580,7 +1625,7 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the permissions that a caller has on a specified policy tag or
+        /// Returns your permissions on a specified policy tag or
         /// taxonomy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1592,7 +1637,7 @@ namespace Google.Cloud.DataCatalog.V1
 
     /// <summary>PolicyTagManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Policy Tag Manager API service allows clients to manage their policy tags and
+    /// Policy Tag Manager API service allows you to manage your policy tags and
     /// taxonomies.
     /// 
     /// Policy tags are used to tag BigQuery columns and apply additional access
@@ -1739,8 +1784,9 @@ namespace Google.Cloud.DataCatalog.V1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1752,8 +1798,9 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Creates a taxonomy in a specified project. The taxonomy is initially empty,
-        /// i.e., does not contain policy tags.
+        /// Creates a taxonomy in a specified project.
+        /// 
+        /// The taxonomy is initially empty, that is, it doesn't contain policy tags.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1765,7 +1812,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
@@ -1779,7 +1826,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a taxonomy. This method will also delete all policy tags in this
+        /// Deletes a taxonomy, including all policy tags in this
         /// taxonomy, their associated policies, and the policy tags references from
         /// BigQuery columns.
         /// </summary>
@@ -1793,7 +1840,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1806,7 +1853,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Updates a taxonomy. This method can update the taxonomy's display name,
+        /// Updates a taxonomy, including its display name,
         /// description, and activated policy types.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1819,8 +1866,8 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1832,8 +1879,8 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Lists all taxonomies in a project in a particular location that the caller
-        /// has permission to view.
+        /// Lists all taxonomies in a project in a particular location that you
+        /// have a permission to view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1893,12 +1940,12 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1910,12 +1957,12 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes:
+        /// Deletes a policy tag together with the following:
         /// 
-        /// * all of its descendant policy tags, if any
-        /// * the policies associated with the policy tag and its descendants
-        /// * references from BigQuery table schema of the policy tag and its
-        /// descendants.
+        /// * All of its descendant policy tags, if any
+        /// * Policies associated with the policy tag and its descendants
+        /// * References from BigQuery table schema of the policy tag and its
+        /// descendants
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1927,7 +1974,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1940,7 +1987,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Updates a policy tag. This method can update the policy tag's display
+        /// Updates a policy tag, including its display
         /// name, description, and parent policy tag.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2049,7 +2096,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Returns the permissions that a caller has on a specified policy tag or
+        /// Returns your permissions on a specified policy tag or
         /// taxonomy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2062,7 +2109,7 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Returns the permissions that a caller has on a specified policy tag or
+        /// Returns your permissions on a specified policy tag or
         /// taxonomy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

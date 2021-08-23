@@ -72,6 +72,11 @@ namespace Google.Cloud.Retail.V2.Tests
                 Uri = "uri3db70593",
                 ReferrerUri = "referrer_uri4d3a0115",
                 PageViewId = "page_view_id77a7ed70",
+                Filter = "filtere47ac9b2",
+                OrderBy = "order_byb4d33ada",
+                Offset = 1472300666,
+                SessionId = "session_id54efc87f",
+                CompletionDetail = new CompletionDetail(),
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -122,6 +127,11 @@ namespace Google.Cloud.Retail.V2.Tests
                 Uri = "uri3db70593",
                 ReferrerUri = "referrer_uri4d3a0115",
                 PageViewId = "page_view_id77a7ed70",
+                Filter = "filtere47ac9b2",
+                OrderBy = "order_byb4d33ada",
+                Offset = 1472300666,
+                SessionId = "session_id54efc87f",
+                CompletionDetail = new CompletionDetail(),
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);

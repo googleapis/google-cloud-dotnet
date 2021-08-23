@@ -29,7 +29,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             string id = args[0];
             string version = args[1];
+            InternalExecute(id, version, quiet: false);
+        }
 
+        internal void InternalExecute(string id, string version, bool quiet)
+        {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
 
@@ -41,18 +45,22 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             var layout = DirectoryLayout.ForApi(id);
             var apiNames = catalog.CreateIdHashSet();
+            // This will still write output, even if "quiet" is true, but that's probably
+            // okay for batch releasing.
             GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
             GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
             GenerateProjectsCommand.RewriteReadme(catalog);
-            GenerateProjectsCommand.RewriteDocsRootIndex(catalog);
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;
             string formatted = catalog.FormatJson();
             File.WriteAllText(ApiCatalog.CatalogPath, formatted);
-            Console.WriteLine("Updated apis.json");
-            Console.WriteLine();
-            Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
+            if (!quiet)
+            {
+                Console.WriteLine("Updated apis.json");
+                Console.WriteLine();
+                Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
+            }
         }
     }
 }

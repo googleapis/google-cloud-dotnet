@@ -297,6 +297,12 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public CloudTasksSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public CloudTasksClientBuilder()
+        {
+            UseJwtAccessWithScopes = CloudTasksClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref CloudTasksClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CloudTasksClient> task);
@@ -371,7 +377,19 @@ namespace Google.Cloud.Tasks.V2Beta3
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudTasksClient"/> using the default credentials, endpoint and

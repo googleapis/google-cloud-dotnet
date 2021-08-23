@@ -43,11 +43,12 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             { ("Grpc", "Grpc.Core") },
             { ("Google.Protobuf", "Google.Protobuf") },
             { ("Google.Api.Gax", "Google.Api.Gax") },
-            // Google.Apis and Google.Apis.Core contain some types in the Google namespace and some in
+            // Google.Apis, Google.Apis.Auth and Google.Apis.Core contain some types in the Google namespace and some in
             // the Google.Apis namespace, then some sub-namespaces. We want to be able to distinguish between
             // those and things like Google.Apis.Storage.V1.
             { ("Google.ApplicationContext", "Google.Apis") },
             { ("Google.GoogleApiException", "Google.Apis") },
+            { ("Google.Apis.Auth", "Google.Apis") },
             { ("Google.Apis.Discovery", "Google.Apis") },
             { ("Google.Apis.Download", "Google.Apis") },
             { ("Google.Apis.ETagAction", "Google.Apis") },
@@ -60,7 +61,6 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             { ("Google.Apis.Upload", "Google.Apis") },
             { ("Google.Apis.Testing", "Google.Apis") },
             { ("Google.Apis.Util", "Google.Apis") },
-            { ("Google.Apis", "Google.Apis") },
             { ("Google.Cloud.Diagnostics.Common", "Google.Cloud.Diagnostics.Common") },
             { ("Google.Cloud.OsLogin.Common", "Google.Cloud.OsLogin.Common") },
             { ("Google.Cloud.DevTools.Source", "Google.Cloud.DevTools.Common") },
@@ -72,6 +72,10 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             { ("Google.Api", "Google.Api.CommonProtos") },
             { ("Google.Rpc", "Google.Api.CommonProtos") },
             { ("Google.Type", "Google.Api.CommonProtos") },
+
+            // The Google.Cloud.Common package doesn't have a version number after it;
+            // it's easiest to just fix that here.
+            { ("Google.Cloud.Common", "Google.Cloud.Common") },
         };
 
         /// <summary>
@@ -109,6 +113,14 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             page = page.Split('/').Last();
 
             package = MaybeAdjustPackage(package, page);
+
+            // DevSite doesn't have REST-based libraries from https://github.com/googleapis/google-api-dotnet-client
+            // other than Google.Apis, Google.Apis.Core and Google.Apis.Auth, all of which are mapped
+            // to Google.Apis as the package (as that's the DevSite "bundle of packages").
+            if (package.StartsWith("Google.Apis") && package != "Google.Apis")
+            {
+                return null;
+            }
 
             return ApiMetadata.IsCloudPackage(package) || DevSiteSupportPackages.Contains(package)
                 ? $"{CloudSitePrefix}{package}/latest/{page}"

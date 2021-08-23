@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.0.0-beta06, released 2021-08-19
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
+# Version 1.0.0-beta05, released 2021-08-10
+
+- [Commit 28a4164](https://github.com/googleapis/google-cloud-dotnet/commit/28a4164): feat: Add EU Regions And Support compliance regime
+
 # Version 1.0.0-beta04, released 2021-04-28
 
 - [Commit 4593a55](https://github.com/googleapis/google-cloud-dotnet/commit/4593a55): feat: add HIPAA and HITRUST compliance regimes

@@ -2,9 +2,27 @@
 
 set -e
 
+ALLOW_BREAKING_CHANGES=
+if [[ $1 == "--allow-breaking-changes" ]]
+then
+  ALLOW_BREAKING_CHANGES=true
+  echo "(Breaking changes allowed during diff)"
+fi
+
+
 # Writes the argument to the console in bold magenta, to make it stand out.
 log_header() {
   echo -e "\e[1;35m$1\e[0m"
+}
+
+# Fails the whole script (exit code 1) if and only if ALLOW_BREAKING_CHANGES isn't true
+maybe_fail() {
+  if [[ $ALLOW_BREAKING_CHANGES != "true" ]]
+  then
+    exit 1
+  else
+    echo -e "\e[1;31mWarning: breaking change detected, but the error has been suppressed by options.\e[0m"
+  fi
 }
 
 # Find the APIs that have changed, excluding ServiceDirectory (which isn't a real API)
@@ -65,4 +83,5 @@ log_header "Checking compatibility with previous releases"
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
-dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility $apis
+
+dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility $apis || maybe_fail

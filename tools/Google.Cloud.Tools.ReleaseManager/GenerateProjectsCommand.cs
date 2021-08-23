@@ -63,8 +63,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "3.4.0";
-        private const string GrpcVersion = "2.38.0";
+        private const string DefaultGaxVersion = "3.5.0";
+        private const string GrpcVersion = "2.38.1";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -78,7 +78,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Grpc.Core.Testing", GrpcVersion },
             { "Grpc.Core.Api", GrpcVersion },
             { "Google.Api.CommonProtos", "2.3.0" },
-            { "Google.Protobuf", "3.15.8" }
+            { "Google.Protobuf", "3.17.3" }
         };
 
         // Hard-coded versions for all analyzer projects.
@@ -92,12 +92,12 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "16.2.0" },
+            { "Microsoft.NET.Test.Sdk", "16.11.0" },
             { "xunit", "2.4.1" },
-            { "xunit.runner.visualstudio", "2.4.1" },
-            { "Xunit.SkippableFact", "1.3.12" },
-            { "Moq", "4.12.0" },
-            { "System.Linq.Async", "4.0.0" },
+            { "xunit.runner.visualstudio", "2.4.3" },
+            { "Xunit.SkippableFact", "1.4.13" },
+            { "Moq", "4.16.1" },
+            { "System.Linq.Async", "5.0.0" },
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
@@ -106,13 +106,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
-            { ConfigureAwaitAnalyzer, "1.0.1" },
+            { ConfigureAwaitAnalyzer, "5.0.0" },
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
         private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
         {
-            { "CommandLineParser", "2.6.0" },
+            { "CommandLineParser", "2.8.0" },
             { "Google.Cloud.SampleUtil", "project"},
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
@@ -121,7 +121,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
         private const string ReferenceAssembliesPackage = "Microsoft.NETFramework.ReferenceAssemblies";
-        private const string ReferenceAssembliesVersion = "1.0.0";
+        private const string ReferenceAssembliesVersion = "1.0.2";
 
         /// <summary>
         /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
@@ -150,7 +150,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Now we know we can parse the API catalog, let's reformat it.
             ReformatApiCatalog(catalog);
             RewriteReadme(catalog);
-            RewriteDocsRootIndex(catalog);
+            RewriteRenovate(catalog);
             HashSet<string> apiNames = catalog.CreateIdHashSet();
 
             foreach (var api in catalog.Apis)
@@ -161,7 +161,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateDocumentationStub(path, api);
                 GenerateSynthConfiguration(path, api);
                 GenerateMetadataFile(path, api);
-            }            
+            }
         }
 
         private static void ReformatApiCatalog(ApiCatalog catalog)
@@ -180,14 +180,97 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var readmePath = Path.Combine(root, "README.md");
-            RewriteApiTable(readmePath, catalog, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
+
+            var existing = File.ReadAllLines(readmePath).ToList();
+
+            string headerLine = "| Package | Latest version | Description |";
+            string headerNext = "|---------|----------------|-------------|";
+            int headerIndex = existing.IndexOf(headerLine);
+
+            if (headerIndex == -1)
+            {
+                throw new UserErrorException($"Header line for library table not found.");
+            }
+
+            var linesBefore = existing.Take(headerIndex).ToList();
+            var linesAfter = existing.Skip(headerIndex).SkipWhile(line => line.StartsWith("|")).ToList();
+
+            var table = new List<string>();
+            table.Add(headerLine);
+            table.Add(headerNext);
+
+            var ambiguousDescriptions = catalog.Apis
+                .Select(api => api.EffectiveListingDescription)
+                .GroupBy(description => description)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
+            foreach (var api in catalog.Apis)
+            {
+                // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
+                // We can cross that bridge when we come to it.
+                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
+                {
+                    continue;
+                }
+                string url = ApiMetadata.IsCloudPackage(api.Id)
+                    ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest"
+                    : $"https://googleapis.dev/dotnet/{api.Id}/latest";
+                string referenceDocsLink = $"[{api.Id}]({url})";
+
+                string packageLinkAndBadge = $"[![NuGet](https://img.shields.io/nuget/v/{api.Id})](https://nuget.org/packages/{api.Id})";
+
+                // Disambiguate direct API packages for the same product.
+                string description = api.EffectiveListingDescription;
+                if (ambiguousDescriptions.Contains(description) && api.ApiVersion is string apiVersion)
+                {
+                    description += $" ({apiVersion} API)";
+                }
+
+                // TODO: It gets awkward when there are multiple description for the same product (e.g. Spanner).
+                // This is basically caused by conflating "link to product docs" with "package description", but
+                // in most cases that simplifies things. Never mind.
+                string productLink = api.ProductUrl is null
+                    ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
+                    : $"[{description}]({api.ProductUrl})";
+                table.Add($"| {referenceDocsLink} | {packageLinkAndBadge} | {productLink} |");
+            }
+
+            var newContent = linesBefore.Concat(table).Concat(linesAfter);
+            if (!existing.SequenceEqual(newContent))
+            {
+                File.WriteAllLines(readmePath, newContent);
+                Console.WriteLine($"Rewrote {Path.GetFileName(readmePath)}");
+            }
         }
 
-        public static void RewriteDocsRootIndex(ApiCatalog catalog)
+        public static void RewriteRenovate(ApiCatalog catalog)
         {
-            var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
-            var indexPath = Path.Combine(root, "index.md");
-            RewriteApiTable(indexPath, catalog, api => $"{api.Id}/index.html");
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var config = new JObject
+            {
+                ["extends"] = new JArray { "config:base" },
+                ["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray()),
+                ["packageRules"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore/**" },
+                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore.", "Microsoft.Extensions." },
+                        ["allowedVersions"] = "<2.2.0"
+                    },
+                    new JObject
+                    {
+                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore3/**" },
+                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore." },
+                        ["allowedVersions"] = "<3.2.0"
+                    },
+                },
+                ["schedule"] = new JArray { "before 8am" },
+                ["timezone"] = "Europe/London"
+            };
+            string json = config.ToString(Formatting.Indented);
+            File.WriteAllText(Path.Combine(root, ".github", "renovate.json"), json);
         }
 
         /// <summary>
@@ -252,70 +335,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
                 }
-            }
-        }
-
-        /// <summary>
-        /// README.md and docs/root/index.md use the same table, but with slightly different links. This
-        /// method is the common code, with a URL provider to indicate how to link to an API's documentation.
-        /// </summary>
-        private static void RewriteApiTable(string path, ApiCatalog catalog, Func<ApiMetadata, string> urlProvider)
-        {
-            var existing = File.ReadAllLines(path).ToList();
-
-            string headerLine = "| Package | Latest version | Description |";
-            string headerNext = "|---------|----------------|-------------|";
-            int headerIndex = existing.IndexOf(headerLine);
-
-            if (headerIndex == -1)
-            {
-                throw new UserErrorException($"Header line for library table not found.");
-            }
-
-            var linesBefore = existing.Take(headerIndex).ToList();
-            var linesAfter = existing.Skip(headerIndex).SkipWhile(line => line.StartsWith("|")).ToList();
-
-            var table = new List<string>();
-            table.Add(headerLine);
-            table.Add(headerNext);
-
-            var ambiguousDescriptions = catalog.Apis
-                .Select(api => api.EffectiveListingDescription)
-                .GroupBy(description => description)
-                .Where(g => g.Count() > 1)
-                .Select(g => g.Key)
-                .ToList();
-            foreach (var api in catalog.Apis)
-            {
-                // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
-                // We can cross that bridge when we come to it.
-                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
-                {
-                    continue;
-                }
-                string packageLink = $"[{api.Id}]({urlProvider(api)})";
-
-                // Disambiguate direct API packages for the same product.
-                string description = api.EffectiveListingDescription;
-                if (ambiguousDescriptions.Contains(description) && api.ApiVersion is string apiVersion)
-                {
-                    description += $" ({apiVersion} API)";
-                }
-
-                // TODO: It gets awkward when there are multiple description for the same product (e.g. Spanner).
-                // This is basically caused by conflating "link to product docs" with "package description", but
-                // in most cases that simplifies things. Never mind.
-                string productLink = api.ProductUrl is null
-                    ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
-                    : $"[{description}]({api.ProductUrl})";
-                table.Add($"| {packageLink} | {api.Version} | {productLink} |");
-            }
-
-            var newContent = linesBefore.Concat(table).Concat(linesAfter);
-            if (!existing.SequenceEqual(newContent))
-            {
-                File.WriteAllLines(path, newContent);
-                Console.WriteLine($"Rewrote {Path.GetFileName(path)}");
             }
         }
 
@@ -460,7 +479,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
-            if (api.Generator == GeneratorType.None || api.Generator == GeneratorType.Regapic)
+            if (api.Generator == GeneratorType.None)
             {
                 return;
             }
@@ -526,7 +545,7 @@ shell.run(
             {
                 distribution_name = api.Id,
                 release_level = releaseLevel,
-                client_documentation = $"https://googleapis.dev/dotnet/{api.Id}/latest",
+                client_documentation = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
                 library_type = api.EffectiveMetadataType
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
@@ -584,8 +603,7 @@ shell.run(
                 new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
                 // Package-related properties
                 new XElement("Description", api.Description),
-                new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
-                new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC")
+                new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
             if (dependencies.ContainsKey(GrpcPackage))
             {

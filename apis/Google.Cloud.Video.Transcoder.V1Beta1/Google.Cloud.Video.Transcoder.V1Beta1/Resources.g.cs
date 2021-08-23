@@ -28,7 +28,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             "cmNlcy5wcm90bxIlZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFi",
             "ZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
             "L2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqQHCgNK",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIscHCgNK",
             "b2ISDAoEbmFtZRgBIAEoCRIWCglpbnB1dF91cmkYAiABKAlCA+BBBBIXCgpv",
             "dXRwdXRfdXJpGAMgASgJQgPgQQQSGgoLdGVtcGxhdGVfaWQYBCABKAlCA+BB",
             "BEgAEkIKBmNvbmZpZxgFIAEoCzIwLmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
@@ -44,160 +44,169 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgpzdGFy",
             "dF90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
             "EjEKCGVuZF90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDGiYKCU9yaWdpblVyaRILCgNobHMYASABKAkSDAoEZGFzaBgCIAEo",
-            "CSJoCg9Qcm9jZXNzaW5nU3RhdGUSIAocUFJPQ0VTU0lOR19TVEFURV9VTlNQ",
-            "RUNJRklFRBAAEgsKB1BFTkRJTkcQARILCgdSVU5OSU5HEAISDQoJU1VDQ0VF",
-            "REVEEAMSCgoGRkFJTEVEEAQ6VupBUwoddHJhbnNjb2Rlci5nb29nbGVhcGlz",
-            "LmNvbS9Kb2ISMnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9qb2JzL3tqb2J9QgwKCmpvYl9jb25maWcizgEKC0pvYlRlbXBsYXRl",
-            "EgwKBG5hbWUYASABKAkSQAoGY29uZmlnGAIgASgLMjAuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5Kb2JDb25maWc6b+pBbAoldHJh",
-            "bnNjb2Rlci5nb29nbGVhcGlzLmNvbS9Kb2JUZW1wbGF0ZRJDcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYlRlbXBsYXRlcy97",
-            "am9iX3RlbXBsYXRlfSLSBQoJSm9iQ29uZmlnEjwKBmlucHV0cxgBIAMoCzIs",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuSW5wdXQS",
-            "QgoJZWRpdF9saXN0GAIgAygLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjFiZXRhMS5FZGl0QXRvbRJTChJlbGVtZW50YXJ5X3N0cmVhbXMY",
-            "AyADKAsyNy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGEx",
-            "LkVsZW1lbnRhcnlTdHJlYW0SRQoLbXV4X3N0cmVhbXMYBCADKAsyMC5nb29n",
-            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLk11eFN0cmVhbRJC",
-            "CgltYW5pZmVzdHMYBSADKAsyLy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
-            "b2Rlci52MWJldGExLk1hbmlmZXN0Ej0KBm91dHB1dBgGIAEoCzItLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuT3V0cHV0EkEKCWFk",
-            "X2JyZWFrcxgHIAMoCzIuLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxYmV0YTEuQWRCcmVhaxJUChJwdWJzdWJfZGVzdGluYXRpb24YCCABKAsy",
-            "OC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLlB1YnN1",
-            "YkRlc3RpbmF0aW9uEkkKDXNwcml0ZV9zaGVldHMYCSADKAsyMi5nb29nbGUu",
-            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLlNwcml0ZVNoZWV0EkAK",
-            "CG92ZXJsYXlzGAogAygLMi4uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
-            "ZXIudjFiZXRhMS5PdmVybGF5InsKBUlucHV0EgsKA2tleRgBIAEoCRILCgN1",
-            "cmkYAiABKAkSWAoUcHJlcHJvY2Vzc2luZ19jb25maWcYAyABKAsyOi5nb29n",
-            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLlByZXByb2Nlc3Np",
-            "bmdDb25maWciFQoGT3V0cHV0EgsKA3VyaRgBIAEoCSKRAQoIRWRpdEF0b20S",
-            "CwoDa2V5GAEgASgJEg4KBmlucHV0cxgCIAMoCRIyCg9lbmRfdGltZV9vZmZz",
-            "ZXQYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SNAoRc3RhcnRf",
-            "dGltZV9vZmZzZXQYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24i",
-            "PwoHQWRCcmVhaxI0ChFzdGFydF90aW1lX29mZnNldBgBIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbiKWAgoQRWxlbWVudGFyeVN0cmVhbRILCgNr",
-            "ZXkYBCABKAkSSgoMdmlkZW9fc3RyZWFtGAEgASgLMjIuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5WaWRlb1N0cmVhbUgAEkoKDGF1",
-            "ZGlvX3N0cmVhbRgCIAEoCzIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
-            "ZGVyLnYxYmV0YTEuQXVkaW9TdHJlYW1IABJICgt0ZXh0X3N0cmVhbRgDIAEo",
-            "CzIxLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuVGV4",
-            "dFN0cmVhbUgAQhMKEWVsZW1lbnRhcnlfc3RyZWFtIvMBCglNdXhTdHJlYW0S",
-            "CwoDa2V5GAEgASgJEhEKCWZpbGVfbmFtZRgCIAEoCRIRCgljb250YWluZXIY",
-            "AyABKAkSGgoSZWxlbWVudGFyeV9zdHJlYW1zGAQgAygJElAKEHNlZ21lbnRf",
-            "c2V0dGluZ3MYBSABKAsyNi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
-            "ci52MWJldGExLlNlZ21lbnRTZXR0aW5ncxJFCgplbmNyeXB0aW9uGAYgASgL",
-            "MjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5FbmNy",
-            "eXB0aW9uIsoBCghNYW5pZmVzdBIRCglmaWxlX25hbWUYASABKAkSTwoEdHlw",
-            "ZRgCIAEoDjI8Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0",
-            "YTEuTWFuaWZlc3QuTWFuaWZlc3RUeXBlQgPgQQISGAoLbXV4X3N0cmVhbXMY",
-            "AyADKAlCA+BBAiJACgxNYW5pZmVzdFR5cGUSHQoZTUFOSUZFU1RfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgcKA0hMUxABEggKBERBU0gQAiIiChFQdWJzdWJEZXN0",
-            "aW5hdGlvbhINCgV0b3BpYxgBIAEoCSLsAgoLU3ByaXRlU2hlZXQSDgoGZm9y",
-            "bWF0GAEgASgJEhgKC2ZpbGVfcHJlZml4GAIgASgJQgPgQQISIAoTc3ByaXRl",
-            "X3dpZHRoX3BpeGVscxgDIAEoBUID4EECEiEKFHNwcml0ZV9oZWlnaHRfcGl4",
-            "ZWxzGAQgASgFQgPgQQISFAoMY29sdW1uX2NvdW50GAUgASgFEhEKCXJvd19j",
-            "b3VudBgGIAEoBRI0ChFzdGFydF90aW1lX29mZnNldBgHIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9lbmRfdGltZV9vZmZzZXQYCCABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFQoLdG90YWxfY291bnQYCSAB",
-            "KAVIABItCghpbnRlcnZhbBgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbkgAQhUKE2V4dHJhY3Rpb25fc3RyYXRlZ3kiuQkKB092ZXJsYXkSQwoF",
-            "aW1hZ2UYASABKAsyNC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52",
-            "MWJldGExLk92ZXJsYXkuSW1hZ2USTAoKYW5pbWF0aW9ucxgCIAMoCzI4Lmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuT3ZlcmxheS5B",
-            "bmltYXRpb24aLAoUTm9ybWFsaXplZENvb3JkaW5hdGUSCQoBeBgBIAEoARIJ",
-            "CgF5GAIgASgBGoEBCgVJbWFnZRIQCgN1cmkYASABKAlCA+BBAhJXCgpyZXNv",
-            "bHV0aW9uGAIgASgLMkMuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djFiZXRhMS5PdmVybGF5Lk5vcm1hbGl6ZWRDb29yZGluYXRlEg0KBWFscGhh",
-            "GAMgASgBGpgBCg9BbmltYXRpb25TdGF0aWMSTwoCeHkYASABKAsyQy5nb29n",
-            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLk92ZXJsYXkuTm9y",
-            "bWFsaXplZENvb3JkaW5hdGUSNAoRc3RhcnRfdGltZV9vZmZzZXQYAiABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24amwIKDUFuaW1hdGlvbkZhZGUS",
-            "TwoJZmFkZV90eXBlGAEgASgOMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjFiZXRhMS5PdmVybGF5LkZhZGVUeXBlQgPgQQISTwoCeHkYAiAB",
-            "KAsyQy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLk92",
-            "ZXJsYXkuTm9ybWFsaXplZENvb3JkaW5hdGUSNAoRc3RhcnRfdGltZV9vZmZz",
-            "ZXQYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoPZW5kX3Rp",
-            "bWVfb2Zmc2V0GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGkQK",
-            "DEFuaW1hdGlvbkVuZBI0ChFzdGFydF90aW1lX29mZnNldBgBIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhqnAgoJQW5pbWF0aW9uEloKEGFuaW1h",
-            "dGlvbl9zdGF0aWMYASABKAsyPi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
-            "b2Rlci52MWJldGExLk92ZXJsYXkuQW5pbWF0aW9uU3RhdGljSAASVgoOYW5p",
-            "bWF0aW9uX2ZhZGUYAiABKAsyPC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
-            "b2Rlci52MWJldGExLk92ZXJsYXkuQW5pbWF0aW9uRmFkZUgAElQKDWFuaW1h",
-            "dGlvbl9lbmQYAyABKAsyOy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
-            "ci52MWJldGExLk92ZXJsYXkuQW5pbWF0aW9uRW5kSABCEAoOYW5pbWF0aW9u",
-            "X3R5cGUiQAoIRmFkZVR5cGUSGQoVRkFERV9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "CwoHRkFERV9JThABEgwKCEZBREVfT1VUEAIiuwQKE1ByZXByb2Nlc3NpbmdD",
-            "b25maWcSTwoFY29sb3IYASABKAsyQC5nb29nbGUuY2xvdWQudmlkZW8udHJh",
-            "bnNjb2Rlci52MWJldGExLlByZXByb2Nlc3NpbmdDb25maWcuQ29sb3ISUwoH",
-            "ZGVub2lzZRgCIAEoCzJCLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxYmV0YTEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5EZW5vaXNlElMKB2RlYmxv",
-            "Y2sYAyABKAsyQi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJl",
-            "dGExLlByZXByb2Nlc3NpbmdDb25maWcuRGVibG9jaxJPCgVhdWRpbxgEIAEo",
-            "CzJALmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuUHJl",
-            "cHJvY2Vzc2luZ0NvbmZpZy5BdWRpbxpBCgVDb2xvchISCgpzYXR1cmF0aW9u",
-            "GAEgASgBEhAKCGNvbnRyYXN0GAIgASgBEhIKCmJyaWdodG5lc3MYAyABKAEa",
-            "KQoHRGVub2lzZRIQCghzdHJlbmd0aBgBIAEoARIMCgR0dW5lGAIgASgJGiwK",
-            "B0RlYmxvY2sSEAoIc3RyZW5ndGgYASABKAESDwoHZW5hYmxlZBgCIAEoCBo8",
-            "CgVBdWRpbxIMCgRsdWZzGAEgASgBEhIKCmhpZ2hfYm9vc3QYAiABKAgSEQoJ",
-            "bG93X2Jvb3N0GAMgASgIIoIECgtWaWRlb1N0cmVhbRINCgVjb2RlYxgBIAEo",
-            "CRIPCgdwcm9maWxlGAIgASgJEgwKBHR1bmUYAyABKAkSDgoGcHJlc2V0GAQg",
-            "ASgJEhUKDWhlaWdodF9waXhlbHMYBSABKAUSFAoMd2lkdGhfcGl4ZWxzGAYg",
-            "ASgFEhQKDHBpeGVsX2Zvcm1hdBgHIAEoCRIYCgtiaXRyYXRlX2JwcxgIIAEo",
-            "BUID4EECEhkKEXJhdGVfY29udHJvbF9tb2RlGAkgASgJEhcKD2VuYWJsZV90",
-            "d29fcGFzcxgKIAEoCBIRCgljcmZfbGV2ZWwYCyABKAUSFQoNdmJ2X3NpemVf",
-            "Yml0cxgMIAEoBRIZChF2YnZfZnVsbG5lc3NfYml0cxgNIAEoBRIWCg5hbGxv",
-            "d19vcGVuX2dvcBgOIAEoCBIZCg9nb3BfZnJhbWVfY291bnQYDyABKAVIABIx",
-            "Cgxnb3BfZHVyYXRpb24YECABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b25IABIVCg1lbnRyb3B5X2NvZGVyGBEgASgJEhEKCWJfcHlyYW1pZBgSIAEo",
-            "CBIVCg1iX2ZyYW1lX2NvdW50GBMgASgFEhcKCmZyYW1lX3JhdGUYFCABKAFC",
-            "A+BBAhITCgthcV9zdHJlbmd0aBgVIAEoAUIKCghnb3BfbW9kZSKsBAoLQXVk",
-            "aW9TdHJlYW0SDQoFY29kZWMYASABKAkSGAoLYml0cmF0ZV9icHMYAiABKAVC",
-            "A+BBAhIVCg1jaGFubmVsX2NvdW50GAMgASgFEhYKDmNoYW5uZWxfbGF5b3V0",
-            "GAQgAygJEk0KB21hcHBpbmcYBSADKAsyPC5nb29nbGUuY2xvdWQudmlkZW8u",
-            "dHJhbnNjb2Rlci52MWJldGExLkF1ZGlvU3RyZWFtLkF1ZGlvQXRvbRIZChFz",
-            "YW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRraAgoJQXVkaW9BdG9tEhAKA2tleRgB",
-            "IAEoCUID4EECElsKCGNoYW5uZWxzGAIgAygLMkkuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLnRyYW5zY29kZXIudjFiZXRhMS5BdWRpb1N0cmVhbS5BdWRpb0F0b20u",
-            "QXVkaW9DaGFubmVsGt0BCgxBdWRpb0NoYW5uZWwSawoGaW5wdXRzGAIgAygL",
-            "MlsuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5BdWRp",
-            "b1N0cmVhbS5BdWRpb0F0b20uQXVkaW9DaGFubmVsLkF1ZGlvQ2hhbm5lbElu",
-            "cHV0GmAKEUF1ZGlvQ2hhbm5lbElucHV0EhAKA2tleRgBIAEoCUID4EECEhIK",
-            "BXRyYWNrGAIgASgFQgPgQQISFAoHY2hhbm5lbBgDIAEoBUID4EECEg8KB2dh",
-            "aW5fZGIYBCABKAEirAIKClRleHRTdHJlYW0SDQoFY29kZWMYASABKAkSGgoN",
-            "bGFuZ3VhZ2VfY29kZRgCIAEoCUID4EECEksKB21hcHBpbmcYAyADKAsyOi5n",
-            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLlRleHRTdHJl",
-            "YW0uVGV4dEF0b20apQEKCFRleHRBdG9tEhAKA2tleRgBIAEoCUID4EECElQK",
-            "BmlucHV0cxgCIAMoCzJELmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxYmV0YTEuVGV4dFN0cmVhbS5UZXh0QXRvbS5UZXh0SW5wdXQaMQoJVGV4",
-            "dElucHV0EhAKA2tleRgBIAEoCUID4EECEhIKBXRyYWNrGAIgASgFQgPgQQIi",
-            "aAoPU2VnbWVudFNldHRpbmdzEjMKEHNlZ21lbnRfZHVyYXRpb24YASABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SIAoTaW5kaXZpZHVhbF9zZWdt",
-            "ZW50cxgDIAEoCEID4EECIuwDCgpFbmNyeXB0aW9uEhAKA2tleRgBIAEoCUID",
-            "4EECEg8KAml2GAIgASgJQgPgQQISVQoHYWVzXzEyOBgDIAEoCzJCLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuRW5jcnlwdGlvbi5B",
-            "ZXMxMjhFbmNyeXB0aW9uSAASWwoKc2FtcGxlX2FlcxgEIAEoCzJFLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuRW5jcnlwdGlvbi5T",
-            "YW1wbGVBZXNFbmNyeXB0aW9uSAASWwoJbXBlZ19jZW5jGAUgASgLMkYuZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5FbmNyeXB0aW9u",
-            "Lk1wZWdDb21tb25FbmNyeXB0aW9uSAAaKAoQQWVzMTI4RW5jcnlwdGlvbhIU",
-            "CgdrZXlfdXJpGAEgASgJQgPgQQIaKwoTU2FtcGxlQWVzRW5jcnlwdGlvbhIU",
-            "CgdrZXlfdXJpGAEgASgJQgPgQQIaQAoUTXBlZ0NvbW1vbkVuY3J5cHRpb24S",
-            "EwoGa2V5X2lkGAEgASgJQgPgQQISEwoGc2NoZW1lGAIgASgJQgPgQQJCEQoP",
-            "ZW5jcnlwdGlvbl9tb2RlIlEKCFByb2dyZXNzEhAKCGFuYWx5emVkGAEgASgB",
-            "Eg8KB2VuY29kZWQYAiABKAESEAoIdXBsb2FkZWQYAyABKAESEAoIbm90aWZp",
-            "ZWQYBCABKAEiJAoNRmFpbHVyZURldGFpbBITCgtkZXNjcmlwdGlvbhgBIAEo",
-            "CUKOAQopY29tLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0",
-            "YTFCDlJlc291cmNlc1Byb3RvUAFaT2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdmlkZW8vdHJhbnNjb2Rlci92MWJldGEx",
-            "O3RyYW5zY29kZXJiBnByb3RvMw=="));
+            "cEID4EEDEiEKGXR0bF9hZnRlcl9jb21wbGV0aW9uX2RheXMYDyABKAUaJgoJ",
+            "T3JpZ2luVXJpEgsKA2hscxgBIAEoCRIMCgRkYXNoGAIgASgJImgKD1Byb2Nl",
+            "c3NpbmdTdGF0ZRIgChxQUk9DRVNTSU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHUEVORElORxABEgsKB1JVTk5JTkcQAhINCglTVUNDRUVERUQQAxIKCgZG",
+            "QUlMRUQQBDpW6kFTCh10cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYhIy",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMv",
+            "e2pvYn1CDAoKam9iX2NvbmZpZyLOAQoLSm9iVGVtcGxhdGUSDAoEbmFtZRgB",
+            "IAEoCRJACgZjb25maWcYAiABKAsyMC5nb29nbGUuY2xvdWQudmlkZW8udHJh",
+            "bnNjb2Rlci52MWJldGExLkpvYkNvbmZpZzpv6kFsCiV0cmFuc2NvZGVyLmdv",
+            "b2dsZWFwaXMuY29tL0pvYlRlbXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vam9iVGVtcGxhdGVzL3tqb2JfdGVtcGxh",
+            "dGV9ItIFCglKb2JDb25maWcSPAoGaW5wdXRzGAEgAygLMiwuZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5JbnB1dBJCCgllZGl0X2xp",
+            "c3QYAiADKAsyLy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJl",
+            "dGExLkVkaXRBdG9tElMKEmVsZW1lbnRhcnlfc3RyZWFtcxgDIAMoCzI3Lmdv",
+            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuRWxlbWVudGFy",
+            "eVN0cmVhbRJFCgttdXhfc3RyZWFtcxgEIAMoCzIwLmdvb2dsZS5jbG91ZC52",
+            "aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuTXV4U3RyZWFtEkIKCW1hbmlmZXN0",
+            "cxgFIAMoCzIvLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0",
+            "YTEuTWFuaWZlc3QSPQoGb3V0cHV0GAYgASgLMi0uZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjFiZXRhMS5PdXRwdXQSQQoJYWRfYnJlYWtzGAcg",
+            "AygLMi4uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5B",
+            "ZEJyZWFrElQKEnB1YnN1Yl9kZXN0aW5hdGlvbhgIIAEoCzI4Lmdvb2dsZS5j",
+            "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuUHVic3ViRGVzdGluYXRp",
+            "b24SSQoNc3ByaXRlX3NoZWV0cxgJIAMoCzIyLmdvb2dsZS5jbG91ZC52aWRl",
+            "by50cmFuc2NvZGVyLnYxYmV0YTEuU3ByaXRlU2hlZXQSQAoIb3ZlcmxheXMY",
+            "CiADKAsyLi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGEx",
+            "Lk92ZXJsYXkiewoFSW5wdXQSCwoDa2V5GAEgASgJEgsKA3VyaRgCIAEoCRJY",
+            "ChRwcmVwcm9jZXNzaW5nX2NvbmZpZxgDIAEoCzI6Lmdvb2dsZS5jbG91ZC52",
+            "aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuUHJlcHJvY2Vzc2luZ0NvbmZpZyIV",
+            "CgZPdXRwdXQSCwoDdXJpGAEgASgJIpEBCghFZGl0QXRvbRILCgNrZXkYASAB",
+            "KAkSDgoGaW5wdXRzGAIgAygJEjIKD2VuZF90aW1lX29mZnNldBgDIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzdGFydF90aW1lX29mZnNl",
+            "dBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI/CgdBZEJyZWFr",
+            "EjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uIpYCChBFbGVtZW50YXJ5U3RyZWFtEgsKA2tleRgEIAEoCRJK",
+            "Cgx2aWRlb19zdHJlYW0YASABKAsyMi5nb29nbGUuY2xvdWQudmlkZW8udHJh",
+            "bnNjb2Rlci52MWJldGExLlZpZGVvU3RyZWFtSAASSgoMYXVkaW9fc3RyZWFt",
+            "GAIgASgLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRh",
+            "MS5BdWRpb1N0cmVhbUgAEkgKC3RleHRfc3RyZWFtGAMgASgLMjEuZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5UZXh0U3RyZWFtSABC",
+            "EwoRZWxlbWVudGFyeV9zdHJlYW0i8wEKCU11eFN0cmVhbRILCgNrZXkYASAB",
+            "KAkSEQoJZmlsZV9uYW1lGAIgASgJEhEKCWNvbnRhaW5lchgDIAEoCRIaChJl",
+            "bGVtZW50YXJ5X3N0cmVhbXMYBCADKAkSUAoQc2VnbWVudF9zZXR0aW5ncxgF",
+            "IAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEu",
+            "U2VnbWVudFNldHRpbmdzEkUKCmVuY3J5cHRpb24YBiABKAsyMS5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLkVuY3J5cHRpb24iygEK",
+            "CE1hbmlmZXN0EhEKCWZpbGVfbmFtZRgBIAEoCRJPCgR0eXBlGAIgASgOMjwu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5NYW5pZmVz",
+            "dC5NYW5pZmVzdFR5cGVCA+BBAhIYCgttdXhfc3RyZWFtcxgDIAMoCUID4EEC",
+            "IkAKDE1hbmlmZXN0VHlwZRIdChlNQU5JRkVTVF9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASBwoDSExTEAESCAoEREFTSBACIiIKEVB1YnN1YkRlc3RpbmF0aW9uEg0K",
+            "BXRvcGljGAEgASgJIv0CCgtTcHJpdGVTaGVldBIOCgZmb3JtYXQYASABKAkS",
+            "GAoLZmlsZV9wcmVmaXgYAiABKAlCA+BBAhIgChNzcHJpdGVfd2lkdGhfcGl4",
+            "ZWxzGAMgASgFQgPgQQISIQoUc3ByaXRlX2hlaWdodF9waXhlbHMYBCABKAVC",
+            "A+BBAhIUCgxjb2x1bW5fY291bnQYBSABKAUSEQoJcm93X2NvdW50GAYgASgF",
+            "EjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAcgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uEjIKD2VuZF90aW1lX29mZnNldBgIIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbhIVCgt0b3RhbF9jb3VudBgJIAEoBUgAEi0KCGlu",
+            "dGVydmFsGAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASDwoH",
+            "cXVhbGl0eRgLIAEoBUIVChNleHRyYWN0aW9uX3N0cmF0ZWd5IrkJCgdPdmVy",
+            "bGF5EkMKBWltYWdlGAEgASgLMjQuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
+            "Y29kZXIudjFiZXRhMS5PdmVybGF5LkltYWdlEkwKCmFuaW1hdGlvbnMYAiAD",
+            "KAsyOC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLk92",
+            "ZXJsYXkuQW5pbWF0aW9uGiwKFE5vcm1hbGl6ZWRDb29yZGluYXRlEgkKAXgY",
+            "ASABKAESCQoBeRgCIAEoARqBAQoFSW1hZ2USEAoDdXJpGAEgASgJQgPgQQIS",
+            "VwoKcmVzb2x1dGlvbhgCIAEoCzJDLmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
+            "c2NvZGVyLnYxYmV0YTEuT3ZlcmxheS5Ob3JtYWxpemVkQ29vcmRpbmF0ZRIN",
+            "CgVhbHBoYRgDIAEoARqYAQoPQW5pbWF0aW9uU3RhdGljEk8KAnh5GAEgASgL",
+            "MkMuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5PdmVy",
+            "bGF5Lk5vcm1hbGl6ZWRDb29yZGluYXRlEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0",
+            "GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGpsCCg1BbmltYXRp",
+            "b25GYWRlEk8KCWZhZGVfdHlwZRgBIAEoDjI3Lmdvb2dsZS5jbG91ZC52aWRl",
+            "by50cmFuc2NvZGVyLnYxYmV0YTEuT3ZlcmxheS5GYWRlVHlwZUID4EECEk8K",
+            "Anh5GAIgASgLMkMuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFi",
+            "ZXRhMS5PdmVybGF5Lk5vcm1hbGl6ZWRDb29yZGluYXRlEjQKEXN0YXJ0X3Rp",
+            "bWVfb2Zmc2V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIK",
+            "D2VuZF90aW1lX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhpECgxBbmltYXRpb25FbmQSNAoRc3RhcnRfdGltZV9vZmZzZXQYASAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24apwIKCUFuaW1hdGlvbhJa",
+            "ChBhbmltYXRpb25fc3RhdGljGAEgASgLMj4uZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnRyYW5zY29kZXIudjFiZXRhMS5PdmVybGF5LkFuaW1hdGlvblN0YXRpY0gA",
+            "ElYKDmFuaW1hdGlvbl9mYWRlGAIgASgLMjwuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnRyYW5zY29kZXIudjFiZXRhMS5PdmVybGF5LkFuaW1hdGlvbkZhZGVIABJU",
+            "Cg1hbmltYXRpb25fZW5kGAMgASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
+            "YW5zY29kZXIudjFiZXRhMS5PdmVybGF5LkFuaW1hdGlvbkVuZEgAQhAKDmFu",
+            "aW1hdGlvbl90eXBlIkAKCEZhZGVUeXBlEhkKFUZBREVfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgsKB0ZBREVfSU4QARIMCghGQURFX09VVBACIpIHChNQcmVwcm9j",
+            "ZXNzaW5nQ29uZmlnEk8KBWNvbG9yGAEgASgLMkAuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjFiZXRhMS5QcmVwcm9jZXNzaW5nQ29uZmlnLkNv",
+            "bG9yElMKB2Rlbm9pc2UYAiABKAsyQi5nb29nbGUuY2xvdWQudmlkZW8udHJh",
+            "bnNjb2Rlci52MWJldGExLlByZXByb2Nlc3NpbmdDb25maWcuRGVub2lzZRJT",
+            "CgdkZWJsb2NrGAMgASgLMkIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
+            "ZXIudjFiZXRhMS5QcmVwcm9jZXNzaW5nQ29uZmlnLkRlYmxvY2sSTwoFYXVk",
+            "aW8YBCABKAsyQC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJl",
+            "dGExLlByZXByb2Nlc3NpbmdDb25maWcuQXVkaW8STQoEY3JvcBgFIAEoCzI/",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuUHJlcHJv",
+            "Y2Vzc2luZ0NvbmZpZy5Dcm9wEksKA3BhZBgGIAEoCzI+Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuUHJlcHJvY2Vzc2luZ0NvbmZp",
+            "Zy5QYWQaQQoFQ29sb3ISEgoKc2F0dXJhdGlvbhgBIAEoARIQCghjb250cmFz",
+            "dBgCIAEoARISCgpicmlnaHRuZXNzGAMgASgBGikKB0Rlbm9pc2USEAoIc3Ry",
+            "ZW5ndGgYASABKAESDAoEdHVuZRgCIAEoCRosCgdEZWJsb2NrEhAKCHN0cmVu",
+            "Z3RoGAEgASgBEg8KB2VuYWJsZWQYAiABKAgaPAoFQXVkaW8SDAoEbHVmcxgB",
+            "IAEoARISCgpoaWdoX2Jvb3N0GAIgASgIEhEKCWxvd19ib29zdBgDIAEoCBpc",
+            "CgRDcm9wEhIKCnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgC",
+            "IAEoBRITCgtsZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCAB",
+            "KAUaWwoDUGFkEhIKCnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVs",
+            "cxgCIAEoBRITCgtsZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMY",
+            "BCABKAUiggQKC1ZpZGVvU3RyZWFtEg0KBWNvZGVjGAEgASgJEg8KB3Byb2Zp",
+            "bGUYAiABKAkSDAoEdHVuZRgDIAEoCRIOCgZwcmVzZXQYBCABKAkSFQoNaGVp",
+            "Z2h0X3BpeGVscxgFIAEoBRIUCgx3aWR0aF9waXhlbHMYBiABKAUSFAoMcGl4",
+            "ZWxfZm9ybWF0GAcgASgJEhgKC2JpdHJhdGVfYnBzGAggASgFQgPgQQISGQoR",
+            "cmF0ZV9jb250cm9sX21vZGUYCSABKAkSFwoPZW5hYmxlX3R3b19wYXNzGAog",
+            "ASgIEhEKCWNyZl9sZXZlbBgLIAEoBRIVCg12YnZfc2l6ZV9iaXRzGAwgASgF",
+            "EhkKEXZidl9mdWxsbmVzc19iaXRzGA0gASgFEhYKDmFsbG93X29wZW5fZ29w",
+            "GA4gASgIEhkKD2dvcF9mcmFtZV9jb3VudBgPIAEoBUgAEjEKDGdvcF9kdXJh",
+            "dGlvbhgQIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhUKDWVu",
+            "dHJvcHlfY29kZXIYESABKAkSEQoJYl9weXJhbWlkGBIgASgIEhUKDWJfZnJh",
+            "bWVfY291bnQYEyABKAUSFwoKZnJhbWVfcmF0ZRgUIAEoAUID4EECEhMKC2Fx",
+            "X3N0cmVuZ3RoGBUgASgBQgoKCGdvcF9tb2RlIqwECgtBdWRpb1N0cmVhbRIN",
+            "CgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRlX2JwcxgCIAEoBUID4EECEhUKDWNo",
+            "YW5uZWxfY291bnQYAyABKAUSFgoOY2hhbm5lbF9sYXlvdXQYBCADKAkSTQoH",
+            "bWFwcGluZxgFIAMoCzI8Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
+            "LnYxYmV0YTEuQXVkaW9TdHJlYW0uQXVkaW9BdG9tEhkKEXNhbXBsZV9yYXRl",
+            "X2hlcnR6GAYgASgFGtoCCglBdWRpb0F0b20SEAoDa2V5GAEgASgJQgPgQQIS",
+            "WwoIY2hhbm5lbHMYAiADKAsySS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
+            "b2Rlci52MWJldGExLkF1ZGlvU3RyZWFtLkF1ZGlvQXRvbS5BdWRpb0NoYW5u",
+            "ZWwa3QEKDEF1ZGlvQ2hhbm5lbBJrCgZpbnB1dHMYAiADKAsyWy5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MWJldGExLkF1ZGlvU3RyZWFtLkF1",
+            "ZGlvQXRvbS5BdWRpb0NoYW5uZWwuQXVkaW9DaGFubmVsSW5wdXQaYAoRQXVk",
+            "aW9DaGFubmVsSW5wdXQSEAoDa2V5GAEgASgJQgPgQQISEgoFdHJhY2sYAiAB",
+            "KAVCA+BBAhIUCgdjaGFubmVsGAMgASgFQgPgQQISDwoHZ2Fpbl9kYhgEIAEo",
+            "ASKsAgoKVGV4dFN0cmVhbRINCgVjb2RlYxgBIAEoCRIaCg1sYW5ndWFnZV9j",
+            "b2RlGAIgASgJQgPgQQISSwoHbWFwcGluZxgDIAMoCzI6Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby50cmFuc2NvZGVyLnYxYmV0YTEuVGV4dFN0cmVhbS5UZXh0QXRv",
+            "bRqlAQoIVGV4dEF0b20SEAoDa2V5GAEgASgJQgPgQQISVAoGaW5wdXRzGAIg",
+            "AygLMkQuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMS5U",
+            "ZXh0U3RyZWFtLlRleHRBdG9tLlRleHRJbnB1dBoxCglUZXh0SW5wdXQSEAoD",
+            "a2V5GAEgASgJQgPgQQISEgoFdHJhY2sYAiABKAVCA+BBAiJoCg9TZWdtZW50",
+            "U2V0dGluZ3MSMwoQc2VnbWVudF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbhIgChNpbmRpdmlkdWFsX3NlZ21lbnRzGAMgASgI",
+            "QgPgQQIi7AMKCkVuY3J5cHRpb24SEAoDa2V5GAEgASgJQgPgQQISDwoCaXYY",
+            "AiABKAlCA+BBAhJVCgdhZXNfMTI4GAMgASgLMkIuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjFiZXRhMS5FbmNyeXB0aW9uLkFlczEyOEVuY3J5",
+            "cHRpb25IABJbCgpzYW1wbGVfYWVzGAQgASgLMkUuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjFiZXRhMS5FbmNyeXB0aW9uLlNhbXBsZUFlc0Vu",
+            "Y3J5cHRpb25IABJbCgltcGVnX2NlbmMYBSABKAsyRi5nb29nbGUuY2xvdWQu",
+            "dmlkZW8udHJhbnNjb2Rlci52MWJldGExLkVuY3J5cHRpb24uTXBlZ0NvbW1v",
+            "bkVuY3J5cHRpb25IABooChBBZXMxMjhFbmNyeXB0aW9uEhQKB2tleV91cmkY",
+            "ASABKAlCA+BBAhorChNTYW1wbGVBZXNFbmNyeXB0aW9uEhQKB2tleV91cmkY",
+            "ASABKAlCA+BBAhpAChRNcGVnQ29tbW9uRW5jcnlwdGlvbhITCgZrZXlfaWQY",
+            "ASABKAlCA+BBAhITCgZzY2hlbWUYAiABKAlCA+BBAkIRCg9lbmNyeXB0aW9u",
+            "X21vZGUiUQoIUHJvZ3Jlc3MSEAoIYW5hbHl6ZWQYASABKAESDwoHZW5jb2Rl",
+            "ZBgCIAEoARIQCgh1cGxvYWRlZBgDIAEoARIQCghub3RpZmllZBgEIAEoASIk",
+            "Cg1GYWlsdXJlRGV0YWlsEhMKC2Rlc2NyaXB0aW9uGAEgASgJQo4BCiljb20u",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFiZXRhMUIOUmVzb3Vy",
+            "Y2VzUHJvdG9QAVpPZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC92aWRlby90cmFuc2NvZGVyL3YxYmV0YTE7dHJhbnNjb2Rl",
+            "cmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job), global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Parser, new[]{ "Name", "InputUri", "OutputUri", "TemplateId", "Config", "Priority", "OriginUri", "State", "Progress", "FailureReason", "FailureDetails", "CreateTime", "StartTime", "EndTime" }, new[]{ "JobConfig" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.ProcessingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri), global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri.Parser, new[]{ "Hls", "Dash" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job), global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Parser, new[]{ "Name", "InputUri", "OutputUri", "TemplateId", "Config", "Priority", "OriginUri", "State", "Progress", "FailureReason", "FailureDetails", "CreateTime", "StartTime", "EndTime", "TtlAfterCompletionDays" }, new[]{ "JobConfig" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.ProcessingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri), global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri.Parser, new[]{ "Hls", "Dash" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate), global::Google.Cloud.Video.Transcoder.V1Beta1.JobTemplate.Parser, new[]{ "Name", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.JobConfig), global::Google.Cloud.Video.Transcoder.V1Beta1.JobConfig.Parser, new[]{ "Inputs", "EditList", "ElementaryStreams", "MuxStreams", "Manifests", "Output", "AdBreaks", "PubsubDestination", "SpriteSheets", "Overlays" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Input), global::Google.Cloud.Video.Transcoder.V1Beta1.Input.Parser, new[]{ "Key", "Uri", "PreprocessingConfig" }, null, null, null, null),
@@ -208,17 +217,19 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.MuxStream), global::Google.Cloud.Video.Transcoder.V1Beta1.MuxStream.Parser, new[]{ "Key", "FileName", "Container", "ElementaryStreams", "SegmentSettings", "Encryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Manifest), global::Google.Cloud.Video.Transcoder.V1Beta1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams" }, null, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Manifest.Types.ManifestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PubsubDestination), global::Google.Cloud.Video.Transcoder.V1Beta1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.SpriteSheet), global::Google.Cloud.Video.Transcoder.V1Beta1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "StartTimeOffset", "EndTimeOffset", "TotalCount", "Interval" }, new[]{ "ExtractionStrategy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.SpriteSheet), global::Google.Cloud.Video.Transcoder.V1Beta1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "StartTimeOffset", "EndTimeOffset", "TotalCount", "Interval", "Quality" }, new[]{ "ExtractionStrategy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Parser, new[]{ "Image", "Animations" }, null, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.FadeType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.NormalizedCoordinate), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.NormalizedCoordinate.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.Image), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.Image.Parser, new[]{ "Uri", "Resolution", "Alpha" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationStatic), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationStatic.Parser, new[]{ "Xy", "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationFade), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationFade.Parser, new[]{ "FadeType", "Xy", "StartTimeOffset", "EndTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationEnd), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.AnimationEnd.Parser, new[]{ "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.Animation), global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.Animation.Parser, new[]{ "AnimationStatic", "AnimationFade", "AnimationEnd" }, new[]{ "AnimationType" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Parser, new[]{ "Color", "Denoise", "Deblock", "Audio" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Color), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Color.Parser, new[]{ "Saturation", "Contrast", "Brightness" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Parser, new[]{ "Color", "Denoise", "Deblock", "Audio", "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Color), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Color.Parser, new[]{ "Saturation", "Contrast", "Brightness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Denoise), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Denoise.Parser, new[]{ "Strength", "Tune" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Deblock), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Deblock.Parser, new[]{ "Strength", "Enabled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs", "HighBoost", "LowBoost" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs", "HighBoost", "LowBoost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.VideoStream), global::Google.Cloud.Video.Transcoder.V1Beta1.VideoStream.Parser, new[]{ "Codec", "Profile", "Tune", "Preset", "HeightPixels", "WidthPixels", "PixelFormat", "BitrateBps", "RateControlMode", "EnableTwoPass", "CrfLevel", "VbvSizeBits", "VbvFullnessBits", "AllowOpenGop", "GopFrameCount", "GopDuration", "EntropyCoder", "BPyramid", "BFrameCount", "FrameRate", "AqStrength" }, new[]{ "GopMode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream), global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Parser, new[]{ "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom), global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom.Parser, new[]{ "Key", "Channels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom.Types.AudioChannel), global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom.Types.AudioChannel.Parser, new[]{ "Inputs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput), global::Google.Cloud.Video.Transcoder.V1Beta1.AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput.Parser, new[]{ "Key", "Track", "Channel", "GainDb" }, null, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream), global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream.Parser, new[]{ "Codec", "LanguageCode", "Mapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream.Types.TextAtom), global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream.Types.TextAtom.Parser, new[]{ "Key", "Inputs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream.Types.TextAtom.Types.TextInput), global::Google.Cloud.Video.Transcoder.V1Beta1.TextStream.Types.TextAtom.Types.TextInput.Parser, new[]{ "Key", "Track" }, null, null, null, null)})}),
@@ -278,6 +289,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      ttlAfterCompletionDays_ = other.ttlAfterCompletionDays_;
       switch (other.JobConfigCase) {
         case JobConfigOneofCase.TemplateId:
           TemplateId = other.TemplateId;
@@ -316,8 +328,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     /// <summary>
     /// Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
     /// `Job.config.inputs` or `JobTemplate.config.inputs` when using template.
-    /// URI of the media. It must be stored in Cloud Storage. For example,
-    /// `gs://bucket/inputs/file.mp4`.
+    /// URI of the media. Input files must be at least 5 seconds in duration and
+    /// stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InputUri {
@@ -398,6 +410,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     private global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri originUri_;
     /// <summary>
     /// Output only. The origin URI.
+    /// &lt;aside class="note">&lt;b>Note&lt;/b>: This feature is not yet available.&lt;/aside>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Video.Transcoder.V1Beta1.Job.Types.OriginUri OriginUri {
@@ -427,6 +440,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     /// <summary>
     /// Output only. Estimated fractional progress, from `0` to `1` for each
     /// step.
+    /// &lt;aside class="note">&lt;b>Note&lt;/b>: This feature is not yet available.&lt;/aside>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Video.Transcoder.V1Beta1.Progress Progress {
@@ -459,6 +473,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     /// <summary>
     /// Output only. List of failure details. This property may contain additional
     /// information about the failure when `failure_reason` is present.
+    /// &lt;aside class="note">&lt;b>Note&lt;/b>: This feature is not yet available.&lt;/aside>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1Beta1.FailureDetail> FailureDetails {
@@ -504,6 +519,22 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       get { return endTime_; }
       set {
         endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ttl_after_completion_days" field.</summary>
+    public const int TtlAfterCompletionDaysFieldNumber = 15;
+    private int ttlAfterCompletionDays_;
+    /// <summary>
+    /// Job time to live value in days, which will be effective after job
+    /// completion. Job should be deleted automatically after the given TTL. Enter
+    /// a value between 1 and 90. The default is 30.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TtlAfterCompletionDays {
+      get { return ttlAfterCompletionDays_; }
+      set {
+        ttlAfterCompletionDays_ = value;
       }
     }
 
@@ -553,6 +584,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (TtlAfterCompletionDays != other.TtlAfterCompletionDays) return false;
       if (JobConfigCase != other.JobConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -574,6 +606,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (TtlAfterCompletionDays != 0) hash ^= TtlAfterCompletionDays.GetHashCode();
       hash ^= (int) jobConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -644,6 +677,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(EndTime);
       }
+      if (TtlAfterCompletionDays != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(TtlAfterCompletionDays);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -706,6 +743,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(EndTime);
       }
+      if (TtlAfterCompletionDays != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(TtlAfterCompletionDays);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -754,6 +795,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (TtlAfterCompletionDays != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TtlAfterCompletionDays);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -814,6 +858,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.TtlAfterCompletionDays != 0) {
+        TtlAfterCompletionDays = other.TtlAfterCompletionDays;
       }
       switch (other.JobConfigCase) {
         case JobConfigOneofCase.TemplateId:
@@ -917,6 +964,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 120: {
+            TtlAfterCompletionDays = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1007,6 +1058,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 120: {
+            TtlAfterCompletionDays = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1089,8 +1144,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         public const int HlsFieldNumber = 1;
         private string hls_ = "";
         /// <summary>
-        /// HLS master manifest URI. If multiple HLS master manifests are created
-        /// only first one is listed.
+        /// HLS manifest URI per https://tools.ietf.org/html/rfc8216#section-4.3.4.
+        /// If multiple HLS manifests are created, only the first one is listed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Hls {
@@ -2018,9 +2073,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of the media. It must be stored in Cloud Storage. Example
-    /// `gs://bucket/inputs/file.mp4`.
-    /// If empty the value will be populated from `Job.input_uri`.
+    /// URI of the media. Input files must be at least 5 seconds in duration and
+    /// stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
+    /// If empty, the value will be populated from `Job.input_uri`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
@@ -4153,6 +4208,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       rowCount_ = other.rowCount_;
       startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
       endTimeOffset_ = other.endTimeOffset_ != null ? other.endTimeOffset_.Clone() : null;
+      quality_ = other.quality_;
       switch (other.ExtractionStrategyCase) {
         case ExtractionStrategyOneofCase.TotalCount:
           TotalCount = other.TotalCount;
@@ -4208,7 +4264,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int SpriteWidthPixelsFieldNumber = 3;
     private int spriteWidthPixels_;
     /// <summary>
-    /// Required. The width of sprite in pixels. Must be an even integer.
+    /// Required. The width of sprite in pixels. Must be an even integer. To preserve the
+    /// source aspect ratio, set the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels] field or
+    /// the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels] field, but not both (the API will
+    /// automatically calculate the missing field).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SpriteWidthPixels {
@@ -4222,7 +4281,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int SpriteHeightPixelsFieldNumber = 4;
     private int spriteHeightPixels_;
     /// <summary>
-    /// Required. The height of sprite in pixels. Must be an even integer.
+    /// Required. The height of sprite in pixels. Must be an even integer. To preserve the
+    /// source aspect ratio, set the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels] field or
+    /// the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels] field, but not both (the API will
+    /// automatically calculate the missing field).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SpriteHeightPixels {
@@ -4325,6 +4387,23 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "quality" field.</summary>
+    public const int QualityFieldNumber = 11;
+    private int quality_;
+    /// <summary>
+    /// The quality of the generated sprite sheet. Enter a value between 1
+    /// and 100, where 1 is the lowest quality and 100 is the highest quality.
+    /// The default is 100. A high quality value corresponds to a low image data
+    /// compression ratio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Quality {
+      get { return quality_; }
+      set {
+        quality_ = value;
+      }
+    }
+
     private object extractionStrategy_;
     /// <summary>Enum of possible cases for the "extraction_strategy" oneof.</summary>
     public enum ExtractionStrategyOneofCase {
@@ -4367,6 +4446,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (!object.Equals(EndTimeOffset, other.EndTimeOffset)) return false;
       if (TotalCount != other.TotalCount) return false;
       if (!object.Equals(Interval, other.Interval)) return false;
+      if (Quality != other.Quality) return false;
       if (ExtractionStrategyCase != other.ExtractionStrategyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4384,6 +4464,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (endTimeOffset_ != null) hash ^= EndTimeOffset.GetHashCode();
       if (extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount) hash ^= TotalCount.GetHashCode();
       if (extractionStrategyCase_ == ExtractionStrategyOneofCase.Interval) hash ^= Interval.GetHashCode();
+      if (Quality != 0) hash ^= Quality.GetHashCode();
       hash ^= (int) extractionStrategyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4441,6 +4522,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(82);
         output.WriteMessage(Interval);
       }
+      if (Quality != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(Quality);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4490,6 +4575,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(82);
         output.WriteMessage(Interval);
       }
+      if (Quality != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(Quality);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4528,6 +4617,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       }
       if (extractionStrategyCase_ == ExtractionStrategyOneofCase.Interval) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
+      }
+      if (Quality != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quality);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4569,6 +4661,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
           EndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         EndTimeOffset.MergeFrom(other.EndTimeOffset);
+      }
+      if (other.Quality != 0) {
+        Quality = other.Quality;
       }
       switch (other.ExtractionStrategyCase) {
         case ExtractionStrategyOneofCase.TotalCount:
@@ -4647,6 +4742,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             Interval = subBuilder;
             break;
           }
+          case 88: {
+            Quality = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -4710,6 +4809,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             Interval = subBuilder;
+            break;
+          }
+          case 88: {
+            Quality = input.ReadInt32();
             break;
           }
         }
@@ -5219,8 +5322,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         public const int UriFieldNumber = 1;
         private string uri_ = "";
         /// <summary>
-        /// Required. URI of the image in Cloud Storage. For example,
-        /// `gs://bucket/inputs/image.jpeg`.
+        /// Required. URI of the JPEG image in Cloud Storage. For example,
+        /// `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Uri {
@@ -5251,8 +5354,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         public const int AlphaFieldNumber = 3;
         private double alpha_;
         /// <summary>
-        /// Target image opacity. Valid values: `1` (solid, default),
-        /// `0` (transparent).
+        /// Target image opacity. Valid values are from  `1.0` (solid, default) to
+        /// `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public double Alpha {
@@ -5490,7 +5593,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         /// <summary>
         /// Normalized coordinates based on output video resolution. Valid
         /// values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay
-        /// object.
+        /// object. For example, use the x and y coordinates {0,0} to position the
+        /// top-left corner of the overlay animation in the top-left corner of the
+        /// output video.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.NormalizedCoordinate Xy {
@@ -5743,7 +5848,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         /// <summary>
         /// Normalized coordinates based on output video resolution. Valid
         /// values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay
-        /// object.
+        /// object. For example, use the x and y coordinates {0,0} to position the
+        /// top-left corner of the overlay animation in the top-left corner of the
+        /// output video.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Video.Transcoder.V1Beta1.Overlay.Types.NormalizedCoordinate Xy {
@@ -6563,6 +6670,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       denoise_ = other.denoise_ != null ? other.denoise_.Clone() : null;
       deblock_ = other.deblock_ != null ? other.deblock_.Clone() : null;
       audio_ = other.audio_ != null ? other.audio_.Clone() : null;
+      crop_ = other.crop_ != null ? other.crop_.Clone() : null;
+      pad_ = other.pad_ != null ? other.pad_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6627,6 +6736,34 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "crop" field.</summary>
+    public const int CropFieldNumber = 5;
+    private global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop crop_;
+    /// <summary>
+    /// Specify the video cropping configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop Crop {
+      get { return crop_; }
+      set {
+        crop_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pad" field.</summary>
+    public const int PadFieldNumber = 6;
+    private global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad pad_;
+    /// <summary>
+    /// Specify the video pad filter configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad Pad {
+      get { return pad_; }
+      set {
+        pad_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PreprocessingConfig);
@@ -6644,6 +6781,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (!object.Equals(Denoise, other.Denoise)) return false;
       if (!object.Equals(Deblock, other.Deblock)) return false;
       if (!object.Equals(Audio, other.Audio)) return false;
+      if (!object.Equals(Crop, other.Crop)) return false;
+      if (!object.Equals(Pad, other.Pad)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6654,6 +6793,8 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       if (denoise_ != null) hash ^= Denoise.GetHashCode();
       if (deblock_ != null) hash ^= Deblock.GetHashCode();
       if (audio_ != null) hash ^= Audio.GetHashCode();
+      if (crop_ != null) hash ^= Crop.GetHashCode();
+      if (pad_ != null) hash ^= Pad.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6686,6 +6827,14 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(Audio);
       }
+      if (crop_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Crop);
+      }
+      if (pad_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Pad);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6711,6 +6860,14 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(Audio);
       }
+      if (crop_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Crop);
+      }
+      if (pad_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Pad);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6731,6 +6888,12 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
       }
       if (audio_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (crop_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Crop);
+      }
+      if (pad_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pad);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6766,6 +6929,18 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
           Audio = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio();
         }
         Audio.MergeFrom(other.Audio);
+      }
+      if (other.crop_ != null) {
+        if (crop_ == null) {
+          Crop = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop();
+        }
+        Crop.MergeFrom(other.Crop);
+      }
+      if (other.pad_ != null) {
+        if (pad_ == null) {
+          Pad = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad();
+        }
+        Pad.MergeFrom(other.Pad);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6809,6 +6984,20 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
             input.ReadMessage(Audio);
             break;
           }
+          case 42: {
+            if (crop_ == null) {
+              Crop = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop();
+            }
+            input.ReadMessage(Crop);
+            break;
+          }
+          case 50: {
+            if (pad_ == null) {
+              Pad = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad();
+            }
+            input.ReadMessage(Pad);
+            break;
+          }
         }
       }
     #endif
@@ -6849,6 +7038,20 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
               Audio = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Audio();
             }
             input.ReadMessage(Audio);
+            break;
+          }
+          case 42: {
+            if (crop_ == null) {
+              Crop = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Crop();
+            }
+            input.ReadMessage(Crop);
+            break;
+          }
+          case 50: {
+            if (pad_ == null) {
+              Pad = new global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Types.Pad();
+            }
+            input.ReadMessage(Pad);
             break;
           }
         }
@@ -7611,12 +7814,16 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
         private double lufs_;
         /// <summary>
         /// Specify audio loudness normalization in loudness units relative to full
-        /// scale (LUFS). Enter a value between -24 and 0, where -24 is the Advanced
-        /// Television Systems Committee (ATSC A/85), -23 is the EU R128 broadcast
-        /// standard, -19 is the prior standard for online mono audio, -18 is the
-        /// ReplayGain standard, -16 is the prior standard for stereo audio, -14 is
-        /// the new online audio standard recommended by Spotify, as well as Amazon
-        /// Echo, and 0 disables normalization. The default is 0.
+        /// scale (LUFS). Enter a value between -24 and 0 (the default), where:
+        ///
+        /// *   -24 is the Advanced Television Systems Committee (ATSC A/85) standard
+        /// *   -23 is the EU R128 broadcast standard
+        /// *   -19 is the prior standard for online mono audio
+        /// *   -18 is the ReplayGain standard
+        /// *   -16 is the prior standard for stereo audio
+        /// *   -14 is the new online audio standard recommended by Spotify, as well
+        ///     as Amazon Echo
+        /// *   0 disables normalization
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public double Lufs {
@@ -7825,6 +8032,598 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
 
       }
 
+      /// <summary>
+      /// Video cropping configuration for the input video. The cropped input video
+      /// is scaled to match the output resolution.
+      /// </summary>
+      public sealed partial class Crop : pb::IMessage<Crop>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Crop> _parser = new pb::MessageParser<Crop>(() => new Crop());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Crop> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Crop() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Crop(Crop other) : this() {
+          topPixels_ = other.topPixels_;
+          bottomPixels_ = other.bottomPixels_;
+          leftPixels_ = other.leftPixels_;
+          rightPixels_ = other.rightPixels_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Crop Clone() {
+          return new Crop(this);
+        }
+
+        /// <summary>Field number for the "top_pixels" field.</summary>
+        public const int TopPixelsFieldNumber = 1;
+        private int topPixels_;
+        /// <summary>
+        /// The number of pixels to crop from the top. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int TopPixels {
+          get { return topPixels_; }
+          set {
+            topPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bottom_pixels" field.</summary>
+        public const int BottomPixelsFieldNumber = 2;
+        private int bottomPixels_;
+        /// <summary>
+        /// The number of pixels to crop from the bottom. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int BottomPixels {
+          get { return bottomPixels_; }
+          set {
+            bottomPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "left_pixels" field.</summary>
+        public const int LeftPixelsFieldNumber = 3;
+        private int leftPixels_;
+        /// <summary>
+        /// The number of pixels to crop from the left. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int LeftPixels {
+          get { return leftPixels_; }
+          set {
+            leftPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "right_pixels" field.</summary>
+        public const int RightPixelsFieldNumber = 4;
+        private int rightPixels_;
+        /// <summary>
+        /// The number of pixels to crop from the right. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int RightPixels {
+          get { return rightPixels_; }
+          set {
+            rightPixels_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Crop);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Crop other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TopPixels != other.TopPixels) return false;
+          if (BottomPixels != other.BottomPixels) return false;
+          if (LeftPixels != other.LeftPixels) return false;
+          if (RightPixels != other.RightPixels) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TopPixels != 0) hash ^= TopPixels.GetHashCode();
+          if (BottomPixels != 0) hash ^= BottomPixels.GetHashCode();
+          if (LeftPixels != 0) hash ^= LeftPixels.GetHashCode();
+          if (RightPixels != 0) hash ^= RightPixels.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TopPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(RightPixels);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TopPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(RightPixels);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (TopPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(RightPixels);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Crop other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TopPixels != 0) {
+            TopPixels = other.TopPixels;
+          }
+          if (other.BottomPixels != 0) {
+            BottomPixels = other.BottomPixels;
+          }
+          if (other.LeftPixels != 0) {
+            LeftPixels = other.LeftPixels;
+          }
+          if (other.RightPixels != 0) {
+            RightPixels = other.RightPixels;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                TopPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                BottomPixels = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                LeftPixels = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                RightPixels = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                TopPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                BottomPixels = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                LeftPixels = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                RightPixels = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Pad filter configuration for the input video. The padded input video
+      /// is scaled after padding with black to match the output resolution.
+      /// </summary>
+      public sealed partial class Pad : pb::IMessage<Pad>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Pad> _parser = new pb::MessageParser<Pad>(() => new Pad());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Pad> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1Beta1.PreprocessingConfig.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Pad() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Pad(Pad other) : this() {
+          topPixels_ = other.topPixels_;
+          bottomPixels_ = other.bottomPixels_;
+          leftPixels_ = other.leftPixels_;
+          rightPixels_ = other.rightPixels_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Pad Clone() {
+          return new Pad(this);
+        }
+
+        /// <summary>Field number for the "top_pixels" field.</summary>
+        public const int TopPixelsFieldNumber = 1;
+        private int topPixels_;
+        /// <summary>
+        /// The number of pixels to add to the top. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int TopPixels {
+          get { return topPixels_; }
+          set {
+            topPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bottom_pixels" field.</summary>
+        public const int BottomPixelsFieldNumber = 2;
+        private int bottomPixels_;
+        /// <summary>
+        /// The number of pixels to add to the bottom. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int BottomPixels {
+          get { return bottomPixels_; }
+          set {
+            bottomPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "left_pixels" field.</summary>
+        public const int LeftPixelsFieldNumber = 3;
+        private int leftPixels_;
+        /// <summary>
+        /// The number of pixels to add to the left. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int LeftPixels {
+          get { return leftPixels_; }
+          set {
+            leftPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "right_pixels" field.</summary>
+        public const int RightPixelsFieldNumber = 4;
+        private int rightPixels_;
+        /// <summary>
+        /// The number of pixels to add to the right. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int RightPixels {
+          get { return rightPixels_; }
+          set {
+            rightPixels_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Pad);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Pad other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TopPixels != other.TopPixels) return false;
+          if (BottomPixels != other.BottomPixels) return false;
+          if (LeftPixels != other.LeftPixels) return false;
+          if (RightPixels != other.RightPixels) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TopPixels != 0) hash ^= TopPixels.GetHashCode();
+          if (BottomPixels != 0) hash ^= BottomPixels.GetHashCode();
+          if (LeftPixels != 0) hash ^= LeftPixels.GetHashCode();
+          if (RightPixels != 0) hash ^= RightPixels.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TopPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(RightPixels);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TopPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(RightPixels);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (TopPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TopPixels);
+          }
+          if (BottomPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BottomPixels);
+          }
+          if (LeftPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(LeftPixels);
+          }
+          if (RightPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(RightPixels);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Pad other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TopPixels != 0) {
+            TopPixels = other.TopPixels;
+          }
+          if (other.BottomPixels != 0) {
+            BottomPixels = other.BottomPixels;
+          }
+          if (other.LeftPixels != 0) {
+            LeftPixels = other.LeftPixels;
+          }
+          if (other.RightPixels != 0) {
+            RightPixels = other.RightPixels;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                TopPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                BottomPixels = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                LeftPixels = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                RightPixels = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                TopPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                BottomPixels = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                LeftPixels = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                RightPixels = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -7902,12 +8701,11 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int CodecFieldNumber = 1;
     private string codec_ = "";
     /// <summary>
-    /// Codec type. The default is `"h264"`.
+    /// Codec type. The following codecs are supported:
     ///
-    /// Supported codecs:
-    /// - 'h264'
-    /// - 'h265'
-    /// - 'vp9'
+    /// *   `h264` (default)
+    /// *   `h265`
+    /// *   `vp9`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Codec {
@@ -7921,12 +8719,17 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int ProfileFieldNumber = 2;
     private string profile_ = "";
     /// <summary>
-    /// Enforce specified codec profile. The default is `"high"`.
+    /// Enforces the specified codec profile. The following profiles are supported:
     ///
-    /// Supported codec profiles:
-    /// - 'baseline'
-    /// - 'main'
-    /// - 'high'
+    /// *   `baseline`
+    /// *   `main`
+    /// *   `high` (default)
+    ///
+    /// The available options are
+    /// &lt;a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Profile"
+    /// class="external">FFmpeg-compatible&lt;/a>. Note that certain values for this
+    /// field may cause the transcoder to override other fields you set in the
+    /// `VideoStream` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Profile {
@@ -7940,7 +8743,11 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int TuneFieldNumber = 3;
     private string tune_ = "";
     /// <summary>
-    /// Enforce specified codec tune.
+    /// Enforces the specified codec tune. The available options are
+    /// &lt;a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Tune"
+    /// class="external">FFmpeg-compatible&lt;/a>. Note that certain values for this
+    /// field may cause the transcoder to override other fields you set in the
+    /// `VideoStream` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Tune {
@@ -7954,7 +8761,12 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int PresetFieldNumber = 4;
     private string preset_ = "";
     /// <summary>
-    /// Enforce specified codec preset. The default is `"veryfast"`.
+    /// Enforces the specified codec preset. The default is `veryfast`. The
+    /// available options are
+    /// &lt;a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Preset"
+    /// class="external">FFmpeg-compatible&lt;/a>. Note that certain values for this
+    /// field may cause the transcoder to override other fields you set in the
+    /// `VideoStream` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Preset {
@@ -8025,7 +8837,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int BitrateBpsFieldNumber = 8;
     private int bitrateBps_;
     /// <summary>
-    /// Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.
+    /// Required. The video bitrate in bits per second. The minimum value is 1,000.
+    /// The maximum value for H264/H265 is 800,000,000. The maximum value for VP9
+    /// is 480,000,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BitrateBps {
@@ -8148,7 +8962,9 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int GopDurationFieldNumber = 16;
     /// <summary>
     /// Select the GOP size based on the specified duration. The default is
-    /// `"3s"`.
+    /// `"3s"`. Note that `gopDuration` must be less than or equal to
+    /// [`segmentDuration`](#SegmentSettings), and
+    /// [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration GopDuration {
@@ -8214,28 +9030,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     /// Required. The target video frame rate in frames per second (FPS). Must be less than
     /// or equal to 120. Will default to the input frame rate if larger than the
     /// input frame rate. The API will generate an output FPS that is divisible by
-    /// the input FPS, and smaller or equal to the target FPS.
-    ///
-    /// The following table shows the computed video FPS given the target FPS (in
-    /// parenthesis) and input FPS (in the first column):
-    /// ```
-    /// |        | (30)   | (60)   | (25) | (50) |
-    /// |--------|--------|--------|------|------|
-    /// | 240    | Fail   | Fail   | Fail | Fail |
-    /// | 120    | 30     | 60     | 20   | 30   |
-    /// | 100    | 25     | 50     | 20   | 30   |
-    /// | 50     | 25     | 50     | 20   | 30   |
-    /// | 60     | 30     | 60     | 20   | 30   |
-    /// | 59.94  | 29.97  | 59.94  | 20   | 30   |
-    /// | 48     | 24     | 48     | 20   | 30   |
-    /// | 30     | 30     | 30     | 20   | 30   |
-    /// | 25     | 25     | 25     | 20   | 30   |
-    /// | 24     | 24     | 24     | 20   | 30   |
-    /// | 23.976 | 23.976 | 23.976 | 20   | 30   |
-    /// | 15     | 15     | 15     | 20   | 30   |
-    /// | 12     | 12     | 12     | 20   | 30   |
-    /// | 10     | 10     | 10     | 20   | 30   |
-    /// ```
+    /// the input FPS, and smaller or equal to the target FPS. See
+    /// [Calculate frame
+    /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+    /// more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double FrameRate {
@@ -10701,7 +11499,10 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1 {
     public const int SegmentDurationFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration segmentDuration_;
     /// <summary>
-    /// Duration of the segments in seconds. The default is `"6.0s"`.
+    /// Duration of the segments in seconds. The default is `"6.0s"`. Note that
+    /// `segmentDuration` must be greater than or equal to
+    /// [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
+    /// [`gopDuration`](#videostream).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration SegmentDuration {

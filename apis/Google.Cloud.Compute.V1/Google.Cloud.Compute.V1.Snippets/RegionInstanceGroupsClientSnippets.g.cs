@@ -16,6 +16,9 @@
 
 namespace Google.Cloud.Compute.V1.Snippets
 {
+    using Google.Api.Gax;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -98,8 +101,6 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListRegionInstanceGroupsRequest request = new ListRegionInstanceGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -107,7 +108,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RegionInstanceGroupList response = regionInstanceGroupsClient.List(request);
+            PagedEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.List(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstanceGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RegionInstanceGroupList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -115,14 +148,11 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListRequestObjectAsync()
         {
             // Snippet: ListAsync(ListRegionInstanceGroupsRequest, CallSettings)
-            // Additional: ListAsync(ListRegionInstanceGroupsRequest, CancellationToken)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = await RegionInstanceGroupsClient.CreateAsync();
             // Initialize request argument(s)
             ListRegionInstanceGroupsRequest request = new ListRegionInstanceGroupsRequest
             {
-                PageToken = "",
-                MaxResults = 0U,
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -130,36 +160,131 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RegionInstanceGroupList response = await regionInstanceGroupsClient.ListAsync(request);
+            PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.ListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstanceGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RegionInstanceGroupList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for List</summary>
         public void List()
         {
-            // Snippet: List(string, string, CallSettings)
+            // Snippet: List(string, string, string, int?, CallSettings)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = RegionInstanceGroupsClient.Create();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            RegionInstanceGroupList response = regionInstanceGroupsClient.List(project, region);
+            PagedEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.List(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstanceGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RegionInstanceGroupList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListAsync</summary>
         public async Task ListAsync()
         {
-            // Snippet: ListAsync(string, string, CallSettings)
-            // Additional: ListAsync(string, string, CancellationToken)
+            // Snippet: ListAsync(string, string, string, int?, CallSettings)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = await RegionInstanceGroupsClient.CreateAsync();
             // Initialize request argument(s)
             string project = "";
             string region = "";
             // Make the request
-            RegionInstanceGroupList response = await regionInstanceGroupsClient.ListAsync(project, region);
+            PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.ListAsync(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstanceGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RegionInstanceGroupList page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -172,9 +297,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             ListInstancesRegionInstanceGroupsRequest request = new ListInstancesRegionInstanceGroupsRequest
             {
-                PageToken = "",
                 RegionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest(),
-                MaxResults = 0U,
                 InstanceGroup = "",
                 Region = "",
                 OrderBy = "",
@@ -183,7 +306,39 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RegionInstanceGroupsListInstances response = regionInstanceGroupsClient.ListInstances(request);
+            PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstances(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstanceWithNamedPorts item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RegionInstanceGroupsListInstances page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceWithNamedPorts item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceWithNamedPorts> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceWithNamedPorts item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -191,15 +346,12 @@ namespace Google.Cloud.Compute.V1.Snippets
         public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest, CallSettings)
-            // Additional: ListInstancesAsync(ListInstancesRegionInstanceGroupsRequest, CancellationToken)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = await RegionInstanceGroupsClient.CreateAsync();
             // Initialize request argument(s)
             ListInstancesRegionInstanceGroupsRequest request = new ListInstancesRegionInstanceGroupsRequest
             {
-                PageToken = "",
                 RegionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest(),
-                MaxResults = 0U,
                 InstanceGroup = "",
                 Region = "",
                 OrderBy = "",
@@ -208,14 +360,46 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ReturnPartialSuccess = false,
             };
             // Make the request
-            RegionInstanceGroupsListInstances response = await regionInstanceGroupsClient.ListInstancesAsync(request);
+            PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstancesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstanceWithNamedPorts item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RegionInstanceGroupsListInstances page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceWithNamedPorts item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceWithNamedPorts> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceWithNamedPorts item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstances()
         {
-            // Snippet: ListInstances(string, string, string, RegionInstanceGroupsListInstancesRequest, CallSettings)
+            // Snippet: ListInstances(string, string, string, RegionInstanceGroupsListInstancesRequest, string, int?, CallSettings)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = RegionInstanceGroupsClient.Create();
             // Initialize request argument(s)
@@ -224,15 +408,46 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroup = "";
             RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest();
             // Make the request
-            RegionInstanceGroupsListInstances response = regionInstanceGroupsClient.ListInstances(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource);
+            PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstances(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstanceWithNamedPorts item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RegionInstanceGroupsListInstances page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceWithNamedPorts item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceWithNamedPorts> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceWithNamedPorts item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync()
         {
-            // Snippet: ListInstancesAsync(string, string, string, RegionInstanceGroupsListInstancesRequest, CallSettings)
-            // Additional: ListInstancesAsync(string, string, string, RegionInstanceGroupsListInstancesRequest, CancellationToken)
+            // Snippet: ListInstancesAsync(string, string, string, RegionInstanceGroupsListInstancesRequest, string, int?, CallSettings)
             // Create client
             RegionInstanceGroupsClient regionInstanceGroupsClient = await RegionInstanceGroupsClient.CreateAsync();
             // Initialize request argument(s)
@@ -241,7 +456,39 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroup = "";
             RegionInstanceGroupsListInstancesRequest regionInstanceGroupsListInstancesRequestResource = new RegionInstanceGroupsListInstancesRequest();
             // Make the request
-            RegionInstanceGroupsListInstances response = await regionInstanceGroupsClient.ListInstancesAsync(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource);
+            PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstancesAsync(project, region, instanceGroup, regionInstanceGroupsListInstancesRequestResource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstanceWithNamedPorts item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RegionInstanceGroupsListInstances page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstanceWithNamedPorts item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstanceWithNamedPorts> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstanceWithNamedPorts item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

@@ -236,7 +236,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. The resource name of the catalog under which the events are
     /// created. The format is
-    /// "projects/${projectId}/locations/global/catalogs/${catalogId}"
+    /// `projects/${projectId}/locations/global/catalogs/${catalogId}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

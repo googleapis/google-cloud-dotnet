@@ -53,23 +53,29 @@ namespace Google.Cloud.Tools.ReleaseManager
         public string Skip { get; set; }
 
         /// <summary>
+        /// The endpoint to set in the builder when creating a client. (May be null, in which case the default
+        /// endpoint is used.)
+        /// </summary>
+        public string Endpoint { get; set; }
+
+        /// <summary>
         /// Executes a smoke test.
         /// </summary>
         /// <param name="assembly">The assembly of the client library being tests.</param>
         /// <param name="projectId">The project ID, to allow ${PROJECT_ID} to be replaced.</param>
         public void Execute(Assembly assembly, string projectId)
         {
-            var client = FindClient(assembly);
-            var method = FindMethod(client);
+            var clientType = FindClient(assembly);
+            var method = FindMethod(clientType);
             var arguments = ConvertArguments(method, projectId);
-            var clientInstance = client.GetMethod("Create", BindingFlags.Static | BindingFlags.Public).Invoke(null, null);
+            var clientInstance = CreateClient(clientType);
 
             if (Skip is object)
             {
-                Console.WriteLine($"*** Skipping test for {client.Name}.{Method}: {Skip} ***");
+                Console.WriteLine($"*** Skipping test for {clientType.Name}.{Method}: {Skip} ***");
                 return;
             }
-            Console.WriteLine($"Running test for {client.Name}.{Method}");
+            Console.WriteLine($"Running test for {clientType.Name}.{Method}");
             var result = method.Invoke(clientInstance, arguments);
             DisplayResult(result);
         }
@@ -87,6 +93,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             return type ?? throw new UserErrorException($"No such client type {typeName} in assembly");
         }
 
+        private object CreateClient(Type clientType)
+        {
+            var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
+            var builder = Activator.CreateInstance(builderType);
+            builderType.GetProperty("Endpoint").SetValue(builder, Endpoint);
+            return builderType.GetMethod("Build").Invoke(builder, new object[0]);
+        }
 
         private MethodInfo FindMethod(Type client)
         {

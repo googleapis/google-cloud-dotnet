@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.ArtifactRegistry.V1Beta2",
   "release_level": "beta",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.ArtifactRegistry.V1Beta2/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ArtifactRegistry.V1Beta2/latest",
   "library_type": "GAPIC_AUTO"
 }

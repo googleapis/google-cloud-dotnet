@@ -419,8 +419,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int FindingFieldNumber = 3;
     private global::Google.Cloud.SecurityCenter.V1.Finding finding_;
     /// <summary>
-    /// Required. The Finding being created. The name and security_marks will be
-    /// ignored as they are both output only fields on this resource.
+    /// Required. The Finding being created. The name and security_marks will be ignored as
+    /// they are both output only fields on this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1.Finding Finding {
@@ -657,8 +657,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the new notification config's parent. Its format
-    /// is "organizations/[organization_id]".
+    /// Required. Resource name of the new notification config's parent. Its format is
+    /// "organizations/[organization_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -689,9 +689,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NotificationConfigFieldNumber = 3;
     private global::Google.Cloud.SecurityCenter.V1.NotificationConfig notificationConfig_;
     /// <summary>
-    /// Required. The notification config being created. The name and the service
-    /// account will be ignored as they are both output only fields on this
-    /// resource.
+    /// Required. The notification config being created. The name and the service account
+    /// will be ignored as they are both output only fields on this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1.NotificationConfig NotificationConfig {
@@ -942,8 +941,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int SourceFieldNumber = 2;
     private global::Google.Cloud.SecurityCenter.V1.Source source_;
     /// <summary>
-    /// Required. The Source being created, only the display_name and description
-    /// will be used. All other fields will be ignored.
+    /// Required. The Source being created, only the display_name and description will be
+    /// used. All other fields will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1.Source Source {
@@ -1512,8 +1511,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the organization to get organization settings for. Its
-    /// format is "organizations/[organization_id]/organizationSettings".
+    /// Required. Name of the organization to get organization settings for. Its format is
+    /// "organizations/[organization_id]/organizationSettings".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1967,9 +1966,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int GroupByFieldNumber = 3;
     private string groupBy_ = "";
     /// <summary>
-    /// Required. Expression that defines what assets fields to use for grouping.
-    /// The string value should follow SQL syntax: comma separated list of fields.
-    /// For example:
+    /// Required. Expression that defines what assets fields to use for grouping. The string
+    /// value should follow SQL syntax: comma separated list of fields. For
+    /// example:
     /// "security_center_properties.resource_project,security_center_properties.project".
     ///
     /// The following fields are supported when compare_duration is not set:
@@ -2806,9 +2805,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int GroupByFieldNumber = 3;
     private string groupBy_ = "";
     /// <summary>
-    /// Required. Expression that defines what assets fields to use for grouping
-    /// (including `state_change`). The string value should follow SQL syntax:
-    /// comma separated list of fields. For example: "parent,resource_name".
+    /// Required. Expression that defines what assets fields to use for grouping (including
+    /// `state_change`). The string value should follow SQL syntax: comma separated
+    /// list of fields. For example: "parent,resource_name".
     ///
     /// The following fields are supported:
     ///
@@ -4224,8 +4223,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the parent of sources to list. Its format should
-    /// be "organizations/[organization_id], folders/[folder_id], or
+    /// Required. Resource name of the parent of sources to list. Its format should be
+    /// "organizations/[organization_id], folders/[folder_id], or
     /// projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7691,8 +7690,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization to run asset discovery for. Its format
-    /// is "organizations/[organization_id]".
+    /// Required. Name of the organization to run asset discovery for. Its format is
+    /// "organizations/[organization_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -7871,8 +7870,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int FindingFieldNumber = 1;
     private global::Google.Cloud.SecurityCenter.V1.Finding finding_;
     /// <summary>
-    /// Required. The finding resource to update or create if it does not already
-    /// exist. parent, security_marks, and update_time will be ignored.
+    /// Required. The finding resource to update or create if it does not already exist.
+    /// parent, security_marks, and update_time will be ignored.
     ///
     /// In the case of creation, the finding id portion of the name must be
     /// alphanumeric and less than or equal to 32 characters and greater than 0

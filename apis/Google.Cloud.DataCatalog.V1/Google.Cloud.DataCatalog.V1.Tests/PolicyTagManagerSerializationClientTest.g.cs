@@ -28,6 +28,64 @@ namespace Google.Cloud.DataCatalog.V1.Tests
     public sealed class GeneratedPolicyTagManagerSerializationClientTest
     {
         [xunit::FactAttribute]
+        public void ReplaceTaxonomyRequestObject()
+        {
+            moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                SerializedTaxonomy = new SerializedTaxonomy(),
+            };
+            Taxonomy expectedResponse = new Taxonomy
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PolicyTagCount = -1730676159,
+                TaxonomyTimestamps = new SystemTimestamps(),
+                ActivatedPolicyTypes =
+                {
+                    Taxonomy.Types.PolicyType.Unspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.ReplaceTaxonomy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            Taxonomy response = client.ReplaceTaxonomy(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReplaceTaxonomyRequestObjectAsync()
+        {
+            moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);
+            ReplaceTaxonomyRequest request = new ReplaceTaxonomyRequest
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                SerializedTaxonomy = new SerializedTaxonomy(),
+            };
+            Taxonomy expectedResponse = new Taxonomy
+            {
+                TaxonomyName = TaxonomyName.FromProjectLocationTaxonomy("[PROJECT]", "[LOCATION]", "[TAXONOMY]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                PolicyTagCount = -1730676159,
+                TaxonomyTimestamps = new SystemTimestamps(),
+                ActivatedPolicyTypes =
+                {
+                    Taxonomy.Types.PolicyType.Unspecified,
+                },
+            };
+            mockGrpcClient.Setup(x => x.ReplaceTaxonomyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Taxonomy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PolicyTagManagerSerializationClient client = new PolicyTagManagerSerializationClientImpl(mockGrpcClient.Object, null);
+            Taxonomy responseCallSettings = await client.ReplaceTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Taxonomy responseCancellationToken = await client.ReplaceTaxonomyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void ImportTaxonomiesRequestObject()
         {
             moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient> mockGrpcClient = new moq::Mock<PolicyTagManagerSerialization.PolicyTagManagerSerializationClient>(moq::MockBehavior.Strict);

@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
             };
-            var manager = new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, factory);
 
             var options1 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var options2 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
             };
-            var manager = new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, factory);
 
             var options1 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var options2 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString) { Port = 1234 });
@@ -72,9 +72,38 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task UsesSpannerSettings()
+        {
+            ClientFactory factory = (options, settings, logger) =>
+            {
+                return Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
+            };
+            var customSettings = new SpannerSettings();
+            var manager = new SessionPoolManager(new SessionPoolOptions(), customSettings, Logger.DefaultLogger, factory);
+
+            var pool = await manager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString)));
+            Assert.Same(customSettings, pool.Client.Settings);
+        }
+
+        [Fact]
+        public void Create_UsesDefaultLogger()
+        {
+            var manager = SessionPoolManager.Create(new SessionPoolOptions());
+            Assert.Same(Logger.DefaultLogger, manager.Logger);
+        }
+
+        [Fact]
+        public void CreateWithSettings_UsesLoggerInSettings()
+        {
+            var settings = new SpannerSettings {Logger = new DefaultLogger()};
+            var manager = SessionPoolManager.CreateWithSettings(new SessionPoolOptions(), settings);
+            Assert.Same(settings.Logger, manager.Logger);
+        }
+
+        [Fact]
         public async Task ReleaseDecreasesCount()
         {
-            var manager = new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, FailingSpannerClient.Factory);
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
 
             var options = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var pool = await manager.AcquireSessionPoolAsync(options);
@@ -96,7 +125,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task EmulatorDetection_AlwaysUsesRegularOptions(string emulatorHost)
         {
             var regularOptions = new SessionPoolOptions();
-            var manager = new SessionPoolManager(regularOptions, Logger.DefaultLogger, FailingSpannerClient.Factory);
+            var manager = new SessionPoolManager(regularOptions, SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, FailingSpannerClient.Factory);
 
             var builder = new SpannerConnectionStringBuilder(ConnectionString)
             {
@@ -114,11 +143,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         private class FailingSpannerClient : SpannerClient
         {
             // A simple non-counting factory.
-            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient());
+            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
 
-            public FailingSpannerClient()
+            public FailingSpannerClient(SpannerSettings settings = null)
             {
-                Settings = SpannerSettings.GetDefault();
+                Settings = settings ?? SpannerSettings.GetDefault();
             }
         }
     }

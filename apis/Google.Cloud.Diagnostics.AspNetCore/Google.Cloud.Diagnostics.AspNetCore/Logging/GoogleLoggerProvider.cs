@@ -12,11 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
 
 #if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
@@ -31,41 +33,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     public sealed class GoogleLoggerProvider : ILoggerProvider
     {
-        /// <summary>The consumer to push logs to.</summary>
-        private readonly IConsumer<LogEntry> _consumer;
-
-        /// <summary>The logger options.</summary>
-        private readonly LoggerOptions _loggerOptions;
-
-        /// <summary>Where to log to.</summary>
-        private readonly LogTarget _logTarget;
-
-        /// <summary>The service provider to resolve additional services from.</summary>
-        private readonly IServiceProvider _serviceProvider;
+        private readonly Common.GoogleLoggerProvider _loggerProvider;
 
         /// <summary>
         /// <see cref="ILoggerProvider"/> for Google Cloud Logging.
         /// </summary>
-        /// <param name="consumer">The consumer to push logs to. Must not be null.</param>
-        /// <param name="logTarget">Where to log to. Must not be null.</param>
-        /// <param name="loggerOptions">The logger options. Must not be null.</param>
-        /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
-        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,  IServiceProvider serviceProvider)
-        {
-            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
-            _serviceProvider = serviceProvider;
-
-            var writer = loggerOptions.LoggerDiagnosticsOutput;
-            if (writer != null)
-            {
-                // The log name is the ASP.NET Core log name, not the "/projects/xyz/logs/abc" log name in the resource.
-                // We don't currently use this in the diagnostics, but if we ever start to do so, SampleLogName seems
-                // like a reasonably clear example.
-                ((GoogleLogger) CreateLogger("SampleLogName")).WriteDiagnostics(writer);
-            }
-        }
+        internal GoogleLoggerProvider(Common.GoogleLoggerProvider loggerProvider) =>
+            _loggerProvider = GaxPreconditions.CheckNotNull(loggerProvider, nameof(loggerProvider));
 
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Cloud Logging.
@@ -73,17 +47,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="serviceProvider">The service provider to resolve additional services from.
         /// May be null, in which case additional services (such as custom labels) will not be used.</param>
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
-        ///     detected from the platform.</param>
+        /// The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
+        /// detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static GoogleLoggerProvider Create(IServiceProvider serviceProvider, string projectId = null,
-            LoggerOptions options = null, LoggingServiceV2Client client = null)
-        {
-            options = options ?? LoggerOptions.Create();
-            projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
-            return Create(LogTarget.ForProject(projectId), serviceProvider, options, client);
-        }
+        public static GoogleLoggerProvider Create(
+            IServiceProvider serviceProvider, string projectId = null, LoggerOptions options = null, LoggingServiceV2Client client = null) =>
+            new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(serviceProvider, projectId, options?.CommonLoggerOptions, client));
 
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Cloud Logging.
@@ -93,28 +63,53 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// in which case additional services (such as custom labels) will not be used.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static GoogleLoggerProvider Create(LogTarget logTarget, IServiceProvider serviceProvider,
-            LoggerOptions options = null, LoggingServiceV2Client client = null)
-        {
-            // Check params and set defaults if unset.
-            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            client = client ?? LoggingServiceV2Client.Create();
-            options = options ?? LoggerOptions.Create();
+        public static GoogleLoggerProvider Create(
+            LogTarget logTarget, IServiceProvider serviceProvider, LoggerOptions options = null, LoggingServiceV2Client client = null) =>
+            new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(logTarget, serviceProvider, options?.CommonLoggerOptions, client));
 
-            // Get the proper consumer from the options and add a logger provider.
-            IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
-            return new GoogleLoggerProvider(consumer, logTarget, options, serviceProvider);
-        }
+        // Adapter function to be used to get labels set with the obsolete AspNetCore*.ILogEntryLabelProvider.
+        // Will be used to pass these labels from AspNetCore*.GoogleLogger to Common.GoogleLogger because
+        // Common.GoogleLogger cannot have a dependecy on the obsolote interface.
+        [Obsolete("Has been added temporarily until we remove Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
+        internal static Action<IServiceProvider, Dictionary<string, string>> ObsoleteLabelsGetter =>
+            (serviceProvider, labels) =>
+            {
+                if (serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>() is IEnumerable<ILogEntryLabelProvider> providers)
+                {
+                    foreach (var provider in providers)
+                    {
+                        provider.Invoke(labels);
+                    }
+                }
+            };
+
+        // Adapter function to be used to get trace context from the obsolete AspNetCore*.IExternalTraceProvider.
+        // Will be used to "pass" this context from AspNetCore*.GoogleLogger to Common.GoogleLogger because
+        // Common.GoogleLogger cannot have a dependecy on the obsolote interface.
+        [Obsolete("Has been added temporarily until we remove Google.Cloud.Diagnostics.AspNetCore.ILogEntryLabelProvider.")]
+        internal static Action<IServiceProvider, LogEntry, TraceTarget> ObsoleteTraceContextGetter =>
+            (serviceProvider, logEntry, traceTarget) =>
+            {
+                if (TraceContextForLogEntry.FromExternalTrace(serviceProvider) is TraceContextForLogEntry trace
+                    && !(trace.TraceId is null))
+                {
+                    logEntry.Trace = traceTarget.GetFullTraceName(trace.TraceId);
+                    logEntry.TraceSampled = true;
+                    logEntry.SpanId = trace.SpanId;
+                }
+            };
 
         /// <summary>
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
         /// </summary>
         /// <param name="logName">The name of the log.  This will be combined with the log location
         ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
-        public ILogger CreateLogger(string logName) => new GoogleLogger(
-            _consumer, _logTarget, _loggerOptions, logName, serviceProvider: _serviceProvider);
+        public ILogger CreateLogger(string logName) =>
+#pragma warning disable CS0618 // Type or member is obsolete
+            new GoogleLogger(_loggerProvider.CreateLogger(logName, ObsoleteLabelsGetter, ObsoleteTraceContextGetter));
+#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <inheritdoc />
-        public void Dispose() => _consumer.Dispose();
+        public void Dispose() => _loggerProvider.Dispose();
     }
 }

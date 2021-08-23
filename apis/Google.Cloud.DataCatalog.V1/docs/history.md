@@ -1,5 +1,21 @@
 # Version history
 
+# Version 1.4.0, released 2021-08-19
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
+# Version 1.3.0, released 2021-08-10
+
+- [Commit 2fc3992](https://github.com/googleapis/google-cloud-dotnet/commit/2fc3992):
+  - feat: Added support for BigQuery connections entries
+  - feat: Added support for BigQuery routines entries
+  - feat: Added usage_signal field
+  - feat: Added labels field
+  - feat: Added ReplaceTaxonomy in Policy Tag Manager Serialization API
+  - feat: Added support for public tag templates
+  - feat: Added support for rich text tags
+  - docs: Documentation improvements
+
 # Version 1.2.0, released 2021-05-05
 
 - [Commit 29c9961](https://github.com/googleapis/google-cloud-dotnet/commit/29c9961): docs: reformat comments in PolicyTagManager definition

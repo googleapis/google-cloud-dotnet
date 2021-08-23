@@ -33,53 +33,116 @@ namespace Google.Cloud.Retail.V2 {
             "b29nbGUvY2xvdWQvcmV0YWlsL3YyL3B1cmdlX2NvbmZpZy5wcm90bxojZ29v",
             "Z2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90",
             "b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2su",
-            "cHJvdG8inAEKFENyZWF0ZVByb2R1Y3RSZXF1ZXN0EjQKBnBhcmVudBgBIAEo",
-            "CUIk4EEC+kEeChxyZXRhaWwuZ29vZ2xlYXBpcy5jb20vQnJhbmNoEjUKB3By",
-            "b2R1Y3QYAiABKAsyHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3RC",
-            "A+BBAhIXCgpwcm9kdWN0X2lkGAMgASgJQgPgQQIiSAoRR2V0UHJvZHVjdFJl",
-            "cXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBp",
-            "cy5jb20vUHJvZHVjdCJ+ChRVcGRhdGVQcm9kdWN0UmVxdWVzdBI1Cgdwcm9k",
-            "dWN0GAEgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0QgPg",
-            "QQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrIksKFERlbGV0ZVByb2R1Y3RSZXF1ZXN0EjMKBG5hbWUYASABKAlC",
-            "JeBBAvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3Qy7ggKDlBy",
-            "b2R1Y3RTZXJ2aWNlEs8BCg1DcmVhdGVQcm9kdWN0EiwuZ29vZ2xlLmNsb3Vk",
-            "LnJldGFpbC52Mi5DcmVhdGVQcm9kdWN0UmVxdWVzdBofLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuUHJvZHVjdCJvgtPkkwJNIkIvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovYnJhbmNoZXMvKn0vcHJv",
-            "ZHVjdHM6B3Byb2R1Y3TaQRlwYXJlbnQscHJvZHVjdCxwcm9kdWN0X2lkEqwB",
-            "CgpHZXRQcm9kdWN0EikuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5HZXRQcm9k",
-            "dWN0UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdCJS",
-            "gtPkkwJFEkMvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRh",
-            "bG9ncy8qL2JyYW5jaGVzLyovcHJvZHVjdHMvKip92kEEbmFtZRLSAQoNVXBk",
-            "YXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXBkYXRlUHJv",
-            "ZHVjdFJlcXVlc3QaHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3Qi",
-            "coLT5JMCVjJLL3YyL3twcm9kdWN0Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyovcHJvZHVjdHMvKip9Ogdwcm9k",
-            "dWN02kETcHJvZHVjdCx1cGRhdGVfbWFzaxKpAQoNRGVsZXRlUHJvZHVjdBIs",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuRGVsZXRlUHJvZHVjdFJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiUoLT5JMCRSpDL3YyL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFuY2hlcy8qL3By",
-            "b2R1Y3RzLyoqfdpBBG5hbWUSjgIKDkltcG9ydFByb2R1Y3RzEi0uZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52Mi5JbXBvcnRQcm9kdWN0c1JlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIq0BgtPkkwJOIkkvdjIve3BhcmVu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8inAEKFENy",
+            "ZWF0ZVByb2R1Y3RSZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEeChxy",
+            "ZXRhaWwuZ29vZ2xlYXBpcy5jb20vQnJhbmNoEjUKB3Byb2R1Y3QYAiABKAsy",
+            "Hy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3RCA+BBAhIXCgpwcm9k",
+            "dWN0X2lkGAMgASgJQgPgQQIiSAoRR2V0UHJvZHVjdFJlcXVlc3QSMwoEbmFt",
+            "ZRgBIAEoCUIl4EEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vUHJvZHVj",
+            "dCKVAQoUVXBkYXRlUHJvZHVjdFJlcXVlc3QSNQoHcHJvZHVjdBgBIAEoCzIf",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECEi8KC3VwZGF0",
+            "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIVCg1h",
+            "bGxvd19taXNzaW5nGAMgASgIIksKFERlbGV0ZVByb2R1Y3RSZXF1ZXN0EjMK",
+            "BG5hbWUYASABKAlCJeBBAvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1By",
+            "b2R1Y3QisQEKE0xpc3RQcm9kdWN0c1JlcXVlc3QSNAoGcGFyZW50GAEgASgJ",
+            "QiTgQQL6QR4KHHJldGFpbC5nb29nbGVhcGlzLmNvbS9CcmFuY2gSEQoJcGFn",
+            "ZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQg",
+            "ASgJEi0KCXJlYWRfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2siYgoUTGlzdFByb2R1Y3RzUmVzcG9uc2USMQoIcHJvZHVjdHMYASAD",
+            "KAsyHy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3QSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJIsEBChNTZXRJbnZlbnRvcnlSZXF1ZXN0EjcKCWlu",
+            "dmVudG9yeRgBIAEoCzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVj",
+            "dEID4EECEiwKCHNldF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFzaxIsCghzZXRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASFQoNYWxsb3dfbWlzc2luZxgEIAEoCCIWChRTZXRJbnZlbnRv",
+            "cnlNZXRhZGF0YSIWChRTZXRJbnZlbnRvcnlSZXNwb25zZSLFAQobQWRkRnVs",
+            "ZmlsbG1lbnRQbGFjZXNSZXF1ZXN0EjYKB3Byb2R1Y3QYASABKAlCJeBBAvpB",
+            "HwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSEQoEdHlwZRgCIAEo",
+            "CUID4EECEhYKCXBsYWNlX2lkcxgDIAMoCUID4EECEiwKCGFkZF90aW1lGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1hbGxvd19taXNz",
+            "aW5nGAUgASgIIh4KHEFkZEZ1bGZpbGxtZW50UGxhY2VzTWV0YWRhdGEiHgoc",
+            "QWRkRnVsZmlsbG1lbnRQbGFjZXNSZXNwb25zZSLLAQoeUmVtb3ZlRnVsZmls",
+            "bG1lbnRQbGFjZXNSZXF1ZXN0EjYKB3Byb2R1Y3QYASABKAlCJeBBAvpBHwod",
+            "cmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSEQoEdHlwZRgCIAEoCUID",
+            "4EECEhYKCXBsYWNlX2lkcxgDIAMoCUID4EECEi8KC3JlbW92ZV90aW1lGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1hbGxvd19taXNz",
+            "aW5nGAUgASgIIiEKH1JlbW92ZUZ1bGZpbGxtZW50UGxhY2VzTWV0YWRhdGEi",
+            "IQofUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNSZXNwb25zZTKPEgoOUHJvZHVj",
+            "dFNlcnZpY2USzwEKDUNyZWF0ZVByb2R1Y3QSLC5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkNyZWF0ZVByb2R1Y3RSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJl",
+            "dGFpbC52Mi5Qcm9kdWN0Im+C0+STAk0iQi92Mi97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFuY2hlcy8qfS9wcm9kdWN0",
+            "czoHcHJvZHVjdNpBGXBhcmVudCxwcm9kdWN0LHByb2R1Y3RfaWQSrAEKCkdl",
+            "dFByb2R1Y3QSKS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkdldFByb2R1Y3RS",
+            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0IlKC0+ST",
+            "AkUSQy92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dz",
+            "LyovYnJhbmNoZXMvKi9wcm9kdWN0cy8qKn3aQQRuYW1lEr4BCgxMaXN0UHJv",
+            "ZHVjdHMSKy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxpc3RQcm9kdWN0c1Jl",
+            "cXVlc3QaLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxpc3RQcm9kdWN0c1Jl",
+            "c3BvbnNlIlOC0+STAkQSQi92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovY2F0YWxvZ3MvKi9icmFuY2hlcy8qfS9wcm9kdWN0c9pBBnBhcmVu",
+            "dBLSAQoNVXBkYXRlUHJvZHVjdBIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "VXBkYXRlUHJvZHVjdFJlcXVlc3QaHy5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LlByb2R1Y3QicoLT5JMCVjJLL3YyL3twcm9kdWN0Lm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyovcHJvZHVjdHMv",
+            "Kip9Ogdwcm9kdWN02kETcHJvZHVjdCx1cGRhdGVfbWFzaxKpAQoNRGVsZXRl",
+            "UHJvZHVjdBIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuRGVsZXRlUHJvZHVj",
+            "dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiUoLT5JMCRSpDL3Yy",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFu",
+            "Y2hlcy8qL3Byb2R1Y3RzLyoqfdpBBG5hbWUSjgIKDkltcG9ydFByb2R1Y3Rz",
+            "Ei0uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRQcm9kdWN0c1JlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIq0BgtPkkwJOIkkv",
+            "djIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyov",
+            "YnJhbmNoZXMvKn0vcHJvZHVjdHM6aW1wb3J0OgEqykFWCi1nb29nbGUuY2xv",
+            "dWQucmV0YWlsLnYyLkltcG9ydFByb2R1Y3RzUmVzcG9uc2USJWdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuSW1wb3J0TWV0YWRhdGEStAIKDFNldEludmVudG9y",
+            "eRIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2V0SW52ZW50b3J5UmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i1wGC0+STAl8iWi92",
+            "Mi97aW52ZW50b3J5Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRh",
+            "bG9ncy8qL2JyYW5jaGVzLyovcHJvZHVjdHMvKip9OnNldEludmVudG9yeToB",
+            "KtpBEmludmVudG9yeSxzZXRfbWFza8pBWgorZ29vZ2xlLmNsb3VkLnJldGFp",
+            "bC52Mi5TZXRJbnZlbnRvcnlSZXNwb25zZRIrZ29vZ2xlLmNsb3VkLnJldGFp",
+            "bC52Mi5TZXRJbnZlbnRvcnlNZXRhZGF0YRLKAgoUQWRkRnVsZmlsbG1lbnRQ",
+            "bGFjZXMSMy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkFkZEZ1bGZpbGxtZW50",
+            "UGxhY2VzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "3QGC0+STAmAiWy92Mi97cHJvZHVjdD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2NhdGFsb2dzLyovYnJhbmNoZXMvKi9wcm9kdWN0cy8qKn06YWRkRnVsZmls",
+            "bG1lbnRQbGFjZXM6ASraQQdwcm9kdWN0ykFqCjNnb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkFkZEZ1bGZpbGxtZW50UGxhY2VzUmVzcG9uc2USM2dvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuQWRkRnVsZmlsbG1lbnRQbGFjZXNNZXRhZGF0YRLZ",
+            "AgoXUmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXMSNi5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLlJlbW92ZUZ1bGZpbGxtZW50UGxhY2VzUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24i5gGC0+STAmMiXi92Mi97cHJvZHVj",
             "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovYnJhbmNoZXMv",
-            "Kn0vcHJvZHVjdHM6aW1wb3J0OgEqykFWCi1nb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyLkltcG9ydFByb2R1Y3RzUmVzcG9uc2USJWdvb2dsZS5jbG91ZC5yZXRh",
-            "aWwudjIuSW1wb3J0TWV0YWRhdGEaScpBFXJldGFpbC5nb29nbGVhcGlzLmNv",
-            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CyAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhNQcm9kdWN0",
-            "U2VydmljZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdv",
-            "b2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy",
-            "6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
+            "Ki9wcm9kdWN0cy8qKn06cmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXM6ASraQQdw",
+            "cm9kdWN0ykFwCjZnb29nbGUuY2xvdWQucmV0YWlsLnYyLlJlbW92ZUZ1bGZp",
+            "bGxtZW50UGxhY2VzUmVzcG9uc2USNmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "UmVtb3ZlRnVsZmlsbG1lbnRQbGFjZXNNZXRhZGF0YRpJykEVcmV0YWlsLmdv",
+            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybULIAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djJCE1Byb2R1Y3RTZXJ2aWNlUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIG",
+            "UkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91",
+            "ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CreateProductRequest), global::Google.Cloud.Retail.V2.CreateProductRequest.Parser, new[]{ "Parent", "Product", "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.GetProductRequest), global::Google.Cloud.Retail.V2.GetProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UpdateProductRequest), global::Google.Cloud.Retail.V2.UpdateProductRequest.Parser, new[]{ "Product", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.DeleteProductRequest), global::Google.Cloud.Retail.V2.DeleteProductRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UpdateProductRequest), global::Google.Cloud.Retail.V2.UpdateProductRequest.Parser, new[]{ "Product", "UpdateMask", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.DeleteProductRequest), global::Google.Cloud.Retail.V2.DeleteProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ListProductsRequest), global::Google.Cloud.Retail.V2.ListProductsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "ReadMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ListProductsResponse), global::Google.Cloud.Retail.V2.ListProductsResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SetInventoryRequest), global::Google.Cloud.Retail.V2.SetInventoryRequest.Parser, new[]{ "Inventory", "SetMask", "SetTime", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SetInventoryMetadata), global::Google.Cloud.Retail.V2.SetInventoryMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SetInventoryResponse), global::Google.Cloud.Retail.V2.SetInventoryResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest.Parser, new[]{ "Product", "Type", "PlaceIds", "AddTime", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse), global::Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest.Parser, new[]{ "Product", "Type", "PlaceIds", "RemoveTime", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse), global::Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -587,6 +650,7 @@ namespace Google.Cloud.Retail.V2 {
     public UpdateProductRequest(UpdateProductRequest other) : this() {
       product_ = other.product_ != null ? other.product_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -605,8 +669,10 @@ namespace Google.Cloud.Retail.V2 {
     /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the [Product][google.cloud.retail.v2.Product] to update does not exist,
-    /// a NOT_FOUND error is returned.
+    /// If the [Product][google.cloud.retail.v2.Product] to update does not exist
+    /// and
+    /// [allow_missing][google.cloud.retail.v2.UpdateProductRequest.allow_missing]
+    /// is not set, a NOT_FOUND error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.Product Product {
@@ -636,6 +702,22 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 3;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// found, a new [Product][google.cloud.retail.v2.Product] will be created. In
+    /// this situation, `update_mask` is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateProductRequest);
@@ -651,6 +733,7 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (!object.Equals(Product, other.Product)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -659,6 +742,7 @@ namespace Google.Cloud.Retail.V2 {
       int hash = 1;
       if (product_ != null) hash ^= Product.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -683,6 +767,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -700,6 +788,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -714,6 +806,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -737,6 +832,9 @@ namespace Google.Cloud.Retail.V2 {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -766,6 +864,10 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 24: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -792,6 +894,10 @@ namespace Google.Cloud.Retail.V2 {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 24: {
+            AllowMissing = input.ReadBool();
             break;
           }
         }
@@ -856,6 +962,17 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// If the [Product][google.cloud.retail.v2.Product] to delete does not exist,
     /// a NOT_FOUND error is returned.
+    ///
+    /// The [Product][google.cloud.retail.v2.Product] to delete can neither be a
+    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
+    /// [Product][google.cloud.retail.v2.Product] member nor a
+    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
+    /// [Product][google.cloud.retail.v2.Product] with more than one
+    /// [variants][google.cloud.retail.v2.Product.Type.VARIANT]. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// All inventory information for the named
+    /// [Product][google.cloud.retail.v2.Product] will be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -981,6 +1098,2588 @@ namespace Google.Cloud.Retail.V2 {
             Name = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+  /// method.
+  /// </summary>
+  public sealed partial class ListProductsRequest : pb::IMessage<ListProductsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListProductsRequest> _parser = new pb::MessageParser<ListProductsRequest>(() => new ListProductsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListProductsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsRequest(ListProductsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      readMask_ = other.readMask_ != null ? other.readMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsRequest Clone() {
+      return new ListProductsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent branch resource name, such as
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/0`. Use
+    /// `default_branch` as the branch ID, to list products under the default
+    /// branch.
+    ///
+    /// If the caller does not have permission to list
+    /// [Product][google.cloud.retail.v2.Product]s under this branch, regardless of
+    /// whether or not this branch exists, a PERMISSION_DENIED error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Maximum number of [Product][google.cloud.retail.v2.Product]s to return. If
+    /// unspecified, defaults to 100. The maximum allowed value is 1000. Values
+    /// above 1000 will be coerced to 1000.
+    ///
+    /// If this field is negative, an INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// A page token
+    /// [ListProductsResponse.next_page_token][google.cloud.retail.v2.ListProductsResponse.next_page_token],
+    /// received from a previous
+    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+    /// call. Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to
+    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+    /// must match the call that provided the page token. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// A filter to apply on the list results. Supported features:
+    ///
+    /// * List all the products under the parent branch if
+    /// [filter][google.cloud.retail.v2.ListProductsRequest.filter] is unset.
+    /// * List [Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
+    /// [Product][google.cloud.retail.v2.Product]s sharing the same
+    ///   [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
+    ///   [Product][google.cloud.retail.v2.Product]. For example:
+    ///     `primary_product_id = "some_product_id"`
+    /// * List [Product][google.cloud.retail.v2.Product]s bundled in a
+    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
+    /// [Product][google.cloud.retail.v2.Product].
+    ///   For example:
+    ///     `collection_product_id = "some_product_id"`
+    /// * List [Product][google.cloud.retail.v2.Product]s with a partibular type.
+    /// For example:
+    ///     `type = "PRIMARY"`
+    ///     `type = "VARIANT"`
+    ///     `type = "COLLECTION"`
+    ///
+    /// If the field is unrecognizable, an INVALID_ARGUMENT error is returned.
+    ///
+    /// If the specified
+    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
+    /// [Product][google.cloud.retail.v2.Product] or
+    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
+    /// [Product][google.cloud.retail.v2.Product] does not exist, a NOT_FOUND error
+    /// is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_mask" field.</summary>
+    public const int ReadMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
+    /// <summary>
+    /// The fields of [Product][google.cloud.retail.v2.Product] to return in the
+    /// responses. If not set or empty, the following fields are returned:
+    ///
+    /// * [Product.name][google.cloud.retail.v2.Product.name]
+    /// * [Product.id][google.cloud.retail.v2.Product.id]
+    /// * [Product.title][google.cloud.retail.v2.Product.title]
+    /// * [Product.uri][google.cloud.retail.v2.Product.uri]
+    /// * [Product.images][google.cloud.retail.v2.Product.images]
+    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
+    /// * [Product.brands][google.cloud.retail.v2.Product.brands]
+    ///
+    /// If "*" is provided, all fields are returned.
+    /// [Product.name][google.cloud.retail.v2.Product.name] is always returned no
+    /// matter what mask is set.
+    ///
+    /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
+    /// is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask ReadMask {
+      get { return readMask_; }
+      set {
+        readMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListProductsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListProductsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (!object.Equals(ReadMask, other.ReadMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (readMask_ != null) hash ^= ReadMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (readMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (readMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (readMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListProductsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.readMask_ != null) {
+        if (readMask_ == null) {
+          ReadMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        ReadMask.MergeFrom(other.ReadMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (readMask_ == null) {
+              ReadMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(ReadMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (readMask_ == null) {
+              ReadMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(ReadMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+  /// method.
+  /// </summary>
+  public sealed partial class ListProductsResponse : pb::IMessage<ListProductsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListProductsResponse> _parser = new pb::MessageParser<ListProductsResponse>(() => new ListProductsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListProductsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsResponse(ListProductsResponse other) : this() {
+      products_ = other.products_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListProductsResponse Clone() {
+      return new ListProductsResponse(this);
+    }
+
+    /// <summary>Field number for the "products" field.</summary>
+    public const int ProductsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Product> _repeated_products_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Retail.V2.Product.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> products_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product>();
+    /// <summary>
+    /// The [Product][google.cloud.retail.v2.Product]s.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> Products {
+      get { return products_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token that can be sent as
+    /// [ListProductsRequest.page_token][google.cloud.retail.v2.ListProductsRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListProductsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListProductsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!products_.Equals(other.products_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= products_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      products_.WriteTo(output, _repeated_products_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      products_.WriteTo(ref output, _repeated_products_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += products_.CalculateSize(_repeated_products_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListProductsResponse other) {
+      if (other == null) {
+        return;
+      }
+      products_.Add(other.products_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            products_.AddEntriesFrom(input, _repeated_products_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            products_.AddEntriesFrom(ref input, _repeated_products_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for [SetInventory][] method.
+  /// </summary>
+  public sealed partial class SetInventoryRequest : pb::IMessage<SetInventoryRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetInventoryRequest> _parser = new pb::MessageParser<SetInventoryRequest>(() => new SetInventoryRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetInventoryRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryRequest(SetInventoryRequest other) : this() {
+      inventory_ = other.inventory_ != null ? other.inventory_.Clone() : null;
+      setMask_ = other.setMask_ != null ? other.setMask_.Clone() : null;
+      setTime_ = other.setTime_ != null ? other.setTime_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryRequest Clone() {
+      return new SetInventoryRequest(this);
+    }
+
+    /// <summary>Field number for the "inventory" field.</summary>
+    public const int InventoryFieldNumber = 1;
+    private global::Google.Cloud.Retail.V2.Product inventory_;
+    /// <summary>
+    /// Required. The inventory information to update. The allowable fields to
+    /// update are:
+    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
+    /// * [Product.availability][google.cloud.retail.v2.Product.availability]
+    /// * [Product.available_quantity][google.cloud.retail.v2.Product.available_quantity]
+    /// * [Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
+    /// The updated inventory fields must be specified in
+    /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask].
+    ///
+    /// If [SetInventoryRequest.inventory.name][] is empty or invalid, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// If the caller does not have permission to update the
+    /// [Product][google.cloud.retail.v2.Product] named in
+    /// [Product.name][google.cloud.retail.v2.Product.name], regardless of whether
+    /// or not it exists, a PERMISSION_DENIED error is returned.
+    ///
+    /// If the [Product][google.cloud.retail.v2.Product] to update does not have
+    /// existing inventory information, the provided inventory information will be
+    /// inserted.
+    ///
+    /// If the [Product][google.cloud.retail.v2.Product] to update has existing
+    /// inventory information, the provided inventory information will be merged
+    /// while respecting the last update time for each inventory field, using the
+    /// provided or default value for
+    /// [SetInventoryRequest.set_time][google.cloud.retail.v2.SetInventoryRequest.set_time].
+    ///
+    /// The last update time is recorded for the following inventory fields:
+    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
+    /// * [Product.availability][google.cloud.retail.v2.Product.availability]
+    /// * [Product.available_quantity][google.cloud.retail.v2.Product.available_quantity]
+    /// * [Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
+    ///
+    /// If a full overwrite of inventory information while ignoring timestamps is
+    /// needed, [UpdateProduct][] should be invoked instead.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Retail.V2.Product Inventory {
+      get { return inventory_; }
+      set {
+        inventory_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "set_mask" field.</summary>
+    public const int SetMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask setMask_;
+    /// <summary>
+    /// Indicates which inventory fields in the provided
+    /// [Product][google.cloud.retail.v2.Product] to update. If not set or set with
+    /// empty paths, all inventory fields will be updated.
+    ///
+    /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
+    /// is returned and the entire update will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask SetMask {
+      get { return setMask_; }
+      set {
+        setMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "set_time" field.</summary>
+    public const int SetTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp setTime_;
+    /// <summary>
+    /// The time when the request is issued, used to prevent
+    /// out-of-order updates on inventory fields with the last update time
+    /// recorded. If not provided, the internal system time will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SetTime {
+      get { return setTime_; }
+      set {
+        setTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 4;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] with name
+    /// [Product.name][google.cloud.retail.v2.Product.name] is not found, the
+    /// inventory update will still be processed and retained for at most 1 day
+    /// until the [Product][google.cloud.retail.v2.Product] is created. If set to
+    /// false, an INVALID_ARGUMENT error is returned if the
+    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetInventoryRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetInventoryRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Inventory, other.Inventory)) return false;
+      if (!object.Equals(SetMask, other.SetMask)) return false;
+      if (!object.Equals(SetTime, other.SetTime)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (inventory_ != null) hash ^= Inventory.GetHashCode();
+      if (setMask_ != null) hash ^= SetMask.GetHashCode();
+      if (setTime_ != null) hash ^= SetTime.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (inventory_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Inventory);
+      }
+      if (setMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SetMask);
+      }
+      if (setTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SetTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (inventory_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Inventory);
+      }
+      if (setMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SetMask);
+      }
+      if (setTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SetTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (inventory_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Inventory);
+      }
+      if (setMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SetMask);
+      }
+      if (setTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SetTime);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetInventoryRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.inventory_ != null) {
+        if (inventory_ == null) {
+          Inventory = new global::Google.Cloud.Retail.V2.Product();
+        }
+        Inventory.MergeFrom(other.Inventory);
+      }
+      if (other.setMask_ != null) {
+        if (setMask_ == null) {
+          SetMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        SetMask.MergeFrom(other.SetMask);
+      }
+      if (other.setTime_ != null) {
+        if (setTime_ == null) {
+          SetTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SetTime.MergeFrom(other.SetTime);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (inventory_ == null) {
+              Inventory = new global::Google.Cloud.Retail.V2.Product();
+            }
+            input.ReadMessage(Inventory);
+            break;
+          }
+          case 18: {
+            if (setMask_ == null) {
+              SetMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(SetMask);
+            break;
+          }
+          case 26: {
+            if (setTime_ == null) {
+              SetTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SetTime);
+            break;
+          }
+          case 32: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (inventory_ == null) {
+              Inventory = new global::Google.Cloud.Retail.V2.Product();
+            }
+            input.ReadMessage(Inventory);
+            break;
+          }
+          case 18: {
+            if (setMask_ == null) {
+              SetMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(SetMask);
+            break;
+          }
+          case 26: {
+            if (setTime_ == null) {
+              SetTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SetTime);
+            break;
+          }
+          case 32: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata related to the progress of the SetInventory operation.
+  /// Currently empty because there is no meaningful metadata populated from the
+  /// [SetInventory][] method.
+  /// </summary>
+  public sealed partial class SetInventoryMetadata : pb::IMessage<SetInventoryMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetInventoryMetadata> _parser = new pb::MessageParser<SetInventoryMetadata>(() => new SetInventoryMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetInventoryMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryMetadata(SetInventoryMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryMetadata Clone() {
+      return new SetInventoryMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetInventoryMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetInventoryMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetInventoryMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the SetInventoryRequest.  Currently empty because
+  /// there is no meaningful response populated from the [SetInventory][]
+  /// method.
+  /// </summary>
+  public sealed partial class SetInventoryResponse : pb::IMessage<SetInventoryResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetInventoryResponse> _parser = new pb::MessageParser<SetInventoryResponse>(() => new SetInventoryResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetInventoryResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryResponse(SetInventoryResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetInventoryResponse Clone() {
+      return new SetInventoryResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetInventoryResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetInventoryResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetInventoryResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for [AddFulfillmentPlaces][] method.
+  /// </summary>
+  public sealed partial class AddFulfillmentPlacesRequest : pb::IMessage<AddFulfillmentPlacesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddFulfillmentPlacesRequest> _parser = new pb::MessageParser<AddFulfillmentPlacesRequest>(() => new AddFulfillmentPlacesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AddFulfillmentPlacesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesRequest(AddFulfillmentPlacesRequest other) : this() {
+      product_ = other.product_;
+      type_ = other.type_;
+      placeIds_ = other.placeIds_.Clone();
+      addTime_ = other.addTime_ != null ? other.addTime_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesRequest Clone() {
+      return new AddFulfillmentPlacesRequest(this);
+    }
+
+    /// <summary>Field number for the "product" field.</summary>
+    public const int ProductFieldNumber = 1;
+    private string product_ = "";
+    /// <summary>
+    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// such as
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+    ///
+    /// If the caller does not have permission to access the
+    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// exists, a PERMISSION_DENIED error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Product {
+      get { return product_; }
+      set {
+        product_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    /// <summary>
+    /// Required. The fulfillment type, including commonly used types (such as
+    /// pickup in store and same day delivery), and custom types.
+    ///
+    /// Supported values:
+    ///
+    /// * "pickup-in-store"
+    /// * "ship-to-store"
+    /// * "same-day-delivery"
+    /// * "next-day-delivery"
+    /// * "custom-type-1"
+    /// * "custom-type-2"
+    /// * "custom-type-3"
+    /// * "custom-type-4"
+    /// * "custom-type-5"
+    ///
+    /// If this field is set to an invalid value other than these, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "place_ids" field.</summary>
+    public const int PlaceIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_placeIds_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> placeIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The IDs for this
+    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type], such as
+    /// the store IDs for "pickup-in-store" or the region IDs for
+    /// "same-day-delivery" to be added for this
+    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type]. Duplicate
+    /// IDs will be automatically ignored.
+    ///
+    /// At least 1 value is required, and a maximum of 2000 values are allowed.
+    /// Each value must be a string with a length limit of 10 characters, matching
+    /// the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// If the total number of place IDs exceeds 2000 for this
+    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type] after
+    /// adding, then the update will be rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PlaceIds {
+      get { return placeIds_; }
+    }
+
+    /// <summary>Field number for the "add_time" field.</summary>
+    public const int AddTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp addTime_;
+    /// <summary>
+    /// The time when the fulfillment updates are issued, used to prevent
+    /// out-of-order updates on fulfillment information. If not provided, the
+    /// internal system time will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp AddTime {
+      get { return addTime_; }
+      set {
+        addTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 5;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// found, the fulfillment information will still be processed and retained for
+    /// at most 1 day and processed once the
+    /// [Product][google.cloud.retail.v2.Product] is created. If set to false, an
+    /// INVALID_ARGUMENT error is returned if the
+    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AddFulfillmentPlacesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AddFulfillmentPlacesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Product != other.Product) return false;
+      if (Type != other.Type) return false;
+      if(!placeIds_.Equals(other.placeIds_)) return false;
+      if (!object.Equals(AddTime, other.AddTime)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Product.Length != 0) hash ^= Product.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
+      hash ^= placeIds_.GetHashCode();
+      if (addTime_ != null) hash ^= AddTime.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      placeIds_.WriteTo(output, _repeated_placeIds_codec);
+      if (addTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AddTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      placeIds_.WriteTo(ref output, _repeated_placeIds_codec);
+      if (addTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AddTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Product.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Product);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      size += placeIds_.CalculateSize(_repeated_placeIds_codec);
+      if (addTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddTime);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AddFulfillmentPlacesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Product.Length != 0) {
+        Product = other.Product;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      placeIds_.Add(other.placeIds_);
+      if (other.addTime_ != null) {
+        if (addTime_ == null) {
+          AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        AddTime.MergeFrom(other.AddTime);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            placeIds_.AddEntriesFrom(input, _repeated_placeIds_codec);
+            break;
+          }
+          case 34: {
+            if (addTime_ == null) {
+              AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(AddTime);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            placeIds_.AddEntriesFrom(ref input, _repeated_placeIds_codec);
+            break;
+          }
+          case 34: {
+            if (addTime_ == null) {
+              AddTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(AddTime);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata related to the progress of the AddFulfillmentPlaces operation.
+  /// Currently empty because there is no meaningful metadata populated from the
+  /// [AddFulfillmentPlaces][] method.
+  /// </summary>
+  public sealed partial class AddFulfillmentPlacesMetadata : pb::IMessage<AddFulfillmentPlacesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddFulfillmentPlacesMetadata> _parser = new pb::MessageParser<AddFulfillmentPlacesMetadata>(() => new AddFulfillmentPlacesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AddFulfillmentPlacesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesMetadata(AddFulfillmentPlacesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesMetadata Clone() {
+      return new AddFulfillmentPlacesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AddFulfillmentPlacesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AddFulfillmentPlacesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AddFulfillmentPlacesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the RemoveFulfillmentPlacesRequest.  Currently empty because
+  /// there is no meaningful response populated from the [AddFulfillmentPlaces][]
+  /// method.
+  /// </summary>
+  public sealed partial class AddFulfillmentPlacesResponse : pb::IMessage<AddFulfillmentPlacesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddFulfillmentPlacesResponse> _parser = new pb::MessageParser<AddFulfillmentPlacesResponse>(() => new AddFulfillmentPlacesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AddFulfillmentPlacesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesResponse(AddFulfillmentPlacesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddFulfillmentPlacesResponse Clone() {
+      return new AddFulfillmentPlacesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AddFulfillmentPlacesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AddFulfillmentPlacesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AddFulfillmentPlacesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for [RemoveFulfillmentPlaces][] method.
+  /// </summary>
+  public sealed partial class RemoveFulfillmentPlacesRequest : pb::IMessage<RemoveFulfillmentPlacesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveFulfillmentPlacesRequest> _parser = new pb::MessageParser<RemoveFulfillmentPlacesRequest>(() => new RemoveFulfillmentPlacesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RemoveFulfillmentPlacesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesRequest(RemoveFulfillmentPlacesRequest other) : this() {
+      product_ = other.product_;
+      type_ = other.type_;
+      placeIds_ = other.placeIds_.Clone();
+      removeTime_ = other.removeTime_ != null ? other.removeTime_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesRequest Clone() {
+      return new RemoveFulfillmentPlacesRequest(this);
+    }
+
+    /// <summary>Field number for the "product" field.</summary>
+    public const int ProductFieldNumber = 1;
+    private string product_ = "";
+    /// <summary>
+    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// such as
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+    ///
+    /// If the caller does not have permission to access the
+    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// exists, a PERMISSION_DENIED error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Product {
+      get { return product_; }
+      set {
+        product_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    /// <summary>
+    /// Required. The fulfillment type, including commonly used types (such as
+    /// pickup in store and same day delivery), and custom types.
+    ///
+    /// Supported values:
+    ///
+    /// * "pickup-in-store"
+    /// * "ship-to-store"
+    /// * "same-day-delivery"
+    /// * "next-day-delivery"
+    /// * "custom-type-1"
+    /// * "custom-type-2"
+    /// * "custom-type-3"
+    /// * "custom-type-4"
+    /// * "custom-type-5"
+    ///
+    /// If this field is set to an invalid value other than these, an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "place_ids" field.</summary>
+    public const int PlaceIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_placeIds_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> placeIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The IDs for this
+    /// [type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type], such as
+    /// the store IDs for "pickup-in-store" or the region IDs for
+    /// "same-day-delivery", to be removed for this
+    /// [type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type].
+    ///
+    /// At least 1 value is required, and a maximum of 2000 values are allowed.
+    /// Each value must be a string with a length limit of 10 characters, matching
+    /// the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PlaceIds {
+      get { return placeIds_; }
+    }
+
+    /// <summary>Field number for the "remove_time" field.</summary>
+    public const int RemoveTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp removeTime_;
+    /// <summary>
+    /// The time when the fulfillment updates are issued, used to prevent
+    /// out-of-order updates on fulfillment information. If not provided, the
+    /// internal system time will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp RemoveTime {
+      get { return removeTime_; }
+      set {
+        removeTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 5;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// found, the fulfillment information will still be processed and retained for
+    /// at most 1 day and processed once the
+    /// [Product][google.cloud.retail.v2.Product] is created. If set to false, an
+    /// INVALID_ARGUMENT error is returned if the
+    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveFulfillmentPlacesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RemoveFulfillmentPlacesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Product != other.Product) return false;
+      if (Type != other.Type) return false;
+      if(!placeIds_.Equals(other.placeIds_)) return false;
+      if (!object.Equals(RemoveTime, other.RemoveTime)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Product.Length != 0) hash ^= Product.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
+      hash ^= placeIds_.GetHashCode();
+      if (removeTime_ != null) hash ^= RemoveTime.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      placeIds_.WriteTo(output, _repeated_placeIds_codec);
+      if (removeTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RemoveTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Product.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Product);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      placeIds_.WriteTo(ref output, _repeated_placeIds_codec);
+      if (removeTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RemoveTime);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Product.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Product);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      size += placeIds_.CalculateSize(_repeated_placeIds_codec);
+      if (removeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveTime);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RemoveFulfillmentPlacesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Product.Length != 0) {
+        Product = other.Product;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      placeIds_.Add(other.placeIds_);
+      if (other.removeTime_ != null) {
+        if (removeTime_ == null) {
+          RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        RemoveTime.MergeFrom(other.RemoveTime);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            placeIds_.AddEntriesFrom(input, _repeated_placeIds_codec);
+            break;
+          }
+          case 34: {
+            if (removeTime_ == null) {
+              RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(RemoveTime);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Product = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            placeIds_.AddEntriesFrom(ref input, _repeated_placeIds_codec);
+            break;
+          }
+          case 34: {
+            if (removeTime_ == null) {
+              RemoveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(RemoveTime);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata related to the progress of the RemoveFulfillmentPlaces operation.
+  /// Currently empty because there is no meaningful metadata populated from the
+  /// [RemoveFulfillmentPlaces][] method.
+  /// </summary>
+  public sealed partial class RemoveFulfillmentPlacesMetadata : pb::IMessage<RemoveFulfillmentPlacesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveFulfillmentPlacesMetadata> _parser = new pb::MessageParser<RemoveFulfillmentPlacesMetadata>(() => new RemoveFulfillmentPlacesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RemoveFulfillmentPlacesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesMetadata(RemoveFulfillmentPlacesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesMetadata Clone() {
+      return new RemoveFulfillmentPlacesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveFulfillmentPlacesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RemoveFulfillmentPlacesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RemoveFulfillmentPlacesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response of the RemoveFulfillmentPlacesRequest. Currently empty because there
+  /// is no meaningful response populated from the [RemoveFulfillmentPlaces][]
+  /// method.
+  /// </summary>
+  public sealed partial class RemoveFulfillmentPlacesResponse : pb::IMessage<RemoveFulfillmentPlacesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveFulfillmentPlacesResponse> _parser = new pb::MessageParser<RemoveFulfillmentPlacesResponse>(() => new RemoveFulfillmentPlacesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RemoveFulfillmentPlacesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.ProductServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesResponse(RemoveFulfillmentPlacesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RemoveFulfillmentPlacesResponse Clone() {
+      return new RemoveFulfillmentPlacesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveFulfillmentPlacesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RemoveFulfillmentPlacesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RemoveFulfillmentPlacesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

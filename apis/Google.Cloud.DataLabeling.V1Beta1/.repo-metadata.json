@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.DataLabeling.V1Beta1",
   "release_level": "beta",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Cloud.DataLabeling.V1Beta1/latest",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataLabeling.V1Beta1/latest",
   "library_type": "GAPIC_AUTO"
 }

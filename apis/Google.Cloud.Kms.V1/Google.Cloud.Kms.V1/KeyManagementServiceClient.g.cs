@@ -62,13 +62,16 @@ namespace Google.Cloud.Kms.V1
             CreateImportJobSettings = existing.CreateImportJobSettings;
             UpdateCryptoKeySettings = existing.UpdateCryptoKeySettings;
             UpdateCryptoKeyVersionSettings = existing.UpdateCryptoKeyVersionSettings;
+            UpdateCryptoKeyPrimaryVersionSettings = existing.UpdateCryptoKeyPrimaryVersionSettings;
+            DestroyCryptoKeyVersionSettings = existing.DestroyCryptoKeyVersionSettings;
+            RestoreCryptoKeyVersionSettings = existing.RestoreCryptoKeyVersionSettings;
             EncryptSettings = existing.EncryptSettings;
             DecryptSettings = existing.DecryptSettings;
             AsymmetricSignSettings = existing.AsymmetricSignSettings;
             AsymmetricDecryptSettings = existing.AsymmetricDecryptSettings;
-            UpdateCryptoKeyPrimaryVersionSettings = existing.UpdateCryptoKeyPrimaryVersionSettings;
-            DestroyCryptoKeyVersionSettings = existing.DestroyCryptoKeyVersionSettings;
-            RestoreCryptoKeyVersionSettings = existing.RestoreCryptoKeyVersionSettings;
+            MacSignSettings = existing.MacSignSettings;
+            MacVerifySettings = existing.MacVerifySettings;
+            GenerateRandomBytesSettings = existing.GenerateRandomBytesSettings;
             OnCopy(existing);
         }
 
@@ -318,6 +321,54 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersion</c> and
+        /// <c>KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCryptoKeyPrimaryVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.DestroyCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.DestroyCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DestroyCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.RestoreCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.RestoreCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>KeyManagementServiceClient.Encrypt</c> and <c>KeyManagementServiceClient.EncryptAsync</c>.
         /// </summary>
         /// <remarks>
@@ -379,51 +430,40 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersion</c> and
-        /// <c>KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync</c>.
+        /// <c>KeyManagementServiceClient.MacSign</c> and <c>KeyManagementServiceClient.MacSignAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateCryptoKeyPrimaryVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings MacSignSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>KeyManagementServiceClient.DestroyCryptoKeyVersion</c> and
-        /// <c>KeyManagementServiceClient.DestroyCryptoKeyVersionAsync</c>.
+        /// <c>KeyManagementServiceClient.MacVerify</c> and <c>KeyManagementServiceClient.MacVerifyAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DestroyCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings MacVerifySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>KeyManagementServiceClient.RestoreCryptoKeyVersion</c> and
-        /// <c>KeyManagementServiceClient.RestoreCryptoKeyVersionAsync</c>.
+        /// <c>KeyManagementServiceClient.GenerateRandomBytes</c> and
+        /// <c>KeyManagementServiceClient.GenerateRandomBytesAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RestoreCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings GenerateRandomBytesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="KeyManagementServiceSettings"/> object.</returns>
@@ -438,6 +478,12 @@ namespace Google.Cloud.Kms.V1
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public KeyManagementServiceSettings Settings { get; set; }
+
+        /// <summary>Creates a new builder with default settings.</summary>
+        public KeyManagementServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = KeyManagementServiceClient.UseJwtAccessWithScopes;
+        }
 
         partial void InterceptBuild(ref KeyManagementServiceClient client);
 
@@ -525,7 +571,19 @@ namespace Google.Cloud.Kms.V1
             "https://www.googleapis.com/auth/cloudkms",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="KeyManagementServiceClient"/> using the default credentials, endpoint
@@ -2559,6 +2617,523 @@ namespace Google.Cloud.Kms.V1
             UpdateCryptoKeyVersionAsync(cryptoKeyVersion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCryptoKeyPrimaryVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(string name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCryptoKeyPrimaryVersion(new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(string name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCryptoKeyPrimaryVersionAsync(new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(string name, string cryptoKeyVersionId, st::CancellationToken cancellationToken) =>
+            UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(CryptoKeyName name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCryptoKeyPrimaryVersion(new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCryptoKeyPrimaryVersionAsync(new UpdateCryptoKeyPrimaryVersionRequest
+            {
+                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// </param>
+        /// <param name="cryptoKeyVersionId">
+        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName name, string cryptoKeyVersionId, st::CancellationToken cancellationToken) =>
+            UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
+            DestroyCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DestroyCryptoKeyVersion(new DestroyCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DestroyCryptoKeyVersionAsync(new DestroyCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DestroyCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DestroyCryptoKeyVersion(new DestroyCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DestroyCryptoKeyVersionAsync(new DestroyCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
+            DestroyCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
+            RestoreCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreCryptoKeyVersion(new RestoreCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreCryptoKeyVersionAsync(new RestoreCryptoKeyVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            RestoreCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreCryptoKeyVersion(new RestoreCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreCryptoKeyVersionAsync(new RestoreCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
+            RestoreCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
         /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
         /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
@@ -3232,521 +3807,431 @@ namespace Google.Cloud.Kms.V1
             AsymmetricDecryptAsync(name, ciphertext, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MacSignResponse MacSign(MacSignRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<MacSignResponse> MacSignAsync(MacSignRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, st::CancellationToken cancellationToken) =>
-            UpdateCryptoKeyPrimaryVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacSignResponse> MacSignAsync(MacSignRequest request, st::CancellationToken cancellationToken) =>
+            MacSignAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(string name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateCryptoKeyPrimaryVersion(new UpdateCryptoKeyPrimaryVersionRequest
+        public virtual MacSignResponse MacSign(string name, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            MacSign(new MacSignRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
             }, callSettings);
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(string name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateCryptoKeyPrimaryVersionAsync(new UpdateCryptoKeyPrimaryVersionRequest
+        public virtual stt::Task<MacSignResponse> MacSignAsync(string name, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            MacSignAsync(new MacSignRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
             }, callSettings);
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(string name, string cryptoKeyVersionId, st::CancellationToken cancellationToken) =>
-            UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacSignResponse> MacSignAsync(string name, proto::ByteString data, st::CancellationToken cancellationToken) =>
+            MacSignAsync(name, data, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKey UpdateCryptoKeyPrimaryVersion(CryptoKeyName name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateCryptoKeyPrimaryVersion(new UpdateCryptoKeyPrimaryVersionRequest
-            {
-                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
-        /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName name, string cryptoKeyVersionId, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateCryptoKeyPrimaryVersionAsync(new UpdateCryptoKeyPrimaryVersionRequest
-            {
-                CryptoKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                CryptoKeyVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyVersionId, nameof(cryptoKeyVersionId)),
-            }, callSettings);
-
-        /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
-        /// </param>
-        /// <param name="cryptoKeyVersionId">
-        /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(CryptoKeyName name, string cryptoKeyVersionId, st::CancellationToken cancellationToken) =>
-            UpdateCryptoKeyPrimaryVersionAsync(name, cryptoKeyVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
-            DestroyCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DestroyCryptoKeyVersion(new DestroyCryptoKeyVersionRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DestroyCryptoKeyVersionAsync(new DestroyCryptoKeyVersionRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
-            DestroyCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion DestroyCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
-            DestroyCryptoKeyVersion(new DestroyCryptoKeyVersionRequest
+        public virtual MacSignResponse MacSign(CryptoKeyVersionName name, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            MacSign(new MacSignRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
             }, callSettings);
 
         /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
-            DestroyCryptoKeyVersionAsync(new DestroyCryptoKeyVersionRequest
+        public virtual stt::Task<MacSignResponse> MacSignAsync(CryptoKeyVersionName name, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            MacSignAsync(new MacSignRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
             }, callSettings);
 
         /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data to sign. The MAC tag is computed over this data field based on
+        /// the specific algorithm.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
-            DestroyCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacSignResponse> MacSignAsync(CryptoKeyVersionName name, proto::ByteString data, st::CancellationToken cancellationToken) =>
+            MacSignAsync(name, data, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MacVerifyResponse MacVerify(MacVerifyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(MacVerifyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
-            RestoreCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(MacVerifyRequest request, st::CancellationToken cancellationToken) =>
+            MacVerifyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
-            RestoreCryptoKeyVersion(new RestoreCryptoKeyVersionRequest
+        public virtual MacVerifyResponse MacVerify(string name, proto::ByteString data, proto::ByteString mac, gaxgrpc::CallSettings callSettings = null) =>
+            MacVerify(new MacVerifyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+                Mac = gax::GaxPreconditions.CheckNotNull(mac, nameof(mac)),
             }, callSettings);
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            RestoreCryptoKeyVersionAsync(new RestoreCryptoKeyVersionRequest
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(string name, proto::ByteString data, proto::ByteString mac, gaxgrpc::CallSettings callSettings = null) =>
+            MacVerifyAsync(new MacVerifyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+                Mac = gax::GaxPreconditions.CheckNotNull(mac, nameof(mac)),
             }, callSettings);
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(string name, st::CancellationToken cancellationToken) =>
-            RestoreCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(string name, proto::ByteString data, proto::ByteString mac, st::CancellationToken cancellationToken) =>
+            MacVerifyAsync(name, data, mac, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CryptoKeyVersion RestoreCryptoKeyVersion(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
-            RestoreCryptoKeyVersion(new RestoreCryptoKeyVersionRequest
+        public virtual MacVerifyResponse MacVerify(CryptoKeyVersionName name, proto::ByteString data, proto::ByteString mac, gaxgrpc::CallSettings callSettings = null) =>
+            MacVerify(new MacVerifyRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+                Mac = gax::GaxPreconditions.CheckNotNull(mac, nameof(mac)),
             }, callSettings);
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(CryptoKeyVersionName name, gaxgrpc::CallSettings callSettings = null) =>
-            RestoreCryptoKeyVersionAsync(new RestoreCryptoKeyVersionRequest
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(CryptoKeyVersionName name, proto::ByteString data, proto::ByteString mac, gaxgrpc::CallSettings callSettings = null) =>
+            MacVerifyAsync(new MacVerifyRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+                Mac = gax::GaxPreconditions.CheckNotNull(mac, nameof(mac)),
             }, callSettings);
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+        /// </param>
+        /// <param name="data">
+        /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
+        /// tag.
+        /// </param>
+        /// <param name="mac">
+        /// Required. The signature to verify.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(CryptoKeyVersionName name, st::CancellationToken cancellationToken) =>
-            RestoreCryptoKeyVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<MacVerifyResponse> MacVerifyAsync(CryptoKeyVersionName name, proto::ByteString data, proto::ByteString mac, st::CancellationToken cancellationToken) =>
+            MacVerifyAsync(name, data, mac, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateRandomBytesResponse GenerateRandomBytes(GenerateRandomBytesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateRandomBytesResponse> GenerateRandomBytesAsync(GenerateRandomBytesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateRandomBytesResponse> GenerateRandomBytesAsync(GenerateRandomBytesRequest request, st::CancellationToken cancellationToken) =>
+            GenerateRandomBytesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="location">
+        /// The project-specific location in which to generate random bytes.
+        /// For example, "projects/my-project/locations/us-central1".
+        /// </param>
+        /// <param name="lengthBytes">
+        /// The length in bytes of the amount of randomness to retrieve.  Minimum 8
+        /// bytes, maximum 1024 bytes.
+        /// </param>
+        /// <param name="protectionLevel">
+        /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when generating the random data. Defaults to
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateRandomBytesResponse GenerateRandomBytes(string location, int lengthBytes, ProtectionLevel protectionLevel, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateRandomBytes(new GenerateRandomBytesRequest
+            {
+                Location = location ?? "",
+                LengthBytes = lengthBytes,
+                ProtectionLevel = protectionLevel,
+            }, callSettings);
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="location">
+        /// The project-specific location in which to generate random bytes.
+        /// For example, "projects/my-project/locations/us-central1".
+        /// </param>
+        /// <param name="lengthBytes">
+        /// The length in bytes of the amount of randomness to retrieve.  Minimum 8
+        /// bytes, maximum 1024 bytes.
+        /// </param>
+        /// <param name="protectionLevel">
+        /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when generating the random data. Defaults to
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateRandomBytesResponse> GenerateRandomBytesAsync(string location, int lengthBytes, ProtectionLevel protectionLevel, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateRandomBytesAsync(new GenerateRandomBytesRequest
+            {
+                Location = location ?? "",
+                LengthBytes = lengthBytes,
+                ProtectionLevel = protectionLevel,
+            }, callSettings);
+
+        /// <summary>
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
+        /// </summary>
+        /// <param name="location">
+        /// The project-specific location in which to generate random bytes.
+        /// For example, "projects/my-project/locations/us-central1".
+        /// </param>
+        /// <param name="lengthBytes">
+        /// The length in bytes of the amount of randomness to retrieve.  Minimum 8
+        /// bytes, maximum 1024 bytes.
+        /// </param>
+        /// <param name="protectionLevel">
+        /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when generating the random data. Defaults to
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateRandomBytesResponse> GenerateRandomBytesAsync(string location, int lengthBytes, ProtectionLevel protectionLevel, st::CancellationToken cancellationToken) =>
+            GenerateRandomBytesAsync(location, lengthBytes, protectionLevel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>KeyManagementService client wrapper implementation, for convenient use.</summary>
@@ -3798,6 +4283,12 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion> _callUpdateCryptoKeyVersion;
 
+        private readonly gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> _callUpdateCryptoKeyPrimaryVersion;
+
+        private readonly gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> _callDestroyCryptoKeyVersion;
+
+        private readonly gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> _callRestoreCryptoKeyVersion;
+
         private readonly gaxgrpc::ApiCall<EncryptRequest, EncryptResponse> _callEncrypt;
 
         private readonly gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> _callDecrypt;
@@ -3806,11 +4297,11 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> _callAsymmetricDecrypt;
 
-        private readonly gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> _callUpdateCryptoKeyPrimaryVersion;
+        private readonly gaxgrpc::ApiCall<MacSignRequest, MacSignResponse> _callMacSign;
 
-        private readonly gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> _callDestroyCryptoKeyVersion;
+        private readonly gaxgrpc::ApiCall<MacVerifyRequest, MacVerifyResponse> _callMacVerify;
 
-        private readonly gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> _callRestoreCryptoKeyVersion;
+        private readonly gaxgrpc::ApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse> _callGenerateRandomBytes;
 
         /// <summary>
         /// Constructs a client wrapper for the KeyManagementService service, with the specified gRPC client and
@@ -3871,6 +4362,15 @@ namespace Google.Cloud.Kms.V1
             _callUpdateCryptoKeyVersion = clientHelper.BuildApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.UpdateCryptoKeyVersionAsync, grpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings).WithGoogleRequestParam("crypto_key_version.name", request => request.CryptoKeyVersion?.Name);
             Modify_ApiCall(ref _callUpdateCryptoKeyVersion);
             Modify_UpdateCryptoKeyVersionApiCall(ref _callUpdateCryptoKeyVersion);
+            _callUpdateCryptoKeyPrimaryVersion = clientHelper.BuildApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey>(grpcClient.UpdateCryptoKeyPrimaryVersionAsync, grpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
+            Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
+            _callDestroyCryptoKeyVersion = clientHelper.BuildApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.DestroyCryptoKeyVersionAsync, grpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDestroyCryptoKeyVersion);
+            Modify_DestroyCryptoKeyVersionApiCall(ref _callDestroyCryptoKeyVersion);
+            _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.RestoreCryptoKeyVersionAsync, grpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRestoreCryptoKeyVersion);
+            Modify_RestoreCryptoKeyVersionApiCall(ref _callRestoreCryptoKeyVersion);
             _callEncrypt = clientHelper.BuildApiCall<EncryptRequest, EncryptResponse>(grpcClient.EncryptAsync, grpcClient.Encrypt, effectiveSettings.EncryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEncrypt);
             Modify_EncryptApiCall(ref _callEncrypt);
@@ -3883,15 +4383,15 @@ namespace Google.Cloud.Kms.V1
             _callAsymmetricDecrypt = clientHelper.BuildApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse>(grpcClient.AsymmetricDecryptAsync, grpcClient.AsymmetricDecrypt, effectiveSettings.AsymmetricDecryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsymmetricDecrypt);
             Modify_AsymmetricDecryptApiCall(ref _callAsymmetricDecrypt);
-            _callUpdateCryptoKeyPrimaryVersion = clientHelper.BuildApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey>(grpcClient.UpdateCryptoKeyPrimaryVersionAsync, grpcClient.UpdateCryptoKeyPrimaryVersion, effectiveSettings.UpdateCryptoKeyPrimaryVersionSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
-            Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref _callUpdateCryptoKeyPrimaryVersion);
-            _callDestroyCryptoKeyVersion = clientHelper.BuildApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.DestroyCryptoKeyVersionAsync, grpcClient.DestroyCryptoKeyVersion, effectiveSettings.DestroyCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDestroyCryptoKeyVersion);
-            Modify_DestroyCryptoKeyVersionApiCall(ref _callDestroyCryptoKeyVersion);
-            _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>(grpcClient.RestoreCryptoKeyVersionAsync, grpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callRestoreCryptoKeyVersion);
-            Modify_RestoreCryptoKeyVersionApiCall(ref _callRestoreCryptoKeyVersion);
+            _callMacSign = clientHelper.BuildApiCall<MacSignRequest, MacSignResponse>(grpcClient.MacSignAsync, grpcClient.MacSign, effectiveSettings.MacSignSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMacSign);
+            Modify_MacSignApiCall(ref _callMacSign);
+            _callMacVerify = clientHelper.BuildApiCall<MacVerifyRequest, MacVerifyResponse>(grpcClient.MacVerifyAsync, grpcClient.MacVerify, effectiveSettings.MacVerifySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMacVerify);
+            Modify_MacVerifyApiCall(ref _callMacVerify);
+            _callGenerateRandomBytes = clientHelper.BuildApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse>(grpcClient.GenerateRandomBytesAsync, grpcClient.GenerateRandomBytes, effectiveSettings.GenerateRandomBytesSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callGenerateRandomBytes);
+            Modify_GenerateRandomBytesApiCall(ref _callGenerateRandomBytes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3929,6 +4429,12 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_UpdateCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion> call);
 
+        partial void Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> call);
+
+        partial void Modify_DestroyCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> call);
+
+        partial void Modify_RestoreCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> call);
+
         partial void Modify_EncryptApiCall(ref gaxgrpc::ApiCall<EncryptRequest, EncryptResponse> call);
 
         partial void Modify_DecryptApiCall(ref gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> call);
@@ -3937,11 +4443,11 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_AsymmetricDecryptApiCall(ref gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> call);
 
-        partial void Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> call);
+        partial void Modify_MacSignApiCall(ref gaxgrpc::ApiCall<MacSignRequest, MacSignResponse> call);
 
-        partial void Modify_DestroyCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> call);
+        partial void Modify_MacVerifyApiCall(ref gaxgrpc::ApiCall<MacVerifyRequest, MacVerifyResponse> call);
 
-        partial void Modify_RestoreCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> call);
+        partial void Modify_GenerateRandomBytesApiCall(ref gaxgrpc::ApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse> call);
 
         partial void OnConstruction(KeyManagementService.KeyManagementServiceClient grpcClient, KeyManagementServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3980,6 +4486,12 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_UpdateCryptoKeyVersionRequest(ref UpdateCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateCryptoKeyPrimaryVersionRequest(ref UpdateCryptoKeyPrimaryVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DestroyCryptoKeyVersionRequest(ref DestroyCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreCryptoKeyVersionRequest(ref RestoreCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_EncryptRequest(ref EncryptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DecryptRequest(ref DecryptRequest request, ref gaxgrpc::CallSettings settings);
@@ -3988,11 +4500,11 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_AsymmetricDecryptRequest(ref AsymmetricDecryptRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_UpdateCryptoKeyPrimaryVersionRequest(ref UpdateCryptoKeyPrimaryVersionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_MacSignRequest(ref MacSignRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_DestroyCryptoKeyVersionRequest(ref DestroyCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_MacVerifyRequest(ref MacVerifyRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_RestoreCryptoKeyVersionRequest(ref RestoreCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GenerateRandomBytesRequest(ref GenerateRandomBytesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [KeyRings][google.cloud.kms.v1.KeyRing].
@@ -4427,6 +4939,118 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CryptoKey UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCryptoKeyPrimaryVersionRequest(ref request, ref callSettings);
+            return _callUpdateCryptoKeyPrimaryVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// 
+        /// Returns an error if called on a key whose purpose is not
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCryptoKeyPrimaryVersionRequest(ref request, ref callSettings);
+            return _callUpdateCryptoKeyPrimaryVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CryptoKeyVersion DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DestroyCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callDestroyCryptoKeyVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
+        /// 
+        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
+        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be changed to
+        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
+        /// material will be irrevocably destroyed.
+        /// 
+        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
+        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DestroyCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callDestroyCryptoKeyVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CryptoKeyVersion RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callRestoreCryptoKeyVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
+        /// state.
+        /// 
+        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
+        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
+        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callRestoreCryptoKeyVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
         /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
         /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
@@ -4537,115 +5161,85 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CryptoKey UpdateCryptoKeyPrimaryVersion(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override MacSignResponse MacSign(MacSignRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_UpdateCryptoKeyPrimaryVersionRequest(ref request, ref callSettings);
-            return _callUpdateCryptoKeyPrimaryVersion.Sync(request, callSettings);
+            Modify_MacSignRequest(ref request, ref callSettings);
+            return _callMacSign.Sync(request, callSettings);
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
-        /// 
-        /// Returns an error if called on a key whose purpose is not
-        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, producing a tag that can be verified by another source with the
+        /// same key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(UpdateCryptoKeyPrimaryVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<MacSignResponse> MacSignAsync(MacSignRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_UpdateCryptoKeyPrimaryVersionRequest(ref request, ref callSettings);
-            return _callUpdateCryptoKeyPrimaryVersion.Async(request, callSettings);
+            Modify_MacSignRequest(ref request, ref callSettings);
+            return _callMacSign.Async(request, callSettings);
         }
 
         /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CryptoKeyVersion DestroyCryptoKeyVersion(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override MacVerifyResponse MacVerify(MacVerifyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_DestroyCryptoKeyVersionRequest(ref request, ref callSettings);
-            return _callDestroyCryptoKeyVersion.Sync(request, callSettings);
+            Modify_MacVerifyRequest(ref request, ref callSettings);
+            return _callMacVerify.Sync(request, callSettings);
         }
 
         /// <summary>
-        /// Schedule a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] for destruction.
-        /// 
-        /// Upon calling this method, [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-        /// hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be changed to
-        /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
-        /// material will be irrevocably destroyed.
-        /// 
-        /// Before the [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] is reached,
-        /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion] may be called to reverse the process.
+        /// Verifies MAC tag using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// MAC, and returns a response that indicates whether or not the verification
+        /// was successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CryptoKeyVersion> DestroyCryptoKeyVersionAsync(DestroyCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<MacVerifyResponse> MacVerifyAsync(MacVerifyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_DestroyCryptoKeyVersionRequest(ref request, ref callSettings);
-            return _callDestroyCryptoKeyVersion.Async(request, callSettings);
+            Modify_MacVerifyRequest(ref request, ref callSettings);
+            return _callMacVerify.Async(request, callSettings);
         }
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CryptoKeyVersion RestoreCryptoKeyVersion(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override GenerateRandomBytesResponse GenerateRandomBytes(GenerateRandomBytesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_RestoreCryptoKeyVersionRequest(ref request, ref callSettings);
-            return _callRestoreCryptoKeyVersion.Sync(request, callSettings);
+            Modify_GenerateRandomBytesRequest(ref request, ref callSettings);
+            return _callGenerateRandomBytes.Sync(request, callSettings);
         }
 
         /// <summary>
-        /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-        /// state.
-        /// 
-        /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-        /// will be set to [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED],
-        /// and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be cleared.
+        /// Generate random bytes using the Cloud KMS randomness source in the provided
+        /// location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CryptoKeyVersion> RestoreCryptoKeyVersionAsync(RestoreCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<GenerateRandomBytesResponse> GenerateRandomBytesAsync(GenerateRandomBytesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_RestoreCryptoKeyVersionRequest(ref request, ref callSettings);
-            return _callRestoreCryptoKeyVersion.Async(request, callSettings);
+            Modify_GenerateRandomBytesRequest(ref request, ref callSettings);
+            return _callGenerateRandomBytes.Async(request, callSettings);
         }
     }
 

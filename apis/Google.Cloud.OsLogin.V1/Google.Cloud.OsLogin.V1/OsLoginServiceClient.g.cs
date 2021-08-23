@@ -160,6 +160,12 @@ namespace Google.Cloud.OsLogin.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public OsLoginServiceSettings Settings { get; set; }
 
+        /// <summary>Creates a new builder with default settings.</summary>
+        public OsLoginServiceClientBuilder()
+        {
+            UseJwtAccessWithScopes = OsLoginServiceClient.UseJwtAccessWithScopes;
+        }
+
         partial void InterceptBuild(ref OsLoginServiceClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OsLoginServiceClient> task);
@@ -238,7 +244,19 @@ namespace Google.Cloud.OsLogin.V1
             "https://www.googleapis.com/auth/compute",
         });
 
-        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
+        internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes, UseJwtAccessWithScopes);
+
+        internal static bool UseJwtAccessWithScopes
+        {
+            get
+            {
+                bool useJwtAccessWithScopes = true;
+                MaybeUseJwtAccessWithScopes(ref useJwtAccessWithScopes);
+                return useJwtAccessWithScopes;
+            }
+        }
+
+        static partial void MaybeUseJwtAccessWithScopes(ref bool useJwtAccessWithScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="OsLoginServiceClient"/> using the default credentials, endpoint and
