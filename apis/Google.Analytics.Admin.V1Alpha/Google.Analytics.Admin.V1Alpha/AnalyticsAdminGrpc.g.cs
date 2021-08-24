@@ -118,7 +118,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateFirebaseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Marshaller_google_analytics_admin_v1alpha_FirebaseLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser));
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateFirebaseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteFirebaseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListFirebaseLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListFirebaseLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksResponse.Parser));
@@ -150,6 +149,22 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetDisplayVideo360AdvertiserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateDisplayVideo360AdvertiserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteDisplayVideo360AdvertiserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateDisplayVideo360AdvertiserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest> __Marshaller_google_analytics_admin_v1alpha_GetDisplayVideo360AdvertiserLinkProposalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLinkProposal = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest> __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinkProposalsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse> __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinkProposalsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest> __Marshaller_google_analytics_admin_v1alpha_CreateDisplayVideo360AdvertiserLinkProposalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteDisplayVideo360AdvertiserLinkProposalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest> __Marshaller_google_analytics_admin_v1alpha_ApproveDisplayVideo360AdvertiserLinkProposalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse> __Marshaller_google_analytics_admin_v1alpha_ApproveDisplayVideo360AdvertiserLinkProposalResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest> __Marshaller_google_analytics_admin_v1alpha_CancelDisplayVideo360AdvertiserLinkProposalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_CreateCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Marshaller_google_analytics_admin_v1alpha_CustomDimension = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest.Parser));
@@ -164,6 +179,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse> __Marshaller_google_analytics_admin_v1alpha_ListCustomMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_ArchiveCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest> __Marshaller_google_analytics_admin_v1alpha_GetCustomMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataRetentionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> __Marshaller_google_analytics_admin_v1alpha_DataRetentionSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateDataRetentionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest.Parser));
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
         grpc::MethodType.Unary,
@@ -424,13 +442,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_CreateFirebaseLinkRequest,
         __Marshaller_google_analytics_admin_v1alpha_FirebaseLink);
 
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Method_UpdateFirebaseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateFirebaseLink",
-        __Marshaller_google_analytics_admin_v1alpha_UpdateFirebaseLinkRequest,
-        __Marshaller_google_analytics_admin_v1alpha_FirebaseLink);
-
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFirebaseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -571,6 +582,83 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse);
 
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> __Method_GetDisplayVideo360AdvertiserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDisplayVideo360AdvertiserLink",
+        __Marshaller_google_analytics_admin_v1alpha_GetDisplayVideo360AdvertiserLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLink);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse> __Method_ListDisplayVideo360AdvertiserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDisplayVideo360AdvertiserLinks",
+        __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinksRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinksResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> __Method_CreateDisplayVideo360AdvertiserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDisplayVideo360AdvertiserLink",
+        __Marshaller_google_analytics_admin_v1alpha_CreateDisplayVideo360AdvertiserLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLink);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDisplayVideo360AdvertiserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDisplayVideo360AdvertiserLink",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteDisplayVideo360AdvertiserLinkRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> __Method_UpdateDisplayVideo360AdvertiserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDisplayVideo360AdvertiserLink",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateDisplayVideo360AdvertiserLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLink);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> __Method_GetDisplayVideo360AdvertiserLinkProposal = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDisplayVideo360AdvertiserLinkProposal",
+        __Marshaller_google_analytics_admin_v1alpha_GetDisplayVideo360AdvertiserLinkProposalRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLinkProposal);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse> __Method_ListDisplayVideo360AdvertiserLinkProposals = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDisplayVideo360AdvertiserLinkProposals",
+        __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinkProposalsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListDisplayVideo360AdvertiserLinkProposalsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> __Method_CreateDisplayVideo360AdvertiserLinkProposal = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDisplayVideo360AdvertiserLinkProposal",
+        __Marshaller_google_analytics_admin_v1alpha_CreateDisplayVideo360AdvertiserLinkProposalRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLinkProposal);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDisplayVideo360AdvertiserLinkProposal = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDisplayVideo360AdvertiserLinkProposal",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteDisplayVideo360AdvertiserLinkProposalRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse> __Method_ApproveDisplayVideo360AdvertiserLinkProposal = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApproveDisplayVideo360AdvertiserLinkProposal",
+        __Marshaller_google_analytics_admin_v1alpha_ApproveDisplayVideo360AdvertiserLinkProposalRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ApproveDisplayVideo360AdvertiserLinkProposalResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> __Method_CancelDisplayVideo360AdvertiserLinkProposal = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelDisplayVideo360AdvertiserLinkProposal",
+        __Marshaller_google_analytics_admin_v1alpha_CancelDisplayVideo360AdvertiserLinkProposalRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DisplayVideo360AdvertiserLinkProposal);
+
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension> __Method_CreateCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -640,6 +728,20 @@ namespace Google.Analytics.Admin.V1Alpha {
         "GetCustomMetric",
         __Marshaller_google_analytics_admin_v1alpha_GetCustomMetricRequest,
         __Marshaller_google_analytics_admin_v1alpha_CustomMetric);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> __Method_GetDataRetentionSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataRetentionSettings",
+        __Marshaller_google_analytics_admin_v1alpha_GetDataRetentionSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataRetentionSettings);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> __Method_UpdateDataRetentionSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDataRetentionSettings",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateDataRetentionSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataRetentionSettings);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1118,17 +1220,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Updates a FirebaseLink on a property
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> UpdateFirebaseLink(global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Deletes a FirebaseLink on a property
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1356,6 +1447,138 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Look up a single DisplayVideo360AdvertiserLink
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all DisplayVideo360AdvertiserLinks on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse> ListDisplayVideo360AdvertiserLinks(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLink.
+      /// This can only be utilized by users who have proper authorization both on
+      /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+      /// Users who do not have access to the Display &amp; Video 360 advertiser should
+      /// instead seek to create a DisplayVideo360LinkProposal.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse> ListDisplayVideo360AdvertiserLinkProposals(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+      /// This can only be used on cancelled proposals.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves a DisplayVideo360AdvertiserLinkProposal.
+      /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+      /// DisplayVideo360AdvertiserLink will be created.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+      /// Cancelling can mean either:
+      /// - Declining a proposal initiated from Display &amp; Video 360
+      /// - Withdrawing a proposal initiated from Google Analytics
+      /// After being cancelled, a proposal will eventually be deleted automatically.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a CustomDimension.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1461,6 +1684,28 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CustomMetric> GetCustomMetric(global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> GetDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> UpdateDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3355,50 +3600,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFirebaseLink, null, options, request);
       }
       /// <summary>
-      /// Updates a FirebaseLink on a property
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.FirebaseLink UpdateFirebaseLink(global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateFirebaseLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a FirebaseLink on a property
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Admin.V1Alpha.FirebaseLink UpdateFirebaseLink(global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateFirebaseLink, null, options, request);
-      }
-      /// <summary>
-      /// Updates a FirebaseLink on a property
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> UpdateFirebaseLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateFirebaseLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a FirebaseLink on a property
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> UpdateFirebaseLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateFirebaseLink, null, options, request);
-      }
-      /// <summary>
       /// Deletes a FirebaseLink on a property
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4307,6 +4508,534 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListConversionEvents, null, options, request);
       }
       /// <summary>
+      /// Look up a single DisplayVideo360AdvertiserLink
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDisplayVideo360AdvertiserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Look up a single DisplayVideo360AdvertiserLink
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Look up a single DisplayVideo360AdvertiserLink
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDisplayVideo360AdvertiserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Look up a single DisplayVideo360AdvertiserLink
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Lists all DisplayVideo360AdvertiserLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse ListDisplayVideo360AdvertiserLinks(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDisplayVideo360AdvertiserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all DisplayVideo360AdvertiserLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse ListDisplayVideo360AdvertiserLinks(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDisplayVideo360AdvertiserLinks, null, options, request);
+      }
+      /// <summary>
+      /// Lists all DisplayVideo360AdvertiserLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse> ListDisplayVideo360AdvertiserLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDisplayVideo360AdvertiserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all DisplayVideo360AdvertiserLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse> ListDisplayVideo360AdvertiserLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDisplayVideo360AdvertiserLinks, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLink.
+      /// This can only be utilized by users who have proper authorization both on
+      /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+      /// Users who do not have access to the Display &amp; Video 360 advertiser should
+      /// instead seek to create a DisplayVideo360LinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDisplayVideo360AdvertiserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLink.
+      /// This can only be utilized by users who have proper authorization both on
+      /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+      /// Users who do not have access to the Display &amp; Video 360 advertiser should
+      /// instead seek to create a DisplayVideo360LinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLink.
+      /// This can only be utilized by users who have proper authorization both on
+      /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+      /// Users who do not have access to the Display &amp; Video 360 advertiser should
+      /// instead seek to create a DisplayVideo360LinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDisplayVideo360AdvertiserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLink.
+      /// This can only be utilized by users who have proper authorization both on
+      /// the Google Analytics property and on the Display &amp; Video 360 advertiser.
+      /// Users who do not have access to the Display &amp; Video 360 advertiser should
+      /// instead seek to create a DisplayVideo360LinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDisplayVideo360AdvertiserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDisplayVideo360AdvertiserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink UpdateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDisplayVideo360AdvertiserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink UpdateDisplayVideo360AdvertiserLink(global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDisplayVideo360AdvertiserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DisplayVideo360AdvertiserLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDisplayVideo360AdvertiserLink, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDisplayVideo360AdvertiserLinkProposal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDisplayVideo360AdvertiserLinkProposalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse ListDisplayVideo360AdvertiserLinkProposals(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDisplayVideo360AdvertiserLinkProposals(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse ListDisplayVideo360AdvertiserLinkProposals(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDisplayVideo360AdvertiserLinkProposals, null, options, request);
+      }
+      /// <summary>
+      /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse> ListDisplayVideo360AdvertiserLinkProposalsAsync(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDisplayVideo360AdvertiserLinkProposalsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse> ListDisplayVideo360AdvertiserLinkProposalsAsync(global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDisplayVideo360AdvertiserLinkProposals, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDisplayVideo360AdvertiserLinkProposal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDisplayVideo360AdvertiserLinkProposalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DisplayVideo360AdvertiserLinkProposal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+      /// This can only be used on cancelled proposals.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDisplayVideo360AdvertiserLinkProposal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+      /// This can only be used on cancelled proposals.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+      /// This can only be used on cancelled proposals.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+      /// This can only be used on cancelled proposals.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Approves a DisplayVideo360AdvertiserLinkProposal.
+      /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+      /// DisplayVideo360AdvertiserLink will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse ApproveDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveDisplayVideo360AdvertiserLinkProposal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a DisplayVideo360AdvertiserLinkProposal.
+      /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+      /// DisplayVideo360AdvertiserLink will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse ApproveDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApproveDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Approves a DisplayVideo360AdvertiserLinkProposal.
+      /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+      /// DisplayVideo360AdvertiserLink will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a DisplayVideo360AdvertiserLinkProposal.
+      /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+      /// DisplayVideo360AdvertiserLink will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApproveDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+      /// Cancelling can mean either:
+      /// - Declining a proposal initiated from Display &amp; Video 360
+      /// - Withdrawing a proposal initiated from Google Analytics
+      /// After being cancelled, a proposal will eventually be deleted automatically.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal CancelDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelDisplayVideo360AdvertiserLinkProposal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+      /// Cancelling can mean either:
+      /// - Declining a proposal initiated from Display &amp; Video 360
+      /// - Withdrawing a proposal initiated from Google Analytics
+      /// After being cancelled, a proposal will eventually be deleted automatically.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal CancelDisplayVideo360AdvertiserLinkProposal(global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+      /// Cancelling can mean either:
+      /// - Declining a proposal initiated from Display &amp; Video 360
+      /// - Withdrawing a proposal initiated from Google Analytics
+      /// After being cancelled, a proposal will eventually be deleted automatically.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelDisplayVideo360AdvertiserLinkProposalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+      /// Cancelling can mean either:
+      /// - Declining a proposal initiated from Display &amp; Video 360
+      /// - Withdrawing a proposal initiated from Google Analytics
+      /// After being cancelled, a proposal will eventually be deleted automatically.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposalAsync(global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelDisplayVideo360AdvertiserLinkProposal, null, options, request);
+      }
+      /// <summary>
       /// Creates a CustomDimension.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4746,6 +5475,94 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomMetric, null, options, request);
       }
+      /// <summary>
+      /// Returns the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings GetDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataRetentionSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings GetDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataRetentionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Returns the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> GetDataRetentionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataRetentionSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> GetDataRetentionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataRetentionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings UpdateDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataRetentionSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings UpdateDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDataRetentionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> UpdateDataRetentionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataRetentionSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the singleton data retention settings for this property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> UpdateDataRetentionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDataRetentionSettings, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -4795,7 +5612,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl.GetEnhancedMeasurementSettings)
           .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
           .AddMethod(__Method_CreateFirebaseLink, serviceImpl.CreateFirebaseLink)
-          .AddMethod(__Method_UpdateFirebaseLink, serviceImpl.UpdateFirebaseLink)
           .AddMethod(__Method_DeleteFirebaseLink, serviceImpl.DeleteFirebaseLink)
           .AddMethod(__Method_ListFirebaseLinks, serviceImpl.ListFirebaseLinks)
           .AddMethod(__Method_GetGlobalSiteTag, serviceImpl.GetGlobalSiteTag)
@@ -4816,6 +5632,17 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetConversionEvent, serviceImpl.GetConversionEvent)
           .AddMethod(__Method_DeleteConversionEvent, serviceImpl.DeleteConversionEvent)
           .AddMethod(__Method_ListConversionEvents, serviceImpl.ListConversionEvents)
+          .AddMethod(__Method_GetDisplayVideo360AdvertiserLink, serviceImpl.GetDisplayVideo360AdvertiserLink)
+          .AddMethod(__Method_ListDisplayVideo360AdvertiserLinks, serviceImpl.ListDisplayVideo360AdvertiserLinks)
+          .AddMethod(__Method_CreateDisplayVideo360AdvertiserLink, serviceImpl.CreateDisplayVideo360AdvertiserLink)
+          .AddMethod(__Method_DeleteDisplayVideo360AdvertiserLink, serviceImpl.DeleteDisplayVideo360AdvertiserLink)
+          .AddMethod(__Method_UpdateDisplayVideo360AdvertiserLink, serviceImpl.UpdateDisplayVideo360AdvertiserLink)
+          .AddMethod(__Method_GetDisplayVideo360AdvertiserLinkProposal, serviceImpl.GetDisplayVideo360AdvertiserLinkProposal)
+          .AddMethod(__Method_ListDisplayVideo360AdvertiserLinkProposals, serviceImpl.ListDisplayVideo360AdvertiserLinkProposals)
+          .AddMethod(__Method_CreateDisplayVideo360AdvertiserLinkProposal, serviceImpl.CreateDisplayVideo360AdvertiserLinkProposal)
+          .AddMethod(__Method_DeleteDisplayVideo360AdvertiserLinkProposal, serviceImpl.DeleteDisplayVideo360AdvertiserLinkProposal)
+          .AddMethod(__Method_ApproveDisplayVideo360AdvertiserLinkProposal, serviceImpl.ApproveDisplayVideo360AdvertiserLinkProposal)
+          .AddMethod(__Method_CancelDisplayVideo360AdvertiserLinkProposal, serviceImpl.CancelDisplayVideo360AdvertiserLinkProposal)
           .AddMethod(__Method_CreateCustomDimension, serviceImpl.CreateCustomDimension)
           .AddMethod(__Method_UpdateCustomDimension, serviceImpl.UpdateCustomDimension)
           .AddMethod(__Method_ListCustomDimensions, serviceImpl.ListCustomDimensions)
@@ -4825,7 +5652,9 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_UpdateCustomMetric, serviceImpl.UpdateCustomMetric)
           .AddMethod(__Method_ListCustomMetrics, serviceImpl.ListCustomMetrics)
           .AddMethod(__Method_ArchiveCustomMetric, serviceImpl.ArchiveCustomMetric)
-          .AddMethod(__Method_GetCustomMetric, serviceImpl.GetCustomMetric).Build();
+          .AddMethod(__Method_GetCustomMetric, serviceImpl.GetCustomMetric)
+          .AddMethod(__Method_GetDataRetentionSettings, serviceImpl.GetDataRetentionSettings)
+          .AddMethod(__Method_UpdateDataRetentionSettings, serviceImpl.UpdateDataRetentionSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -4871,7 +5700,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.GetEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.UpdateEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_CreateFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(serviceImpl.CreateFirebaseLink));
-      serviceBinder.AddMethod(__Method_UpdateFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(serviceImpl.UpdateFirebaseLink));
       serviceBinder.AddMethod(__Method_DeleteFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFirebaseLink));
       serviceBinder.AddMethod(__Method_ListFirebaseLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksResponse>(serviceImpl.ListFirebaseLinks));
       serviceBinder.AddMethod(__Method_GetGlobalSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGlobalSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag>(serviceImpl.GetGlobalSiteTag));
@@ -4892,6 +5720,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.GetConversionEvent));
       serviceBinder.AddMethod(__Method_DeleteConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversionEvent));
       serviceBinder.AddMethod(__Method_ListConversionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse>(serviceImpl.ListConversionEvents));
+      serviceBinder.AddMethod(__Method_GetDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(serviceImpl.GetDisplayVideo360AdvertiserLink));
+      serviceBinder.AddMethod(__Method_ListDisplayVideo360AdvertiserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse>(serviceImpl.ListDisplayVideo360AdvertiserLinks));
+      serviceBinder.AddMethod(__Method_CreateDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(serviceImpl.CreateDisplayVideo360AdvertiserLink));
+      serviceBinder.AddMethod(__Method_DeleteDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDisplayVideo360AdvertiserLink));
+      serviceBinder.AddMethod(__Method_UpdateDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(serviceImpl.UpdateDisplayVideo360AdvertiserLink));
+      serviceBinder.AddMethod(__Method_GetDisplayVideo360AdvertiserLinkProposal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(serviceImpl.GetDisplayVideo360AdvertiserLinkProposal));
+      serviceBinder.AddMethod(__Method_ListDisplayVideo360AdvertiserLinkProposals, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse>(serviceImpl.ListDisplayVideo360AdvertiserLinkProposals));
+      serviceBinder.AddMethod(__Method_CreateDisplayVideo360AdvertiserLinkProposal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(serviceImpl.CreateDisplayVideo360AdvertiserLinkProposal));
+      serviceBinder.AddMethod(__Method_DeleteDisplayVideo360AdvertiserLinkProposal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDisplayVideo360AdvertiserLinkProposal));
+      serviceBinder.AddMethod(__Method_ApproveDisplayVideo360AdvertiserLinkProposal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse>(serviceImpl.ApproveDisplayVideo360AdvertiserLinkProposal));
+      serviceBinder.AddMethod(__Method_CancelDisplayVideo360AdvertiserLinkProposal, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal>(serviceImpl.CancelDisplayVideo360AdvertiserLinkProposal));
       serviceBinder.AddMethod(__Method_CreateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(serviceImpl.CreateCustomDimension));
       serviceBinder.AddMethod(__Method_UpdateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateCustomDimensionRequest, global::Google.Analytics.Admin.V1Alpha.CustomDimension>(serviceImpl.UpdateCustomDimension));
       serviceBinder.AddMethod(__Method_ListCustomDimensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomDimensionsResponse>(serviceImpl.ListCustomDimensions));
@@ -4902,6 +5741,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_ListCustomMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCustomMetricsResponse>(serviceImpl.ListCustomMetrics));
       serviceBinder.AddMethod(__Method_ArchiveCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ArchiveCustomMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ArchiveCustomMetric));
       serviceBinder.AddMethod(__Method_GetCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(serviceImpl.GetCustomMetric));
+      serviceBinder.AddMethod(__Method_GetDataRetentionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(serviceImpl.GetDataRetentionSettings));
+      serviceBinder.AddMethod(__Method_UpdateDataRetentionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(serviceImpl.UpdateDataRetentionSettings));
     }
 
   }

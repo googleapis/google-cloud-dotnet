@@ -434,6 +434,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -462,6 +463,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -492,6 +494,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -520,6 +523,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -550,6 +554,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -578,6 +583,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -608,6 +614,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -636,6 +643,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -666,6 +674,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -694,6 +703,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -724,6 +734,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -752,6 +763,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -782,6 +794,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -810,6 +823,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -840,6 +854,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -868,6 +883,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -899,6 +915,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -928,6 +945,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -959,6 +977,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -988,6 +1007,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
                 CurrencyCode = "currency_code7f81e352",
+                ServiceLevel = ServiceLevel.GoogleAnalyticsStandard,
                 DeleteTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
             };
@@ -3279,7 +3299,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3302,7 +3321,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3327,7 +3345,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3350,7 +3367,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3375,7 +3391,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3398,109 +3413,12 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
                 CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
             FirebaseLink responseCallSettings = await client.CreateFirebaseLinkAsync(request.ParentAsPropertyName, request.FirebaseLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             FirebaseLink responseCancellationToken = await client.CreateFirebaseLinkAsync(request.ParentAsPropertyName, request.FirebaseLink, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void UpdateFirebaseLinkRequestObject()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
-            };
-            FirebaseLink expectedResponse = new FirebaseLink
-            {
-                FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
-                Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
-            };
-            mockGrpcClient.Setup(x => x.UpdateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            FirebaseLink response = client.UpdateFirebaseLink(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task UpdateFirebaseLinkRequestObjectAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
-            };
-            FirebaseLink expectedResponse = new FirebaseLink
-            {
-                FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
-                Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
-            };
-            mockGrpcClient.Setup(x => x.UpdateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            FirebaseLink responseCallSettings = await client.UpdateFirebaseLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            FirebaseLink responseCancellationToken = await client.UpdateFirebaseLinkAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void UpdateFirebaseLink()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
-            };
-            FirebaseLink expectedResponse = new FirebaseLink
-            {
-                FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
-                Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
-            };
-            mockGrpcClient.Setup(x => x.UpdateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            FirebaseLink response = client.UpdateFirebaseLink(request.FirebaseLink, request.UpdateMask);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task UpdateFirebaseLinkAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
-            };
-            FirebaseLink expectedResponse = new FirebaseLink
-            {
-                FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
-                Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
-                MaximumUserAccess = MaximumUserAccess.NoAccess,
-            };
-            mockGrpcClient.Setup(x => x.UpdateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            FirebaseLink responseCallSettings = await client.UpdateFirebaseLinkAsync(request.FirebaseLink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            FirebaseLink responseCancellationToken = await client.UpdateFirebaseLinkAsync(request.FirebaseLink, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -3739,9 +3657,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3765,9 +3683,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3793,9 +3711,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3819,9 +3737,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3847,9 +3765,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3873,9 +3791,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3901,9 +3819,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3927,9 +3845,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3955,9 +3873,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3981,9 +3899,9 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
-                EmailAddress = "email_addressf3aae0b5",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                CreatorEmailAddress = "creator_email_address113105e5",
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4930,7 +4848,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4953,7 +4872,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4978,7 +4898,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5001,7 +4922,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5026,7 +4948,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5049,7 +4972,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.CreateConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5073,7 +4997,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5095,7 +5020,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5119,7 +5045,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5141,7 +5068,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5165,7 +5093,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5187,7 +5116,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ConversionEventName = ConversionEventName.FromPropertyConversionEvent("[PROPERTY]", "[CONVERSION_EVENT]"),
                 EventName = "event_name43c4a22d",
                 CreateTime = new wkt::Timestamp(),
-                IsDeletable = true,
+                Deletable = true,
+                Custom = false,
             };
             mockGrpcClient.Setup(x => x.GetConversionEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversionEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -5288,6 +5218,1026 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeleteConversionEventAsync(request.ConversionEventName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteConversionEventAsync(request.ConversionEventName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLink()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.GetDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLinkName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLink()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request.Parent, request.DisplayVideo360AdvertiserLink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.Parent, request.DisplayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.Parent, request.DisplayVideo360AdvertiserLink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.CreateDisplayVideo360AdvertiserLink(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLink, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLink(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLink()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLink(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLinkName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLinkName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.UpdateDisplayVideo360AdvertiserLink(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateDisplayVideo360AdvertiserLink()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink response = client.UpdateDisplayVideo360AdvertiserLink(request.DisplayVideo360AdvertiserLink, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDisplayVideo360AdvertiserLinkAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DisplayVideo360AdvertiserLink expectedResponse = new DisplayVideo360AdvertiserLink
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDisplayVideo360AdvertiserLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLink responseCallSettings = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLink, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLink responseCancellationToken = await client.UpdateDisplayVideo360AdvertiserLinkAsync(request.DisplayVideo360AdvertiserLink, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLinkProposal()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.GetDisplayVideo360AdvertiserLinkProposal(request.DisplayVideo360AdvertiserLinkProposalName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.GetDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.GetDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLinkProposal()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request.Parent, request.DisplayVideo360AdvertiserLinkProposal);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.Parent, request.DisplayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.Parent, request.DisplayVideo360AdvertiserLinkProposal, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.CreateDisplayVideo360AdvertiserLinkProposal(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CreateDisplayVideo360AdvertiserLinkProposalAsync(request.ParentAsPropertyName, request.DisplayVideo360AdvertiserLinkProposal, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLinkProposal(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLinkProposal()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLinkProposal(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteDisplayVideo360AdvertiserLinkProposal(request.DisplayVideo360AdvertiserLinkProposalName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request.DisplayVideo360AdvertiserLinkProposalName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ApproveDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ApproveDisplayVideo360AdvertiserLinkProposalRequest request = new ApproveDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse expectedResponse = new ApproveDisplayVideo360AdvertiserLinkProposalResponse
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            mockGrpcClient.Setup(x => x.ApproveDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse response = client.ApproveDisplayVideo360AdvertiserLinkProposal(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ApproveDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            ApproveDisplayVideo360AdvertiserLinkProposalRequest request = new ApproveDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse expectedResponse = new ApproveDisplayVideo360AdvertiserLinkProposalResponse
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            mockGrpcClient.Setup(x => x.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApproveDisplayVideo360AdvertiserLinkProposalResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse responseCallSettings = await client.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse responseCancellationToken = await client.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CancelDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CancelDisplayVideo360AdvertiserLinkProposalRequest request = new CancelDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CancelDisplayVideo360AdvertiserLinkProposal(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal response = client.CancelDisplayVideo360AdvertiserLinkProposal(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CancelDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            CancelDisplayVideo360AdvertiserLinkProposalRequest request = new CancelDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            DisplayVideo360AdvertiserLinkProposal expectedResponse = new DisplayVideo360AdvertiserLinkProposal
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+                AdvertiserId = "advertiser_id7e57c73c",
+                LinkProposalStatusDetails = new LinkProposalStatusDetails(),
+                AdvertiserDisplayName = "advertiser_display_namede5a74e9",
+                ValidationEmail = "validation_email8f79096a",
+                AdsPersonalizationEnabled = true,
+                CampaignDataSharingEnabled = false,
+                CostDataSharingEnabled = true,
+            };
+            mockGrpcClient.Setup(x => x.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DisplayVideo360AdvertiserLinkProposal>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DisplayVideo360AdvertiserLinkProposal responseCallSettings = await client.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DisplayVideo360AdvertiserLinkProposal responseCancellationToken = await client.CancelDisplayVideo360AdvertiserLinkProposalAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
@@ -6293,6 +7243,230 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CustomMetric responseCallSettings = await client.GetCustomMetricAsync(request.CustomMetricName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomMetric responseCancellationToken = await client.GetCustomMetricAsync(request.CustomMetricName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDataRetentionSettingsRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings response = client.GetDataRetentionSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDataRetentionSettingsRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDataRetentionSettings()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings response = client.GetDataRetentionSettings(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDataRetentionSettingsAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDataRetentionSettingsResourceNames()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings response = client.GetDataRetentionSettings(request.DataRetentionSettingsName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDataRetentionSettingsResourceNamesAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.GetDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings responseCallSettings = await client.GetDataRetentionSettingsAsync(request.DataRetentionSettingsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataRetentionSettings responseCancellationToken = await client.GetDataRetentionSettingsAsync(request.DataRetentionSettingsName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateDataRetentionSettingsRequestObject()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings response = client.UpdateDataRetentionSettings(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDataRetentionSettingsRequestObjectAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings responseCallSettings = await client.UpdateDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataRetentionSettings responseCancellationToken = await client.UpdateDataRetentionSettingsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateDataRetentionSettings()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDataRetentionSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings response = client.UpdateDataRetentionSettings(request.DataRetentionSettings, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateDataRetentionSettingsAsync()
+        {
+            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            DataRetentionSettings expectedResponse = new DataRetentionSettings
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+                EventDataRetention = DataRetentionSettings.Types.RetentionDuration.TwentySixMonths,
+                ResetUserDataOnNewActivity = false,
+            };
+            mockGrpcClient.Setup(x => x.UpdateDataRetentionSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataRetentionSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
+            DataRetentionSettings responseCallSettings = await client.UpdateDataRetentionSettingsAsync(request.DataRetentionSettings, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DataRetentionSettings responseCancellationToken = await client.UpdateDataRetentionSettingsAsync(request.DataRetentionSettings, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

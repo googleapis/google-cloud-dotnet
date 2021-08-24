@@ -3739,70 +3739,6 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateFirebaseLink</summary>
-        public void UpdateFirebaseLinkRequestObject()
-        {
-            // Snippet: UpdateFirebaseLink(UpdateFirebaseLinkRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            FirebaseLink response = analyticsAdminServiceClient.UpdateFirebaseLink(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateFirebaseLinkAsync</summary>
-        public async Task UpdateFirebaseLinkRequestObjectAsync()
-        {
-            // Snippet: UpdateFirebaseLinkAsync(UpdateFirebaseLinkRequest, CallSettings)
-            // Additional: UpdateFirebaseLinkAsync(UpdateFirebaseLinkRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new FieldMask(),
-            };
-            // Make the request
-            FirebaseLink response = await analyticsAdminServiceClient.UpdateFirebaseLinkAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateFirebaseLink</summary>
-        public void UpdateFirebaseLink()
-        {
-            // Snippet: UpdateFirebaseLink(FirebaseLink, FieldMask, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            FirebaseLink firebaseLink = new FirebaseLink();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            FirebaseLink response = analyticsAdminServiceClient.UpdateFirebaseLink(firebaseLink, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateFirebaseLinkAsync</summary>
-        public async Task UpdateFirebaseLinkAsync()
-        {
-            // Snippet: UpdateFirebaseLinkAsync(FirebaseLink, FieldMask, CallSettings)
-            // Additional: UpdateFirebaseLinkAsync(FirebaseLink, FieldMask, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            FirebaseLink firebaseLink = new FirebaseLink();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            FirebaseLink response = await analyticsAdminServiceClient.UpdateFirebaseLinkAsync(firebaseLink, updateMask);
-            // End snippet
-        }
-
         /// <summary>Snippet for DeleteFirebaseLink</summary>
         public void DeleteFirebaseLinkRequestObject()
         {
@@ -6281,6 +6217,1222 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLink</summary>
+        public void GetDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLink(GetDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkAsync(GetDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkAsync(GetDisplayVideo360AdvertiserLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDisplayVideo360AdvertiserLinkRequest request = new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLink</summary>
+        public void GetDisplayVideo360AdvertiserLink()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLink(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinks/[DISPLAY_VIDEO_360_ADVERTISER_LINK]";
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkAsync(string, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinks/[DISPLAY_VIDEO_360_ADVERTISER_LINK]";
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLink</summary>
+        public void GetDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkName name = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]");
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkName name = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]");
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinks</summary>
+        public void ListDisplayVideo360AdvertiserLinksRequestObject()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinks(ListDisplayVideo360AdvertiserLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinksAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinksRequestObjectAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinksAsync(ListDisplayVideo360AdvertiserLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDisplayVideo360AdvertiserLinksRequest request = new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinks</summary>
+        public void ListDisplayVideo360AdvertiserLinks()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinks(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinksAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinksAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinksAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinks</summary>
+        public void ListDisplayVideo360AdvertiserLinksResourceNames()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinks(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinksAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinksResourceNamesAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinksAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLink</summary>
+        public void CreateDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLink(CreateDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkAsync(CreateDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkAsync(CreateDisplayVideo360AdvertiserLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDisplayVideo360AdvertiserLinkRequest request = new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLink</summary>
+        public void CreateDisplayVideo360AdvertiserLink()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLink(string, DisplayVideo360AdvertiserLink, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLink(parent, displayVideo360AdvertiserLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkAsync(string, DisplayVideo360AdvertiserLink, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkAsync(string, DisplayVideo360AdvertiserLink, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkAsync(parent, displayVideo360AdvertiserLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLink</summary>
+        public void CreateDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLink(PropertyName, DisplayVideo360AdvertiserLink, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLink(parent, displayVideo360AdvertiserLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkAsync(PropertyName, DisplayVideo360AdvertiserLink, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkAsync(PropertyName, DisplayVideo360AdvertiserLink, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkAsync(parent, displayVideo360AdvertiserLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLink</summary>
+        public void DeleteDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLink(DeleteDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkAsync(DeleteDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkAsync(DeleteDisplayVideo360AdvertiserLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDisplayVideo360AdvertiserLinkRequest request = new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLink</summary>
+        public void DeleteDisplayVideo360AdvertiserLink()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLink(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinks/[DISPLAY_VIDEO_360_ADVERTISER_LINK]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkAsync(string, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinks/[DISPLAY_VIDEO_360_ADVERTISER_LINK]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLink</summary>
+        public void DeleteDisplayVideo360AdvertiserLinkResourceNames()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkName name = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkResourceNamesAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkName name = DisplayVideo360AdvertiserLinkName.FromPropertyDisplayVideo360AdvertiserLink("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDisplayVideo360AdvertiserLink</summary>
+        public void UpdateDisplayVideo360AdvertiserLinkRequestObject()
+        {
+            // Snippet: UpdateDisplayVideo360AdvertiserLink(UpdateDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task UpdateDisplayVideo360AdvertiserLinkRequestObjectAsync()
+        {
+            // Snippet: UpdateDisplayVideo360AdvertiserLinkAsync(UpdateDisplayVideo360AdvertiserLinkRequest, CallSettings)
+            // Additional: UpdateDisplayVideo360AdvertiserLinkAsync(UpdateDisplayVideo360AdvertiserLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDisplayVideo360AdvertiserLinkRequest request = new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDisplayVideo360AdvertiserLink</summary>
+        public void UpdateDisplayVideo360AdvertiserLink()
+        {
+            // Snippet: UpdateDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = analyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLink(displayVideo360AdvertiserLink, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDisplayVideo360AdvertiserLinkAsync</summary>
+        public async Task UpdateDisplayVideo360AdvertiserLinkAsync()
+        {
+            // Snippet: UpdateDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLink, FieldMask, CallSettings)
+            // Additional: UpdateDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLink, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink = new DisplayVideo360AdvertiserLink();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DisplayVideo360AdvertiserLink response = await analyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLinkAsync(displayVideo360AdvertiserLink, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposal</summary>
+        public void GetDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposal(GetDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposalAsync(GetDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkProposalAsync(GetDisplayVideo360AdvertiserLinkProposalRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDisplayVideo360AdvertiserLinkProposalRequest request = new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposal</summary>
+        public void GetDisplayVideo360AdvertiserLinkProposal()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposal(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinkProposals/[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]";
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposal(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposalAsync(string, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkProposalAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinkProposals/[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]";
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposalAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposal</summary>
+        public void GetDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposal(DisplayVideo360AdvertiserLinkProposalName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkProposalName name = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]");
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposal(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task GetDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            // Snippet: GetDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName, CallSettings)
+            // Additional: GetDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkProposalName name = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]");
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposalAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposals</summary>
+        public void ListDisplayVideo360AdvertiserLinkProposalsRequestObject()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposals(ListDisplayVideo360AdvertiserLinkProposalsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposals(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLinkProposal item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinkProposalsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposalsAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinkProposalsRequestObjectAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposalsAsync(ListDisplayVideo360AdvertiserLinkProposalsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDisplayVideo360AdvertiserLinkProposalsRequest request = new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLinkProposal item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinkProposalsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposals</summary>
+        public void ListDisplayVideo360AdvertiserLinkProposals()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposals(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposals(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLinkProposal item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinkProposalsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposalsAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinkProposalsAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposalsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLinkProposal item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinkProposalsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposals</summary>
+        public void ListDisplayVideo360AdvertiserLinkProposalsResourceNames()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposals(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposals(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DisplayVideo360AdvertiserLinkProposal item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDisplayVideo360AdvertiserLinkProposalsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDisplayVideo360AdvertiserLinkProposalsAsync</summary>
+        public async Task ListDisplayVideo360AdvertiserLinkProposalsResourceNamesAsync()
+        {
+            // Snippet: ListDisplayVideo360AdvertiserLinkProposalsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> response = analyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DisplayVideo360AdvertiserLinkProposal item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDisplayVideo360AdvertiserLinkProposalsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DisplayVideo360AdvertiserLinkProposal item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DisplayVideo360AdvertiserLinkProposal> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DisplayVideo360AdvertiserLinkProposal item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposal</summary>
+        public void CreateDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposal(CreateDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposalAsync(CreateDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkProposalAsync(CreateDisplayVideo360AdvertiserLinkProposalRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDisplayVideo360AdvertiserLinkProposalRequest request = new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                DisplayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal(),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposal</summary>
+        public void CreateDisplayVideo360AdvertiserLinkProposal()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposal(string, DisplayVideo360AdvertiserLinkProposal, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal();
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposal(parent, displayVideo360AdvertiserLinkProposal);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposalAsync(string, DisplayVideo360AdvertiserLinkProposal, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkProposalAsync(string, DisplayVideo360AdvertiserLinkProposal, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal();
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposalAsync(parent, displayVideo360AdvertiserLinkProposal);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposal</summary>
+        public void CreateDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposal(PropertyName, DisplayVideo360AdvertiserLinkProposal, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal();
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposal(parent, displayVideo360AdvertiserLinkProposal);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task CreateDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            // Snippet: CreateDisplayVideo360AdvertiserLinkProposalAsync(PropertyName, DisplayVideo360AdvertiserLinkProposal, CallSettings)
+            // Additional: CreateDisplayVideo360AdvertiserLinkProposalAsync(PropertyName, DisplayVideo360AdvertiserLinkProposal, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal = new DisplayVideo360AdvertiserLinkProposal();
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposalAsync(parent, displayVideo360AdvertiserLinkProposal);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposal</summary>
+        public void DeleteDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposal(DeleteDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposalAsync(DeleteDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkProposalAsync(DeleteDisplayVideo360AdvertiserLinkProposalRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDisplayVideo360AdvertiserLinkProposalRequest request = new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposal</summary>
+        public void DeleteDisplayVideo360AdvertiserLinkProposal()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposal(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinkProposals/[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposal(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkProposalAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposalAsync(string, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkProposalAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/displayVideo360AdvertiserLinkProposals/[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposal</summary>
+        public void DeleteDisplayVideo360AdvertiserLinkProposalResourceNames()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposal(DisplayVideo360AdvertiserLinkProposalName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkProposalName name = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposal(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task DeleteDisplayVideo360AdvertiserLinkProposalResourceNamesAsync()
+        {
+            // Snippet: DeleteDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName, CallSettings)
+            // Additional: DeleteDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DisplayVideo360AdvertiserLinkProposalName name = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveDisplayVideo360AdvertiserLinkProposal</summary>
+        public void ApproveDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            // Snippet: ApproveDisplayVideo360AdvertiserLinkProposal(ApproveDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ApproveDisplayVideo360AdvertiserLinkProposalRequest request = new ApproveDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse response = analyticsAdminServiceClient.ApproveDisplayVideo360AdvertiserLinkProposal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task ApproveDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            // Snippet: ApproveDisplayVideo360AdvertiserLinkProposalAsync(ApproveDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Additional: ApproveDisplayVideo360AdvertiserLinkProposalAsync(ApproveDisplayVideo360AdvertiserLinkProposalRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApproveDisplayVideo360AdvertiserLinkProposalRequest request = new ApproveDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            ApproveDisplayVideo360AdvertiserLinkProposalResponse response = await analyticsAdminServiceClient.ApproveDisplayVideo360AdvertiserLinkProposalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDisplayVideo360AdvertiserLinkProposal</summary>
+        public void CancelDisplayVideo360AdvertiserLinkProposalRequestObject()
+        {
+            // Snippet: CancelDisplayVideo360AdvertiserLinkProposal(CancelDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CancelDisplayVideo360AdvertiserLinkProposalRequest request = new CancelDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = analyticsAdminServiceClient.CancelDisplayVideo360AdvertiserLinkProposal(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDisplayVideo360AdvertiserLinkProposalAsync</summary>
+        public async Task CancelDisplayVideo360AdvertiserLinkProposalRequestObjectAsync()
+        {
+            // Snippet: CancelDisplayVideo360AdvertiserLinkProposalAsync(CancelDisplayVideo360AdvertiserLinkProposalRequest, CallSettings)
+            // Additional: CancelDisplayVideo360AdvertiserLinkProposalAsync(CancelDisplayVideo360AdvertiserLinkProposalRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelDisplayVideo360AdvertiserLinkProposalRequest request = new CancelDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = DisplayVideo360AdvertiserLinkProposalName.FromPropertyDisplayVideo360AdvertiserLinkProposal("[PROPERTY]", "[DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL]"),
+            };
+            // Make the request
+            DisplayVideo360AdvertiserLinkProposal response = await analyticsAdminServiceClient.CancelDisplayVideo360AdvertiserLinkProposalAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateCustomDimension</summary>
         public void CreateCustomDimensionRequestObject()
         {
@@ -7492,6 +8644,157 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             CustomMetricName name = CustomMetricName.FromProperty("[PROPERTY]");
             // Make the request
             CustomMetric response = await analyticsAdminServiceClient.GetCustomMetricAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettings</summary>
+        public void GetDataRetentionSettingsRequestObject()
+        {
+            // Snippet: GetDataRetentionSettings(GetDataRetentionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            DataRetentionSettings response = analyticsAdminServiceClient.GetDataRetentionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettingsAsync</summary>
+        public async Task GetDataRetentionSettingsRequestObjectAsync()
+        {
+            // Snippet: GetDataRetentionSettingsAsync(GetDataRetentionSettingsRequest, CallSettings)
+            // Additional: GetDataRetentionSettingsAsync(GetDataRetentionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDataRetentionSettingsRequest request = new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = DataRetentionSettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            DataRetentionSettings response = await analyticsAdminServiceClient.GetDataRetentionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettings</summary>
+        public void GetDataRetentionSettings()
+        {
+            // Snippet: GetDataRetentionSettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataRetentionSettings";
+            // Make the request
+            DataRetentionSettings response = analyticsAdminServiceClient.GetDataRetentionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettingsAsync</summary>
+        public async Task GetDataRetentionSettingsAsync()
+        {
+            // Snippet: GetDataRetentionSettingsAsync(string, CallSettings)
+            // Additional: GetDataRetentionSettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataRetentionSettings";
+            // Make the request
+            DataRetentionSettings response = await analyticsAdminServiceClient.GetDataRetentionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettings</summary>
+        public void GetDataRetentionSettingsResourceNames()
+        {
+            // Snippet: GetDataRetentionSettings(DataRetentionSettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataRetentionSettingsName name = DataRetentionSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            DataRetentionSettings response = analyticsAdminServiceClient.GetDataRetentionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRetentionSettingsAsync</summary>
+        public async Task GetDataRetentionSettingsResourceNamesAsync()
+        {
+            // Snippet: GetDataRetentionSettingsAsync(DataRetentionSettingsName, CallSettings)
+            // Additional: GetDataRetentionSettingsAsync(DataRetentionSettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataRetentionSettingsName name = DataRetentionSettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            DataRetentionSettings response = await analyticsAdminServiceClient.GetDataRetentionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRetentionSettings</summary>
+        public void UpdateDataRetentionSettingsRequestObject()
+        {
+            // Snippet: UpdateDataRetentionSettings(UpdateDataRetentionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DataRetentionSettings response = analyticsAdminServiceClient.UpdateDataRetentionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRetentionSettingsAsync</summary>
+        public async Task UpdateDataRetentionSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateDataRetentionSettingsAsync(UpdateDataRetentionSettingsRequest, CallSettings)
+            // Additional: UpdateDataRetentionSettingsAsync(UpdateDataRetentionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDataRetentionSettingsRequest request = new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = new DataRetentionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DataRetentionSettings response = await analyticsAdminServiceClient.UpdateDataRetentionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRetentionSettings</summary>
+        public void UpdateDataRetentionSettings()
+        {
+            // Snippet: UpdateDataRetentionSettings(DataRetentionSettings, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataRetentionSettings dataRetentionSettings = new DataRetentionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataRetentionSettings response = analyticsAdminServiceClient.UpdateDataRetentionSettings(dataRetentionSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRetentionSettingsAsync</summary>
+        public async Task UpdateDataRetentionSettingsAsync()
+        {
+            // Snippet: UpdateDataRetentionSettingsAsync(DataRetentionSettings, FieldMask, CallSettings)
+            // Additional: UpdateDataRetentionSettingsAsync(DataRetentionSettings, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataRetentionSettings dataRetentionSettings = new DataRetentionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataRetentionSettings response = await analyticsAdminServiceClient.UpdateDataRetentionSettingsAsync(dataRetentionSettings, updateMask);
             // End snippet
         }
     }
