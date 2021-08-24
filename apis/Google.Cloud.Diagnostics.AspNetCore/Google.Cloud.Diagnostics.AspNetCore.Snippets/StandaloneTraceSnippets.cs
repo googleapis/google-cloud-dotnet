@@ -28,16 +28,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
-        private static readonly TraceEntryPolling s_polling = new TraceEntryPolling();
-
         private readonly string _testId;
 
-        private readonly Timestamp _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public StandaloneTraceSnippets()
         {
             _testId = IdGenerator.FromDateTime();
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            _startTime = DateTimeOffset.UtcNow;
 
             // The rate limiter instance is static and only set once.  If we do not reset it at the
             // beginning of each tests the qps will not change.  This is dependent on the tests not
@@ -88,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                     // End sample
                 }
 
-                var trace = s_polling.GetTrace(_testId, _startTime);
+                var trace = TraceEntryPolling.Default.GetTrace(_testId, _startTime);
                 TraceEntryVerifiers.AssertParentChildSpan(trace, _testId, "standalone_tracing");
                 Assert.Equal(traceContext.TraceId, trace.TraceId);
             }

@@ -41,8 +41,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     public class ErrorReportingTest : IClassFixture<LogValidatingFixture>, IDisposable
     {
-        private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
-
         private readonly string _testId;
 
         private readonly TestServer _server;
@@ -83,13 +81,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
-
             _fixture.AddValidator(_testId, results =>
             {
                 var entry = Assert.Single(results);
                 AssertTraceContext(entry);
+
+                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.NoRetry, _testId);
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
             });
         }
 
@@ -99,13 +97,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
-
             _fixture.AddValidator(_testId, results =>
             {
                 var entry = Assert.Single(results);
                 AssertTraceContext(entry);
+
+                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.NoRetry, _testId);
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
             });
         }
 
@@ -121,22 +119,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_2"));
 
-            var errorEvents = ErrorEventEntryVerifiers.VerifyMany(s_polling, _testId, 4);
-
-            var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
-            Assert.Equal(3, exceptionEvents.Count());
-            foreach (var errorEvent in exceptionEvents)
-            {
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
-            }
-
-            var argumentExceptionEvent = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException))).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException));
-
             _fixture.AddValidator(_testId, results =>
             {
                 Assert.Equal(4, results.Count);
                 Assert.All(results, AssertTraceContext);
+
+                var errorEvents = ErrorEventEntryVerifiers.VerifyMany(ErrorEventEntryPolling.NoRetry, _testId, 4);
+
+                var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException))).ToList();
+                Assert.Equal(3, exceptionEvents.Count);
+                Assert.All(exceptionEvents, e => ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(e, _testId, nameof(ErrorReportingController.ThrowsException)));
+
+                var argumentExceptionEvent = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException))).Single();
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException));
             });
         }
 

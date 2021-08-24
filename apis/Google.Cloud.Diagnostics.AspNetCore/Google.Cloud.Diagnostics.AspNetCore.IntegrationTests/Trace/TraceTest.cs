@@ -53,10 +53,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory _spanIdFactory = SpanIdFactory.Create();
 
-        private static readonly TraceEntryPolling _polling = new TraceEntryPolling();
-
         private readonly string _testId;
-        private readonly Timestamp _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public TraceTest()
         {
@@ -66,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             RateLimiter.Reset();
 
             _testId = IdGenerator.FromDateTime();
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            _startTime = DateTimeOffset.UtcNow;
         }
 
         public static TheoryData<Action<IWebHostBuilder>> ConfigurationData =>
@@ -87,7 +85,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -109,7 +107,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(expectedTraceName, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(expectedTraceName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, expectedTraceName, childSpanName);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -129,7 +127,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
             TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.First(s => s.Name == childSpanName),
@@ -152,7 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
         }
@@ -169,7 +167,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
         }
@@ -185,7 +183,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
             TraceEntryVerifiers.AssertContainsStackTrace(trace.Spans.First(s => s.Name == childSpanName),
@@ -225,7 +223,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var response = await client.GetAsync(uri);
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
 
@@ -280,7 +278,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 PropagationController.SecondCallServer = null;
             }
 
-            var trace = _polling.GetTrace(createFirstSpanUri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(createFirstSpanUri, _startTime);
 
             // The structure of the spans on the trace should be
             // + span with name createFirstSpanUri (automatically created)
@@ -326,8 +324,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // found one or null if it didn't.
             // In test pollers, minEntries and expectTrace should be understood as a minimum requirement
             // and not as an exact requirement.
-            var trace = _polling.GetTrace(traceUri, _startTime, expectTrace: false);
-            var traceLabel = _polling.GetTrace(traceLabelUri, _startTime, expectTrace: false);
+            var trace = TraceEntryPolling.NoEntry.GetTrace(traceUri, _startTime, expectTrace: false);
+            var traceLabel = TraceEntryPolling.NoEntry.GetTrace(traceLabelUri, _startTime, expectTrace: false);
 
             Assert.True((trace == null && traceLabel != null) || (trace != null && traceLabel == null));
         }
@@ -343,13 +341,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             // Make a trace with a small span that will not cause the buffer to flush.
             await client.GetAsync(traceUri);
-            Assert.Null(_polling.GetTrace(traceUri, _startTime, expectTrace: false));
+            Assert.Null(TraceEntryPolling.NoEntry.GetTrace(traceUri, _startTime, expectTrace: false));
 
             // Make a large trace that will flush the buffer.
             await client.GetAsync(traceStackTraceUri);
 
-            Assert.NotNull(_polling.GetTrace(traceUri, _startTime));
-            Assert.NotNull(_polling.GetTrace(traceStackTraceUri, _startTime));
+            Assert.NotNull(TraceEntryPolling.Default.GetTrace(traceUri, _startTime));
+            Assert.NotNull(TraceEntryPolling.Default.GetTrace(traceStackTraceUri, _startTime));
         }
 
         [Theory]
@@ -363,7 +361,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await Assert.ThrowsAnyAsync<Exception>(() => client.GetAsync(uri));
 
-            var trace = _polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
             TraceEntryVerifiers.AssertContainsStackTrace(trace.Spans.First(s => s.Name == uri),
@@ -382,7 +380,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var trace = _polling.GetTrace(uri, _startTime, expectTrace: false);
+            var trace = TraceEntryPolling.NoEntry.GetTrace(uri, _startTime, expectTrace: false);
             Assert.Null(trace);
         }
 
@@ -408,7 +406,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await Task.WhenAll(responseTasks);
             }
 
-            var traces = _polling.GetTraces(uri, _startTime, minEntries: minExpectedRequests);
+            var traces = TraceEntryPolling.Default.GetTraces(uri, _startTime, minEntries: minExpectedRequests);
             Assert.InRange(traces.Count(), minExpectedRequests, requests);
         }
 
@@ -435,7 +433,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // size of the buffer, i.e. the last buffer won't flush because it won't reach the
             // maximum buffer size during this test. That's entirely expected.
             var minTraces = (int)((8.5 / 10) * requests);
-            var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
+            var traces = TraceEntryPolling.Default.GetTraces(uri, _startTime, minEntries: minTraces);
             Assert.InRange(traces.Count(), minTraces, requests);
         }
 

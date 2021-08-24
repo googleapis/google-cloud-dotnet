@@ -52,7 +52,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     public class LoggingSnippetsTests
     {
         private const string ExpectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
-        private static readonly LogEntryPolling s_polling = new LogEntryPolling();
 
         private readonly string _testId;
         private readonly DateTime _startTime;
@@ -121,7 +120,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             }
             server.Dispose();
 
-            PollAndVerifyLog(_startTime, _testId);
+            PollAndVerifyLog(LogEntryPolling.Default, _startTime, _testId);
         }
 
         /// <summary>
@@ -143,9 +142,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.Equal(StatusCode.NotFound, rpcException.StatusCode);
         }
 
-        internal static void PollAndVerifyLog(DateTime startTime, string testId)
+        internal static void PollAndVerifyLog(LogEntryPolling poller, DateTimeOffset startTime, string testId)
         {
-            var results = s_polling.GetEntries(startTime, testId, 1, LogSeverity.Info);
+            var results = poller.GetEntries(startTime, testId, 1, LogSeverity.Info);
             results = from result in results
                       where result.JsonPayload?.Fields["log_name"]?.StringValue?.Equals(typeof(LoggingSamplesController).FullName) ?? false
                       select result;

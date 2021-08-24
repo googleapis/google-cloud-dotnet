@@ -50,7 +50,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         // Used in tests that check logs are properly associated to traces.
         private static readonly TraceIdFactory s_traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory s_spanIdFactory = SpanIdFactory.Create();
-        private static readonly TraceEntryPolling s_tracePolling = new TraceEntryPolling();
 
         private readonly LogValidatingFixture _fixture;
 
@@ -269,7 +268,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Contains(traceId, entry.Trace);
 
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(traceId);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(traceId);
                 Assert.NotNull(trace);
 
                 // The span associated to our entry needs to be part of that trace.
@@ -306,7 +305,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Contains(traceId, entry.Trace);
 
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(traceId);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(traceId);
                 Assert.NotNull(trace);
 
                 // The span associated to our entry needs to be part of that trace.
@@ -356,7 +355,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 });
 
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(traceId);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(traceId);
                 Assert.NotNull(trace);
 
                 // Let's check that all the entries are associated to the correct spans.
@@ -385,7 +384,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_Trace_Implicit()
         {
-            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            DateTimeOffset startTime = DateTimeOffset.UtcNow;
             string testId = IdGenerator.FromGuid();
 
             string url = $"/Main/Critical/{testId}";
@@ -398,7 +397,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _fixture.AddValidator(testId, results =>
             {
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(url, startTime);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(url, startTime);
                 Assert.NotNull(trace);
 
                 // We only have one log entry.
@@ -420,7 +419,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_Trace()
         {
-            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            DateTimeOffset startTime = DateTimeOffset.UtcNow;
             string testId = IdGenerator.FromGuid();
 
             string spanPrefix;
@@ -433,7 +432,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _fixture.AddValidator(testId, results =>
             {
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(spanPrefix, startTime);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(spanPrefix, startTime);
                 Assert.NotNull(trace);
 
                 // We only have one log entry.
@@ -455,7 +454,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_Trace_MultipleSpans()
         {
-            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            DateTimeOffset startTime = DateTimeOffset.UtcNow;
             string testId = IdGenerator.FromGuid();
 
             string spanPrefix;
@@ -477,7 +476,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 string projectId = TestEnvironment.GetTestProjectId();
 
                 // Let's get our trace.
-                var trace = s_tracePolling.GetTrace(spanPrefix, startTime);
+                var trace = TraceEntryPolling.NoEntry.GetTrace(spanPrefix, startTime);
                 Assert.NotNull(trace);
 
                 // We have 3 logs.

@@ -43,9 +43,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class DiagnosticsSnippetsTests : IDisposable
     {
-        private static readonly ErrorEventEntryPolling s_errorPolling = new ErrorEventEntryPolling();
-        private static readonly TraceEntryPolling s_tracePolling = new TraceEntryPolling();
-
         private const string Service = EntryData.Service;
         private const string Version = EntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
@@ -55,7 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly DateTime _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public DiagnosticsSnippetsTests()
         {
@@ -86,7 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             _client = _server.CreateClient();
 
             _testId = IdGenerator.FromDateTime();
-            _startTime = DateTime.UtcNow;
+            _startTime = DateTimeOffset.UtcNow;
         }
 
         /// <summary>
@@ -98,7 +95,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_errorPolling, _testId);
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 
@@ -112,7 +109,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorld)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_tracePolling.GetTrace(uri, Timestamp.FromDateTime(_startTime));
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -129,7 +126,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await _client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
 
-            LoggingSnippetsTests.PollAndVerifyLog(_startTime, _testId);
+            LoggingSnippetsTests.PollAndVerifyLog(LogEntryPolling.Default, _startTime, _testId);
         }
 
         public void Dispose()

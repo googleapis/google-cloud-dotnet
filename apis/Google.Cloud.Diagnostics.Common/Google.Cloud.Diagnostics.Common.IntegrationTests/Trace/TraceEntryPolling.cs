@@ -33,7 +33,22 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>Client to use to send RPCs.</summary>
         private readonly TraceServiceClient _client = TraceServiceClient.Create();
 
-        internal TraceEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default) : base(timeout, sleepInterval) { }
+        private TraceEntryPolling(TimeSpan? timeout, TimeSpan? sleepInterval)
+            : base(timeout, sleepInterval)
+        { }
+
+        public static TraceEntryPolling Default { get; } = new TraceEntryPolling(null, null);
+
+        public static TraceEntryPolling NoRetry { get; } = new TraceEntryPolling(TimeSpan.Zero, TimeSpan.Zero);
+
+        /// <summary>
+        /// A poller specially configured for when we want to check that no entries were stored.
+        /// The configuration is just on timeout and sleepInterval.
+        /// We sleep 1 minute, because 90% of the entries are guaranteed to be available after 10 seconds
+        /// which means that we make sure that tests using this poller for checking no entries written
+        /// will fail > 90% of the time if there are actual entries being written.
+        /// </summary>
+        public static TraceEntryPolling NoEntry { get; } = new TraceEntryPolling(TimeSpan.FromMinutes(1), null);
 
         public TraceProto GetTrace(string traceId) => 
             GetEntries(1, () => new[] { _client.GetTrace(_projectId, traceId) })
@@ -44,7 +59,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         /// <param name="expectTrace">True if the trace is expected to exist.  This is used
         ///     to minimize RPC calls.</param>
-        public TraceProto GetTrace(string spanName, Timestamp startTime, bool expectTrace = true) =>
+        public TraceProto GetTrace(string spanName, DateTimeOffset startTime, bool expectTrace = true) =>
             GetTraces(spanName, startTime, expectTrace ? 1 : 0).SingleOrDefault();
 
         /// <summary>
@@ -57,18 +72,21 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <param name="pageSize"> Optional. The page size to use when making RPC calls.
         /// Default value is 250.</param>
         /// <returns></returns>
-        public IEnumerable<TraceProto> GetTraces(string spanName, Timestamp startTime, int minEntries = 1, int pageSize = 250)
+        public IEnumerable<TraceProto> GetTraces(string spanName, DateTimeOffset startTime, int minEntries = 1, int pageSize = 250)
         {
             var traceList = GetEntries(minEntries, () =>
             {
                 ListTracesRequest request = new ListTracesRequest
                 {
                     ProjectId = _projectId,
-                    StartTime = startTime,
+                    // We substract 5 minutes because on ocasion we were polling too fast after startTime
+                    // and the backend clock was a little behind, we were getting InvalidArgument.
+                    StartTime = Timestamp.FromDateTimeOffset(startTime - TimeSpan.FromMinutes(5)),
                     View = ListTracesRequest.Types.ViewType.Complete,
                     Filter = $"span:\"{spanName}\"",
                     PageSize = pageSize
                 };
+
                 return _client.ListTraces(request);
             });
             return traceList;

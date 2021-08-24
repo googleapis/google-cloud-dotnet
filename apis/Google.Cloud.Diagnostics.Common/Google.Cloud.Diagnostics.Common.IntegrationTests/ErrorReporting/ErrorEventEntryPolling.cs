@@ -36,8 +36,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>Project to run the test on.</summary>
         private readonly ProjectName _projectName = new ProjectName(TestEnvironment.GetTestProjectId());
 
-        // Give the error reporting events a little extra time to be processed.
-        internal ErrorEventEntryPolling() : base(TimeSpan.FromSeconds(600), TimeSpan.FromSeconds(30)) { }
+        private ErrorEventEntryPolling(TimeSpan? timeout, TimeSpan? sleepInterval)
+            : base(timeout, sleepInterval)
+        { }
+
+        public static ErrorEventEntryPolling Default { get; } = new ErrorEventEntryPolling(null, null);
+
+        public static ErrorEventEntryPolling NoRetry { get; } = new ErrorEventEntryPolling(TimeSpan.Zero, TimeSpan.Zero);
 
         /// <summary>
         /// Gets error events that contain the passed in testId in the message.  Will poll

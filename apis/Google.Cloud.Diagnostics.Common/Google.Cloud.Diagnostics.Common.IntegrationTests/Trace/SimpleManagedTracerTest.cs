@@ -28,7 +28,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     public class SimpleManagedTracerTest : IDisposable
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
-        private static readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         /// <summary>Unique id of the test.</summary>
         private readonly string _testId;
@@ -36,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly IConsumer<TraceProto> _grpcConsumer;
 
         /// <summary>Test start time to allow for easier querying of traces.</summary>
-        private readonly Timestamp _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public SimpleManagedTracerTest()
         {
@@ -44,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             _grpcConsumer = new GrpcTraceConsumer(TraceServiceClient.Create());
 
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            _startTime = DateTimeOffset.UtcNow;
         }
 
         [Fact]
@@ -57,7 +56,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 BlockUntilClockTick();
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
+            TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
             TraceEntryVerifiers.AssertSingleSpan(trace, rootSpanName);
         }
 
@@ -86,7 +85,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 }
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
+            TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
 
             TraceEntryVerifiers.AssertSingleSpan(trace, rootSpanName);
         }
@@ -106,7 +105,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 // Verifying before disposing of the consumer so as to check that the buffer
                 // wasn't flush because of the size of the messages. If we verify after disposing
                 // any message, big or small, would have been flushed on disposing.
-                TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
+                TraceProto trace = TraceEntryPolling.NoEntry.GetTrace(rootSpanName, _startTime, false);
 
                 Assert.Null(trace);
             }
@@ -129,7 +128,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 tracer.AnnotateSpan(labels);
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
+            TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
 
             TraceEntryVerifiers.AssertSingleSpan(trace, rootSpanName);
             TraceEntryVerifiers.AssertSpanLabelsExact(trace.Spans.First(), labels);
@@ -147,7 +146,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 tracer.SetStackTrace(TraceEntryData.CreateStackTrace());
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
+            TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
 
             TraceEntryVerifiers.AssertSingleSpan(trace, rootSpanName);
             TraceEntryVerifiers.AssertContainsStackTrace(trace.Spans[0],
@@ -187,7 +186,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 }
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
+            TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
 
             Assert.NotNull(trace);
             Assert.Equal(5, trace.Spans.Count);
@@ -228,7 +227,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 }
             }
 
-            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
+            TraceProto trace = TraceEntryPolling.NoEntry.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);
         }
 

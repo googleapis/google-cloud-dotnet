@@ -41,14 +41,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class TraceSnippetsTests : IDisposable
     {
-        private static readonly TraceEntryPolling s_polling = new TraceEntryPolling();
-
         private readonly string _testId;
 
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly Timestamp _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public TraceSnippetsTests()
         {
@@ -57,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             _server = GetTestServer<TraceTestApplication.Startup>();
             _client = _server.CreateClient();
 
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            _startTime = DateTimeOffset.UtcNow;
 
             // The rate limiter instance is static and only set once.  If we do not reset it at the
             // beginning of each tests the qps will not change.  This is dependent on the tests not
@@ -71,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorld)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -85,7 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorldRunIn)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -99,7 +97,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamplesConstructor/{nameof(TraceSamplesConstructorController.TraceHelloWorld)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -113,7 +111,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamplesMethod/{nameof(TraceSamplesMethodController.TraceHelloWorld)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -127,7 +125,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoing)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "http://weather.com/");
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -144,7 +142,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "http://weather.com/");
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -166,7 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             };
             var response = await client.SendAsync(request);
 
-            var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, _testId);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -371,6 +369,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // Sample: CustomTraceContext
         public void ConfigureServices(IServiceCollection services)
         {
+
             // Register a trace context provider method that inspects the request and
             // extracts the trace context information.
             services.AddScoped(CustomTraceContextProvider);
