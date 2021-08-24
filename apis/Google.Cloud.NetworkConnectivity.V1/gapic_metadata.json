@@ -10,12 +10,6 @@
         "grpc": {
           "libraryClient": "HubServiceClient",
           "rpcs": {
-            "ActivateSpoke": {
-              "methods": [
-                "ActivateSpoke",
-                "ActivateSpokeAsync"
-              ]
-            },
             "CreateHub": {
               "methods": [
                 "CreateHub",
@@ -26,12 +20,6 @@
               "methods": [
                 "CreateSpoke",
                 "CreateSpokeAsync"
-              ]
-            },
-            "DeactivateSpoke": {
-              "methods": [
-                "DeactivateSpoke",
-                "DeactivateSpokeAsync"
               ]
             },
             "DeleteHub": {

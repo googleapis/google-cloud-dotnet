@@ -61,10 +61,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeOperationsSettings = existing.CreateSpokeOperationsSettings.Clone();
             UpdateSpokeSettings = existing.UpdateSpokeSettings;
             UpdateSpokeOperationsSettings = existing.UpdateSpokeOperationsSettings.Clone();
-            DeactivateSpokeSettings = existing.DeactivateSpokeSettings;
-            DeactivateSpokeOperationsSettings = existing.DeactivateSpokeOperationsSettings.Clone();
-            ActivateSpokeSettings = existing.ActivateSpokeSettings;
-            ActivateSpokeOperationsSettings = existing.ActivateSpokeOperationsSettings.Clone();
             DeleteSpokeSettings = existing.DeleteSpokeSettings;
             DeleteSpokeOperationsSettings = existing.DeleteSpokeOperationsSettings.Clone();
             OnCopy(existing);
@@ -278,66 +274,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateSpokeOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>HubServiceClient.DeactivateSpoke</c> and <c>HubServiceClient.DeactivateSpokeAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeactivateSpokeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>HubServiceClient.DeactivateSpoke</c> and
-        /// <c>HubServiceClient.DeactivateSpokeAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings DeactivateSpokeOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>HubServiceClient.ActivateSpoke</c> and <c>HubServiceClient.ActivateSpokeAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ActivateSpokeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>HubServiceClient.ActivateSpoke</c> and
-        /// <c>HubServiceClient.ActivateSpokeAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings ActivateSpokeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1684,295 +1620,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
             UpdateSpokeAsync(spoke, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> DeactivateSpoke(DeactivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(DeactivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(DeactivateSpokeRequest request, st::CancellationToken cancellationToken) =>
-            DeactivateSpokeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>DeactivateSpoke</c>.</summary>
-        public virtual lro::OperationsClient DeactivateSpokeOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeactivateSpoke</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> PollOnceDeactivateSpoke(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Spoke, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeactivateSpokeOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>DeactivateSpoke</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> PollOnceDeactivateSpokeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Spoke, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeactivateSpokeOperationsClient, callSettings);
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> DeactivateSpoke(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeactivateSpoke(new DeactivateSpokeRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeactivateSpokeAsync(new DeactivateSpokeRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(string name, st::CancellationToken cancellationToken) =>
-            DeactivateSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> DeactivateSpoke(SpokeName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeactivateSpoke(new DeactivateSpokeRequest
-            {
-                SpokeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(SpokeName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeactivateSpokeAsync(new DeactivateSpokeRequest
-            {
-                SpokeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to deactivate.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(SpokeName name, st::CancellationToken cancellationToken) =>
-            DeactivateSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> ActivateSpoke(ActivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(ActivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(ActivateSpokeRequest request, st::CancellationToken cancellationToken) =>
-            ActivateSpokeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>ActivateSpoke</c>.</summary>
-        public virtual lro::OperationsClient ActivateSpokeOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ActivateSpoke</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> PollOnceActivateSpoke(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Spoke, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ActivateSpokeOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>ActivateSpoke</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> PollOnceActivateSpokeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Spoke, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ActivateSpokeOperationsClient, callSettings);
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> ActivateSpoke(string name, gaxgrpc::CallSettings callSettings = null) =>
-            ActivateSpoke(new ActivateSpokeRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            ActivateSpokeAsync(new ActivateSpokeRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(string name, st::CancellationToken cancellationToken) =>
-            ActivateSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Spoke, OperationMetadata> ActivateSpoke(SpokeName name, gaxgrpc::CallSettings callSettings = null) =>
-            ActivateSpoke(new ActivateSpokeRequest
-            {
-                SpokeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(SpokeName name, gaxgrpc::CallSettings callSettings = null) =>
-            ActivateSpokeAsync(new ActivateSpokeRequest
-            {
-                SpokeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="name">
-        /// Required. The name of the spoke to activate.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(SpokeName name, st::CancellationToken cancellationToken) =>
-            ActivateSpokeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Deletes the specified spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2130,10 +1777,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         private readonly gaxgrpc::ApiCall<UpdateSpokeRequest, lro::Operation> _callUpdateSpoke;
 
-        private readonly gaxgrpc::ApiCall<DeactivateSpokeRequest, lro::Operation> _callDeactivateSpoke;
-
-        private readonly gaxgrpc::ApiCall<ActivateSpokeRequest, lro::Operation> _callActivateSpoke;
-
         private readonly gaxgrpc::ApiCall<DeleteSpokeRequest, lro::Operation> _callDeleteSpoke;
 
         /// <summary>
@@ -2151,8 +1794,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeleteHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHubOperationsSettings);
             CreateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSpokeOperationsSettings);
             UpdateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpokeOperationsSettings);
-            DeactivateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeactivateSpokeOperationsSettings);
-            ActivateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ActivateSpokeOperationsSettings);
             DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings);
             _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>(grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHubs);
@@ -2181,12 +1822,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
             _callUpdateSpoke = clientHelper.BuildApiCall<UpdateSpokeRequest, lro::Operation>(grpcClient.UpdateSpokeAsync, grpcClient.UpdateSpoke, effectiveSettings.UpdateSpokeSettings).WithGoogleRequestParam("spoke.name", request => request.Spoke?.Name);
             Modify_ApiCall(ref _callUpdateSpoke);
             Modify_UpdateSpokeApiCall(ref _callUpdateSpoke);
-            _callDeactivateSpoke = clientHelper.BuildApiCall<DeactivateSpokeRequest, lro::Operation>(grpcClient.DeactivateSpokeAsync, grpcClient.DeactivateSpoke, effectiveSettings.DeactivateSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeactivateSpoke);
-            Modify_DeactivateSpokeApiCall(ref _callDeactivateSpoke);
-            _callActivateSpoke = clientHelper.BuildApiCall<ActivateSpokeRequest, lro::Operation>(grpcClient.ActivateSpokeAsync, grpcClient.ActivateSpoke, effectiveSettings.ActivateSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callActivateSpoke);
-            Modify_ActivateSpokeApiCall(ref _callActivateSpoke);
             _callDeleteSpoke = clientHelper.BuildApiCall<DeleteSpokeRequest, lro::Operation>(grpcClient.DeleteSpokeAsync, grpcClient.DeleteSpoke, effectiveSettings.DeleteSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSpoke);
             Modify_DeleteSpokeApiCall(ref _callDeleteSpoke);
@@ -2213,10 +1848,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         partial void Modify_UpdateSpokeApiCall(ref gaxgrpc::ApiCall<UpdateSpokeRequest, lro::Operation> call);
 
-        partial void Modify_DeactivateSpokeApiCall(ref gaxgrpc::ApiCall<DeactivateSpokeRequest, lro::Operation> call);
-
-        partial void Modify_ActivateSpokeApiCall(ref gaxgrpc::ApiCall<ActivateSpokeRequest, lro::Operation> call);
-
         partial void Modify_DeleteSpokeApiCall(ref gaxgrpc::ApiCall<DeleteSpokeRequest, lro::Operation> call);
 
         partial void OnConstruction(HubService.HubServiceClient grpcClient, HubServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -2241,10 +1872,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_CreateSpokeRequest(ref CreateSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSpokeRequest(ref UpdateSpokeRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeactivateSpokeRequest(ref DeactivateSpokeRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ActivateSpokeRequest(ref ActivateSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSpokeRequest(ref DeleteSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2477,66 +2104,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             Modify_UpdateSpokeRequest(ref request, ref callSettings);
             return new lro::Operation<Spoke, OperationMetadata>(await _callUpdateSpoke.Async(request, callSettings).ConfigureAwait(false), UpdateSpokeOperationsClient);
-        }
-
-        /// <summary>The long-running operations client for <c>DeactivateSpoke</c>.</summary>
-        public override lro::OperationsClient DeactivateSpokeOperationsClient { get; }
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<Spoke, OperationMetadata> DeactivateSpoke(DeactivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeactivateSpokeRequest(ref request, ref callSettings);
-            return new lro::Operation<Spoke, OperationMetadata>(_callDeactivateSpoke.Sync(request, callSettings), DeactivateSpokeOperationsClient);
-        }
-
-        /// <summary>
-        /// Deactivates the specified spoke. Deactivating keeps the spoke information
-        /// for future re-activation, but disconnects the Google Cloud network from
-        /// non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<Spoke, OperationMetadata>> DeactivateSpokeAsync(DeactivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeactivateSpokeRequest(ref request, ref callSettings);
-            return new lro::Operation<Spoke, OperationMetadata>(await _callDeactivateSpoke.Async(request, callSettings).ConfigureAwait(false), DeactivateSpokeOperationsClient);
-        }
-
-        /// <summary>The long-running operations client for <c>ActivateSpoke</c>.</summary>
-        public override lro::OperationsClient ActivateSpokeOperationsClient { get; }
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<Spoke, OperationMetadata> ActivateSpoke(ActivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ActivateSpokeRequest(ref request, ref callSettings);
-            return new lro::Operation<Spoke, OperationMetadata>(_callActivateSpoke.Sync(request, callSettings), ActivateSpokeOperationsClient);
-        }
-
-        /// <summary>
-        /// Activates the specified spoke. Activating reconnects the Google Cloud
-        /// network with the non-Google-Cloud network.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<Spoke, OperationMetadata>> ActivateSpokeAsync(ActivateSpokeRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ActivateSpokeRequest(ref request, ref callSettings);
-            return new lro::Operation<Spoke, OperationMetadata>(await _callActivateSpoke.Async(request, callSettings).ConfigureAwait(false), ActivateSpokeOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteSpoke</c>.</summary>

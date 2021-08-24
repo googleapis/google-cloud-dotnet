@@ -30,17 +30,20 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "cm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
             "L2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJh",
             "dGlvbnMucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsMDCgNIdWISEQoE",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIooECgNIdWISEQoE",
             "bmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkQKBmxhYmVscxgE",
             "IAMoCzI0Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkh1",
             "Yi5MYWJlbHNFbnRyeRITCgtkZXNjcmlwdGlvbhgFIAEoCRIWCgl1bmlxdWVf",
             "aWQYCCABKAlCA+BBAxI+CgVzdGF0ZRgJIAEoDjIqLmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3JrY29ubmVjdGl2aXR5LnYxLlN0YXRlQgPgQQMaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpb6kFYCiZuZXR3",
-            "b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL0h1YhIucHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy9nbG9iYWwvaHVicy97aHVifSK+BgoFU3Bv",
+            "ZXR3b3JrY29ubmVjdGl2aXR5LnYxLlN0YXRlQgPgQQMSRQoMcm91dGluZ192",
+            "cGNzGAogAygLMi8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHku",
+            "djEuUm91dGluZ1ZQQxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBOlvqQVgKJm5ldHdvcmtjb25uZWN0aXZpdHkuZ29v",
+            "Z2xlYXBpcy5jb20vSHViEi5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L2dsb2JhbC9odWJzL3todWJ9Ij4KClJvdXRpbmdWUEMSMAoDdXJpGAEgASgJ",
+            "QiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yayK+BgoFU3Bv",
             "a2USEQoEbmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAIgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
             "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKBmxh",
@@ -95,100 +98,86 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5TcG9rZUID4EECEhcKCnJlcXVl",
             "c3RfaWQYAyABKAlCA+BBASJtChJEZWxldGVTcG9rZVJlcXVlc3QSPgoEbmFt",
             "ZRgBIAEoCUIw4EEC+kEqCihuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFw",
-            "aXMuY29tL1Nwb2tlEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJxChZEZWFj",
-            "dGl2YXRlU3Bva2VSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgoobmV0",
-            "d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbS9TcG9rZRIXCgpyZXF1",
-            "ZXN0X2lkGAIgASgJQgPgQQEibwoUQWN0aXZhdGVTcG9rZVJlcXVlc3QSPgoE",
-            "bmFtZRgBIAEoCUIw4EEC+kEqCihuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2ds",
-            "ZWFwaXMuY29tL1Nwb2tlEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJrChBM",
-            "aW5rZWRWcG5UdW5uZWxzEjMKBHVyaXMYASADKAlCJfpBIgogY29tcHV0ZS5n",
-            "b29nbGVhcGlzLmNvbS9WcG5UdW5uZWwSIgoac2l0ZV90b19zaXRlX2RhdGFf",
-            "dHJhbnNmZXIYAiABKAgihQEKHUxpbmtlZEludGVyY29ubmVjdEF0dGFjaG1l",
-            "bnRzEkAKBHVyaXMYASADKAlCMvpBLwotY29tcHV0ZS5nb29nbGVhcGlzLmNv",
-            "bS9JbnRlcmNvbm5lY3RBdHRhY2htZW50EiIKGnNpdGVfdG9fc2l0ZV9kYXRh",
-            "X3RyYW5zZmVyGAIgASgIIpUBCh5MaW5rZWRSb3V0ZXJBcHBsaWFuY2VJbnN0",
-            "YW5jZXMSTwoJaW5zdGFuY2VzGAEgAygLMjwuZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmtjb25uZWN0aXZpdHkudjEuUm91dGVyQXBwbGlhbmNlSW5zdGFuY2USIgoa",
-            "c2l0ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgibAoXUm91dGVyQXBw",
-            "bGlhbmNlSW5zdGFuY2USPQoPdmlydHVhbF9tYWNoaW5lGAEgASgJQiT6QSEK",
-            "H2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEgoKaXBfYWRkcmVz",
-            "cxgDIAEoCSpGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENS",
-            "RUFUSU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAzLDEwoKSHViU2Vy",
-            "dmljZRK3AQoITGlzdEh1YnMSNC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5l",
-            "Y3Rpdml0eS52MS5MaXN0SHVic1JlcXVlc3QaNS5nb29nbGUuY2xvdWQubmV0",
-            "d29ya2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1Jlc3BvbnNlIj6C0+STAi8S",
-            "LS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbH0vaHVi",
-            "c9pBBnBhcmVudBKkAQoGR2V0SHViEjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
-            "b25uZWN0aXZpdHkudjEuR2V0SHViUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3JrY29ubmVjdGl2aXR5LnYxLkh1YiI8gtPkkwIvEi0vdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2h1YnMvKn3aQQRuYW1lEswB",
-            "CglDcmVhdGVIdWISNS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0",
-            "eS52MS5DcmVhdGVIdWJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJpgtPkkwI0Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy9nbG9iYWx9L2h1YnM6A2h1YtpBEXBhcmVudCxodWIsaHViX2lkykEY",
-            "CgNIdWISEU9wZXJhdGlvbk1ldGFkYXRhEs4BCglVcGRhdGVIdWISNS5nb29n",
-            "bGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVIdWJSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJrgtPkkwI4MjEv",
-            "djEve2h1Yi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9odWJz",
-            "Lyp9OgNodWLaQQ9odWIsdXBkYXRlX21hc2vKQRgKA0h1YhIRT3BlcmF0aW9u",
-            "TWV0YWRhdGESzAEKCURlbGV0ZUh1YhI1Lmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "Y29ubmVjdGl2aXR5LnYxLkRlbGV0ZUh1YlJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy9nbG9iYWwvaHVicy8qfdpBBG5hbWXKQSoKFWdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGESugEKCkxpc3RT",
-            "cG9rZXMSNi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5M",
-            "aXN0U3Bva2VzUmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
-            "dGl2aXR5LnYxLkxpc3RTcG9rZXNSZXNwb25zZSI7gtPkkwIsEiovdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zcG9rZXPaQQZwYXJlbnQS",
-            "pwEKCEdldFNwb2tlEjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZp",
-            "dHkudjEuR2V0U3Bva2VSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
-            "b25uZWN0aXZpdHkudjEuU3Bva2UiOYLT5JMCLBIqL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZRLVAQoLQ3JlYXRl",
-            "U3Bva2USNy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5D",
-            "cmVhdGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIm6C0+STAjMiKi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L3Nwb2tlczoFc3Bva2XaQRVwYXJlbnQsc3Bva2Usc3Bva2VfaWTKQRoK",
-            "BVNwb2tlEhFPcGVyYXRpb25NZXRhZGF0YRLXAQoLVXBkYXRlU3Bva2USNy5n",
-            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVTcG9r",
-            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInCC0+ST",
-            "AjkyMC92MS97c3Bva2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nw",
-            "b2tlcy8qfToFc3Bva2XaQRFzcG9rZSx1cGRhdGVfbWFza8pBGgoFU3Bva2US",
-            "EU9wZXJhdGlvbk1ldGFkYXRhEtMBCg9EZWFjdGl2YXRlU3Bva2USOy5nb29n",
-            "bGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5EZWFjdGl2YXRlU3Bv",
-            "a2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJkgtPk",
-            "kwI6IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zcG9rZXMv",
-            "Kn06ZGVhY3RpdmF0ZToBKtpBBG5hbWXKQRoKBVNwb2tlEhFPcGVyYXRpb25N",
-            "ZXRhZGF0YRLNAQoNQWN0aXZhdGVTcG9rZRI5Lmdvb2dsZS5jbG91ZC5uZXR3",
-            "b3JrY29ubmVjdGl2aXR5LnYxLkFjdGl2YXRlU3Bva2VSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJigtPkkwI4IjMvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zcG9rZXMvKn06YWN0aXZhdGU6ASra",
-            "QQRuYW1lykEaCgVTcG9rZRIRT3BlcmF0aW9uTWV0YWRhdGESzQEKC0RlbGV0",
-            "ZVNwb2tlEjcuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjEu",
-            "RGVsZXRlU3Bva2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJmgtPkkwIsKiovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9zcG9rZXMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkS",
-            "EU9wZXJhdGlvbk1ldGFkYXRhGlbKQSJuZXR3b3JrY29ubmVjdGl2aXR5Lmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUKRBQonY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "Y29ubmVjdGl2aXR5LnYxQghIdWJQcm90b1ABWlZnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25ldHdvcmtjb25uZWN0aXZp",
-            "dHkvdjE7bmV0d29ya2Nvbm5lY3Rpdml0eaoCI0dvb2dsZS5DbG91ZC5OZXR3",
-            "b3JrQ29ubmVjdGl2aXR5LlYxygIjR29vZ2xlXENsb3VkXE5ldHdvcmtDb25u",
-            "ZWN0aXZpdHlcVjHqAiZHb29nbGU6OkNsb3VkOjpOZXR3b3JrQ29ubmVjdGl2",
-            "aXR5OjpWMepBYAogY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9WcG5UdW5uZWwS",
-            "PHByb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259L3ZwblR1bm5l",
-            "bHMve3Jlc291cmNlX2lkfepBegotY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9J",
-            "bnRlcmNvbm5lY3RBdHRhY2htZW50Eklwcm9qZWN0cy97cHJvamVjdH0vcmVn",
-            "aW9ucy97cmVnaW9ufS9pbnRlcmNvbm5lY3RBdHRhY2htZW50cy97cmVzb3Vy",
-            "Y2VfaWR96kFXCh9jb21wdXRlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjRw",
-            "cm9qZWN0cy97cHJvamVjdH0vem9uZXMve3pvbmV9L2luc3RhbmNlcy97aW5z",
-            "dGFuY2V96kFSCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSMHBy",
-            "b2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29ya3Mve3Jlc291cmNlX2lk",
-            "fWIGcHJvdG8z"));
+            "aXMuY29tL1Nwb2tlEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJrChBMaW5r",
+            "ZWRWcG5UdW5uZWxzEjMKBHVyaXMYASADKAlCJfpBIgogY29tcHV0ZS5nb29n",
+            "bGVhcGlzLmNvbS9WcG5UdW5uZWwSIgoac2l0ZV90b19zaXRlX2RhdGFfdHJh",
+            "bnNmZXIYAiABKAgihQEKHUxpbmtlZEludGVyY29ubmVjdEF0dGFjaG1lbnRz",
+            "EkAKBHVyaXMYASADKAlCMvpBLwotY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9J",
+            "bnRlcmNvbm5lY3RBdHRhY2htZW50EiIKGnNpdGVfdG9fc2l0ZV9kYXRhX3Ry",
+            "YW5zZmVyGAIgASgIIpUBCh5MaW5rZWRSb3V0ZXJBcHBsaWFuY2VJbnN0YW5j",
+            "ZXMSTwoJaW5zdGFuY2VzGAEgAygLMjwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
+            "b25uZWN0aXZpdHkudjEuUm91dGVyQXBwbGlhbmNlSW5zdGFuY2USIgoac2l0",
+            "ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgibAoXUm91dGVyQXBwbGlh",
+            "bmNlSW5zdGFuY2USPQoPdmlydHVhbF9tYWNoaW5lGAEgASgJQiT6QSEKH2Nv",
+            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEgoKaXBfYWRkcmVzcxgD",
+            "IAEoCSpGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFU",
+            "SU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAzKdEAoKSHViU2Vydmlj",
+            "ZRK3AQoITGlzdEh1YnMSNC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rp",
+            "dml0eS52MS5MaXN0SHVic1JlcXVlc3QaNS5nb29nbGUuY2xvdWQubmV0d29y",
+            "a2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1Jlc3BvbnNlIj6C0+STAi8SLS92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbH0vaHVic9pB",
+            "BnBhcmVudBKkAQoGR2V0SHViEjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
+            "ZWN0aXZpdHkudjEuR2V0SHViUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5uZXR3",
+            "b3JrY29ubmVjdGl2aXR5LnYxLkh1YiI8gtPkkwIvEi0vdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2h1YnMvKn3aQQRuYW1lEswBCglD",
+            "cmVhdGVIdWISNS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
+            "MS5DcmVhdGVIdWJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJpgtPkkwI0Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy9nbG9iYWx9L2h1YnM6A2h1YtpBEXBhcmVudCxodWIsaHViX2lkykEYCgNI",
+            "dWISEU9wZXJhdGlvbk1ldGFkYXRhEs4BCglVcGRhdGVIdWISNS5nb29nbGUu",
+            "Y2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVIdWJSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJrgtPkkwI4MjEvdjEv",
+            "e2h1Yi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9odWJzLyp9",
+            "OgNodWLaQQ9odWIsdXBkYXRlX21hc2vKQRgKA0h1YhIRT3BlcmF0aW9uTWV0",
+            "YWRhdGESzAEKCURlbGV0ZUh1YhI1Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29u",
+            "bmVjdGl2aXR5LnYxLkRlbGV0ZUh1YlJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uImmC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy9nbG9iYWwvaHVicy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGESugEKCkxpc3RTcG9r",
+            "ZXMSNi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaXN0",
+            "U3Bva2VzUmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2",
+            "aXR5LnYxLkxpc3RTcG9rZXNSZXNwb25zZSI7gtPkkwIsEiovdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zcG9rZXPaQQZwYXJlbnQSpwEK",
+            "CEdldFNwb2tlEjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHku",
+            "djEuR2V0U3Bva2VSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
+            "ZWN0aXZpdHkudjEuU3Bva2UiOYLT5JMCLBIqL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZRLVAQoLQ3JlYXRlU3Bv",
+            "a2USNy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5DcmVh",
+            "dGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "Im6C0+STAjMiKi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L3Nwb2tlczoFc3Bva2XaQRVwYXJlbnQsc3Bva2Usc3Bva2VfaWTKQRoKBVNw",
+            "b2tlEhFPcGVyYXRpb25NZXRhZGF0YRLXAQoLVXBkYXRlU3Bva2USNy5nb29n",
+            "bGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVTcG9rZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInCC0+STAjky",
+            "MC92MS97c3Bva2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nwb2tl",
+            "cy8qfToFc3Bva2XaQRFzcG9rZSx1cGRhdGVfbWFza8pBGgoFU3Bva2USEU9w",
+            "ZXJhdGlvbk1ldGFkYXRhEs0BCgtEZWxldGVTcG9rZRI3Lmdvb2dsZS5jbG91",
+            "ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkRlbGV0ZVNwb2tlUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZoLT5JMCLCoqL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZcpB",
+            "KgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRpW",
+            "ykEibmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkQUK",
+            "J2NvbS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MUIISHVi",
+            "UHJvdG9QAVpWZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9uZXR3b3JrY29ubmVjdGl2aXR5L3YxO25ldHdvcmtjb25uZWN0",
+            "aXZpdHmqAiNHb29nbGUuQ2xvdWQuTmV0d29ya0Nvbm5lY3Rpdml0eS5WMcoC",
+            "I0dvb2dsZVxDbG91ZFxOZXR3b3JrQ29ubmVjdGl2aXR5XFYx6gImR29vZ2xl",
+            "OjpDbG91ZDo6TmV0d29ya0Nvbm5lY3Rpdml0eTo6VjHqQWAKIGNvbXB1dGUu",
+            "Z29vZ2xlYXBpcy5jb20vVnBuVHVubmVsEjxwcm9qZWN0cy97cHJvamVjdH0v",
+            "cmVnaW9ucy97cmVnaW9ufS92cG5UdW5uZWxzL3tyZXNvdXJjZV9pZH3qQXoK",
+            "LWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW50ZXJjb25uZWN0QXR0YWNobWVu",
+            "dBJJcHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vaW50ZXJj",
+            "b25uZWN0QXR0YWNobWVudHMve3Jlc291cmNlX2lkfepBVwofY29tcHV0ZS5n",
+            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRI0cHJvamVjdHMve3Byb2plY3R9L3pv",
+            "bmVzL3t6b25lfS9pbnN0YW5jZXMve2luc3RhbmNlfepBUgoeY29tcHV0ZS5n",
+            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEjBwcm9qZWN0cy97cHJvamVjdH0vZ2xv",
+            "YmFsL25ldHdvcmtzL3tyZXNvdXJjZV9pZH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkConnectivity.V1.State), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Hub), global::Google.Cloud.NetworkConnectivity.V1.Hub.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "UniqueId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Hub), global::Google.Cloud.NetworkConnectivity.V1.Hub.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "UniqueId", "State", "RoutingVpcs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC), global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Spoke), global::Google.Cloud.NetworkConnectivity.V1.Spoke.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Hub", "LinkedVpnTunnels", "LinkedInterconnectAttachments", "LinkedRouterApplianceInstances", "UniqueId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest), global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse), global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse.Parser, new[]{ "Hubs", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -202,8 +191,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest.Parser, new[]{ "Parent", "SpokeId", "Spoke", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest.Parser, new[]{ "UpdateMask", "Spoke", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels), global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments), global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances), global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances.Parser, new[]{ "Instances", "SiteToSiteDataTransfer" }, null, null, null, null),
@@ -281,6 +268,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       description_ = other.description_;
       uniqueId_ = other.uniqueId_;
       state_ = other.state_;
+      routingVpcs_ = other.routingVpcs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -392,6 +380,24 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
     }
 
+    /// <summary>Field number for the "routing_vpcs" field.</summary>
+    public const int RoutingVpcsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC> _repeated_routingVpcs_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC> routingVpcs_ = new pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC>();
+    /// <summary>
+    /// The VPC network associated with this hub's spokes. All of the VPN tunnels,
+    /// VLAN attachments, and router appliance instances referenced by this hub's
+    /// spokes must belong to this VPC network.
+    ///
+    /// This field is read-only. Network Connectivity Center automatically
+    /// populates it based on the set of spokes attached to the hub.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC> RoutingVpcs {
+      get { return routingVpcs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Hub);
@@ -412,6 +418,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       if (Description != other.Description) return false;
       if (UniqueId != other.UniqueId) return false;
       if (State != other.State) return false;
+      if(!routingVpcs_.Equals(other.routingVpcs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -425,6 +432,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (UniqueId.Length != 0) hash ^= UniqueId.GetHashCode();
       if (State != global::Google.Cloud.NetworkConnectivity.V1.State.Unspecified) hash ^= State.GetHashCode();
+      hash ^= routingVpcs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -466,6 +474,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) State);
       }
+      routingVpcs_.WriteTo(output, _repeated_routingVpcs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -500,6 +509,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) State);
       }
+      routingVpcs_.WriteTo(ref output, _repeated_routingVpcs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -528,6 +538,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       if (State != global::Google.Cloud.NetworkConnectivity.V1.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      size += routingVpcs_.CalculateSize(_repeated_routingVpcs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -564,6 +575,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       if (other.State != global::Google.Cloud.NetworkConnectivity.V1.State.Unspecified) {
         State = other.State;
       }
+      routingVpcs_.Add(other.routingVpcs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -610,6 +622,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           }
           case 72: {
             State = (global::Google.Cloud.NetworkConnectivity.V1.State) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            routingVpcs_.AddEntriesFrom(input, _repeated_routingVpcs_codec);
             break;
           }
         }
@@ -660,6 +676,189 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             State = (global::Google.Cloud.NetworkConnectivity.V1.State) input.ReadEnum();
             break;
           }
+          case 82: {
+            routingVpcs_.AddEntriesFrom(ref input, _repeated_routingVpcs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// RoutingsVPC contains information about a VPC network that is associated with
+  /// a hub's spokes.
+  /// </summary>
+  public sealed partial class RoutingVPC : pb::IMessage<RoutingVPC>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RoutingVPC> _parser = new pb::MessageParser<RoutingVPC>(() => new RoutingVPC());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RoutingVPC> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutingVPC() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutingVPC(RoutingVPC other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutingVPC Clone() {
+      return new RoutingVPC(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// The URI of a VPC network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RoutingVPC);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RoutingVPC other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RoutingVPC other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -690,7 +889,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1298,7 +1497,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1632,7 +1831,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1867,7 +2066,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2045,7 +2244,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2362,7 +2561,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2653,7 +2852,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2883,7 +3082,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3217,7 +3416,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3452,7 +3651,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3630,7 +3829,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3947,7 +4146,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4238,7 +4437,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4454,466 +4653,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.DeactivateSpoke][google.cloud.networkconnectivity.v1.HubService.DeactivateSpoke].
-  /// </summary>
-  public sealed partial class DeactivateSpokeRequest : pb::IMessage<DeactivateSpokeRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<DeactivateSpokeRequest> _parser = new pb::MessageParser<DeactivateSpokeRequest>(() => new DeactivateSpokeRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DeactivateSpokeRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[14]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeactivateSpokeRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeactivateSpokeRequest(DeactivateSpokeRequest other) : this() {
-      name_ = other.name_;
-      requestId_ = other.requestId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeactivateSpokeRequest Clone() {
-      return new DeactivateSpokeRequest(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Required. The name of the spoke to deactivate.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "request_id" field.</summary>
-    public const int RequestIdFieldNumber = 2;
-    private string requestId_ = "";
-    /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
-    ///
-    /// For example, consider a situation where you make an initial request and
-    /// the request times out. If you make the request again with the same request
-    /// ID, the server can check to see whether the original operation
-    /// was received. If it was, the server ignores the second request. This
-    /// behavior prevents clients from mistakenly creating duplicate commitments.
-    ///
-    /// The request ID must be a valid UUID, with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RequestId {
-      get { return requestId_; }
-      set {
-        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DeactivateSpokeRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DeactivateSpokeRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (RequestId != other.RequestId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (RequestId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RequestId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (RequestId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RequestId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (RequestId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DeactivateSpokeRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.RequestId.Length != 0) {
-        RequestId = other.RequestId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            RequestId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            RequestId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// The request for [HubService.ActivateSpoke][google.cloud.networkconnectivity.v1.HubService.ActivateSpoke].
-  /// </summary>
-  public sealed partial class ActivateSpokeRequest : pb::IMessage<ActivateSpokeRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ActivateSpokeRequest> _parser = new pb::MessageParser<ActivateSpokeRequest>(() => new ActivateSpokeRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ActivateSpokeRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[15]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivateSpokeRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivateSpokeRequest(ActivateSpokeRequest other) : this() {
-      name_ = other.name_;
-      requestId_ = other.requestId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivateSpokeRequest Clone() {
-      return new ActivateSpokeRequest(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Required. The name of the spoke to activate.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "request_id" field.</summary>
-    public const int RequestIdFieldNumber = 2;
-    private string requestId_ = "";
-    /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
-    ///
-    /// For example, consider a situation where you make an initial request and
-    /// the request times out. If you make the request again with the same request
-    /// ID, the server can check to see whether the original operation
-    /// was received. If it was, the server ignores the second request. This
-    /// behavior prevents clients from mistakenly creating duplicate commitments.
-    ///
-    /// The request ID must be a valid UUID, with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RequestId {
-      get { return requestId_; }
-      set {
-        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ActivateSpokeRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActivateSpokeRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (RequestId != other.RequestId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (RequestId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RequestId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (RequestId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RequestId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (RequestId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActivateSpokeRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.RequestId.Length != 0) {
-        RequestId = other.RequestId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            RequestId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            RequestId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// A collection of Cloud VPN tunnel resources. These resources should be
   /// redundant HA VPN tunnels that all advertise the same prefixes to Google
   /// Cloud. Alternatively, in a passive/active configuration, all tunnels
@@ -4931,7 +4670,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4976,12 +4715,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. If true, routes are propagated between the spoke
-    /// associated with these resources and other spokes in the hub that have data
-    /// transfer enabled. If false, the spoke associated with these resources
-    /// provides connectivity only between the external site and Google Cloud. In
-    /// regions where data transfer is unsupported, you cannot set this field
-    /// to true.
+    /// these resources. This field is set to false by default, but you must set it
+    /// to true. Note that data transfer is available only in supported locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SiteToSiteDataTransfer {
@@ -5146,7 +4881,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5191,12 +4926,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. If true, routes are propagated between the spoke
-    /// associated with these resources and other spokes in the hub that have data
-    /// transfer enabled. If false, the spoke associated with these resources
-    /// provides connectivity only between the external site and Google Cloud. In
-    /// regions where data transfer is unsupported, you cannot set this field
-    /// to true.
+    /// these resources. This field is set to false by default, but you must set it
+    /// to true. Note that data transfer is available only in supported locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SiteToSiteDataTransfer {
@@ -5360,7 +5091,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5405,12 +5136,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. If true, routes are propagated between the spoke
-    /// associated with these resources and other spokes in the hub that have data
-    /// transfer enabled. If false, the spoke associated with these resources
-    /// provides connectivity only between the external site and Google Cloud. In
-    /// regions where data transfer is unsupported, you cannot set this field
-    /// to true.
+    /// these resources. This field is set to false by default, but you must set it
+    /// to true. Note that data transfer is available only in supported locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SiteToSiteDataTransfer {
@@ -5575,7 +5302,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
