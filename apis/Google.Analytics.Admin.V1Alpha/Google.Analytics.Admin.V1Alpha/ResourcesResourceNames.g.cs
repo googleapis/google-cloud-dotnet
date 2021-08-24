@@ -3000,6 +3000,548 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(MeasurementProtocolSecretName a, MeasurementProtocolSecretName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DisplayVideo360AdvertiserLink</c> resource.</summary>
+    public sealed partial class DisplayVideo360AdvertiserLinkName : gax::IResourceName, sys::IEquatable<DisplayVideo360AdvertiserLinkName>
+    {
+        /// <summary>The possible contents of <see cref="DisplayVideo360AdvertiserLinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+            /// </summary>
+            PropertyDisplayVideo360AdvertiserLink = 1,
+        }
+
+        private static gax::PathTemplate s_propertyDisplayVideo360AdvertiserLink = new gax::PathTemplate("properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}");
+
+        /// <summary>
+        /// Creates a <see cref="DisplayVideo360AdvertiserLinkName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DisplayVideo360AdvertiserLinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DisplayVideo360AdvertiserLinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DisplayVideo360AdvertiserLinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DisplayVideo360AdvertiserLinkName"/> with the pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkId">
+        /// The <c>DisplayVideo360AdvertiserLink</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="DisplayVideo360AdvertiserLinkName"/> constructed from the provided ids.
+        /// </returns>
+        public static DisplayVideo360AdvertiserLinkName FromPropertyDisplayVideo360AdvertiserLink(string propertyId, string displayVideo360AdvertiserLinkId) =>
+            new DisplayVideo360AdvertiserLinkName(ResourceNameType.PropertyDisplayVideo360AdvertiserLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), displayVideo360AdvertiserLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkId, nameof(displayVideo360AdvertiserLinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DisplayVideo360AdvertiserLinkName"/> with
+        /// pattern <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkId">
+        /// The <c>DisplayVideo360AdvertiserLink</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="DisplayVideo360AdvertiserLinkName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string displayVideo360AdvertiserLinkId) =>
+            FormatPropertyDisplayVideo360AdvertiserLink(propertyId, displayVideo360AdvertiserLinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DisplayVideo360AdvertiserLinkName"/> with
+        /// pattern <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkId">
+        /// The <c>DisplayVideo360AdvertiserLink</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="DisplayVideo360AdvertiserLinkName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>.
+        /// </returns>
+        public static string FormatPropertyDisplayVideo360AdvertiserLink(string propertyId, string displayVideo360AdvertiserLinkId) =>
+            s_propertyDisplayVideo360AdvertiserLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkId, nameof(displayVideo360AdvertiserLinkId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="DisplayVideo360AdvertiserLinkName"/> if successful.</returns>
+        public static DisplayVideo360AdvertiserLinkName Parse(string displayVideo360AdvertiserLinkName) =>
+            Parse(displayVideo360AdvertiserLinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DisplayVideo360AdvertiserLinkName"/> if successful.</returns>
+        public static DisplayVideo360AdvertiserLinkName Parse(string displayVideo360AdvertiserLinkName, bool allowUnparsed) =>
+            TryParse(displayVideo360AdvertiserLinkName, allowUnparsed, out DisplayVideo360AdvertiserLinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DisplayVideo360AdvertiserLinkName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string displayVideo360AdvertiserLinkName, out DisplayVideo360AdvertiserLinkName result) =>
+            TryParse(displayVideo360AdvertiserLinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DisplayVideo360AdvertiserLinkName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string displayVideo360AdvertiserLinkName, bool allowUnparsed, out DisplayVideo360AdvertiserLinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkName, nameof(displayVideo360AdvertiserLinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyDisplayVideo360AdvertiserLink.TryParseName(displayVideo360AdvertiserLinkName, out resourceName))
+            {
+                result = FromPropertyDisplayVideo360AdvertiserLink(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(displayVideo360AdvertiserLinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DisplayVideo360AdvertiserLinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string displayVideo360AdvertiserLinkId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DisplayVideo360AdvertiserLinkId = displayVideo360AdvertiserLinkId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DisplayVideo360AdvertiserLinkName"/> class from the component
+        /// parts of pattern <c>properties/{property}/displayVideo360AdvertiserLinks/{display_video_360_advertiser_link}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkId">
+        /// The <c>DisplayVideo360AdvertiserLink</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public DisplayVideo360AdvertiserLinkName(string propertyId, string displayVideo360AdvertiserLinkId) : this(ResourceNameType.PropertyDisplayVideo360AdvertiserLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), displayVideo360AdvertiserLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkId, nameof(displayVideo360AdvertiserLinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DisplayVideo360AdvertiserLink</c> ID. Will not be <c>null</c>, unless this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public string DisplayVideo360AdvertiserLinkId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyDisplayVideo360AdvertiserLink: return s_propertyDisplayVideo360AdvertiserLink.Expand(PropertyId, DisplayVideo360AdvertiserLinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DisplayVideo360AdvertiserLinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(DisplayVideo360AdvertiserLinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(DisplayVideo360AdvertiserLinkName a, DisplayVideo360AdvertiserLinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(DisplayVideo360AdvertiserLinkName a, DisplayVideo360AdvertiserLinkName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>DisplayVideo360AdvertiserLinkProposal</c> resource.</summary>
+    public sealed partial class DisplayVideo360AdvertiserLinkProposalName : gax::IResourceName, sys::IEquatable<DisplayVideo360AdvertiserLinkProposalName>
+    {
+        /// <summary>The possible contents of <see cref="DisplayVideo360AdvertiserLinkProposalName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+            /// .
+            /// </summary>
+            PropertyDisplayVideo360AdvertiserLinkProposal = 1,
+        }
+
+        private static gax::PathTemplate s_propertyDisplayVideo360AdvertiserLinkProposal = new gax::PathTemplate("properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}");
+
+        /// <summary>
+        /// Creates a <see cref="DisplayVideo360AdvertiserLinkProposalName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DisplayVideo360AdvertiserLinkProposalName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DisplayVideo360AdvertiserLinkProposalName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DisplayVideo360AdvertiserLinkProposalName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DisplayVideo360AdvertiserLinkProposalName"/> with the pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkProposalId">
+        /// The <c>DisplayVideo360AdvertiserLinkProposal</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="DisplayVideo360AdvertiserLinkProposalName"/> constructed from the provided ids.
+        /// </returns>
+        public static DisplayVideo360AdvertiserLinkProposalName FromPropertyDisplayVideo360AdvertiserLinkProposal(string propertyId, string displayVideo360AdvertiserLinkProposalId) =>
+            new DisplayVideo360AdvertiserLinkProposalName(ResourceNameType.PropertyDisplayVideo360AdvertiserLinkProposal, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), displayVideo360AdvertiserLinkProposalId: gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkProposalId, nameof(displayVideo360AdvertiserLinkProposalId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this
+        /// <see cref="DisplayVideo360AdvertiserLinkProposalName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkProposalId">
+        /// The <c>DisplayVideo360AdvertiserLinkProposal</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="DisplayVideo360AdvertiserLinkProposalName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// .
+        /// </returns>
+        public static string Format(string propertyId, string displayVideo360AdvertiserLinkProposalId) =>
+            FormatPropertyDisplayVideo360AdvertiserLinkProposal(propertyId, displayVideo360AdvertiserLinkProposalId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this
+        /// <see cref="DisplayVideo360AdvertiserLinkProposalName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkProposalId">
+        /// The <c>DisplayVideo360AdvertiserLinkProposal</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="DisplayVideo360AdvertiserLinkProposalName"/> with pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// .
+        /// </returns>
+        public static string FormatPropertyDisplayVideo360AdvertiserLinkProposal(string propertyId, string displayVideo360AdvertiserLinkProposalId) =>
+            s_propertyDisplayVideo360AdvertiserLinkProposal.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkProposalId, nameof(displayVideo360AdvertiserLinkProposalId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkProposalName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkProposalName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="DisplayVideo360AdvertiserLinkProposalName"/> if successful.</returns>
+        public static DisplayVideo360AdvertiserLinkProposalName Parse(string displayVideo360AdvertiserLinkProposalName) =>
+            Parse(displayVideo360AdvertiserLinkProposalName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DisplayVideo360AdvertiserLinkProposalName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkProposalName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DisplayVideo360AdvertiserLinkProposalName"/> if successful.</returns>
+        public static DisplayVideo360AdvertiserLinkProposalName Parse(string displayVideo360AdvertiserLinkProposalName, bool allowUnparsed) =>
+            TryParse(displayVideo360AdvertiserLinkProposalName, allowUnparsed, out DisplayVideo360AdvertiserLinkProposalName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new
+        /// <see cref="DisplayVideo360AdvertiserLinkProposalName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkProposalName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DisplayVideo360AdvertiserLinkProposalName"/>, or <c>null</c>
+        /// if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string displayVideo360AdvertiserLinkProposalName, out DisplayVideo360AdvertiserLinkProposalName result) =>
+            TryParse(displayVideo360AdvertiserLinkProposalName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new
+        /// <see cref="DisplayVideo360AdvertiserLinkProposalName"/> instance; optionally allowing an unparseable
+        /// resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="displayVideo360AdvertiserLinkProposalName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DisplayVideo360AdvertiserLinkProposalName"/>, or <c>null</c>
+        /// if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string displayVideo360AdvertiserLinkProposalName, bool allowUnparsed, out DisplayVideo360AdvertiserLinkProposalName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkProposalName, nameof(displayVideo360AdvertiserLinkProposalName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyDisplayVideo360AdvertiserLinkProposal.TryParseName(displayVideo360AdvertiserLinkProposalName, out resourceName))
+            {
+                result = FromPropertyDisplayVideo360AdvertiserLinkProposal(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(displayVideo360AdvertiserLinkProposalName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DisplayVideo360AdvertiserLinkProposalName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string displayVideo360AdvertiserLinkProposalId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DisplayVideo360AdvertiserLinkProposalId = displayVideo360AdvertiserLinkProposalId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DisplayVideo360AdvertiserLinkProposalName"/> class from the
+        /// component parts of pattern
+        /// <c>properties/{property}/displayVideo360AdvertiserLinkProposals/{display_video_360_advertiser_link_proposal}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="displayVideo360AdvertiserLinkProposalId">
+        /// The <c>DisplayVideo360AdvertiserLinkProposal</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public DisplayVideo360AdvertiserLinkProposalName(string propertyId, string displayVideo360AdvertiserLinkProposalId) : this(ResourceNameType.PropertyDisplayVideo360AdvertiserLinkProposal, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), displayVideo360AdvertiserLinkProposalId: gax::GaxPreconditions.CheckNotNullOrEmpty(displayVideo360AdvertiserLinkProposalId, nameof(displayVideo360AdvertiserLinkProposalId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DisplayVideo360AdvertiserLinkProposal</c> ID. Will not be <c>null</c>, unless this instance contains
+        /// an unparsed resource name.
+        /// </summary>
+        public string DisplayVideo360AdvertiserLinkProposalId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyDisplayVideo360AdvertiserLinkProposal: return s_propertyDisplayVideo360AdvertiserLinkProposal.Expand(PropertyId, DisplayVideo360AdvertiserLinkProposalId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DisplayVideo360AdvertiserLinkProposalName);
+
+        /// <inheritdoc/>
+        public bool Equals(DisplayVideo360AdvertiserLinkProposalName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(DisplayVideo360AdvertiserLinkProposalName a, DisplayVideo360AdvertiserLinkProposalName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(DisplayVideo360AdvertiserLinkProposalName a, DisplayVideo360AdvertiserLinkProposalName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ConversionEvent</c> resource.</summary>
     public sealed partial class ConversionEventName : gax::IResourceName, sys::IEquatable<ConversionEventName>
     {
@@ -3855,6 +4397,221 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(CustomMetricName a, CustomMetricName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DataRetentionSettings</c> resource.</summary>
+    public sealed partial class DataRetentionSettingsName : gax::IResourceName, sys::IEquatable<DataRetentionSettingsName>
+    {
+        /// <summary>The possible contents of <see cref="DataRetentionSettingsName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>properties/{property}/dataRetentionSettings</c>.</summary>
+            Property = 1,
+        }
+
+        private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/dataRetentionSettings");
+
+        /// <summary>Creates a <see cref="DataRetentionSettingsName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DataRetentionSettingsName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DataRetentionSettingsName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DataRetentionSettingsName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DataRetentionSettingsName"/> with the pattern
+        /// <c>properties/{property}/dataRetentionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="DataRetentionSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static DataRetentionSettingsName FromProperty(string propertyId) =>
+            new DataRetentionSettingsName(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DataRetentionSettingsName"/> with pattern
+        /// <c>properties/{property}/dataRetentionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DataRetentionSettingsName"/> with pattern
+        /// <c>properties/{property}/dataRetentionSettings</c>.
+        /// </returns>
+        public static string Format(string propertyId) => FormatProperty(propertyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DataRetentionSettingsName"/> with pattern
+        /// <c>properties/{property}/dataRetentionSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DataRetentionSettingsName"/> with pattern
+        /// <c>properties/{property}/dataRetentionSettings</c>.
+        /// </returns>
+        public static string FormatProperty(string propertyId) =>
+            s_property.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DataRetentionSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/dataRetentionSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="dataRetentionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DataRetentionSettingsName"/> if successful.</returns>
+        public static DataRetentionSettingsName Parse(string dataRetentionSettingsName) =>
+            Parse(dataRetentionSettingsName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DataRetentionSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/dataRetentionSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="dataRetentionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DataRetentionSettingsName"/> if successful.</returns>
+        public static DataRetentionSettingsName Parse(string dataRetentionSettingsName, bool allowUnparsed) =>
+            TryParse(dataRetentionSettingsName, allowUnparsed, out DataRetentionSettingsName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DataRetentionSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/dataRetentionSettings</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="dataRetentionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DataRetentionSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string dataRetentionSettingsName, out DataRetentionSettingsName result) =>
+            TryParse(dataRetentionSettingsName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DataRetentionSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/dataRetentionSettings</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="dataRetentionSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DataRetentionSettingsName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string dataRetentionSettingsName, bool allowUnparsed, out DataRetentionSettingsName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(dataRetentionSettingsName, nameof(dataRetentionSettingsName));
+            gax::TemplatedResourceName resourceName;
+            if (s_property.TryParseName(dataRetentionSettingsName, out resourceName))
+            {
+                result = FromProperty(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(dataRetentionSettingsName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DataRetentionSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DataRetentionSettingsName"/> class from the component parts of
+        /// pattern <c>properties/{property}/dataRetentionSettings</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        public DataRetentionSettingsName(string propertyId) : this(ResourceNameType.Property, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Property: return s_property.Expand(PropertyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DataRetentionSettingsName);
+
+        /// <inheritdoc/>
+        public bool Equals(DataRetentionSettingsName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(DataRetentionSettingsName a, DataRetentionSettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(DataRetentionSettingsName a, DataRetentionSettingsName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -4034,6 +4791,32 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class DisplayVideo360AdvertiserLink
+    {
+        /// <summary>
+        /// <see cref="gaav::DisplayVideo360AdvertiserLinkName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::DisplayVideo360AdvertiserLinkName DisplayVideo360AdvertiserLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DisplayVideo360AdvertiserLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DisplayVideo360AdvertiserLinkProposal
+    {
+        /// <summary>
+        /// <see cref="gaav::DisplayVideo360AdvertiserLinkProposalName"/>-typed view over the <see cref="Name"/>
+        /// resource name property.
+        /// </summary>
+        public gaav::DisplayVideo360AdvertiserLinkProposalName DisplayVideo360AdvertiserLinkProposalName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DisplayVideo360AdvertiserLinkProposalName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ConversionEvent
     {
         /// <summary>
@@ -4078,6 +4861,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::CustomMetricName CustomMetricName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::CustomMetricName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DataRetentionSettings
+    {
+        /// <summary>
+        /// <see cref="gaav::DataRetentionSettingsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::DataRetentionSettingsName DataRetentionSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DataRetentionSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

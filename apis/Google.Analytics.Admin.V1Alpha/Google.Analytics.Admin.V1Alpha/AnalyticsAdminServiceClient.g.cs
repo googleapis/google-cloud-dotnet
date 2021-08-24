@@ -84,7 +84,6 @@ namespace Google.Analytics.Admin.V1Alpha
             GetEnhancedMeasurementSettingsSettings = existing.GetEnhancedMeasurementSettingsSettings;
             UpdateEnhancedMeasurementSettingsSettings = existing.UpdateEnhancedMeasurementSettingsSettings;
             CreateFirebaseLinkSettings = existing.CreateFirebaseLinkSettings;
-            UpdateFirebaseLinkSettings = existing.UpdateFirebaseLinkSettings;
             DeleteFirebaseLinkSettings = existing.DeleteFirebaseLinkSettings;
             ListFirebaseLinksSettings = existing.ListFirebaseLinksSettings;
             GetGlobalSiteTagSettings = existing.GetGlobalSiteTagSettings;
@@ -105,6 +104,17 @@ namespace Google.Analytics.Admin.V1Alpha
             GetConversionEventSettings = existing.GetConversionEventSettings;
             DeleteConversionEventSettings = existing.DeleteConversionEventSettings;
             ListConversionEventsSettings = existing.ListConversionEventsSettings;
+            GetDisplayVideo360AdvertiserLinkSettings = existing.GetDisplayVideo360AdvertiserLinkSettings;
+            ListDisplayVideo360AdvertiserLinksSettings = existing.ListDisplayVideo360AdvertiserLinksSettings;
+            CreateDisplayVideo360AdvertiserLinkSettings = existing.CreateDisplayVideo360AdvertiserLinkSettings;
+            DeleteDisplayVideo360AdvertiserLinkSettings = existing.DeleteDisplayVideo360AdvertiserLinkSettings;
+            UpdateDisplayVideo360AdvertiserLinkSettings = existing.UpdateDisplayVideo360AdvertiserLinkSettings;
+            GetDisplayVideo360AdvertiserLinkProposalSettings = existing.GetDisplayVideo360AdvertiserLinkProposalSettings;
+            ListDisplayVideo360AdvertiserLinkProposalsSettings = existing.ListDisplayVideo360AdvertiserLinkProposalsSettings;
+            CreateDisplayVideo360AdvertiserLinkProposalSettings = existing.CreateDisplayVideo360AdvertiserLinkProposalSettings;
+            DeleteDisplayVideo360AdvertiserLinkProposalSettings = existing.DeleteDisplayVideo360AdvertiserLinkProposalSettings;
+            ApproveDisplayVideo360AdvertiserLinkProposalSettings = existing.ApproveDisplayVideo360AdvertiserLinkProposalSettings;
+            CancelDisplayVideo360AdvertiserLinkProposalSettings = existing.CancelDisplayVideo360AdvertiserLinkProposalSettings;
             CreateCustomDimensionSettings = existing.CreateCustomDimensionSettings;
             UpdateCustomDimensionSettings = existing.UpdateCustomDimensionSettings;
             ListCustomDimensionsSettings = existing.ListCustomDimensionsSettings;
@@ -115,6 +125,8 @@ namespace Google.Analytics.Admin.V1Alpha
             ListCustomMetricsSettings = existing.ListCustomMetricsSettings;
             ArchiveCustomMetricSettings = existing.ArchiveCustomMetricSettings;
             GetCustomMetricSettings = existing.GetCustomMetricSettings;
+            GetDataRetentionSettingsSettings = existing.GetDataRetentionSettingsSettings;
+            UpdateDataRetentionSettingsSettings = existing.UpdateDataRetentionSettingsSettings;
             OnCopy(existing);
         }
 
@@ -602,19 +614,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.UpdateFirebaseLink</c> and
-        /// <c>AnalyticsAdminServiceClient.UpdateFirebaseLinkAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.DeleteFirebaseLink</c> and
         /// <c>AnalyticsAdminServiceClient.DeleteFirebaseLinkAsync</c>.
         /// </summary>
@@ -914,6 +913,182 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetDisplayVideo360AdvertiserLink</c> and
+        /// <c>AnalyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDisplayVideo360AdvertiserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDisplayVideo360AdvertiserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLink</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDisplayVideo360AdvertiserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLink</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDisplayVideo360AdvertiserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLink</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateDisplayVideo360AdvertiserLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDisplayVideo360AdvertiserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposal</c> and
+        /// <c>AnalyticsAdminServiceClient.GetDisplayVideo360AdvertiserLinkProposalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDisplayVideo360AdvertiserLinkProposalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposals</c> and
+        /// <c>AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDisplayVideo360AdvertiserLinkProposalsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposal</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateDisplayVideo360AdvertiserLinkProposalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDisplayVideo360AdvertiserLinkProposalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposal</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDisplayVideo360AdvertiserLinkProposalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ApproveDisplayVideo360AdvertiserLinkProposal</c> and
+        /// <c>AnalyticsAdminServiceClient.ApproveDisplayVideo360AdvertiserLinkProposalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ApproveDisplayVideo360AdvertiserLinkProposalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CancelDisplayVideo360AdvertiserLinkProposal</c> and
+        /// <c>AnalyticsAdminServiceClient.CancelDisplayVideo360AdvertiserLinkProposalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelDisplayVideo360AdvertiserLinkProposalSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.CreateCustomDimension</c> and
         /// <c>AnalyticsAdminServiceClient.CreateCustomDimensionAsync</c>.
         /// </summary>
@@ -1071,6 +1246,38 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetCustomMetricSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetDataRetentionSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.GetDataRetentionSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDataRetentionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateDataRetentionSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateDataRetentionSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDataRetentionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -4951,89 +5158,6 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateFirebaseLinkAsync(parent, firebaseLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FirebaseLink UpdateFirebaseLink(UpdateFirebaseLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirebaseLink> UpdateFirebaseLinkAsync(UpdateFirebaseLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirebaseLink> UpdateFirebaseLinkAsync(UpdateFirebaseLinkRequest request, st::CancellationToken cancellationToken) =>
-            UpdateFirebaseLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="firebaseLink">
-        /// Required. The Firebase link to update.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FirebaseLink UpdateFirebaseLink(FirebaseLink firebaseLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateFirebaseLink(new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = gax::GaxPreconditions.CheckNotNull(firebaseLink, nameof(firebaseLink)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="firebaseLink">
-        /// Required. The Firebase link to update.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirebaseLink> UpdateFirebaseLinkAsync(FirebaseLink firebaseLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateFirebaseLinkAsync(new UpdateFirebaseLinkRequest
-            {
-                FirebaseLink = gax::GaxPreconditions.CheckNotNull(firebaseLink, nameof(firebaseLink)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="firebaseLink">
-        /// Required. The Firebase link to update.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FirebaseLink> UpdateFirebaseLinkAsync(FirebaseLink firebaseLink, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateFirebaseLinkAsync(firebaseLink, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Deletes a FirebaseLink on a property
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7286,6 +7410,1144 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(GetDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(GetDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(GetDisplayVideo360AdvertiserLinkRequest request, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLink(new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkAsync(new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLink(new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkAsync(new GetDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLink/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName name, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(ListDisplayVideo360AdvertiserLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(ListDisplayVideo360AdvertiserLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinks(new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinksAsync(new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinks(new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinksAsync(new ListDisplayVideo360AdvertiserLinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(CreateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(CreateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(CreateDisplayVideo360AdvertiserLinkRequest request, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(string parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLink(new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLink = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLink, nameof(displayVideo360AdvertiserLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(string parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkAsync(new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLink = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLink, nameof(displayVideo360AdvertiserLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(string parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkAsync(parent, displayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(PropertyName parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLink(new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLink = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLink, nameof(displayVideo360AdvertiserLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(PropertyName parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkAsync(new CreateDisplayVideo360AdvertiserLinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLink = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLink, nameof(displayVideo360AdvertiserLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// Required. The DisplayVideo360AdvertiserLink to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(PropertyName parent, DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkAsync(parent, displayVideo360AdvertiserLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLink(DeleteDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(DeleteDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(DeleteDisplayVideo360AdvertiserLinkRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLink(new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkAsync(new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLink(new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkAsync(new DeleteDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLink to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinks/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLinkName name, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink UpdateDisplayVideo360AdvertiserLink(UpdateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(UpdateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(UpdateDisplayVideo360AdvertiserLinkRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDisplayVideo360AdvertiserLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// The DisplayVideo360AdvertiserLink to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLink UpdateDisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDisplayVideo360AdvertiserLink(new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = displayVideo360AdvertiserLink,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// The DisplayVideo360AdvertiserLink to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDisplayVideo360AdvertiserLinkAsync(new UpdateDisplayVideo360AdvertiserLinkRequest
+            {
+                DisplayVideo360AdvertiserLink = displayVideo360AdvertiserLink,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="displayVideo360AdvertiserLink">
+        /// The DisplayVideo360AdvertiserLink to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(DisplayVideo360AdvertiserLink displayVideo360AdvertiserLink, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDisplayVideo360AdvertiserLinkAsync(displayVideo360AdvertiserLink, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(GetDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(GetDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(GetDisplayVideo360AdvertiserLinkProposalRequest request, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkProposal(new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkProposalAsync(new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkProposalAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(DisplayVideo360AdvertiserLinkProposalName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkProposal(new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDisplayVideo360AdvertiserLinkProposalAsync(new GetDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to get.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName name, st::CancellationToken cancellationToken) =>
+            GetDisplayVideo360AdvertiserLinkProposalAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(ListDisplayVideo360AdvertiserLinkProposalsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(ListDisplayVideo360AdvertiserLinkProposalsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinkProposals(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinkProposalsAsync(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinkProposals(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDisplayVideo360AdvertiserLinkProposalsAsync(new ListDisplayVideo360AdvertiserLinkProposalsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(CreateDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(CreateDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(CreateDisplayVideo360AdvertiserLinkProposalRequest request, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(string parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkProposal(new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLinkProposal = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkProposal, nameof(displayVideo360AdvertiserLinkProposal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(string parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkProposalAsync(new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLinkProposal = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkProposal, nameof(displayVideo360AdvertiserLinkProposal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(string parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkProposalAsync(parent, displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(PropertyName parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkProposal(new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLinkProposal = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkProposal, nameof(displayVideo360AdvertiserLinkProposal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(PropertyName parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDisplayVideo360AdvertiserLinkProposalAsync(new CreateDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DisplayVideo360AdvertiserLinkProposal = gax::GaxPreconditions.CheckNotNull(displayVideo360AdvertiserLinkProposal, nameof(displayVideo360AdvertiserLinkProposal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="displayVideo360AdvertiserLinkProposal">
+        /// Required. The DisplayVideo360AdvertiserLinkProposal to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(PropertyName parent, DisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal, st::CancellationToken cancellationToken) =>
+            CreateDisplayVideo360AdvertiserLinkProposalAsync(parent, displayVideo360AdvertiserLinkProposal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLinkProposal(DeleteDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(DeleteDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(DeleteDisplayVideo360AdvertiserLinkProposalRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLinkProposal(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkProposal(new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkProposalAsync(new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkProposalAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDisplayVideo360AdvertiserLinkProposal(DisplayVideo360AdvertiserLinkProposalName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkProposal(new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDisplayVideo360AdvertiserLinkProposalAsync(new DeleteDisplayVideo360AdvertiserLinkProposalRequest
+            {
+                DisplayVideo360AdvertiserLinkProposalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DisplayVideo360AdvertiserLinkProposal to delete.
+        /// Example format: properties/1234/displayVideo360AdvertiserLinkProposals/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(DisplayVideo360AdvertiserLinkProposalName name, st::CancellationToken cancellationToken) =>
+            DeleteDisplayVideo360AdvertiserLinkProposalAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Approves a DisplayVideo360AdvertiserLinkProposal.
+        /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+        /// DisplayVideo360AdvertiserLink will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApproveDisplayVideo360AdvertiserLinkProposalResponse ApproveDisplayVideo360AdvertiserLinkProposal(ApproveDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves a DisplayVideo360AdvertiserLinkProposal.
+        /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+        /// DisplayVideo360AdvertiserLink will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposalAsync(ApproveDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves a DisplayVideo360AdvertiserLinkProposal.
+        /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+        /// DisplayVideo360AdvertiserLink will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposalAsync(ApproveDisplayVideo360AdvertiserLinkProposalRequest request, st::CancellationToken cancellationToken) =>
+            ApproveDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+        /// Cancelling can mean either:
+        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Withdrawing a proposal initiated from Google Analytics
+        /// After being cancelled, a proposal will eventually be deleted automatically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DisplayVideo360AdvertiserLinkProposal CancelDisplayVideo360AdvertiserLinkProposal(CancelDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+        /// Cancelling can mean either:
+        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Withdrawing a proposal initiated from Google Analytics
+        /// After being cancelled, a proposal will eventually be deleted automatically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposalAsync(CancelDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+        /// Cancelling can mean either:
+        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Withdrawing a proposal initiated from Google Analytics
+        /// After being cancelled, a proposal will eventually be deleted automatically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposalAsync(CancelDisplayVideo360AdvertiserLinkProposalRequest request, st::CancellationToken cancellationToken) =>
+            CancelDisplayVideo360AdvertiserLinkProposalAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a CustomDimension.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8376,6 +9638,215 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CustomMetric> GetCustomMetricAsync(CustomMetricName name, st::CancellationToken cancellationToken) =>
             GetCustomMetricAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataRetentionSettings GetDataRetentionSettings(GetDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(GetDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(GetDataRetentionSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataRetentionSettings GetDataRetentionSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataRetentionSettings(new GetDataRetentionSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataRetentionSettingsAsync(new GetDataRetentionSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDataRetentionSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataRetentionSettings GetDataRetentionSettings(DataRetentionSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataRetentionSettings(new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(DataRetentionSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataRetentionSettingsAsync(new GetDataRetentionSettingsRequest
+            {
+                DataRetentionSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataRetentionSettings
+        /// Example: "properties/1000/dataRetentionSettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(DataRetentionSettingsName name, st::CancellationToken cancellationToken) =>
+            GetDataRetentionSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataRetentionSettings UpdateDataRetentionSettings(UpdateDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> UpdateDataRetentionSettingsAsync(UpdateDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> UpdateDataRetentionSettingsAsync(UpdateDataRetentionSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDataRetentionSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="dataRetentionSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataRetentionSettings UpdateDataRetentionSettings(DataRetentionSettings dataRetentionSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDataRetentionSettings(new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = gax::GaxPreconditions.CheckNotNull(dataRetentionSettings, nameof(dataRetentionSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="dataRetentionSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> UpdateDataRetentionSettingsAsync(DataRetentionSettings dataRetentionSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDataRetentionSettingsAsync(new UpdateDataRetentionSettingsRequest
+            {
+                DataRetentionSettings = gax::GaxPreconditions.CheckNotNull(dataRetentionSettings, nameof(dataRetentionSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="dataRetentionSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataRetentionSettings> UpdateDataRetentionSettingsAsync(DataRetentionSettings dataRetentionSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDataRetentionSettingsAsync(dataRetentionSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -8458,8 +9929,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<CreateFirebaseLinkRequest, FirebaseLink> _callCreateFirebaseLink;
 
-        private readonly gaxgrpc::ApiCall<UpdateFirebaseLinkRequest, FirebaseLink> _callUpdateFirebaseLink;
-
         private readonly gaxgrpc::ApiCall<DeleteFirebaseLinkRequest, wkt::Empty> _callDeleteFirebaseLink;
 
         private readonly gaxgrpc::ApiCall<ListFirebaseLinksRequest, ListFirebaseLinksResponse> _callListFirebaseLinks;
@@ -8500,6 +9969,28 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> _callListConversionEvents;
 
+        private readonly gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> _callGetDisplayVideo360AdvertiserLink;
+
+        private readonly gaxgrpc::ApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse> _callListDisplayVideo360AdvertiserLinks;
+
+        private readonly gaxgrpc::ApiCall<CreateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> _callCreateDisplayVideo360AdvertiserLink;
+
+        private readonly gaxgrpc::ApiCall<DeleteDisplayVideo360AdvertiserLinkRequest, wkt::Empty> _callDeleteDisplayVideo360AdvertiserLink;
+
+        private readonly gaxgrpc::ApiCall<UpdateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> _callUpdateDisplayVideo360AdvertiserLink;
+
+        private readonly gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> _callGetDisplayVideo360AdvertiserLinkProposal;
+
+        private readonly gaxgrpc::ApiCall<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse> _callListDisplayVideo360AdvertiserLinkProposals;
+
+        private readonly gaxgrpc::ApiCall<CreateDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> _callCreateDisplayVideo360AdvertiserLinkProposal;
+
+        private readonly gaxgrpc::ApiCall<DeleteDisplayVideo360AdvertiserLinkProposalRequest, wkt::Empty> _callDeleteDisplayVideo360AdvertiserLinkProposal;
+
+        private readonly gaxgrpc::ApiCall<ApproveDisplayVideo360AdvertiserLinkProposalRequest, ApproveDisplayVideo360AdvertiserLinkProposalResponse> _callApproveDisplayVideo360AdvertiserLinkProposal;
+
+        private readonly gaxgrpc::ApiCall<CancelDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> _callCancelDisplayVideo360AdvertiserLinkProposal;
+
         private readonly gaxgrpc::ApiCall<CreateCustomDimensionRequest, CustomDimension> _callCreateCustomDimension;
 
         private readonly gaxgrpc::ApiCall<UpdateCustomDimensionRequest, CustomDimension> _callUpdateCustomDimension;
@@ -8519,6 +10010,10 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<ArchiveCustomMetricRequest, wkt::Empty> _callArchiveCustomMetric;
 
         private readonly gaxgrpc::ApiCall<GetCustomMetricRequest, CustomMetric> _callGetCustomMetric;
+
+        private readonly gaxgrpc::ApiCall<GetDataRetentionSettingsRequest, DataRetentionSettings> _callGetDataRetentionSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateDataRetentionSettingsRequest, DataRetentionSettings> _callUpdateDataRetentionSettings;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -8642,9 +10137,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callCreateFirebaseLink = clientHelper.BuildApiCall<CreateFirebaseLinkRequest, FirebaseLink>(grpcClient.CreateFirebaseLinkAsync, grpcClient.CreateFirebaseLink, effectiveSettings.CreateFirebaseLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFirebaseLink);
             Modify_CreateFirebaseLinkApiCall(ref _callCreateFirebaseLink);
-            _callUpdateFirebaseLink = clientHelper.BuildApiCall<UpdateFirebaseLinkRequest, FirebaseLink>(grpcClient.UpdateFirebaseLinkAsync, grpcClient.UpdateFirebaseLink, effectiveSettings.UpdateFirebaseLinkSettings).WithGoogleRequestParam("firebase_link.name", request => request.FirebaseLink?.Name);
-            Modify_ApiCall(ref _callUpdateFirebaseLink);
-            Modify_UpdateFirebaseLinkApiCall(ref _callUpdateFirebaseLink);
             _callDeleteFirebaseLink = clientHelper.BuildApiCall<DeleteFirebaseLinkRequest, wkt::Empty>(grpcClient.DeleteFirebaseLinkAsync, grpcClient.DeleteFirebaseLink, effectiveSettings.DeleteFirebaseLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFirebaseLink);
             Modify_DeleteFirebaseLinkApiCall(ref _callDeleteFirebaseLink);
@@ -8705,6 +10197,39 @@ namespace Google.Analytics.Admin.V1Alpha
             _callListConversionEvents = clientHelper.BuildApiCall<ListConversionEventsRequest, ListConversionEventsResponse>(grpcClient.ListConversionEventsAsync, grpcClient.ListConversionEvents, effectiveSettings.ListConversionEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConversionEvents);
             Modify_ListConversionEventsApiCall(ref _callListConversionEvents);
+            _callGetDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.GetDisplayVideo360AdvertiserLinkAsync, grpcClient.GetDisplayVideo360AdvertiserLink, effectiveSettings.GetDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDisplayVideo360AdvertiserLink);
+            Modify_GetDisplayVideo360AdvertiserLinkApiCall(ref _callGetDisplayVideo360AdvertiserLink);
+            _callListDisplayVideo360AdvertiserLinks = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse>(grpcClient.ListDisplayVideo360AdvertiserLinksAsync, grpcClient.ListDisplayVideo360AdvertiserLinks, effectiveSettings.ListDisplayVideo360AdvertiserLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDisplayVideo360AdvertiserLinks);
+            Modify_ListDisplayVideo360AdvertiserLinksApiCall(ref _callListDisplayVideo360AdvertiserLinks);
+            _callCreateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.CreateDisplayVideo360AdvertiserLinkAsync, grpcClient.CreateDisplayVideo360AdvertiserLink, effectiveSettings.CreateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDisplayVideo360AdvertiserLink);
+            Modify_CreateDisplayVideo360AdvertiserLinkApiCall(ref _callCreateDisplayVideo360AdvertiserLink);
+            _callDeleteDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkRequest, wkt::Empty>(grpcClient.DeleteDisplayVideo360AdvertiserLinkAsync, grpcClient.DeleteDisplayVideo360AdvertiserLink, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDisplayVideo360AdvertiserLink);
+            Modify_DeleteDisplayVideo360AdvertiserLinkApiCall(ref _callDeleteDisplayVideo360AdvertiserLink);
+            _callUpdateDisplayVideo360AdvertiserLink = clientHelper.BuildApiCall<UpdateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink>(grpcClient.UpdateDisplayVideo360AdvertiserLinkAsync, grpcClient.UpdateDisplayVideo360AdvertiserLink, effectiveSettings.UpdateDisplayVideo360AdvertiserLinkSettings).WithGoogleRequestParam("display_video_360_advertiser_link.name", request => request.DisplayVideo360AdvertiserLink?.Name);
+            Modify_ApiCall(ref _callUpdateDisplayVideo360AdvertiserLink);
+            Modify_UpdateDisplayVideo360AdvertiserLinkApiCall(ref _callUpdateDisplayVideo360AdvertiserLink);
+            _callGetDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<GetDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.GetDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.GetDisplayVideo360AdvertiserLinkProposal, effectiveSettings.GetDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDisplayVideo360AdvertiserLinkProposal);
+            Modify_GetDisplayVideo360AdvertiserLinkProposalApiCall(ref _callGetDisplayVideo360AdvertiserLinkProposal);
+            _callListDisplayVideo360AdvertiserLinkProposals = clientHelper.BuildApiCall<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse>(grpcClient.ListDisplayVideo360AdvertiserLinkProposalsAsync, grpcClient.ListDisplayVideo360AdvertiserLinkProposals, effectiveSettings.ListDisplayVideo360AdvertiserLinkProposalsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDisplayVideo360AdvertiserLinkProposals);
+            Modify_ListDisplayVideo360AdvertiserLinkProposalsApiCall(ref _callListDisplayVideo360AdvertiserLinkProposals);
+            _callCreateDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CreateDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.CreateDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CreateDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CreateDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDisplayVideo360AdvertiserLinkProposal);
+            Modify_CreateDisplayVideo360AdvertiserLinkProposalApiCall(ref _callCreateDisplayVideo360AdvertiserLinkProposal);
+            _callDeleteDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<DeleteDisplayVideo360AdvertiserLinkProposalRequest, wkt::Empty>(grpcClient.DeleteDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.DeleteDisplayVideo360AdvertiserLinkProposal, effectiveSettings.DeleteDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDisplayVideo360AdvertiserLinkProposal);
+            Modify_DeleteDisplayVideo360AdvertiserLinkProposalApiCall(ref _callDeleteDisplayVideo360AdvertiserLinkProposal);
+            _callApproveDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<ApproveDisplayVideo360AdvertiserLinkProposalRequest, ApproveDisplayVideo360AdvertiserLinkProposalResponse>(grpcClient.ApproveDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.ApproveDisplayVideo360AdvertiserLinkProposal, effectiveSettings.ApproveDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callApproveDisplayVideo360AdvertiserLinkProposal);
+            Modify_ApproveDisplayVideo360AdvertiserLinkProposalApiCall(ref _callApproveDisplayVideo360AdvertiserLinkProposal);
+            _callCancelDisplayVideo360AdvertiserLinkProposal = clientHelper.BuildApiCall<CancelDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal>(grpcClient.CancelDisplayVideo360AdvertiserLinkProposalAsync, grpcClient.CancelDisplayVideo360AdvertiserLinkProposal, effectiveSettings.CancelDisplayVideo360AdvertiserLinkProposalSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelDisplayVideo360AdvertiserLinkProposal);
+            Modify_CancelDisplayVideo360AdvertiserLinkProposalApiCall(ref _callCancelDisplayVideo360AdvertiserLinkProposal);
             _callCreateCustomDimension = clientHelper.BuildApiCall<CreateCustomDimensionRequest, CustomDimension>(grpcClient.CreateCustomDimensionAsync, grpcClient.CreateCustomDimension, effectiveSettings.CreateCustomDimensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomDimension);
             Modify_CreateCustomDimensionApiCall(ref _callCreateCustomDimension);
@@ -8735,6 +10260,12 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetCustomMetric = clientHelper.BuildApiCall<GetCustomMetricRequest, CustomMetric>(grpcClient.GetCustomMetricAsync, grpcClient.GetCustomMetric, effectiveSettings.GetCustomMetricSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCustomMetric);
             Modify_GetCustomMetricApiCall(ref _callGetCustomMetric);
+            _callGetDataRetentionSettings = clientHelper.BuildApiCall<GetDataRetentionSettingsRequest, DataRetentionSettings>(grpcClient.GetDataRetentionSettingsAsync, grpcClient.GetDataRetentionSettings, effectiveSettings.GetDataRetentionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDataRetentionSettings);
+            Modify_GetDataRetentionSettingsApiCall(ref _callGetDataRetentionSettings);
+            _callUpdateDataRetentionSettings = clientHelper.BuildApiCall<UpdateDataRetentionSettingsRequest, DataRetentionSettings>(grpcClient.UpdateDataRetentionSettingsAsync, grpcClient.UpdateDataRetentionSettings, effectiveSettings.UpdateDataRetentionSettingsSettings).WithGoogleRequestParam("data_retention_settings.name", request => request.DataRetentionSettings?.Name);
+            Modify_ApiCall(ref _callUpdateDataRetentionSettings);
+            Modify_UpdateDataRetentionSettingsApiCall(ref _callUpdateDataRetentionSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -8814,8 +10345,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_CreateFirebaseLinkApiCall(ref gaxgrpc::ApiCall<CreateFirebaseLinkRequest, FirebaseLink> call);
 
-        partial void Modify_UpdateFirebaseLinkApiCall(ref gaxgrpc::ApiCall<UpdateFirebaseLinkRequest, FirebaseLink> call);
-
         partial void Modify_DeleteFirebaseLinkApiCall(ref gaxgrpc::ApiCall<DeleteFirebaseLinkRequest, wkt::Empty> call);
 
         partial void Modify_ListFirebaseLinksApiCall(ref gaxgrpc::ApiCall<ListFirebaseLinksRequest, ListFirebaseLinksResponse> call);
@@ -8856,6 +10385,28 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ListConversionEventsApiCall(ref gaxgrpc::ApiCall<ListConversionEventsRequest, ListConversionEventsResponse> call);
 
+        partial void Modify_GetDisplayVideo360AdvertiserLinkApiCall(ref gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> call);
+
+        partial void Modify_ListDisplayVideo360AdvertiserLinksApiCall(ref gaxgrpc::ApiCall<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse> call);
+
+        partial void Modify_CreateDisplayVideo360AdvertiserLinkApiCall(ref gaxgrpc::ApiCall<CreateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> call);
+
+        partial void Modify_DeleteDisplayVideo360AdvertiserLinkApiCall(ref gaxgrpc::ApiCall<DeleteDisplayVideo360AdvertiserLinkRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateDisplayVideo360AdvertiserLinkApiCall(ref gaxgrpc::ApiCall<UpdateDisplayVideo360AdvertiserLinkRequest, DisplayVideo360AdvertiserLink> call);
+
+        partial void Modify_GetDisplayVideo360AdvertiserLinkProposalApiCall(ref gaxgrpc::ApiCall<GetDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> call);
+
+        partial void Modify_ListDisplayVideo360AdvertiserLinkProposalsApiCall(ref gaxgrpc::ApiCall<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse> call);
+
+        partial void Modify_CreateDisplayVideo360AdvertiserLinkProposalApiCall(ref gaxgrpc::ApiCall<CreateDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> call);
+
+        partial void Modify_DeleteDisplayVideo360AdvertiserLinkProposalApiCall(ref gaxgrpc::ApiCall<DeleteDisplayVideo360AdvertiserLinkProposalRequest, wkt::Empty> call);
+
+        partial void Modify_ApproveDisplayVideo360AdvertiserLinkProposalApiCall(ref gaxgrpc::ApiCall<ApproveDisplayVideo360AdvertiserLinkProposalRequest, ApproveDisplayVideo360AdvertiserLinkProposalResponse> call);
+
+        partial void Modify_CancelDisplayVideo360AdvertiserLinkProposalApiCall(ref gaxgrpc::ApiCall<CancelDisplayVideo360AdvertiserLinkProposalRequest, DisplayVideo360AdvertiserLinkProposal> call);
+
         partial void Modify_CreateCustomDimensionApiCall(ref gaxgrpc::ApiCall<CreateCustomDimensionRequest, CustomDimension> call);
 
         partial void Modify_UpdateCustomDimensionApiCall(ref gaxgrpc::ApiCall<UpdateCustomDimensionRequest, CustomDimension> call);
@@ -8875,6 +10426,10 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_ArchiveCustomMetricApiCall(ref gaxgrpc::ApiCall<ArchiveCustomMetricRequest, wkt::Empty> call);
 
         partial void Modify_GetCustomMetricApiCall(ref gaxgrpc::ApiCall<GetCustomMetricRequest, CustomMetric> call);
+
+        partial void Modify_GetDataRetentionSettingsApiCall(ref gaxgrpc::ApiCall<GetDataRetentionSettingsRequest, DataRetentionSettings> call);
+
+        partial void Modify_UpdateDataRetentionSettingsApiCall(ref gaxgrpc::ApiCall<UpdateDataRetentionSettingsRequest, DataRetentionSettings> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -8955,8 +10510,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_CreateFirebaseLinkRequest(ref CreateFirebaseLinkRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_UpdateFirebaseLinkRequest(ref UpdateFirebaseLinkRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_DeleteFirebaseLinkRequest(ref DeleteFirebaseLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListFirebaseLinksRequest(ref ListFirebaseLinksRequest request, ref gaxgrpc::CallSettings settings);
@@ -8997,6 +10550,28 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ListConversionEventsRequest(ref ListConversionEventsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetDisplayVideo360AdvertiserLinkRequest(ref GetDisplayVideo360AdvertiserLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDisplayVideo360AdvertiserLinksRequest(ref ListDisplayVideo360AdvertiserLinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDisplayVideo360AdvertiserLinkRequest(ref CreateDisplayVideo360AdvertiserLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDisplayVideo360AdvertiserLinkRequest(ref DeleteDisplayVideo360AdvertiserLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDisplayVideo360AdvertiserLinkRequest(ref UpdateDisplayVideo360AdvertiserLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDisplayVideo360AdvertiserLinkProposalRequest(ref GetDisplayVideo360AdvertiserLinkProposalRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDisplayVideo360AdvertiserLinkProposalsRequest(ref ListDisplayVideo360AdvertiserLinkProposalsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDisplayVideo360AdvertiserLinkProposalRequest(ref CreateDisplayVideo360AdvertiserLinkProposalRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDisplayVideo360AdvertiserLinkProposalRequest(ref DeleteDisplayVideo360AdvertiserLinkProposalRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ApproveDisplayVideo360AdvertiserLinkProposalRequest(ref ApproveDisplayVideo360AdvertiserLinkProposalRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelDisplayVideo360AdvertiserLinkProposalRequest(ref CancelDisplayVideo360AdvertiserLinkProposalRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateCustomDimensionRequest(ref CreateCustomDimensionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateCustomDimensionRequest(ref UpdateCustomDimensionRequest request, ref gaxgrpc::CallSettings settings);
@@ -9016,6 +10591,10 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_ArchiveCustomMetricRequest(ref ArchiveCustomMetricRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetCustomMetricRequest(ref GetCustomMetricRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDataRetentionSettingsRequest(ref GetDataRetentionSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDataRetentionSettingsRequest(ref UpdateDataRetentionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -10024,30 +11603,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override FirebaseLink UpdateFirebaseLink(UpdateFirebaseLinkRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateFirebaseLinkRequest(ref request, ref callSettings);
-            return _callUpdateFirebaseLink.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates a FirebaseLink on a property
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<FirebaseLink> UpdateFirebaseLinkAsync(UpdateFirebaseLinkRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateFirebaseLinkRequest(ref request, ref callSettings);
-            return _callUpdateFirebaseLink.Async(request, callSettings);
-        }
-
-        /// <summary>
         /// Deletes a FirebaseLink on a property
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10542,6 +12097,296 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLink GetDisplayVideo360AdvertiserLink(GetDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callGetDisplayVideo360AdvertiserLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Look up a single DisplayVideo360AdvertiserLink
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLink> GetDisplayVideo360AdvertiserLinkAsync(GetDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callGetDisplayVideo360AdvertiserLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinks(ListDisplayVideo360AdvertiserLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDisplayVideo360AdvertiserLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink>(_callListDisplayVideo360AdvertiserLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all DisplayVideo360AdvertiserLinks on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLink"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink> ListDisplayVideo360AdvertiserLinksAsync(ListDisplayVideo360AdvertiserLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDisplayVideo360AdvertiserLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinksRequest, ListDisplayVideo360AdvertiserLinksResponse, DisplayVideo360AdvertiserLink>(_callListDisplayVideo360AdvertiserLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLink CreateDisplayVideo360AdvertiserLink(CreateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callCreateDisplayVideo360AdvertiserLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLink.
+        /// This can only be utilized by users who have proper authorization both on
+        /// the Google Analytics property and on the Display &amp;amp; Video 360 advertiser.
+        /// Users who do not have access to the Display &amp;amp; Video 360 advertiser should
+        /// instead seek to create a DisplayVideo360LinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLink> CreateDisplayVideo360AdvertiserLinkAsync(CreateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callCreateDisplayVideo360AdvertiserLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteDisplayVideo360AdvertiserLink(DeleteDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            _callDeleteDisplayVideo360AdvertiserLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteDisplayVideo360AdvertiserLinkAsync(DeleteDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callDeleteDisplayVideo360AdvertiserLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLink UpdateDisplayVideo360AdvertiserLink(UpdateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callUpdateDisplayVideo360AdvertiserLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a DisplayVideo360AdvertiserLink on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLink> UpdateDisplayVideo360AdvertiserLinkAsync(UpdateDisplayVideo360AdvertiserLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDisplayVideo360AdvertiserLinkRequest(ref request, ref callSettings);
+            return _callUpdateDisplayVideo360AdvertiserLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLinkProposal GetDisplayVideo360AdvertiserLinkProposal(GetDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callGetDisplayVideo360AdvertiserLinkProposal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLinkProposal> GetDisplayVideo360AdvertiserLinkProposalAsync(GetDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callGetDisplayVideo360AdvertiserLinkProposal.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposals(ListDisplayVideo360AdvertiserLinkProposalsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDisplayVideo360AdvertiserLinkProposalsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal>(_callListDisplayVideo360AdvertiserLinkProposals, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DisplayVideo360AdvertiserLinkProposals on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="DisplayVideo360AdvertiserLinkProposal"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal> ListDisplayVideo360AdvertiserLinkProposalsAsync(ListDisplayVideo360AdvertiserLinkProposalsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDisplayVideo360AdvertiserLinkProposalsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDisplayVideo360AdvertiserLinkProposalsRequest, ListDisplayVideo360AdvertiserLinkProposalsResponse, DisplayVideo360AdvertiserLinkProposal>(_callListDisplayVideo360AdvertiserLinkProposals, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLinkProposal CreateDisplayVideo360AdvertiserLinkProposal(CreateDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callCreateDisplayVideo360AdvertiserLinkProposal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a DisplayVideo360AdvertiserLinkProposal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLinkProposal> CreateDisplayVideo360AdvertiserLinkProposalAsync(CreateDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callCreateDisplayVideo360AdvertiserLinkProposal.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteDisplayVideo360AdvertiserLinkProposal(DeleteDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            _callDeleteDisplayVideo360AdvertiserLinkProposal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DisplayVideo360AdvertiserLinkProposal on a property.
+        /// This can only be used on cancelled proposals.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteDisplayVideo360AdvertiserLinkProposalAsync(DeleteDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callDeleteDisplayVideo360AdvertiserLinkProposal.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Approves a DisplayVideo360AdvertiserLinkProposal.
+        /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+        /// DisplayVideo360AdvertiserLink will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ApproveDisplayVideo360AdvertiserLinkProposalResponse ApproveDisplayVideo360AdvertiserLinkProposal(ApproveDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callApproveDisplayVideo360AdvertiserLinkProposal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Approves a DisplayVideo360AdvertiserLinkProposal.
+        /// The DisplayVideo360AdvertiserLinkProposal will be deleted and a new
+        /// DisplayVideo360AdvertiserLink will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ApproveDisplayVideo360AdvertiserLinkProposalResponse> ApproveDisplayVideo360AdvertiserLinkProposalAsync(ApproveDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callApproveDisplayVideo360AdvertiserLinkProposal.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+        /// Cancelling can mean either:
+        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Withdrawing a proposal initiated from Google Analytics
+        /// After being cancelled, a proposal will eventually be deleted automatically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DisplayVideo360AdvertiserLinkProposal CancelDisplayVideo360AdvertiserLinkProposal(CancelDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callCancelDisplayVideo360AdvertiserLinkProposal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a DisplayVideo360AdvertiserLinkProposal.
+        /// Cancelling can mean either:
+        /// - Declining a proposal initiated from Display &amp;amp; Video 360
+        /// - Withdrawing a proposal initiated from Google Analytics
+        /// After being cancelled, a proposal will eventually be deleted automatically.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DisplayVideo360AdvertiserLinkProposal> CancelDisplayVideo360AdvertiserLinkProposalAsync(CancelDisplayVideo360AdvertiserLinkProposalRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDisplayVideo360AdvertiserLinkProposalRequest(ref request, ref callSettings);
+            return _callCancelDisplayVideo360AdvertiserLinkProposal.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a CustomDimension.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10780,6 +12625,54 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_GetCustomMetricRequest(ref request, ref callSettings);
             return _callGetCustomMetric.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataRetentionSettings GetDataRetentionSettings(GetDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataRetentionSettingsRequest(ref request, ref callSettings);
+            return _callGetDataRetentionSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataRetentionSettings> GetDataRetentionSettingsAsync(GetDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataRetentionSettingsRequest(ref request, ref callSettings);
+            return _callGetDataRetentionSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataRetentionSettings UpdateDataRetentionSettings(UpdateDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDataRetentionSettingsRequest(ref request, ref callSettings);
+            return _callUpdateDataRetentionSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataRetentionSettings> UpdateDataRetentionSettingsAsync(UpdateDataRetentionSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDataRetentionSettingsRequest(ref request, ref callSettings);
+            return _callUpdateDataRetentionSettings.Async(request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -10831,6 +12724,14 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListConversionEventsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDisplayVideo360AdvertiserLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDisplayVideo360AdvertiserLinkProposalsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -10942,6 +12843,24 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ConversionEvent> GetEnumerator() => ConversionEvents.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDisplayVideo360AdvertiserLinksResponse : gaxgrpc::IPageResponse<DisplayVideo360AdvertiserLink>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DisplayVideo360AdvertiserLink> GetEnumerator() =>
+            DisplayVideo360AdvertiserLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDisplayVideo360AdvertiserLinkProposalsResponse : gaxgrpc::IPageResponse<DisplayVideo360AdvertiserLinkProposal>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DisplayVideo360AdvertiserLinkProposal> GetEnumerator() =>
+            DisplayVideo360AdvertiserLinkProposals.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
