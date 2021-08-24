@@ -26,28 +26,17 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     /// </summary>
     internal class LogEntryPolling : BaseEntryPolling<LogEntry>
     {
-        /// <summary>
-        /// Default total time to spend sleeping when looking for entries.
-        /// More than what <see cref="BaseEntryPolling{T}._defaultTimeout"/>
-        /// because logs are taking longer to process.
-        /// </summary>
-        private static readonly TimeSpan _defaultTimeout = TimeSpan.FromSeconds(180);
-
-        /// <summary>
-        /// Default time to sleep between checks for entries.
-        /// Consistent with the <see cref="_defaultTimeout"/>.
-        /// </summary>
-        private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(40);
-
         /// <summary>Project id to run the test on.</summary>
         private readonly string _projectId = TestEnvironment.GetTestProjectId();
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly LoggingServiceV2Client _client = LoggingServiceV2Client.Create();
 
-        internal LogEntryPolling(TimeSpan timeout = default) 
-            : base(timeout == default ? _defaultTimeout : timeout, timeout == default ? _defaultSleepInterval : default)
+        private LogEntryPolling(TimeSpan? timeout, TimeSpan? sleepInterval)
+            : base(timeout, sleepInterval)
         { }
+
+        public static LogEntryPolling Default { get; } = new LogEntryPolling(null, null);
 
         /// <summary>
         /// Gets log entries that contain the passed in testId in the log message.  Will poll
@@ -59,12 +48,14 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         ///     If minEntries is zero this method will wait the full timeout before checking for the
         ///     entries.</param>
         /// <param name="minSeverity">The minimum severity a log can be.</param>
-        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries, LogSeverity minSeverity)
+        public IEnumerable<LogEntry> GetEntries(DateTimeOffset startTime, string testId, int minEntries, LogSeverity minSeverity)
         {
             return GetEntries(minEntries, () =>
             {
                 // Convert the time to RFC3339 UTC format.
-                string time = XmlConvert.ToString(startTime, XmlDateTimeSerializationMode.Utc);
+                // We substract 5 minutes because on occasion we were polling too fast after startTime
+                // and the backend clock was a little behind, we were getting InvalidArgument.
+                string time = XmlConvert.ToString(startTime.DateTime - TimeSpan.FromMinutes(5), XmlDateTimeSerializationMode.Utc);
                 var request = new ListLogEntriesRequest
                 {
                     ResourceNames = { $"projects/{_projectId}" },

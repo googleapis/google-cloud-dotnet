@@ -29,14 +29,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     public class TraceHeaderPropagatingHandlerTest : IDisposable
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
-        private static readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         private readonly string _testId;
 
         private readonly IConsumer<TraceProto> _consumer;
         private readonly IManagedTracer _tracer;
 
-        private readonly Timestamp _startTime;
+        private readonly DateTimeOffset _startTime;
 
         public TraceHeaderPropagatingHandlerTest()
         {
@@ -45,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             _consumer = new GrpcTraceConsumer(TraceServiceClient.Create());
             _tracer = SimpleManagedTracer.Create(_consumer, TestEnvironment.GetTestProjectId(), _traceIdFactory.NextId(), null);
 
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            _startTime = DateTimeOffset.UtcNow;
         }
 
         [Fact]
@@ -56,7 +55,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             await TraceOutGoingRequest(spanName, googleUri, false);
 
-            var trace = _polling.GetTrace(spanName, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(spanName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, spanName, googleUri);
             TraceEntryVerifiers.AssertSpanLabelsExact(
@@ -71,7 +70,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             await TraceOutGoingRequest(spanName, fakeUri, true);
 
-            var trace = _polling.GetTrace(spanName, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(spanName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, spanName, fakeUri);
             var span = trace.Spans.Where(s => s.Name == fakeUri).Single();
@@ -91,7 +90,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             await TraceOutGoingRequest(spanName, fakeUri, false);
 
-            var trace = _polling.GetTrace(spanName, _startTime);
+            var trace = TraceEntryPolling.Default.GetTrace(spanName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, spanName, fakeUri);
             TraceEntryVerifiers.AssertSpanLabelsExact(trace.Spans.Where(s => s.Name == fakeUri).Single(),

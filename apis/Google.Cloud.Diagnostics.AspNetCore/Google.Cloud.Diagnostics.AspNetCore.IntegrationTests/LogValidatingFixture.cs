@@ -39,7 +39,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     {
         private static readonly TimeSpan s_canaryMessageTimeout = TimeSpan.FromMinutes(7);
         private static readonly TimeSpan s_delayBetweenCanaryAttempts = TimeSpan.FromSeconds(10);
-        private static readonly TimeSpan s_totalValidationTimeout = TimeSpan.FromMinutes(10);
+        private static readonly TimeSpan s_totalValidationTimeout = TimeSpan.FromMinutes(20);
         private static readonly TimeSpan s_delayBetweenValidationAttempts = TimeSpan.FromSeconds(30);
         private static readonly TimeSpan s_delayBetweenPages = TimeSpan.FromSeconds(3);
 

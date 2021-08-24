@@ -25,10 +25,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     internal abstract class BaseEntryPolling<T>
     {
         /// <summary>Default total time to spend sleeping when looking for entries.</summary>
-        private static readonly TimeSpan _defaultTimeout = TimeSpan.FromSeconds(10);
+        private static readonly TimeSpan _defaultTimeout = TimeSpan.FromMinutes(10);
 
         /// <summary>Default time to sleep between checks for entries.</summary>
-        private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(30);
 
         /// <summary>Total time to spend sleeping when looking for entries.</summary>
         private readonly TimeSpan _timeout;
@@ -36,14 +36,17 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>Time to sleep between checks for entries.</summary>
         private readonly TimeSpan _sleepInterval;
 
+        /// <summary>
+        /// Construct a new BaseEntryPolling instance.
+        /// </summary>
         /// <param name="timeout">Optional, total time to spend sleeping when looking for entries.
-        ///     Defaults to <see cref="_defaultTimeout"/>.</param>
+        /// Defaults to <see cref="_defaultTimeout"/>.</param>
         /// <param name="sleepInterval">Optional, time to sleep between checks for entries.
-        ///     Defaults to <see cref="_defaultSleepInterval"/></param>
-        protected BaseEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default)
+        /// Defaults to <see cref="_defaultSleepInterval"/></param>
+        protected BaseEntryPolling(TimeSpan? timeout = null, TimeSpan? sleepInterval = null)
         {
-            _timeout = timeout == default ? _defaultTimeout : timeout;
-            _sleepInterval = sleepInterval == default ?  _defaultSleepInterval : sleepInterval;
+            _timeout = timeout ?? _defaultTimeout;
+            _sleepInterval = sleepInterval ?? _defaultSleepInterval;
         }
 
         /// <summary>
@@ -55,22 +58,32 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <returns>The entries or an empty list if not enough entries are found or polling times out.</returns>
         protected IEnumerable<T> GetEntries(int minEntries, Func<IEnumerable<T>> getEntries)
         {
-            TimeSpan totalSleepTime = TimeSpan.Zero;
-            List<T> lastFoundEntries = new List<T>();
-            while (totalSleepTime < _timeout)
+            TimeSpan sleptTime = TimeSpan.Zero;
+            do
             {
-                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
-                totalSleepTime += sleepTime;
-                Thread.Sleep(sleepTime);
-
-                lastFoundEntries = getEntries().ToList();
-                if (lastFoundEntries.Count >= minEntries)
+                var entries = getEntries().ToList();
+                if ((minEntries != 0 && entries.Count >= minEntries) ||
+                    (minEntries == 0 && entries.Count > 0))
                 {
-                    return lastFoundEntries;
+                    return entries;
+                }
+
+                if ((sleptTime += _sleepInterval) < _timeout)
+                {
+                    Thread.Sleep(_sleepInterval);
+                }
+                // TODO: Consider separating the minEntries == 0 case
+                // as it is different from the general case.
+                else if (minEntries == 0)
+                {
+                    return entries;
+                }
+                else
+                {
+                    throw new Exception($"Expected to find at least {minEntries} entries. Found {entries.Count} entries.");
                 }
             }
-
-            throw new Exception($"Expected to find at least {minEntries} entries. Found {lastFoundEntries.Count} entries.");
+            while (true);
         }
     }
 }

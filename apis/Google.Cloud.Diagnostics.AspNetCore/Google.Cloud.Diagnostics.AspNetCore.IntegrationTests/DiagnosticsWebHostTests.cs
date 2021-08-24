@@ -126,9 +126,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)
         {
-            var polling = new LogEntryPolling();
             await client.GetAsync($"/Main/Warning/{testId}");
-            var results = polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
+            var results = LogEntryPolling.Default.GetEntries(startTime, testId, 1, LogSeverity.Warning);
 
             Assert.Single(results);
             var result = results.Single();
@@ -138,18 +137,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.NotEmpty(label.Value);
         }
 
-        private static async Task TestTrace(string testId, DateTime startTime, HttpClient client)
+        private static async Task TestTrace(string testId, DateTimeOffset startTime, HttpClient client)
         {
             var uri = $"/Trace/{nameof(TraceController.Trace)}/{testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), testId);
 
             var response = await client.GetAsync(uri);
 
-            // Give the polling a little extra time to find the trace as
-            // trace processing can sometimes take time and the default buffer is a
-            // timed buffer.
-            var polling = new TraceEntryPolling(TimeSpan.FromSeconds(20));
-            var trace = polling.GetTrace(uri, Timestamp.FromDateTime(startTime));
+            var trace = TraceEntryPolling.Default.GetTrace(uri, startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName);
             TraceEntryVerifiers.AssertSpanLabelsContains(
@@ -160,9 +155,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static async Task TestErrorReporting(string testId, HttpClient client)
         {
-            var polling = new ErrorEventEntryPolling();
             await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
-            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(polling, testId);
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
         }
     }
