@@ -52,6 +52,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
@@ -84,6 +85,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
@@ -118,6 +120,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
@@ -150,6 +153,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
@@ -184,6 +188,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHub(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);
@@ -216,6 +221,7 @@ namespace Google.Cloud.NetworkConnectivity.V1.Tests
                 Description = "description2cf9da67",
                 UniqueId = "unique_idee0c0869",
                 State = State.Active,
+                RoutingVpcs = { new RoutingVPC(), },
             };
             mockGrpcClient.Setup(x => x.GetHubAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Hub>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             HubServiceClient client = new HubServiceClientImpl(mockGrpcClient.Object, null);

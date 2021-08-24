@@ -1398,6 +1398,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
     }
 
+    public partial class RoutingVPC
+    {
+        /// <summary><see cref="NetworkName"/>-typed view over the <see cref="Uri"/> resource name property.</summary>
+        public NetworkName UriAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Uri) ? null : NetworkName.Parse(Uri, allowUnparsed: true);
+            set => Uri = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Spoke
     {
         /// <summary>
@@ -1502,30 +1512,6 @@ namespace Google.Cloud.NetworkConnectivity.V1
     }
 
     public partial class DeleteSpokeRequest
-    {
-        /// <summary>
-        /// <see cref="gcnv::SpokeName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gcnv::SpokeName SpokeName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcnv::SpokeName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DeactivateSpokeRequest
-    {
-        /// <summary>
-        /// <see cref="gcnv::SpokeName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gcnv::SpokeName SpokeName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcnv::SpokeName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class ActivateSpokeRequest
     {
         /// <summary>
         /// <see cref="gcnv::SpokeName"/>-typed view over the <see cref="Name"/> resource name property.

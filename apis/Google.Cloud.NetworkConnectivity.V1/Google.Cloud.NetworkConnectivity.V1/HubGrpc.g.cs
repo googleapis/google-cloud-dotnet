@@ -76,8 +76,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.Spoke> __Marshaller_google_cloud_networkconnectivity_v1_Spoke = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.Spoke.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_CreateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_UpdateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest.Parser));
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeactivateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest.Parser));
-    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_ActivateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeleteSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse> __Method_ListHubs = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse>(
@@ -141,20 +139,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         __ServiceName,
         "UpdateSpoke",
         __Marshaller_google_cloud_networkconnectivity_v1_UpdateSpokeRequest,
-        __Marshaller_google_longrunning_Operation);
-
-    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest, global::Google.LongRunning.Operation> __Method_DeactivateSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeactivateSpoke",
-        __Marshaller_google_cloud_networkconnectivity_v1_DeactivateSpokeRequest,
-        __Marshaller_google_longrunning_Operation);
-
-    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest, global::Google.LongRunning.Operation> __Method_ActivateSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ActivateSpoke",
-        __Marshaller_google_cloud_networkconnectivity_v1_ActivateSpokeRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation> __Method_DeleteSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation>(
@@ -269,31 +253,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSpoke(global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deactivates the specified spoke. Deactivating keeps the spoke information
-      /// for future re-activation, but disconnects the Google Cloud network from
-      /// non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeactivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Activates the specified spoke. Activating reconnects the Google Cloud
-      /// network with the non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ActivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -731,106 +690,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSpoke, null, options, request);
       }
       /// <summary>
-      /// Deactivates the specified spoke. Deactivating keeps the spoke information
-      /// for future re-activation, but disconnects the Google Cloud network from
-      /// non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeactivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeactivateSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deactivates the specified spoke. Deactivating keeps the spoke information
-      /// for future re-activation, but disconnects the Google Cloud network from
-      /// non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeactivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeactivateSpoke, null, options, request);
-      }
-      /// <summary>
-      /// Deactivates the specified spoke. Deactivating keeps the spoke information
-      /// for future re-activation, but disconnects the Google Cloud network from
-      /// non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeactivateSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeactivateSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deactivates the specified spoke. Deactivating keeps the spoke information
-      /// for future re-activation, but disconnects the Google Cloud network from
-      /// non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeactivateSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeactivateSpoke, null, options, request);
-      }
-      /// <summary>
-      /// Activates the specified spoke. Activating reconnects the Google Cloud
-      /// network with the non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation ActivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ActivateSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Activates the specified spoke. Activating reconnects the Google Cloud
-      /// network with the non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation ActivateSpoke(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ActivateSpoke, null, options, request);
-      }
-      /// <summary>
-      /// Activates the specified spoke. Activating reconnects the Google Cloud
-      /// network with the non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ActivateSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Activates the specified spoke. Activating reconnects the Google Cloud
-      /// network with the non-Google-Cloud network.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ActivateSpoke, null, options, request);
-      }
-      /// <summary>
       /// Deletes the specified spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -895,8 +754,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           .AddMethod(__Method_GetSpoke, serviceImpl.GetSpoke)
           .AddMethod(__Method_CreateSpoke, serviceImpl.CreateSpoke)
           .AddMethod(__Method_UpdateSpoke, serviceImpl.UpdateSpoke)
-          .AddMethod(__Method_DeactivateSpoke, serviceImpl.DeactivateSpoke)
-          .AddMethod(__Method_ActivateSpoke, serviceImpl.ActivateSpoke)
           .AddMethod(__Method_DeleteSpoke, serviceImpl.DeleteSpoke).Build();
     }
 
@@ -915,8 +772,6 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       serviceBinder.AddMethod(__Method_GetSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetSpokeRequest, global::Google.Cloud.NetworkConnectivity.V1.Spoke>(serviceImpl.GetSpoke));
       serviceBinder.AddMethod(__Method_CreateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSpoke));
       serviceBinder.AddMethod(__Method_UpdateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSpoke));
-      serviceBinder.AddMethod(__Method_DeactivateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeactivateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeactivateSpoke));
-      serviceBinder.AddMethod(__Method_ActivateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ActivateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.ActivateSpoke));
       serviceBinder.AddMethod(__Method_DeleteSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSpoke));
     }
 
