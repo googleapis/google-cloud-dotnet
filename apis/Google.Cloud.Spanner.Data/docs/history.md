@@ -1,5 +1,37 @@
 # Version history
 
+# Version 3.12.0, released 2021-08-24
+
+- [Commit 7c6a6f1](https://github.com/googleapis/google-cloud-dotnet/commit/7c6a6f1): feat: add support for JSON data type in Spanner ([issue 6390](https://github.com/googleapis/google-cloud-dotnet/issues/6390))
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 61938b6](https://github.com/googleapis/google-cloud-dotnet/commit/61938b6):
+  - feat(Spanner): Support comments and statement hints in untyped commands.
+  - Alternative to [issue 6848](https://github.com/googleapis/google-cloud-dotnet/issues/6848)
+  - Closes [issue 6847](https://github.com/googleapis/google-cloud-dotnet/issues/6847)
+- [Commit d26b04c](https://github.com/googleapis/google-cloud-dotnet/commit/d26b04c): fix: address review comments
+- [Commit d2025be](https://github.com/googleapis/google-cloud-dotnet/commit/d2025be): fix: use logger from SpannerSettings
+- [Commit b34f6f4](https://github.com/googleapis/google-cloud-dotnet/commit/b34f6f4): cleanup: fix comment + remove unnecessary import
+- [Commit fc7a41b](https://github.com/googleapis/google-cloud-dotnet/commit/fc7a41b): test: remove connectionstring tests and add settings test
+- [Commit 6016ef0](https://github.com/googleapis/google-cloud-dotnet/commit/6016ef0):
+  - feat: support custom SpannerSettings in SessionPoolManager
+  - Support setting custom SpannerSettings when creating a SessionPoolManager.
+- [Commit 0ab6b8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ab6b8b):
+  - feat: allow adding an additional version header
+  - Allows adding an additional version header to the connection string. This will be
+  - added to the `x-goog-api-client` header that is used by the underlying Spanner client.
+  - Only a fixed set of values may be set for the header (currently only 'efcore' is
+  - allowed), and the property is not intended for public use.
+- [Commit 250124f](https://github.com/googleapis/google-cloud-dotnet/commit/250124f):
+  - fix: synchronize access to the underlying transaction for ambient transactions ([issue 6616](https://github.com/googleapis/google-cloud-dotnet/issues/6616))
+  - * fix: synchronize access to the underlying transaction for ambient transactions
+  - Synchronizes access to the underlying Spanner transaction to prevent
+  - multiple transactions from being created if parallel commands are
+  - executed on the ambient transaction.
+  - * test: add integration test
+  - * fix: use Lazy for initialization
+  - * chore: address review comments
+  - * fix: remove unnecessary read call
+
 # Version 3.11.0, released 2021-07-09
 
 - [Commit 9dc6f8b](https://github.com/googleapis/google-cloud-dotnet/commit/9dc6f8b): feat(spanner): add leader_options to InstanceConfig
