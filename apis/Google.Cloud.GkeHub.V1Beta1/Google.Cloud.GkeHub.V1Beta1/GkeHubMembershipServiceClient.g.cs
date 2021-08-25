@@ -317,8 +317,14 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
     /// <summary>GkeHubMembershipService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// GKE Hub CRUD API for the Membership resource.
-    /// The Membership service is currently only available in the global location.
+    /// The GKE Hub MembershipService handles the registration of many Kubernetes
+    /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+    /// 
+    /// GKE Hub is currently only available in the global region.
+    /// 
+    /// **Membership management may be non-trivial:** it is recommended to use one
+    /// of the Google-provided client libraries or tools where possible when working
+    /// with Membership resources.
     /// </remarks>
     public abstract partial class GkeHubMembershipServiceClient
     {
@@ -549,7 +555,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             GetMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -558,7 +568,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,7 +581,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -602,7 +620,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             lro::Operation<Membership, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMembershipOperationsClient, callSettings);
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) where the Memberships will be created.
@@ -633,7 +655,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) where the Memberships will be created.
@@ -664,7 +690,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) where the Memberships will be created.
@@ -691,6 +721,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -700,6 +734,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -709,6 +747,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -744,6 +786,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="name">
         /// Required. The Membership resource name in the format
@@ -759,6 +805,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="name">
         /// Required. The Membership resource name in the format
@@ -774,6 +824,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="name">
         /// Required. The Membership resource name in the format
@@ -851,6 +905,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// If you are updating a map field, set the value of a key to null or empty
         /// string to delete the key from the map. It's not possible to update a key's
         /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one field path must be specified in this
@@ -880,6 +936,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// If you are updating a map field, set the value of a key to null or empty
         /// string to delete the key from the map. It's not possible to update a key's
         /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one field path must be specified in this
@@ -909,6 +967,8 @@ namespace Google.Cloud.GkeHub.V1Beta1
         /// If you are updating a map field, set the value of a key to null or empty
         /// string to delete the key from the map. It's not possible to update a key's
         /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one field path must be specified in this
@@ -921,6 +981,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Generates the manifest for deployment of the GKE connect agent.
+        /// 
+        /// **This method is used internally by Google-provided libraries.**
+        /// Most clients should not need to call this method directly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -930,6 +993,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Generates the manifest for deployment of the GKE connect agent.
+        /// 
+        /// **This method is used internally by Google-provided libraries.**
+        /// Most clients should not need to call this method directly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -939,6 +1005,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Generates the manifest for deployment of the GKE connect agent.
+        /// 
+        /// **This method is used internally by Google-provided libraries.**
+        /// Most clients should not need to call this method directly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1039,8 +1108,14 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
     /// <summary>GkeHubMembershipService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// GKE Hub CRUD API for the Membership resource.
-    /// The Membership service is currently only available in the global location.
+    /// The GKE Hub MembershipService handles the registration of many Kubernetes
+    /// clusters to Google Cloud, represented with the [Membership][google.cloud.gkehub.v1beta1.Membership] resource.
+    /// 
+    /// GKE Hub is currently only available in the global region.
+    /// 
+    /// **Membership management may be non-trivial:** it is recommended to use one
+    /// of the Google-provided client libraries or tools where possible when working
+    /// with Membership resources.
     /// </remarks>
     public sealed partial class GkeHubMembershipServiceClientImpl : GkeHubMembershipServiceClient
     {
@@ -1194,7 +1269,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
         public override lro::OperationsClient CreateMembershipOperationsClient { get; }
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1206,7 +1285,11 @@ namespace Google.Cloud.GkeHub.V1Beta1
         }
 
         /// <summary>
-        /// Adds a new Membership.
+        /// Creates a new Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To register other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1222,6 +1305,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1234,6 +1321,10 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Removes a Membership.
+        /// 
+        /// **This is currently only supported for GKE clusters on Google Cloud**.
+        /// To unregister other clusters, follow the instructions at
+        /// https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1273,6 +1364,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Generates the manifest for deployment of the GKE connect agent.
+        /// 
+        /// **This method is used internally by Google-provided libraries.**
+        /// Most clients should not need to call this method directly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1285,6 +1379,9 @@ namespace Google.Cloud.GkeHub.V1Beta1
 
         /// <summary>
         /// Generates the manifest for deployment of the GKE connect agent.
+        /// 
+        /// **This method is used internally by Google-provided libraries.**
+        /// Most clients should not need to call this method directly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
