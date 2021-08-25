@@ -283,6 +283,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
                 Parent = "",
                 MembershipId = "",
                 Resource = new Membership(),
+                RequestId = "",
             };
             // Make the request
             Operation<Membership, OperationMetadata> response = gkeHubMembershipServiceClient.CreateMembership(request);
@@ -318,6 +319,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
                 Parent = "",
                 MembershipId = "",
                 Resource = new Membership(),
+                RequestId = "",
             };
             // Make the request
             Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.CreateMembershipAsync(request);
@@ -410,7 +412,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = GkeHubMembershipServiceClient.Create();
             // Initialize request argument(s)
-            DeleteMembershipRequest request = new DeleteMembershipRequest { Name = "", };
+            DeleteMembershipRequest request = new DeleteMembershipRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = gkeHubMembershipServiceClient.DeleteMembership(request);
 
@@ -440,7 +446,11 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // Create client
             GkeHubMembershipServiceClient gkeHubMembershipServiceClient = await GkeHubMembershipServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteMembershipRequest request = new DeleteMembershipRequest { Name = "", };
+            DeleteMembershipRequest request = new DeleteMembershipRequest
+            {
+                Name = "",
+                RequestId = "",
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = await gkeHubMembershipServiceClient.DeleteMembershipAsync(request);
 
@@ -533,6 +543,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
                 Name = "",
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
+                RequestId = "",
             };
             // Make the request
             Operation<Membership, OperationMetadata> response = gkeHubMembershipServiceClient.UpdateMembership(request);
@@ -568,6 +579,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
                 Name = "",
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
+                RequestId = "",
             };
             // Make the request
             Operation<Membership, OperationMetadata> response = await gkeHubMembershipServiceClient.UpdateMembershipAsync(request);
