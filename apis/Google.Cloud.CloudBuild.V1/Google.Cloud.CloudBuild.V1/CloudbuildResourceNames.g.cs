@@ -2552,6 +2552,15 @@ namespace Google.Cloud.CloudBuild.V1
             get => string.IsNullOrEmpty(Name) ? null : gccv::BuildTriggerName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="ServiceAccountName"/>-typed view over the <see cref="ServiceAccount"/> resource name property.
+        /// </summary>
+        public ServiceAccountName ServiceAccountAsServiceAccountName
+        {
+            get => string.IsNullOrEmpty(ServiceAccount) ? null : ServiceAccountName.Parse(ServiceAccount, allowUnparsed: true);
+            set => ServiceAccount = value?.ToString() ?? "";
+        }
     }
 
     public partial class PubsubConfig
