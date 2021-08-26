@@ -596,6 +596,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -647,6 +648,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -699,6 +701,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -749,6 +752,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -802,6 +806,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -853,6 +858,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -905,6 +911,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -955,6 +962,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1080,6 +1088,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1131,6 +1140,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1184,6 +1194,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1235,6 +1246,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 PubsubConfig = new PubsubConfig(),
                 Filter = "filtere47ac9b2",
                 WebhookConfig = new WebhookConfig(),
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 ResourceName = "resource_name8cc2e687",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
